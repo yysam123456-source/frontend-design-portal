@@ -1,0 +1,70 @@
+[
+  {
+    "id": "aj-stagger",
+    "project": "animejs",
+    "name": "Stagger Animation",
+    "category": "animation",
+    "style": [
+      "stagger",
+      "dom",
+      "transform"
+    ],
+    "techStack": [
+      "JavaScript",
+      "ESM"
+    ],
+    "description": "Anime.js 错开动画效果",
+    "codeSnippet": {
+      "language": "js",
+      "source": "import { animate, stagger } from 'animejs'\n\nanimate('.square', {\n  x: 320,\n  rotate: { from: -180 },\n  duration: 1250,\n  delay: stagger(65, { from: 'center' }),\n  ease: 'inOutQuint',\n  loop: true,\n  alternate: true\n})",
+      "dependencies": [
+        "animejs"
+      ]
+    }
+  },
+  {
+    "id": "aj-svg-draw",
+    "project": "animejs",
+    "name": "SVG Path Draw",
+    "category": "animation",
+    "style": [
+      "svg",
+      "path",
+      "draw"
+    ],
+    "techStack": [
+      "JavaScript",
+      "ESM"
+    ],
+    "description": "SVG 路径描边动画",
+    "codeSnippet": {
+      "language": "js",
+      "source": "import { animate } from 'animejs'\n\nanimate('#path', {\n  strokeDashoffset: [animate.setDashoffset, 0],\n  duration: 2000,\n  ease: 'easeInOutSine',\n})",
+      "dependencies": [
+        "animejs"
+      ]
+    }
+  },
+  {
+    "id": "aj-timeline",
+    "project": "animejs",
+    "name": "Timeline Sequence",
+    "category": "animation",
+    "style": [
+      "timeline",
+      "sequence"
+    ],
+    "techStack": [
+      "JavaScript",
+      "ESM"
+    ],
+    "description": "时间轴动画序列",
+    "codeSnippet": {
+      "language": "js",
+      "source": "import { createTimeline } from 'animejs'\n\nconst tl = createTimeline()\ntl.add('.el1', { x: 100, duration: 500 })\n  .add('.el2', { x: 200, duration: 500 }, '-=300')\n  .add('.el3', { x: 300, duration: 500 })",
+      "dependencies": [
+        "animejs"
+      ]
+    }
+  }
+]

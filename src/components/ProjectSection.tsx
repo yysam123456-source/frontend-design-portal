@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Code2, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
-import LivePreview from './LivePreview'
+import ProjectPreview from './ProjectPreview'
 import CodeDrawer from './CodeDrawer'
 import type { ProjectMeta, ComponentEntry } from '../types'
 
@@ -80,7 +80,7 @@ export default function ProjectSection({
 
       {/* Live Preview — Project Level */}
       <div className="mb-8">
-        <LivePreview url={project.demoBaseUrl} title={`${project.name} Demo`} />
+        <ProjectPreview project={project} />
       </div>
 
       {/* Components List */}
