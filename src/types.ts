@@ -25,6 +25,7 @@ export interface ComponentSummary {
   techStack: string[]
   description: string
   language: string
+  previewUrl?: string
 }
 
 export interface ProjectMeta {

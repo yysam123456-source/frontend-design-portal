@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Code2, ExternalLink, Copy, Check, Maximize2 } from 'lucide-react'
+import { ExternalLink, Copy, Check, Maximize2 } from 'lucide-react'
+import ComponentThumbnailPreview from './ComponentThumbnailPreview'
 import type { ComponentSummary, ProjectMeta } from '../types'
 
 interface ComponentCardProps {
@@ -107,14 +108,7 @@ export default function ComponentCard({
       {/* Preview thumbnail area */}
       <div className="px-4 pb-4">
         <div className="relative rounded-lg bg-bg-secondary border border-border aspect-[16/10] overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <Code2 className="w-6 h-6 text-ink-subtle/40 mx-auto mb-1.5" />
-              <span className="text-[10px] text-ink-subtle/60 font-mono">
-                {component.language}
-              </span>
-            </div>
-          </div>
+          <ComponentThumbnailPreview component={component} projectMeta={projectMeta} />
           {/* Hover overlay */}
           <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-bg/90 text-xs text-accent font-medium">

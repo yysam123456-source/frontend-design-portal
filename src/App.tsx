@@ -26,6 +26,9 @@ export default function App() {
   const [selectedComponent, setSelectedComponent] = useState<string | null>(null)
   const [page, setPage] = useState(1)
   const [showFilters, setShowFilters] = useState(false)
+  const [showAllTechStacks, setShowAllTechStacks] = useState(false)
+  const [showAllStyles, setShowAllStyles] = useState(false)
+  const [showAllCategories, setShowAllCategories] = useState(false)
 
   const projectMap = useMemo(() => {
     const map = new Map()
@@ -78,6 +81,9 @@ export default function App() {
     () => Array.from(new Set(allComponents.map((c) => c.category))).sort(),
     [allComponents]
   )
+  const visibleTechStacks = showAllTechStacks ? allTechStacks : allTechStacks.slice(0, 24)
+  const visibleStyles = showAllStyles ? allStyles : allStyles.slice(0, 30)
+  const visibleCategories = showAllCategories ? allCategories : allCategories.slice(0, 30)
 
   // 统计
   const stats = useMemo(() => {
@@ -257,7 +263,7 @@ export default function App() {
                     技术栈
                   </label>
                   <div className="flex flex-wrap gap-1.5">
-                    {allTechStacks.map((t) => (
+                    {visibleTechStacks.map((t) => (
                       <button
                         key={t}
                         onClick={() => {
@@ -273,6 +279,22 @@ export default function App() {
                         {t}
                       </button>
                     ))}
+                    {allTechStacks.length > visibleTechStacks.length && (
+                      <button
+                        onClick={() => setShowAllTechStacks(true)}
+                        className="px-2.5 py-1 rounded-md text-[11px] border border-dashed border-border text-accent hover:border-accent/50 hover:bg-accent/5 transition-colors"
+                      >
+                        +{allTechStacks.length - visibleTechStacks.length} 更多
+                      </button>
+                    )}
+                    {showAllTechStacks && allTechStacks.length > 24 && (
+                      <button
+                        onClick={() => setShowAllTechStacks(false)}
+                        className="px-2.5 py-1 rounded-md text-[11px] border border-border text-ink-subtle hover:text-ink bg-bg transition-colors"
+                      >
+                        收起
+                      </button>
+                    )}
                   </div>
                 </div>
               )}
@@ -284,7 +306,7 @@ export default function App() {
                     风格
                   </label>
                   <div className="flex flex-wrap gap-1.5">
-                    {allStyles.slice(0, 30).map((s) => (
+                    {visibleStyles.map((s) => (
                       <button
                         key={s}
                         onClick={() => {
@@ -300,10 +322,21 @@ export default function App() {
                         {s}
                       </button>
                     ))}
-                    {allStyles.length > 30 && (
-                      <span className="px-2 py-1 text-[11px] text-ink-subtle">
-                        +{allStyles.length - 30} 更多
-                      </span>
+                    {allStyles.length > visibleStyles.length && (
+                      <button
+                        onClick={() => setShowAllStyles(true)}
+                        className="px-2.5 py-1 rounded-md text-[11px] border border-dashed border-border text-accent hover:border-accent/50 hover:bg-accent/5 transition-colors"
+                      >
+                        +{allStyles.length - visibleStyles.length} 更多
+                      </button>
+                    )}
+                    {showAllStyles && allStyles.length > 30 && (
+                      <button
+                        onClick={() => setShowAllStyles(false)}
+                        className="px-2.5 py-1 rounded-md text-[11px] border border-border text-ink-subtle hover:text-ink bg-bg transition-colors"
+                      >
+                        收起
+                      </button>
                     )}
                   </div>
                 </div>
@@ -316,7 +349,7 @@ export default function App() {
                     分类
                   </label>
                   <div className="flex flex-wrap gap-1.5">
-                    {allCategories.map((c) => (
+                    {visibleCategories.map((c) => (
                       <button
                         key={c}
                         onClick={() => {
@@ -332,6 +365,22 @@ export default function App() {
                         {c}
                       </button>
                     ))}
+                    {allCategories.length > visibleCategories.length && (
+                      <button
+                        onClick={() => setShowAllCategories(true)}
+                        className="px-2.5 py-1 rounded-md text-[11px] border border-dashed border-border text-accent hover:border-accent/50 hover:bg-accent/5 transition-colors"
+                      >
+                        +{allCategories.length - visibleCategories.length} 更多
+                      </button>
+                    )}
+                    {showAllCategories && allCategories.length > 30 && (
+                      <button
+                        onClick={() => setShowAllCategories(false)}
+                        className="px-2.5 py-1 rounded-md text-[11px] border border-border text-ink-subtle hover:text-ink bg-bg transition-colors"
+                      >
+                        收起
+                      </button>
+                    )}
                   </div>
                 </div>
               )}
