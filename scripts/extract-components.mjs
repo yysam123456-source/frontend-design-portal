@@ -13,6 +13,31 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true })
 }
 
+function walkFiles(dir, predicate) {
+  const files = []
+  if (!fs.existsSync(dir)) return files
+
+  for (const entry of fs.readdirSync(dir)) {
+    const fullPath = path.join(dir, entry)
+    const stat = fs.statSync(fullPath)
+    if (stat.isDirectory()) {
+      files.push(...walkFiles(fullPath, predicate))
+    } else if (!predicate || predicate(fullPath)) {
+      files.push(fullPath)
+    }
+  }
+
+  return files
+}
+
+function toTitleCase(name) {
+  return name
+    .replace(/\.(tsx|jsx|ts|js|html|mdx)$/i, '')
+    .replace(/[-_]/g, ' ')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/\b\w/g, (l) => l.toUpperCase())
+}
+
 // ============ react-bits ============
 function extractReactBits() {
   const components = []
@@ -235,35 +260,48 @@ tl.add('.el1', { x: 100, duration: 500 })
 // ============ zelda-hyrule-ui (从已克隆的源码中提取) ============
 function extractZelda() {
   const components = []
-  const srcDir = path.join(reposDir, 'zelda-hyrule-ui', 'src')
-  if (!fs.existsSync(srcDir)) return components
 
-  const categories = fs.readdirSync(srcDir).filter(f => fs.statSync(path.join(srcDir, f)).isDirectory())
+  const componentsDir = path.join(
+    reposDir,
+    'zelda-hyrule-ui',
+    'packages',
+    'react',
+    'src',
+    'components'
+  )
+  if (!fs.existsSync(componentsDir)) return components
 
-  for (const category of categories) {
-    const catDir = path.join(srcDir, category)
-    const files = fs.readdirSync(catDir).filter(f => f.endsWith('.tsx'))
+  const files = walkFiles(
+    componentsDir,
+    (file) =>
+      file.endsWith('.tsx') &&
+      !file.endsWith('index.tsx') &&
+      !file.includes('.test.') &&
+      !file.includes('.spec.')
+  )
 
-    for (const file of files) {
-      const filePath = path.join(catDir, file)
-      const code = fs.readFileSync(filePath, 'utf-8')
-      const name = file.replace('.tsx', '')
+  for (const filePath of files) {
+    const code = fs.readFileSync(filePath, 'utf-8')
+    const relative = path.relative(componentsDir, filePath)
+    const parts = relative.split(path.sep)
+    const file = path.basename(filePath)
+    const name = file.replace('.tsx', '')
+    const category = parts.length > 1 ? parts[0].toLowerCase() : 'core'
 
-      components.push({
-        id: `zh-${name.toLowerCase()}`,
-        project: 'zelda-hyrule-ui',
-        name: name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-        category: category.toLowerCase(),
-        style: ['game-ui', 'zelda', 'dark'],
-        techStack: ['React', 'Less', 'TypeScript'],
-        description: `塞尔达风格 ${name} 组件`,
-        codeSnippet: {
-          language: 'tsx',
-          source: code,
-          dependencies: ['zelda-hyrule-ui'],
-        },
-      })
-    }
+    components.push({
+      id: `zh-${relative.replace(/\\/g, '-').replace(/\//g, '-').replace('.tsx', '').toLowerCase()}`,
+      project: 'zelda-hyrule-ui',
+      name: toTitleCase(name),
+      category,
+      style: ['game-ui', 'zelda', 'dark', category],
+      techStack: ['React', 'Less', 'TypeScript'],
+      description: `塞尔达风格 ${toTitleCase(name)} 组件`,
+      codeSnippet: {
+        language: 'tsx',
+        source: code,
+        dependencies: ['@chaos-xxl/zelda-hyrule-ui'],
+      },
+    })
   }
 
   return components
@@ -273,46 +311,49 @@ function extractZelda() {
 function extractEldora() {
   const components = []
 
-  // eldoraui 是 monorepo，组件可能在不同位置
-  // 尝试几个常见路径
-  const possiblePaths = [
-    path.join(reposDir, 'eldoraui', 'apps', 'www', 'components'),
-    path.join(reposDir, 'eldoraui', 'components'),
-    path.join(reposDir, 'eldoraui', 'src', 'components'),
-    path.join(reposDir, 'eldoraui', 'packages', 'ui', 'src', 'components'),
-  ]
+  const registryDir = path.join(reposDir, 'eldoraui', 'apps', 'www', 'registry')
+  const componentDir = path.join(registryDir, 'eldoraui')
+  const exampleDir = path.join(registryDir, 'example')
 
-  for (const compDir of possiblePaths) {
-    if (!fs.existsSync(compDir)) continue
+  const addFiles = (dir, category, prefix) => {
+    const files = walkFiles(
+      dir,
+      (file) =>
+        file.endsWith('.tsx') &&
+        !file.includes('__index__') &&
+        !file.includes('.test.') &&
+        !file.includes('.spec.')
+    )
 
-    const categories = fs.readdirSync(compDir).filter(f => fs.statSync(path.join(compDir, f)).isDirectory())
+    for (const filePath of files) {
+      const code = fs.readFileSync(filePath, 'utf-8')
+      const relative = path.relative(dir, filePath)
+      const file = path.basename(filePath)
+      const name = file.replace('.tsx', '')
+      const cleanName = name.replace(/-demo-\d+$/, '').replace(/-demo$/, '')
 
-    for (const category of categories) {
-      const catDir = path.join(compDir, category)
-      const files = fs.readdirSync(catDir).filter(f => f.endsWith('.tsx'))
-
-      for (const file of files) {
-        const filePath = path.join(catDir, file)
-        const code = fs.readFileSync(filePath, 'utf-8')
-        const name = file.replace('.tsx', '')
-
-        components.push({
-          id: `ed-${name.toLowerCase()}`,
-          project: 'eldoraui',
-          name: name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-          category: category.toLowerCase(),
-          style: ['react', 'tailwind', 'modern'],
-          techStack: ['React', 'Next.js', 'Tailwind CSS'],
-          description: `${name} UI 组件`,
-          codeSnippet: {
-            language: 'tsx',
-            source: code,
-            dependencies: [],
-          },
-        })
-      }
+      components.push({
+        id: `ed-${prefix}-${relative.replace(/\\/g, '-').replace(/\//g, '-').replace('.tsx', '').toLowerCase()}`,
+        project: 'eldoraui',
+        name: toTitleCase(cleanName),
+        category,
+        style: ['react', 'tailwind', 'modern', category],
+        techStack: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript'],
+        description:
+          category === 'example'
+            ? `${toTitleCase(cleanName)} 示例组件`
+            : `${toTitleCase(cleanName)} UI 组件`,
+        codeSnippet: {
+          language: 'tsx',
+          source: code,
+          dependencies: ['framer-motion', 'lucide-react', 'class-variance-authority', 'clsx', 'tailwind-merge'],
+        },
+      })
     }
   }
+
+  addFiles(componentDir, 'component', 'component')
+  addFiles(exampleDir, 'example', 'example')
 
   return components
 }

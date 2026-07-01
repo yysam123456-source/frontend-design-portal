@@ -8,3 +8,4 @@ dist-ssr
 
 # Repos
 repos/
+public/data/components.json
