@@ -73,7 +73,7 @@ export default function ProjectSection({
             className="flex items-center gap-1.5 text-xs text-accent hover:text-accent-light transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
-            官方站点
+            Official site
           </a>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function ProjectSection({
                         rel="noopener noreferrer"
                         className="block text-xs text-ink-subtle hover:text-accent transition-colors mb-1"
                       >
-                        查看独立演示 →
+                        View standalone demo →
                       </a>
                     </div>
                   )}
@@ -141,12 +141,12 @@ export default function ProjectSection({
               {expanded ? (
                 <>
                   <ChevronUp className="w-3.5 h-3.5" />
-                  收起组件列表
+                  Collapse component list
                 </>
               ) : (
                 <>
                   <ChevronDown className="w-3.5 h-3.5" />
-                  展开 {components.length} 个组件
+                  Expand {components.length} components
                 </>
               )}
             </button>

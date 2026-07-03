@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Copy, Check, Maximize2 } from 'lucide-react'
 import ComponentThumbnailPreview from './ComponentThumbnailPreview'
 import type { ComponentSummary, ProjectMeta } from '../types'
+import { getPreviewRecord } from '../generated/preview-manifest'
 
 interface ComponentCardProps {
   component: ComponentSummary
@@ -23,6 +24,20 @@ export default function ComponentCard({
 }: ComponentCardProps) {
   const [showCode, setShowCode] = useState(false)
   const accent = projectMeta?.accentColor || '#6366F1'
+  const previewRecord = getPreviewRecord(component.id)
+  const hasRealPreview = previewRecord?.status === 'ready'
+  const previewLabel =
+    previewRecord?.kind === 'react-generated'
+      ? 'React Live'
+      : previewRecord?.kind === 'html-live'
+        ? 'HTML Live'
+        : previewRecord?.kind === 'js-demo'
+          ? 'JS Live'
+          : previewRecord?.kind === 'media-video'
+            ? 'Video Demo'
+            : previewRecord?.kind === 'media-image'
+              ? 'Image Demo'
+              : 'Pending'
 
   const handleCopy = async () => {
     onCopy(component.id, component.id)
@@ -54,6 +69,15 @@ export default function ComponentCard({
               <span className="text-[10px] text-ink-subtle uppercase tracking-wider font-medium truncate">
                 {projectMeta?.name || component.project}
               </span>
+              <span
+                className={`rounded-full px-1.5 py-0.5 text-[9px] font-medium ${
+                  hasRealPreview
+                    ? 'bg-emerald-500/10 text-emerald-600'
+                    : 'bg-amber-500/10 text-amber-700'
+                }`}
+              >
+                {previewLabel}
+              </span>
             </div>
             <h3 className="font-display font-semibold text-sm text-ink group-hover:text-accent transition-colors truncate">
               {component.name}
@@ -65,7 +89,7 @@ export default function ComponentCard({
               handleCopy()
             }}
             className="flex-shrink-0 p-1.5 rounded-md text-ink-subtle hover:text-accent hover:bg-accent/10 transition-colors"
-            title="复制组件ID"
+            title="Copy component ID"
           >
             {copiedId === component.id ? (
               <Check className="w-3.5 h-3.5 text-emerald-500" />
@@ -105,20 +129,17 @@ export default function ComponentCard({
         </div>
       </div>
 
-      {/* Preview thumbnail area */}
       <div className="px-4 pb-4">
-        <div className="relative rounded-lg bg-bg-secondary border border-border aspect-[16/10] overflow-hidden">
+        <div className="relative rounded-xl bg-bg-secondary border border-border aspect-[4/3] overflow-hidden">
           <ComponentThumbnailPreview component={component} projectMeta={projectMeta} />
-          {/* Hover overlay */}
           <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-bg/90 text-xs text-accent font-medium">
               <Maximize2 className="w-3 h-3" />
-              点击预览
+              Preview
             </div>
           </div>
         </div>
 
-        {/* Footer actions */}
         <div className="flex items-center justify-between mt-3">
           <span className="text-[10px] text-ink-subtle capitalize">
             {component.category}
@@ -131,7 +152,7 @@ export default function ComponentCard({
               }}
               className="text-[10px] text-ink-subtle hover:text-accent transition-colors px-2 py-1 rounded hover:bg-accent/5"
             >
-              {showCode ? '收起' : '源码'}
+              {showCode ? 'Hide' : 'Source'}
             </button>
             {projectMeta && (
               <a

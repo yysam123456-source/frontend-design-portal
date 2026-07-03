@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { ComponentEntry, ComponentSummary, ProjectMeta } from '../types'
+import GeneratedComponentPreview from '../generated/GeneratedComponentPreview'
+import { getPreviewRecord } from '../generated/preview-manifest'
 
 const projectCache = new Map<string, Promise<ComponentEntry[]>>()
 
@@ -108,6 +110,49 @@ function buildFallbackPreview(component: ComponentSummary, projectMeta?: Project
 </html>`
 }
 
+function buildUnsupportedPreview(component: ComponentSummary, projectMeta?: ProjectMeta) {
+  const accent = projectMeta?.accentColor || '#6366f1'
+  return `<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: linear-gradient(135deg, #f8fafc, #eef2ff);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #334155;
+    }
+    .box {
+      width: min(86%, 280px);
+      border: 1px dashed rgba(100,116,139,.35);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 18px 50px rgba(15,23,42,.08);
+    }
+    .dot { width: 12px; height: 12px; border-radius: 999px; margin: 0 auto 10px; background: ${accent}; opacity: .75; }
+    .title { font-size: 13px; font-weight: 700; letter-spacing: -.02em; color: #0f172a; }
+    .desc { margin-top: 6px; font-size: 10px; line-height: 1.45; color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="dot"></div>
+    <div class="title">${escapeHtml(component.name)}</div>
+    <div class="desc">Live preview pending. This placeholder does not fake a source screenshot.</div>
+  </div>
+</body>
+</html>`
+}
+
 interface ComponentThumbnailPreviewProps {
   component: ComponentSummary
   projectMeta?: ProjectMeta
@@ -117,18 +162,14 @@ export default function ComponentThumbnailPreview({
   component,
   projectMeta,
 }: ComponentThumbnailPreviewProps) {
+  const previewRecord = getPreviewRecord(component.id)
   const [source, setSource] = useState<string | null>(null)
   const [language, setLanguage] = useState(component.language)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     let mounted = true
-    if (component.language !== 'html') {
-      setSource(null)
-      setLanguage(component.language)
-      return () => {
-        mounted = false
-      }
-    }
+    setLoading(true)
 
     loadProjectComponents(component.project)
       .then((items) => {
@@ -140,24 +181,83 @@ export default function ComponentThumbnailPreview({
       .catch(() => {
         if (mounted) setSource(null)
       })
+      .finally(() => {
+        if (mounted) setLoading(false)
+      })
 
     return () => {
       mounted = false
     }
-  }, [component.id, component.language, component.project])
+  }, [component.id, component.project])
 
   const srcDoc = useMemo(() => {
+    if (loading) return ''
+    if (previewRecord?.status === 'unsupported') return buildUnsupportedPreview(component, projectMeta)
     if (language === 'html' && source) return buildHtmlPreview(source)
     return buildFallbackPreview(component, projectMeta)
-  }, [component, language, projectMeta, source])
+  }, [component, language, loading, previewRecord?.status, projectMeta, source])
+
+  if (previewRecord?.kind === 'react-generated' && previewRecord.status === 'ready') {
+    return (
+      <div className="absolute inset-0">
+        <GeneratedComponentPreview component={component} compact />
+      </div>
+    )
+  }
+
+  if (previewRecord?.kind === 'media-video' && previewRecord.status === 'ready') {
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-[#050816]">
+        <video
+          className="h-full w-full object-contain"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={previewRecord.media?.poster}
+        >
+          {previewRecord.media?.webm && <source src={previewRecord.media.webm} type="video/webm" />}
+          {previewRecord.media?.mp4 && <source src={previewRecord.media.mp4} type="video/mp4" />}
+        </video>
+        <div className="pointer-events-none absolute left-2 top-2 rounded-full bg-black/50 px-2 py-0.5 text-[10px] font-medium text-white">
+          Official Demo
+        </div>
+      </div>
+    )
+  }
+
+  if (previewRecord?.kind === 'media-image' && previewRecord.status === 'ready') {
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-[#050816]">
+        <img
+          src={previewRecord.media?.poster}
+          alt={`${component.name} official demo`}
+          className="h-full w-full object-contain"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute left-2 top-2 rounded-full bg-black/50 px-2 py-0.5 text-[10px] font-medium text-white">
+          Official Demo
+        </div>
+      </div>
+    )
+  }
+
+  if (loading) {
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-bg-secondary">
+        <div className="w-5 h-5 border-2 border-border border-t-accent rounded-full animate-spin" />
+      </div>
+    )
+  }
 
   return (
     <iframe
       srcDoc={srcDoc}
-      title={`${component.name} 预览`}
+      title={`${component.name} preview`}
       loading="lazy"
       sandbox="allow-scripts"
-      className="absolute inset-0 w-full h-full border-0 pointer-events-none bg-white"
+      className="absolute inset-0 w-full h-full border-0 pointer-events-none"
+      style={{ background: language === 'html' ? '#fff' : '#0b0f19' }}
     />
   )
 }

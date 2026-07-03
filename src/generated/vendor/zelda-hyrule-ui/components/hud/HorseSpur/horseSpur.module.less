@@ -1,0 +1,36 @@
+@import "../../../styles/variables.less";
+// 精确还原 Figma node 34:2551
+// 84×84px，blur 0.647px，辉光 drop-shadow
+
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  filter: blur(0.647px);
+}
+
+.icon {
+  width: 92%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.normal {
+  filter: blur(0.647px) drop-shadow(0 0 3.879px #FDFCC6);
+}
+
+.ancient {
+  filter: blur(0.647px) drop-shadow(0 0 3.879px #3CD3FC);
+  .icon { filter: hue-rotate(180deg); }
+}
+
+.endura {
+  filter: blur(0.647px) drop-shadow(0 0 3.879px #7CFF4E);
+  .icon { filter: hue-rotate(80deg) saturate(1.5); }
+}
+
+.used {
+  opacity: 0.25;
+}

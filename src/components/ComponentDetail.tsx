@@ -92,12 +92,12 @@ export default function ComponentDetail({
                   {copiedId === fullComponent?.codeSnippet.source ? (
                     <>
                       <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      已复制
+                      Copied
                     </>
                   ) : (
                     <>
                       <Copy className="w-3.5 h-3.5" />
-                      复制代码
+                      Copy code
                     </>
                   )}
                 </button>
@@ -147,7 +147,7 @@ export default function ComponentDetail({
                 <div className="w-full aspect-[16/10] bg-bg-secondary rounded-lg border border-border flex items-center justify-center">
                   <div className="flex flex-col items-center gap-2">
                     <div className="w-5 h-5 border-2 border-border border-t-accent rounded-full animate-spin" />
-                    <span className="text-xs text-ink-subtle">加载组件数据...</span>
+                    <span className="text-xs text-ink-subtle">Loading component data...</span>
                   </div>
                 </div>
               ) : (
@@ -164,7 +164,7 @@ export default function ComponentDetail({
                     className="flex items-center gap-1.5 text-xs text-ink-subtle hover:text-accent transition-colors"
                   >
                     <Code2 className="w-3.5 h-3.5" />
-                    查看项目仓库
+                    View repository
                   </a>
                 )}
                 {projectMeta?.demoBaseUrl && (
@@ -175,7 +175,7 @@ export default function ComponentDetail({
                     className="flex items-center gap-1.5 text-xs text-ink-subtle hover:text-accent transition-colors"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
-                    官方文档
+                    Official docs
                   </a>
                 )}
               </div>

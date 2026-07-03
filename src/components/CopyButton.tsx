@@ -15,7 +15,7 @@ export default function CopyButton({ text, id, copiedId, onCopy }: CopyButtonPro
     <button
       onClick={() => onCopy(text, id)}
       className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all bg-bg-secondary hover:bg-border-light text-ink-muted hover:text-ink"
-      title="复制代码"
+      title="Copy code"
     >
       <AnimatePresence mode="wait" initial={false}>
         {isCopied ? (
@@ -28,7 +28,7 @@ export default function CopyButton({ text, id, copiedId, onCopy }: CopyButtonPro
             className="flex items-center gap-1.5 text-accent"
           >
             <Check className="w-3.5 h-3.5" />
-            已复制
+            Copied
           </motion.span>
         ) : (
           <motion.span
@@ -40,7 +40,7 @@ export default function CopyButton({ text, id, copiedId, onCopy }: CopyButtonPro
             className="flex items-center gap-1.5"
           >
             <Copy className="w-3.5 h-3.5" />
-            复制代码
+            Copy code
           </motion.span>
         )}
       </AnimatePresence>

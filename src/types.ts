@@ -26,6 +26,8 @@ export interface ComponentSummary {
   description: string
   language: string
   previewUrl?: string
+  tags?: string[]
+  scene?: string[]
 }
 
 export interface ProjectMeta {
@@ -46,6 +48,9 @@ export interface FilterState {
   techStack: string[]
   style: string[]
   category: string[]
+  tags: string[]
+  scene: string[]
+  sort: 'preview' | 'name' | 'project'
 }
 
 export type PreviewMode = 'iframe' | 'code' | 'info'

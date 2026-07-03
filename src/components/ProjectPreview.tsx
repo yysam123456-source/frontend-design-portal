@@ -30,7 +30,7 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[11px] uppercase tracking-[0.2em] text-white/50">
-              本地可视化预览
+              Local visual preview
             </p>
             <h3 className="font-display text-xl sm:text-2xl font-bold mt-1">
               {project.name}
@@ -43,7 +43,7 @@ export default function ProjectPreview({ project }: ProjectPreviewProps) {
             className="flex items-center gap-1.5 text-xs text-white/60 hover:text-white transition-colors"
           >
             <ExternalLink className="w-3.5 h-3.5" />
-            官方站点
+            Official site
           </a>
         </div>
 

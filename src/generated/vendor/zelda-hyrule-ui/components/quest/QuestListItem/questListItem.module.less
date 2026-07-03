@@ -1,0 +1,111 @@
+@import "../../../styles/variables.less";
+// 精确还原 Figma node 191:17721
+// 640×90px 任务列表项
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.innerBorder {
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  pointer-events: none;
+  transition: border-color 0.25s;
+}
+
+.container:focus-visible {
+  outline: 2px solid #3CD3FC;
+  outline-offset: 2px;
+}
+
+// ---- 左侧图标 ----
+.icon {
+  width: 77px;
+  height: 77px;
+  margin-left: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ---- 文字内容 ----
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  font-style: italic;
+  color: #E2DED3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.1;
+}
+
+.location {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  color: #E1C139;
+  line-height: 1.2;
+}
+
+// ---- 右侧标记 ----
+.marker {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.6));
+}
+
+.dot {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(226, 222, 211, 0.4);
+}
+
+// ---- 状态 ----
+.hovered {
+  .innerBorder {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.completed {
+  opacity: 0.4;
+}
+
+.unmarked {
+  // 有小灰点
+}
+
+.marked {
+  // 有金色圆环
+}

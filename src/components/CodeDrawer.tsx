@@ -26,7 +26,7 @@ export default function CodeDrawer({ component, copiedId, onCopy }: CodeDrawerPr
         className="flex items-center gap-2 text-xs text-ink-muted hover:text-ink transition-colors"
       >
         <Code2 className="w-3.5 h-3.5" />
-        <span>查看代码</span>
+        <span>View code</span>
         <motion.span
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.2 }}

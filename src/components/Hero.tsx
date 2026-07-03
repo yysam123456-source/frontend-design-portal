@@ -30,8 +30,8 @@ export default function Hero({ search, onSearchChange, totalProjects }: HeroProp
             <span className="text-ink-muted">Gallery</span>
           </h1>
           <p className="text-base text-ink-muted max-w-lg leading-relaxed mb-10">
-            聚合 {totalProjects} 个优质前端设计开源项目 — 动画引擎、UI 组件库、交互效果、游戏主题 UI，
-            一键预览效果，复制代码即用。
+            Curated from {totalProjects} open-source frontend design projects, including animation engines,
+            UI libraries, interaction effects, and game-inspired interfaces.
           </p>
         </motion.div>
 
@@ -46,7 +46,7 @@ export default function Hero({ search, onSearchChange, totalProjects }: HeroProp
             type="text"
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="搜索项目、组件、效果..."
+            placeholder="Search projects, components, effects..."
             className="w-full pl-10 pr-4 py-3 bg-bg-secondary border border-border rounded-lg text-sm text-ink placeholder:text-ink-subtle focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all"
           />
         </motion.div>

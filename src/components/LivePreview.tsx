@@ -65,7 +65,7 @@ export default function LivePreview({ url, title }: LivePreviewProps) {
       >
         <AlertCircle className="w-8 h-8 text-ink-subtle" />
         <p className="text-sm text-ink-muted text-center">
-          该站点禁止 iframe 嵌入
+          This site blocks iframe embedding.
         </p>
         <a
           href={url}
@@ -74,7 +74,7 @@ export default function LivePreview({ url, title }: LivePreviewProps) {
           className="flex items-center gap-1.5 text-xs text-accent hover:text-accent-light transition-colors"
         >
           <ExternalLink className="w-3.5 h-3.5" />
-          在新标签页打开
+          Open in a new tab
         </a>
       </div>
 
@@ -82,7 +82,7 @@ export default function LivePreview({ url, title }: LivePreviewProps) {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex flex-col items-center gap-2">
             <div className="w-6 h-6 border-2 border-border border-t-accent rounded-full animate-spin" />
-            <span className="text-xs text-ink-subtle">加载预览...</span>
+            <span className="text-xs text-ink-subtle">Loading preview...</span>
           </div>
         </div>
       )}

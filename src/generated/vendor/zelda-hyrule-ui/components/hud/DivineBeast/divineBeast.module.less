@@ -1,0 +1,47 @@
+@import "../../../styles/variables.less";
+// 精确还原 Figma node 61:155
+// 75×75px，带神兽色辉光，blur 0.5px
+
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: blur(0.5px);
+}
+
+.icon {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.charges {
+  position: absolute;
+  top: -11px;
+  right: -21px;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  color: #fff;
+  display: flex;
+  align-items: baseline;
+}
+
+.times {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.count {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.recharging {
+  animation: recharge-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes recharge-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}

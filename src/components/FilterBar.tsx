@@ -13,10 +13,10 @@ interface FilterBarProps {
 }
 
 const categoryLabels: Record<string, string> = {
-  animation: '动画',
-  'ui-library': 'UI 库',
-  effect: '特效',
-  tool: '工具',
+  animation: 'Animation',
+  'ui-library': 'UI Library',
+  effect: 'Effects',
+  tool: 'Tools',
 }
 
 export default function FilterBar({
@@ -36,7 +36,7 @@ export default function FilterBar({
       className="sticky top-14 z-40 bg-white/80 backdrop-blur-sm border-b border-border px-6 lg:px-12 py-3"
     >
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs text-ink-subtle mr-1">筛选</span>
+        <span className="text-xs text-ink-subtle mr-1">Filters</span>
 
         {categories.map((cat) => (
           <button
@@ -74,7 +74,7 @@ export default function FilterBar({
             className="ml-auto flex items-center gap-1 text-xs text-ink-subtle hover:text-accent transition-colors"
           >
             <X className="w-3 h-3" />
-            清除筛选
+            Clear filters
           </button>
         )}
       </div>
