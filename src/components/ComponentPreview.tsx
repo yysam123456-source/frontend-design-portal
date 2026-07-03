@@ -105,7 +105,7 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   }, [component, isHtml, isJsDemo, isHtmlLive, isHtmlVideo])
 
   useEffect(() => {
-    if (!isHtml && !isJsDemo) return
+    if (!isHtml && !isHtmlLive && !isJsDemo) return
     setIframeStatus('loading')
     if (timerRef.current) clearTimeout(timerRef.current)
     timerRef.current = setTimeout(() => {
@@ -115,7 +115,7 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
       if (timerRef.current) clearTimeout(timerRef.current)
       if (iframeUrl) URL.revokeObjectURL(iframeUrl)
     }
-  }, [iframeUrl, isHtml, isJsDemo])
+  }, [iframeUrl, isHtml, isHtmlLive, isJsDemo])
 
   if (!component) {
     return (
@@ -129,7 +129,7 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
     ? 'Video Demo'
     : isMediaImage
       ? 'Image Demo'
-    : hasGenerated || isHtml || isJsDemo
+    : hasGenerated || isHtml || isHtmlLive || isJsDemo
       ? 'Live Preview'
       : 'Pending'
   const codeLines = component.codeSnippet.source.split('\n').slice(0, 12)
