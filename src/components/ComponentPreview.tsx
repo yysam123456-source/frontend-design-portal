@@ -68,6 +68,11 @@ ${code}
 </html>`
 }
 
+function extractVideoSrc(html: string): string | null {
+  const match = html.match(/<video[^>]+src=["']([^"']+)["'][^>]*>/i)
+  return match ? match[1] : null
+}
+
 export default function ComponentPreview({ component }: ComponentPreviewProps) {
   const isHtml = component?.codeSnippet.language === 'html'
   const previewRecord = getPreviewRecord(component?.id)
@@ -75,6 +80,9 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   const isJsDemo = previewRecord?.kind === 'js-demo' && previewRecord.status === 'ready'
   const isMediaVideo = previewRecord?.kind === 'media-video' && previewRecord.status === 'ready'
   const isMediaImage = previewRecord?.kind === 'media-image' && previewRecord.status === 'ready'
+  // Detect HTML that contains a <video> tag — render directly instead of iframe to avoid sandbox media blocks
+  const htmlVideoSrc = isHtml && component ? extractVideoSrc(component.codeSnippet.source) : null
+  const isHtmlVideo = !!htmlVideoSrc
   const canPreview = isHtml || hasGenerated || isJsDemo || isMediaVideo || isMediaImage
   const [mode, setMode] = useState<'preview' | 'code'>(canPreview ? 'preview' : 'code')
   const [iframeStatus, setIframeStatus] = useState<'loading' | 'loaded' | 'error'>('loading')
@@ -87,13 +95,13 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   }, [canPreview, component?.id])
 
   const iframeUrl = useMemo(() => {
-    if (!component || (!isHtml && !isJsDemo)) return null
+    if (!component || (!isHtml && !isJsDemo) || isHtmlVideo) return null
     const html = isHtml
       ? buildHtmlPreview(component.codeSnippet.source)
       : buildJsPreview(component.codeSnippet.source)
     const blob = new Blob([html], { type: 'text/html' })
     return URL.createObjectURL(blob)
-  }, [component, isHtml, isJsDemo])
+  }, [component, isHtml, isJsDemo, isHtmlVideo])
 
   useEffect(() => {
     if (!isHtml && !isJsDemo) return
@@ -183,6 +191,18 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
                 src={previewRecord.media?.poster}
                 alt={component.name}
                 className="max-h-full max-w-full rounded-lg border border-white/10 object-contain shadow-2xl"
+              />
+            </div>
+          ) : isHtmlVideo ? (
+            <div className="flex aspect-[16/10] w-full items-center justify-center bg-[#050816] p-4">
+              <video
+                className="max-h-full max-w-full rounded-lg border border-white/10 object-contain shadow-2xl"
+                src={htmlVideoSrc!}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
               />
             </div>
           ) : isHtml || isJsDemo ? (
