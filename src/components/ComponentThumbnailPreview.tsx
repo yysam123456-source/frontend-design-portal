@@ -193,9 +193,9 @@ export default function ComponentThumbnailPreview({
   const srcDoc = useMemo(() => {
     if (loading) return ''
     if (previewRecord?.status === 'unsupported') return buildUnsupportedPreview(component, projectMeta)
-    if (language === 'html' && source) return buildHtmlPreview(source)
+    if ((language === 'html' || previewRecord?.kind === 'html-live') && source) return buildHtmlPreview(source)
     return buildFallbackPreview(component, projectMeta)
-  }, [component, language, loading, previewRecord?.status, projectMeta, source])
+  }, [component, language, loading, previewRecord?.status, previewRecord?.kind, projectMeta, source])
 
   if (previewRecord?.kind === 'react-generated' && previewRecord.status === 'ready') {
     return (
@@ -257,7 +257,7 @@ export default function ComponentThumbnailPreview({
       loading="lazy"
       sandbox="allow-scripts"
       className="absolute inset-0 w-full h-full border-0 pointer-events-none"
-      style={{ background: language === 'html' ? '#fff' : '#0b0f19' }}
+      style={{ background: (language === 'html' || previewRecord?.kind === 'html-live') ? '#fff' : '#0b0f19' }}
     />
   )
 }

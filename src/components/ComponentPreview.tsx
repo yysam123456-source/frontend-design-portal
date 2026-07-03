@@ -80,10 +80,11 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   const isJsDemo = previewRecord?.kind === 'js-demo' && previewRecord.status === 'ready'
   const isMediaVideo = previewRecord?.kind === 'media-video' && previewRecord.status === 'ready'
   const isMediaImage = previewRecord?.kind === 'media-image' && previewRecord.status === 'ready'
+  const isHtmlLive = previewRecord?.kind === 'html-live' && previewRecord.status === 'ready'
   // Detect HTML that contains a <video> tag — render directly instead of iframe to avoid sandbox media blocks
   const htmlVideoSrc = isHtml && component ? extractVideoSrc(component.codeSnippet.source) : null
   const isHtmlVideo = !!htmlVideoSrc
-  const canPreview = isHtml || hasGenerated || isJsDemo || isMediaVideo || isMediaImage
+  const canPreview = isHtml || isHtmlLive || hasGenerated || isJsDemo || isMediaVideo || isMediaImage
   const [mode, setMode] = useState<'preview' | 'code'>(canPreview ? 'preview' : 'code')
   const [iframeStatus, setIframeStatus] = useState<'loading' | 'loaded' | 'error'>('loading')
   const [codeExpanded, setCodeExpanded] = useState(false)
@@ -95,13 +96,13 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   }, [canPreview, component?.id])
 
   const iframeUrl = useMemo(() => {
-    if (!component || (!isHtml && !isJsDemo) || isHtmlVideo) return null
-    const html = isHtml
+    if (!component || (!isHtml && !isJsDemo && !isHtmlLive) || isHtmlVideo) return null
+    const html = isHtml || isHtmlLive
       ? buildHtmlPreview(component.codeSnippet.source)
       : buildJsPreview(component.codeSnippet.source)
     const blob = new Blob([html], { type: 'text/html' })
     return URL.createObjectURL(blob)
-  }, [component, isHtml, isJsDemo, isHtmlVideo])
+  }, [component, isHtml, isJsDemo, isHtmlLive, isHtmlVideo])
 
   useEffect(() => {
     if (!isHtml && !isJsDemo) return
@@ -205,7 +206,7 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
                 controls
               />
             </div>
-          ) : isHtml || isJsDemo ? (
+          ) : isHtml || isHtmlLive || isJsDemo ? (
             <div className="relative w-full aspect-[16/10]">
               {iframeStatus === 'loading' && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 z-10 bg-bg-secondary">
