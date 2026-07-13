@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import * as THREE from 'three'
 import OrbitalViz from './OrbitalViz'
+import KeyboardConfigShowcase from './KeyboardConfigShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
    SHOWCASES PAGE — 3 Immersive Fullscreen Effects
@@ -1345,6 +1346,7 @@ const SHOWCASES = [
   { id: 'mecha', label: 'Mecha Breakdown', desc: 'Mechanical disassembly', icon: '⚙' },
   { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐' },
   { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕' },
+  { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1424,6 +1426,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'mecha' && <MechaDisassembly />}
         {activeId === 'planets' && <ThreePlanets />}
         {activeId === 'orbits' && <OrbitalViz />}
+        {activeId === 'keyboard' && <KeyboardConfigShowcase />}
       </div>
     </div>
   )
