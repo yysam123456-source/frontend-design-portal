@@ -40,9 +40,7 @@ function buildHtmlPreview(source: string) {
       display: grid;
       place-items: center;
       padding: 22px;
-      background:
-        radial-gradient(circle at top left, rgba(99,102,241,.12), transparent 30%),
-        linear-gradient(135deg, #fbfbfb, #f1f5f9);
+      background: #0a0a0a;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
       transform: scale(.86);
@@ -257,7 +255,7 @@ export default function ComponentThumbnailPreview({
       loading="lazy"
       sandbox="allow-scripts"
       className="absolute inset-0 w-full h-full border-0 pointer-events-none"
-      style={{ background: (language === 'html' || previewRecord?.kind === 'html-live') ? '#fff' : '#0b0f19' }}
+      style={{ background: (language === 'html' || previewRecord?.kind === 'html-live') ? '#0a0a0a' : '#0b0f19' }}
     />
   )
 }
