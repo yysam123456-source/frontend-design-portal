@@ -278,8 +278,9 @@ export default function KeyboardConfigShowcase() {
   const [hoveredLabel, setHoveredLabel] = useState<string | null>(null)
   const hoverRef = useRef<{
     key: THREE.Mesh | null
+    prevKey: THREE.Mesh | null
     defaultPos: THREE.Vector3
-  }>({ key: null, defaultPos: new THREE.Vector3(10, 12, 14) })
+  }>({ key: null, prevKey: null, defaultPos: new THREE.Vector3(10, 12, 14) })
   const mouseRef = useRef(new THREE.Vector2(-999, -999))
   const raycasterRef = useRef(new THREE.Raycaster())
   const cameraGoalRef = useRef<{ pos: THREE.Vector3; target: THREE.Vector3 }>({
@@ -575,19 +576,43 @@ export default function KeyboardConfigShowcase() {
         const hits = raycaster.intersectObjects(keyMeshes)
         const hit = hits.length > 0 ? (hits[0].object as THREE.Mesh) : null
 
-        // 恢复之前 hover 的键帽
+        // 当 hover 对象变化时，把旧对象移入 prevKey 持续恢复
         if (prevHovered && prevHovered !== hit) {
-          const mats = prevHovered.material as THREE.MeshPhysicalMaterial[]
+          hoverRef.current.prevKey = prevHovered
+        }
+
+        // 持续恢复 prevKey（每帧执行直到完全归位）
+        const pk = hoverRef.current.prevKey
+        if (pk) {
+          const mats = pk.material as THREE.MeshPhysicalMaterial[]
           mats.forEach((mat) => {
-            mat.emissive.copy(defaultEmissive)
-            mat.emissiveIntensity = 0
+            mat.emissive.lerp(defaultEmissive, 0.15)
+            mat.emissiveIntensity = Math.max(0, mat.emissiveIntensity - 0.05)
           })
-          const ty = prevHovered.userData.targetY as number
-          prevHovered.position.y += (ty - prevHovered.position.y) * 0.12
-          const s = prevHovered.scale.x + (1 - prevHovered.scale.x) * 0.12
-          prevHovered.scale.set(s, s, s)
-          prevHovered.rotation.x += (0 - prevHovered.rotation.x) * 0.12
-          prevHovered.rotation.z += (0 - prevHovered.rotation.z) * 0.12
+          const ty = pk.userData.targetY as number
+          pk.position.y += (ty - pk.position.y) * 0.15
+          const s = pk.scale.x + (1 - pk.scale.x) * 0.15
+          pk.scale.set(s, s, s)
+          pk.rotation.x += (0 - pk.rotation.x) * 0.15
+          pk.rotation.z += (0 - pk.rotation.z) * 0.15
+
+          // 判断是否已完全归位
+          const isHome =
+            Math.abs(pk.position.y - ty) < 0.001 &&
+            Math.abs(pk.scale.x - 1) < 0.001 &&
+            Math.abs(pk.rotation.x) < 0.001 &&
+            Math.abs(pk.rotation.z) < 0.001
+          if (isHome) {
+            pk.position.y = ty
+            pk.scale.set(1, 1, 1)
+            pk.rotation.x = 0
+            pk.rotation.z = 0
+            mats.forEach((mat) => {
+              mat.emissive.copy(defaultEmissive)
+              mat.emissiveIntensity = 0
+            })
+            hoverRef.current.prevKey = null
+          }
         }
 
         if (hit) {
