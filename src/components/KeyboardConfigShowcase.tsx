@@ -57,13 +57,13 @@ const SCHEMES: ColorScheme[] = [
   },
 ]
 
-/** 简化 60% 键盘布局：每行表示各键的宽度（单位键宽 = 1） */
-const KEYBOARD_ROWS = [
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],               // Esc, 1~0, -, =, Backspace
-  [1.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.5],           // Tab, Q~P, [, ], \
-  [1.75, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2.25],             // Caps, A~L, ;, ', Enter
-  [2.25, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2.75],               // Shift, Z~M, comma, dot, /, Shift
-  [1.25, 1.25, 1.25, 6.25, 1.25, 1.25, 1.25, 1.25],         // Ctrl, Win, Alt, Space, Alt, Fn, Menu, Ctrl
+/** 简化 60% 键盘布局：每行是一组 [宽度, 标签] */
+const KEYBOARD_ROWS: [number, string][][] = [
+  [[1,'Esc'],[1,'1'],[1,'2'],[1,'3'],[1,'4'],[1,'5'],[1,'6'],[1,'7'],[1,'8'],[1,'9'],[1,'0'],[1,'-'],[1,'='],[2,'Bksp']],
+  [[1.5,'Tab'],[1,'Q'],[1,'W'],[1,'E'],[1,'R'],[1,'T'],[1,'Y'],[1,'U'],[1,'I'],[1,'O'],[1,'P'],[1,'['],[1,']'],[1.5,'\\']],
+  [[1.75,'Caps'],[1,'A'],[1,'S'],[1,'D'],[1,'F'],[1,'G'],[1,'H'],[1,'J'],[1,'K'],[1,'L'],[1,';'],[1,"'"],[2.25,'Enter']],
+  [[2.25,'Shift'],[1,'Z'],[1,'X'],[1,'C'],[1,'V'],[1,'B'],[1,'N'],[1,'M'],[1,','],[1,'.'],[1,'/'],[2.75,'Shift']],
+  [[1.25,'Ctrl'],[1.25,'Win'],[1.25,'Alt'],[6.25,'Space'],[1.25,'Alt'],[1.25,'Fn'],[1.25,'Menu'],[1.25,'Ctrl']],
 ]
 
 const UNIT = 1.0          // 单位键宽对应的场景单位
@@ -132,6 +132,20 @@ export default function KeyboardConfigShowcase() {
     startTime: number
     items: { mesh: THREE.Mesh; targetY: number; delay: number; done: boolean }[]
   } | null>(null)
+
+  /* ── Hover zoom state ── */
+  const [hoveredLabel, setHoveredLabel] = useState<string | null>(null)
+  const hoverRef = useRef<{
+    key: THREE.Mesh | null
+    defaultPos: THREE.Vector3
+  }>({ key: null, defaultPos: new THREE.Vector3(10, 12, 14) })
+  const mouseRef = useRef(new THREE.Vector2(-999, -999))
+  const raycasterRef = useRef(new THREE.Raycaster())
+  const cameraGoalRef = useRef<{ pos: THREE.Vector3; target: THREE.Vector3 }>({
+    pos: new THREE.Vector3(10, 12, 14),
+    target: new THREE.Vector3(0, 0.5, 0),
+  })
+  const isUserDragging = useRef(false)
 
   /* ═══════════════════════════════════════════════════════════
      INIT: build the entire Three.js scene
@@ -258,7 +272,7 @@ export default function KeyboardConfigShowcase() {
       const zBase = -2.0 + rowIdx * UNIT
       let xCursor = -TOTAL_WIDTH_UNITS / 2
 
-      row.forEach((w, colIdx) => {
+      row.forEach(([w, label], colIdx) => {
         // 标记特殊键（Esc / Enter / Space）使用 accent 色
         const isAccent =
           (rowIdx === 0 && colIdx === 0) ||   // Esc
@@ -287,7 +301,7 @@ export default function KeyboardConfigShowcase() {
         capMesh.position.set(x, targetY, zBase)
         capMesh.castShadow = true
         capMesh.receiveShadow = true
-        capMesh.userData = { targetY, isAccent }
+        capMesh.userData = { targetY, isAccent, label }
         scene.add(capMesh)
         keyMeshes.push(capMesh)
 
@@ -343,6 +357,26 @@ export default function KeyboardConfigShowcase() {
     }
     setIsPopping(true)
 
+    // ── Raycaster for hover detection ──
+    const raycaster = raycasterRef.current
+    const mouse = mouseRef.current
+
+    const onMouseMove = (e: MouseEvent) => {
+      const rect = renderer.domElement.getBoundingClientRect()
+      mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
+      mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1
+    }
+    const onPointerDown = () => { isUserDragging.current = true }
+    const onPointerUp = () => { isUserDragging.current = false }
+    renderer.domElement.addEventListener('mousemove', onMouseMove)
+    renderer.domElement.addEventListener('pointerdown', onPointerDown)
+    renderer.domElement.addEventListener('pointerup', onPointerUp)
+
+    // Track previous hovered key for un-highlight
+    let prevHovered: THREE.Mesh | null = null
+    const defaultEmissive = new THREE.Color(0x000000)
+    const hoverEmissive = new THREE.Color(0x3388ff)
+
     // ── Animation Loop ──
     const animate = () => {
       const t = targetsRef.current
@@ -394,6 +428,54 @@ export default function KeyboardConfigShowcase() {
         }
       }
 
+      // 4) Raycaster: detect hovered key
+      if (!isUserDragging.current) {
+        raycaster.setFromCamera(mouse, camera)
+        const hits = raycaster.intersectObjects(keyMeshes)
+        const hit = hits.length > 0 ? hits[0].object as THREE.Mesh : null
+
+        // Un-highlight previous
+        if (prevHovered && prevHovered !== hit) {
+          const mat = prevHovered.material as THREE.MeshPhysicalMaterial
+          mat.emissive.copy(defaultEmissive)
+          mat.emissiveIntensity = 0
+          // Smoothly return position
+          const ty = prevHovered.userData.targetY as number
+          prevHovered.position.y += (ty - prevHovered.position.y) * 0.15
+        }
+
+        if (hit) {
+          const mat = hit.material as THREE.MeshPhysicalMaterial
+          mat.emissive.lerp(hoverEmissive, 0.12)
+          mat.emissiveIntensity = 0.35
+          // Slight lift effect
+          const ty = (hit.userData.targetY as number) + 0.15
+          hit.position.y += (ty - hit.position.y) * 0.12
+
+          // Set camera goal to focus on this key
+          const kp = hit.position
+          cameraGoalRef.current.pos.set(kp.x + 2, kp.y + 4, kp.z + 5)
+          cameraGoalRef.current.target.copy(kp)
+
+          setHoveredLabel(hit.userData.label as string || null)
+          hoverRef.current.key = hit
+        } else {
+          // Reset camera to default
+          cameraGoalRef.current.pos.set(10, 12, 14)
+          cameraGoalRef.current.target.set(0, 0.5, 0)
+          setHoveredLabel(null)
+          hoverRef.current.key = null
+        }
+
+        prevHovered = hit
+      }
+
+      // 5) Smooth camera interpolation (only when not dragging)
+      if (!isUserDragging.current) {
+        camera.position.lerp(cameraGoalRef.current.pos, 0.04)
+        controls.target.lerp(cameraGoalRef.current.target, 0.04)
+      }
+
       controls.update()
       renderer.render(scene, camera)
       rafRef.current = requestAnimationFrame(animate)
@@ -415,6 +497,9 @@ export default function KeyboardConfigShowcase() {
     return () => {
       cancelAnimationFrame(rafRef.current)
       window.removeEventListener('resize', onResize)
+      renderer.domElement.removeEventListener('mousemove', onMouseMove)
+      renderer.domElement.removeEventListener('pointerdown', onPointerDown)
+      renderer.domElement.removeEventListener('pointerup', onPointerUp)
       controls.dispose()
 
       // 遍历场景，安全 dispose 所有 geometry / material
@@ -486,6 +571,21 @@ export default function KeyboardConfigShowcase() {
     <div className="relative w-full h-full min-h-[500px] bg-[#0a0a0a] overflow-hidden rounded-xl">
       {/* Three.js canvas container */}
       <div ref={containerRef} className="absolute inset-0" />
+
+      {/* ── Hovered key label (top-center) ── */}
+      {hoveredLabel && (
+        <div
+          className="absolute top-4 left-1/2 -translate-x-1/2 z-10 px-4 py-2 rounded-xl text-white select-none pointer-events-none transition-opacity duration-200"
+          style={{
+            background: 'rgba(51,136,255,0.2)',
+            backdropFilter: 'blur(12px)',
+            border: '1px solid rgba(51,136,255,0.3)',
+            boxShadow: '0 0 20px rgba(51,136,255,0.15)',
+          }}
+        >
+          <span className="text-lg font-bold tracking-wide">{hoveredLabel}</span>
+        </div>
+      )}
 
       {/* ── Control Panel (top-right) ── */}
       <div
@@ -579,9 +679,13 @@ export default function KeyboardConfigShowcase() {
           <span className="w-1.5 h-1.5 rounded-full bg-white/30" />
           <span>Scroll to zoom</span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-1">
           <span className="w-1.5 h-1.5 rounded-full bg-white/30" />
           <span>Right drag to pan</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-400/60" />
+          <span>Hover key for close-up</span>
         </div>
       </div>
     </div>
