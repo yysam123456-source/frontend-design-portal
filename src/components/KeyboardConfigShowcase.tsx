@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 /* ═══════════════════════════════════════════════════════════════
    3D KEYBOARD CONFIGURATOR SHOWCASE
    Three.js 60% keyboard visualizer inspired by MODKEYS
+   Light-theme, detailed keycaps with labels, chamfered edges
    ═══════════════════════════════════════════════════════════════ */
 
 interface ColorScheme {
@@ -15,45 +16,55 @@ interface ColorScheme {
   accentColor: number
   knobColor: number
   groundColor: number
+  textColor: string
+  sceneBg: number
 }
 
-/** 4 套配色方案 */
+/** 4 套配色方案 — 浅色背景适配 */
 const SCHEMES: ColorScheme[] = [
   {
-    name: 'Classic B&W',
-    caseColor: 0x2a2a2a,
-    capColor: 0xe8e8e8,
-    switchColor: 0x444444,
-    accentColor: 0x888888,
-    knobColor: 0xcccccc,
-    groundColor: 0x111111,
+    name: 'Classic',
+    caseColor: 0x4a4a4a,
+    capColor: 0xf8f9fa,
+    switchColor: 0x6c757d,
+    accentColor: 0xdc3545,
+    knobColor: 0xadb5bd,
+    groundColor: 0xd0d5db,
+    textColor: '#1a1a1a',
+    sceneBg: 0xe8eaed,
   },
   {
-    name: 'Sakura Pink',
-    caseColor: 0xfce4ec,
-    capColor: 0xfff0f5,
-    switchColor: 0xf8bbd0,
-    accentColor: 0xec407a,
-    knobColor: 0xf48fb1,
-    groundColor: 0x2a0a1a,
+    name: 'Sakura',
+    caseColor: 0xc2185b,
+    capColor: 0xfce4ec,
+    switchColor: 0xf48fb1,
+    accentColor: 0x880e4f,
+    knobColor: 0xec407a,
+    groundColor: 0xf3c4d7,
+    textColor: '#4a1c2e',
+    sceneBg: 0xfce4ec,
   },
   {
-    name: 'Ocean Blue',
-    caseColor: 0x0d1b2a,
-    capColor: 0x1b263b,
-    switchColor: 0x415a77,
-    accentColor: 0x00b4d8,
-    knobColor: 0x0077b6,
-    groundColor: 0x050a14,
+    name: 'Ocean',
+    caseColor: 0x1565c0,
+    capColor: 0xe3f2fd,
+    switchColor: 0x42a5f5,
+    accentColor: 0x0d47a1,
+    knobColor: 0x0277bd,
+    groundColor: 0xbbdefb,
+    textColor: '#0d1b2a',
+    sceneBg: 0xe0f7fa,
   },
   {
-    name: 'Cyber Purple',
-    caseColor: 0x1a0b2e,
-    capColor: 0x2d1b4e,
-    switchColor: 0x7b2cbf,
-    accentColor: 0xe0aaff,
-    knobColor: 0x9d4edd,
-    groundColor: 0x0d0518,
+    name: 'Forest',
+    caseColor: 0x2e7d32,
+    capColor: 0xe8f5e9,
+    switchColor: 0x66bb6a,
+    accentColor: 0x1b5e20,
+    knobColor: 0x43a047,
+    groundColor: 0xc8e6c9,
+    textColor: '#1b3a1b',
+    sceneBg: 0xe8f5e9,
   },
 ]
 
@@ -66,11 +77,11 @@ const KEYBOARD_ROWS: [number, string][][] = [
   [[1.25,'Ctrl'],[1.25,'Win'],[1.25,'Alt'],[6.25,'Space'],[1.25,'Alt'],[1.25,'Fn'],[1.25,'Menu'],[1.25,'Ctrl']],
 ]
 
-const UNIT = 1.0          // 单位键宽对应的场景单位
-const GAP = 0.08          // 键帽间微小间隙
+const UNIT = 1.0
+const GAP = 0.08
 const TOTAL_WIDTH_UNITS = 15
 
-/** easeOutBack 缓动 —— 让键帽弹入带有轻微的回弹感 */
+/** easeOutBack 缓动 */
 function easeOutBack(t: number): number {
   const c1 = 1.70158
   const c3 = c1 + 1
@@ -80,6 +91,133 @@ function easeOutBack(t: number): number {
 /** 将 0xRRGGBB 转为 CSS #rrggbb */
 function hexToCss(hex: number): string {
   return '#' + hex.toString(16).padStart(6, '0')
+}
+
+/** 创建键帽顶面文字纹理 */
+function createKeycapTexture(
+  label: string,
+  bgColor: number,
+  textColor: string
+): THREE.CanvasTexture {
+  const canvas = document.createElement('canvas')
+  canvas.width = 512
+  canvas.height = 512
+  const ctx = canvas.getContext('2d')!
+
+  // 背景
+  ctx.fillStyle = hexToCss(bgColor)
+  ctx.fillRect(0, 0, 512, 512)
+
+  // 文字
+  ctx.fillStyle = textColor
+  // 根据标签长度调整字号
+  const fontSize = label.length > 4 ? 140 : label.length > 2 ? 180 : 220
+  ctx.font = `bold ${fontSize}px "Inter", "Segoe UI", "Helvetica Neue", sans-serif`
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.fillText(label, 256, 256)
+
+  const tex = new THREE.CanvasTexture(canvas)
+  tex.colorSpace = THREE.SRGBColorSpace
+  tex.anisotropy = 4
+  return tex
+}
+
+/** 创建台形键帽几何体：顶部比底部窄，形成自然斜面 */
+function makeKeycapGeometry(w: number, d: number, h: number): THREE.BoxGeometry {
+  const geo = new THREE.BoxGeometry(w, h, d, 2, 1, 2)
+  const pos = geo.attributes.position
+  for (let i = 0; i < pos.count; i++) {
+    const y = pos.getY(i)
+    if (y > 0) {
+      // 顶面缩小 15%，形成台形
+      pos.setX(i, pos.getX(i) * 0.85)
+      pos.setZ(i, pos.getZ(i) * 0.85)
+    }
+  }
+  geo.computeVertexNormals()
+  return geo
+}
+
+/** 创建键帽侧面材质（纯色） */
+function makeSideMaterial(color: number): THREE.MeshPhysicalMaterial {
+  return new THREE.MeshPhysicalMaterial({
+    color,
+    metalness: 0.02,
+    roughness: 0.3,
+    clearcoat: 0.6,
+    clearcoatRoughness: 0.15,
+  })
+}
+
+/** 创建键帽顶面材质（带文字纹理） */
+function makeTopMaterial(
+  texture: THREE.CanvasTexture
+): THREE.MeshPhysicalMaterial {
+  return new THREE.MeshPhysicalMaterial({
+    map: texture,
+    metalness: 0.02,
+    roughness: 0.2,
+    clearcoat: 0.7,
+    clearcoatRoughness: 0.1,
+  })
+}
+
+/** 创建机械轴体细节（housing + stem + spring） */
+function createSwitchDetail(w: number, d: number, color: number): THREE.Group {
+  const group = new THREE.Group()
+
+  // Housing 底座外壳
+  const housingGeo = new THREE.BoxGeometry(w * 0.72, 0.32, d * 0.72)
+  const housingMat = new THREE.MeshPhysicalMaterial({
+    color,
+    metalness: 0.1,
+    roughness: 0.4,
+    transparent: true,
+    opacity: 0.85,
+  })
+  const housing = new THREE.Mesh(housingGeo, housingMat)
+  housing.position.y = 0.06
+  housing.castShadow = true
+  group.add(housing)
+
+  // 轴心 Stem（十字形）
+  const stemGroup = new THREE.Group()
+  stemGroup.position.y = 0.26
+
+  const stemMat = new THREE.MeshPhysicalMaterial({
+    color: 0xdddddd,
+    metalness: 0.05,
+    roughness: 0.3,
+  })
+
+  // 中心柱
+  const stemCenterGeo = new THREE.CylinderGeometry(0.05, 0.05, 0.2, 8)
+  const stemCenter = new THREE.Mesh(stemCenterGeo, stemMat)
+  stemGroup.add(stemCenter)
+
+  // 十字翼
+  const wingGeo = new THREE.BoxGeometry(0.16, 0.16, 0.025)
+  const wing1 = new THREE.Mesh(wingGeo, stemMat)
+  const wing2 = new THREE.Mesh(wingGeo, stemMat)
+  wing2.rotation.y = Math.PI / 2
+  stemGroup.add(wing1)
+  stemGroup.add(wing2)
+
+  group.add(stemGroup)
+
+  // 弹簧（细圆柱模拟）
+  const springGeo = new THREE.CylinderGeometry(0.055, 0.055, 0.22, 8)
+  const springMat = new THREE.MeshStandardMaterial({
+    color: 0x999999,
+    metalness: 0.7,
+    roughness: 0.25,
+  })
+  const spring = new THREE.Mesh(springGeo, springMat)
+  spring.position.y = 0.14
+  group.add(spring)
+
+  return group
 }
 
 export default function KeyboardConfigShowcase() {
@@ -101,8 +239,9 @@ export default function KeyboardConfigShowcase() {
   const groundMeshRef = useRef<THREE.Mesh | null>(null)
   const keyMeshesRef = useRef<THREE.Mesh[]>([])
   const switchMeshesRef = useRef<THREE.Mesh[]>([])
+  const switchDetailsRef = useRef<THREE.Group[]>([])
 
-  /* ── Shared material refs (for direct-use objects) ── */
+  /* ── Shared material refs ── */
   const matsRef = useRef<{
     case: THREE.MeshPhysicalMaterial | null
     knob: THREE.MeshPhysicalMaterial | null
@@ -117,6 +256,7 @@ export default function KeyboardConfigShowcase() {
     switch: THREE.Color
     knob: THREE.Color
     ground: THREE.Color
+    sceneBg: THREE.Color
   }>({
     case: new THREE.Color(SCHEMES[0].caseColor),
     cap: new THREE.Color(SCHEMES[0].capColor),
@@ -124,6 +264,7 @@ export default function KeyboardConfigShowcase() {
     switch: new THREE.Color(SCHEMES[0].switchColor),
     knob: new THREE.Color(SCHEMES[0].knobColor),
     ground: new THREE.Color(SCHEMES[0].groundColor),
+    sceneBg: new THREE.Color(SCHEMES[0].sceneBg),
   })
 
   /* ── Pop animation state ── */
@@ -154,9 +295,11 @@ export default function KeyboardConfigShowcase() {
     const container = containerRef.current
     if (!container) return
 
+    const scheme = SCHEMES[0]
+
     // ── Scene ──
     const scene = new THREE.Scene()
-    scene.background = new THREE.Color(0x0a0a0a)
+    scene.background = new THREE.Color(scheme.sceneBg)
     sceneRef.current = scene
 
     // ── Camera ──
@@ -171,13 +314,13 @@ export default function KeyboardConfigShowcase() {
     cameraRef.current = camera
 
     // ── Renderer ──
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
     renderer.setSize(container.clientWidth, container.clientHeight)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.shadowMap.enabled = true
     renderer.shadowMap.type = THREE.PCFSoftShadowMap
     renderer.toneMapping = THREE.ACESFilmicToneMapping
-    renderer.toneMappingExposure = 1.2
+    renderer.toneMappingExposure = 1.0
     container.appendChild(renderer.domElement)
     rendererRef.current = renderer
 
@@ -190,79 +333,62 @@ export default function KeyboardConfigShowcase() {
     controls.target.set(0, 0.5, 0)
     controlsRef.current = controls
 
-    // ── Lights ──
-    const ambient = new THREE.AmbientLight(0xffffff, 0.4)
+    // ── Lights (adapted for light background) ──
+    const ambient = new THREE.AmbientLight(0xffffff, 0.65)
     scene.add(ambient)
 
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1.2)
-    dirLight.position.set(8, 15, 8)
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1.3)
+    dirLight.position.set(8, 18, 10)
     dirLight.castShadow = true
     dirLight.shadow.mapSize.set(2048, 2048)
     dirLight.shadow.camera.near = 0.5
-    dirLight.shadow.camera.far = 50
-    dirLight.shadow.camera.left = -12
-    dirLight.shadow.camera.right = 12
-    dirLight.shadow.camera.top = 12
-    dirLight.shadow.camera.bottom = -12
-    dirLight.shadow.bias = -0.0005
+    dirLight.shadow.camera.far = 60
+    dirLight.shadow.camera.left = -14
+    dirLight.shadow.camera.right = 14
+    dirLight.shadow.camera.top = 14
+    dirLight.shadow.camera.bottom = -14
+    dirLight.shadow.bias = -0.0003
     scene.add(dirLight)
 
-    const fillLight = new THREE.DirectionalLight(0xffffff, 0.3)
-    fillLight.position.set(-5, 8, -5)
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.4)
+    fillLight.position.set(-6, 10, -6)
     scene.add(fillLight)
 
-    // ── Ground (shadow catcher) ──
-    const groundGeo = new THREE.PlaneGeometry(60, 60)
+    const rimLight = new THREE.DirectionalLight(0xffffff, 0.25)
+    rimLight.position.set(0, 5, -12)
+    scene.add(rimLight)
+
+    // ── Ground ──
+    const groundGeo = new THREE.PlaneGeometry(80, 80)
     const groundMat = new THREE.MeshStandardMaterial({
-      color: SCHEMES[0].groundColor,
-      roughness: 0.9,
-      metalness: 0.1,
+      color: scheme.groundColor,
+      roughness: 0.85,
+      metalness: 0.05,
     })
     const ground = new THREE.Mesh(groundGeo, groundMat)
     ground.rotation.x = -Math.PI / 2
-    ground.position.y = -2
+    ground.position.y = -2.2
     ground.receiveShadow = true
     scene.add(ground)
     groundMeshRef.current = ground
     matsRef.current.ground = groundMat
 
     // ── Case (机壳) ──
-    const caseGeo = new THREE.BoxGeometry(16.2, 0.5, 6.2)
+    const caseGeo = new THREE.BoxGeometry(16.2, 0.55, 6.2)
     const caseMat = new THREE.MeshPhysicalMaterial({
-      color: SCHEMES[0].caseColor,
-      metalness: 0.3,
-      roughness: 0.35,
-      clearcoat: 0.6,
-      clearcoatRoughness: 0.15,
+      color: scheme.caseColor,
+      metalness: 0.25,
+      roughness: 0.3,
+      clearcoat: 0.5,
+      clearcoatRoughness: 0.2,
     })
     const caseMesh = new THREE.Mesh(caseGeo, caseMat)
-    caseMesh.position.y = -0.25
+    caseMesh.position.y = -0.275
     caseMesh.castShadow = true
     caseMesh.receiveShadow = true
     scene.add(caseMesh)
     caseMeshRef.current = caseMesh
     matsRef.current.case = caseMat
-
-    // ── Prepare shared key materials (will be cloned per mesh) ──
-    const capMatProto = new THREE.MeshPhysicalMaterial({
-      color: SCHEMES[0].capColor,
-      metalness: 0.05,
-      roughness: 0.25,
-      clearcoat: 0.8,
-      clearcoatRoughness: 0.1,
-    })
-    const capAccentProto = new THREE.MeshPhysicalMaterial({
-      color: SCHEMES[0].accentColor,
-      metalness: 0.05,
-      roughness: 0.25,
-      clearcoat: 0.8,
-      clearcoatRoughness: 0.1,
-    })
-    const switchProto = new THREE.MeshPhysicalMaterial({
-      color: SCHEMES[0].switchColor,
-      metalness: 0.5,
-      roughness: 0.55,
-    })
 
     // ── Build Switches & Key Caps ──
     const keyMeshes: THREE.Mesh[] = []
@@ -273,35 +399,59 @@ export default function KeyboardConfigShowcase() {
       let xCursor = -TOTAL_WIDTH_UNITS / 2
 
       row.forEach(([w, label], colIdx) => {
-        // 标记特殊键（Esc / Enter / Space）使用 accent 色
         const isAccent =
-          (rowIdx === 0 && colIdx === 0) ||   // Esc
-          (rowIdx === 2 && colIdx === row.length - 1) || // Enter
-          (rowIdx === 4 && colIdx === 3)      // Space
+          (rowIdx === 0 && colIdx === 0) ||
+          (rowIdx === 2 && colIdx === row.length - 1) ||
+          (rowIdx === 4 && colIdx === 3)
 
         const keyW = w * UNIT - GAP
         const keyD = UNIT - GAP
-        const keyH = 0.5
+        const keyH = 0.55
         const x = xCursor + (w * UNIT) / 2
 
-        // Switch（开关）— 位于键帽下方的小长方体
-        const swGeo = new THREE.BoxGeometry(keyW * 0.75, 0.35, keyD * 0.75)
-        const swMat = switchProto.clone()
-        const swMesh = new THREE.Mesh(swGeo, swMat)
-        swMesh.position.set(x, 0.075, zBase)
-        swMesh.castShadow = true
-        scene.add(swMesh)
-        switchMeshes.push(swMesh)
+        // Switch detail (housing + stem + spring)
+        const switchDetail = createSwitchDetail(keyW, keyD, scheme.switchColor)
+        switchDetail.position.set(x, 0, zBase)
+        scene.add(switchDetail)
+        switchDetailsRef.current.push(switchDetail)
 
-        // Key cap（键帽）
-        const capGeo = new THREE.BoxGeometry(keyW, keyH, keyD)
-        const capMat = isAccent ? capAccentProto.clone() : capMatProto.clone()
-        const capMesh = new THREE.Mesh(capGeo, capMat)
-        const targetY = 0.35 + keyH / 2 // 0.6
+        // Keep housing material ref for color transitions
+        const housingMesh = switchDetail.children[0] as THREE.Mesh
+        switchMeshes.push(housingMesh)
+
+        // Key cap — 台形主体 + 顶面文字
+        const capColor = isAccent ? scheme.accentColor : scheme.capColor
+        const capGeo = makeKeycapGeometry(keyW, keyD, keyH)
+
+        // 顶面纹理
+        const topTex = createKeycapTexture(
+          label,
+          capColor,
+          scheme.textColor
+        )
+        // 侧面/底面材质
+        const sideMat = makeSideMaterial(capColor)
+        // 顶面材质
+        const topMat = makeTopMaterial(topTex)
+
+        // 多材质数组: 右,左,上,下,前,后
+        const capMaterials: THREE.MeshPhysicalMaterial[] = [
+          sideMat, sideMat, topMat, sideMat, sideMat, sideMat,
+        ]
+
+        const capMesh = new THREE.Mesh(capGeo, capMaterials)
+        const targetY = 0.35 + keyH / 2
         capMesh.position.set(x, targetY, zBase)
         capMesh.castShadow = true
         capMesh.receiveShadow = true
-        capMesh.userData = { targetY, isAccent, label }
+        capMesh.userData = {
+          targetY,
+          isAccent,
+          label,
+          topTex,     // 保存引用，切换颜色时更新
+          sideMat,    // 保存引用
+          topMat,     // 保存引用
+        }
         scene.add(capMesh)
         keyMeshes.push(capMesh)
 
@@ -312,24 +462,23 @@ export default function KeyboardConfigShowcase() {
     keyMeshesRef.current = keyMeshes
     switchMeshesRef.current = switchMeshes
 
-    // ── Knob（旋钮）— 右上角圆柱体配件 ──
+    // ── Knob ──
     const knobGroup = new THREE.Group()
     const knobGeo = new THREE.CylinderGeometry(0.7, 0.8, 0.8, 32)
     const knobMat = new THREE.MeshPhysicalMaterial({
-      color: SCHEMES[0].knobColor,
-      metalness: 0.4,
+      color: scheme.knobColor,
+      metalness: 0.35,
       roughness: 0.3,
-      clearcoat: 0.7,
-      clearcoatRoughness: 0.1,
+      clearcoat: 0.6,
+      clearcoatRoughness: 0.15,
     })
     const knobMesh = new THREE.Mesh(knobGeo, knobMat)
     knobMesh.position.y = 0.4
     knobMesh.castShadow = true
     knobGroup.add(knobMesh)
 
-    // 旋钮上的指示刻线
     const indGeo = new THREE.BoxGeometry(0.1, 0.5, 0.45)
-    const indMat = new THREE.MeshStandardMaterial({ color: 0x222222, roughness: 0.8 })
+    const indMat = new THREE.MeshStandardMaterial({ color: 0x333333, roughness: 0.7 })
     const indMesh = new THREE.Mesh(indGeo, indMat)
     indMesh.position.set(0, 0.4, 0.55)
     knobGroup.add(indMesh)
@@ -343,7 +492,7 @@ export default function KeyboardConfigShowcase() {
     const initialItems = keyMeshes.map((mesh) => ({
       mesh,
       targetY: mesh.userData.targetY as number,
-      delay: Math.random() * 500, // 0~500ms 随机延迟，形成波浪
+      delay: Math.random() * 500,
       done: false,
     }))
     initialItems.forEach((item) => {
@@ -372,10 +521,9 @@ export default function KeyboardConfigShowcase() {
     renderer.domElement.addEventListener('pointerdown', onPointerDown)
     renderer.domElement.addEventListener('pointerup', onPointerUp)
 
-    // Track previous hovered key for un-highlight
     let prevHovered: THREE.Mesh | null = null
     const defaultEmissive = new THREE.Color(0x000000)
-    const hoverEmissive = new THREE.Color(0x3388ff)
+    const hoverEmissive = new THREE.Color(0x66aaff)
 
     // ── Animation Loop ──
     const animate = () => {
@@ -383,17 +531,13 @@ export default function KeyboardConfigShowcase() {
       const m = matsRef.current
       const lerpSpeed = 0.06
 
-      // 1) 颜色过渡（直接引用的材质）
+      // 1) 颜色过渡
       if (m.case) m.case.color.lerp(t.case, lerpSpeed)
       if (m.knob) m.knob.color.lerp(t.knob, lerpSpeed)
       if (m.ground) m.ground.color.lerp(t.ground, lerpSpeed)
+      if (scene.background) (scene.background as THREE.Color).lerp(t.sceneBg, lerpSpeed)
 
-      // 2) 颜色过渡（clone 出来的键帽/开关材质）
-      keyMeshes.forEach((km) => {
-        const mat = km.material as THREE.MeshPhysicalMaterial
-        const target = km.userData.isAccent ? t.capAccent : t.cap
-        mat.color.lerp(target, lerpSpeed)
-      })
+      // 2) 键帽/开关颜色过渡
       switchMeshes.forEach((sm) => {
         const mat = sm.material as THREE.MeshPhysicalMaterial
         mat.color.lerp(t.switch, lerpSpeed)
@@ -406,10 +550,7 @@ export default function KeyboardConfigShowcase() {
         popRef.current.items.forEach((item) => {
           if (item.done) return
           const progress = Math.max(0, Math.min(1, (elapsed - item.delay) / 700))
-          if (progress <= 0) {
-            allDone = false
-            return
-          }
+          if (progress <= 0) { allDone = false; return }
           if (progress >= 1) {
             item.mesh.position.y = item.targetY
             item.mesh.scale.set(1, 1, 1)
@@ -428,39 +569,55 @@ export default function KeyboardConfigShowcase() {
         }
       }
 
-      // 4) Raycaster: detect hovered key
+      // 4) Raycaster hover detection — single key fly-out + zoom + tilt
       if (!isUserDragging.current) {
         raycaster.setFromCamera(mouse, camera)
         const hits = raycaster.intersectObjects(keyMeshes)
-        const hit = hits.length > 0 ? hits[0].object as THREE.Mesh : null
+        const hit = hits.length > 0 ? (hits[0].object as THREE.Mesh) : null
 
-        // Un-highlight previous
+        // 恢复之前 hover 的键帽
         if (prevHovered && prevHovered !== hit) {
-          const mat = prevHovered.material as THREE.MeshPhysicalMaterial
-          mat.emissive.copy(defaultEmissive)
-          mat.emissiveIntensity = 0
-          // Smoothly return position
+          const mats = prevHovered.material as THREE.MeshPhysicalMaterial[]
+          mats.forEach((mat) => {
+            mat.emissive.copy(defaultEmissive)
+            mat.emissiveIntensity = 0
+          })
           const ty = prevHovered.userData.targetY as number
-          prevHovered.position.y += (ty - prevHovered.position.y) * 0.15
+          prevHovered.position.y += (ty - prevHovered.position.y) * 0.12
+          const s = prevHovered.scale.x + (1 - prevHovered.scale.x) * 0.12
+          prevHovered.scale.set(s, s, s)
+          prevHovered.rotation.x += (0 - prevHovered.rotation.x) * 0.12
+          prevHovered.rotation.z += (0 - prevHovered.rotation.z) * 0.12
         }
 
         if (hit) {
-          const mat = hit.material as THREE.MeshPhysicalMaterial
-          mat.emissive.lerp(hoverEmissive, 0.12)
-          mat.emissiveIntensity = 0.35
-          // Slight lift effect
-          const ty = (hit.userData.targetY as number) + 0.15
-          hit.position.y += (ty - hit.position.y) * 0.12
+          const mats = hit.material as THREE.MeshPhysicalMaterial[]
+          mats.forEach((mat) => {
+            mat.emissive.lerp(hoverEmissive, 0.1)
+            mat.emissiveIntensity = 0.35
+          })
 
-          // Set camera goal to focus on this key
+          // 飞出：向上露出轴体
+          const ty = (hit.userData.targetY as number) + 1.0
+          hit.position.y += (ty - hit.position.y) * 0.1
+
+          // 放大
+          const ts = 1.4
+          const s = hit.scale.x + (ts - hit.scale.x) * 0.1
+          hit.scale.set(s, s, s)
+
+          // 微微倾斜展示侧面和底部
+          hit.rotation.x += (0.3 - hit.rotation.x) * 0.1
+          hit.rotation.z += (0.08 - hit.rotation.z) * 0.1
+
+          // 相机轻微拉近但不完全聚焦
           const kp = hit.position
-          cameraGoalRef.current.pos.set(kp.x + 2, kp.y + 4, kp.z + 5)
-          cameraGoalRef.current.target.copy(kp)
+          cameraGoalRef.current.pos.set(kp.x + 2.5, kp.y + 3.5, kp.z + 5)
+          cameraGoalRef.current.target.set(kp.x, kp.y * 0.3, kp.z)
 
           setHoveredLabel(hit.userData.label as string || null)
           hoverRef.current.key = hit
         } else {
-          // Reset camera to default
           cameraGoalRef.current.pos.set(10, 12, 14)
           cameraGoalRef.current.target.set(0, 0.5, 0)
           setHoveredLabel(null)
@@ -470,7 +627,7 @@ export default function KeyboardConfigShowcase() {
         prevHovered = hit
       }
 
-      // 5) Smooth camera interpolation (only when not dragging)
+      // 5) Smooth camera interpolation
       if (!isUserDragging.current) {
         camera.position.lerp(cameraGoalRef.current.pos, 0.04)
         controls.target.lerp(cameraGoalRef.current.target, 0.04)
@@ -502,14 +659,21 @@ export default function KeyboardConfigShowcase() {
       renderer.domElement.removeEventListener('pointerup', onPointerUp)
       controls.dispose()
 
-      // 遍历场景，安全 dispose 所有 geometry / material
       scene.traverse((obj) => {
         if (obj instanceof THREE.Mesh) {
           obj.geometry.dispose()
           const mat = obj.material
           if (Array.isArray(mat)) {
-            mat.forEach((m) => m.dispose())
+            mat.forEach((m) => {
+              if ((m as THREE.MeshPhysicalMaterial).map) {
+                ;(m as THREE.MeshPhysicalMaterial).map!.dispose()
+              }
+              m.dispose()
+            })
           } else {
+            if ((mat as THREE.MeshPhysicalMaterial).map) {
+              ;(mat as THREE.MeshPhysicalMaterial).map!.dispose()
+            }
             mat.dispose()
           }
         }
@@ -534,6 +698,29 @@ export default function KeyboardConfigShowcase() {
     targetsRef.current.switch.setHex(s.switchColor)
     targetsRef.current.knob.setHex(s.knobColor)
     targetsRef.current.ground.setHex(s.groundColor)
+    targetsRef.current.sceneBg.setHex(s.sceneBg)
+
+    // Update keycap textures for new color scheme
+    keyMeshesRef.current.forEach((mesh) => {
+      const isAccent = mesh.userData.isAccent as boolean
+      const label = mesh.userData.label as string
+      const capColor = isAccent ? s.accentColor : s.capColor
+
+      // Dispose old texture
+      const mats = mesh.material as THREE.MeshPhysicalMaterial[]
+      const oldTopMat = mats[2] // top face
+      if (oldTopMat.map) oldTopMat.map.dispose()
+
+      // Create new texture
+      const newTex = createKeycapTexture(label, capColor, s.textColor)
+      oldTopMat.map = newTex
+      oldTopMat.needsUpdate = true
+
+      // Update side materials color
+      mats.forEach((mat, i) => {
+        if (i !== 2) mat.color.setHex(capColor)
+      })
+    })
   }, [])
 
   /* ── Toggle knob visibility ── */
@@ -564,23 +751,26 @@ export default function KeyboardConfigShowcase() {
     setIsPopping(true)
   }, [isPopping])
 
-  /* ═══════════════════════════════════════════════════════════
-     RENDER: canvas + glassmorphism UI overlay
-     ═══════════════════════════════════════════════════════════ */
+  const scheme = SCHEMES[schemeIdx]
+  const panelText = '#1a1a2e'
+  const panelSub = 'rgba(26,26,46,0.5)'
+
   return (
-    <div className="relative w-full h-full min-h-[500px] bg-[#0a0a0a] overflow-hidden rounded-xl">
+    <div className="relative w-full h-full min-h-[500px] overflow-hidden rounded-xl"
+      style={{ background: hexToCss(scheme.sceneBg) }}>
       {/* Three.js canvas container */}
       <div ref={containerRef} className="absolute inset-0" />
 
       {/* ── Hovered key label (top-center) ── */}
       {hoveredLabel && (
         <div
-          className="absolute top-4 left-1/2 -translate-x-1/2 z-10 px-4 py-2 rounded-xl text-white select-none pointer-events-none transition-opacity duration-200"
+          className="absolute top-4 left-1/2 -translate-x-1/2 z-10 px-4 py-2 rounded-xl select-none pointer-events-none transition-opacity duration-200"
           style={{
-            background: 'rgba(51,136,255,0.2)',
+            background: 'rgba(255,255,255,0.85)',
             backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(51,136,255,0.3)',
-            boxShadow: '0 0 20px rgba(51,136,255,0.15)',
+            border: '1px solid rgba(0,0,0,0.08)',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+            color: scheme.textColor,
           }}
         >
           <span className="text-lg font-bold tracking-wide">{hoveredLabel}</span>
@@ -589,21 +779,22 @@ export default function KeyboardConfigShowcase() {
 
       {/* ── Control Panel (top-right) ── */}
       <div
-        className="absolute top-4 right-4 z-10 w-64 rounded-2xl p-5 text-white select-none"
+        className="absolute top-4 right-4 z-10 w-64 rounded-2xl p-5 select-none"
         style={{
-          background: 'rgba(20,20,30,0.65)',
+          background: 'rgba(255,255,255,0.82)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+          border: '1px solid rgba(0,0,0,0.08)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+          color: panelText,
         }}
       >
-        <h2 className="text-base font-bold mb-0.5 tracking-tight">3D Keyboard Configurator</h2>
-        <p className="text-[11px] text-white/40 mb-4">MODKEYS inspired showcase</p>
+        <h2 className="text-base font-bold mb-0.5 tracking-tight">Keyboard Configurator</h2>
+        <p className="text-[11px] mb-4" style={{ color: panelSub }}>MODKEYS inspired showcase</p>
 
         {/* Colorway selector */}
         <div className="mb-4">
-          <div className="text-[11px] uppercase tracking-wider text-white/50 mb-2 font-semibold">
+          <div className="text-[11px] uppercase tracking-wider mb-2 font-semibold" style={{ color: panelSub }}>
             Colorway
           </div>
           <div className="grid grid-cols-2 gap-2">
@@ -611,17 +802,23 @@ export default function KeyboardConfigShowcase() {
               <button
                 key={s.name}
                 onClick={() => applyScheme(i)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all border ${
-                  schemeIdx === i
-                    ? 'border-white/30 bg-white/10'
-                    : 'border-transparent hover:bg-white/5'
-                }`}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all border"
+                style={{
+                  borderColor: schemeIdx === i ? 'rgba(0,0,0,0.15)' : 'transparent',
+                  background: schemeIdx === i ? 'rgba(0,0,0,0.06)' : 'transparent',
+                }}
+                onMouseEnter={(e) => {
+                  if (schemeIdx !== i) e.currentTarget.style.background = 'rgba(0,0,0,0.04)'
+                }}
+                onMouseLeave={(e) => {
+                  if (schemeIdx !== i) e.currentTarget.style.background = 'transparent'
+                }}
               >
                 <span
-                  className="w-3 h-3 rounded-full border border-white/20 shrink-0"
-                  style={{ backgroundColor: hexToCss(s.accentColor) }}
+                  className="w-3 h-3 rounded-full border shrink-0"
+                  style={{ backgroundColor: hexToCss(s.accentColor), borderColor: 'rgba(0,0,0,0.15)' }}
                 />
-                <span className="truncate">{s.name}</span>
+                <span className="truncate" style={{ color: panelText }}>{s.name}</span>
               </button>
             ))}
           </div>
@@ -629,24 +826,34 @@ export default function KeyboardConfigShowcase() {
 
         {/* Actions */}
         <div className="mb-4">
-          <div className="text-[11px] uppercase tracking-wider text-white/50 mb-2 font-semibold">
+          <div className="text-[11px] uppercase tracking-wider mb-2 font-semibold" style={{ color: panelSub }}>
             Actions
           </div>
           <div className="flex gap-2">
             <button
               onClick={triggerPop}
               disabled={isPopping}
-              className={`flex-1 py-2 rounded-lg text-xs font-medium transition-all ${
-                isPopping
-                  ? 'bg-white/5 text-white/30 cursor-not-allowed'
-                  : 'bg-white/10 hover:bg-white/20 text-white'
-              }`}
+              className="flex-1 py-2 rounded-lg text-xs font-medium transition-all"
+              style={{
+                background: isPopping ? 'rgba(0,0,0,0.04)' : 'rgba(0,0,0,0.08)',
+                color: isPopping ? 'rgba(26,26,46,0.3)' : panelText,
+                cursor: isPopping ? 'not-allowed' : 'pointer',
+              }}
+              onMouseEnter={(e) => {
+                if (!isPopping) e.currentTarget.style.background = 'rgba(0,0,0,0.14)'
+              }}
+              onMouseLeave={(e) => {
+                if (!isPopping) e.currentTarget.style.background = 'rgba(0,0,0,0.08)'
+              }}
             >
               {isPopping ? 'Popping…' : 'Pop Keys'}
             </button>
             <button
               onClick={() => setShowKnob((v) => !v)}
-              className="flex-1 py-2 rounded-lg text-xs font-medium transition-all bg-white/10 hover:bg-white/20 text-white"
+              className="flex-1 py-2 rounded-lg text-xs font-medium transition-all"
+              style={{ background: 'rgba(0,0,0,0.08)', color: panelText }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.14)' }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.08)' }}
             >
               {showKnob ? 'Hide Knob' : 'Show Knob'}
             </button>
@@ -654,8 +861,8 @@ export default function KeyboardConfigShowcase() {
         </div>
 
         {/* Stats footer */}
-        <div className="pt-3 border-t border-white/10">
-          <div className="flex items-center justify-between text-[11px] text-white/40">
+        <div className="pt-3 border-t" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
+          <div className="flex items-center justify-between text-[11px]" style={{ color: panelSub }}>
             <span>Keys: 61</span>
             <span>60% Layout</span>
           </div>
@@ -664,27 +871,28 @@ export default function KeyboardConfigShowcase() {
 
       {/* ── Bottom-left hint ── */}
       <div
-        className="absolute bottom-4 left-4 z-10 rounded-xl px-4 py-3 text-xs text-white/40 select-none"
+        className="absolute bottom-4 left-4 z-10 rounded-xl px-4 py-3 text-xs select-none"
         style={{
-          background: 'rgba(20,20,30,0.5)',
+          background: 'rgba(255,255,255,0.75)',
           backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(255,255,255,0.06)',
+          border: '1px solid rgba(0,0,0,0.06)',
+          color: 'rgba(26,26,46,0.5)',
         }}
       >
         <div className="flex items-center gap-2 mb-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-white/30" />
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'rgba(26,26,46,0.25)' }} />
           <span>Left drag to rotate</span>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-white/30" />
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'rgba(26,26,46,0.25)' }} />
           <span>Scroll to zoom</span>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-white/30" />
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'rgba(26,26,46,0.25)' }} />
           <span>Right drag to pan</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-400/60" />
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'rgba(25,118,210,0.5)' }} />
           <span>Hover key for close-up</span>
         </div>
       </div>
