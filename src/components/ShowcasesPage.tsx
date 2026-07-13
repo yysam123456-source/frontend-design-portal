@@ -4,7 +4,7 @@ import OrbitalViz from './OrbitalViz'
 import KeyboardConfigShowcase from './KeyboardConfigShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
-   SHOWCASES PAGE — 3 Immersive Fullscreen Effects
+   SHOWCASES PAGE — 6 Immersive Fullscreen Effects
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Shared Math helpers ─── */
