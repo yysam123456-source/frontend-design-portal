@@ -31958,6 +31958,78 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
       "webm": "/demo-assets/react-bits/video/waves.webm",
       "label": "React Bits Official Video Demo"
     }
+  },
+  "px-basic-graphics": {
+    "id": "px-basic-graphics",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-particles": {
+    "id": "px-particles",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-bouncing-balls": {
+    "id": "px-bouncing-balls",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-text-rendering": {
+    "id": "px-text-rendering",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-interactive-cards": {
+    "id": "px-interactive-cards",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-sprite-animation": {
+    "id": "px-sprite-animation",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-drag-drop": {
+    "id": "px-drag-drop",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-color-matrix": {
+    "id": "px-color-matrix",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-morphing-shapes": {
+    "id": "px-morphing-shapes",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-orbit-system": {
+    "id": "px-orbit-system",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-ripple-effect": {
+    "id": "px-ripple-effect",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "px-html-canvas": {
+    "id": "px-html-canvas",
+    "project": "pixijs",
+    "kind": "html-live",
+    "status": "ready"
   }
 }
 
@@ -31965,7 +32037,7 @@ export const previewStats = {
   "ready:media-video": 268,
   "ready:media-image": 148,
   "ready:react-generated": 298,
-  "ready:html-live": 4240,
+  "ready:html-live": 4252,
   "unsupported:unsupported": 1
 } as const
 

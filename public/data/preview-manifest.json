@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-14T01:17:31.383Z",
+  "generatedAt": "2026-07-14T01:45:23.876Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
     "ready:react-generated": 298,
-    "ready:html-live": 4240,
+    "ready:html-live": 4252,
     "unsupported:unsupported": 1
   },
   "records": [
@@ -31965,6 +31965,78 @@
         "webm": "/demo-assets/react-bits/video/waves.webm",
         "label": "React Bits Official Video Demo"
       }
+    },
+    {
+      "id": "px-basic-graphics",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-particles",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-bouncing-balls",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-text-rendering",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-interactive-cards",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-sprite-animation",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-drag-drop",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-color-matrix",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-morphing-shapes",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-orbit-system",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-ripple-effect",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "px-html-canvas",
+      "project": "pixijs",
+      "kind": "html-live",
+      "status": "ready"
     }
   ]
 }

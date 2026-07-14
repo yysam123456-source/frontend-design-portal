@@ -6,7 +6,8 @@
     "pixel2motion",
     "animejs",
     "zelda-hyrule-ui",
-    "eldoraui"
+    "eldoraui",
+    "pixijs"
   ],
   "stats": {
     "react-bits": 269,
@@ -15,9 +16,10 @@
     "pixel2motion": 10,
     "animejs": 417,
     "zelda-hyrule-ui": 93,
-    "eldoraui": 161
+    "eldoraui": 161,
+    "pixijs": 12
   },
-  "total": 4955,
+  "total": 4967,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -85693,6 +85695,234 @@
         "HTML"
       ],
       "description": "React Bits official video demo: Waves",
+      "language": "html"
+    },
+    {
+      "id": "px-basic-graphics",
+      "project": "pixijs",
+      "name": "Basic Graphics",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Draws rotating polygons with PixiJS Graphics API.",
+      "language": "html"
+    },
+    {
+      "id": "px-particles",
+      "project": "pixijs",
+      "name": "Particle System",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "200+ colored particles with mouse gravity interaction.",
+      "language": "html"
+    },
+    {
+      "id": "px-bouncing-balls",
+      "project": "pixijs",
+      "name": "Bouncing Balls",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Physics-based bouncing balls with gravity.",
+      "language": "html"
+    },
+    {
+      "id": "px-text-rendering",
+      "project": "pixijs",
+      "name": "Text Rendering",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Animated text with various styles and fonts.",
+      "language": "html"
+    },
+    {
+      "id": "px-interactive-cards",
+      "project": "pixijs",
+      "name": "Interactive Cards",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Clickable card grid with hover effects.",
+      "language": "html"
+    },
+    {
+      "id": "px-sprite-animation",
+      "project": "pixijs",
+      "name": "Sprite Animation",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Animated shapes moving in patterns.",
+      "language": "html"
+    },
+    {
+      "id": "px-drag-drop",
+      "project": "pixijs",
+      "name": "Drag & Drop",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Draggable shapes with physics.",
+      "language": "html"
+    },
+    {
+      "id": "px-color-matrix",
+      "project": "pixijs",
+      "name": "Color Filters",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Graphics with color matrix filters.",
+      "language": "html"
+    },
+    {
+      "id": "px-morphing-shapes",
+      "project": "pixijs",
+      "name": "Morphing Shapes",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Shapes that morph between geometries.",
+      "language": "html"
+    },
+    {
+      "id": "px-orbit-system",
+      "project": "pixijs",
+      "name": "Orbit System",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Planetary orbit simulation.",
+      "language": "html"
+    },
+    {
+      "id": "px-ripple-effect",
+      "project": "pixijs",
+      "name": "Ripple Effect",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Click to create expanding ripples.",
+      "language": "html"
+    },
+    {
+      "id": "px-html-canvas",
+      "project": "pixijs",
+      "name": "HTML-in-Canvas",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "Showcases the v8.19 HTMLSource feature concept.",
       "language": "html"
     }
   ]

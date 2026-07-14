@@ -78,6 +78,17 @@ export const projects: ProjectMeta[] = [
     techStack: ['Python', 'SVG', 'CSS Animation'],
     category: 'tool',
   },
+  {
+    id: 'pixijs',
+    name: 'PixiJS',
+    github: 'https://github.com/pixijs/pixijs',
+    demoBaseUrl: 'https://pixijs.com',
+    description: 'The HTML5 Creation Engine: a 2D WebGL rendering library with 500K+ weekly downloads. Features HTML-in-Canvas textures, particle systems, and interactive graphics.',
+    accentColor: '#7fd1ff',
+    tags: ['webgl', 'canvas', '2d-rendering', 'particles', 'html-in-canvas', 'graphics'],
+    techStack: ['TypeScript', 'WebGL', 'Canvas API'],
+    category: 'rendering',
+  },
 ]
 
 export const allTechStacks = Array.from(
