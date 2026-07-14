@@ -8,7 +8,20 @@ interface ComponentPreviewProps {
   component: ComponentEntry | null
 }
 
+function isCompleteHtmlDocument(source: string): boolean {
+  const trimmed = source.trimStart()
+  return (
+    trimmed.startsWith('<!DOCTYPE') ||
+    trimmed.startsWith('<!doctype') ||
+    trimmed.toLowerCase().startsWith('<html')
+  )
+}
+
 function buildHtmlPreview(code: string): string {
+  // If the source is already a complete HTML document, use it directly
+  // instead of wrapping it in another full document (which breaks scripts)
+  if (isCompleteHtmlDocument(code)) return code
+
   return `<!DOCTYPE html>
 <html>
 <head>

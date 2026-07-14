@@ -26,7 +26,20 @@ function escapeHtml(value = '') {
     .replace(/"/g, '&quot;')
 }
 
+function isCompleteHtmlDocument(source: string): boolean {
+  const trimmed = source.trimStart()
+  return (
+    trimmed.startsWith('<!DOCTYPE') ||
+    trimmed.startsWith('<!doctype') ||
+    trimmed.toLowerCase().startsWith('<html')
+  )
+}
+
 function buildHtmlPreview(source: string) {
+  // If the source is already a complete HTML document, use it directly
+  // instead of wrapping it in another full document (which breaks scripts)
+  if (isCompleteHtmlDocument(source)) return source
+
   return `<!doctype html>
 <html>
 <head>
@@ -253,7 +266,7 @@ export default function ComponentThumbnailPreview({
       srcDoc={srcDoc}
       title={`${component.name} preview`}
       loading="lazy"
-      sandbox="allow-scripts"
+      sandbox="allow-scripts allow-same-origin"
       className="absolute inset-0 w-full h-full border-0 pointer-events-none"
       style={{ background: (language === 'html' || previewRecord?.kind === 'html-live') ? '#0a0a0a' : '#0b0f19' }}
     />
