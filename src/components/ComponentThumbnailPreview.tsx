@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentEntry, ComponentSummary, ProjectMeta } from '../types'
 import GeneratedComponentPreview from '../generated/GeneratedComponentPreview'
 import { getPreviewRecord } from '../generated/preview-manifest'
@@ -177,6 +177,8 @@ export default function ComponentThumbnailPreview({
   const [source, setSource] = useState<string | null>(null)
   const [language, setLanguage] = useState(component.language)
   const [loading, setLoading] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let mounted = true
@@ -201,6 +203,19 @@ export default function ComponentThumbnailPreview({
     }
   }, [component.id, component.project])
 
+  // IntersectionObserver: only create iframe (and WebGL context) when card is visible.
+  // This prevents WebGL context loss from too many simultaneous contexts.
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   const srcDoc = useMemo(() => {
     if (loading) return ''
     if (previewRecord?.status === 'unsupported') return buildUnsupportedPreview(component, projectMeta)
@@ -208,9 +223,11 @@ export default function ComponentThumbnailPreview({
     return buildFallbackPreview(component, projectMeta)
   }, [component, language, loading, previewRecord?.status, previewRecord?.kind, projectMeta, source])
 
+  const bgStyle = (language === 'html' || previewRecord?.kind === 'html-live') ? '#0a0a0a' : '#0b0f19'
+
   if (previewRecord?.kind === 'react-generated' && previewRecord.status === 'ready') {
     return (
-      <div className="absolute inset-0">
+      <div ref={containerRef} className="absolute inset-0">
         <GeneratedComponentPreview component={component} compact />
       </div>
     )
@@ -218,7 +235,7 @@ export default function ComponentThumbnailPreview({
 
   if (previewRecord?.kind === 'media-video' && previewRecord.status === 'ready') {
     return (
-      <div className="absolute inset-0 flex items-center justify-center bg-[#050816]">
+      <div ref={containerRef} className="absolute inset-0 flex items-center justify-center bg-[#050816]">
         <video
           className="h-full w-full object-contain"
           autoPlay
@@ -239,7 +256,7 @@ export default function ComponentThumbnailPreview({
 
   if (previewRecord?.kind === 'media-image' && previewRecord.status === 'ready') {
     return (
-      <div className="absolute inset-0 flex items-center justify-center bg-[#050816]">
+      <div ref={containerRef} className="absolute inset-0 flex items-center justify-center bg-[#050816]">
         <img
           src={previewRecord.media?.poster}
           alt={`${component.name} official demo`}
@@ -253,22 +270,29 @@ export default function ComponentThumbnailPreview({
     )
   }
 
-  if (loading) {
-    return (
-      <div className="absolute inset-0 flex items-center justify-center bg-bg-secondary">
-        <div className="w-5 h-5 border-2 border-border border-t-accent rounded-full animate-spin" />
-      </div>
-    )
-  }
-
+  // For iframe-based previews, use IntersectionObserver to limit simultaneous WebGL contexts.
+  // When card is not visible, show a static placeholder instead of an iframe.
   return (
-    <iframe
-      srcDoc={srcDoc}
-      title={`${component.name} preview`}
-      loading="lazy"
-      sandbox="allow-scripts allow-same-origin"
-      className="absolute inset-0 w-full h-full border-0 pointer-events-none"
-      style={{ background: (language === 'html' || previewRecord?.kind === 'html-live') ? '#0a0a0a' : '#0b0f19' }}
-    />
+    <div ref={containerRef} className="absolute inset-0" style={{ background: bgStyle }}>
+      {loading ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-5 h-5 border-2 border-white/20 border-t-white/60 rounded-full animate-spin" />
+        </div>
+      ) : !isVisible ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-[10px] text-white/25 font-medium tracking-wide">
+            {component.name}
+          </div>
+        </div>
+      ) : (
+        <iframe
+          srcDoc={srcDoc}
+          title={`${component.name} preview`}
+          sandbox="allow-scripts allow-same-origin"
+          className="absolute inset-0 w-full h-full border-0 pointer-events-none"
+          style={{ background: bgStyle }}
+        />
+      )}
+    </div>
   )
 }
