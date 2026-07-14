@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import * as THREE from 'three'
 import OrbitalViz from './OrbitalViz'
 import KeyboardConfigShowcase from './KeyboardConfigShowcase'
+import PixiJSShowcase from './PixiJSShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
    SHOWCASES PAGE — 6 Immersive Fullscreen Effects
@@ -1347,6 +1348,7 @@ const SHOWCASES = [
   { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐' },
   { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕' },
   { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨' },
+  { id: 'pixijs', label: 'PixiJS Playground', desc: '2D WebGL rendering engine', icon: '🎨' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1427,6 +1429,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'planets' && <ThreePlanets />}
         {activeId === 'orbits' && <OrbitalViz />}
         {activeId === 'keyboard' && <KeyboardConfigShowcase />}
+        {activeId === 'pixijs' && <PixiJSShowcase />}
       </div>
     </div>
   )
