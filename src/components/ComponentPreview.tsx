@@ -108,13 +108,13 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
     setMode(canPreview ? 'preview' : 'code')
   }, [canPreview, component?.id])
 
-  const iframeUrl = useMemo(() => {
+  // Use srcDoc instead of blob URL so that relative paths (e.g. /vendor/pixi.min.js)
+  // resolve against the parent page origin, not the blob origin.
+  const iframeSrcDoc = useMemo(() => {
     if (!component || (!isHtml && !isJsDemo && !isHtmlLive) || isHtmlVideo) return null
-    const html = isHtml || isHtmlLive
+    return isHtml || isHtmlLive
       ? buildHtmlPreview(component.codeSnippet.source)
       : buildJsPreview(component.codeSnippet.source)
-    const blob = new Blob([html], { type: 'text/html' })
-    return URL.createObjectURL(blob)
   }, [component, isHtml, isJsDemo, isHtmlLive, isHtmlVideo])
 
   useEffect(() => {
@@ -126,9 +126,8 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
     }, 8000)
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current)
-      if (iframeUrl) URL.revokeObjectURL(iframeUrl)
     }
-  }, [iframeUrl, isHtml, isHtmlLive, isJsDemo])
+  }, [iframeSrcDoc, isHtml, isHtmlLive, isJsDemo])
 
   if (!component) {
     return (
@@ -236,7 +235,7 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
                 </div>
               )}
               <iframe
-                src={iframeUrl || undefined}
+                srcDoc={iframeSrcDoc || undefined}
                 title={component.name}
                 sandbox="allow-scripts allow-same-origin"
                 className={`w-full h-full border-0 transition-opacity duration-300 ${

@@ -17,9 +17,9 @@
     "animejs": 417,
     "zelda-hyrule-ui": 93,
     "eldoraui": 161,
-    "pixijs": 12
+    "pixijs": 21
   },
-  "total": 4967,
+  "total": 4976,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -85698,9 +85698,9 @@
       "language": "html"
     },
     {
-      "id": "px-basic-graphics",
+      "id": "px-graphics-basic-shapes",
       "project": "pixijs",
-      "name": "Basic Graphics",
+      "name": "Basic Shapes",
       "category": "official-demo",
       "style": [
         "html",
@@ -85713,13 +85713,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Draws rotating polygons with PixiJS Graphics API.",
-      "language": "html"
+      "description": "This example demonstrates basic shape drawing using the Graphics class",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_basic_shapes",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_basic_shapes.ts"
     },
     {
-      "id": "px-particles",
+      "id": "px-graphics-dynamic",
       "project": "pixijs",
-      "name": "Particle System",
+      "name": "Dynamic Graphics",
       "category": "official-demo",
       "style": [
         "html",
@@ -85732,13 +85734,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "200+ colored particles with mouse gravity interaction.",
-      "language": "html"
+      "description": "This example demonstrates dynamic drawing using the Graphics class",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_dynamic",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_dynamic.ts"
     },
     {
-      "id": "px-bouncing-balls",
+      "id": "px-graphics-gradient",
       "project": "pixijs",
-      "name": "Bouncing Balls",
+      "name": "Gradient Fill & Stroke",
       "category": "official-demo",
       "style": [
         "html",
@@ -85751,13 +85755,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Physics-based bouncing balls with gravity.",
-      "language": "html"
+      "description": "This example demonstrates how to create and animate shapes with gradient fills and strokes using the Graphics and FillGradient classes",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_fill_stroke_gradient",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_fill_stroke_gradient.ts"
     },
     {
-      "id": "px-text-rendering",
+      "id": "px-graphics-curves",
       "project": "pixijs",
-      "name": "Text Rendering",
+      "name": "Curves, Arcs & Holes",
       "category": "official-demo",
       "style": [
         "html",
@@ -85770,13 +85776,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Animated text with various styles and fonts.",
-      "language": "html"
+      "description": "This example demonstrates advanced graphics features, including Bezier curves, arcs, holes, and textured strokes.",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_curves_arcs_holes_textures",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_curves_arcs_holes_textures.ts"
     },
     {
-      "id": "px-interactive-cards",
+      "id": "px-graphics-mask-anim",
       "project": "pixijs",
-      "name": "Interactive Cards",
+      "name": "Animated Graphics Mask",
       "category": "official-demo",
       "style": [
         "html",
@@ -85789,13 +85797,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Clickable card grid with hover effects.",
-      "language": "html"
+      "description": "This example demonstrates how to use Graphics as a mask in a PixiJS application",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_mask_animation",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_mask_animation.ts"
     },
     {
-      "id": "px-sprite-animation",
+      "id": "px-container-inverse-mask",
       "project": "pixijs",
-      "name": "Sprite Animation",
+      "name": "Inverse Mask",
       "category": "official-demo",
       "style": [
         "html",
@@ -85808,13 +85818,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Animated shapes moving in patterns.",
-      "language": "html"
+      "description": "This example demonstrates how to create an inverse mask using the Graphics class",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_inverse-mask",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_inverse-mask.ts"
     },
     {
-      "id": "px-drag-drop",
+      "id": "px-container-pivot",
       "project": "pixijs",
-      "name": "Drag & Drop",
+      "name": "Container Pivot",
       "category": "official-demo",
       "style": [
         "html",
@@ -85827,13 +85839,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Draggable shapes with physics.",
-      "language": "html"
+      "description": "This example demonstrates how to use a Container to group and manipulate multiple sprites",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_transform_pivot_basic",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_transform_pivot_basic.ts"
     },
     {
-      "id": "px-color-matrix",
+      "id": "px-container-tinting",
       "project": "pixijs",
-      "name": "Color Filters",
+      "name": "Sprite Tinting",
       "category": "official-demo",
       "style": [
         "html",
@@ -85846,13 +85860,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Graphics with color matrix filters.",
-      "language": "html"
+      "description": "This example demonstrates how to apply tinting to sprites",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_tinting",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_tinting.ts"
     },
     {
-      "id": "px-morphing-shapes",
+      "id": "px-container-blend-modes",
       "project": "pixijs",
-      "name": "Morphing Shapes",
+      "name": "Blend Modes Comparison",
       "category": "official-demo",
       "style": [
         "html",
@@ -85865,13 +85881,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Shapes that morph between geometries.",
-      "language": "html"
+      "description": "This example demonstrates various blend modes",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_blend-modes_comparison",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_blend-modes_comparison.ts"
     },
     {
-      "id": "px-orbit-system",
+      "id": "px-container-alpha-mask",
       "project": "pixijs",
-      "name": "Orbit System",
+      "name": "Alpha Channel Mask",
       "category": "official-demo",
       "style": [
         "html",
@@ -85884,13 +85902,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Planetary orbit simulation.",
-      "language": "html"
+      "description": "Demonstrates how different mask channels produce different results from the same mask texture. The mask has a red star shape and a blue circle with soft alpha edges. The 'red' channel reads the red component, revealing only the star. The 'alpha' channel reads opacity, revealing the full circular shape.",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_alpha-channel-mask",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_alpha-channel-mask.ts"
     },
     {
-      "id": "px-ripple-effect",
+      "id": "px-container-mask-blur",
       "project": "pixijs",
-      "name": "Ripple Effect",
+      "name": "Spotlight Blur Mask",
       "category": "official-demo",
       "style": [
         "html",
@@ -85903,13 +85923,15 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Click to create expanding ripples.",
-      "language": "html"
+      "description": "This example demonstrates how to create a spotlight effect using a blurred circular mask that follows the mouse pointer, revealing a grass background using PixiJS",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_mask_filters_blur",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_mask_filters_blur.ts"
     },
     {
-      "id": "px-html-canvas",
+      "id": "px-container-cache-texture",
       "project": "pixijs",
-      "name": "HTML-in-Canvas",
+      "name": "Cache As Texture",
       "category": "official-demo",
       "style": [
         "html",
@@ -85922,8 +85944,200 @@
         "WebGL",
         "Canvas API"
       ],
-      "description": "Showcases the v8.19 HTMLSource feature concept.",
-      "language": "html"
+      "description": "This example demonstrates how to use cacheAsTexture to optimize rendering performance",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/container_cache-as-texture_optimization",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_cache-as-texture_optimization.ts"
+    },
+    {
+      "id": "px-filters-blur",
+      "project": "pixijs",
+      "name": "Blur Filter",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates the use of BlurFilter to create dynamic blur effects on sprites",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/filters_blur",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/filters_blur.ts"
+    },
+    {
+      "id": "px-filters-color-matrix",
+      "project": "pixijs",
+      "name": "Color Matrix Filter",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates the use of ColorMatrixFilter to create dynamic color effects on a container of sprites",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/filters_color-matrix",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/filters_color-matrix.ts"
+    },
+    {
+      "id": "px-filters-displacement",
+      "project": "pixijs",
+      "name": "Displacement Filter",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates the use of DisplacementFilter with a repeating texture to create a waving flag effect",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/filters_displacement",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/filters_displacement.ts"
+    },
+    {
+      "id": "px-animated-sprite-particles",
+      "project": "pixijs",
+      "name": "Explosion Particles",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates how to create and display animated sprites using PixiJS.",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/animated-sprite_particles",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/animated-sprite_particles.ts"
+    },
+    {
+      "id": "px-animated-sprite-spritesheet",
+      "project": "pixijs",
+      "name": "Fighter Spritesheet",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates how to create and display animated sprites using PixiJS.",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/animated-sprite_spritesheet",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/animated-sprite_spritesheet.ts"
+    },
+    {
+      "id": "px-app-transparent",
+      "project": "pixijs",
+      "name": "Transparent Background",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates how to create a PixiJS application with a transparent background",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/app_transparent-background",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/app_transparent-background.ts"
+    },
+    {
+      "id": "px-events-dragging",
+      "project": "pixijs",
+      "name": "Drag Sprites",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates how to implement dragging functionality for sprites using pointer events",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/events_dragging",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/events_dragging.ts"
+    },
+    {
+      "id": "px-events-buttons",
+      "project": "pixijs",
+      "name": "Interactive Buttons",
+      "category": "official-demo",
+      "style": [
+        "html",
+        "canvas",
+        "webgl"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API"
+      ],
+      "description": "This example demonstrates how to create interactive buttons with different states (normal, hover, pressed)",
+      "language": "html",
+      "officialUrl": "https://pixijs.com/8.x/examples/#/events_buttons",
+      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/events_buttons.ts"
+    },
+    {
+      "id": "px-cosmic-forge-showcase",
+      "project": "pixijs",
+      "name": "PixiJS Cosmic Forge Showcase",
+      "category": "official-showcase",
+      "style": [
+        "official-showcase",
+        "particles",
+        "graphics",
+        "filters",
+        "webgl",
+        "interactive"
+      ],
+      "techStack": [
+        "JavaScript",
+        "PixiJS",
+        "WebGL",
+        "Canvas API",
+        "Particle System"
+      ],
+      "description": "A cosmic-themed interactive showcase combining particle systems, gradient graphics, blur filters, parallax starfield, orbiting energy particles, mouse trail effects, and click-to-detonate explosion bursts. Demonstrates the full power of PixiJS v8 in a single immersive scene."
     }
   ]
 }
