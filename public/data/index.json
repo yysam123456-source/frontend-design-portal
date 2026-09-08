@@ -17,9 +17,9 @@
     "animejs": 417,
     "zelda-hyrule-ui": 93,
     "eldoraui": 161,
-    "pixijs": 21
+    "threeui": 120
   },
-  "total": 4976,
+  "total": 5075,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -81718,6 +81718,2682 @@
       "language": "tsx"
     },
     {
+      "id": "tu-kage-landing-page",
+      "project": "threeui",
+      "name": "Kage",
+      "category": "landing-page",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "landing-page",
+        "landing page",
+        "full html",
+        "website",
+        "kage"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The complete authored Kage temple experience, preserved as an interactive full-page document with its original navigation, scroll scenes, and local Three.js world.",
+      "language": "html"
+    },
+    {
+      "id": "tu-complete-shelf-landing-page",
+      "project": "threeui",
+      "name": "Complete Shelf",
+      "category": "hero",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "hero",
+        "landing page",
+        "full html",
+        "website"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The complete Working Volumes bookshelf page with all seven tools, its responsive editorial interface, and authored Three.js presentation.",
+      "language": "html"
+    },
+    {
+      "id": "tu-bestsellers-book-showcase",
+      "project": "threeui",
+      "name": "Bestsellers Book Showcase",
+      "category": "hero",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "hero",
+        "landing page",
+        "full html",
+        "website"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The complete Field Manuals book showcase, preserved unchanged with its editorial layout, authored motion, interactions, and embedded media.",
+      "language": "html"
+    },
+    {
+      "id": "tu-sylva-hero",
+      "project": "threeui",
+      "name": "Sylva",
+      "category": "hero",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "hero",
+        "landing page",
+        "full html",
+        "website"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The complete Sylva Living Green page, preserved with its Three.js scene, local typography, card imagery, and embedded liquid-metal buttons. The moss-root world with pale flowers, ferns, drifting pollen, the landing butterfly, and native liquid-metal controls behind the full hero layout.",
+      "language": "html"
+    },
+    {
+      "id": "tu-meng-to-sketchbook-landing-page",
+      "project": "threeui",
+      "name": "Sketchbook",
+      "category": "landing-page",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "landing-page",
+        "landing page",
+        "full html",
+        "website",
+        "meng to"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A tactile personal portfolio built as a Singapore sketchbook, with nine illustrated plates, curled page turns, a draggable magnifying glass, zoom controls, a botanical paper atmosphere, and an editorial index.",
+      "language": "html"
+    },
+    {
+      "id": "tu-predictive-arc",
+      "project": "threeui",
+      "name": "Predictive Arc",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Eight animated arc, signal, ribbon, void, and halftone scenes collected in one Canvas 2D, raw-WebGL, and Three.js family.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-liquid-form",
+      "project": "threeui",
+      "name": "Liquid Form",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl",
+        "ray marching"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A centered silver ray-marched liquid form with authored studio reflections and pointer-responsive camera drift.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-crt",
+      "project": "threeui",
+      "name": "CRT",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "One sharpened curved-glass CRT tube driving four screens: the Matrix-era boot terminal, a monochrome film leader, a noise-torn blue signal fault, and an 8-bit console title.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-energy-orb",
+      "project": "threeui",
+      "name": "Globe",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The original layered FBM energy sphere with translucent rim glow and depth-aware star field.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-spark-badge",
+      "project": "threeui",
+      "name": "Spark Badge",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "particles",
+        "badge"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A luminous credential badge held together by curl-noise embers, carved typography, rain occlusion, waterline sparks, and an adaptive particle field.",
+      "language": "html"
+    },
+    {
+      "id": "tu-stream-convergence",
+      "project": "threeui",
+      "name": "Stream Convergence",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Three chromatically separated violet wavefronts crossing a rotated fluid field with the exact authored vignette.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-bell-field",
+      "project": "threeui",
+      "name": "Bell Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A Chladni-inspired bell-mode field with authored nodal metal patterns, automatic strike rings, pointer drift, and rising foundry embers.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-flow-field",
+      "project": "threeui",
+      "name": "Flow Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "flow field",
+        "simplex noise"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A warm Canvas 2D flow field with 2,500 simplex-driven amber, gold, and coral particle trails plus pointer repulsion.",
+      "language": "html"
+    },
+    {
+      "id": "tu-elements",
+      "project": "threeui",
+      "name": "Elements",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "webgl2",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Water, lightning, fire, condensation, and a painterly generative tree collected as one elemental family across WebGL2 and Canvas 2D.",
+      "language": "html"
+    },
+    {
+      "id": "tu-elemental-water",
+      "project": "threeui",
+      "name": "Water Element",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "webgl2",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A refracted OpenAI mark beneath pointer-driven circular ripples, cyan depth, and soft suspended particles.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-elemental-lightning",
+      "project": "threeui",
+      "name": "Lightning Element",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "webgl2",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Violet fBm arcs crawl around the Anthropic contour while pointer proximity pulls the storm closer.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-elemental-flame",
+      "project": "threeui",
+      "name": "Fire Element",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "webgl2",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Noise-driven flame ribbons and rising embers lick upward from the Claude mark edge.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-condensation",
+      "project": "threeui",
+      "name": "Condensation",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "elements"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A transparent field of growing condensation bubbles that merge, fall, and resolve into soft water splash rings.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-generative-tree",
+      "project": "threeui",
+      "name": "Generative Tree",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "elements"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A painterly branching tree grows from warm sienna to golden tips, sways with pointer wind, and sheds soft ambient motes.",
+      "language": "html"
+    },
+    {
+      "id": "tu-ribbon-field",
+      "project": "threeui",
+      "name": "Ribbon Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "An exact cyan, indigo, and purple WebGL ribbon field resolved through an animated seven-pixel dot matrix.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-typography-vortex",
+      "project": "threeui",
+      "name": "Typography Vortex",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "text"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Sable’s complete rotating typography vortex with crisp prerendered rings, drifting glyphs, pointer dissolution, particle dust, and click suction — with dark and light surfaces.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-semantic-bloom",
+      "project": "threeui",
+      "name": "Semantic Bloom",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "css",
+        "dom"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A customizable Codex wordmark that draws a viscous particle organism toward its letters, illuminating the text as the network searches and reconnects.",
+      "language": "html"
+    },
+    {
+      "id": "tu-globe-study",
+      "project": "threeui",
+      "name": "Text Path Studies",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "text path"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Six interactive Canvas 2D typography studies spanning a globe, flowing outlines, morphing glyphs, cloth physics, ripples, and a particle sphere.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-outline-typeflow",
+      "project": "threeui",
+      "name": "Outline Typeflow",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "text path"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A continuous ring of letters traces a multi-loop symbol outline, accelerating under the pointer and bursting outward on click.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-morphing-glyph-cloud",
+      "project": "threeui",
+      "name": "Morphing Glyph Cloud",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "glyphs"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A paired field of alphanumeric glyphs morphs between two radial symbol silhouettes with a lifted mid-turn scatter and pointer repulsion.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-cloth-study",
+      "project": "threeui",
+      "name": "Cloth",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "cloth"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A Verlet sheet of letters hangs from six pegs, shearing every glyph with the live weave while pointer wind and direct grabbing deform the cloth.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-ripple-study",
+      "project": "threeui",
+      "name": "Ripple",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "glyphs"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A full-frame 24 × 24 glyph field where clicks send weighted typographic wavefronts through the seeded character grid on synchronized light and dark surfaces.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-ball-study",
+      "project": "threeui",
+      "name": "Ball",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "glyphs"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A full-frame sphere of 1,900 depth-sorted glyphs with hover acceleration and click-hit letters that break loose, fall, and regrow on synchronized light and dark surfaces.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-threeui-intro",
+      "project": "threeui",
+      "name": "Intro Text",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "css",
+        "dom",
+        "typography",
+        "wordmark"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The opening chromatic wordmark assembly, reduced to its first beat and rebranded with the ThreeUI wave mark and name.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-particle-wordmark",
+      "project": "threeui",
+      "name": "Particle Wordmark",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "particles",
+        "wordmark"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The Shaders wordmark materializes through a seeded field of drifting dots and squares, isolated from the source footer and synchronized across light and dark surfaces.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-audio-wordmark",
+      "project": "threeui",
+      "name": "Audio Wordmark",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "css",
+        "dom"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A portrait audio identity scene pairing two animated circular bar fields with a compact ThreeUI wordmark and icon lockup in synchronized light and dark modes.",
+      "language": "html"
+    },
+    {
+      "id": "tu-gallery-heading",
+      "project": "threeui",
+      "name": "Gallery Heading",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "gallery",
+        "flat color"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "An oversized headline ringed by twelve 4:3 plates — one flat colour each, shaded by a procedural noise field rather than a gradient — that hold still until the pointer arrives, then orbit. Four galleries, each with its own field, typography, and direction.",
+      "language": "html"
+    },
+    {
+      "id": "tu-star-portal",
+      "project": "threeui",
+      "name": "Shader Buttons",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "glsl",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Six authored shader and canvas button treatments collected into one interactive family.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-ignition-button",
+      "project": "threeui",
+      "name": "Ignition Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "glsl",
+        "css"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact raw-WebGL ambient field and tactile ignition button, without the surrounding terminal page.",
+      "language": "html"
+    },
+    {
+      "id": "tu-induction-button",
+      "project": "threeui",
+      "name": "Induction Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "glsl",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact kinetic induction background and raw-WebGL button isolated as one interactive effect.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-plasma-button",
+      "project": "threeui",
+      "name": "Plasma Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact deep-blue laboratory field and luminous plasma button with its complete authored shader pair.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-tactile-button",
+      "project": "threeui",
+      "name": "Tactile Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "glsl",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact fluidic ambient background and tactile raw-WebGL button, isolated from page content.",
+      "language": "html"
+    },
+    {
+      "id": "tu-thinking-button",
+      "project": "threeui",
+      "name": "Thinking Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "canvas",
+        "canvas2d",
+        "loading"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A Canvas 2D thinking state with a luminous blue trace orbiting a softly raised blue button.",
+      "language": "html"
+    },
+    {
+      "id": "tu-sliding-text-cta",
+      "project": "threeui",
+      "name": "Sliding Text CTA",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A dark pill CTA whose label slides, blurs, and resolves into a crisp duplicate on hover.",
+      "language": "html"
+    },
+    {
+      "id": "tu-floating-dots-cta",
+      "project": "threeui",
+      "name": "Floating Dots CTA",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A saturated blue CTA with a glass highlight and a continuous stream of floating light points.",
+      "language": "html"
+    },
+    {
+      "id": "tu-launch-button",
+      "project": "threeui",
+      "name": "Launch Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A warm amber launch control with tactile depth, a soft aura, and a compact lightning icon.",
+      "language": "html"
+    },
+    {
+      "id": "tu-dot-border-button",
+      "project": "threeui",
+      "name": "Dot Border Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A bright creation CTA framed by four corner dots and sequentially drawn dashed border segments.",
+      "language": "html"
+    },
+    {
+      "id": "tu-gradient-cta",
+      "project": "threeui",
+      "name": "Gradient CTA",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A sunlit amber pill CTA with inset highlights, deep elevation, and a rising hover sheen.",
+      "language": "html"
+    },
+    {
+      "id": "tu-spinning-border-button",
+      "project": "threeui",
+      "name": "Spinning Border Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A compact graphite CTA that replaces its static edge with a rotating white border beam on hover.",
+      "language": "html"
+    },
+    {
+      "id": "tu-glassmorphism-cta",
+      "project": "threeui",
+      "name": "Glassmorphism CTA",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A glass pill CTA with a revolving highlight, advisor portrait, and a glowing generative-action icon.",
+      "language": "html"
+    },
+    {
+      "id": "tu-generate-button",
+      "project": "threeui",
+      "name": "Generate Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A glossy generate control with prismatic borders, animated lettering, and an illuminated sparkle icon.",
+      "language": "html"
+    },
+    {
+      "id": "tu-gradient-pill-button",
+      "project": "threeui",
+      "name": "Gradient Pill Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A restrained metallic lesson pill with a masked gradient edge, soft elevation, and arrow icon.",
+      "language": "html"
+    },
+    {
+      "id": "tu-gradient-beam-cta",
+      "project": "threeui",
+      "name": "Gradient Beam CTA",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A dark builder CTA with a rotating orange edge beam, drifting dot texture, and responsive glow.",
+      "language": "html"
+    },
+    {
+      "id": "tu-rectangle-buttons",
+      "project": "threeui",
+      "name": "Rectangle Buttons",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "cta"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Twenty-two authored rectangle-button and animated CTA treatments collected into one family.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-circle-buttons",
+      "project": "threeui",
+      "name": "Circle Buttons",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "css",
+        "dom",
+        "icon button"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Three compact circular icon controls using the exact Dark Glass, Launch, and Dot Border material systems.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-liquid-metal-button",
+      "project": "threeui",
+      "name": "Liquid Metal Button",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "webgl2",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A prismatic liquid-metal control in Sign up pill, Liquid Orb, and configurable Play Circle variants, with pointer-following bloom and press ripples.",
+      "language": "html"
+    },
+    {
+      "id": "tu-lumen-cta",
+      "project": "threeui",
+      "name": "Lumen CTA",
+      "category": "button",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "button",
+        "cta",
+        "pill",
+        "gradient"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The Lumen call-to-action pill: a six-stop violet gradient running black to lilac, a hairline inner highlight, a soft cast glow, and the small open ring that trails the label.",
+      "language": "html"
+    },
+    {
+      "id": "tu-editorial-intro",
+      "project": "threeui",
+      "name": "Editorial Intro",
+      "category": "sections",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "sections",
+        "css",
+        "dom",
+        "section",
+        "editorial"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A centered editorial intro built around a dimly lit device illustration, circuit traces, and oversized gradient typography.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-newsletter-footer",
+      "project": "threeui",
+      "name": "Newsletter Footer",
+      "category": "sections",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "sections",
+        "css",
+        "dom",
+        "section",
+        "footer"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A dark unbranded product footer with an inline newsletter form, oversized closing phrase, and compact legal navigation.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-character-carousel",
+      "project": "threeui",
+      "name": "Character Carousel",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "css",
+        "dom",
+        "ui",
+        "carousel"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Two authored editorial character-card carousels collected as a light filmstrip and a dark responsive wave.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-character-filmstrip",
+      "project": "threeui",
+      "name": "Character Filmstrip",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "css",
+        "dom",
+        "ui",
+        "carousel"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A warm editorial character filmstrip with framed portraits, numbered identity footers, paper grain, and a looping perspective rail.",
+      "language": "html"
+    },
+    {
+      "id": "tu-character-wave",
+      "project": "threeui",
+      "name": "Character Wave",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "css",
+        "dom",
+        "ui",
+        "carousel"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A dark dimensional character-card wave with colored tiles, responsive horizontal-to-vertical motion, and orientation toggling.",
+      "language": "html"
+    },
+    {
+      "id": "tu-gallery",
+      "project": "threeui",
+      "name": "Gallery",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The isolated Vantrix hero image ribbon: sixteen curved editorial panels orbiting a vertical cylindrical rail on a quiet paper grid.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-cloud-field",
+      "project": "threeui",
+      "name": "Cloud Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The complete raw-WebGL cloud migration background isolated at its exact source renderer boundary.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-void-field",
+      "project": "threeui",
+      "name": "Void Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact transparent raw-WebGL void field, detached from the article and typography around it.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-sylva-living-world",
+      "project": "threeui",
+      "name": "Sylva Living World",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The original procedural moss-root world with pale flowers, ferns, drifting pollen, scan light, and a landing butterfly.",
+      "language": "html"
+    },
+    {
+      "id": "tu-temple-night",
+      "project": "threeui",
+      "name": "Temple Night",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Kage’s procedural Kyoto mountain temple after dark, with the exact authored architecture, rain, mist, leaves, pointer wisps, camera composition, and bloom pipeline.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-landscape",
+      "project": "threeui",
+      "name": "Landscape",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A tower-free procedural terrain whose light, sky, fog, stars, rain, lightning, snow, grass, and stones move through seven authored environment states.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-japanese-tower",
+      "project": "threeui",
+      "name": "Country Towers",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Six country-specific towers assembling above a procedural landscape: Japanese, Chinese, Vietnamese, Thai, Khmer, and Ottoman.",
+      "language": "html"
+    },
+    {
+      "id": "tu-bookshelf",
+      "project": "threeui",
+      "name": "Bookshelf",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact seven-volume Bookshelf collection with its authored room, carousel shelf, individual cover artwork, foil, pages, inspection, opening, and page-turn system.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-structure-flow",
+      "project": "threeui",
+      "name": "Structure Flow",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Thirteen authored Three.js field studies collected as one family, spanning particle domes, horizons, orbital systems, matrices, topology, fluid fields, embers, and vortexes.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-emerald-horizon",
+      "project": "threeui",
+      "name": "Emerald Horizon",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A deep emerald shader glow rising from an organic moving horizon.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-orbital-sphere",
+      "project": "threeui",
+      "name": "Orbital Sphere",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A violet particle synthesis sphere with six encrypted orbital rings and luminous data nodes.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-dot-matrix",
+      "project": "threeui",
+      "name": "Dot Matrix",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A cyan breathing dot matrix with radial depth fade and smoothed pointer drift, extracted from the exact Neuform uplink background.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-warp-field",
+      "project": "threeui",
+      "name": "Warp Field",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Nexus’s focused hero warp: 400 emerald additive streaks and 40 luminous tiles streaming through an authored deep-space fog field.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-expanse-field",
+      "project": "threeui",
+      "name": "Expanse Field",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact full-screen Three.js ShaderMaterial expanse isolated without editorial text or navigation.",
+      "language": "html"
+    },
+    {
+      "id": "tu-logic-core",
+      "project": "threeui",
+      "name": "Logic Core",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact isometric platform, logic core, orbiting nodes, and source lighting without its card copy.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-dimensional-field",
+      "project": "threeui",
+      "name": "Dimensional Field",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact dimensional architecture background with both authored ShaderMaterials and complete Three.js scene.",
+      "language": "html"
+    },
+    {
+      "id": "tu-data-field",
+      "project": "threeui",
+      "name": "Data Field",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact global-data Three.js visual isolated from its dashboard frame and text content.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-topology-field",
+      "project": "threeui",
+      "name": "Topology Field",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact rotating topology graph, connections, and point pulse system from the selected source.",
+      "language": "html"
+    },
+    {
+      "id": "tu-halftone-flow",
+      "project": "threeui",
+      "name": "Halftone Flow",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact red-orange raw-WebGL flow field resolved through its authored six-pixel halftone matrix.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-neon-sign",
+      "project": "threeui",
+      "name": "Neon Typography",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "canvas",
+        "canvas2d",
+        "typography",
+        "neon"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Hand-shaped neon lettering animated with a slow typographic breath and recurring electrical flicker — tubing geometry, electrodes, and bloom on a neutral field.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-engraved-certificate",
+      "project": "threeui",
+      "name": "Engraved Certificate",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "canvas",
+        "canvas2d",
+        "css",
+        "dom"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A responsive engraved certificate: plate field, dual guilloche rosettes, and a drifting harmonic pass that auto-cycles through four cam states.",
+      "language": "html"
+    },
+    {
+      "id": "tu-woven-cloth",
+      "project": "threeui",
+      "name": "Woven Cloth",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A Three.js woven-cloth simulation with Woven Cloth typography printed into its procedural textile so every letter deforms with the fabric, and three companion cloths woven around the same Verlet sheet.",
+      "language": "html"
+    },
+    {
+      "id": "tu-nebula",
+      "project": "threeui",
+      "name": "Nebula",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact indigo Three.js ShaderMaterial nebula with four-octave FBM, pointer drift, breathing light, and vignette.",
+      "language": "html"
+    },
+    {
+      "id": "tu-fluid-field",
+      "project": "threeui",
+      "name": "Fluid Field",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A blue-violet fluid ShaderMaterial, isolated from the surrounding editor interface.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-ember-storm",
+      "project": "threeui",
+      "name": "Ember Storm",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact 12,000-particle Three.js ember vortex with additive heat grading, flicker, and visibility-aware lifecycle.",
+      "language": "html"
+    },
+    {
+      "id": "tu-performance-gauges",
+      "project": "threeui",
+      "name": "Performance Gauges",
+      "category": "css",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "css",
+        "dom",
+        "ui",
+        "gauges"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Four layered CSS instruments — tachometer, speedometer, turbo boost, and EV power — each isolated to one full-bleed dial with polar tick geometry, scale bands, and a self-testing needle sweep.",
+      "language": "html"
+    },
+    {
+      "id": "tu-uplink-loader",
+      "project": "threeui",
+      "name": "Uplink Loader",
+      "category": "css",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "css",
+        "dom",
+        "javascript",
+        "ui"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A cinematic secure-uplink loader with stepped progress, illuminated telemetry ticks, neon readouts, technical corner markers, mirrored side rails, scanlines, and procedural grain.",
+      "language": "html"
+    },
+    {
+      "id": "tu-koi-studies",
+      "project": "threeui",
+      "name": "Koi Studies",
+      "category": "css",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "css",
+        "css3d",
+        "dom",
+        "canvas"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A tactile stack of three Japanese koi studies with CSS 3D depth, pointer tilt, drag and keyboard navigation, pixel-mask reveals, and animated halftone imagery.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-article-headings",
+      "project": "threeui",
+      "name": "Article Headings",
+      "category": "text-animation",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "text-animation",
+        "css",
+        "dom",
+        "canvas",
+        "canvas2d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Three expressive text treatments collected in one family: a chromatic intro, a particle wordmark, and an audio-reactive identity lockup.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-animated-top-dock",
+      "project": "threeui",
+      "name": "Animated Top Dock",
+      "category": "css",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "css",
+        "dom",
+        "ui",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Sable’s proximity-spring menu in four fits: the authored centred dock, a modern command bar, a fitted pixel-terminal strip, and a vertical refracting Three.js glass rail.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-sketchbook",
+      "project": "threeui",
+      "name": "Sketchbook",
+      "category": "css",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "css",
+        "dom",
+        "css3d",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "The exact Singapore paper sketchbook with nested-strip page curls, direct dragging, tilt, zoom, a movable magnifying glass, and its complete authored plate set.",
+      "language": "tsx"
+    },
+    {
+      "id": "tu-constellation-field",
+      "project": "threeui",
+      "name": "Constellation Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "particles",
+        "network"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A family of particle networks, gateways, interface lines, defense traces, and topographic fields gathered into one configurable collection.",
+      "language": "html"
+    },
+    {
+      "id": "tu-particle-drift",
+      "project": "threeui",
+      "name": "Particle Drift",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "particles",
+        "soft"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A soft particle drift field lifted from a compute-network hero stage.",
+      "language": "html"
+    },
+    {
+      "id": "tu-particle-network",
+      "project": "threeui",
+      "name": "Particle Network",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "particles",
+        "network"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A sharp, thin-stroke particle network field with crisp retina trails.",
+      "language": "html"
+    },
+    {
+      "id": "tu-flux-vortex",
+      "project": "threeui",
+      "name": "Flux Vortex",
+      "category": "threejs",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A blooming Three.js particle vortex with spiral filaments and post-process glow.",
+      "language": "html"
+    },
+    {
+      "id": "tu-portal-field",
+      "project": "threeui",
+      "name": "Portal Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Five ambient field backgrounds collected across Three.js, raw WebGL, and Canvas 2D renderers.",
+      "language": "html"
+    },
+    {
+      "id": "tu-amber-halftone",
+      "project": "threeui",
+      "name": "Amber Halftone",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "three.js",
+        "3d"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "An animated amber-to-white halftone point field on a dark plane.",
+      "language": "html"
+    },
+    {
+      "id": "tu-diagnostics-panel",
+      "project": "threeui",
+      "name": "Diagnostics Panel",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "canvas",
+        "canvas2d",
+        "ui",
+        "dashboard"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Three diagnostic illustration variants — layered planes, node cubes, and a flowing mesh — each isolated without page chrome or copy.",
+      "language": "html"
+    },
+    {
+      "id": "tu-skeuomorphic-toggle",
+      "project": "threeui",
+      "name": "Skeuomorphic Toggle",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "css",
+        "dom",
+        "ui",
+        "toggle"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Four takes on one switch: the preserved tactile skeuomorphic export plus flat modern, Three.js glass, and shader-lit treatments, each matching light and dark appearances automatically.",
+      "language": "html"
+    },
+    {
+      "id": "tu-matrix-field",
+      "project": "threeui",
+      "name": "Laser",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl",
+        "laser"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Four pointer-reactive laser scenes spanning a preserved matrix junction, atmospheric blade, vanishing array, and halftone relay.",
+      "language": "html"
+    },
+    {
+      "id": "tu-gateway-flow",
+      "project": "threeui",
+      "name": "Gateway Flow",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "flow field",
+        "trajectories"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A black-stage flow canvas with streaming gateway trajectories.",
+      "language": "html"
+    },
+    {
+      "id": "tu-connectivity-graph",
+      "project": "threeui",
+      "name": "Connectivity Graph",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "graph",
+        "network"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A light-mode connectivity graph canvas with animated node links.",
+      "language": "html"
+    },
+    {
+      "id": "tu-interface-lines",
+      "project": "threeui",
+      "name": "Interface Lines",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "lines",
+        "grid"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A faint interface line-field background for dense system UI stages.",
+      "language": "html"
+    },
+    {
+      "id": "tu-wireframe-forms",
+      "project": "threeui",
+      "name": "Wireframe Forms",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "canvas",
+        "canvas2d",
+        "ui",
+        "wireframe"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A family of rotating wireframe forms, with the cube, crossed cylinders, and nested sphere isolated as individual variants.",
+      "language": "html"
+    },
+    {
+      "id": "tu-defense-lines",
+      "project": "threeui",
+      "name": "Defense Lines",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "canvas",
+        "canvas2d",
+        "lines",
+        "red"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A crimson defense-line canvas field behind a high-contrast hero stage.",
+      "language": "html"
+    },
+    {
+      "id": "tu-topo-field",
+      "project": "threeui",
+      "name": "Topo Field",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "background",
+        "glsl",
+        "topography"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "A raw-WebGL topography field with flowing elevation bands.",
+      "language": "html"
+    },
+    {
+      "id": "tu-brand-orbs",
+      "project": "threeui",
+      "name": "Brand Orbs",
+      "category": "ui-element",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "ui-element",
+        "canvas",
+        "canvas2d",
+        "ui",
+        "loading"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "WebGL"
+      ],
+      "description": "Twenty-three animated brand marks rebuilt as small and medium dimensional dot orbs for AI status, product activity, and compact loading states.",
+      "language": "html"
+    },
+    {
+      "id": "tu-aetheris-labs",
+      "project": "threeui",
+      "name": "Aetheris Labs",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Aetheris Labs background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-aura-ui-fluid",
+      "project": "threeui",
+      "name": "Aura Ui Fluid",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Aura Ui Fluid background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-creator-studio-intro",
+      "project": "threeui",
+      "name": "Creator Studio Intro",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Creator Studio Intro background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-epilude-footer",
+      "project": "threeui",
+      "name": "Epilude Footer",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Epilude Footer background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-glassblown-neon",
+      "project": "threeui",
+      "name": "Glassblown Neon",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Glassblown Neon background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-imaginie-starfield",
+      "project": "threeui",
+      "name": "Imaginie Starfield",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Imaginie Starfield background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-nexus-unified-flow",
+      "project": "threeui",
+      "name": "Nexus Unified Flow",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Nexus Unified Flow background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-platform-core",
+      "project": "threeui",
+      "name": "Platform Core",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Platform Core background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-strata-cloud",
+      "project": "threeui",
+      "name": "Strata Cloud",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Strata Cloud background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-valence-core",
+      "project": "threeui",
+      "name": "Valence Core",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Valence Core background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-vertex-9",
+      "project": "threeui",
+      "name": "Vertex 9",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Vertex 9 background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-void-protocol",
+      "project": "threeui",
+      "name": "Void Protocol",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Void Protocol background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-text-on-a-path-ii",
+      "project": "threeui",
+      "name": "Text On A Path Ii",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Text On A Path Ii background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-woven-cloth-atelier",
+      "project": "threeui",
+      "name": "Woven Cloth Atelier",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Woven Cloth Atelier background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-woven-cloth-iridescent",
+      "project": "threeui",
+      "name": "Woven Cloth Iridescent",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Woven Cloth Iridescent background component from threeui.",
+      "language": "html"
+    },
+    {
+      "id": "tu-woven-cloth-washi",
+      "project": "threeui",
+      "name": "Woven Cloth Washi",
+      "category": "background",
+      "style": [
+        "threejs",
+        "webgl",
+        "shader",
+        "official-demo"
+      ],
+      "techStack": [
+        "WebGL",
+        "Three.js",
+        "HTML",
+        "JavaScript"
+      ],
+      "description": "Woven Cloth Washi background component from threeui.",
+      "language": "html"
+    },
+    {
       "id": "p2m-gif-continuum",
       "project": "pixel2motion",
       "name": "Pixel2Motion Continuum Motion",
@@ -85696,448 +88372,6 @@
       ],
       "description": "React Bits official video demo: Waves",
       "language": "html"
-    },
-    {
-      "id": "px-graphics-basic-shapes",
-      "project": "pixijs",
-      "name": "Basic Shapes",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates basic shape drawing using the Graphics class",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_basic_shapes",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_basic_shapes.ts"
-    },
-    {
-      "id": "px-graphics-dynamic",
-      "project": "pixijs",
-      "name": "Dynamic Graphics",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates dynamic drawing using the Graphics class",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_dynamic",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_dynamic.ts"
-    },
-    {
-      "id": "px-graphics-gradient",
-      "project": "pixijs",
-      "name": "Gradient Fill & Stroke",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create and animate shapes with gradient fills and strokes using the Graphics and FillGradient classes",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_fill_stroke_gradient",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_fill_stroke_gradient.ts"
-    },
-    {
-      "id": "px-graphics-curves",
-      "project": "pixijs",
-      "name": "Curves, Arcs & Holes",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates advanced graphics features, including Bezier curves, arcs, holes, and textured strokes.",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_curves_arcs_holes_textures",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_curves_arcs_holes_textures.ts"
-    },
-    {
-      "id": "px-graphics-mask-anim",
-      "project": "pixijs",
-      "name": "Animated Graphics Mask",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to use Graphics as a mask in a PixiJS application",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/graphics_mask_animation",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/graphics_mask_animation.ts"
-    },
-    {
-      "id": "px-container-inverse-mask",
-      "project": "pixijs",
-      "name": "Inverse Mask",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create an inverse mask using the Graphics class",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_inverse-mask",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_inverse-mask.ts"
-    },
-    {
-      "id": "px-container-pivot",
-      "project": "pixijs",
-      "name": "Container Pivot",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to use a Container to group and manipulate multiple sprites",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_transform_pivot_basic",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_transform_pivot_basic.ts"
-    },
-    {
-      "id": "px-container-tinting",
-      "project": "pixijs",
-      "name": "Sprite Tinting",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to apply tinting to sprites",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_tinting",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_tinting.ts"
-    },
-    {
-      "id": "px-container-blend-modes",
-      "project": "pixijs",
-      "name": "Blend Modes Comparison",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates various blend modes",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_blend-modes_comparison",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_blend-modes_comparison.ts"
-    },
-    {
-      "id": "px-container-alpha-mask",
-      "project": "pixijs",
-      "name": "Alpha Channel Mask",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "Demonstrates how different mask channels produce different results from the same mask texture. The mask has a red star shape and a blue circle with soft alpha edges. The 'red' channel reads the red component, revealing only the star. The 'alpha' channel reads opacity, revealing the full circular shape.",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_alpha-channel-mask",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_alpha-channel-mask.ts"
-    },
-    {
-      "id": "px-container-mask-blur",
-      "project": "pixijs",
-      "name": "Spotlight Blur Mask",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create a spotlight effect using a blurred circular mask that follows the mouse pointer, revealing a grass background using PixiJS",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_mask_filters_blur",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_mask_filters_blur.ts"
-    },
-    {
-      "id": "px-container-cache-texture",
-      "project": "pixijs",
-      "name": "Cache As Texture",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to use cacheAsTexture to optimize rendering performance",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/container_cache-as-texture_optimization",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/container_cache-as-texture_optimization.ts"
-    },
-    {
-      "id": "px-filters-blur",
-      "project": "pixijs",
-      "name": "Blur Filter",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates the use of BlurFilter to create dynamic blur effects on sprites",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/filters_blur",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/filters_blur.ts"
-    },
-    {
-      "id": "px-filters-color-matrix",
-      "project": "pixijs",
-      "name": "Color Matrix Filter",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates the use of ColorMatrixFilter to create dynamic color effects on a container of sprites",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/filters_color-matrix",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/filters_color-matrix.ts"
-    },
-    {
-      "id": "px-filters-displacement",
-      "project": "pixijs",
-      "name": "Displacement Filter",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates the use of DisplacementFilter with a repeating texture to create a waving flag effect",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/filters_displacement",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/filters_displacement.ts"
-    },
-    {
-      "id": "px-animated-sprite-particles",
-      "project": "pixijs",
-      "name": "Explosion Particles",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create and display animated sprites using PixiJS.",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/animated-sprite_particles",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/animated-sprite_particles.ts"
-    },
-    {
-      "id": "px-animated-sprite-spritesheet",
-      "project": "pixijs",
-      "name": "Fighter Spritesheet",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create and display animated sprites using PixiJS.",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/animated-sprite_spritesheet",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/animated-sprite_spritesheet.ts"
-    },
-    {
-      "id": "px-app-transparent",
-      "project": "pixijs",
-      "name": "Transparent Background",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create a PixiJS application with a transparent background",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/app_transparent-background",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/app_transparent-background.ts"
-    },
-    {
-      "id": "px-events-dragging",
-      "project": "pixijs",
-      "name": "Drag Sprites",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to implement dragging functionality for sprites using pointer events",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/events_dragging",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/events_dragging.ts"
-    },
-    {
-      "id": "px-events-buttons",
-      "project": "pixijs",
-      "name": "Interactive Buttons",
-      "category": "official-demo",
-      "style": [
-        "html",
-        "canvas",
-        "webgl"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API"
-      ],
-      "description": "This example demonstrates how to create interactive buttons with different states (normal, hover, pressed)",
-      "language": "html",
-      "officialUrl": "https://pixijs.com/8.x/examples/#/events_buttons",
-      "sourceUrl": "https://github.com/pixijs/pixijs/blob/dev/examples/events_buttons.ts"
-    },
-    {
-      "id": "px-cosmic-forge-showcase",
-      "project": "pixijs",
-      "name": "PixiJS Cosmic Forge Showcase",
-      "category": "official-showcase",
-      "style": [
-        "official-showcase",
-        "particles",
-        "graphics",
-        "filters",
-        "webgl",
-        "interactive"
-      ],
-      "techStack": [
-        "JavaScript",
-        "PixiJS",
-        "WebGL",
-        "Canvas API",
-        "Particle System"
-      ],
-      "description": "A cosmic-themed interactive showcase combining particle systems, gradient graphics, blur filters, parallax starfield, orbiting energy particles, mouse trail effects, and click-to-detonate explosion bursts. Demonstrates the full power of PixiJS v8 in a single immersive scene."
     }
   ]
 }

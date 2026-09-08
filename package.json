@@ -42,6 +42,8 @@
     "react-router-dom": "^7.18.1",
     "tailwind-merge": "^3.6.0",
     "three": "^0.185.1",
+    "three128": "npm:three@0.128.0",
+    "three165": "npm:three@0.165.0",
     "tsparticles": "^4.3.0"
   }
 }

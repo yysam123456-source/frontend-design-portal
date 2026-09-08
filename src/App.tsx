@@ -35,7 +35,7 @@ import type { ComponentSummary } from './types'
 const ITEMS_PER_PAGE = 48
 const OFFICIAL_DEMO_INITIAL_COUNT = 24
 const OFFICIAL_DEMO_CATEGORIES = ['official-demo', 'official-showcase']
-const OFFICIAL_READY_DEMO_PROJECTS = ['animata', 'uiverse', 'animejs']
+const OFFICIAL_READY_DEMO_PROJECTS = ['animata', 'uiverse', 'animejs', 'threeui']
 const EXTRA_CATEGORIES = ['toggle-switches', 'forms', 'checkboxes', 'tooltips', 'modal', 'skeleton']
 const QUICK_CATEGORY_KEYS = [
   'buttons',

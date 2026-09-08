@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { loadReadyShaders, findShaderSource } from './threeui-catalog.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.join(__dirname, '..')
@@ -58,6 +59,16 @@ function copyFileIfChanged(source, target) {
   ensureDir(path.dirname(target))
   if (fs.existsSync(target) && fs.statSync(source).size === fs.statSync(target).size) return
   fs.copyFileSync(source, target)
+}
+
+function copyTreeIfChanged(sourceDir, targetDir) {
+  ensureDir(targetDir)
+  for (const entry of fs.readdirSync(sourceDir, { withFileTypes: true })) {
+    const src = path.join(sourceDir, entry.name)
+    const dst = path.join(targetDir, entry.name)
+    if (entry.isDirectory()) copyTreeIfChanged(src, dst)
+    else copyFileIfChanged(src, dst)
+  }
 }
 
 function isSafeAnimataSource(source) {
@@ -738,7 +749,8 @@ function buildAnimataDependencyGeneratedIds(existing = new Map()) {
     for (const [from, to] of replacements) {
       source = source.replaceAll(`'${from}'`, `'${to}'`).replaceAll(`"${from}"`, `"${to}"`)
     }
-    fs.writeFileSync(outPath, `// @ts-nocheck\n${source}`)
+    const header = /\.(tsx|ts)$/i.test(sourcePath) ? '// @ts-nocheck\n' : ''
+    fs.writeFileSync(outPath, `${header}${source}`)
     return sourcePath
   }
 
@@ -865,6 +877,200 @@ function buildEldoraImageMap() {
         result.set(`ed-component-${componentSlug}`, src)
       }
     }
+  }
+
+  return result
+}
+
+function buildThreeUIProps(shader, source) {
+  const controls = Array.isArray(shader.controls) ? shader.controls : []
+  const props = {}
+  for (const control of controls) {
+    if (!control || !control.key || typeof control.default === 'undefined') continue
+    props[control.key] = control.default
+  }
+  if (!Object.keys(props).length) return '{}'
+  return JSON.stringify(props, null, 2)
+}
+
+function buildThreeUIGeneratedIds() {
+  const result = new Map()
+  const repoRoot = path.join(rootDir, 'repos', 'threeui')
+  const shadersRoot = path.join(repoRoot, 'src', 'shaders')
+  const dataPath = path.join(dataDir, 'threeui.json')
+  if (!fs.existsSync(dataPath) || !fs.existsSync(shadersRoot)) return result
+  const items = readJson(dataPath)
+  const shaders = loadReadyShaders(repoRoot)
+  const shaderById = new Map(shaders.map((s) => [s.id, s]))
+
+  // 精选可安全 vendoring 的 WebGL/Three.js React 组件：浅依赖、无远程 CDN 导入
+  const CANDIDATES = new Set([
+    'liquid-form',
+    'crt',
+    'energy-orb',
+    'bell-field',
+    'stream-convergence',
+    'condensation',
+    'ribbon-field',
+    'animated-top-dock',
+    'typography-vortex',
+    'circle-buttons',
+    'gallery',
+    'temple-night',
+    'globe-study',
+    'dot-matrix',
+    'warp-field',
+    'emerald-horizon',
+    'orbital-sphere',
+    'bookshelf',
+    'koi-studies',
+    'landscape',
+    'sketchbook',
+  ])
+
+  const copied = new Set()
+
+  function vendorPathFor(sourcePath) {
+    const relative = path.relative(shadersRoot, sourcePath)
+    return path.join(vendorDir, 'threeui', relative)
+  }
+
+  function relImport(fromDir, targetPath, keepExtension = false) {
+    let rel = path.relative(fromDir, targetPath).replace(/\\/g, '/')
+    if (!rel.startsWith('.')) rel = './' + rel
+    return keepExtension ? rel : rel.replace(/\.(tsx|ts)$/i, '')
+  }
+
+  function resolveSpecifier(specifier, sourcePath) {
+    if (!(specifier.startsWith('./') || specifier.startsWith('../'))) return null
+    const clean = specifier.replace(/\?raw$/, '')
+    const base = path.resolve(path.dirname(sourcePath), clean)
+    const candidates = [
+      `${base}.tsx`,
+      `${base}.ts`,
+      `${base}.js`,
+      `${base}.jsx`,
+      `${base}.css`,
+      `${base}.html`,
+      base,
+    ]
+    return candidates.find((c) => fs.existsSync(c) && fs.statSync(c).isFile()) || null
+  }
+
+  function copyModule(sourcePath) {
+    if (!sourcePath || copied.has(sourcePath)) return sourcePath
+    copied.add(sourcePath)
+    const outPath = vendorPathFor(sourcePath)
+    ensureDir(path.dirname(outPath))
+
+    if (/\.(png|jpg|jpeg|gif|webp|svg|woff2?|mp4|webm|ico)$/i.test(sourcePath)) {
+      copyFileIfChanged(sourcePath, outPath)
+      return sourcePath
+    }
+
+    let source = fs.readFileSync(sourcePath, 'utf-8')
+    const replacements = new Map()
+    const importRegex = /import(?:[\s\S]*?)from\s+['"]([^'"]+)['"]|import\s+['"]([^'"]+)['"]/g
+    const importedSpecifiers = [
+      ...[...source.matchAll(importRegex)].map((match) => match[1] || match[2]),
+      ...[...source.matchAll(/^\s*import\s+['"]([^'"]+)['"];?/gm)].map((match) => match[1]),
+      ...[...source.matchAll(/export\s+(?:\{[\s\S]*?\}|\*)\s+from\s+['"]([^'"]+)['"]/g)].map((match) => match[1]),
+      ...[...source.matchAll(/import\(\s*['"]([^'"]+)['"]\s*\)/g)].map((match) => match[1]),
+    ]
+    for (const specifier of importedSpecifiers) {
+      let replacement = null
+      const dep = resolveSpecifier(specifier, sourcePath)
+      if (dep) {
+        copyModule(dep)
+        const keepExt = /\.(css|html|json)$/i.test(dep)
+        replacement = relImport(path.dirname(outPath), vendorPathFor(dep), keepExt)
+        if (specifier.endsWith('?raw')) replacement += '?raw'
+      }
+      if (replacement) replacements.set(specifier, replacement)
+    }
+    for (const [from, to] of replacements) {
+      source = source.replaceAll(`'${from}'`, `'${to}'`).replaceAll(`"${from}"`, `"${to}"`)
+    }
+    const header = /\.(tsx|ts)$/i.test(sourcePath) ? '// @ts-nocheck\n' : ''
+    fs.writeFileSync(outPath, `${header}${source}`)
+    return sourcePath
+  }
+
+  for (const item of items) {
+    const shaderId = item.id.replace(/^tu-/, '')
+    if (!CANDIDATES.has(shaderId)) continue
+    if (item.codeSnippet?.language === 'html') continue
+    const shader = shaderById.get(shaderId)
+    if (!shader) continue
+    const importName = shader.importName || toTitleCase(shaderId)
+    const sourcePath = findShaderSource(repoRoot, importName)
+    if (!sourcePath) {
+      console.log(`  [threeui] skip ${item.id}: no source for ${importName}`)
+      continue
+    }
+    const source = fs.readFileSync(sourcePath, 'utf-8')
+    const exportName = getExportName(source)
+    if (!exportName) {
+      console.log(`  [threeui] skip ${item.id}: no export in ${sourcePath}`)
+      continue
+    }
+
+    copyModule(sourcePath)
+
+    // 部分组件以 iframe 方式渲染 threeui 仓库 public/ 下的官方页面，
+    // 需要把对应资源拷入门户 public/ 才能离线运行
+    const publicPageMap = {
+      landscape: ['landscape.html'],
+      'koi-studies': ['synthralos-halftone.html'],
+      sketchbook: ['sketchbook/'],
+    }
+    for (const rel of publicPageMap[shaderId] || []) {
+      const src = path.join(repoRoot, 'public', rel)
+      const dst = path.join(rootDir, 'public', rel)
+      if (!fs.existsSync(src)) continue
+      if (fs.statSync(src).isDirectory()) {
+        copyTreeIfChanged(src, dst)
+      } else {
+        copyFileIfChanged(src, dst)
+      }
+    }
+
+    const previewOut = path.join(previewDir, 'threeui', `${item.id}.tsx`)
+    ensureDir(path.dirname(previewOut))
+    const importPath = relImport(path.dirname(previewOut), vendorPathFor(sourcePath))
+    const componentExpr = exportName === 'default' ? 'ComponentModule.default' : `ComponentModule.${exportName}`
+    const previewProps = buildThreeUIProps(shader, source)
+
+    fs.writeFileSync(
+      previewOut,
+      `// @ts-nocheck
+import * as ComponentModule from '${importPath}'
+
+const Component = ${componentExpr}
+const previewProps = ${previewProps}
+
+export default function Preview({ compact }: { compact?: boolean }) {
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        background: '#05060a',
+        overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <div style={{ width: '100%', height: '100%' }}>
+        <Component {...previewProps} />
+      </div>
+    </div>
+  )
+}
+`,
+    )
+    result.set(item.id, `./previews/threeui/${item.id}`)
   }
 
   return result
@@ -1009,6 +1215,7 @@ function main() {
     ...animataGeneratedIds,
     ...buildEldoraGeneratedIds(),
     ...buildZeldaGeneratedIds(),
+    ...buildThreeUIGeneratedIds(),
   ])
   const reactBitsVideoMap = buildReactBitsVideoMap()
   const eldoraImageMap = buildEldoraImageMap()
@@ -1019,7 +1226,10 @@ function main() {
     const record = getPreviewRecord(component, { reactBitsVideoMap, eldoraImageMap })
     if (
       record.kind === 'unsupported' &&
-      (component.project === 'animata' || component.project === 'eldoraui' || component.project === 'zelda-hyrule-ui') &&
+      (component.project === 'animata' ||
+        component.project === 'eldoraui' ||
+        component.project === 'zelda-hyrule-ui' ||
+        component.project === 'threeui') &&
       generatedPreviewIds.has(component.id)
     ) {
       return {

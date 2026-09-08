@@ -79,6 +79,18 @@ export const projects: ProjectMeta[] = [
     category: 'tool',
   },
   {
+    id: 'threeui',
+    name: 'ThreeUI',
+    github: 'https://github.com/MengTo/threeui',
+    demoBaseUrl: 'https://threeui.com',
+    description:
+      'A Three.js component and template library with interactive shaders, WebGL backgrounds, buttons, text animation, and full landing-page scenes — open-source Community edition with 100+ components.',
+    accentColor: '#38BDF8',
+    tags: ['threejs', 'webgl', 'shaders', 'landing-pages', 'backgrounds', 'buttons', 'text-animation'],
+    techStack: ['React', 'TypeScript', 'Three.js', 'WebGL'],
+    category: 'rendering',
+  },
+  {
     id: 'pixijs',
     name: 'PixiJS',
     github: 'https://github.com/pixijs/pixijs',

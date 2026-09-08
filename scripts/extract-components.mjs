@@ -5,6 +5,12 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { execFileSync } from 'child_process'
+import {
+  loadReadyShaders,
+  categoryRouteSlug,
+  catalogSlug,
+  portCategory,
+} from './threeui-catalog.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const reposDir = path.join(__dirname, '..', 'repos')
@@ -1006,6 +1012,177 @@ function extractEldora() {
   return components
 }
 
+// ============ threeui（Three.js 组件库：官网 DEMO + 示例组件） ============
+function extractThreeUI() {
+  const components = []
+  const repoRoot = path.join(reposDir, 'threeui')
+  if (!fs.existsSync(repoRoot)) return components
+
+  const shaders = loadReadyShaders(repoRoot)
+  if (!shaders.length) return components
+
+  const allIds = new Set()
+  for (const s of shaders) {
+    allIds.add(s.id)
+    if (Array.isArray(s.variants)) for (const v of s.variants) allIds.add(v.id)
+  }
+
+  // ---- 官网完整页面 DEMO：public/landing-pages/*.html 与 public/*.html ----
+  // dirs: 需要随页面一起 staging 到门户 /demo-assets/threeui/<prefix>/ 的资源目录前缀
+  const htmlDemoPublic = {
+    'kage-landing-page': { file: 'landing-pages/kage.html', dirs: ['secret-pathways-assets'] },
+    'complete-shelf-landing-page': { file: 'landing-pages/complete-shelf-v2.html', dirs: [] },
+    'bestsellers-book-showcase': { file: 'landing-pages/bestsellers-book-showcase.html', dirs: [] },
+    'sylva-hero': { file: 'landing-pages/inner-green-3d.html', dirs: ['inner-green-assets'] },
+    'sylva-living-world': { file: 'landing-pages/inner-green-3d.html', dirs: ['inner-green-assets'] },
+    'meng-to-sketchbook-landing-page': {
+      file: 'landing-pages/meng-to-sketchbook.html',
+      dirs: ['meng-to-sketchbook'],
+    },
+    'spark-badge': { file: 'spark-badge.html', dirs: [] },
+  }
+
+  const demoAssetsRoot = path.join(__dirname, '..', 'public', 'demo-assets', 'threeui')
+  const stagedDirs = new Set()
+
+  function stageAssets(prefix, sourceDir) {
+    const source = path.join(repoRoot, 'public', sourceDir)
+    const target = path.join(demoAssetsRoot, prefix)
+    const key = `${prefix}|${sourceDir}`
+    if (!fs.existsSync(source) || stagedDirs.has(key)) return
+    stagedDirs.add(key)
+    fs.mkdirSync(target, { recursive: true })
+    for (const entry of fs.readdirSync(source, { withFileTypes: true })) {
+      const src = path.join(source, entry.name)
+      const dst = path.join(target, entry.name)
+      if (entry.isDirectory()) {
+        copyTree(src, dst)
+      } else {
+        fs.mkdirSync(path.dirname(dst), { recursive: true })
+        fs.copyFileSync(src, dst)
+      }
+    }
+  }
+
+  function copyTree(src, dst) {
+    fs.mkdirSync(dst, { recursive: true })
+    for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+      const s = path.join(src, entry.name)
+      const d = path.join(dst, entry.name)
+      if (entry.isDirectory()) copyTree(s, d)
+      else fs.copyFileSync(s, d)
+    }
+  }
+
+  function readPublicHtml(relFile, dirs) {
+    const file = path.join(repoRoot, 'public', relFile)
+    if (!fs.existsSync(file)) return null
+    let html = fs.readFileSync(file, 'utf8')
+    for (const prefix of dirs) {
+      // meng-to-sketchbook 的资源实际在 public/sketchbook/
+      const sourceDir =
+        prefix === 'meng-to-sketchbook' ? 'sketchbook' : `landing-pages/${prefix}`
+      stageAssets(prefix, sourceDir)
+      // 把相对资源引用（含 JS 字符串中的引用）重写为门户绝对路径
+      html = html.split(`${prefix}/`).join(`/demo-assets/threeui/${prefix}/`)
+    }
+    return html
+  }
+
+  // 记录已分配的 HTML DEMO（id → 源码）
+  const htmlDemos = new Map()
+  for (const [shaderId, spec] of Object.entries(htmlDemoPublic)) {
+    const html = readPublicHtml(spec.file, spec.dirs)
+    if (html) htmlDemos.set(`tu-${shaderId}`, html)
+  }
+
+  // ---- src/shaders/**/sources/*.html 变体 DEMO（自包含官网捕获页） ----
+  // 部分文件名与目录 id 不一致，用别名映射到目录条目
+  const SOURCE_ALIASES = {
+    'ignition-terminal': 'ignition-button',
+    'brand-orbs-v2': 'brand-orbs',
+    'design-f0ebbe02-7d8a-41fd-9041-a1124185c27b': 'semantic-bloom',
+    'text-on-a-path': 'text-path-studies',
+    'aeonix-ember-storm': 'ember-storm',
+    'digital-expanse': 'expanse-field',
+    'julian-vance-nebula': 'nebula',
+    'kinetic-lathe-certificate': 'engraved-certificate',
+    'lumina-weavers-cloth': 'woven-cloth',
+    'nexus-tactile': 'tactile-button',
+    'nexus-topology': 'topology-field',
+    'vanguard-dimensional': 'dimensional-field',
+    'elemental-marks': 'elements',
+    'inner-green-3d': 'sylva-living-world',
+    Towers: 'japanese-tower',
+    lumen: 'lumen-cta',
+  }
+
+  const sourceHtmlFiles = walkFiles(
+    path.join(repoRoot, 'src', 'shaders'),
+    (file) => file.endsWith('.html')
+  )
+  const usedSourceIds = new Set()
+  const derivedHtmlDemos = []
+  for (const file of sourceHtmlFiles) {
+    const stem = path.basename(file, '.html')
+    const targetId = allIds.has(stem) ? stem : SOURCE_ALIASES[stem] || null
+    if (targetId && !htmlDemos.has(`tu-${targetId}`) && !usedSourceIds.has(targetId)) {
+      htmlDemos.set(`tu-${targetId}`, fs.readFileSync(file, 'utf8'))
+      usedSourceIds.add(targetId)
+    } else if (!targetId && !htmlDemos.has(`tu-${stem}`)) {
+      derivedHtmlDemos.push({ stem, html: fs.readFileSync(file, 'utf8') })
+    }
+  }
+
+  // ---- 目录条目 ----
+  for (const shader of shaders) {
+    const id = `tu-${shader.id}`
+    const tags = Array.isArray(shader.tags) ? shader.tags.slice(0, 4) : []
+    const category = portCategory(shader.category)
+    const html = htmlDemos.get(id)
+    const importName = shader.importName || toTitleCase(shader.id)
+    const description =
+      shader.description ||
+      `${shader.label || toTitleCase(shader.id)} — ThreeUI ${shader.category || 'Three.js'} 组件（官网 DEMO）`
+    const style = [...new Set(['threejs', 'webgl', 'shader', category, ...tags])]
+
+    components.push({
+      id,
+      project: 'threeui',
+      name: shader.label || toTitleCase(shader.id),
+      category,
+      style,
+      techStack: ['React', 'TypeScript', 'Three.js', 'WebGL'],
+      description,
+      demoUrl: `https://threeui.com/${categoryRouteSlug(shader.category)}/${catalogSlug(shader)}`,
+      codeSnippet: html
+        ? { language: 'html', source: html, dependencies: [] }
+        : {
+            language: 'tsx',
+            source: `import { ${importName} } from '@designcodeio/threeui'\n\nexport default function ThreeUIDemo() {\n  return (\n    <div style={{ width: '100%', height: '100vh', background: '#000', overflow: 'hidden' }}>\n      <${importName} />\n    </div>\n  )\n}\n`,
+            dependencies: ['@designcodeio/threeui', 'three'],
+          },
+    })
+  }
+
+  // ---- 无法归入目录条目的官网变体 DEMO：以独立条目收录 ----
+  for (const { stem, html } of derivedHtmlDemos) {
+    components.push({
+      id: `tu-${stem}`,
+      project: 'threeui',
+      name: toTitleCase(stem),
+      category: 'background',
+      style: ['threejs', 'webgl', 'shader', 'official-demo'],
+      techStack: ['WebGL', 'Three.js', 'HTML', 'JavaScript'],
+      description: `ThreeUI 官网变体 DEMO（${toTitleCase(stem)}）——自包含 HTML/WebGL 效果页，可直接运行。`,
+      demoUrl: 'https://threeui.com',
+      codeSnippet: { language: 'html', source: html, dependencies: [] },
+    })
+  }
+
+  return components
+}
+
 // ============ 主流程 ============
 console.log('Extracting components from cloned repos...')
 
@@ -1017,6 +1194,7 @@ const allComponents = [
   ...extractAnimeJS(),
   ...extractZelda(),
   ...extractEldora(),
+  ...extractThreeUI(),
 ]
 
 // 统计
