@@ -138,7 +138,7 @@ export default function App() {
 
   const setActivePage = useCallback(
     (page: PageView) => {
-      navigate(page === 'official' ? '/' : `/${page}`)
+      navigate(page === 'official' ? '/' : `/${page}/`)
     },
     [navigate]
   )
@@ -168,14 +168,14 @@ export default function App() {
           title: 'Component Gallery — 5,000+ Open-Source UI Components & Animations',
           description:
             'Search and filter 5,000+ open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
-          canonical: `${SITE_ORIGIN}/components`,
+          canonical: `${SITE_ORIGIN}/components/`,
         }
       : activePage === 'showcases'
         ? {
             title: 'Showcases — Frontend Design Case Studies & Live Demos',
             description:
               'Curated frontend design showcases and full-page demos built with React, Three.js, PixiJS and Tailwind CSS, with live previews and source links.',
-            canonical: `${SITE_ORIGIN}/showcases`,
+            canonical: `${SITE_ORIGIN}/showcases/`,
           }
         : {
             title: 'Frontend Design Gallery — Open-Source UI Components, Animations & Demos',

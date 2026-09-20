@@ -416,6 +416,18 @@ function buildReactBitsOfficialDemos() {
 }
 
 function main() {
+  // Every demo source below is read from `repos/`, the gitignored set of upstream
+  // clones (~370 MB) that does not exist in CI checkouts. Without this guard the
+  // builders return an empty set and `upsertComponents` rewrites the committed
+  // public/data/*.json to match -- stripping demo URLs that the committed data
+  // already carries. The build must not depend on a directory CI cannot have.
+  const reposDir = path.join(rootDir, 'repos')
+  if (!fs.existsSync(reposDir)) {
+    console.log('[augment-demos] repos/ is absent (gitignored; expected in CI).')
+    console.log('[augment-demos] Keeping the committed public/data/ demo data unchanged.')
+    return
+  }
+
   ensureDir(publicAssetsDir)
   const additionsByProject = {
     pixel2motion: buildPixel2MotionDemos(),

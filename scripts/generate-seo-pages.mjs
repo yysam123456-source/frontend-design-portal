@@ -80,6 +80,20 @@ function clip(text, max) {
 }
 
 /**
+ * Cloudflare Pages serves a generated page from `<slug>/index.html` at `<slug>/`
+ * and answers the slash-less form with a 308. Canonical, sitemap and every
+ * internal link must therefore use the trailing-slash form: otherwise each URL
+ * pays a redirect and, worse, the canonical points at a redirect target instead
+ * of at the page itself. Verified live 2026-09-20: `/components/at-faq` -> 308,
+ * `/components/at-faq/` -> 200.
+ */
+function slugPath(part) {
+  if (!part || part === '/') return '/'
+  return `/${String(part).replace(/^\/+|\/+$/g, '')}/`
+}
+const slugUrl = (part) => `${SITE}${slugPath(part)}`
+
+/**
  * Build a <title> that is never cut mid-phrase.
  *
  * `clip()` alone produces titles ending in an ellipsis, which reads as broken in
@@ -206,9 +220,9 @@ ${jsonLdBlocks.map((b) => `<script type="application/ld+json">${jsonLd(b)}</scri
   <div class="topbar-inner">
     <a class="brand" href="/"><span class="dot"></span>Frontend Design Gallery</a>
     <nav class="topnav">
-      <a href="/components">Components</a>
-      <a href="/categories/buttons">Categories</a>
-      <a href="/showcases">Showcases</a>
+      <a href="/components/">Components</a>
+      <a href="/categories/buttons/">Categories</a>
+      <a href="/showcases/">Showcases</a>
     </nav>
   </div>
 </header>
@@ -221,7 +235,7 @@ ${body}
     <p>Frontend Design Gallery — open-source UI components, animations and design demos with live previews and copy-ready code.</p>
     <div class="row">
       <a href="/">Gallery home</a>
-      <a href="/components">Browse components</a>
+      <a href="/components/">Browse components</a>
       ${FOOTER_PROJECT_NAV}
       <a href="https://github.com/yysam123456-source/frontend-design-portal">GitHub</a>
     </div>
@@ -255,7 +269,7 @@ function crumbLd(items) {
 function cardHtml(component, record) {
   const kind = record ? KIND_LABEL[record.kind] || 'Preview' : 'Source'
   const desc = synthDescription(component, '')
-  return `<a class="card" href="/components/${esc(component.id)}">
+  return `<a class="card" href="/components/${esc(component.id)}/">
   <h3>${esc(component.name)}</h3>
   <p class="meta">${esc(prettyCategory(component.category))}</p>
   <p class="desc">${esc(desc)}</p>
@@ -280,7 +294,7 @@ const projectById = new Map(projects.map((p) => [p.id, p]))
  * be an orphan that nothing links to and no crawler would ever find.
  */
 const FOOTER_PROJECT_NAV = projects
-  .map((p) => `<a href="/projects/${esc(p.id)}">${esc(p.name)}</a>`)
+  .map((p) => `<a href="/projects/${esc(p.id)}/">${esc(p.name)}</a>`)
   .join('\n      ')
 
 const manifest = readJson(path.join(DATA_DIR, 'preview-manifest.json'))
@@ -359,7 +373,7 @@ log('generating project pages…')
 let projectPageCount = 0
 for (const project of projects) {
   const ids = eligibleByProject.get(project.id) || []
-  const url = `${SITE}/projects/${project.id}`
+  const url = slugUrl(`projects/${project.id}`)
   const canonical = `/projects/${project.id}`
   const title = fitTitle(project.name, [
     `${ids.length} open-source components`,
@@ -394,7 +408,7 @@ for (const project of projects) {
     <div class="stat"><div class="n">${esc(titleCase(project.category))}</div><div class="l">Category</div></div>
   </div>
   <div class="actions">
-    <a class="btn btn-primary" href="/components">Browse all in gallery</a>
+    <a class="btn btn-primary" href="/components/">Browse all in gallery</a>
     <a class="btn" href="${esc(project.demoBaseUrl)}" rel="noopener">Official site</a>
     <a class="btn" href="${esc(project.github)}" rel="noopener">GitHub repository</a>
   </div>
@@ -412,7 +426,7 @@ for (const project of projects) {
       .slice(0, 14)
       .map((cat) =>
         (byCategory.get(cat) || []).length >= CATEGORY_MIN
-          ? `<a class="tag" href="/categories/${esc(cat)}">${esc(prettyCategory(cat))}</a>`
+          ? `<a class="tag" href="/categories/${esc(cat)}/">${esc(prettyCategory(cat))}</a>`
           : `<span class="tag">${esc(prettyCategory(cat))}</span>`
       )
       .join('')}
@@ -421,7 +435,7 @@ for (const project of projects) {
 
   const breadcrumbs = crumbsHtml([
     { label: 'Home', href: '/' },
-    { label: 'Projects', href: '/components' },
+    { label: 'Projects', href: '/components/' },
     { label: project.name },
   ])
 
@@ -435,7 +449,7 @@ for (const project of projects) {
       jsonLdBlocks: [
         crumbLd([
           { label: 'Home', href: '/' },
-          { label: 'Projects', href: '/components' },
+          { label: 'Projects', href: '/components/' },
           { label: project.name },
         ]),
         {
@@ -453,7 +467,7 @@ for (const project of projects) {
                 '@type': 'ListItem',
                 position: i + 1,
                 name: c?.name,
-                url: `${SITE}/components/${id}`,
+                url: slugUrl(`components/${id}`),
               }
             }),
           },
@@ -483,7 +497,7 @@ const categories = [...byCategory.entries()]
 
 let categoryPageCount = 0
 for (const [cat, ids] of categories) {
-  const url = `${SITE}/categories/${cat}`
+  const url = slugUrl(`categories/${cat}`)
   const label = prettyCategory(cat)
   const title = fitTitle(`${label} components`, [
     `${ids.length} open-source UI examples`,
@@ -527,14 +541,14 @@ for (const [cat, ids] of categories) {
   <div class="tags">
     ${categories
       .filter(([c]) => c !== cat)
-      .map(([c, list]) => `<a class="tag" href="/categories/${esc(c)}">${esc(prettyCategory(c))} (${list.length})</a>`)
+      .map(([c, list]) => `<a class="tag" href="/categories/${esc(c)}/">${esc(prettyCategory(c))} (${list.length})</a>`)
       .join('')}
   </div>
 </section>`
 
   const breadcrumbs = crumbsHtml([
     { label: 'Home', href: '/' },
-    { label: 'Categories', href: '/components' },
+    { label: 'Categories', href: '/components/' },
     { label },
   ])
 
@@ -548,7 +562,7 @@ for (const [cat, ids] of categories) {
       jsonLdBlocks: [
         crumbLd([
           { label: 'Home', href: '/' },
-          { label: 'Categories', href: '/components' },
+          { label: 'Categories', href: '/components/' },
           { label },
         ]),
         {
@@ -564,7 +578,7 @@ for (const [cat, ids] of categories) {
               '@type': 'ListItem',
               position: i + 1,
               name: byId.get(id)?.name,
-              url: `${SITE}/components/${id}`,
+              url: slugUrl(`components/${id}`),
             })),
           },
         },
@@ -644,8 +658,8 @@ for (const project of projects) {
   </div>
   <div class="actions">
     <a class="btn btn-primary" href="${esc(c.demoUrl || projectMeta?.demoBaseUrl || '/components')}" rel="noopener">Open live demo</a>
-    <a class="btn" href="/projects/${esc(project.id)}">More ${esc(projectName)} components</a>
-    <a class="btn" href="/components">Browse gallery</a>
+    <a class="btn" href="/projects/${esc(project.id)}/">More ${esc(projectName)} components</a>
+    <a class="btn" href="/components/">Browse gallery</a>
   </div>
 </div>
 
@@ -681,15 +695,15 @@ ${
   <div class="actions">
     ${
       prevId
-        ? `<a class="btn" href="/components/${esc(prevId)}">← ${esc(byId.get(prevId)?.name || 'Previous component')}</a>`
+        ? `<a class="btn" href="/components/${esc(prevId)}/">← ${esc(byId.get(prevId)?.name || 'Previous component')}</a>`
         : ''
     }
     ${
       nextId
-        ? `<a class="btn" href="/components/${esc(nextId)}">${esc(byId.get(nextId)?.name || 'Next component')} →</a>`
+        ? `<a class="btn" href="/components/${esc(nextId)}/">${esc(byId.get(nextId)?.name || 'Next component')} →</a>`
         : ''
     }
-    <a class="btn" href="/projects/${esc(project.id)}">All ${esc(projectName)} components</a>
+    <a class="btn" href="/projects/${esc(project.id)}/">All ${esc(projectName)} components</a>
   </div>
 </section>`
     : ''
@@ -697,7 +711,7 @@ ${
 
     const crumbItems = [
       { label: 'Home', href: '/' },
-      { label: projectName, href: `/projects/${project.id}` },
+      { label: projectName, href: `/projects/${project.id}/` },
       { label: c.name },
     ]
 
@@ -706,7 +720,7 @@ ${
       shell({
         title,
         description: clip(description, 155),
-        canonical: `${SITE}/components/${id}`,
+        canonical: slugUrl(`components/${id}`),
         breadcrumbs: crumbsHtml(crumbItems),
         jsonLdBlocks: [
           crumbLd(crumbItems),
@@ -721,7 +735,7 @@ ${
             isPartOf: {
               '@type': 'SoftwareSourceCode',
               name: projectName,
-              url: `${SITE}/projects/${project.id}`,
+              url: slugUrl(`projects/${project.id}`),
             },
           },
         ],
@@ -747,27 +761,98 @@ const notFound = shell({
   <p class="lede">The URL you requested was not found. It may have been moved, renamed, or never existed. Try browsing the gallery instead.</p>
   <div class="actions">
     <a class="btn btn-primary" href="/">Browse the gallery</a>
-    <a class="btn" href="/components">All components</a>
-    <a class="btn" href="/projects/react-bits">React Bits</a>
-    <a class="btn" href="/categories/buttons">Buttons</a>
+    <a class="btn" href="/components/">All components</a>
+    <a class="btn" href="/projects/react-bits/">React Bits</a>
+    <a class="btn" href="/categories/buttons/">Buttons</a>
   </div>
 </div>`,
 })
 fs.writeFileSync(path.join(DIST, '404.html'), notFound, 'utf8')
 
+// ────────────────────────────────────────────────────────── SPA view shells
+//
+// `activePage` is derived from the pathname, so the three views are real URLs.
+// They need real files: Cloudflare Pages serves a directory at `<dir>/`, and a
+// `_redirects` 200-rewrite proved ineffective in production (verified live:
+// `/components` answered 308 -> `/`, dumping every deep link on the home view).
+//
+// Emitting `components/index.html` + `showcases/index.html` makes both paths
+// genuine 200 pages. It also lets each carry baked-in per-view metadata, so
+// crawlers see the correct title even without running JS -- which client-side
+// meta swapping cannot provide.
+const SPA_SHELL_SOURCE = path.join(DIST, 'index.html')
+
+const SPA_VIEWS = [
+  {
+    dir: 'components',
+    title: 'Component Gallery — 5,000+ Open-Source UI Components & Animations',
+    description:
+      'Search and filter 5,000+ open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+  },
+  {
+    dir: 'showcases',
+    title: 'Showcases — Frontend Design Case Studies & Live Demos',
+    description:
+      'Curated frontend design showcases and full-page demos built with React, Three.js, PixiJS and Tailwind CSS, with live previews and source links.',
+  },
+]
+
+if (fs.existsSync(SPA_SHELL_SOURCE)) {
+  const baseShell = fs.readFileSync(SPA_SHELL_SOURCE, 'utf8')
+
+  for (const view of SPA_VIEWS) {
+    const url = slugUrl(view.dir)
+    let html = baseShell
+
+    // Point the page at itself rather than at the home view.
+    html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(view.title)}</title>`)
+    html = html.replace(
+      /<meta name="description" content="[^"]*" \/>/,
+      `<meta name="description" content="${esc(view.description)}" />`
+    )
+    html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${esc(url)}" />`)
+    html = html.replace(
+      /<meta property="og:title" content="[^"]*" \/>/,
+      `<meta property="og:title" content="${esc(view.title)}" />`
+    )
+    html = html.replace(
+      /<meta property="og:description" content="[^"]*" \/>/,
+      `<meta property="og:description" content="${esc(view.description)}" />`
+    )
+    html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${esc(url)}" />`)
+    html = html.replace(
+      /<meta name="twitter:title" content="[^"]*" \/>/,
+      `<meta name="twitter:title" content="${esc(view.title)}" />`
+    )
+    html = html.replace(
+      /<meta name="twitter:description" content="[^"]*" \/>/,
+      `<meta name="twitter:description" content="${esc(view.description)}" />`
+    )
+    // The root document's JSON-LD describes the gallery as a whole at `/`.
+    // Leaving it here would claim a CollectionPage at a URL that is not its
+    // canonical, so drop it; the generated pages carry their own structured data.
+    html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '')
+
+    writePage(path.join(view.dir, 'index.html'), html)
+    log(`spa view shell : ${slugPath(view.dir)}`)
+  }
+} else {
+  log('WARNING: dist/index.html missing - SPA view shells not written')
+}
+
 const lastmod = new Date().toISOString().slice(0, 10)
 const urls = [
   { loc: `${SITE}/`, priority: '1.0', changefreq: 'daily' },
-  { loc: `${SITE}/components`, priority: '0.9', changefreq: 'daily' },
-  { loc: `${SITE}/showcases`, priority: '0.7', changefreq: 'weekly' },
-  ...projects.map((p) => ({ loc: `${SITE}/projects/${p.id}`, priority: '0.8', changefreq: 'weekly' })),
-  ...categories.map(([cat]) => ({ loc: `${SITE}/categories/${cat}`, priority: '0.6', changefreq: 'weekly' })),
+  { loc: `${SITE}/components/`, priority: '0.9', changefreq: 'daily' },
+  { loc: `${SITE}/showcases/`, priority: '0.7', changefreq: 'weekly' },
+  ...projects.map((p) => ({ loc: slugUrl(`projects/${p.id}`), priority: '0.8', changefreq: 'weekly' })),
+  ...categories.map(([cat]) => ({ loc: slugUrl(`categories/${cat}`), priority: '0.6', changefreq: 'weekly' })),
 ]
 
 // components (kept set only)
 for (const project of projects) {
   for (const id of eligibleByProject.get(project.id) || []) {
-    urls.push({ loc: `${SITE}/components/${id}`, priority: '0.5', changefreq: 'monthly' })
+    urls.push({ loc: slugUrl(`components/${id}`), priority: '0.5', changefreq: 'monthly' })
   }
 }
 

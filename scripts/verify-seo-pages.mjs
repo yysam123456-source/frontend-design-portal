@@ -33,11 +33,15 @@ const allHtml = walkHtml(distDir)
 const pages = []
 const inbound = new Map()
 
+// `components` and `showcases` are SPA view shells, not generated content pages;
+// they are validated separately below.
+const SPA_SHELLS = new Set(['components', 'showcases'])
+
 for (const file of allHtml) {
   const rel = path.relative(distDir, file).split(path.sep).join('/')
   const slug = rel.replace(/\/index\.html$/, '')
   const root = slug.split('/')[0]
-  const isGenerated = PAGE_ROOTS.includes(root)
+  const isGenerated = PAGE_ROOTS.includes(root) && !SPA_SHELLS.has(slug)
   if (isGenerated) pages.push({ slug, file })
   inbound.set('/' + slug, 0)
 }
@@ -66,7 +70,8 @@ let titleLong = 0
 let descLong = 0
 for (const { slug, file } of sample) {
   const html = fs.readFileSync(file, 'utf8')
-  const url = `${SITE}/${slug}`
+  // Cloudflare serves the page at `<slug>/`; the canonical must say so.
+  const url = `${SITE}/${slug}/`
 
   const h1 = (html.match(/<h1[\s>]/g) || []).length
   if (h1 !== 1) failures.push(`${slug}: expected 1 <h1>, found ${h1}`)
@@ -97,6 +102,40 @@ for (const { slug, file } of sample) {
 
   const links = (html.match(/href="\/(components|projects|categories)\//g) || []).length
   if (links < 3) failures.push(`${slug}: only ${links} internal links (min 3)`)
+}
+
+// --- trailing slash / redirect hygiene -------------------------------------
+//
+// Cloudflare Pages serves a directory at `<dir>/` and 308-redirects the
+// slash-less form. Any internal link without the trailing slash therefore costs
+// a redirect hop, and a canonical without it points at a redirect target
+// instead of at the page. Verified live 2026-09-20 on /components/at-faq.
+const FILE_LIKE = /\.[a-z0-9]{2,5}$/i
+const slashlessLinks = new Map()
+for (const file of allHtml) {
+  const rel = path.relative(distDir, file).split(path.sep).join('/')
+  const html = fs.readFileSync(file, 'utf8')
+  for (const raw of html.match(/href="(\/[^"#?]*)"/g) || []) {
+    const href = raw.slice(6, -1)
+    if (href === '/' || href.endsWith('/') || FILE_LIKE.test(href)) continue
+    if (!slashlessLinks.has(href)) slashlessLinks.set(href, rel)
+  }
+}
+
+// --- SPA view shells -------------------------------------------------------
+const shellResults = []
+for (const dir of SPA_SHELLS) {
+  const file = path.join(distDir, dir, 'index.html')
+  if (!fs.existsSync(file)) {
+    shellResults.push(`${dir}: MISSING`)
+    continue
+  }
+  const html = fs.readFileSync(file, 'utf8')
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)
+  const expected = `${SITE}/${dir}/`
+  shellResults.push(
+    canonical && canonical[1] === expected ? `${dir}: ok` : `${dir}: canonical=${canonical ? canonical[1] : 'none'}`
+  )
 }
 
 // --- sitemap ---------------------------------------------------------------
@@ -133,6 +172,8 @@ console.log(`sitemap offsite      : ${offsite.length}`)
 console.log(`dist total files     : ${fileCount} / 20000`)
 console.log(`titles > 72 chars    : ${titleLong} (of sample)`)
 console.log(`descriptions > 160   : ${descLong} (of sample)`)
+console.log(`SPA view shells      : ${shellResults.join(' | ')}`)
+console.log(`slash-less links     : ${slashlessLinks.size} (each would 308-redirect)`)
 
 const hardFailures = []
 if (orphans.length > 0) hardFailures.push(`${orphans.length} orphan pages`)
@@ -140,6 +181,15 @@ if (failures.length > 0) hardFailures.push(`${failures.length} page integrity fa
 if (sitemapUrls.length !== uniqueUrls.size) hardFailures.push('duplicate sitemap urls')
 if (offsite.length > 0) hardFailures.push('sitemap contains non-fxlab urls')
 if (fileCount >= 20000) hardFailures.push(`dist exceeds Cloudflare Pages 20000-file limit (${fileCount})`)
+if (slashlessLinks.size > 0) hardFailures.push(`${slashlessLinks.size} internal links missing a trailing slash`)
+if (shellResults.some((r) => !r.endsWith(': ok'))) hardFailures.push('SPA view shell problem')
+if (sitemapUrls.some((u) => u !== `${SITE}/` && !u.endsWith('/') && !FILE_LIKE.test(u)))
+  hardFailures.push('sitemap contains slash-less urls')
+
+if (slashlessLinks.size) {
+  console.log('\nfirst slash-less links:')
+  for (const [href, from] of [...slashlessLinks].slice(0, 10)) console.log(`  ${href}  (in ${from})`)
+}
 
 if (orphans.length) {
   console.log('\nfirst orphans:')

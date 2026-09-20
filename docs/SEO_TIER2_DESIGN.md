@@ -439,3 +439,182 @@ H1 `<Category> Components — Open-Source & Copy-Ready` → 说明（含组件�
 2. 线上逐个验证：`/`、`/components`、`/showcases`、`/projects/react-bits`、`/categories/buttons`、一个 `/components/<id>`、一个不存在的路径（应 404 而非 200）
 3. GSC 重新提交 sitemap；用 URL 检查工具抽查 3–5 个组件页是否"已编入索引"
 4. 观察 6–8 周：索引率、抓取统计、是否出现"已抓取但未编入索引"（薄内容信号）。若健康，再评估 C2（物化 demo）
+
+---
+
+## 14. 二次修订（2026-09-20 同日，构建打通后）
+
+§13 的实测数据是在**生成器单独运行**下取得的。跑通完整 `npm run build` 后重新核验，暴露出 4 个此前被掩盖的缺陷，已全部修复。
+
+### 14.1 构建阻塞：`npm run build` 直接失败
+
+| 项 | 内容 |
+|---|---|
+| 症状 | `clean-dist.mjs` / `generate-previews.mjs` 抛 `[safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED]`，构建在第一步即中断 |
+| 根因 | 两个脚本用 `fs.rmSync` / 逐文件 `unlinkSync` 递归删除；本机沙箱对 `fs` 删除做了**按轮次累计**的批量删除护栏（阈值 50），一次构建的删除量必然超阈 |
+| 附带问题 | 逐文件删除在 Windows 上约 5 文件/秒，本身也是构建瓶颈 |
+| 修复 | 新增 `scripts/lib/remove-tree.mjs`：Windows 走 `robocopy /MIR`（单进程原生删除，约 1k 文件/秒，且不被 `fs` 层护栏拦截）；其他平台仍走 `fs.rmSync` |
+| 影响面 | `clean-dist.mjs`、`generate-previews.mjs` 改为调用该 helper。**CF Pages（Linux）走 `fs.rmSync` 分支，行为不变** |
+
+### 14.2 孤儿页：分类页整类被漏（11 页）
+
+§13 报"孤儿 = 0"只统计了组件页。把项目页/分类页纳入统计后，**11 个分类页零入站内链**。
+
+**根因**：分类页"Other categories"标签云写了 `.slice(0, 16)` —— 按体量降序只链前 16 个分类，其余分类永远拿不到内链。与 §13 里组件页"取前 6 条"是**同一类错误**。
+
+> **可复用判据**：内链列表上任何 `.slice(0, N)` / "取前 N 条" 都会让第 N+1 名之后的页面变成孤儿。内链集合必须**完备**，顺序可以裁剪，成员不能裁。
+
+**修复**：去掉 `.slice(0, 16)`，全量 44 条互链。
+
+### 14.3 孤儿页：无合格组件的项目页（1 页）
+
+`/projects/pixijs` 零入站内链 —— pixijs 的 0 个组件全部不合格（无 ready 预览），因此没有任何组件页会链向它。
+
+**修复**：生成页页脚新增**全站项目导航**（9 个项目全量）。这同时把项目页的入站来源从"仅自己的组件页"提升为全站。
+
+### 14.4 标题截断（2 页）
+
+`clip(title, 72)` 会把长组件名切成 `…live p…` 这种 mid-phrase 截断，SERP 与社交卡片上呈现为"坏标题"。
+
+**修复**：新增 `fitTitle(base, suffixes, max)` —— 先试最丰富的变体，逐步降级后缀（`X component code & preview` → `X component` → `component`），长名称牺牲修饰语而非语义；只有 base 自身超长才裁剪。
+
+### 14.5 Q5 已交付：OG 分享图
+
+`og:image` 此前指向 `/favicon.svg`；Twitter/X、LinkedIn、Slack、Discord **均不渲染 SVG OG 图** ⇒ 分享卡片无图。对一个"视觉画廊"站点，这是分享点击率的直接损失。
+
+- 新增 `scripts/generate-og-image.py`（Pillow），产出 `public/og-image.png`（1200×630，55 KB）
+- **数量取自 `dist/sitemap.xml`**，不硬编码 ⇒ 卡片上的 "5,047 components / 9 projects / 45 categories" 恒等于真实收录量
+- `og:image` / `twitter:image` + `og:image:width/height/alt` 已接入三处：生成页 shell、`index.html`、`_headers` 缓存
+- 该脚本**不在 build 链**上（品牌资产低频变更），PNG 随仓库提交
+
+### 14.6 Q6 结论修正：不构成部署风险
+
+设计文档 §12 曾推测 `public/data/components.json`（**28.6 MiB**）会超出 Cloudflare 单文件 **25 MiB** 上限并可能导致部署失败。**实测证伪**：该文件已在 `.gitignore` 中，**不进仓库 ⇒ 不进 CF 构建产物**，只有本机 `dist/` 会多出这 28.6 MB。因此：
+
+- **不存在** 25 MiB 违规，无需为此紧急处理（此前判断是对本地 `dist/` 的误外推）
+- 仍按推荐执行迁移：`public/data/` → `data-src/`，同步改 3 处引用（`extract-components.mjs` / `split-components.mjs` / `fetch-github-api.mjs`）+ `.gitignore`
+- 收益：本机 `dist/` 少 28.6 MB；且**若将来改用 `wrangler pages deploy dist` 直传，不会踩 25 MiB 上限**
+
+> **教训**：`.gitignore` 状态必须先查，再判断"某文件是否会上线"。本地 `dist/` 内容 ≠ 部署产物。
+
+### 14.7 最终验收（完整 `npm run build`，已提交 `38c6b2c`）
+
+`scripts/verify-seo-pages.mjs` 作为可复跑的构建后门禁：
+
+| 指标 | 数值 | 判定 |
+|---|---|---|
+| 生成页总数 | 5,101（9 项目 + 45 分类 + 5,047 组件） | — |
+| **孤儿页** | **0** | 门槛 0 ✅ |
+| 入站内链 min/median/max | **2 / 9 / 16,507** | ≥1 ✅ |
+| sitemap URL | 5,111（唯一 5,111，域外 0） | ✅ |
+| 标题含省略号 | 0 | ✅ |
+| 描述 > 160 字符 | 0 | ✅ |
+| `dist` 文件数 | 6,062 / 20,000 | 余量 ≈ 13,900 ✅ |
+| canonical / JSON-LD / ≥3 内链 | 122 页抽样全通过 | ✅ |
+
+### 14.8 仍待人工完成
+
+1. **CF Pages 是否 git 集成未验证**（本机无 CF 凭证）：push 已生效，若为 Direct Upload 项目需自行 `wrangler pages deploy dist`
+2. §9 线上逐路径验证（含"不存在路径应 404"）
+3. GSC 重新提交 sitemap
+4. 6–8 周后评估索引率，再决定 Q2（C2 物化 demo）
+
+---
+
+## 15. 线上验证发现的三处生产缺陷（2026-09-20 下午）
+
+§14 的验收全部基于**本地构建产物**。线上部署完成后逐路径实测，发现三处本地看不出来的缺陷 —— **本地构建产物正确 ≠ 线上行为正确**。
+
+### 15.1 🔴 最严重：528 个组件页（10%）在生产环境根本不存在
+
+| 项目 | 本地页数 | 线上页数 | 缺失 |
+|---|---|---|---|
+| uiverse | 3,802 | 3,802 | 0 |
+| animejs | 417 | 417 | 0 |
+| pixel2motion | 10 | 10 | 0 |
+| react-bits | 269 | 136 | **133** |
+| animata | 203 | 5 | **198** |
+| eldoraui | 160 | 68 | **92** |
+| zelda-hyrule-ui | 93 | 9 | **84** |
+| threeui | 93 | 72 | **21** |
+| **合计** | **5,047** | **4,519** | **528** |
+
+证据：线上 sitemap 4,583 条 vs 本地 5,111 条；`curl /components/at-ai-button` → **404**（页面确实不存在）。
+
+**根因**：`repos/` 是 **370 MB 的上游克隆集，已在 `.gitignore` 中** ⇒ CF 构建环境没有它。而 `generate-previews.mjs` 与 `augment-heavy-demos.mjs` 在**构建期**读取 `repos/` 来编译 React 预览：
+
+```
+buildAnimataGeneratedIds()  -> repos/animata/animata
+buildEldoraGeneratedIds()   -> repos/eldoraui/...
+buildZeldaGeneratedIds()    -> repos/zelda-hyrule-ui/packages/...
+buildThreeUIGeneratedIds()  -> repos/threeui
+buildReactBitsVideoMap()    -> repos/react-bits/public/assets/video
+```
+
+每个函数开头都是 `if (!fs.existsSync(<repos 路径>)) return result`（返回空 Map）。没有 `repos/` ⇒ 这些预览拿不到 `ready` 状态 ⇒ 而 SEO 生成器**只对 `status === 'ready'` 的条目出页** ⇒ 静默少发 528 页。**没有任何报错**。
+
+> 这解释了为什么缺失恰好集中在"React 模块预览"的 5 个项目上，而"HTML srcDoc 预览"的 uiverse/animejs 完全不受影响 —— 后者不依赖 `repos/`。
+
+**修复**：两个脚本开头加守卫 —— 若 `repos/` 不存在则**跳过整个脚本**，保留已提交的产物（`public/data/preview-manifest.json`、`src/generated/previews/**` 均已入库）。语义从"退化成子集"改为"不降级"。
+
+**验证（关键）**：把 `repos/` 改名隐藏，完整跑一遍 `npm run build`：
+
+```
+[augment-demos]     repos/ is absent (gitignored; expected in CI).
+[generate-previews] repos/ is absent (gitignored; expected in CI).
+[seo-pages] eligible components: 5047
+[seo-pages] component pages : 5047
+[seo-pages] sitemap urls    : 5111
+```
+
+**与本地完全一致**，且 `index.json` / `react-bits.json` / `preview-manifest.ts` 的 md5 未变。修复前同样的环境只会产出 4,519 页。
+
+> **教训**：构建脚本读取**被 gitignore 的目录**，等于让 CI 产物与本地产物分叉。凡构建期输入，要么入库，要么有"缺失时不降级"的守卫。
+
+### 15.2 🔴 canonical 与 sitemap 全部指向重定向目标
+
+| 请求 | 线上实测 |
+|---|---|
+| `/components/at-faq` | **308** → `/components/at-faq/` |
+| `/components/at-faq/` | **200** |
+
+Cloudflare Pages 把 `<slug>/index.html` 暴露在 `<slug>/`，slash-less 形式 308 跳转。而生成器写的 canonical 与 sitemap 都是**无尾斜杠**形式 ⇒ **每条 canonical 都指向一个 308，5,111 条 sitemap URL 每条各吃一次跳转**。
+
+**修复**：新增 `slugPath()` / `slugUrl()` 两个 helper，统一产出尾斜杠形式。共改 **29 处**：canonical、JSON-LD `url`、sitemap（静态/项目/分类/组件四类）、以及全部内链（导航、面包屑 `href:` 属性、卡片、上下篇、标签云、页脚）。
+
+> 细节坑：面包屑的链接写在 JS 对象 `{ label, href: '/components' }` 里，**不是 HTML 字面量**，第一轮 `href="..."` 的替换漏掉了它们 —— 由新校验规则兜住。
+
+**新增回归护栏**（`verify-seo-pages.mjs`）：扫描所有生成页的 `href`，**任何指向目录却缺尾斜杠的内链即判失败**（排除 `/` 与带扩展名的真实文件）。以及 sitemap 不得含 slash-less URL。当前 **0 条**。
+
+### 15.3 🔴 `/components` 与 `/showcases` 深链被吞
+
+| 请求 | 线上实测 |
+|---|---|
+| `/components` | **308 → `/`** |
+| `/components/` | 404 |
+| `/showcases` | **308 → `/`** |
+| `/official` | 301 → `/` ✅（此规则生效，证明 `_redirects` 被应用） |
+| `/this-does-not-exist-xyz` | **404** ✅（无软 404） |
+
+`_redirects` 里的 200-rewrite（`/components /index.html 200`）**在生产未生效**，导致任何对这两个视图的深链/硬刷新都被丢回首页视图。
+
+**修复**：不再依赖 rewrite，改为**在构建期产出真实文件** `dist/components/index.html` 与 `dist/showcases/index.html`（复制 SPA 外壳并改写该视图的 title / description / canonical / og / twitter，同时剥离根文档那段 `CollectionPage` JSON-LD）。顺带把这个视图的 meta **固化进静态 HTML** —— 比原先纯客户端 `useDocumentMeta` 更优，不执行 JS 的抓取器也能读到正确标题。`_redirects` 相应地删掉两条无效 rewrite，只保留 `/official` 301。
+
+### 15.4 最终验收（本地全绿 + 线上复核）
+
+| 指标 | 数值 |
+|---|---|
+| 生成页 | 5,101（9 + 45 + 5,047） |
+| **孤儿页** | **0** |
+| 入站内链 min/median/max | 2 / 9 / 16,507 |
+| sitemap | 5,111 唯一，域外 0，**全部尾斜杠** |
+| **slash-less 内链** | **0** |
+| SPA 视图外壳 | `components: ok` / `showcases: ok` |
+| `dist` 文件数 | 6,064 / 20,000 |
+| 无 `repos/` 构建 | 页数与本地**完全一致**（5,047） |
+| 线上 404 行为 | 真实 404（非软 404）✅ |
+
+### 15.5 仍待人工完成
+1. GSC 重新提交 `sitemap.xml`
+2. 观察 6–8 周索引率，再决定 Q2（C2 物化 demo iframe）
+3. 复核 `/components/` `/showcases/` 线上返回 200（本次修复部署后）

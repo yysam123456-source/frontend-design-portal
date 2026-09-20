@@ -1,4 +1,8 @@
+# `/components/` and `/showcases/` are served as real static shells generated at
+# build time (see scripts/generate-seo-pages.mjs), so they must NOT be rewritten
+# here. A 200-rewrite for those paths was tried and did not take effect in
+# production -- Cloudflare answered `/components` and `/showcases` with a 308 to
+# `/`, silently sending every deep link to the home view instead.
+#
+# `/official` was a second URL for the root view; collapse it.
 /official / 301
-
-/components /index.html 200
-/showcases /index.html 200

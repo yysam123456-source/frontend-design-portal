@@ -1206,6 +1206,25 @@ function toTsString(value) {
 }
 
 function main() {
+  // `repos/` holds the upstream clones used to compile React previews. It is
+  // ~370 MB and therefore gitignored, so it does NOT exist in CI checkouts
+  // (Cloudflare Pages). Every repos-dependent builder below degrades to an empty
+  // map when its source tree is missing, which would silently drop those
+  // components from the manifest -- and the SEO page generator only emits pages
+  // for manifest entries whose status is 'ready'. That cost 528 pages (10% of
+  // the catalogue) in production while every local build looked complete.
+  //
+  // All outputs of this script are committed, so when the clones are absent the
+  // correct move is to keep the committed artefacts untouched rather than
+  // regenerate a degraded subset. Without this guard the build is not
+  // reproducible between local and CI.
+  const reposDir = path.join(rootDir, 'repos')
+  if (!fs.existsSync(reposDir)) {
+    console.log('[generate-previews] repos/ is absent (gitignored; expected in CI).')
+    console.log('[generate-previews] Keeping the committed preview artefacts unchanged.')
+    return
+  }
+
   ensureDir(generatedDir)
   removeTree(previewDir)
   removeTree(vendorDir)
