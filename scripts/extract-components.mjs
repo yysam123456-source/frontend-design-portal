@@ -1210,7 +1210,7 @@ for (const [project, count] of Object.entries(stats)) {
 console.log(`\nTotal: ${allComponents.length} components`)
 
 // 保存
-const outputPath = path.join(outputDir, 'components.json')
+const outputPath = path.join(intermediateDir, 'components.json')
 fs.writeFileSync(outputPath, JSON.stringify(allComponents, null, 2))
 console.log(`\nSaved to ${outputPath}`)
 

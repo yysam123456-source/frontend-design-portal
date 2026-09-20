@@ -1,5 +1,6 @@
 // 通过 GitHub API 获取未成功克隆的仓库组件
 import fs from 'fs'
+import path from 'path'
 
 const TOKEN = process.env.GITHUB_TOKEN || ''
 
@@ -206,8 +207,8 @@ console.log(`eldoraui: ${eldoraComponents.length} components`)
 const animeComponents = await extractAnimeExamplesFromAPI()
 console.log(`animejs (API): ${animeComponents.length} components`)
 
-// 读取已有的组件数据
-const existingPath = 'public/data/components.json'
+// 读取已有的组件数据（build intermediate，位于 public/ 之外，见 extract-components.mjs）
+const existingPath = path.join(import.meta.dirname, '..', 'data-src', 'components.json')
 const existing = JSON.parse(fs.readFileSync(existingPath, 'utf-8'))
 
 // 合并（去重）

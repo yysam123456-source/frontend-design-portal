@@ -1,0 +1,158 @@
+/* Frontend Design Gallery — stylesheet for generated SEO pages.
+   Self-contained on purpose: Tailwind v4 is a JIT compiler that only emits utilities it finds
+   in scanned source files, so utility classes used solely inside build-time generated HTML
+   would NOT exist in the app bundle. These pages therefore ship their own small stylesheet
+   instead of depending on the app's compiled CSS. Keep in sync with src/index.css tokens. */
+
+:root {
+  --accent: #ff4d00;
+  --accent-light: #ff7a3d;
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --ink: #0a0a0a;
+  --ink-muted: #666666;
+  --ink-subtle: #999999;
+  --border: #e5e5e5;
+  --border-light: #f0f0f0;
+  --code-bg: #0b0f19;
+  --code-ink: #d7e0f0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ── Top bar ─────────────────────────────────────────── */
+.topbar {
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.topbar-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 9px; font-weight: 600; letter-spacing: -0.01em; }
+.brand .dot { width: 10px; height: 10px; border-radius: 3px; background: var(--accent); flex: none; }
+.topnav { display: flex; gap: 16px; font-size: 12px; color: var(--ink-muted); }
+.topnav a:hover { color: var(--accent); }
+
+/* ── Breadcrumb ──────────────────────────────────────── */
+.crumbs { padding: 18px 0 0; font-size: 12px; color: var(--ink-subtle); }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.crumbs li::after { content: '/'; margin-left: 6px; color: var(--border); }
+.crumbs li:last-child::after { content: none; }
+.crumbs a:hover { color: var(--accent); }
+
+/* ── Hero / headings ─────────────────────────────────── */
+.hero { padding: 26px 0 10px; }
+.eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+}
+h1 {
+  font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
+  font-size: 34px; line-height: 1.18; letter-spacing: -0.025em; font-weight: 700;
+}
+h2 {
+  font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
+  font-size: 19px; letter-spacing: -0.015em; font-weight: 600; margin-bottom: 14px;
+}
+.lede { margin-top: 12px; color: var(--ink-muted); font-size: 15px; max-width: 760px; }
+.section { padding: 30px 0 0; }
+
+/* ── Tags ────────────────────────────────────────────── */
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.tag {
+  font-size: 11px; padding: 3px 9px; border-radius: 6px;
+  background: var(--bg-secondary); border: 1px solid var(--border); color: var(--ink-muted);
+}
+.tag-accent { background: rgba(255, 77, 0, 0.07); border-color: rgba(255, 77, 0, 0.2); color: var(--accent); font-weight: 500; }
+
+/* ── Card grid ───────────────────────────────────────── */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.card {
+  display: block; border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 15px; background: var(--bg); transition: border-color .15s, box-shadow .15s;
+}
+.card:hover { border-color: rgba(255, 77, 0, 0.45); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+.card h3 { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; }
+.card .meta { margin-top: 5px; font-size: 11px; color: var(--ink-subtle); text-transform: capitalize; }
+.card .desc {
+  margin-top: 8px; font-size: 12px; color: var(--ink-muted); line-height: 1.55;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.card .kind {
+  display: inline-block; margin-top: 9px; font-size: 10px; font-weight: 600;
+  padding: 2px 7px; border-radius: 999px; background: rgba(16, 185, 129, 0.1); color: #059669;
+}
+
+/* ── Buttons / links row ─────────────────────────────── */
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12.5px; font-weight: 600; padding: 9px 16px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg-secondary);
+}
+.btn:hover { border-color: rgba(255, 77, 0, 0.45); color: var(--accent); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); color: #fff; }
+
+/* ── Code block ──────────────────────────────────────── */
+.codeblock {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--code-bg);
+}
+.codehead {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 9px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 11px; color: #8ea0bd;
+}
+pre {
+  margin: 0; padding: 15px; overflow-x: auto;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 12px; line-height: 1.62; color: var(--code-ink);
+}
+code { font-family: inherit; }
+
+/* ── Stats row ───────────────────────────────────────── */
+.stats { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 18px; }
+.stat .n { font-family: 'Space Grotesk', Inter, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.stat .l { font-size: 11px; color: var(--ink-subtle); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── Footer ──────────────────────────────────────────── */
+.foot {
+  margin-top: 56px; border-top: 1px solid var(--border); padding: 26px 0 40px;
+  font-size: 12px; color: var(--ink-subtle);
+}
+.foot a { color: var(--ink-muted); }
+.foot a:hover { color: var(--accent); }
+.foot .row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .topnav { display: none; }
+  .grid { grid-template-columns: 1fr; }
+}

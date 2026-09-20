@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { loadReadyShaders, findShaderSource } from './threeui-catalog.mjs'
+import { removeTree } from './lib/remove-tree.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.join(__dirname, '..')
@@ -1206,8 +1207,8 @@ function toTsString(value) {
 
 function main() {
   ensureDir(generatedDir)
-  fs.rmSync(previewDir, { recursive: true, force: true })
-  fs.rmSync(vendorDir, { recursive: true, force: true })
+  removeTree(previewDir)
+  removeTree(vendorDir)
   writeShims()
 
   const animataGeneratedIds = buildAnimataDependencyGeneratedIds(buildAnimataGeneratedIds())

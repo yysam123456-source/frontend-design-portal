@@ -1,21 +1,8 @@
-import fs from 'fs'
 import path from 'path'
+import { removeTree } from './lib/remove-tree.mjs'
 
-const rootDir = process.cwd()
-const distDir = path.join(rootDir, 'dist')
+// NOTE: keep this file ASCII-only. On Windows PowerShell 5.1, non-ASCII bytes in
+// a UTF-8 file without BOM get decoded as ANSI and can swallow the next line.
 
-function removeEntry(targetPath) {
-  if (!fs.existsSync(targetPath)) return
-  const stat = fs.lstatSync(targetPath)
-  if (stat.isDirectory() && !stat.isSymbolicLink()) {
-    for (const entry of fs.readdirSync(targetPath)) {
-      removeEntry(path.join(targetPath, entry))
-    }
-    fs.rmdirSync(targetPath)
-    return
-  }
-  fs.chmodSync(targetPath, 0o666)
-  fs.unlinkSync(targetPath)
-}
-
-removeEntry(distDir)
+removeTree(path.join(process.cwd(), 'dist'))
+console.log('[clean] dist/ removed')

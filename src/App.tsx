@@ -1,4 +1,5 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import {
   Search,
@@ -28,6 +29,7 @@ import ComponentThumbnailPreview from './components/ComponentThumbnailPreview'
 import ShowcasesPage from './components/ShowcasesPage'
 import { useComponentFilter } from './hooks/useComponentFilter'
 import { useCopy } from './hooks/useCopy'
+import { useDocumentMeta, SITE_ORIGIN } from './hooks/useDocumentMeta'
 import { projects } from './data/projects'
 import { getPreviewRecord } from './generated/preview-manifest'
 import type { ComponentSummary } from './types'
@@ -120,7 +122,27 @@ export default function App() {
   const [showAllScenes, setShowAllScenes] = useState(false)
   const [activeDemoProject, setActiveDemoProject] = useState('all')
   const [visibleDemoCount, setVisibleDemoCount] = useState(OFFICIAL_DEMO_INITIAL_COUNT)
-  const [activePage, setActivePage] = useState<PageView>('official')
+  const location = useLocation()
+  const navigate = useNavigate()
+  const pathname = location.pathname
+
+  // Real routes: '/' (official gallery) · '/components' · '/showcases'.
+  // The active view is derived from the URL instead of component state so that each view
+  // owns a real, shareable, crawlable URL. `setActivePage` keeps its old name/signature so
+  // Navigation and ShowcasesPage need no changes.
+  const activePage: PageView = pathname.startsWith('/components')
+    ? 'components'
+    : pathname.startsWith('/showcases')
+      ? 'showcases'
+      : 'official'
+
+  const setActivePage = useCallback(
+    (page: PageView) => {
+      navigate(page === 'official' ? '/' : `/${page}`)
+    },
+    [navigate]
+  )
+
   const searchInputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
@@ -133,6 +155,35 @@ export default function App() {
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [activePage])
+
+  // Legacy '/official' URL (never linked, kept for safety) → canonical root.
+  // Cloudflare already 301s this in production; the effect keeps `vite dev` in parity.
+  useEffect(() => {
+    if (pathname === '/official') navigate('/', { replace: true })
+  }, [pathname, navigate])
+
+  useDocumentMeta(
+    activePage === 'components'
+      ? {
+          title: 'Component Gallery — 5,000+ Open-Source UI Components & Animations',
+          description:
+            'Search and filter 5,000+ open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+          canonical: `${SITE_ORIGIN}/components`,
+        }
+      : activePage === 'showcases'
+        ? {
+            title: 'Showcases — Frontend Design Case Studies & Live Demos',
+            description:
+              'Curated frontend design showcases and full-page demos built with React, Three.js, PixiJS and Tailwind CSS, with live previews and source links.',
+            canonical: `${SITE_ORIGIN}/showcases`,
+          }
+        : {
+            title: 'Frontend Design Gallery — Open-Source UI Components, Animations & Demos',
+            description:
+              'A curated gallery of 5,000+ open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, ThreeUI and PixiJS — with live previews and copy-ready code.',
+            canonical: `${SITE_ORIGIN}/`,
+          }
+  )
 
   const projectMap = useMemo(() => {
     const map = new Map()
@@ -997,6 +1048,28 @@ export default function App() {
       />
 
       <footer className="w-full px-6 lg:px-12 py-8 border-t border-border">
+        <nav aria-label="Browse by source project" className="mb-6">
+          <p className="text-[11px] font-medium text-ink-subtle uppercase tracking-wider mb-3">
+            Browse by source project
+          </p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
+            {projects.map((project) => (
+              <a
+                key={project.id}
+                href={`/projects/${project.id}`}
+                className="text-xs text-ink-muted hover:text-accent transition-colors"
+              >
+                {project.name} components
+              </a>
+            ))}
+            <a
+              href="/components"
+              className="text-xs text-accent hover:text-accent-light transition-colors"
+            >
+              All components
+            </a>
+          </div>
+        </nav>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-ink-subtle">
             Frontend Design Gallery — {allComponents.length.toLocaleString()} open-source components

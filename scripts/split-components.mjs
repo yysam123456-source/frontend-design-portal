@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const dataDir = path.join(__dirname, '..', 'public', 'data')
-const inputPath = path.join(dataDir, 'components.json')
+const intermediateDir = path.join(__dirname, '..', 'data-src')
+const inputPath = path.join(intermediateDir, 'components.json')
 
 const components = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 

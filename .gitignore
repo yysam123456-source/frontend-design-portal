@@ -8,4 +8,6 @@ dist-ssr
 
 # Repos
 repos/
-public/data/components.json
+
+# Build intermediates (never shipped; see scripts/extract-components.mjs)
+data-src/
