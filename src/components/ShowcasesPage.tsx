@@ -1443,9 +1443,12 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {/* Dropdown */}
         {selectorOpen && (
           <div
-            className="absolute bottom-full left-0 mb-2 flex flex-col gap-1 p-1.5 rounded-xl bg-black/70 backdrop-blur-xl border border-cyan-300/20"
+            className="absolute bottom-full left-0 mb-2 flex flex-col gap-1 p-1.5 rounded-xl bg-black/70 backdrop-blur-xl border border-cyan-300/20 overflow-y-auto"
             style={{
               boxShadow: '0 0 24px rgba(65,230,255,0.15), 0 -4px 16px rgba(65,230,255,0.08)',
+              maxHeight: 'min(60vh, 480px)',
+              scrollbarWidth: 'thin',
+              scrollbarColor: 'rgba(65,230,255,0.35) transparent',
             }}
           >
             {SHOWCASES.map(sc => (
