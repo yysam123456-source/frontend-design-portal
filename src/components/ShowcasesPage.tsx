@@ -3,6 +3,25 @@ import * as THREE from 'three'
 import OrbitalViz from './OrbitalViz'
 import KeyboardConfigShowcase from './KeyboardConfigShowcase'
 import PixiJSShowcase from './PixiJSShowcase'
+import AbyssalDescent from './showcases/AbyssalDescent'
+
+/* ═══════════════════════════════════════════════════════════════
+   KAGE — MengTo 单文件滚动 3D 夜游（公众号爆火项目，整页 iframe）
+   ═══════════════════════════════════════════════════════════════ */
+function KageShowcase() {
+  return (
+    <div className="relative w-full">
+      <iframe
+        src="/kage.html"
+        title="Kage — 京都山寺夜影"
+        className="fixed inset-0 w-full h-full border-0"
+        style={{ zIndex: 1, background: '#05070a' }}
+        allow="autoplay; fullscreen"
+      />
+      <div style={{ height: '100vh' }} />
+    </div>
+  )
+}
 
 /* ═══════════════════════════════════════════════════════════════
    SHOWCASES PAGE — 6 Immersive Fullscreen Effects
@@ -1349,6 +1368,8 @@ const SHOWCASES = [
   { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕' },
   { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨' },
   { id: 'pixijs', label: 'PixiJS Playground', desc: '2D WebGL rendering engine', icon: '🎨' },
+  { id: 'kage', label: 'Kage 影', desc: 'MengTo 单文件滚动 3D 夜京都', icon: '⛩' },
+  { id: 'abyss', label: '深渊下潜', desc: 'Scroll-driven 3D deep-sea descent', icon: '🌊' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1430,6 +1451,8 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'orbits' && <OrbitalViz />}
         {activeId === 'keyboard' && <KeyboardConfigShowcase />}
         {activeId === 'pixijs' && <PixiJSShowcase />}
+        {activeId === 'kage' && <KageShowcase />}
+        {activeId === 'abyss' && <AbyssalDescent />}
       </div>
     </div>
   )
