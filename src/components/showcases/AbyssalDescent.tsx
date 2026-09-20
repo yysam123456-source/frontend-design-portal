@@ -7,11 +7,11 @@ import { useEffect, useRef, useState } from 'react'
    ═══════════════════════════════════════════════════════════════ */
 
 const CHAPTERS = [
-  { img: '/abyss/01-surface.jpg', title: '水 面', en: 'THE SURFACE', sub: '光束穿过涟漪 · 下潜开始' },
-  { img: '/abyss/02-twilight.jpg', title: '暮 光 层', en: 'TWILIGHT ZONE', sub: '光线一层层熄灭' },
-  { img: '/abyss/03-jellyfish.jpg', title: '幽 光', en: 'BIOLUMINESCENCE', sub: '水母在黑暗中呼吸' },
-  { img: '/abyss/04-abyss.jpg', title: '深 渊', en: 'THE ABYSS', sub: '压顶的黑 · 上浮的气泡' },
-  { img: '/abyss/05-vent.jpg', title: '归 处', en: 'THE GLOW', sub: '一座发光的深海热泉' },
+  { img: '/abyss/01-surface.jpg', title: 'THE SURFACE', en: 'THE SURFACE', sub: 'Rays through the ripples · dive begins' },
+  { img: '/abyss/02-twilight.jpg', title: 'TWILIGHT', en: 'TWILIGHT ZONE', sub: 'Light fades layer by layer' },
+  { img: '/abyss/03-jellyfish.jpg', title: 'GLOW', en: 'BIOLUMINESCENCE', sub: 'Jellyfish breathing in the dark' },
+  { img: '/abyss/04-abyss.jpg', title: 'ABYSS', en: 'THE ABYSS', sub: 'Black above, bubbles rising' },
+  { img: '/abyss/05-vent.jpg', title: 'THE GLOW', en: 'THE GLOW', sub: 'A luminous deep-sea vent' },
 ] as const
 
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x))
@@ -158,7 +158,7 @@ export default function AbyssalDescent() {
 
       {/* 滚动提示 */}
       <div className="fixed bottom-16 left-1/2 -translate-x-1/2 pointer-events-none" style={{ zIndex: 4 }}>
-        <div className="text-cyan-100/40 text-xs tracking-[0.5em] animate-bounce">↓ 下 沉 ↓</div>
+        <div className="text-cyan-100/40 text-xs tracking-[0.5em] animate-bounce">↓ DESCEND ↓</div>
       </div>
 
       {/* 滚动垫片 */}

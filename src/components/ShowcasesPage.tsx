@@ -13,7 +13,7 @@ function KageShowcase() {
     <div className="relative w-full">
       <iframe
         src="/kage.html"
-        title="Kage — 京都山寺夜影"
+        title="Kage — Night Kyoto"
         className="fixed inset-0 w-full h-full border-0"
         style={{ zIndex: 1, background: '#05070a' }}
         allow="autoplay; fullscreen; webgpu"
@@ -1384,16 +1384,16 @@ const SHOWCASES = [
   { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕' },
   { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨' },
   { id: 'pixijs', label: 'PixiJS Playground', desc: '2D WebGL rendering engine', icon: '🎨' },
-  { id: 'kage', label: 'Kage 影', desc: 'MengTo 单文件滚动 3D 夜京都', icon: '⛩' },
-  { id: 'abyss', label: '深渊下潜', desc: 'Scroll-driven 3D deep-sea descent', icon: '🌊' },
-  { id: 'building', label: '香港建筑生成', desc: '程序化香港楼宇 (achrefelouafi)', icon: '🏙' },
-  { id: 'snow', label: '雪野脚印', desc: '积雪地形 + 飘落雪花', icon: '❄️' },
-  { id: 'water', label: '电影级海面', desc: '海滩水体 + 潜水视角', icon: '🌊' },
-  { id: 'ocean', label: 'FFT 物理海洋', desc: 'JONSWAP 频谱 + FFT 海面', icon: '🌊' },
-  { id: 'grass', label: '草地土壤工作室', desc: '苔藓草叶风场 + 地面雕刻', icon: '🌿' },
-  { id: 'vegetation', label: 'WebGPU 藤蔓', desc: '常春藤沿路径生长', icon: '🌱' },
-  { id: 'crystal', label: 'WebGPU 水晶', desc: '紫水晶簇生长笔刷', icon: '💎' },
-  { id: 'rain', label: '雨景工作室', desc: '雨丝 + 闪电 + 水坑涟漪', icon: '⛈' },
+  { id: 'kage', label: 'Kage', desc: 'MengTo single-file scroll 3D night Kyoto', icon: '⛩' },
+  { id: 'abyss', label: 'Abyssal Descent', desc: 'Scroll-driven 3D deep-sea descent', icon: '🌊' },
+  { id: 'building', label: 'HK Building Gen', desc: 'Procedural Hong Kong buildings (achrefelouafi)', icon: '🏙' },
+  { id: 'snow', label: 'Snowy Footprints', desc: 'Snow terrain + falling snow', icon: '❄️' },
+  { id: 'water', label: 'Cinematic Water', desc: 'Beach water body + dive-under', icon: '🌊' },
+  { id: 'ocean', label: 'FFT Ocean', desc: 'JONSWAP spectrum + FFT ocean', icon: '🌊' },
+  { id: 'grass', label: 'Soil Studio', desc: 'Moss grass wind + ground sculpt', icon: '🌿' },
+  { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱' },
+  { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎' },
+  { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
