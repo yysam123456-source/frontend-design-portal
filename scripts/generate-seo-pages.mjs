@@ -307,6 +307,9 @@ const FOOTER_PROJECT_NAV = projects
   .join('\n      ')
 
 const manifest = readJson(path.join(DATA_DIR, 'preview-manifest.json'))
+// 逐页长尾词映射：源自真实搜索引擎建议词（见 seo-keywords.json），驱动分类页/项目页/组件页的
+// title 与 description 融入真实搜索词，避免全站模板化标题。
+const KEYWORDS = readJson(path.join(__dirname, 'seo-keywords.json'))
 const manifestRecords = manifest.records || {}
 const recordById = new Map(
   (Array.isArray(manifestRecords)
@@ -384,13 +387,17 @@ for (const project of projects) {
   const ids = eligibleByProject.get(project.id) || []
   const url = slugUrl(`projects/${project.id}`)
   const canonical = `/projects/${project.id}`
+  const kw = KEYWORDS.projects?.[project.id] || {}
   const title = fitTitle(project.name, [
+    `${kw.kw || 'open-source UI'} — live previews`,
     `${ids.length} open-source components`,
     'open-source components',
     'components',
   ])
   const description = clip(
-    `${project.description} Browse all ${ids.length} ${project.name} components with live previews and copy-ready source code.`,
+    `${project.description} Browse all ${ids.length} ${project.name} components with live previews and copy-ready source code${
+      kw.related?.length ? ` — ${kw.related.slice(0, 2).join(', ')}.` : '.'
+    }`,
     300
   )
 
@@ -407,7 +414,7 @@ for (const project of projects) {
 <div class="hero">
   <p class="eyebrow">Source project</p>
   <h1>${esc(project.name)} components</h1>
-  <p class="lede">${esc(project.description)}</p>
+  <p class="lede">${esc(project.description)}${kw.related?.length ? ` Perfect for ${esc(kw.related.slice(0, 2).join(' and '))} use cases.` : ''}</p>
   <div class="tags">
     ${(project.techStack || []).map((t) => `<span class="tag tag-accent">${esc(t)}</span>`).join('')}
     ${(project.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}
@@ -508,12 +515,17 @@ let categoryPageCount = 0
 for (const [cat, ids] of categories) {
   const url = slugUrl(`categories/${cat}`)
   const label = prettyCategory(cat)
-  const title = fitTitle(`${label} components`, [
+  const kw = KEYWORDS.categories?.[cat] || {}
+  const title = fitTitle(label, [
+    `${kw.titleKw || 'open-source UI examples'} with live previews`,
+    `${ids.length} open-source ${kw.titleKw || 'UI'} examples`,
     `${ids.length} open-source UI examples`,
     'open-source UI examples',
   ])
   const description = clip(
-    `Browse ${ids.length} open-source ${label.toLowerCase()} components with live previews and copy-ready source code, sourced from React Bits, Uiverse, Animata, Anime.js and more.`,
+    `Browse ${ids.length} open-source ${label.toLowerCase()} components with live previews and copy-ready source code${
+      kw.related?.length ? `, including ${kw.related.slice(0, 3).join(', ')}.` : '.'
+    } Sourced from React Bits, Uiverse, Animata, Anime.js and more.`,
     300
   )
   const shown = ids.slice(0, MAX_CARDS_PER_PAGE)
@@ -525,6 +537,7 @@ for (const [cat, ids] of categories) {
   <p class="lede">
     ${ids.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components collected from across the
     gallery. Each entry links to its full source code and live preview.
+    ${kw.related?.length ? `Here you will find ${esc(kw.related.slice(0, 3).join(', '))} ready to copy.` : ''}
   </p>
   <div class="stats">
     <div class="stat"><div class="n">${ids.length.toLocaleString()}</div><div class="l">Components</div></div>
@@ -621,13 +634,17 @@ for (const project of projects) {
     const projectName = projectMeta?.name || titleCase(project.id)
     const catLabel = prettyCategory(cat)
 
+    const catKw = KEYWORDS.categories?.[cat] || {}
     const title = fitTitle(c.name, [
+      `${catKw.titleKw || catLabel} code & preview`,
+      `${projectName} ${catKw.kw || catLabel} code & preview`,
       `${projectName} component code & preview`,
       `${projectName} component`,
       'component code & preview',
       'component',
     ])
-    const description = clip(synthDescription(c, projectName), 200)
+    const kwSentence = catKw.related?.length ? ` Ideal for ${catKw.related.slice(0, 2).join(' and ')}.` : ''
+    const description = clip(synthDescription(c, projectName) + kwSentence, 200)
 
     // Sequential prev/next inside this project. Guarantees every component page receives
     // at least one inbound internal link — orphan pages are effectively undiscoverable and
