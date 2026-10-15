@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# JSON catalogue/data has no standalone index value; keep crawl budget on HTML pages.
+Disallow: /data/
 
 Sitemap: https://fxlab.craftisle.com/sitemap.xml

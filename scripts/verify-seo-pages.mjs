@@ -100,6 +100,10 @@ for (const { slug, file } of sample) {
     }
   }
 
+  // hreflang：单语言海外站必须声明 en + x-default，且指向自身 canonical
+  if (!/hreflang="en"/.test(html)) failures.push(`${slug}: missing hreflang="en"`)
+  if (!/hreflang="x-default"/.test(html)) failures.push(`${slug}: missing hreflang="x-default"`)
+
   const links = (html.match(/href="\/(components|projects|categories)\//g) || []).length
   if (links < 3) failures.push(`${slug}: only ${links} internal links (min 3)`)
 }
@@ -138,6 +142,20 @@ for (const dir of SPA_SHELLS) {
   )
 }
 
+// --- 404 page --------------------------------------------------------------
+// The generated 404 must be noindex (it used to inherit `index, follow` from the
+// shell and point its canonical at the non-existent /404 URL).
+const notFoundPath = path.join(distDir, '404.html')
+const notFound404Failures = []
+if (!fs.existsSync(notFoundPath)) {
+  notFound404Failures.push('404.html: MISSING')
+} else {
+  const nf = fs.readFileSync(notFoundPath, 'utf8')
+  if (!/name="robots" content="noindex/.test(nf)) notFound404Failures.push('404.html: robots is not noindex')
+  if (/canonical" href="https:\/\/fxlab\.craftisle\.com\/404"/.test(nf))
+    notFound404Failures.push('404.html: canonical points at non-existent /404')
+}
+
 // --- sitemap ---------------------------------------------------------------
 const sitemapPath = path.join(distDir, 'sitemap.xml')
 let sitemapUrls = []
@@ -174,10 +192,12 @@ console.log(`titles > 72 chars    : ${titleLong} (of sample)`)
 console.log(`descriptions > 160   : ${descLong} (of sample)`)
 console.log(`SPA view shells      : ${shellResults.join(' | ')}`)
 console.log(`slash-less links     : ${slashlessLinks.size} (each would 308-redirect)`)
+console.log(`404 page             : ${notFound404Failures.length ? notFound404Failures.join('; ') : 'ok (noindex)'}`)
 
 const hardFailures = []
 if (orphans.length > 0) hardFailures.push(`${orphans.length} orphan pages`)
 if (failures.length > 0) hardFailures.push(`${failures.length} page integrity failures`)
+if (notFound404Failures.length > 0) hardFailures.push(notFound404Failures.join('; '))
 if (sitemapUrls.length !== uniqueUrls.size) hardFailures.push('duplicate sitemap urls')
 if (offsite.length > 0) hardFailures.push('sitemap contains non-fxlab urls')
 if (fileCount >= 20000) hardFailures.push(`dist exceeds Cloudflare Pages 20000-file limit (${fileCount})`)
@@ -185,6 +205,11 @@ if (slashlessLinks.size > 0) hardFailures.push(`${slashlessLinks.size} internal 
 if (shellResults.some((r) => !r.endsWith(': ok'))) hardFailures.push('SPA view shell problem')
 if (sitemapUrls.some((u) => u !== `${SITE}/` && !u.endsWith('/') && !FILE_LIKE.test(u)))
   hardFailures.push('sitemap contains slash-less urls')
+const sitemapRaw = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, 'utf8') : ''
+if (/<changefreq>/.test(sitemapRaw)) hardFailures.push('sitemap contains deprecated <changefreq>')
+if (/<priority>/.test(sitemapRaw)) hardFailures.push('sitemap contains deprecated <priority>')
+if (!/<lastmod>20\d{2}-\d{2}-\d{2}<\/lastmod>/.test(sitemapRaw))
+  hardFailures.push('sitemap has no valid YYYY-MM-DD <lastmod>')
 
 if (slashlessLinks.size) {
   console.log('\nfirst slash-less links:')

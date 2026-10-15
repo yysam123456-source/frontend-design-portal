@@ -183,7 +183,15 @@ function loadProjectMeta() {
 
 const SHELL_CSS = '/seo-pages.css'
 
-function shell({ title, description, canonical, jsonLdBlocks, breadcrumbs, body }) {
+function shell({ title, description, canonical, jsonLdBlocks, breadcrumbs, body, ogImage, robots }) {
+  // 单语言站点的 hreflang 信号：告知 Google 本页是该语言的唯一版本（en + x-default 指同一页）
+  const hreflang =
+    typeof canonical === 'string' && canonical.startsWith(SITE)
+      ? `<link rel="alternate" hreflang="en" href="${esc(canonical)}">
+<link rel="alternate" hreflang="x-default" href="${esc(canonical)}">`
+      : ''
+  const og = ogImage || `${SITE}/og-image.png`
+  const rob = robots || 'index, follow, max-image-preview:large'
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -192,7 +200,8 @@ function shell({ title, description, canonical, jsonLdBlocks, breadcrumbs, body 
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(canonical)}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+${hreflang}
+<meta name="robots" content="${esc(rob)}">
 <meta name="theme-color" content="#ff4d00">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,7 +213,7 @@ function shell({ title, description, canonical, jsonLdBlocks, breadcrumbs, body 
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${esc(canonical)}">
-<meta property="og:image" content="${SITE}/og-image.png">
+<meta property="og:image" content="${esc(og)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Frontend Design Gallery — open-source UI components and animations">
@@ -212,7 +221,7 @@ function shell({ title, description, canonical, jsonLdBlocks, breadcrumbs, body 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
-<meta name="twitter:image" content="${SITE}/og-image.png">
+<meta name="twitter:image" content="${esc(og)}">
 ${jsonLdBlocks.map((b) => `<script type="application/ld+json">${jsonLd(b)}</script>`).join('\n')}
 </head>
 <body>
@@ -715,12 +724,17 @@ ${
       { label: c.name },
     ]
 
+    // 组件页差异化 OG 图：media-image 类组件有真实截图/海报，用它替代全站通用图
+    // （图片搜索 + 社交分享卡片差异化；仅 poster 真实存在的页面启用）
+    const poster = rec?.media?.poster ? `${SITE}${rec.media.poster}` : undefined
+
     writePage(
       `components/${id}/index.html`,
       shell({
         title,
         description: clip(description, 155),
         canonical: slugUrl(`components/${id}`),
+        ogImage: poster,
         breadcrumbs: crumbsHtml(crumbItems),
         jsonLdBlocks: [
           crumbLd(crumbItems),
@@ -752,7 +766,10 @@ ${
 const notFound = shell({
   title: '404 — Page not found | Frontend Design Gallery',
   description: 'The page you requested was not found in the Frontend Design Gallery. Browse open-source UI components and animations instead.',
-  canonical: `${SITE}/404`,
+  // 404 页本身不参与索引：noindex；canonical 指向站点根（此前指向 /404 这个并不存在的 URL，
+  // 会形成一个指向 404 的 canonical，属于自指式软错误）。
+  robots: 'noindex, follow',
+  canonical: `${SITE}/`,
   breadcrumbs: crumbsHtml([{ label: 'Home', href: '/' }, { label: 'Page not found' }]),
   jsonLdBlocks: [],
   body: `<div class="hero">
@@ -821,6 +838,14 @@ if (fs.existsSync(SPA_SHELL_SOURCE)) {
     )
     html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${esc(url)}" />`)
     html = html.replace(
+      /<link rel="alternate" hreflang="en" href="[^"]*">/,
+      `<link rel="alternate" hreflang="en" href="${esc(url)}">`
+    )
+    html = html.replace(
+      /<link rel="alternate" hreflang="x-default" href="[^"]*">/,
+      `<link rel="alternate" hreflang="x-default" href="${esc(url)}">`
+    )
+    html = html.replace(
       /<meta name="twitter:title" content="[^"]*" \/>/,
       `<meta name="twitter:title" content="${esc(view.title)}" />`
     )
@@ -840,23 +865,45 @@ if (fs.existsSync(SPA_SHELL_SOURCE)) {
   log('WARNING: dist/index.html missing - SPA view shells not written')
 }
 
-const lastmod = new Date().toISOString().slice(0, 10)
-const urls = [
-  { loc: `${SITE}/`, priority: '1.0', changefreq: 'daily' },
-  { loc: `${SITE}/components/`, priority: '0.9', changefreq: 'daily' },
-  { loc: `${SITE}/showcases/`, priority: '0.7', changefreq: 'weekly' },
-  ...projects.map((p) => ({ loc: slugUrl(`projects/${p.id}`), priority: '0.8', changefreq: 'weekly' })),
-  ...categories.map(([cat]) => ({ loc: slugUrl(`categories/${cat}`), priority: '0.6', changefreq: 'weekly' })),
-]
-
-// components (kept set only)
-for (const project of projects) {
-  for (const id of eligibleByProject.get(project.id) || []) {
-    urls.push({ loc: slugUrl(`components/${id}`), priority: '0.5', changefreq: 'monthly' })
+/**
+ * lastmod 派生：sitemap 只应报告内容的真实修改时间。此前每次构建都把全部
+ * 5,111 个 URL 的 lastmod 刷新成当天，Google 会认为全站每日变更而反复重抓，
+ * 属于明确的反模式。这里改为从每类页面的内容源文件 mtime 派生 ——
+ * 源文件不变，lastmod 就不变。
+ */
+function fileMtime(relPath) {
+  try {
+    return fs.statSync(path.join(ROOT, relPath)).mtime.toISOString().slice(0, 10)
+  } catch {
+    return undefined
   }
 }
 
-// pre-existing static demo documents
+const urls = []
+// 首页 + 两个 SPA 视图外壳：均由 dist/index.html 派生
+const indexMtime = fileMtime('dist/index.html')
+urls.push({ loc: `${SITE}/`, lastmod: indexMtime })
+urls.push({ loc: `${SITE}/components/`, lastmod: indexMtime })
+urls.push({ loc: `${SITE}/showcases/`, lastmod: indexMtime })
+// 项目页：元数据源 src/data/projects.ts
+const projectsMtime = fileMtime('src/data/projects.ts')
+for (const p of projects) {
+  urls.push({ loc: slugUrl(`projects/${p.id}`), lastmod: projectsMtime })
+}
+// 分类页：目录源 public/data/index.json
+const indexDataMtime = fileMtime('public/data/index.json')
+for (const [cat] of categories) {
+  urls.push({ loc: slugUrl(`categories/${cat}`), lastmod: indexDataMtime })
+}
+// 组件页：所属项目的代码/元数据 JSON
+for (const project of projects) {
+  const mtime = fileMtime(`public/data/${project.id}.json`)
+  for (const id of eligibleByProject.get(project.id) || []) {
+    urls.push({ loc: slugUrl(`components/${id}`), lastmod: mtime })
+  }
+}
+
+// pre-existing static demo documents（各自文件的真实 mtime）
 for (const p of [
   '/kage.html',
   '/landscape.html',
@@ -866,7 +913,7 @@ for (const p of [
   '/demo-assets/zelda-hyrule-ui/public-showcase/june-quest-calendar.html',
   '/demo-assets/zelda-hyrule-ui/public-showcase/shrine-focus-timer.html',
 ]) {
-  urls.push({ loc: `${SITE}${p}`, priority: '0.4', changefreq: 'monthly' })
+  urls.push({ loc: `${SITE}${p}`, lastmod: fileMtime(`public${p}`) })
 }
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -874,10 +921,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${urls
   .map(
     (u) => `  <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
+    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}
   </url>`
   )
   .join('\n')}

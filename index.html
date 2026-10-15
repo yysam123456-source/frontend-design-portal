@@ -7,6 +7,8 @@
     <title>Frontend Design Gallery — Open-Source UI Components, Animations & Demos</title>
     <meta name="description" content="A gallery of 5,000+ open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews and copy-ready code." />
     <link rel="canonical" href="https://fxlab.craftisle.com/" />
+    <link rel="alternate" hreflang="en" href="https://fxlab.craftisle.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://fxlab.craftisle.com/" />
     <meta name="theme-color" content="#ff4d00" />
     <meta name="color-scheme" content="light" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -60,6 +62,30 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- 无 JS / 简化抓取兜底：首页是纯 CSR SPA，noscript 提供可爬的核心导航，
+         与 head 中的 CollectionPage JSON-LD 互为印证 -->
+    <noscript>
+      <main style="font-family:Inter,system-ui,sans-serif;max-width:720px;margin:48px auto;padding:0 24px;color:#0a0a0a">
+        <h1>Frontend Design Gallery — Open-Source UI Components, Animations &amp; Demos</h1>
+        <p>A curated gallery of 5,000+ open-source UI components and animations with live previews and copy-ready code.</p>
+        <nav>
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="/components/">Browse all 5,000+ components</a></li>
+            <li><a href="/showcases/">Showcases &amp; full-page demos</a></li>
+            <li><a href="/projects/react-bits/">React Bits</a></li>
+            <li><a href="/projects/animejs/">Anime.js</a></li>
+            <li><a href="/projects/uiverse/">Uiverse</a></li>
+            <li><a href="/projects/animata/">Animata</a></li>
+            <li><a href="/projects/eldoraui/">Eldora UI</a></li>
+            <li><a href="/projects/zelda-hyrule-ui/">Zelda Hyrule UI</a></li>
+            <li><a href="/projects/pixel2motion/">Pixel2Motion</a></li>
+            <li><a href="/projects/threeui/">ThreeUI</a></li>
+            <li><a href="/projects/pixijs/">PixiJS</a></li>
+          </ul>
+        </nav>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
