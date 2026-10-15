@@ -524,7 +524,7 @@ for (const [cat, ids] of categories) {
   ])
   const description = clip(
     `Browse ${ids.length} open-source ${label.toLowerCase()} components with live previews and copy-ready source code${
-      kw.related?.length ? `, including ${kw.related.slice(0, 3).join(', ')}.` : '.'
+      kw.related?.length ? `, including ${kw.related.slice(0, 4).join(', ')}.` : '.'
     } Sourced from React Bits, Uiverse, Animata, Anime.js and more.`,
     300
   )
@@ -537,7 +537,7 @@ for (const [cat, ids] of categories) {
   <p class="lede">
     ${ids.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components collected from across the
     gallery. Each entry links to its full source code and live preview.
-    ${kw.related?.length ? `Here you will find ${esc(kw.related.slice(0, 3).join(', '))} ready to copy.` : ''}
+    ${kw.related?.length ? `Here you will find ${esc(kw.related.slice(0, 4).join(', '))} ready to copy.` : ''}
   </p>
   <div class="stats">
     <div class="stat"><div class="n">${ids.length.toLocaleString()}</div><div class="l">Components</div></div>
