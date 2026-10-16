@@ -2,63 +2,1156 @@
   "//": "Long-tail keyword map derived from real search-engine autocomplete data (2 rounds: 233 prefixes, Bing autocomplete, 2026). titleKw drives <title>; kw is the anchor phrase; related phrases feed <meta description> and lede copy. Single-language English site.",
   "site": {
     "kw": "free open source ui components",
-    "related": ["ui components library", "ui components for website", "web ui components library", "html and css components", "free ui components"]
+    "related": [
+      "ui components library",
+      "ui components for website",
+      "web ui components library",
+      "html and css components",
+      "free ui components",
+      "tailwind components",
+      "react components library"
+    ]
   },
   "projects": {
-    "uiverse": { "kw": "uiverse components", "related": ["uiverse buttons", "uiverse cards", "uiverse loader", "free ui components", "uiverse io"] },
-    "animejs": { "kw": "anime.js examples", "related": ["anime js animation", "anime js tutorial", "anime js vs gsap", "anime js scroll trigger"] },
-    "react-bits": { "kw": "react bits components", "related": ["react ui components", "react components library", "react animation components", "react floating action button"] },
-    "animata": { "kw": "animata components", "related": ["animata ui library", "react animation components", "open source ui", "animation for web development"] },
-    "eldoraui": { "kw": "eldora ui components", "related": ["eldora ui library", "react ui library", "open source ui library", "ui library components"] },
-    "threeui": { "kw": "three.js ui components", "related": ["three ui library", "webgl ui components", "three js examples", "three.js websites"] },
-    "zelda-hyrule-ui": { "kw": "zelda ui components", "related": ["zelda hyrule ui", "game ui components", "zelda botw ui", "sheikah slate", "botw ui design"] },
-    "pixel2motion": { "kw": "pixel art animation", "related": ["pixel2motion", "pixel animation library", "pixel art ui", "canvas animation"] }
+    "uiverse": {
+      "kw": "uiverse components",
+      "related": [
+        "uiverse buttons",
+        "uiverse cards",
+        "uiverse loader",
+        "free ui components",
+        "uiverse io",
+        "uiverse components tailwind"
+      ]
+    },
+    "animejs": {
+      "kw": "anime.js examples",
+      "related": [
+        "anime js animation",
+        "anime js tutorial",
+        "anime js vs gsap",
+        "anime js scroll trigger",
+        "text animation library",
+        "javascript text animation"
+      ]
+    },
+    "react-bits": {
+      "kw": "react bits components",
+      "related": [
+        "react ui components",
+        "react components library",
+        "react animation components",
+        "react floating action button",
+        "react toggle switch component",
+        "react skeleton loader"
+      ]
+    },
+    "animata": {
+      "kw": "animata components",
+      "related": [
+        "animata ui library",
+        "react animation components",
+        "open source ui",
+        "animation for web development"
+      ]
+    },
+    "eldoraui": {
+      "kw": "eldora ui components",
+      "related": [
+        "eldora ui library",
+        "react ui library",
+        "open source ui library",
+        "ui library components"
+      ]
+    },
+    "threeui": {
+      "kw": "three.js ui components",
+      "related": [
+        "three ui library",
+        "webgl ui components",
+        "three js examples",
+        "three.js websites",
+        "react three fiber",
+        "three js background animation"
+      ]
+    },
+    "zelda-hyrule-ui": {
+      "kw": "zelda ui components",
+      "related": [
+        "zelda hyrule ui",
+        "game ui components",
+        "zelda botw ui",
+        "sheikah slate",
+        "botw ui design"
+      ]
+    },
+    "pixel2motion": {
+      "kw": "pixel art animation",
+      "related": [
+        "pixel2motion",
+        "pixel animation library",
+        "pixel art ui",
+        "canvas animation",
+        "pixel art css",
+        "canvas particle network"
+      ]
+    }
   },
   "categories": {
-    "animation": { "titleKw": "css animation examples", "kw": "css animation", "related": ["css animations library", "css animation effects", "css reveal animation", "fade in animation css", "slide animation css"] },
-    "animations": { "titleKw": "css animations examples", "kw": "css animations", "related": ["css animations library", "css animations free", "css animations code", "css animation generator", "animation in css examples"] },
-    "background": { "titleKw": "css background animation", "kw": "background animation css", "related": ["background animation for website", "animated background css", "background animation codepen", "animated gradient background css"] },
-    "backgrounds": { "titleKw": "animated background css", "kw": "animated background", "related": ["animated background for website", "background animation css", "animated background gif", "animated gradient background"] },
-    "bento-grid": { "titleKw": "bento grid ui design", "kw": "bento grid", "related": ["bento grid layout", "bento grid css", "bento grid ui", "bento grids design"] },
-    "button": { "titleKw": "css button hover effects", "kw": "css button", "related": ["css button design", "css button animation", "css button style", "button glow effect css", "button click effect css"] },
-    "buttons": { "titleKw": "css buttons examples", "kw": "css buttons", "related": ["css button hover effects", "css buttons styles", "button animation css", "button glow effect css", "hover effect for button"] },
-    "card": { "titleKw": "css card design", "kw": "css card", "related": ["css card hover effects", "css card examples", "card design css", "card hover effect css"] },
-    "cards": { "titleKw": "css card hover effects", "kw": "css cards", "related": ["css card design", "css cards template", "card design ui", "card hover effects codepen", "flip card css"] },
-    "checkboxes": { "titleKw": "checkbox css design", "kw": "checkbox css", "related": ["css checkbox style", "checkbox design html", "checkbox css examples", "custom checkbox css"] },
-    "component": { "titleKw": "ui component design", "kw": "ui component", "related": ["ui components library", "component design ui", "ui elements", "ui components list"] },
-    "components": { "titleKw": "ui components library", "kw": "ui components", "related": ["free ui components", "web ui components library", "open source ui components", "html and css components"] },
-    "container": { "titleKw": "css container layout", "kw": "css container", "related": ["container query css", "css layout components", "container design", "css grid layout"] },
-    "draggable": { "titleKw": "drag and drop ui", "kw": "drag and drop", "related": ["draggable html css", "drag and drop react", "drag and drop ui design", "drag and drop website builder"] },
-    "easing": { "titleKw": "css easing functions", "kw": "css easing", "related": ["easing functions css", "css animation easing", "cubic bezier css", "css ease-in"] },
-    "example": { "titleKw": "css examples", "kw": "css examples", "related": ["html css examples", "css code examples", "web design examples", "css example code"] },
-    "forms": { "titleKw": "css form design", "kw": "css forms", "related": ["form css styles", "form css template", "form css examples", "login page html css", "form validation css"] },
-    "hero": { "titleKw": "hero section design", "kw": "hero section", "related": ["hero section examples", "hero section ui", "hero section html css", "hero section website design", "animated hero background"] },
-    "hud": { "titleKw": "hud ui design", "kw": "hud ui", "related": ["hud ui design", "game hud design", "hud elements", "game ui design", "health bar ui"] },
-    "image": { "titleKw": "css image effects", "kw": "css image", "related": ["image hover effect css", "image gallery html css", "css image hover", "image hover zoom css"] },
-    "inputs": { "titleKw": "input css design", "kw": "css inputs", "related": ["input css styles", "input css hover effect", "input design css", "input floating label", "input focus effect"] },
-    "list": { "titleKw": "css list styles", "kw": "css list", "related": ["list style css", "css list design", "list group ui", "html list with dots"] },
-    "loaders": { "titleKw": "loading spinner css", "kw": "css loaders", "related": ["css loader animation", "css loaders and spinners", "loading animation css", "spinner animation css", "loading screen html css"] },
-    "menu": { "titleKw": "css menu design", "kw": "css menu", "related": ["dropdown menu css", "menu css responsive", "menu css examples", "hamburger menu css", "mega menu css"] },
-    "notifications": { "titleKw": "toast notification design", "kw": "notification ui", "related": ["notification toast ui", "toast css", "notification design css", "toast notification html", "notification bell icon"] },
-    "official-demo": { "titleKw": "web animation demos", "kw": "web demos", "related": ["animation demo website", "ui demo examples", "css demo", "loading screen website"] },
-    "official-showcase": { "titleKw": "ui showcase examples", "kw": "ui showcase", "related": ["website showcase", "ui design showcase", "animation showcase", "landing page ui examples"] },
-    "patterns": { "titleKw": "css patterns design", "kw": "css patterns", "related": ["background pattern css", "css pattern examples", "css3 patterns", "css grid pattern"] },
-    "radio-buttons": { "titleKw": "radio button css styling", "kw": "radio buttons", "related": ["radio button html code", "css styling radio buttons", "radio button style examples", "custom radio button css"] },
-    "screens": { "titleKw": "screen ui design", "kw": "ui screens", "related": ["screen design ui", "app screen design", "ui screen examples", "loading screen website"] },
-    "scroll": { "titleKw": "scroll animation css", "kw": "scroll animation", "related": ["scroll animation examples", "scroll animation library", "scroll animation website", "scroll trigger animation", "animate on scroll"] },
-    "sheikah": { "titleKw": "zelda ui design", "kw": "sheikah ui", "related": ["zelda hyrule ui", "botw ui design", "game ui components", "sheikah slate", "zelda botw ui"] },
-    "skeleton": { "titleKw": "skeleton loading ui", "kw": "skeleton loading", "related": ["skeleton loading css", "skeleton loading animation", "skeleton screen ui", "skeleton screen css"] },
-    "stagger": { "titleKw": "stagger animation css", "kw": "stagger animation", "related": ["staggered animation css", "stagger animation examples", "animation stagger", "stagger effect"] },
-    "text": { "titleKw": "css text effects", "kw": "css text", "related": ["text animation css", "typing animation css", "css text style", "gradient text css", "text stroke css"] },
-    "text-animation": { "titleKw": "text animation css", "kw": "text animation", "related": ["text animation effects", "text type animation css", "html css text animation", "typing effect css", "letter animation css"] },
-    "textanimations": { "titleKw": "text animation examples", "kw": "text animations", "related": ["text animation css", "text animation generator", "css text animation effects", "css text typing animation", "word reveal animation"] },
-    "threejs": { "titleKw": "three.js examples", "kw": "three.js", "related": ["three js animation", "three js portfolio", "three.js websites", "canvas animation js", "particles.js"] },
-    "timeline": { "titleKw": "timeline css design", "kw": "css timeline", "related": ["timeline html css codepen", "horizontal timeline css responsive", "timeline code in html css", "timeline ui design"] },
-    "timer": { "titleKw": "countdown timer css", "kw": "css timer", "related": ["countdown timer widget", "timer ui design", "css countdown", "countdown widget for website"] },
-    "toggle-switches": { "titleKw": "toggle switch css", "kw": "toggle switch", "related": ["css toggle switch with text", "toggle button html css", "toggle switch onoff css", "toggle switch in website"] },
-    "tooltips": { "titleKw": "css tooltip", "kw": "tooltips", "related": ["css tooltip on hover", "tooltip css design", "css tooltip arrow", "hover pop up css"] },
-    "ui-element": { "titleKw": "ui elements design", "kw": "ui elements", "related": ["ui design elements", "web ui elements", "ui components list", "ui elements in games"] },
-    "waapi": { "titleKw": "web animations api", "kw": "waapi", "related": ["web animations api examples", "waapi animation", "web animation api tutorial", "scroll-driven animations"] },
-    "widget": { "titleKw": "web widgets design", "kw": "ui widgets", "related": ["web widget design", "css widgets", "widget ui examples", "weather widget html"] }
+    "animation": {
+      "titleKw": "css animation examples",
+      "kw": "css animation",
+      "related": [
+        "css animations library",
+        "css animation effects",
+        "css reveal animation",
+        "fade in animation css",
+        "slide animation css"
+      ]
+    },
+    "animations": {
+      "titleKw": "css animations examples",
+      "kw": "css animations",
+      "related": [
+        "css animations library",
+        "css animations free",
+        "css animations code",
+        "css animation generator",
+        "animation in css examples"
+      ]
+    },
+    "background": {
+      "titleKw": "css background animation",
+      "kw": "background animation css",
+      "related": [
+        "background animation for website",
+        "animated background css",
+        "background animation codepen",
+        "animated gradient background css",
+        "css background pattern"
+      ]
+    },
+    "backgrounds": {
+      "titleKw": "animated background css",
+      "kw": "animated background",
+      "related": [
+        "animated background for website",
+        "background animation css",
+        "animated background gif",
+        "animated gradient background",
+        "css gradient animation generator",
+        "webgl background effects"
+      ]
+    },
+    "bento-grid": {
+      "titleKw": "bento grid ui design",
+      "kw": "bento grid",
+      "related": [
+        "bento grid layout",
+        "bento grid css",
+        "bento grid ui",
+        "bento grids design"
+      ]
+    },
+    "button": {
+      "titleKw": "css button hover effects",
+      "kw": "css button",
+      "related": [
+        "css button design",
+        "css button animation",
+        "css button style",
+        "button glow effect css",
+        "button click effect css",
+        "html css button hover effects"
+      ]
+    },
+    "buttons": {
+      "titleKw": "css buttons examples",
+      "kw": "css buttons",
+      "related": [
+        "css button hover effects",
+        "css buttons styles",
+        "button animation css",
+        "button glow effect css",
+        "hover effect for button",
+        "tailwind button components"
+      ]
+    },
+    "card": {
+      "titleKw": "css card design",
+      "kw": "css card",
+      "related": [
+        "css card hover effects",
+        "css card examples",
+        "card design css",
+        "card hover effect css",
+        "tailwind card design",
+        "react card component tailwind"
+      ]
+    },
+    "cards": {
+      "titleKw": "css card hover effects",
+      "kw": "css cards",
+      "related": [
+        "css card design",
+        "css cards template",
+        "card design ui",
+        "card hover effects codepen",
+        "flip card css",
+        "tailwind card examples"
+      ]
+    },
+    "checkboxes": {
+      "titleKw": "checkbox css design",
+      "kw": "checkbox css",
+      "related": [
+        "css checkbox style",
+        "checkbox design html",
+        "checkbox css examples",
+        "custom checkbox css"
+      ]
+    },
+    "component": {
+      "titleKw": "ui component design",
+      "kw": "ui component",
+      "related": [
+        "ui components library",
+        "component design ui",
+        "ui elements",
+        "ui components list",
+        "react components library"
+      ]
+    },
+    "components": {
+      "titleKw": "ui components library",
+      "kw": "ui components",
+      "related": [
+        "free ui components",
+        "web ui components library",
+        "open source ui components",
+        "html and css components",
+        "tailwind components",
+        "react components library"
+      ]
+    },
+    "container": {
+      "titleKw": "css container layout",
+      "kw": "css container",
+      "related": [
+        "container query css",
+        "css layout components",
+        "container design",
+        "css grid layout",
+        "tailwind card layout"
+      ]
+    },
+    "draggable": {
+      "titleKw": "drag and drop ui",
+      "kw": "drag and drop",
+      "related": [
+        "draggable html css",
+        "drag and drop react",
+        "drag and drop ui design",
+        "drag and drop website builder",
+        "react drag and drop components",
+        "react sortable list"
+      ]
+    },
+    "easing": {
+      "titleKw": "css easing functions",
+      "kw": "css easing",
+      "related": [
+        "easing functions css",
+        "css animation easing",
+        "cubic bezier css",
+        "css ease-in",
+        "css easing generator"
+      ]
+    },
+    "example": {
+      "titleKw": "css examples",
+      "kw": "css examples",
+      "related": [
+        "html css examples",
+        "css code examples",
+        "web design examples",
+        "css example code"
+      ]
+    },
+    "forms": {
+      "titleKw": "css form design",
+      "kw": "css forms",
+      "related": [
+        "form css styles",
+        "form css template",
+        "form css examples",
+        "login page html css",
+        "form validation css",
+        "tailwind form design"
+      ]
+    },
+    "hero": {
+      "titleKw": "hero section design",
+      "kw": "hero section",
+      "related": [
+        "hero section examples",
+        "hero section ui",
+        "hero section html css",
+        "hero section website design",
+        "animated hero background",
+        "tailwind hero section codepen"
+      ]
+    },
+    "hud": {
+      "titleKw": "hud ui design",
+      "kw": "hud ui",
+      "related": [
+        "hud ui design",
+        "game hud design",
+        "hud elements",
+        "game ui design",
+        "health bar ui",
+        "game battle ui"
+      ]
+    },
+    "image": {
+      "titleKw": "css image effects",
+      "kw": "css image",
+      "related": [
+        "image hover effect css",
+        "image gallery html css",
+        "css image hover",
+        "image hover zoom css",
+        "css avatar hover effect"
+      ]
+    },
+    "inputs": {
+      "titleKw": "input css design",
+      "kw": "css inputs",
+      "related": [
+        "input css styles",
+        "input css hover effect",
+        "input design css",
+        "input floating label",
+        "input focus effect",
+        "react input component"
+      ]
+    },
+    "list": {
+      "titleKw": "css list styles",
+      "kw": "css list",
+      "related": [
+        "list style css",
+        "css list design",
+        "list group ui",
+        "html list with dots"
+      ]
+    },
+    "loaders": {
+      "titleKw": "loading spinner css",
+      "kw": "css loaders",
+      "related": [
+        "css loader animation",
+        "css loaders and spinners",
+        "loading animation css",
+        "spinner animation css",
+        "loading screen html css",
+        "tailwind spinner loader"
+      ]
+    },
+    "menu": {
+      "titleKw": "css menu design",
+      "kw": "css menu",
+      "related": [
+        "dropdown menu css",
+        "menu css responsive",
+        "menu css examples",
+        "hamburger menu css",
+        "mega menu css",
+        "tailwind navbar responsive"
+      ]
+    },
+    "notifications": {
+      "titleKw": "toast notification design",
+      "kw": "notification ui",
+      "related": [
+        "notification toast ui",
+        "toast css",
+        "notification design css",
+        "toast notification html",
+        "notification bell icon",
+        "react toast notification"
+      ]
+    },
+    "official-demo": {
+      "titleKw": "web animation demos",
+      "kw": "web demos",
+      "related": [
+        "animation demo website",
+        "ui demo examples",
+        "css demo",
+        "loading screen website"
+      ]
+    },
+    "official-showcase": {
+      "titleKw": "ui showcase examples",
+      "kw": "ui showcase",
+      "related": [
+        "website showcase",
+        "ui design showcase",
+        "animation showcase",
+        "landing page ui examples"
+      ]
+    },
+    "patterns": {
+      "titleKw": "css patterns design",
+      "kw": "css patterns",
+      "related": [
+        "background pattern css",
+        "css pattern examples",
+        "css3 patterns",
+        "css grid pattern",
+        "css background pattern generator",
+        "51 css background patterns"
+      ]
+    },
+    "radio-buttons": {
+      "titleKw": "radio button css styling",
+      "kw": "radio buttons",
+      "related": [
+        "radio button html code",
+        "css styling radio buttons",
+        "radio button style examples",
+        "custom radio button css",
+        "css switch toggle"
+      ]
+    },
+    "screens": {
+      "titleKw": "screen ui design",
+      "kw": "ui screens",
+      "related": [
+        "screen design ui",
+        "app screen design",
+        "ui screen examples",
+        "loading screen website"
+      ]
+    },
+    "scroll": {
+      "titleKw": "scroll animation css",
+      "kw": "scroll animation",
+      "related": [
+        "scroll animation examples",
+        "scroll animation library",
+        "scroll animation website",
+        "scroll trigger animation",
+        "animate on scroll",
+        "css scroll driven animation"
+      ]
+    },
+    "sheikah": {
+      "titleKw": "zelda ui design",
+      "kw": "sheikah ui",
+      "related": [
+        "zelda hyrule ui",
+        "botw ui design",
+        "game ui components",
+        "sheikah slate",
+        "zelda botw ui"
+      ]
+    },
+    "skeleton": {
+      "titleKw": "skeleton loading ui",
+      "kw": "skeleton loading",
+      "related": [
+        "skeleton loading css",
+        "skeleton loading animation",
+        "skeleton screen ui",
+        "skeleton screen css",
+        "react skeleton loader"
+      ]
+    },
+    "stagger": {
+      "titleKw": "stagger animation css",
+      "kw": "stagger animation",
+      "related": [
+        "staggered animation css",
+        "stagger animation examples",
+        "animation stagger",
+        "stagger effect"
+      ]
+    },
+    "text": {
+      "titleKw": "css text effects",
+      "kw": "css text",
+      "related": [
+        "text animation css",
+        "typing animation css",
+        "css text style",
+        "gradient text css",
+        "text stroke css",
+        "css text underline animation"
+      ]
+    },
+    "text-animation": {
+      "titleKw": "text animation css",
+      "kw": "text animation",
+      "related": [
+        "text animation effects",
+        "text type animation css",
+        "html css text animation",
+        "typing effect css",
+        "letter animation css",
+        "text animation library"
+      ]
+    },
+    "textanimations": {
+      "titleKw": "text animation examples",
+      "kw": "text animations",
+      "related": [
+        "text animation css",
+        "text animation generator",
+        "css text animation effects",
+        "css text typing animation",
+        "word reveal animation",
+        "text animation tailwind css"
+      ]
+    },
+    "threejs": {
+      "titleKw": "three.js examples",
+      "kw": "three.js",
+      "related": [
+        "three js animation",
+        "three js portfolio",
+        "three.js websites",
+        "canvas animation js",
+        "particles.js",
+        "react three fiber examples"
+      ]
+    },
+    "timeline": {
+      "titleKw": "timeline css design",
+      "kw": "css timeline",
+      "related": [
+        "timeline html css codepen",
+        "horizontal timeline css responsive",
+        "timeline code in html css",
+        "timeline ui design",
+        "react vertical timeline component",
+        "css timeline vertical"
+      ]
+    },
+    "timer": {
+      "titleKw": "countdown timer css",
+      "kw": "css timer",
+      "related": [
+        "countdown timer widget",
+        "timer ui design",
+        "css countdown",
+        "countdown widget for website"
+      ]
+    },
+    "toggle-switches": {
+      "titleKw": "toggle switch css",
+      "kw": "toggle switch",
+      "related": [
+        "css toggle switch with text",
+        "toggle button html css",
+        "toggle switch onoff css",
+        "toggle switch in website",
+        "react toggle switch component",
+        "css switch toggle"
+      ]
+    },
+    "tooltips": {
+      "titleKw": "css tooltip",
+      "kw": "tooltips",
+      "related": [
+        "css tooltip on hover",
+        "tooltip css design",
+        "css tooltip arrow",
+        "hover pop up css",
+        "react tooltip component"
+      ]
+    },
+    "ui-element": {
+      "titleKw": "ui elements design",
+      "kw": "ui elements",
+      "related": [
+        "ui design elements",
+        "web ui elements",
+        "ui components list",
+        "ui elements in games"
+      ]
+    },
+    "waapi": {
+      "titleKw": "web animations api",
+      "kw": "waapi",
+      "related": [
+        "web animations api examples",
+        "waapi animation",
+        "web animation api tutorial",
+        "scroll-driven animations",
+        "css scroll driven animation"
+      ]
+    },
+    "widget": {
+      "titleKw": "web widgets design",
+      "kw": "ui widgets",
+      "related": [
+        "web widget design",
+        "css widgets",
+        "widget ui examples",
+        "weather widget html",
+        "tailwind card component"
+      ]
+    },
+    "modal_new": {
+      "titleKw": "modal_new",
+      "kw": "modal_new",
+      "related": []
+    },
+    "accordion": {
+      "titleKw": "css accordion",
+      "kw": "accordion",
+      "related": [
+        "accordion css",
+        "accordion html css",
+        "react accordion component",
+        "css accordion animation"
+      ]
+    },
+    "alert": {
+      "titleKw": "css alert design",
+      "kw": "alert",
+      "related": [
+        "alert box css",
+        "notification alert ui",
+        "css alert message"
+      ]
+    },
+    "banner": {
+      "titleKw": "css banner design",
+      "kw": "banner",
+      "related": [
+        "banner html css",
+        "promo banner ui",
+        "css hero banner"
+      ]
+    },
+    "badge": {
+      "titleKw": "css badge design",
+      "kw": "badge",
+      "related": [
+        "css badge styles",
+        "badge tailwind css",
+        "css badge design",
+        "notification badge ui"
+      ]
+    },
+    "breadcrumb": {
+      "titleKw": "css breadcrumb",
+      "kw": "breadcrumb",
+      "related": [
+        "css breadcrumbs",
+        "breadcrumb html css",
+        "css breadcrumb styles",
+        "breadcrumb ui design"
+      ]
+    },
+    "carousel": {
+      "titleKw": "css carousel slider",
+      "kw": "carousel",
+      "related": [
+        "carousel slider css",
+        "image carousel html css",
+        "react carousel component",
+        "tailwind carousel"
+      ]
+    },
+    "chat": {
+      "titleKw": "css chat bubble",
+      "kw": "chat",
+      "related": [
+        "css chat bubble",
+        "css speech bubble",
+        "chat ui design",
+        "chat bubble html css"
+      ]
+    },
+    "checkbox": {
+      "titleKw": "css checkbox design",
+      "kw": "checkbox",
+      "related": [
+        "custom checkbox css",
+        "checkbox html css",
+        "css checkbox style"
+      ]
+    },
+    "combobox": {
+      "titleKw": "css combobox",
+      "kw": "combobox",
+      "related": [
+        "css combobox styling",
+        "tailwind css combobox",
+        "combobox ui design"
+      ]
+    },
+    "counter": {
+      "titleKw": "css counter animation",
+      "kw": "counter",
+      "related": [
+        "counter animation css",
+        "count up animation",
+        "number counter ui"
+      ]
+    },
+    "divider": {
+      "titleKw": "css divider design",
+      "kw": "divider",
+      "related": [
+        "wave divider css",
+        "section divider css",
+        "css divider line"
+      ]
+    },
+    "dropdown": {
+      "titleKw": "dropdown menu css",
+      "kw": "dropdown",
+      "related": [
+        "tailwind dropdown menu",
+        "css dropdown menu",
+        "react dropdown menu component"
+      ]
+    },
+    "faq": {
+      "titleKw": "faq accordion ui",
+      "kw": "faq",
+      "related": [
+        "faq section html css",
+        "accordion faq design"
+      ]
+    },
+    "feature": {
+      "titleKw": "feature card design",
+      "kw": "feature",
+      "related": [
+        "feature card ui",
+        "feature section design",
+        "tailwind pricing card"
+      ]
+    },
+    "footer": {
+      "titleKw": "footer html css",
+      "kw": "footer",
+      "related": [
+        "footer design css",
+        "tailwind footer template",
+        "website footer ui"
+      ]
+    },
+    "gallery": {
+      "titleKw": "image gallery html css",
+      "kw": "gallery",
+      "related": [
+        "image gallery css grid",
+        "photo gallery html css",
+        "css masonry layout"
+      ]
+    },
+    "gradient": {
+      "titleKw": "css gradient animation",
+      "kw": "gradient",
+      "related": [
+        "animated gradient css",
+        "gradient background css",
+        "text gradient css animation"
+      ]
+    },
+    "icon": {
+      "titleKw": "css icons design",
+      "kw": "icon",
+      "related": [
+        "svg icon css",
+        "icon button html",
+        "animated icon css",
+        "css icon hover"
+      ]
+    },
+    "map": {
+      "titleKw": "game map ui",
+      "kw": "map",
+      "related": [
+        "game map design",
+        "minimap ui",
+        "interactive map css"
+      ]
+    },
+    "modal": {
+      "titleKw": "modal popup css",
+      "kw": "modal",
+      "related": [
+        "modal html css",
+        "popup css design",
+        "tailwind modal popup",
+        "react modal component"
+      ]
+    },
+    "navbar": {
+      "titleKw": "navbar css design",
+      "kw": "navbar",
+      "related": [
+        "responsive navbar css",
+        "navbar html css codepen",
+        "tailwind navbar template",
+        "react navbar component"
+      ]
+    },
+    "pagination": {
+      "titleKw": "css pagination",
+      "kw": "pagination",
+      "related": [
+        "pagination html css",
+        "css pagination styles",
+        "tailwind css pagination"
+      ]
+    },
+    "parallax": {
+      "titleKw": "parallax scrolling css",
+      "kw": "parallax",
+      "related": [
+        "parallax scrolling website",
+        "parallax scroll effect css",
+        "scroll parallax js"
+      ]
+    },
+    "particles": {
+      "titleKw": "particles.js",
+      "kw": "particles",
+      "related": [
+        "particles js animation",
+        "canvas particle network",
+        "react particles"
+      ]
+    },
+    "pie": {
+      "titleKw": "css pie chart",
+      "kw": "pie",
+      "related": [
+        "pie chart html css",
+        "donut chart css",
+        "chart ui design"
+      ]
+    },
+    "preloader": {
+      "titleKw": "page preloader css",
+      "kw": "preloader",
+      "related": [
+        "preloader animation",
+        "page loader css",
+        "css preloader",
+        "loading screen html"
+      ]
+    },
+    "progress": {
+      "titleKw": "progress bar css",
+      "kw": "progress",
+      "related": [
+        "progress bar animation css",
+        "css progress bar",
+        "circular progress css",
+        "loading progress bar"
+      ]
+    },
+    "rating": {
+      "titleKw": "star rating css",
+      "kw": "rating",
+      "related": [
+        "rating stars css",
+        "star rating html css",
+        "review stars ui"
+      ]
+    },
+    "search": {
+      "titleKw": "search bar css",
+      "kw": "search",
+      "related": [
+        "search bar html css",
+        "search input design",
+        "react search bar component"
+      ]
+    },
+    "section": {
+      "titleKw": "section design css",
+      "kw": "section",
+      "related": [
+        "section divider css",
+        "website section layout"
+      ]
+    },
+    "sidebar": {
+      "titleKw": "sidebar menu css",
+      "kw": "sidebar",
+      "related": [
+        "sidebar html css",
+        "tailwind sidebar template",
+        "react sidebar component"
+      ]
+    },
+    "slider": {
+      "titleKw": "range slider css",
+      "kw": "slider",
+      "related": [
+        "range input css",
+        "slider html css",
+        "range slider design"
+      ]
+    },
+    "spinner": {
+      "titleKw": "css spinner animation",
+      "kw": "spinner",
+      "related": [
+        "loading spinner css",
+        "spinner animation html",
+        "tailwind spinner loader"
+      ]
+    },
+    "stat": {
+      "titleKw": "stats section design",
+      "kw": "stat",
+      "related": [
+        "stats counter animation",
+        "metric card ui",
+        "statistics display css"
+      ]
+    },
+    "stepper": {
+      "titleKw": "css stepper",
+      "kw": "stepper",
+      "related": [
+        "stepper html css",
+        "step indicator css",
+        "tailwind css stepper"
+      ]
+    },
+    "svg": {
+      "titleKw": "svg animation examples",
+      "kw": "svg",
+      "related": [
+        "svg animation codepen",
+        "animated svg icons",
+        "svg line animation",
+        "svg animation css"
+      ]
+    },
+    "switch": {
+      "titleKw": "toggle switch css",
+      "kw": "switch",
+      "related": [
+        "css switch toggle",
+        "react toggle switch component",
+        "toggle button html css"
+      ]
+    },
+    "tab": {
+      "titleKw": "css tabs design",
+      "kw": "tab",
+      "related": [
+        "tabs html css",
+        "tab design ui",
+        "react tabs component"
+      ]
+    },
+    "table": {
+      "titleKw": "css table design",
+      "kw": "table",
+      "related": [
+        "table html css",
+        "data table ui design",
+        "css table styles"
+      ]
+    },
+    "tag": {
+      "titleKw": "tag input css",
+      "kw": "tag",
+      "related": [
+        "tag input design",
+        "css chips",
+        "tags input html"
+      ]
+    },
+    "toast": {
+      "titleKw": "toast notification css",
+      "kw": "toast",
+      "related": [
+        "toast notification html",
+        "css toast design",
+        "react toast notification"
+      ]
+    },
+    "ui": {
+      "titleKw": "ui design elements",
+      "kw": "ui",
+      "related": [
+        "ui elements design",
+        "web ui components",
+        "ui design examples"
+      ]
+    },
+    "widgets": {
+      "titleKw": "web widgets design",
+      "kw": "widgets",
+      "related": [
+        "web widget design",
+        "css widgets",
+        "widget ui examples"
+      ]
+    },
+    "battle": {
+      "titleKw": "game battle ui",
+      "kw": "battle",
+      "related": [
+        "battle ui design",
+        "rpg battle interface",
+        "game damage numbers",
+        "combat ui"
+      ]
+    },
+    "controls": {
+      "titleKw": "game controls ui",
+      "kw": "controls",
+      "related": [
+        "game ui controls",
+        "controller ui design",
+        "settings ui",
+        "hud controls"
+      ]
+    },
+    "css": {
+      "titleKw": "css design examples",
+      "kw": "css",
+      "related": [
+        "css design ideas",
+        "pure css design",
+        "css art",
+        "css examples code"
+      ]
+    },
+    "decorations": {
+      "titleKw": "css decorations",
+      "kw": "decorations",
+      "related": [
+        "css decorative elements",
+        "website decorations",
+        "animated decorations",
+        "css ornaments"
+      ]
+    },
+    "graphs": {
+      "titleKw": "css graphs",
+      "kw": "graphs",
+      "related": [
+        "css bar chart",
+        "pure css graph",
+        "css gauge",
+        "chart ui design"
+      ]
+    },
+    "quest": {
+      "titleKw": "game quest ui",
+      "kw": "quest",
+      "related": [
+        "quest log ui",
+        "game quest interface",
+        "rpg menu design",
+        "quest tracker ui"
+      ]
+    },
+    "scope": {
+      "titleKw": "game scope ui",
+      "kw": "scope",
+      "related": [
+        "aim scope design",
+        "game sniper ui",
+        "crosshair css",
+        "fps ui design"
+      ]
+    },
+    "titles": {
+      "titleKw": "game title design",
+      "kw": "titles",
+      "related": [
+        "title screen design",
+        "game title screen",
+        "animated title css"
+      ]
+    },
+    "utilities": {
+      "titleKw": "css utilities",
+      "kw": "utilities",
+      "related": [
+        "css utility classes",
+        "css helpers",
+        "ui utilities",
+        "utility components"
+      ]
+    },
+    "shop": {
+      "titleKw": "shop ui design",
+      "kw": "shop",
+      "related": [
+        "ecommerce ui",
+        "shop interface design",
+        "product card ui",
+        "store ui"
+      ]
+    },
+    "feature-cards": {
+      "titleKw": "feature card design",
+      "kw": "feature_cards",
+      "related": [
+        "feature card ui",
+        "feature section design",
+        "pricing card ui"
+      ]
+    },
+    "landing-page": {
+      "titleKw": "landing page design",
+      "kw": "landing",
+      "related": [
+        "landing page ui design",
+        "landing page examples",
+        "tailwind landing page template"
+      ]
+    },
+    "fabs": {
+      "titleKw": "floating action button",
+      "kw": "fab",
+      "related": [
+        "floating action button css",
+        "fab menu design",
+        "react floating action button",
+        "css speed dial"
+      ]
+    },
+    "dialog": {
+      "titleKw": "dialog box ui",
+      "kw": "dialog ui",
+      "related": [
+        "dialog html css",
+        "modal dialog design",
+        "react modal component",
+        "tailwind modal popup"
+      ]
+    },
+    "tabs": {
+      "titleKw": "css tabs design",
+      "kw": "css tabs",
+      "related": [
+        "tabs html css",
+        "tab design ui",
+        "react tabs component",
+        "tab bar css"
+      ]
+    }
   }
 }

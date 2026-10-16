@@ -91,14 +91,34 @@ for (const { slug, file } of sample) {
 
   const ldBlocks = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || []
   if (ldBlocks.length === 0) failures.push(`${slug}: no JSON-LD`)
+  const ldTypes = new Set()
+  let breadcrumbDepth = 0
   for (const block of ldBlocks) {
     const body = block.replace(/^<script[^>]*>/, '').replace(/<\/script>$/, '')
     try {
-      JSON.parse(body)
+      const parsed = JSON.parse(body)
+      const type = Array.isArray(parsed) ? parsed.map((x) => x['@type']).join(',') : parsed['@type']
+      if (type) ldTypes.add(type)
+      // BreadcrumbList must be a real multi-step trail, not a home stub
+      if (type === 'BreadcrumbList') {
+        const items = parsed?.itemListElement
+        breadcrumbDepth = Array.isArray(items) ? items.length : 0
+        if (breadcrumbDepth < 2) failures.push(`${slug}: BreadcrumbList too shallow (${breadcrumbDepth})`)
+      }
+      if (type === 'FAQPage' && !(parsed?.mainEntity && Array.isArray(parsed.mainEntity) && parsed.mainEntity.length >= 2))
+        failures.push(`${slug}: FAQPage lacks mainEntity`)
+      if (type === 'CollectionPage' && !parsed?.mainEntity)
+        failures.push(`${slug}: CollectionPage lacks mainEntity`)
     } catch (e) {
       failures.push(`${slug}: invalid JSON-LD (${e.message})`)
     }
   }
+  // 页面类型感知断言：components → SoftwareSourceCode；categories/projects → CollectionPage
+  const [root] = slug.split('/')
+  if (root === 'components' && !ldTypes.has('SoftwareSourceCode'))
+    failures.push(`${slug}: component page missing SoftwareSourceCode`)
+  if ((root === 'categories' || root === 'projects') && !ldTypes.has('CollectionPage'))
+    failures.push(`${slug}: collection page missing CollectionPage`)
 
   // hreflang：单语言海外站必须声明 en + x-default，且指向自身 canonical
   if (!/hreflang="en"/.test(html)) failures.push(`${slug}: missing hreflang="en"`)
@@ -157,12 +177,30 @@ if (!fs.existsSync(notFoundPath)) {
 }
 
 // --- sitemap ---------------------------------------------------------------
+// sitemap.xml is now a sitemap index pointing at 4 shards. Verify the index
+// structure AND aggregate the shard URLs for the real per-URL checks.
+const hardFailures = []
 const sitemapPath = path.join(distDir, 'sitemap.xml')
 let sitemapUrls = []
+let sitemapIndexOk = true
+let sitemapShards = []
 if (fs.existsSync(sitemapPath)) {
-  sitemapUrls = (fs.readFileSync(sitemapPath, 'utf8').match(/<loc>([^<]+)<\/loc>/g) || []).map((s) =>
-    s.slice(5, -6)
-  )
+  const raw = fs.readFileSync(sitemapPath, 'utf8')
+  sitemapShards = (raw.match(/<loc>([^<]+)<\/loc>/g) || []).map((s) => s.slice(5, -6))
+  if (!/<sitemapindex\s+xmlns=/.test(raw)) sitemapIndexOk = false
+  for (const shard of sitemapShards) {
+    if (!shard.endsWith('.xml')) sitemapIndexOk = false
+    const shardName = shard.slice(shard.lastIndexOf('/') + 1)
+    const shardPath = path.join(distDir, shardName)
+    if (!fs.existsSync(shardPath)) sitemapIndexOk = false
+    const shardRaw = fs.readFileSync(shardPath, 'utf8')
+    if (/<changefreq>/.test(shardRaw)) hardFailures.push(`sitemap shard ${shardName} contains <changefreq>`)
+    if (/<priority>/.test(shardRaw)) hardFailures.push(`sitemap shard ${shardName} contains <priority>`)
+    if (!/<lastmod>20\d{2}-\d{2}-\d{2}<\/lastmod>/.test(shardRaw))
+      hardFailures.push(`sitemap shard ${shardName} has no valid YYYY-MM-DD <lastmod>`)
+    const shardUrls = (shardRaw.match(/<loc>([^<]+)<\/loc>/g) || []).map((s) => s.slice(5, -6))
+    sitemapUrls.push(...shardUrls)
+  }
 }
 
 const fileCount = allHtml.length + countOtherFiles(distDir)
@@ -185,6 +223,7 @@ console.log(`generated pages      : ${pages.length}`)
 console.log(`inbound links        : min=${counts[0]} median=${median} max=${counts[counts.length - 1]}`)
 console.log(`orphan pages         : ${orphans.length}`)
 console.log(`sampled for integrity: ${sample.length}`)
+console.log(`sitemap index        : ${sitemapIndexOk ? 'ok' : 'INVALID'} (${sitemapShards.length} shards)`)
 console.log(`sitemap urls         : ${sitemapUrls.length} (unique ${uniqueUrls.size})`)
 console.log(`sitemap offsite      : ${offsite.length}`)
 console.log(`dist total files     : ${fileCount} / 20000`)
@@ -194,10 +233,10 @@ console.log(`SPA view shells      : ${shellResults.join(' | ')}`)
 console.log(`slash-less links     : ${slashlessLinks.size} (each would 308-redirect)`)
 console.log(`404 page             : ${notFound404Failures.length ? notFound404Failures.join('; ') : 'ok (noindex)'}`)
 
-const hardFailures = []
 if (orphans.length > 0) hardFailures.push(`${orphans.length} orphan pages`)
 if (failures.length > 0) hardFailures.push(`${failures.length} page integrity failures`)
 if (notFound404Failures.length > 0) hardFailures.push(notFound404Failures.join('; '))
+if (!sitemapIndexOk) hardFailures.push('sitemap.xml is not a valid sitemap index over existing .xml shards')
 if (sitemapUrls.length !== uniqueUrls.size) hardFailures.push('duplicate sitemap urls')
 if (offsite.length > 0) hardFailures.push('sitemap contains non-fxlab urls')
 if (fileCount >= 20000) hardFailures.push(`dist exceeds Cloudflare Pages 20000-file limit (${fileCount})`)

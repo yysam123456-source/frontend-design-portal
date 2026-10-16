@@ -23,3 +23,10 @@
 # Brand asset; versioned by content, cheap to re-fetch daily
 /og-image.png
   Cache-Control: public, max-age=86400
+
+# Sitemaps & robots are re-read by Google frequently; keep them fresh
+/sitemap*.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600

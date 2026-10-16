@@ -27,7 +27,7 @@
  *   dist/categories/<category>/index.html      (only categories with >= CATEGORY_MIN entries)
  *   dist/components/<componentId>/index.html
  *   dist/404.html
- *   dist/sitemap.xml
+ *   dist/sitemap.xml (sitemap index → sitemap-pages/projects/categories/components.xml)
  */
 
 import fs from 'node:fs'
@@ -40,7 +40,7 @@ const DATA_DIR = path.join(ROOT, 'public', 'data')
 const DIST = path.join(ROOT, 'dist')
 
 const SITE = 'https://fxlab.craftisle.com'
-const CATEGORY_MIN = 8
+const CATEGORY_MIN = 2
 const MAX_CARDS_PER_PAGE = 150
 const MAX_CODE_LINES = 150
 const MAX_CARDS_IN_PROJECT = 150
@@ -562,29 +562,33 @@ for (const project of projects) {
 
 log('generating category pages…')
 const categories = [...byCategory.entries()]
+  .map(([cat, ids]) => [cat, ids.filter((id) => keptIds.has(id))])
   .filter(([, ids]) => ids.length >= CATEGORY_MIN)
   .sort((a, b) => b[1].length - a[1].length)
 
 let categoryPageCount = 0
 for (const [cat, ids] of categories) {
+  // Only components that actually have a generated page may appear on the category
+  // page — otherwise cards would point at URLs that don't exist (dead outbound links).
+  const kept = ids.filter((id) => keptIds.has(id))
   const url = slugUrl(`categories/${cat}`)
   const label = prettyCategory(cat)
   const kw = KEYWORDS.categories?.[cat] || {}
   const title = fitTitle(label, [
     `${kw.titleKw || 'open-source UI examples'} with live previews`,
-    `${ids.length} open-source ${kw.titleKw || 'UI'} examples`,
-    `${ids.length} open-source UI examples`,
+    `${kept.length} open-source ${kw.titleKw || 'UI'} examples`,
+    `${kept.length} open-source UI examples`,
     'open-source UI examples',
   ])
   const description = clip(
-    `Browse ${ids.length} open-source ${label.toLowerCase()} components with live previews and copy-ready source code${
+    `Browse ${kept.length} open-source ${label.toLowerCase()} components with live previews and copy-ready source code${
       kw.related?.length ? `, including ${kw.related.slice(0, 4).join(', ')}.` : '.'
     } Sourced from React Bits, Uiverse, Animata, Anime.js and more.`,
     300
   )
-  const shown = ids.slice(0, MAX_CARDS_PER_PAGE)
+  const shown = kept.slice(0, MAX_CARDS_PER_PAGE)
 
-  const srcProjects = [...new Set(ids.map((id) => byId.get(id)?.project).filter(Boolean))]
+  const srcProjects = [...new Set(kept.map((id) => byId.get(id)?.project).filter(Boolean))]
   const srcNames = srcProjects.length === 1 ? srcProjects[0] : srcProjects.slice(0, 5).join(', ') + (srcProjects.length > 5 ? ' and more' : '')
 
   const faqs = [
@@ -609,20 +613,20 @@ for (const [cat, ids] of categories) {
   <p class="eyebrow">Category</p>
   <h1>${esc(label)} components</h1>
   <p class="lede">
-    ${ids.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components collected from across the
+    ${kept.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components collected from across the
     gallery. Each entry links to its full source code and live preview.
     ${kw.related?.length ? `Here you will find ${esc(kw.related.slice(0, 4).join(', '))} ready to copy.` : ''}
   </p>
   <div class="stats">
-    <div class="stat"><div class="n">${ids.length.toLocaleString()}</div><div class="l">Components</div></div>
-    <div class="stat"><div class="n">${new Set(ids.map((id) => byId.get(id)?.project)).size}</div><div class="l">Source projects</div></div>
+    <div class="stat"><div class="n">${kept.length.toLocaleString()}</div><div class="l">Components</div></div>
+    <div class="stat"><div class="n">${new Set(kept.map((id) => byId.get(id)?.project)).size}</div><div class="l">Source projects</div></div>
   </div>
 </div>
 
 <section class="section">
   <h2>What you'll find here</h2>
   <p>
-    This collection brings together ${ids.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components${
+    This collection brings together ${kept.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components${
       srcProjects.length ? ` from ${esc(srcNames)}` : ''
     }${
       kw.related?.length ? `, covering ${esc(kw.related.slice(0, 4).join(', '))}` : ''
@@ -638,7 +642,7 @@ for (const [cat, ids] of categories) {
 </section>
 
 <section class="section">
-  <h2>${esc(label)} components (${shown.length}${ids.length > shown.length ? ` of ${ids.length}` : ''})</h2>
+  <h2>${esc(label)} components (${shown.length}${kept.length > shown.length ? ` of ${kept.length}` : ''})</h2>
   <div class="grid">
     ${shown
       .map((id) => {
@@ -696,7 +700,7 @@ for (const [cat, ids] of categories) {
           description: clip(description, 300),
           mainEntity: {
             '@type': 'ItemList',
-            numberOfItems: ids.length,
+            numberOfItems: kept.length,
             itemListElement: shown.slice(0, 50).map((id, i) => ({
               '@type': 'ListItem',
               position: i + 1,
@@ -1022,31 +1026,36 @@ function fileMtime(relPath) {
   }
 }
 
-const urls = []
-// 首页 + 两个 SPA 视图外壳：均由 dist/index.html 派生
-const indexMtime = fileMtime('dist/index.html')
-urls.push({ loc: `${SITE}/`, lastmod: indexMtime })
-urls.push({ loc: `${SITE}/components/`, lastmod: indexMtime })
-urls.push({ loc: `${SITE}/showcases/`, lastmod: indexMtime })
-// 项目页：元数据源 src/data/projects.ts
-const projectsMtime = fileMtime('src/data/projects.ts')
-for (const p of projects) {
-  urls.push({ loc: slugUrl(`projects/${p.id}`), lastmod: projectsMtime })
-}
-// 分类页：目录源 public/data/index.json
-const indexDataMtime = fileMtime('public/data/index.json')
-for (const [cat] of categories) {
-  urls.push({ loc: slugUrl(`categories/${cat}`), lastmod: indexDataMtime })
-}
-// 组件页：所属项目的代码/元数据 JSON
-for (const project of projects) {
-  const mtime = fileMtime(`public/data/${project.id}.json`)
-  for (const id of eligibleByProject.get(project.id) || []) {
-    urls.push({ loc: slugUrl(`components/${id}`), lastmod: mtime })
-  }
+// ────────────────────────────────────────────────────────────── sitemap (sharded)
+//
+// One flat 5,100-URL sitemap is legal but opaque: Google can't tell which URLs
+// changed or which section regressed. Split by section so GSC shows per-shard
+// indexing status and re-crawls only the changed shard.
+
+function sitemapDoc(name, entries) {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries
+  .map(
+    (u) => `  <url>
+    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}
+  </url>`
+  )
+  .join('\n')}
+</urlset>
+`
 }
 
-// pre-existing static demo documents（各自文件的真实 mtime）
+function writeSitemapShard(relPath, entries) {
+  fs.writeFileSync(path.join(DIST, relPath), sitemapDoc(relPath, entries), 'utf8')
+}
+
+// 首页 + 两个 SPA 视图外壳 + 静态 demo 文档：由 dist/index.html / public 文件派生
+const pagesShard = []
+const indexMtime = fileMtime('dist/index.html')
+pagesShard.push({ loc: `${SITE}/`, lastmod: indexMtime })
+pagesShard.push({ loc: `${SITE}/components/`, lastmod: indexMtime })
+pagesShard.push({ loc: `${SITE}/showcases/`, lastmod: indexMtime })
 for (const p of [
   '/kage.html',
   '/landscape.html',
@@ -1056,21 +1065,49 @@ for (const p of [
   '/demo-assets/zelda-hyrule-ui/public-showcase/june-quest-calendar.html',
   '/demo-assets/zelda-hyrule-ui/public-showcase/shrine-focus-timer.html',
 ]) {
-  urls.push({ loc: `${SITE}${p}`, lastmod: fileMtime(`public${p}`) })
+  pagesShard.push({ loc: `${SITE}${p}`, lastmod: fileMtime(`public${p}`) })
 }
+writeSitemapShard('sitemap-pages.xml', pagesShard)
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map(
-    (u) => `  <url>
-    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}
-  </url>`
-  )
+// 项目页：元数据源 src/data/projects.ts
+const projectsShard = []
+const projectsMtime = fileMtime('src/data/projects.ts')
+for (const p of projects) {
+  projectsShard.push({ loc: slugUrl(`projects/${p.id}`), lastmod: projectsMtime })
+}
+writeSitemapShard('sitemap-projects.xml', projectsShard)
+
+// 分类页：目录源 public/data/index.json
+const categoriesShard = []
+const indexDataMtime = fileMtime('public/data/index.json')
+for (const [cat] of categories) {
+  categoriesShard.push({ loc: slugUrl(`categories/${cat}`), lastmod: indexDataMtime })
+}
+writeSitemapShard('sitemap-categories.xml', categoriesShard)
+
+// 组件页：所属项目的代码/元数据 JSON
+const componentsShard = []
+for (const project of projects) {
+  const mtime = fileMtime(`public/data/${project.id}.json`)
+  for (const id of eligibleByProject.get(project.id) || []) {
+    componentsShard.push({ loc: slugUrl(`components/${id}`), lastmod: mtime })
+  }
+}
+writeSitemapShard('sitemap-components.xml', componentsShard)
+
+const shardLastmod = fileMtime('scripts/generate-seo-pages.mjs')
+const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${['sitemap-pages.xml', 'sitemap-projects.xml', 'sitemap-categories.xml', 'sitemap-components.xml']
+  .map((s) => `  <sitemap>
+    <loc>${SITE}/${s}</loc>${shardLastmod ? `\n    <lastmod>${shardLastmod}</lastmod>` : ''}
+  </sitemap>`)
   .join('\n')}
-</urlset>
+</sitemapindex>
 `
-fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap, 'utf8')
+fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemapIndex, 'utf8')
+
+const urls = [...pagesShard, ...projectsShard, ...categoriesShard, ...componentsShard]
 
 // ────────────────────────────────────────────────────────────── report
 
