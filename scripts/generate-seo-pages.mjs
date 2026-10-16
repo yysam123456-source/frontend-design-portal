@@ -121,6 +121,43 @@ function prettyCategory(slug) {
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
+/**
+ * Uiverse components embed author-supplied "Tags: ..." comments inside their source.
+ * These are real, per-component micro-keywords (e.g. "ripple, glow, hover effect"),
+ * far more specific than the shared category phrase — using them differentiates the
+ * 3.8k Uiverse component pages instead of repeating one template across the whole set.
+ * Other libraries carry no such comments, so they keep their existing category+tech path.
+ */
+const TAG_STOPWORDS = new Set([
+  'button', 'buttons', 'css', 'html', 'ui', 'uiverse', 'hover', 'hoverable',
+  'simple', 'basic', 'pure', 'pure-css', 'tailwind', 'tailwindcss', 'javascript',
+  'js', 'react', 'web', 'website', 'component', 'components', 'animation',
+  'animated', 'card', 'cards', 'input', 'inputs', 'loader', 'loading', 'form',
+  'forms', 'icon', 'icons', 'menu', 'style', 'styles', 'custom', 'use', 'cute',
+  'small', 'nice', 'beautiful', 'cool', 'new', 'top', 'best', 'with', 'and',
+  'hover button', 'rounded button', 'social media', 'social',
+])
+
+function extractAuthorTags(source) {
+  if (!source) return []
+  const m = String(source).match(/Tags:\s*([^*]+)/i)
+  if (!m) return []
+  // Some Uiverse comments are `<!-- ... Tags: a, b, c -->` followed immediately by HTML;
+  // cut at the HTML-comment close so markup fragments never leak into the keyword pool.
+  const body = m[1].split('-->')[0]
+  const seen = new Set()
+  const out = []
+  for (const raw of body.split(/[,\n]/)) {
+    const t = raw.trim().toLowerCase().replace(/\s+/g, ' ')
+    const norm = t.replace(/button$/, '').replace(/[^a-z0-9 ]/g, '').trim().replace(/\s+/g, ' ')
+    if (norm.length < 3 || /^\d/.test(norm) || TAG_STOPWORDS.has(norm) || seen.has(norm)) continue
+    seen.add(norm)
+    out.push(norm)
+    if (out.length >= 5) break
+  }
+  return out
+}
+
 const KIND_LABEL = {
   'html-live': 'Live Preview',
   'react-generated': 'React Live',
@@ -530,6 +567,23 @@ for (const [cat, ids] of categories) {
   )
   const shown = ids.slice(0, MAX_CARDS_PER_PAGE)
 
+  const faqs = [
+    {
+      q: `How do I use ${kw.kw || label.toLowerCase()} components?`,
+      a: `Copy the code block on any ${label.toLowerCase()} card in this gallery, paste it into your own page, and adjust class names to match your design system. Every component ships with a live preview so you can see the result before you paste.`,
+    },
+    {
+      q: `Are these ${label.toLowerCase()} components free to use?`,
+      a: `Yes. Everything in the gallery is open-source, sourced from Uiverse, React Bits, Animata, Anime.js, Eldora UI and other public libraries, and ships with copy-ready HTML, CSS or React code.`,
+    },
+    {
+      q: `What kinds of ${label.toLowerCase()} are available?`,
+      a: `The collection covers ${
+        kw.related?.length ? kw.related.slice(0, 4).join(', ') : label.toLowerCase()
+      } and more — every entry with a live preview and the full source code.`,
+    },
+  ]
+
   const body = `
 <div class="hero">
   <p class="eyebrow">Category</p>
@@ -566,6 +620,15 @@ for (const [cat, ids] of categories) {
       .map(([c, list]) => `<a class="tag" href="/categories/${esc(c)}/">${esc(prettyCategory(c))} (${list.length})</a>`)
       .join('')}
   </div>
+</section>
+
+<section class="section">
+  <h2>Frequently asked questions</h2>
+  ${faqs
+    .map(
+      (f) => `<div class="faq"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`
+    )
+    .join('')}
 </section>`
 
   const breadcrumbs = crumbsHtml([
@@ -604,6 +667,15 @@ for (const [cat, ids] of categories) {
             })),
           },
         },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        },
       ],
       body,
     })
@@ -635,7 +707,10 @@ for (const project of projects) {
     const catLabel = prettyCategory(cat)
 
     const catKw = KEYWORDS.categories?.[cat] || {}
+    const authorTags = extractAuthorTags(snippet.source)
+    const tagPhrase = authorTags.slice(0, 3).join(' ')
     const title = fitTitle(c.name, [
+      authorTags.length ? `${tagPhrase} code & preview` : `${catKw.titleKw || catLabel} code & preview`,
       `${catKw.titleKw || catLabel} code & preview`,
       `${projectName} ${catKw.kw || catLabel} code & preview`,
       `${projectName} component code & preview`,
@@ -644,7 +719,8 @@ for (const project of projects) {
       'component',
     ])
     const kwSentence = catKw.related?.length ? ` Ideal for ${catKw.related.slice(0, 2).join(' and ')}.` : ''
-    const description = clip(synthDescription(c, projectName) + kwSentence, 200)
+    const tagSentence = authorTags.length ? ` Featuring ${authorTags.slice(0, 3).join(', ')}.` : ''
+    const description = clip(synthDescription(c, projectName) + tagSentence + kwSentence, 200)
 
     // Sequential prev/next inside this project. Guarantees every component page receives
     // at least one inbound internal link — orphan pages are effectively undiscoverable and
