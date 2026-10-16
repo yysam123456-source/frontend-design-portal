@@ -447,6 +447,13 @@ for (const project of projects) {
     .filter(Boolean)
     .join('\n')
 
+  const styleCounts = new Map()
+  for (const id of ids) {
+    const c = byId.get(id)
+    for (const s of c?.style || []) styleCounts.set(s, (styleCounts.get(s) || 0) + 1)
+  }
+  const topStyles = [...styleCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([s, n]) => `${s} (${n})`)
+
   const body = `
 <div class="hero">
   <p class="eyebrow">Source project</p>
@@ -466,6 +473,16 @@ for (const project of projects) {
     <a class="btn" href="${esc(project.github)}" rel="noopener">GitHub repository</a>
   </div>
 </div>
+
+<section class="section">
+  <h2>About ${esc(project.name)}</h2>
+  <p>${esc(project.description)}</p>
+  <p>
+    We mirror ${ids.length.toLocaleString()} ready-to-copy components from this project${
+      topStyles.length ? `, spanning ${esc(topStyles.join(', '))}` : ''
+    } — each with a live preview and the complete source snippet, so you can evaluate and reuse them without leaving the gallery.
+  </p>
+</section>
 
 <section class="section">
   <h2>${esc(project.name)} components (${shown.length}${ids.length > shown.length ? ` of ${ids.length}` : ''})</h2>
@@ -567,6 +584,9 @@ for (const [cat, ids] of categories) {
   )
   const shown = ids.slice(0, MAX_CARDS_PER_PAGE)
 
+  const srcProjects = [...new Set(ids.map((id) => byId.get(id)?.project).filter(Boolean))]
+  const srcNames = srcProjects.length === 1 ? srcProjects[0] : srcProjects.slice(0, 5).join(', ') + (srcProjects.length > 5 ? ' and more' : '')
+
   const faqs = [
     {
       q: `How do I use ${kw.kw || label.toLowerCase()} components?`,
@@ -598,6 +618,24 @@ for (const [cat, ids] of categories) {
     <div class="stat"><div class="n">${new Set(ids.map((id) => byId.get(id)?.project)).size}</div><div class="l">Source projects</div></div>
   </div>
 </div>
+
+<section class="section">
+  <h2>What you'll find here</h2>
+  <p>
+    This collection brings together ${ids.length.toLocaleString()} open-source ${esc(label.toLowerCase())} components${
+      srcProjects.length ? ` from ${esc(srcNames)}` : ''
+    }${
+      kw.related?.length ? `, covering ${esc(kw.related.slice(0, 4).join(', '))}` : ''
+    }. Every card links to a live preview and the full, copy-ready source code — no registration, no license fee, ready to drop into your own project.
+  </p>
+</section>
+
+<section class="section">
+  <h2>How to use these components</h2>
+  <p>
+    Open the preview, copy the code block, and paste it into your own HTML, CSS or React project. Most entries are self-contained — adjust class names, colors and spacing to match your design system and you are done. For framework entries, install the listed dependencies and drop the component in as-is.
+  </p>
+</section>
 
 <section class="section">
   <h2>${esc(label)} components (${shown.length}${ids.length > shown.length ? ` of ${ids.length}` : ''})</h2>
@@ -733,9 +771,9 @@ for (const project of projects) {
     const catMembers = (byCategory.get(cat) || []).filter((x) => x !== id && keptIds.has(x))
     const siblings = []
     if (catMembers.length) {
-      const step = Math.max(1, Math.floor(catMembers.length / 6))
+      const step = Math.max(1, Math.floor(catMembers.length / 9))
       const start = hash(id) % catMembers.length
-      for (let k = 0; k < 6 && siblings.length < 6; k++) {
+      for (let k = 0; k < 12 && siblings.length < 9; k++) {
         const pick = catMembers[(start + k * step) % catMembers.length]
         if (pick && !siblings.includes(pick)) siblings.push(pick)
       }
@@ -845,6 +883,18 @@ ${
               url: slugUrl(`projects/${project.id}`),
             },
           },
+          ...(rec?.kind === 'media-image' && poster
+            ? [
+                {
+                  '@context': 'https://schema.org',
+                  '@type': 'ImageObject',
+                  contentUrl: poster,
+                  url: poster,
+                  name: c.name,
+                  description: clip(description, 300),
+                },
+              ]
+            : []),
         ],
         body,
       })
