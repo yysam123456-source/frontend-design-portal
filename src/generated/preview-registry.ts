@@ -570,6 +570,7 @@ export const previewRegistry: Record<string, () => Promise<{ default: GeneratedP
   "px-weather-shooting-stars": () => import("./previews/pixelfx/px-weather-shooting-stars"),
   "px-weather-snow": () => import("./previews/pixelfx/px-weather-snow"),
   "px-weather-storm": () => import("./previews/pixelfx/px-weather-storm"),
+  "ascii-sharks-ocean": () => import("./previews/ascii-sharks/ascii-sharks-ocean"),
 }
 
 export function hasGeneratedPreview(id: string | null | undefined): boolean {

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-02T02:15:51.186Z",
+  "generatedAt": "2026-11-02T04:57:59.473Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
-    "ready:react-generated": 563,
+    "ready:react-generated": 564,
     "ready:html-live": 4312,
     "unsupported:unsupported": 28
   },
@@ -34441,6 +34441,13 @@
       "kind": "react-generated",
       "status": "ready",
       "entry": "./previews/pixelfx/px-weather-storm"
+    },
+    {
+      "id": "ascii-sharks-ocean",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-ocean"
     }
   ]
 }

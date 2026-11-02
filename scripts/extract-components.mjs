@@ -1244,6 +1244,31 @@ function extractPixelfx() {
   return components
 }
 
+// ============ ascii-sharks ============
+// Official demo: 8 ASCII shark kinds (classic, hammerhead, zebra, tiger, greathammer,
+// mako, thresher, nurse) rendered on canvas — boids fish schools + shark AI, zero deps.
+function extractAsciiSharks() {
+  const srcRoot = path.join(reposDir, 'ascii-sharks', 'src')
+  if (!fs.existsSync(path.join(srcRoot, 'index.ts'))) return []
+  const entry = fs.readFileSync(path.join(srcRoot, 'index.ts'), 'utf8')
+  const demoPath = path.join(reposDir, 'ascii-sharks', 'demo.ts')
+  const demo = fs.existsSync(demoPath) ? fs.readFileSync(demoPath, 'utf8') : ''
+  return [
+    {
+      id: 'ascii-sharks-ocean',
+      project: 'ascii-sharks',
+      name: 'Ascii Sharks Ocean',
+      category: 'official-demo',
+      style: ['ascii-art', 'canvas', 'generative-art', 'official-demo'],
+      techStack: ['TypeScript', 'Canvas API'],
+      description:
+        'Ascii Sharks official demo — a mixed school of ASCII sharks (hammerhead, thresher, mako, nurse) cruises a zero-dependency canvas ocean; pointer moves drive them apart and every frame is pure monospace text.',
+      language: 'tsx',
+      codeSnippet: { language: 'ts', source: entry + '\n\n' + demo },
+    },
+  ]
+}
+
 // ============ 主流程 ============
 console.log('Extracting components from cloned repos...')
 
@@ -1257,6 +1282,7 @@ const allComponents = [
   ...extractEldora(),
   ...extractThreeUI(),
   ...extractPixelfx(),
+  ...extractAsciiSharks(),
 ]
 
 // 统计

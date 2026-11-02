@@ -105,6 +105,19 @@
         "pixelart game effects",
         "canvas game effects"
       ]
+    },
+    "ascii-sharks": {
+      "kw": "ascii shark animation",
+      "titleKw": "ASCII shark animation and ocean boids",
+      "related": [
+        "ascii sharks",
+        "ascii art ocean",
+        "shark animation canvas",
+        "boids fish simulation",
+        "ascii fish swarm",
+        "generative ascii art",
+        "canvas shark game"
+      ]
     }
   },
   "categories": {

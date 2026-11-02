@@ -34434,13 +34434,20 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
     "kind": "react-generated",
     "status": "ready",
     "entry": "./previews/pixelfx/px-weather-storm"
+  },
+  "ascii-sharks-ocean": {
+    "id": "ascii-sharks-ocean",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-ocean"
   }
 }
 
 export const previewStats = {
   "ready:media-video": 268,
   "ready:media-image": 148,
-  "ready:react-generated": 563,
+  "ready:react-generated": 564,
   "ready:html-live": 4312,
   "unsupported:unsupported": 28
 } as const

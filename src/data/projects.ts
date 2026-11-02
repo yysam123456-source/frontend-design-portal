@@ -113,6 +113,18 @@ export const projects: ProjectMeta[] = [
     techStack: ['JavaScript', 'Canvas API', 'ESM'],
     category: 'effect',
   },
+  {
+    id: 'ascii-sharks',
+    name: 'Ascii Sharks',
+    github: 'https://github.com/stackedlol/ascii-sharks',
+    demoBaseUrl: 'https://github.com/stackedlol/ascii-sharks',
+    description:
+      'A MIT-licensed TypeScript artificial-life demo: schools of tiny ASCII fish (Reynolds boids with alarm contagion and bait-ball milling) hunted by ASCII sharks (hammerhead, thresher, mako, nurse, tiger, zebra and more). Zero dependencies, rendered on canvas.',
+    accentColor: '#22D3EE',
+    tags: ['ascii-art', 'canvas', 'generative-art', 'boids', 'ocean', 'zero-dependency'],
+    techStack: ['TypeScript', 'Canvas API'],
+    category: 'animation',
+  },
 ]
 
 export const allTechStacks = Array.from(

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ascii-sharks-ocean",
+    "project": "ascii-sharks",
+    "name": "Ascii Sharks Ocean",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "Ascii Sharks official demo — a mixed school of ASCII sharks (hammerhead, thresher, mako, nurse) cruises a zero-dependency canvas ocean; pointer moves drive them apart and every frame is pure monospace text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { OceanEngine } from \"ascii-sharks\";\n\nconst canvas = document.querySelector(\"canvas\");\nconst engine = new OceanEngine(canvas, [\n  { kind: \"hammerhead\", size: 1 },\n  { kind: \"thresher\", size: 0.78 },\n  { kind: \"mako\", size: 0.64 },\n  { kind: \"nurse\", size: 0.5 },\n]);\n\n// engine.destroy() cleans up the loop, resize and pointer listeners."
+    }
+  }
+]
