@@ -944,12 +944,25 @@ fs.writeFileSync(path.join(DIST, '404.html'), notFound, 'utf8')
 // genuine 200 pages. It also lets each carry baked-in per-view metadata, so
 // crawlers see the correct title even without running JS -- which client-side
 // meta swapping cannot provide.
+// 首页 seo-home 块只在 `/` 出现。派生 SPA 外壳必须整段剥离，否则同一段正文会被
+// /components/ 与 /showcases/ 各复制一份，三个 URL 三份重复内容。
+const HOME_BLOCK_RE = /[ \t]*<!--\s*seo-home:start\s*-->[\s\S]*?<!--\s*seo-home:end\s*-->[ \t]*\r?\n?/g
+
+function stripHomeBlock(html, where) {
+  if (!html.includes('seo-home:start')) return html
+  const out = html.replace(HOME_BLOCK_RE, '')
+  if (out.includes('seo-home:start') || out.includes('seo-home:end')) {
+    throw new Error(`[seo-home] unpaired marker while deriving ${where}; refusing to ship inherited home copy`)
+  }
+  return out
+}
+
 const SPA_SHELL_SOURCE = path.join(DIST, 'index.html')
 
 const SPA_VIEWS = [
   {
     dir: 'components',
-    title: 'Component Gallery — 5,000+ Open-Source UI Components & Animations',
+    title: 'Component Gallery — 4,865 Open-Source UI Components & Animations',
     description:
       'Search and filter 5,000+ open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
   },
@@ -962,7 +975,7 @@ const SPA_VIEWS = [
 ]
 
 if (fs.existsSync(SPA_SHELL_SOURCE)) {
-  const baseShell = fs.readFileSync(SPA_SHELL_SOURCE, 'utf8')
+  const baseShell = stripHomeBlock(fs.readFileSync(SPA_SHELL_SOURCE, 'utf8'), 'spa-view-shells')
 
   for (const view of SPA_VIEWS) {
     const url = slugUrl(view.dir)
@@ -1010,6 +1023,23 @@ if (fs.existsSync(SPA_SHELL_SOURCE)) {
   }
 } else {
   log('WARNING: dist/index.html missing - SPA view shells not written')
+}
+
+// ─────────────────────────────────────────────────────── seo-home guards ---
+// ① 首页必须带着静态正文。构建链里若有人加了会删 HTML 注释的插件（removeComments），
+//    marker 会连同正文一起消失，而 sitemap 和词数验收都发现不了 —— 直接红掉。
+//    仅在 dist/index.html 存在时校验，保留单独跑本脚本（无 dist）的场景。
+if (fs.existsSync(SPA_SHELL_SOURCE) && !fs.readFileSync(SPA_SHELL_SOURCE, 'utf8').includes('seo-home:start')) {
+  throw new Error('[seo-home] home block missing in dist/index.html - static copy silently lost')
+}
+
+// ② 派生外壳必须干净。/components/ 与 /showcases/ 复用首页 body，
+//    首页专属正文一旦泄漏过去，就是三个 URL 三份重复内容。
+for (const view of SPA_VIEWS) {
+  const p = path.join(DIST, view.dir, 'index.html')
+  if (fs.existsSync(p) && fs.readFileSync(p, 'utf8').includes('seo-home:start')) {
+    throw new Error(`[seo-home] marker leaked into ${view.dir}/index.html - stripHomeBlock failed`)
+  }
 }
 
 /**

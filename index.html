@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Design Gallery — Open-Source UI Components, Animations & Demos</title>
-    <meta name="description" content="Free gallery of 5,000+ open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews, copy-ready code and open-source UI libraries." />
+    <meta name="description" content="Free gallery of 4,865 open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews, copy-ready code and open-source UI libraries." />
     <link rel="canonical" href="https://fxlab.craftisle.com/" />
     <link rel="alternate" hreflang="en" href="https://fxlab.craftisle.com/" />
     <link rel="alternate" hreflang="x-default" href="https://fxlab.craftisle.com/" />
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Frontend Design Gallery" />
     <meta property="og:title" content="Frontend Design Gallery — Open-Source UI Components, Animations & Demos" />
-    <meta property="og:description" content="Free gallery of 5,000+ open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews, copy-ready code and open-source UI libraries." />
+    <meta property="og:description" content="Free gallery of 4,865 open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews, copy-ready code and open-source UI libraries." />
     <meta property="og:url" content="https://fxlab.craftisle.com/" />
     <meta property="og:image" content="https://fxlab.craftisle.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
@@ -28,7 +28,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Frontend Design Gallery — Open-Source UI Components, Animations & Demos" />
-    <meta name="twitter:description" content="Free gallery of 5,000+ open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews, copy-ready code and open-source UI libraries." />
+    <meta name="twitter:description" content="Free gallery of 4,865 open-source UI components and animations from React Bits, Anime.js, Uiverse, Animata and PixiJS — live previews, copy-ready code and open-source UI libraries." />
     <meta name="twitter:image" content="https://fxlab.craftisle.com/og-image.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,44 +61,36 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- 无 JS / 简化抓取兜底：首页是纯 CSR SPA，noscript 提供可爬的核心导航，
-         与 head 中的 CollectionPage JSON-LD 互为印证 -->
-    <noscript>
-      <main style="font-family:Inter,system-ui,sans-serif;max-width:720px;margin:48px auto;padding:0 24px;color:#0a0a0a">
-        <h1>Frontend Design Gallery — Open-Source UI Components, Animations &amp; Demos</h1>
-        <p>A curated gallery of 5,000+ open-source UI components and animations with live previews and copy-ready code.</p>
-        <nav>
-          <h2>Explore</h2>
-          <ul>
-            <li><a href="/components/">Browse all 5,000+ components</a></li>
-            <li><a href="/showcases/">Showcases &amp; full-page demos</a></li>
-            <li><a href="/projects/react-bits/">React Bits</a></li>
-            <li><a href="/projects/animejs/">Anime.js</a></li>
-            <li><a href="/projects/uiverse/">Uiverse</a></li>
-            <li><a href="/projects/animata/">Animata</a></li>
-            <li><a href="/projects/eldoraui/">Eldora UI</a></li>
-            <li><a href="/projects/zelda-hyrule-ui/">Zelda Hyrule UI</a></li>
-            <li><a href="/projects/pixel2motion/">Pixel2Motion</a></li>
-            <li><a href="/projects/threeui/">ThreeUI</a></li>
-            <li><a href="/projects/pixijs/">PixiJS</a></li>
-          </ul>
-        </nav>
-        <nav>
-          <h2>Popular categories</h2>
-          <ul>
-            <li><a href="/categories/buttons/">CSS button hover effects</a></li>
-            <li><a href="/categories/cards/">CSS card hover effects</a></li>
-            <li><a href="/categories/loaders/">Loading spinner components</a></li>
-            <li><a href="/categories/forms/">CSS form design</a></li>
-            <li><a href="/categories/animations/">CSS animations examples</a></li>
-            <li><a href="/categories/backgrounds/">Animated backgrounds</a></li>
-            <li><a href="/categories/text-animation/">Text animation CSS</a></li>
-            <li><a href="/categories/menu/">CSS menu design</a></li>
-          </ul>
-        </nav>
-      </main>
-    </noscript>
+    <!-- SEO/GEO: 静态正文，首字节 HTML 可见，供不执行 JS 的爬虫与 AI 引擎读取。
+         React createRoot 首渲染会清空 #root，故这段只在 JS 落地前存在，不占版面。
+         marker 之间是首页专属内容：scripts/generate-seo-pages.mjs 在派生
+         /components/ 与 /showcases/ 外壳时必须整段剥离（stripHomeBlock），勿删 marker。 -->
+    <div id="root"><!-- seo-home:start -->
+      <h1>Frontend Design Gallery — open-source UI components and animations</h1>
+      <h2>What Frontend Design Gallery indexes</h2>
+      <p>The gallery is a browsable index of open-source UI components, animations and effects, assembled from eight upstream projects rather than written in-house. The dataset holds 4,865 entries, and each one carries a description, a technology list and a copyable code snippet. Previews render in the page itself instead of linking out.</p>
+      <ul>
+        <li>3,802 entries come from Uiverse, 417 from Anime.js, 203 from Animata and 134 from React Bits.</li>
+        <li>The remaining four sources are ThreeUI, Eldora UI, Zelda Hyrule UI and Pixel2Motion.</li>
+        <li>Seventy-eight category labels sort the collection, from 1,231 buttons and 726 cards to 103 background patterns.</li>
+        <li>Filters combine category with technology stack, so React animations can be isolated from CSS snippets.</li>
+      </ul>
+      <h2>How the previews work</h2>
+      <p>Every entry has a preview record, and most of them execute rather than illustrate: 4,312 render as live HTML in a sandboxed frame and 563 render compiled React. The remaining 416 are hosted video or images captured from the upstream demo.</p>
+      <ul>
+        <li>The preview manifest holds 5,319 records; 5,291 are marked ready and 28 are flagged unsupported.</li>
+        <li>A copy button beside each snippet writes the raw source to the clipboard in one click.</li>
+        <li>Every one of the 4,865 entries ships a snippet with a declared language and, where relevant, dependencies.</li>
+        <li>The manifest is generated at build time, so a new upstream release needs a rebuild rather than a live fetch.</li>
+      </ul>
+      <h2>What it does not do</h2>
+      <p>The gallery is an index, not a package. Nothing installs, and no component is authored here: the code comes from upstream repositories, whose licences apply rather than this site's.</p>
+      <ul>
+        <li>Twenty-eight entries are flagged unsupported and have no working preview.</li>
+        <li>Recorded demos show behaviour rather than execute it, so editing the code is the only way to test changes.</li>
+        <li>Code copied from Uiverse, React Bits or Anime.js keeps that project's licence, not one site-wide licence.</li>
+      </ul>
+    <!-- seo-home:end --></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
