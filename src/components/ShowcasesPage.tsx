@@ -4,6 +4,7 @@ import OrbitalViz from './OrbitalViz'
 import KeyboardConfigShowcase from './KeyboardConfigShowcase'
 import PixiJSShowcase from './PixiJSShowcase'
 import AbyssalDescent from './showcases/AbyssalDescent'
+import AsciiSharksShowcase from './showcases/AsciiSharksShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
    KAGE — MengTo 单文件滚动 3D 夜游（公众号爆火项目，整页 iframe）
@@ -1394,6 +1395,7 @@ const SHOWCASES = [
   { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱' },
   { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎' },
   { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈' },
+  { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1488,6 +1490,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'vegetation' && <IframeShowcase src="/showcases/vegetation/" title="WebGPU 藤蔓生成" />}
         {activeId === 'crystal' && <IframeShowcase src="/showcases/crystal/" title="WebGPU 水晶绘制" />}
         {activeId === 'rain' && <IframeShowcase src="/showcases/rain/" title="雨景工作室" />}
+        {activeId === 'ascii' && <AsciiSharksShowcase />}
       </div>
     </div>
   )
