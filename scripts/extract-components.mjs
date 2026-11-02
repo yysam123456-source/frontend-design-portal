@@ -1247,13 +1247,26 @@ function extractPixelfx() {
 // ============ ascii-sharks ============
 // Official demo: 8 ASCII shark kinds (classic, hammerhead, zebra, tiger, greathammer,
 // mako, thresher, nurse) rendered on canvas — boids fish schools + shark AI, zero deps.
+// Each species ships as its own demo component so every shark kind gets a dedicated
+// SEO landing page (species keyword tags embedded in the snippet for the SEO pipeline).
+const ASCII_SHARK_SPECIES = [
+  { kind: 'greathammer', name: 'Great Hammerhead', kw: 'great hammerhead shark ascii animation', bio: 'the largest hammerhead, sweeping a massive cephalofoil' },
+  { kind: 'hammerhead', name: 'Hammerhead', kw: 'hammerhead shark ascii art', bio: 'the iconic hammer-shaped head cruising open water' },
+  { kind: 'tiger', name: 'Tiger', kw: 'tiger shark ascii canvas animation', bio: 'the striped apex predator of warm seas' },
+  { kind: 'thresher', name: 'Thresher', kw: 'thresher shark ascii art animation', bio: 'the long whip-tailed hunter of the pelagic zone' },
+  { kind: 'mako', name: 'Mako', kw: 'mako shark ascii canvas', bio: 'the fastest open-ocean shark on the planet' },
+  { kind: 'zebra', name: 'Zebra', kw: 'zebra shark ascii art', bio: 'the spotted bottom dweller of coral reefs' },
+  { kind: 'nurse', name: 'Nurse', kw: 'nurse shark ascii canvas', bio: 'the docile, slow-moving coastal bottom shark' },
+  { kind: 'classic', name: 'Classic', kw: 'ascii shark classic animation', bio: 'the archetypal shark silhouette in pure text' },
+] as const
+
 function extractAsciiSharks() {
   const srcRoot = path.join(reposDir, 'ascii-sharks', 'src')
   if (!fs.existsSync(path.join(srcRoot, 'index.ts'))) return []
   const entry = fs.readFileSync(path.join(srcRoot, 'index.ts'), 'utf8')
   const demoPath = path.join(reposDir, 'ascii-sharks', 'demo.ts')
   const demo = fs.existsSync(demoPath) ? fs.readFileSync(demoPath, 'utf8') : ''
-  return [
+  const components = [
     {
       id: 'ascii-sharks-ocean',
       project: 'ascii-sharks',
@@ -1267,6 +1280,33 @@ function extractAsciiSharks() {
       codeSnippet: { language: 'ts', source: entry + '\n\n' + demo },
     },
   ]
+  for (const s of ASCII_SHARK_SPECIES) {
+    components.push({
+      id: `ascii-sharks-${s.kind}`,
+      project: 'ascii-sharks',
+      name: `Ascii ${s.name}`,
+      category: 'official-demo',
+      style: ['ascii-art', 'canvas', 'generative-art', 'official-demo'],
+      techStack: ['TypeScript', 'Canvas API'],
+      description:
+        `${s.kw} — a lone ${s.name.toLowerCase()} shark (${s.bio}) rendered in monospace ASCII ` +
+        'leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.',
+      language: 'tsx',
+      codeSnippet: {
+        language: 'ts',
+        source:
+          `import { OceanEngine } from 'ascii-sharks'\n` +
+          `import type { SharkSpec } from 'ascii-sharks/world'\n\n` +
+          `/* Tags: ${s.kw}, ascii shark animation, canvas ocean, boids fish simulation */\n\n` +
+          `// A lone ASCII ${s.name.toLowerCase()} shark leads a boids fish school on canvas.\n` +
+          `const SHARKS: SharkSpec[] = [{ kind: '${s.kind}', size: 1 }]\n\n` +
+          `const canvas = document.getElementById('ocean') as HTMLCanvasElement\n` +
+          `const engine = new OceanEngine(canvas, SHARKS)\n` +
+          `// engine.destroy() when the demo unmounts`,
+      },
+    })
+  }
+  return components
 }
 
 // ============ 主流程 ============

@@ -571,6 +571,14 @@ export const previewRegistry: Record<string, () => Promise<{ default: GeneratedP
   "px-weather-snow": () => import("./previews/pixelfx/px-weather-snow"),
   "px-weather-storm": () => import("./previews/pixelfx/px-weather-storm"),
   "ascii-sharks-ocean": () => import("./previews/ascii-sharks/ascii-sharks-ocean"),
+  "ascii-sharks-greathammer": () => import("./previews/ascii-sharks/ascii-sharks-greathammer"),
+  "ascii-sharks-hammerhead": () => import("./previews/ascii-sharks/ascii-sharks-hammerhead"),
+  "ascii-sharks-tiger": () => import("./previews/ascii-sharks/ascii-sharks-tiger"),
+  "ascii-sharks-thresher": () => import("./previews/ascii-sharks/ascii-sharks-thresher"),
+  "ascii-sharks-mako": () => import("./previews/ascii-sharks/ascii-sharks-mako"),
+  "ascii-sharks-zebra": () => import("./previews/ascii-sharks/ascii-sharks-zebra"),
+  "ascii-sharks-nurse": () => import("./previews/ascii-sharks/ascii-sharks-nurse"),
+  "ascii-sharks-classic": () => import("./previews/ascii-sharks/ascii-sharks-classic"),
 }
 
 export function hasGeneratedPreview(id: string | null | undefined): boolean {

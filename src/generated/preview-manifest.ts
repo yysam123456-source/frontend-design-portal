@@ -34441,13 +34441,69 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
     "kind": "react-generated",
     "status": "ready",
     "entry": "./previews/ascii-sharks/ascii-sharks-ocean"
+  },
+  "ascii-sharks-greathammer": {
+    "id": "ascii-sharks-greathammer",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-greathammer"
+  },
+  "ascii-sharks-hammerhead": {
+    "id": "ascii-sharks-hammerhead",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-hammerhead"
+  },
+  "ascii-sharks-tiger": {
+    "id": "ascii-sharks-tiger",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-tiger"
+  },
+  "ascii-sharks-thresher": {
+    "id": "ascii-sharks-thresher",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-thresher"
+  },
+  "ascii-sharks-mako": {
+    "id": "ascii-sharks-mako",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-mako"
+  },
+  "ascii-sharks-zebra": {
+    "id": "ascii-sharks-zebra",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-zebra"
+  },
+  "ascii-sharks-nurse": {
+    "id": "ascii-sharks-nurse",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-nurse"
+  },
+  "ascii-sharks-classic": {
+    "id": "ascii-sharks-classic",
+    "project": "ascii-sharks",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/ascii-sharks/ascii-sharks-classic"
   }
 }
 
 export const previewStats = {
   "ready:media-video": 268,
   "ready:media-image": 148,
-  "ready:react-generated": 564,
+  "ready:react-generated": 572,
   "ready:html-live": 4312,
   "unsupported:unsupported": 28
 } as const

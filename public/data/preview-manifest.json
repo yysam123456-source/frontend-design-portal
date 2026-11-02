@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-02T05:14:38.485Z",
+  "generatedAt": "2026-11-02T05:23:32.123Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
-    "ready:react-generated": 564,
+    "ready:react-generated": 572,
     "ready:html-live": 4312,
     "unsupported:unsupported": 28
   },
@@ -34448,6 +34448,62 @@
       "kind": "react-generated",
       "status": "ready",
       "entry": "./previews/ascii-sharks/ascii-sharks-ocean"
+    },
+    {
+      "id": "ascii-sharks-greathammer",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-greathammer"
+    },
+    {
+      "id": "ascii-sharks-hammerhead",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-hammerhead"
+    },
+    {
+      "id": "ascii-sharks-tiger",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-tiger"
+    },
+    {
+      "id": "ascii-sharks-thresher",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-thresher"
+    },
+    {
+      "id": "ascii-sharks-mako",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-mako"
+    },
+    {
+      "id": "ascii-sharks-zebra",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-zebra"
+    },
+    {
+      "id": "ascii-sharks-nurse",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-nurse"
+    },
+    {
+      "id": "ascii-sharks-classic",
+      "project": "ascii-sharks",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/ascii-sharks/ascii-sharks-classic"
     }
   ]
 }

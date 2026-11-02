@@ -1157,21 +1157,30 @@ function buildPixelfxGeneratedIds() {
   return result
 }
 
-// ascii-sharks: one official demo — a mixed school of ASCII sharks on canvas,
-// replayed through the vendored OceanEngine (monospace font set on the canvas).
-function previewAsciiSharksSource() {
+// ascii-sharks: one mixed official demo + eight per-species demos, all replayed through
+// the vendored OceanEngine (monospace font set on the canvas). Each species gets its own
+// preview component and SEO landing page.
+const ASCII_SHARK_SPECIES = [
+  { kind: 'greathammer', name: 'Great Hammerhead' },
+  { kind: 'hammerhead', name: 'Hammerhead' },
+  { kind: 'tiger', name: 'Tiger' },
+  { kind: 'thresher', name: 'Thresher' },
+  { kind: 'mako', name: 'Mako' },
+  { kind: 'zebra', name: 'Zebra' },
+  { kind: 'nurse', name: 'Nurse' },
+  { kind: 'classic', name: 'Classic' },
+]
+
+function previewAsciiSharksSource(kind = '', speciesName = '') {
+  const sharks = kind
+    ? `// A lone ASCII ${speciesName.toLowerCase()} shark leads a boids fish school on a zero-dependency canvas.\nconst SHARKS: SharkSpec[] = [{ kind: '${kind}', size: 1 }]`
+    : `// A mixed school of ASCII sharks — big hammerhead leads, thresher/mako/nurse step down in size.\nconst SHARKS: SharkSpec[] = [\n  { kind: 'hammerhead', size: 1 },\n  { kind: 'thresher', size: 0.78 },\n  { kind: 'mako', size: 0.64 },\n  { kind: 'nurse', size: 0.5 },\n]`
   return `// @ts-nocheck
 import { useEffect, useRef } from 'react'
 import { OceanEngine } from '../../vendor/ascii-sharks/engine'
 import type { SharkSpec } from '../../vendor/ascii-sharks/world'
 
-// A mixed school of ASCII sharks — big hammerhead leads, thresher/mako/nurse step down in size.
-const SHARKS: SharkSpec[] = [
-  { kind: 'hammerhead', size: 1 },
-  { kind: 'thresher', size: 0.78 },
-  { kind: 'mako', size: 0.64 },
-  { kind: 'nurse', size: 0.5 },
-]
+${sharks}
 
 export default function Preview({ compact }: { compact?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -1210,10 +1219,15 @@ function buildAsciiSharksGeneratedIds() {
   const srcRoot = path.join(rootDir, 'repos', 'ascii-sharks', 'src')
   if (!fs.existsSync(srcRoot)) return result
   copyTreeIfChanged(srcRoot, path.join(vendorDir, 'ascii-sharks'))
-  const previewOut = path.join(previewDir, 'ascii-sharks', 'ascii-sharks-ocean.tsx')
-  ensureDir(path.dirname(previewOut))
-  fs.writeFileSync(previewOut, previewAsciiSharksSource())
+  const previewDirAscii = path.join(previewDir, 'ascii-sharks')
+  ensureDir(previewDirAscii)
+  fs.writeFileSync(path.join(previewDirAscii, 'ascii-sharks-ocean.tsx'), previewAsciiSharksSource())
   result.set('ascii-sharks-ocean', './previews/ascii-sharks/ascii-sharks-ocean')
+  for (const s of ASCII_SHARK_SPECIES) {
+    const file = `ascii-sharks-${s.kind}.tsx`
+    fs.writeFileSync(path.join(previewDirAscii, file), previewAsciiSharksSource(s.kind, s.name))
+    result.set(`ascii-sharks-${s.kind}`, `./previews/ascii-sharks/${file.replace(/\.tsx$/, '')}`)
+  }
   return result
 }
 

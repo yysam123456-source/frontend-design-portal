@@ -20,5 +20,181 @@
       "language": "tsx",
       "source": "import { OceanEngine } from \"ascii-sharks\";\n\nconst canvas = document.querySelector(\"canvas\");\nconst engine = new OceanEngine(canvas, [\n  { kind: \"hammerhead\", size: 1 },\n  { kind: \"thresher\", size: 0.78 },\n  { kind: \"mako\", size: 0.64 },\n  { kind: \"nurse\", size: 0.5 },\n]);\n\n// engine.destroy() cleans up the loop, resize and pointer listeners."
     }
+  },
+  {
+    "id": "ascii-sharks-greathammer",
+    "project": "ascii-sharks",
+    "name": "Ascii Great Hammerhead",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "great hammerhead shark ascii animation — a lone great hammerhead shark (the largest hammerhead, sweeping a massive cephalofoil) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: great hammerhead shark ascii animation, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII great hammerhead shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'greathammer', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-hammerhead",
+    "project": "ascii-sharks",
+    "name": "Ascii Hammerhead",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "hammerhead shark ascii art — a lone hammerhead shark (the iconic hammer-shaped head cruising open water) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: hammerhead shark ascii art, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII hammerhead shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'hammerhead', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-tiger",
+    "project": "ascii-sharks",
+    "name": "Ascii Tiger",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "tiger shark ascii canvas animation — a lone tiger shark (the striped apex predator of warm seas) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: tiger shark ascii canvas animation, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII tiger shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'tiger', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-thresher",
+    "project": "ascii-sharks",
+    "name": "Ascii Thresher",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "thresher shark ascii art animation — a lone thresher shark (the long whip-tailed hunter of the pelagic zone) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: thresher shark ascii art animation, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII thresher shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'thresher', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-mako",
+    "project": "ascii-sharks",
+    "name": "Ascii Mako",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "mako shark ascii canvas — a lone mako shark (the fastest open-ocean shark on the planet) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: mako shark ascii canvas, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII mako shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'mako', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-zebra",
+    "project": "ascii-sharks",
+    "name": "Ascii Zebra",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "zebra shark ascii art — a lone zebra shark (the spotted bottom dweller of coral reefs) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: zebra shark ascii art, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII zebra shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'zebra', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-nurse",
+    "project": "ascii-sharks",
+    "name": "Ascii Nurse",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "nurse shark ascii canvas — a lone nurse shark (the docile, slow-moving coastal bottom shark) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: nurse shark ascii canvas, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII nurse shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'nurse', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
+  },
+  {
+    "id": "ascii-sharks-classic",
+    "project": "ascii-sharks",
+    "name": "Ascii Classic",
+    "category": "official-demo",
+    "style": [
+      "ascii-art",
+      "canvas",
+      "generative-art",
+      "official-demo"
+    ],
+    "techStack": [
+      "TypeScript",
+      "Canvas API"
+    ],
+    "description": "ascii shark classic animation — a lone classic shark (the archetypal shark silhouette in pure text) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
+    "language": "tsx",
+    "codeSnippet": {
+      "language": "ts",
+      "source": "import { OceanEngine } from 'ascii-sharks'\nimport type { SharkSpec } from 'ascii-sharks/world'\n\n/* Tags: ascii shark classic animation, ascii shark animation, canvas ocean, boids fish simulation */\n\n// A lone ASCII classic shark leads a boids fish school on canvas.\nconst SHARKS: SharkSpec[] = [{ kind: 'classic', size: 1 }]\n\nconst canvas = document.getElementById('ocean') as HTMLCanvasElement\nconst engine = new OceanEngine(canvas, SHARKS)\n// engine.destroy() when the demo unmounts"
+    }
   }
 ]
