@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-16T02:28:57.972Z",
+  "generatedAt": "2026-11-02T01:58:29.873Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
-    "ready:react-generated": 319,
+    "ready:react-generated": 563,
     "ready:html-live": 4312,
     "unsupported:unsupported": 28
   },
@@ -32733,6 +32733,1714 @@
         "webm": "/demo-assets/react-bits/video/waves.webm",
         "label": "React Bits Official Video Demo"
       }
+    },
+    {
+      "id": "px-arcane-arcane-beam",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-arcane-beam"
+    },
+    {
+      "id": "px-arcane-arcane-missiles",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-arcane-missiles"
+    },
+    {
+      "id": "px-arcane-arcane-orb",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-arcane-orb"
+    },
+    {
+      "id": "px-arcane-blink-in",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-blink-in"
+    },
+    {
+      "id": "px-arcane-blink-out",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-blink-out"
+    },
+    {
+      "id": "px-arcane-magic-circle-cast",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-magic-circle-cast"
+    },
+    {
+      "id": "px-arcane-mana-burst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-mana-burst"
+    },
+    {
+      "id": "px-arcane-portal",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-portal"
+    },
+    {
+      "id": "px-arcane-rune-circle",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-rune-circle"
+    },
+    {
+      "id": "px-arcane-spell-charge",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-spell-charge"
+    },
+    {
+      "id": "px-arcane-star-fall",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-star-fall"
+    },
+    {
+      "id": "px-arcane-time-stop",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-arcane-time-stop"
+    },
+    {
+      "id": "px-critters-bat",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-bat"
+    },
+    {
+      "id": "px-critters-bird",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-bird"
+    },
+    {
+      "id": "px-critters-butterfly",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-butterfly"
+    },
+    {
+      "id": "px-critters-eyeball",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-eyeball"
+    },
+    {
+      "id": "px-critters-fish-school",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-fish-school"
+    },
+    {
+      "id": "px-critters-flying-skull",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-flying-skull"
+    },
+    {
+      "id": "px-critters-frog",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-frog"
+    },
+    {
+      "id": "px-critters-ghost",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-ghost"
+    },
+    {
+      "id": "px-critters-jellyfish",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-jellyfish"
+    },
+    {
+      "id": "px-critters-slime",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-slime"
+    },
+    {
+      "id": "px-critters-snake",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-snake"
+    },
+    {
+      "id": "px-critters-wisp",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-critters-wisp"
+    },
+    {
+      "id": "px-explosions-barrel-explosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-barrel-explosion"
+    },
+    {
+      "id": "px-explosions-big-explosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-big-explosion"
+    },
+    {
+      "id": "px-explosions-cartoon-pow",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-cartoon-pow"
+    },
+    {
+      "id": "px-explosions-dirt-explosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-dirt-explosion"
+    },
+    {
+      "id": "px-explosions-firework-burst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-firework-burst"
+    },
+    {
+      "id": "px-explosions-firework-rocket",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-firework-rocket"
+    },
+    {
+      "id": "px-explosions-grenade",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-grenade"
+    },
+    {
+      "id": "px-explosions-implosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-implosion"
+    },
+    {
+      "id": "px-explosions-nuke",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-nuke"
+    },
+    {
+      "id": "px-explosions-plasma-explosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-plasma-explosion"
+    },
+    {
+      "id": "px-explosions-small-explosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-small-explosion"
+    },
+    {
+      "id": "px-explosions-smoke-bomb",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-explosions-smoke-bomb"
+    },
+    {
+      "id": "px-fire-brazier",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-brazier"
+    },
+    {
+      "id": "px-fire-campfire",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-campfire"
+    },
+    {
+      "id": "px-fire-candle",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-candle"
+    },
+    {
+      "id": "px-fire-fire-breath",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-fire-breath"
+    },
+    {
+      "id": "px-fire-fire-ring",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-fire-ring"
+    },
+    {
+      "id": "px-fire-fire-tornado",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-fire-tornado"
+    },
+    {
+      "id": "px-fire-fireball",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-fireball"
+    },
+    {
+      "id": "px-fire-flame-pillar",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-flame-pillar"
+    },
+    {
+      "id": "px-fire-flamethrower",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-flamethrower"
+    },
+    {
+      "id": "px-fire-meteor",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-meteor"
+    },
+    {
+      "id": "px-fire-spirit-flame",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-spirit-flame"
+    },
+    {
+      "id": "px-fire-torch",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-fire-torch"
+    },
+    {
+      "id": "px-holy-blessing",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-blessing"
+    },
+    {
+      "id": "px-holy-divine-shield",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-divine-shield"
+    },
+    {
+      "id": "px-holy-feather-burst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-feather-burst"
+    },
+    {
+      "id": "px-holy-halo",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-halo"
+    },
+    {
+      "id": "px-holy-heal",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-heal"
+    },
+    {
+      "id": "px-holy-heal-aoe",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-heal-aoe"
+    },
+    {
+      "id": "px-holy-holy-pillar",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-holy-pillar"
+    },
+    {
+      "id": "px-holy-resurrection",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-resurrection"
+    },
+    {
+      "id": "px-holy-smite",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-smite"
+    },
+    {
+      "id": "px-holy-sunburst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-holy-sunburst"
+    },
+    {
+      "id": "px-ice-blizzard-vortex",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-blizzard-vortex"
+    },
+    {
+      "id": "px-ice-freeze",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-freeze"
+    },
+    {
+      "id": "px-ice-frost-breath",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-frost-breath"
+    },
+    {
+      "id": "px-ice-frost-nova",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-frost-nova"
+    },
+    {
+      "id": "px-ice-ice-crystal",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-ice-crystal"
+    },
+    {
+      "id": "px-ice-ice-lance",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-ice-lance"
+    },
+    {
+      "id": "px-ice-ice-shatter",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-ice-shatter"
+    },
+    {
+      "id": "px-ice-ice-spikes",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-ice-spikes"
+    },
+    {
+      "id": "px-ice-icicle-fall",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-icicle-fall"
+    },
+    {
+      "id": "px-ice-snowflake-burst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ice-snowflake-burst"
+    },
+    {
+      "id": "px-impacts-blunt-hit",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-blunt-hit"
+    },
+    {
+      "id": "px-impacts-bullet-impact",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-bullet-impact"
+    },
+    {
+      "id": "px-impacts-crit-hit",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-crit-hit"
+    },
+    {
+      "id": "px-impacts-ground-slam",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-ground-slam"
+    },
+    {
+      "id": "px-impacts-heavy-landing",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-heavy-landing"
+    },
+    {
+      "id": "px-impacts-hit-flash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-hit-flash"
+    },
+    {
+      "id": "px-impacts-hit-spark",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-hit-spark"
+    },
+    {
+      "id": "px-impacts-impact-frame",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-impact-frame"
+    },
+    {
+      "id": "px-impacts-parry",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-parry"
+    },
+    {
+      "id": "px-impacts-ricochet",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-ricochet"
+    },
+    {
+      "id": "px-impacts-shield-block",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-impacts-shield-block"
+    },
+    {
+      "id": "px-lightning-ball-lightning",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-ball-lightning"
+    },
+    {
+      "id": "px-lightning-chain-lightning",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-chain-lightning"
+    },
+    {
+      "id": "px-lightning-charge-up",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-charge-up"
+    },
+    {
+      "id": "px-lightning-electrified",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-electrified"
+    },
+    {
+      "id": "px-lightning-lightning-strike",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-lightning-strike"
+    },
+    {
+      "id": "px-lightning-plasma-ball",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-plasma-ball"
+    },
+    {
+      "id": "px-lightning-spark-arc",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-spark-arc"
+    },
+    {
+      "id": "px-lightning-storm-cloud",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-storm-cloud"
+    },
+    {
+      "id": "px-lightning-tesla-coil",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-tesla-coil"
+    },
+    {
+      "id": "px-lightning-thunderclap",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-thunderclap"
+    },
+    {
+      "id": "px-lightning-zap-hit",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-lightning-zap-hit"
+    },
+    {
+      "id": "px-melee-claw-swipe",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-claw-swipe"
+    },
+    {
+      "id": "px-melee-dagger-flurry",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-dagger-flurry"
+    },
+    {
+      "id": "px-melee-double-slash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-double-slash"
+    },
+    {
+      "id": "px-melee-hammer-smash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-hammer-smash"
+    },
+    {
+      "id": "px-melee-heavy-cleave",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-heavy-cleave"
+    },
+    {
+      "id": "px-melee-scythe-reap",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-scythe-reap"
+    },
+    {
+      "id": "px-melee-spear-sweep",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-spear-sweep"
+    },
+    {
+      "id": "px-melee-spin-slash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-spin-slash"
+    },
+    {
+      "id": "px-melee-sword-slash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-sword-slash"
+    },
+    {
+      "id": "px-melee-thrust",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-thrust"
+    },
+    {
+      "id": "px-melee-uppercut",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-uppercut"
+    },
+    {
+      "id": "px-melee-whip-crack",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-melee-whip-crack"
+    },
+    {
+      "id": "px-moves-arrow-shot",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-arrow-shot"
+    },
+    {
+      "id": "px-moves-dash-strike",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-dash-strike"
+    },
+    {
+      "id": "px-moves-earth-stomp",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-earth-stomp"
+    },
+    {
+      "id": "px-moves-fireball-throw",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-fireball-throw"
+    },
+    {
+      "id": "px-moves-ground-pound",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-ground-pound"
+    },
+    {
+      "id": "px-moves-holy-smite",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-holy-smite"
+    },
+    {
+      "id": "px-moves-ice-lance-throw",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-ice-lance-throw"
+    },
+    {
+      "id": "px-moves-lightning-call",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-lightning-call"
+    },
+    {
+      "id": "px-moves-meteor-call",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-meteor-call"
+    },
+    {
+      "id": "px-moves-pistol-shots",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-pistol-shots"
+    },
+    {
+      "id": "px-moves-rocket-launcher",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-rocket-launcher"
+    },
+    {
+      "id": "px-moves-sword-combo",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-moves-sword-combo"
+    },
+    {
+      "id": "px-nature-acid-splash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-acid-splash"
+    },
+    {
+      "id": "px-nature-boulder",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-boulder"
+    },
+    {
+      "id": "px-nature-earth-spike",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-earth-spike"
+    },
+    {
+      "id": "px-nature-healing-bloom",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-healing-bloom"
+    },
+    {
+      "id": "px-nature-leaf-storm",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-leaf-storm"
+    },
+    {
+      "id": "px-nature-poison-cloud",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-poison-cloud"
+    },
+    {
+      "id": "px-nature-quake",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-quake"
+    },
+    {
+      "id": "px-nature-root-snare",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-root-snare"
+    },
+    {
+      "id": "px-nature-spore-burst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-spore-burst"
+    },
+    {
+      "id": "px-nature-thorns",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-thorns"
+    },
+    {
+      "id": "px-nature-tornado",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-tornado"
+    },
+    {
+      "id": "px-nature-toxic-puddle",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-toxic-puddle"
+    },
+    {
+      "id": "px-nature-vine-whip",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-nature-vine-whip"
+    },
+    {
+      "id": "px-pickups-chest-open",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-chest-open"
+    },
+    {
+      "id": "px-pickups-coin-spin",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-coin-spin"
+    },
+    {
+      "id": "px-pickups-collect-burst",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-collect-burst"
+    },
+    {
+      "id": "px-pickups-crystal-shard",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-crystal-shard"
+    },
+    {
+      "id": "px-pickups-gem-spin",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-gem-spin"
+    },
+    {
+      "id": "px-pickups-heart-pickup",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-heart-pickup"
+    },
+    {
+      "id": "px-pickups-key-glint",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-key-glint"
+    },
+    {
+      "id": "px-pickups-loot-beam",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-loot-beam"
+    },
+    {
+      "id": "px-pickups-potion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-potion"
+    },
+    {
+      "id": "px-pickups-power-star",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-power-star"
+    },
+    {
+      "id": "px-pickups-xp-orb",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-pickups-xp-orb"
+    },
+    {
+      "id": "px-projectiles-arrow",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-arrow"
+    },
+    {
+      "id": "px-projectiles-bullet-tracer",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-bullet-tracer"
+    },
+    {
+      "id": "px-projectiles-cannonball",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-cannonball"
+    },
+    {
+      "id": "px-projectiles-energy-disc",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-energy-disc"
+    },
+    {
+      "id": "px-projectiles-flare",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-flare"
+    },
+    {
+      "id": "px-projectiles-homing-missile",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-homing-missile"
+    },
+    {
+      "id": "px-projectiles-laser-bolt",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-laser-bolt"
+    },
+    {
+      "id": "px-projectiles-magic-missile",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-magic-missile"
+    },
+    {
+      "id": "px-projectiles-muzzle-pistol",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-muzzle-pistol"
+    },
+    {
+      "id": "px-projectiles-muzzle-shotgun",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-muzzle-shotgun"
+    },
+    {
+      "id": "px-projectiles-muzzle-smg",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-muzzle-smg"
+    },
+    {
+      "id": "px-projectiles-plasma-shot",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-plasma-shot"
+    },
+    {
+      "id": "px-projectiles-rocket",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-projectiles-rocket"
+    },
+    {
+      "id": "px-scifi-emp-blast",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-emp-blast"
+    },
+    {
+      "id": "px-scifi-energy-core",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-energy-core"
+    },
+    {
+      "id": "px-scifi-force-field",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-force-field"
+    },
+    {
+      "id": "px-scifi-glitch",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-glitch"
+    },
+    {
+      "id": "px-scifi-hologram",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-hologram"
+    },
+    {
+      "id": "px-scifi-jetpack",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-jetpack"
+    },
+    {
+      "id": "px-scifi-laser-grid",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-laser-grid"
+    },
+    {
+      "id": "px-scifi-scanner",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-scanner"
+    },
+    {
+      "id": "px-scifi-teleporter-pad",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-teleporter-pad"
+    },
+    {
+      "id": "px-scifi-tractor-beam",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-tractor-beam"
+    },
+    {
+      "id": "px-scifi-warp-in",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-warp-in"
+    },
+    {
+      "id": "px-scifi-warp-out",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-scifi-warp-out"
+    },
+    {
+      "id": "px-shadow-black-hole",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-black-hole"
+    },
+    {
+      "id": "px-shadow-curse",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-curse"
+    },
+    {
+      "id": "px-shadow-dark-explosion",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-dark-explosion"
+    },
+    {
+      "id": "px-shadow-eclipse",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-eclipse"
+    },
+    {
+      "id": "px-shadow-grasping-hands",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-grasping-hands"
+    },
+    {
+      "id": "px-shadow-hex-sigil",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-hex-sigil"
+    },
+    {
+      "id": "px-shadow-life-steal",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-life-steal"
+    },
+    {
+      "id": "px-shadow-necro-skulls",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-necro-skulls"
+    },
+    {
+      "id": "px-shadow-shadow-flames",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-shadow-flames"
+    },
+    {
+      "id": "px-shadow-shadow-tendrils",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-shadow-tendrils"
+    },
+    {
+      "id": "px-shadow-soul-drain",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-soul-drain"
+    },
+    {
+      "id": "px-shadow-void-orb",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-shadow-void-orb"
+    },
+    {
+      "id": "px-spawn-coin-drop",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-coin-drop"
+    },
+    {
+      "id": "px-spawn-disintegrate",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-disintegrate"
+    },
+    {
+      "id": "px-spawn-dissolve-burn",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-dissolve-burn"
+    },
+    {
+      "id": "px-spawn-egg-hatch",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-egg-hatch"
+    },
+    {
+      "id": "px-spawn-poof",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-poof"
+    },
+    {
+      "id": "px-spawn-respawn-beam",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-respawn-beam"
+    },
+    {
+      "id": "px-spawn-shatter-death",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-shatter-death"
+    },
+    {
+      "id": "px-spawn-soul-rise",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-soul-rise"
+    },
+    {
+      "id": "px-spawn-spawn-portal",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-spawn-portal"
+    },
+    {
+      "id": "px-spawn-summon-rise",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-spawn-summon-rise"
+    },
+    {
+      "id": "px-status-bleeding",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-bleeding"
+    },
+    {
+      "id": "px-status-burning",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-burning"
+    },
+    {
+      "id": "px-status-charmed",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-charmed"
+    },
+    {
+      "id": "px-status-confused",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-confused"
+    },
+    {
+      "id": "px-status-cursed",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-cursed"
+    },
+    {
+      "id": "px-status-frozen",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-frozen"
+    },
+    {
+      "id": "px-status-haste",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-haste"
+    },
+    {
+      "id": "px-status-petrified",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-petrified"
+    },
+    {
+      "id": "px-status-poisoned",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-poisoned"
+    },
+    {
+      "id": "px-status-rage",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-rage"
+    },
+    {
+      "id": "px-status-sleep",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-sleep"
+    },
+    {
+      "id": "px-status-slowed",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-slowed"
+    },
+    {
+      "id": "px-status-stunned",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-status-stunned"
+    },
+    {
+      "id": "px-transitions-blinds",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-blinds"
+    },
+    {
+      "id": "px-transitions-burn-away",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-burn-away"
+    },
+    {
+      "id": "px-transitions-crt-off",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-crt-off"
+    },
+    {
+      "id": "px-transitions-diamond-wipe",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-diamond-wipe"
+    },
+    {
+      "id": "px-transitions-glitch-wipe",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-glitch-wipe"
+    },
+    {
+      "id": "px-transitions-iris",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-iris"
+    },
+    {
+      "id": "px-transitions-pixel-dissolve",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-pixel-dissolve"
+    },
+    {
+      "id": "px-transitions-shatter-wipe",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-shatter-wipe"
+    },
+    {
+      "id": "px-transitions-slash-wipe",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-slash-wipe"
+    },
+    {
+      "id": "px-transitions-star-iris",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-transitions-star-iris"
+    },
+    {
+      "id": "px-ui-achievement",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-achievement"
+    },
+    {
+      "id": "px-ui-coin-collect",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-coin-collect"
+    },
+    {
+      "id": "px-ui-combo-counter",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-combo-counter"
+    },
+    {
+      "id": "px-ui-confetti",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-confetti"
+    },
+    {
+      "id": "px-ui-countdown",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-countdown"
+    },
+    {
+      "id": "px-ui-crit-number",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-crit-number"
+    },
+    {
+      "id": "px-ui-damage-number",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-damage-number"
+    },
+    {
+      "id": "px-ui-exclamation",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-exclamation"
+    },
+    {
+      "id": "px-ui-health-bar-hit",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-health-bar-hit"
+    },
+    {
+      "id": "px-ui-heart-lost",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-heart-lost"
+    },
+    {
+      "id": "px-ui-level-up",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-level-up"
+    },
+    {
+      "id": "px-ui-quest-complete",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-ui-quest-complete"
+    },
+    {
+      "id": "px-water-bubbles",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-bubbles"
+    },
+    {
+      "id": "px-water-drip",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-drip"
+    },
+    {
+      "id": "px-water-fountain",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-fountain"
+    },
+    {
+      "id": "px-water-geyser",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-geyser"
+    },
+    {
+      "id": "px-water-rain-splash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-rain-splash"
+    },
+    {
+      "id": "px-water-ripples",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-ripples"
+    },
+    {
+      "id": "px-water-splash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-splash"
+    },
+    {
+      "id": "px-water-water-jet",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-water-jet"
+    },
+    {
+      "id": "px-water-water-orb",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-water-orb"
+    },
+    {
+      "id": "px-water-waterfall",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-waterfall"
+    },
+    {
+      "id": "px-water-wave-crash",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-wave-crash"
+    },
+    {
+      "id": "px-water-whirlpool",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-water-whirlpool"
+    },
+    {
+      "id": "px-weather-aurora",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-aurora"
+    },
+    {
+      "id": "px-weather-blizzard",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-blizzard"
+    },
+    {
+      "id": "px-weather-cherry-blossoms",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-cherry-blossoms"
+    },
+    {
+      "id": "px-weather-clouds",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-clouds"
+    },
+    {
+      "id": "px-weather-falling-leaves",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-falling-leaves"
+    },
+    {
+      "id": "px-weather-fireflies",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-fireflies"
+    },
+    {
+      "id": "px-weather-fog",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-fog"
+    },
+    {
+      "id": "px-weather-god-rays",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-god-rays"
+    },
+    {
+      "id": "px-weather-rain",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-rain"
+    },
+    {
+      "id": "px-weather-shooting-stars",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-shooting-stars"
+    },
+    {
+      "id": "px-weather-snow",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-snow"
+    },
+    {
+      "id": "px-weather-storm",
+      "project": "pixelfx",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pixelfx/px-weather-storm"
     }
   ]
 }

@@ -101,6 +101,18 @@ export const projects: ProjectMeta[] = [
     techStack: ['TypeScript', 'WebGL', 'Canvas API'],
     category: 'rendering',
   },
+  {
+    id: 'pixelfx',
+    name: 'Pixelfx',
+    github: 'https://github.com/patch-gg/pixelfx',
+    demoBaseUrl: 'https://patch-gg.github.io/pixelfx/',
+    description:
+      'A MIT-licensed collection of 244 pixel art effects for canvas games — fire, explosions, magic, lightning, water, weather, transitions and more. Zero dependencies, runtime-rendered on canvas.',
+    accentColor: '#FF5D8F',
+    tags: ['pixel-art', 'canvas', 'vfx', 'game-dev', 'effects', 'zero-dependency'],
+    techStack: ['JavaScript', 'Canvas API', 'ESM'],
+    category: 'effect',
+  },
 ]
 
 export const allTechStacks = Array.from(

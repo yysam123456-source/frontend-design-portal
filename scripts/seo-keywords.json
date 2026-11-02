@@ -95,6 +95,16 @@
         "pixel art css",
         "canvas particle network"
       ]
+    },
+    "pixelfx": {
+      "kw": "pixelfx",
+      "titleKw": "pixelfx pixel art effects",
+      "related": [
+        "pixel art effects library",
+        "pixel vfx library",
+        "pixelart game effects",
+        "canvas game effects"
+      ]
     }
   },
   "categories": {
@@ -1151,6 +1161,20 @@
         "tab design ui",
         "react tabs component",
         "tab bar css"
+      ]
+    },
+    "pixel-fx": {
+      "titleKw": "pixel art effects",
+      "kw": "pixel-fx",
+      "related": [
+        "pixel art effects",
+        "pixel vfx",
+        "pixel animation effect",
+        "game pixel effects",
+        "pixel explosion effect",
+        "pixel fire animation",
+        "canvas pixel effect",
+        "pixel particle effects"
       ]
     }
   }

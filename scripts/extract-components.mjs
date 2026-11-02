@@ -1183,6 +1183,67 @@ function extractThreeUI() {
   return components
 }
 
+// ============ pixelfx ============
+// 244 zero-dependency canvas pixel-art effects, each file under src/fx/<cat>/<name>.js
+// exposing `export const meta = {...}` plus create/draw implementations.
+function parsePixelfxMeta(source) {
+  const m = source.match(/export const meta = \{([\s\S]*?)\n\s*\};/)
+  if (!m) return null
+  const body = m[1]
+    .replace(/(^|[,{\n])\s*([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":')
+    .replace(/,(\s*[}\]])/g, '$1')
+    .replace(/,\s*$/, '')
+  try {
+    return JSON.parse('{' + body + '}')
+  } catch {
+    return null
+  }
+}
+
+function extractPixelfx() {
+  const fxRoot = path.join(reposDir, 'pixelfx', 'src', 'fx')
+  if (!fs.existsSync(fxRoot)) return []
+  const components = []
+  for (const catDir of fs.readdirSync(fxRoot, { withFileTypes: true })) {
+    if (!catDir.isDirectory()) continue
+    const cat = catDir.name
+    for (const f of fs.readdirSync(path.join(fxRoot, cat))) {
+      if (!f.endsWith('.js') || f === '_lib.js') continue
+      const fileName = path.basename(f, '.js')
+      const source = fs.readFileSync(path.join(fxRoot, cat, f), 'utf8')
+      const meta = parsePixelfxMeta(source)
+      const titleName = fileName
+        .replace(/[-_]+/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase())
+      const style = [...new Set(['pixel-art', cat, ...(meta?.tags?.slice(0, 4) || [])])].slice(0, 6)
+      components.push({
+        id: `px-${cat}-${fileName}`,
+        project: 'pixelfx',
+        name: meta?.name || titleName,
+        category: 'pixel-fx',
+        style,
+        techStack: ['Canvas API', 'JavaScript', 'ESM'],
+        description: meta
+          ? `${meta.name} pixel art effect — ${meta.desc}`
+          : `${titleName} ${cat} pixel art effect for canvas games — fire, magic, weather, UI and more.`,
+        language: 'js',
+        codeSnippet: { language: 'js', source },
+        meta: meta
+          ? {
+              size: meta.size,
+              origin: meta.origin,
+              duration: meta.duration,
+              loop: Boolean(meta.loop),
+              fps: meta.fps,
+            }
+          : undefined,
+      })
+    }
+  }
+  components.sort((a, b) => a.id.localeCompare(b.id))
+  return components
+}
+
 // ============ 主流程 ============
 console.log('Extracting components from cloned repos...')
 
@@ -1195,6 +1256,7 @@ const allComponents = [
   ...extractZelda(),
   ...extractEldora(),
   ...extractThreeUI(),
+  ...extractPixelfx(),
 ]
 
 // 统计
