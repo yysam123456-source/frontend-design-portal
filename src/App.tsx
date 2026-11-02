@@ -48,6 +48,7 @@ const QUICK_CATEGORY_KEYS = [
   'inputs',
   'loaders',
   'effects',
+  'pixel-fx',
 ]
 
 type PageView = 'official' | 'components' | 'showcases'
@@ -63,6 +64,7 @@ const categoryMeta: Record<string, { label: string; icon: typeof Sparkles }> = {
   tooltips: { label: 'Tooltips', icon: MessageCircle },
   modal: { label: 'Modal', icon: Maximize2 },
   skeleton: { label: 'Skeleton', icon: Loader },
+  'pixel-fx': { label: 'Pixel FX', icon: Sparkles },
 }
 
 function formatCategory(category: string) {
@@ -236,7 +238,7 @@ export default function App() {
         seen.add(normalized)
         return true
       })
-      .slice(0, 8)
+      .slice(0, 9)
   }, [allCategories])
 
   const handleCloseDetail = useCallback(() => {
