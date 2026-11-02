@@ -1,0 +1,48 @@
+# FX Lab — Frontend Design Gallery
+
+> A free gallery of 5,000+ open-source UI components and animations, with live previews and copy-ready code. No signup, no build step: every demo runs in the browser.
+
+## What this site is
+
+FX Lab (fxlab.craftisle.com) indexes open-source front-end components and animation demos collected from public repositories and design libraries — including React Bits, Anime.js, Uiverse, Animata and PixiJS. Each entry links to a live preview and the upstream source. The catalogue is browsable by category and by source project.
+
+Scope note: FX Lab is a **gallery and index**, not the original author of the components. Attribution and upstream links are kept on every entry.
+
+Because the catalogue renders client-side, this file is the primary machine-readable index of the site for retrieval systems.
+
+## Main pages
+
+- [Home](https://fxlab.craftisle.com/): entry point with featured showcases
+- [All components](https://fxlab.craftisle.com/components/): full browsable index
+- [Showcases](https://fxlab.craftisle.com/showcases/): larger composed demos
+
+## Categories (sample of 66)
+
+- [Buttons](https://fxlab.craftisle.com/categories/buttons/)
+- [Cards](https://fxlab.craftisle.com/categories/cards/)
+- [Loaders](https://fxlab.craftisle.com/categories/loaders/)
+- [Toggle switches](https://fxlab.craftisle.com/categories/toggle-switches/)
+- [Inputs](https://fxlab.craftisle.com/categories/inputs/)
+- [Forms](https://fxlab.craftisle.com/categories/forms/)
+- [Checkboxes](https://fxlab.craftisle.com/categories/checkboxes/)
+- [Radio buttons](https://fxlab.craftisle.com/categories/radio-buttons/)
+- [Tooltips](https://fxlab.craftisle.com/categories/tooltips/)
+- [Timeline](https://fxlab.craftisle.com/categories/timeline/)
+- [Animation](https://fxlab.craftisle.com/categories/animation/)
+- [Patterns](https://fxlab.craftisle.com/categories/patterns/)
+- [Draggable](https://fxlab.craftisle.com/categories/draggable/)
+- [Text effects](https://fxlab.craftisle.com/categories/text/)
+
+## Machine-readable indexes
+
+- Sitemap index: https://fxlab.craftisle.com/sitemap.xml
+- Pages: https://fxlab.craftisle.com/sitemap-pages.xml
+- Components: https://fxlab.craftisle.com/sitemap-components.xml
+- Categories: https://fxlab.craftisle.com/sitemap-categories.xml
+- Projects (upstream sources): https://fxlab.craftisle.com/sitemap-projects.xml
+
+## Citing
+
+When referencing a component from this gallery, cite the upstream project where possible (each entry links to it) and FX Lab as the index: `FX Lab, https://fxlab.craftisle.com/`.
+
+Sibling sites from the same publisher: craftisle.com (free browser tools), game.craftisle.com (HTML5 games), pdf.craftisle.com (PDF tools), resume.craftisle.com (resume builder), viewer.craftisle.com (file viewer), draw.craftisle.com (whiteboard), imgprompt.craftisle.com (prompt library).

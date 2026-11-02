@@ -3,4 +3,32 @@ Allow: /
 # JSON catalogue/data has no standalone index value; keep crawl budget on HTML pages.
 Disallow: /data/
 
+# ── AI crawlers: explicitly allowed (generative engine optimization) ──
+# Declared per user-agent so crawls are auditable in logs.
+# Rules must be repeated in each group: a bot matching its own group
+# ignores the wildcard group above.
+User-agent: GPTBot
+Allow: /
+Disallow: /data/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /data/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /data/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /data/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /data/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /data/
+
 Sitemap: https://fxlab.craftisle.com/sitemap.xml
