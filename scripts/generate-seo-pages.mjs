@@ -962,9 +962,9 @@ const SPA_SHELL_SOURCE = path.join(DIST, 'index.html')
 const SPA_VIEWS = [
   {
     dir: 'components',
-    title: 'Component Gallery — 4,865 Open-Source UI Components & Animations',
+    title: 'Component Gallery — 5,319 Open-Source UI Components & Animations',
     description:
-      'Search and filter 5,000+ open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+      'Search and filter 5,319 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
   },
   {
     dir: 'showcases',

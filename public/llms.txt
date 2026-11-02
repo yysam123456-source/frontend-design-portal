@@ -1,6 +1,6 @@
 # FX Lab — Frontend Design Gallery
 
-> A free gallery of 4,865 open-source UI components and animations, with live previews and copy-ready code. No signup, no build step: every demo runs in the browser.
+> A free gallery of 5,319 open-source UI components and animations, with live previews and copy-ready code. No signup, no build step: every demo runs in the browser.
 
 ## What this site is
 
@@ -16,7 +16,7 @@ Because the catalogue renders client-side, this file is the primary machine-read
 - [All components](https://fxlab.craftisle.com/components/): full browsable index
 - [Showcases](https://fxlab.craftisle.com/showcases/): larger composed demos
 
-## Categories (sample of 78)
+## Categories (sample of 80)
 
 - [Buttons](https://fxlab.craftisle.com/categories/buttons/)
 - [Cards](https://fxlab.craftisle.com/categories/cards/)

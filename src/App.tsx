@@ -167,9 +167,9 @@ export default function App() {
   useDocumentMeta(
     activePage === 'components'
       ? {
-          title: 'Component Gallery — 4,865 Open-Source UI Components & Animations',
+          title: 'Component Gallery — 5,319 Open-Source UI Components & Animations',
           description:
-            'Search and filter 4,865 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+            'Search and filter 5,319 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
           canonical: `${SITE_ORIGIN}/components/`,
         }
       : activePage === 'showcases'
@@ -182,7 +182,7 @@ export default function App() {
         : {
             title: 'Frontend Design Gallery — Open-Source UI Components, Animations & Demos',
             description:
-              'A curated gallery of 4,865 open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, ThreeUI and PixiJS — with live previews and copy-ready code.',
+              'A curated gallery of 5,319 open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, ThreeUI and PixiJS — with live previews and copy-ready code.',
             canonical: `${SITE_ORIGIN}/`,
           }
   )
