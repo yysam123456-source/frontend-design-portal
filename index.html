@@ -76,12 +76,12 @@
         <li>Filters combine category with technology stack, so React animations can be isolated from CSS snippets.</li>
       </ul>
       <h2>How the previews work</h2>
-      <p>Every entry has a preview record, and most of them execute rather than illustrate: 4,312 render as live HTML and 563 render compiled React. Those HTML previews run inside a sandboxed iframe that receives its markup through srcDoc, so a demo cannot reach the surrounding page.</p>
+      <p>Every entry has a preview record, and most of them execute rather than illustrate: 4,312 render as live HTML and 563 render compiled React. Those HTML previews run in an iframe that receives its markup through srcDoc, so demo styles and markup stay inside their own document.</p>
       <ul>
         <li>The preview manifest covers all 5,319 entries; 5,291 are marked ready and 28 are flagged unsupported.</li>
         <li>The remaining 416 previews are recorded media, 268 video and 148 image, captured from the upstream demo.</li>
         <li>A copy button beside each snippet writes the raw source to the clipboard in one click.</li>
-        <li>Snippets are transcribed from the upstream repositories, so they match the code those projects ship.</li>
+        <li>Snippets are fetched from the upstream repositories when the dataset is built, so they match the code those projects ship.</li>
       </ul>
       <h2>What it does not do</h2>
       <p>The gallery is an index, not a package. Nothing installs, and no component is authored here: the code comes from upstream repositories, whose licences apply rather than this site's.</p>
