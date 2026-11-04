@@ -34,6 +34,7 @@ export default defineConfig({
         main: path.resolve(__dirname, 'index.html'),
         looseleaf: path.resolve(__dirname, 'looseleaf-preview.html'),
         'looseleaf-showcase': path.resolve(__dirname, 'looseleaf-showcase.html'),
+        'phoenix-crown': path.resolve(__dirname, 'phoenix-crown.html'),
       },
     },
   },

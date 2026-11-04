@@ -25,14 +25,14 @@ function KageShowcase() {
 }
 
 /* 通用 iframe 容器：achrefelouafi 8 个 Three.js 项目（构建产物已部署到 public/showcases/） */
-function IframeShowcase({ src, title }: { src: string; title: string }) {
+function IframeShowcase({ src, title, background = '#000' }: { src: string; title: string; background?: string }) {
   return (
     <div className="relative w-full">
       <iframe
         src={src}
         title={title}
         className="fixed inset-0 w-full h-full border-0"
-        style={{ zIndex: 1, background: '#000' }}
+        style={{ zIndex: 1, background }}
         allow="autoplay; fullscreen; webgpu"
       />
       <div style={{ height: '100vh' }} />
@@ -1412,6 +1412,7 @@ const SHOWCASES = [
   { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈' },
   { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈' },
   { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝' },
+  { id: 'phoenix', label: 'Chinese Phoenix Crown', desc: 'Seven crowns with physics text curtains', icon: '👑' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1509,6 +1510,9 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'ascii' && <AsciiSharksShowcase />}
         {activeId === 'looseleaf' && (
           <LightIframeShowcase src="/looseleaf-showcase.html" title="Looseleaf Paper Desk" background="#a8c8bb" />
+        )}
+        {activeId === 'phoenix' && (
+          <IframeShowcase src="/phoenix-crown.html" title="Chinese Phoenix Crown" background="#0f1420" />
         )}
       </div>
     </div>
