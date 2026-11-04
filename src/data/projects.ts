@@ -125,6 +125,18 @@ export const projects: ProjectMeta[] = [
     techStack: ['TypeScript', 'Canvas API'],
     category: 'animation',
   },
+  {
+    id: 'looseleaf',
+    name: 'Looseleaf',
+    github: 'https://github.com/kevintngo/looseleaf',
+    demoBaseUrl: 'https://kevintngo.github.io/looseleaf/',
+    description:
+      'A MIT-licensed hand-drawn UI component library: 123 components across 15 categories, 61 blocks, 160 icons and 88 stickers, built on Radix and compatible with shadcn/ui. Every border, shadow and sheet is drawn by an ink engine, with the Kevin Sans handwriting font.',
+    accentColor: '#DF6B3C',
+    tags: ['hand-drawn', 'sketch', 'ui-components', 'shadcn', 'tailwind', 'design-system'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Radix UI'],
+    category: 'ui-library',
+  },
 ]
 
 export const allTechStacks = Array.from(

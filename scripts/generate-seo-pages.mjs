@@ -801,7 +801,7 @@ for (const project of projects) {
     ${deps.map((d) => `<span class="tag">${esc(d)}</span>`).join('')}
   </div>
   <div class="actions">
-    <a class="btn btn-primary" href="${esc(c.demoUrl || projectMeta?.demoBaseUrl || '/components')}" rel="noopener">Open live demo</a>
+    <a class="btn btn-primary" href="${esc(c.demoUrl || (rec?.kind === 'embed' && rec.entry) || projectMeta?.demoBaseUrl || '/components')}" rel="noopener">Open live demo</a>
     <a class="btn" href="/projects/${esc(project.id)}/">More ${esc(projectName)} components</a>
     <a class="btn" href="/components/">Browse gallery</a>
   </div>

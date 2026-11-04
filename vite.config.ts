@@ -27,6 +27,15 @@ function seoPagesPlugin() {
 export default defineConfig({
   plugins: [react(), tailwindcss(), seoPagesPlugin()],
   base: '/',
+  build: {
+    rollupOptions: {
+      input: {
+        // 门户主站 + Looseleaf 独立预览入口（iframe 隔离，样式与依赖各自成 chunk）
+        main: path.resolve(__dirname, 'index.html'),
+        looseleaf: path.resolve(__dirname, 'looseleaf-preview.html'),
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

@@ -1419,6 +1419,17 @@ function main() {
   const indexPath = path.join(dataDir, 'index.json')
   const index = readJson(indexPath)
   const records = index.components.map((component) => {
+    // Looseleaf 的每个组件都在独立入口里跑官方 demo（iframe 隔离样式与依赖），
+    // 因此它没有本地生成的 React 预览，但预览是真实可交互的，标记为 embed/ready。
+    if (component.project === 'looseleaf' && component.previewUrl) {
+      return {
+        id: component.id,
+        project: 'looseleaf',
+        kind: 'embed',
+        status: 'ready',
+        entry: component.previewUrl,
+      }
+    }
     const record = getPreviewRecord(component, { reactBitsVideoMap, eldoraImageMap })
     if (
       record.kind === 'unsupported' &&

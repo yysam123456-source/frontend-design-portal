@@ -29,7 +29,9 @@ export default function ComponentCard({
   const previewLabel =
     previewRecord?.kind === 'react-generated'
       ? 'React Live'
-      : previewRecord?.kind === 'html-live'
+      : previewRecord?.kind === 'embed'
+        ? 'Live Demo'
+        : previewRecord?.kind === 'html-live'
         ? 'HTML Live'
         : previewRecord?.kind === 'js-demo'
           ? 'JS Live'

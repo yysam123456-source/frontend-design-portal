@@ -225,6 +225,30 @@ export default function ComponentThumbnailPreview({
 
   const bgStyle = (language === 'html' || previewRecord?.kind === 'html-live') ? '#0a0a0a' : '#0b0f19'
 
+  // Looseleaf（手绘风组件库）跑在独立预览入口里：iframe 隔离它自己的 Tailwind preflight
+  // 与 html/body 手绘字体，门户主站样式不受影响。仅在卡片进入视口时才创建 iframe。
+  if (component.project === 'looseleaf' && component.previewUrl) {
+    return (
+      <div ref={containerRef} className="absolute inset-0" style={{ background: '#f8f5ee' }}>
+        {!isVisible ? (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-[10px] font-medium tracking-wide text-[#2a2420]/30">
+              {component.name}
+            </div>
+          </div>
+        ) : (
+          <iframe
+            src={component.previewUrl}
+            title={`${component.name} preview`}
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+            className="pointer-events-none absolute inset-0 h-full w-full border-0"
+          />
+        )}
+      </div>
+    )
+  }
+
   if (previewRecord?.kind === 'react-generated' && previewRecord.status === 'ready') {
     return (
       <div ref={containerRef} className="absolute inset-0">

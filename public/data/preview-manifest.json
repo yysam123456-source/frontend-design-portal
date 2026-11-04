@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-11-02T05:23:32.123Z",
+  "generatedAt": "2026-11-04T02:25:26.587Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
     "ready:react-generated": 572,
     "ready:html-live": 4312,
-    "unsupported:unsupported": 28
+    "unsupported:unsupported": 28,
+    "ready:embed": 123
   },
   "records": [
     {
@@ -34504,6 +34505,867 @@
       "kind": "react-generated",
       "status": "ready",
       "entry": "./previews/ascii-sharks/ascii-sharks-classic"
+    },
+    {
+      "id": "looseleaf-accordion",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=accordion"
+    },
+    {
+      "id": "looseleaf-alert-dialog",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=alert-dialog"
+    },
+    {
+      "id": "looseleaf-alert",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=alert"
+    },
+    {
+      "id": "looseleaf-annotate",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=annotate"
+    },
+    {
+      "id": "looseleaf-arrow",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=arrow"
+    },
+    {
+      "id": "looseleaf-aspect-ratio",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=aspect-ratio"
+    },
+    {
+      "id": "looseleaf-asterisk",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=asterisk"
+    },
+    {
+      "id": "looseleaf-attachment",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=attachment"
+    },
+    {
+      "id": "looseleaf-avatar",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=avatar"
+    },
+    {
+      "id": "looseleaf-badge",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=badge"
+    },
+    {
+      "id": "looseleaf-boil",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=boil"
+    },
+    {
+      "id": "looseleaf-bookmark",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=bookmark"
+    },
+    {
+      "id": "looseleaf-bracket",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=bracket"
+    },
+    {
+      "id": "looseleaf-breadcrumb",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=breadcrumb"
+    },
+    {
+      "id": "looseleaf-bubble",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=bubble"
+    },
+    {
+      "id": "looseleaf-button-group",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=button-group"
+    },
+    {
+      "id": "looseleaf-button",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=button"
+    },
+    {
+      "id": "looseleaf-calendar",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=calendar"
+    },
+    {
+      "id": "looseleaf-callout",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=callout"
+    },
+    {
+      "id": "looseleaf-card",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=card"
+    },
+    {
+      "id": "looseleaf-carousel",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=carousel"
+    },
+    {
+      "id": "looseleaf-chart",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=chart"
+    },
+    {
+      "id": "looseleaf-checkbox",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=checkbox"
+    },
+    {
+      "id": "looseleaf-circled",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=circled"
+    },
+    {
+      "id": "looseleaf-clipboard",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=clipboard"
+    },
+    {
+      "id": "looseleaf-code-block",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=code-block"
+    },
+    {
+      "id": "looseleaf-collapsible",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=collapsible"
+    },
+    {
+      "id": "looseleaf-combobox",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=combobox"
+    },
+    {
+      "id": "looseleaf-command",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=command"
+    },
+    {
+      "id": "looseleaf-confetti",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=confetti"
+    },
+    {
+      "id": "looseleaf-context-menu",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=context-menu"
+    },
+    {
+      "id": "looseleaf-corkboard",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=corkboard"
+    },
+    {
+      "id": "looseleaf-date-picker",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=date-picker"
+    },
+    {
+      "id": "looseleaf-desk",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=desk"
+    },
+    {
+      "id": "looseleaf-dialog",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=dialog"
+    },
+    {
+      "id": "looseleaf-direction",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=direction"
+    },
+    {
+      "id": "looseleaf-doodle",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=doodle"
+    },
+    {
+      "id": "looseleaf-drawer",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=drawer"
+    },
+    {
+      "id": "looseleaf-dropdown-menu",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=dropdown-menu"
+    },
+    {
+      "id": "looseleaf-dropzone",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=dropzone"
+    },
+    {
+      "id": "looseleaf-empty",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=empty"
+    },
+    {
+      "id": "looseleaf-envelope",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=envelope"
+    },
+    {
+      "id": "looseleaf-field",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=field"
+    },
+    {
+      "id": "looseleaf-flip-card",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=flip-card"
+    },
+    {
+      "id": "looseleaf-folder",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=folder"
+    },
+    {
+      "id": "looseleaf-form",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=form"
+    },
+    {
+      "id": "looseleaf-handwritten",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=handwritten"
+    },
+    {
+      "id": "looseleaf-highlight",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=highlight"
+    },
+    {
+      "id": "looseleaf-hover-card",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=hover-card"
+    },
+    {
+      "id": "looseleaf-icon",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=icon"
+    },
+    {
+      "id": "looseleaf-index-card",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=index-card"
+    },
+    {
+      "id": "looseleaf-input-group",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=input-group"
+    },
+    {
+      "id": "looseleaf-input-otp",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=input-otp"
+    },
+    {
+      "id": "looseleaf-input",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=input"
+    },
+    {
+      "id": "looseleaf-item",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=item"
+    },
+    {
+      "id": "looseleaf-kbd",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=kbd"
+    },
+    {
+      "id": "looseleaf-label-tag",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=label-tag"
+    },
+    {
+      "id": "looseleaf-label",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=label"
+    },
+    {
+      "id": "looseleaf-lettering",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=lettering"
+    },
+    {
+      "id": "looseleaf-marker",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=marker"
+    },
+    {
+      "id": "looseleaf-marquee",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=marquee"
+    },
+    {
+      "id": "looseleaf-mascot",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=mascot"
+    },
+    {
+      "id": "looseleaf-menubar",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=menubar"
+    },
+    {
+      "id": "looseleaf-message-scroller",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=message-scroller"
+    },
+    {
+      "id": "looseleaf-message",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=message"
+    },
+    {
+      "id": "looseleaf-napkin",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=napkin"
+    },
+    {
+      "id": "looseleaf-native-select",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=native-select"
+    },
+    {
+      "id": "looseleaf-navigation-menu",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=navigation-menu"
+    },
+    {
+      "id": "looseleaf-notebook",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=notebook"
+    },
+    {
+      "id": "looseleaf-page",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=page"
+    },
+    {
+      "id": "looseleaf-pagination",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=pagination"
+    },
+    {
+      "id": "looseleaf-paper",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=paper"
+    },
+    {
+      "id": "looseleaf-peel-corner",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=peel-corner"
+    },
+    {
+      "id": "looseleaf-polaroid",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=polaroid"
+    },
+    {
+      "id": "looseleaf-popover",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=popover"
+    },
+    {
+      "id": "looseleaf-progress",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=progress"
+    },
+    {
+      "id": "looseleaf-prompt-input",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=prompt-input"
+    },
+    {
+      "id": "looseleaf-quote",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=quote"
+    },
+    {
+      "id": "looseleaf-radio-group",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=radio-group"
+    },
+    {
+      "id": "looseleaf-rating",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=rating"
+    },
+    {
+      "id": "looseleaf-receipt",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=receipt"
+    },
+    {
+      "id": "looseleaf-resizable",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=resizable"
+    },
+    {
+      "id": "looseleaf-reveal",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=reveal"
+    },
+    {
+      "id": "looseleaf-ribbon",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=ribbon"
+    },
+    {
+      "id": "looseleaf-scribble",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=scribble"
+    },
+    {
+      "id": "looseleaf-scroll-area",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=scroll-area"
+    },
+    {
+      "id": "looseleaf-seal",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=seal"
+    },
+    {
+      "id": "looseleaf-select",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=select"
+    },
+    {
+      "id": "looseleaf-separator",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=separator"
+    },
+    {
+      "id": "looseleaf-sheet",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sheet"
+    },
+    {
+      "id": "looseleaf-sidebar",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sidebar"
+    },
+    {
+      "id": "looseleaf-signature-pad",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=signature-pad"
+    },
+    {
+      "id": "looseleaf-signature",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=signature"
+    },
+    {
+      "id": "looseleaf-skeleton",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=skeleton"
+    },
+    {
+      "id": "looseleaf-sketchpad",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sketchpad"
+    },
+    {
+      "id": "looseleaf-slider",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=slider"
+    },
+    {
+      "id": "looseleaf-sonner",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sonner"
+    },
+    {
+      "id": "looseleaf-spinner",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=spinner"
+    },
+    {
+      "id": "looseleaf-squiggle",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=squiggle"
+    },
+    {
+      "id": "looseleaf-stamp-button",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=stamp-button"
+    },
+    {
+      "id": "looseleaf-stamp",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=stamp"
+    },
+    {
+      "id": "looseleaf-stepper",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=stepper"
+    },
+    {
+      "id": "looseleaf-sticker-board",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sticker-board"
+    },
+    {
+      "id": "looseleaf-sticker-picker",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sticker-picker"
+    },
+    {
+      "id": "looseleaf-sticker-sheet",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sticker-sheet"
+    },
+    {
+      "id": "looseleaf-sticker",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sticker"
+    },
+    {
+      "id": "looseleaf-sticky-note",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=sticky-note"
+    },
+    {
+      "id": "looseleaf-strike",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=strike"
+    },
+    {
+      "id": "looseleaf-switch",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=switch"
+    },
+    {
+      "id": "looseleaf-table",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=table"
+    },
+    {
+      "id": "looseleaf-tabs",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=tabs"
+    },
+    {
+      "id": "looseleaf-tally",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=tally"
+    },
+    {
+      "id": "looseleaf-tape",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=tape"
+    },
+    {
+      "id": "looseleaf-tear-off",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=tear-off"
+    },
+    {
+      "id": "looseleaf-textarea",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=textarea"
+    },
+    {
+      "id": "looseleaf-ticket",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=ticket"
+    },
+    {
+      "id": "looseleaf-toggle-group",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=toggle-group"
+    },
+    {
+      "id": "looseleaf-toggle",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=toggle"
+    },
+    {
+      "id": "looseleaf-tooltip",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=tooltip"
+    },
+    {
+      "id": "looseleaf-typewriter",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=typewriter"
+    },
+    {
+      "id": "looseleaf-typing-indicator",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=typing-indicator"
+    },
+    {
+      "id": "looseleaf-typography",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=typography"
+    },
+    {
+      "id": "looseleaf-underline",
+      "project": "looseleaf",
+      "kind": "embed",
+      "status": "ready",
+      "entry": "/looseleaf-preview.html?s=underline"
     }
   ]
 }

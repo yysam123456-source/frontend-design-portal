@@ -94,10 +94,13 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   const isMediaVideo = previewRecord?.kind === 'media-video' && previewRecord.status === 'ready'
   const isMediaImage = previewRecord?.kind === 'media-image' && previewRecord.status === 'ready'
   const isHtmlLive = previewRecord?.kind === 'html-live' && previewRecord.status === 'ready'
+  // Looseleaf 的官方 demo 跑在独立入口（iframe 隔离样式与依赖）
+  const embedUrl = component?.project === 'looseleaf' ? component.demoUrl : undefined
+  const isEmbed = !!embedUrl
   // Detect HTML that contains a <video> tag — render directly instead of iframe to avoid sandbox media blocks
   const htmlVideoSrc = isHtml && component ? extractVideoSrc(component.codeSnippet.source) : null
   const isHtmlVideo = !!htmlVideoSrc
-  const canPreview = isHtml || isHtmlLive || hasGenerated || isJsDemo || isMediaVideo || isMediaImage
+  const canPreview = isHtml || isHtmlLive || hasGenerated || isJsDemo || isMediaVideo || isMediaImage || isEmbed
   const [mode, setMode] = useState<'preview' | 'code'>(canPreview ? 'preview' : 'code')
   const [iframeStatus, setIframeStatus] = useState<'loading' | 'loaded' | 'error'>('loading')
   const [codeExpanded, setCodeExpanded] = useState(false)
@@ -137,7 +140,9 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
     )
   }
 
-  const previewLabel = isMediaVideo
+  const previewLabel = isEmbed
+    ? 'Live Preview'
+    : isMediaVideo
     ? 'Video Demo'
     : isMediaImage
       ? 'Image Demo'
@@ -181,7 +186,16 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
       {/* Content */}
       <div className="relative">
         {mode === 'preview' ? (
-          hasGenerated ? (
+          isEmbed ? (
+            <div className="relative aspect-[16/10] w-full bg-[#f8f5ee]">
+              <iframe
+                src={embedUrl}
+                title={component.name}
+                sandbox="allow-scripts allow-same-origin"
+                className="h-full w-full border-0"
+              />
+            </div>
+          ) : hasGenerated ? (
             <GeneratedComponentPreview component={component} />
           ) : isMediaVideo ? (
             <div className="flex aspect-[16/10] w-full items-center justify-center bg-[#050816] p-4">

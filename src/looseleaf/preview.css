@@ -1,0 +1,28 @@
+/* 预览页外壳：只负责把 demo 摆到纸面上，组件样式全部来自 looseleaf.css */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--ll-paper, #f8f5ee);
+}
+
+.ll-stage {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  color: var(--foreground, #2a2420);
+  font-family: var(--font-hand, system-ui, sans-serif);
+  background-color: var(--ll-paper, #f8f5ee);
+}
+
+.ll-demo {
+  max-width: 100%;
+}
+
+.ll-stage-error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ll-red, #b3261e);
+}

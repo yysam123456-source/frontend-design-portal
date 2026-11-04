@@ -15,9 +15,13 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const reposDir = path.join(__dirname, '..', 'repos')
 const outputDir = path.join(__dirname, '..', 'public', 'data')
+const intermediateDir = path.join(__dirname, '..', '.intermediate')
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true })
+}
+if (!fs.existsSync(intermediateDir)) {
+  fs.mkdirSync(intermediateDir, { recursive: true })
 }
 
 function walkFiles(dir, predicate) {
@@ -1258,7 +1262,7 @@ const ASCII_SHARK_SPECIES = [
   { kind: 'zebra', name: 'Zebra', kw: 'zebra shark ascii art', bio: 'the spotted bottom dweller of coral reefs' },
   { kind: 'nurse', name: 'Nurse', kw: 'nurse shark ascii canvas', bio: 'the docile, slow-moving coastal bottom shark' },
   { kind: 'classic', name: 'Classic', kw: 'ascii shark classic animation', bio: 'the archetypal shark silhouette in pure text' },
-] as const
+]
 
 function extractAsciiSharks() {
   const srcRoot = path.join(reposDir, 'ascii-sharks', 'src')
@@ -1309,6 +1313,64 @@ function extractAsciiSharks() {
   return components
 }
 
+// ============ looseleaf ============
+// MIT 手绘风 UI 组件库：registry.json 中 123 个 registry:ui 组件，
+// 官方示例在 src/docs/examples/<slug>/，运行在独立入口 looseleaf-preview.html?s=<slug>。
+// 独立入口用于隔离 Tailwind preflight / html,body 手绘字体，避免污染门户主站。
+function extractLooseleaf() {
+  const repoRoot = path.join(reposDir, 'kevintngo', 'looseleaf')
+  const registryPath = path.join(repoRoot, 'registry.json')
+  if (!fs.existsSync(registryPath)) return []
+
+  const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'))
+  const uiDir = path.join(repoRoot, 'src', 'components', 'ui')
+  const examplesDir = path.join(repoRoot, 'src', 'docs', 'examples')
+
+  const toCategory = (value) =>
+    String(value || 'Layout')
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+  const toTitle = (name) =>
+    name
+      .split('-')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+
+  const components = []
+  for (const item of registry.items) {
+    if (item.type !== 'registry:ui') continue
+    const slug = item.name
+    // 只收录有官方示例的组件：预览卡直接跑官方 demo，避免“点开是空白”
+    if (!fs.existsSync(path.join(examplesDir, slug))) continue
+
+    const uiFile = path.join(uiDir, `${slug}.tsx`)
+    const source = fs.existsSync(uiFile) ? fs.readFileSync(uiFile, 'utf8') : ''
+    const category = toCategory(item.categories?.[0])
+    const previewUrl = `/looseleaf-preview.html?s=${slug}`
+
+    components.push({
+      id: `looseleaf-${slug}`,
+      project: 'looseleaf',
+      name: item.title || toTitle(slug),
+      category,
+      style: Array.from(new Set(['hand-drawn', 'sketch', 'looseleaf', category])),
+      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Radix UI'],
+      description: item.description || `${item.title || toTitle(slug)} — hand-drawn UI component.`,
+      language: 'tsx',
+      previewUrl,
+      demoUrl: previewUrl,
+      codeSnippet: {
+        language: 'tsx',
+        source,
+        dependencies: item.dependencies || [],
+      },
+    })
+  }
+  return components
+}
+
 // ============ 主流程 ============
 console.log('Extracting components from cloned repos...')
 
@@ -1323,6 +1385,7 @@ const allComponents = [
   ...extractThreeUI(),
   ...extractPixelfx(),
   ...extractAsciiSharks(),
+  ...extractLooseleaf(),
 ]
 
 // 统计
@@ -1366,6 +1429,7 @@ const index = {
     techStack: item.techStack,
     description: item.description,
     language: item.codeSnippet.language,
+    previewUrl: item.previewUrl,
   })),
 }
 fs.writeFileSync(indexPath, JSON.stringify(index, null, 2))

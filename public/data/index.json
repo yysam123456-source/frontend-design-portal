@@ -9,7 +9,8 @@
     "eldoraui",
     "pixijs",
     "pixelfx",
-    "ascii-sharks"
+    "ascii-sharks",
+    "looseleaf"
   ],
   "stats": {
     "react-bits": 269,
@@ -21,9 +22,10 @@
     "eldoraui": 161,
     "threeui": 120,
     "pixelfx": 244,
-    "ascii-sharks": 9
+    "ascii-sharks": 9,
+    "looseleaf": 123
   },
-  "total": 5328,
+  "total": 5451,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -93662,6 +93664,2589 @@
       ],
       "description": "ascii shark classic animation — a lone classic shark (the archetypal shark silhouette in pure text) rendered in monospace ASCII leads a boids fish school across a zero-dependency canvas ocean; pointer moves drive it away and every frame is pure text.",
       "language": "tsx"
+    },
+    {
+      "id": "looseleaf-accordion",
+      "project": "looseleaf",
+      "name": "Accordion",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Ruled rows that open. Each row sits on a hand-pulled pencil rule; a hovered row gets a highlighter swipe, and an opened row turns its chevron over, writes a margin brace beside its text and lets the words soak in. Radix behavior and keyboard support are untouched.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=accordion"
+    },
+    {
+      "id": "looseleaf-alert-dialog",
+      "project": "looseleaf",
+      "name": "Alert Dialog",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A dialog that asks one question and will not go away until it is answered: no close button, no dismissing by clicking outside, focus starts on the safe answer. For risky questions it can be taped with hazard strips and given a red patch behind its icon.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=alert-dialog"
+    },
+    {
+      "id": "looseleaf-alert",
+      "project": "looseleaf",
+      "name": "Alert",
+      "category": "feedback",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "feedback"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A message on a slip of paper, drawn in felt tip. Default and destructive as upstream, plus info, success, warning and a sticky-note variant. Each tone has its own pattern in the margin as well as its own color, and a 16 px icon put first is circled in the tone's marker.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=alert"
+    },
+    {
+      "id": "looseleaf-annotate",
+      "project": "looseleaf",
+      "name": "Annotate",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "One component for every mark, in the spirit of RoughNotation: put a highlight, an underline, a circle, a box, brackets, a strike, a cross-out or a scribble on real words, and draw it on when it scrolls into view.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=annotate"
+    },
+    {
+      "id": "looseleaf-arrow",
+      "project": "looseleaf",
+      "name": "Arrow",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A hand-drawn arrow that points where you tell it: one of eight directions inside its own box, or straight at another element on the page. Straight, curved, or with a loop-the-loop, five heads, and an optional label.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=arrow"
+    },
+    {
+      "id": "looseleaf-aspect-ratio",
+      "project": "looseleaf",
+      "name": "Aspect Ratio",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A box that keeps its width-to-height ratio while its width changes. Exactly shadcn's; the hand-made part is what surrounds it: a photograph on a Polaroid, a print taped at its corners, a map pinned to the desk.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=aspect-ratio"
+    },
+    {
+      "id": "looseleaf-asterisk",
+      "project": "looseleaf",
+      "name": "Asterisk",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Hand-drawn footnote marks: an asterisk, a star, a dagger or a double dagger, in red pencil, sized like a superscript after the word they belong to. Give it a label and an href and it links to the footnote.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=asterisk"
+    },
+    {
+      "id": "looseleaf-attachment",
+      "project": "looseleaf",
+      "name": "Attachment",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A file handed over in a conversation: a slip clipped to the message, or a print taped up. Five states (idle, uploading, processing, error, done), a pencil progress bar and a remove button. The pencil traces the slip, dashes it while it is only a promise and goes red when it fails.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=attachment"
+    },
+    {
+      "id": "looseleaf-avatar",
+      "project": "looseleaf",
+      "name": "Avatar",
+      "category": "data-display",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "data-display"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A face, circled in felt tip. The picture is circled by a hand-drawn loop; without one the initials sit on a disc of marker in a stationery color chosen from the name. A status dot goes on the corner, and a group overlaps its faces and ends in a sketched \"+3\".",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=avatar"
+    },
+    {
+      "id": "looseleaf-badge",
+      "project": "looseleaf",
+      "name": "Badge",
+      "category": "data-display",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "data-display"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A small mark that sits next to a word: a marker stamp, a highlighter swipe, a red-hatched warning, a circled word, and a count that can be written as tally marks. Same variants and asChild as shadcn.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=badge"
+    },
+    {
+      "id": "looseleaf-boil",
+      "project": "looseleaf",
+      "name": "Boil",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Makes drawn things shiver the way hand-animated line drawings do. About six times a second it moves to the next of a few frames: doodles are redrawn by a new hand, and buttons, cards and fields inside wobble a little differently. It stands still when motion is reduced, off screen and in a hidden tab.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=boil"
+    },
+    {
+      "id": "looseleaf-bookmark",
+      "project": "looseleaf",
+      "name": "Bookmark",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A ribbon bookmark you can press. Unpressed, a dashed pencil ghost of a ribbon marks the place; pressed, the woven, edge-stitched cloth ribbon hangs there in its color and casts a short shadow. It is a Toggle underneath, so `aria-pressed`, Space and Enter come for free. `BookmarkRibbon` is the same ribbon as a page marker with no behavior.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=bookmark"
+    },
+    {
+      "id": "looseleaf-bracket",
+      "project": "looseleaf",
+      "name": "Bracket",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A hand bracket down one side of a block: these paragraphs, this list, these three rows belong together. Square, curly or round, on either side, and it flips with the page direction.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=bracket"
+    },
+    {
+      "id": "looseleaf-breadcrumb",
+      "project": "looseleaf",
+      "name": "Breadcrumb",
+      "category": "navigation",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The path to the page you are on, written in a notebook: names between pencil slashes, links that wear the highlighter when pointed at, and the current page underlined twice in blue felt. Swap the slash for a chevron or any node, and fold the middle of a long path into a dropdown.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=breadcrumb"
+    },
+    {
+      "id": "looseleaf-bubble",
+      "project": "looseleaf",
+      "name": "Bubble",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A chat bubble drawn like a person draws one: a single felt-tip stroke round a pillowy box, a solid fill (blue for what you send, gray or highlighter for the rest) and a tail on the sender's side. Also a folded note or a sticky note.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=bubble"
+    },
+    {
+      "id": "looseleaf-button-group",
+      "project": "looseleaf",
+      "name": "Button Group",
+      "category": "actions",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "actions"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Buttons, fields and printed cells joined into one row (or column) that share their seams: the edge two neighbors have in common is drawn once, by the one before, or by a pencil separator you put between them.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=button-group"
+    },
+    {
+      "id": "looseleaf-button",
+      "project": "looseleaf",
+      "name": "Button",
+      "category": "actions",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "actions"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The thing you press. A marker-filled primary, a highlighter secondary, an inked outline, a whisper-box ghost, a solid red destructive and a hand-underlined link, in every shadcn size.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=button"
+    },
+    {
+      "id": "looseleaf-calendar",
+      "project": "looseleaf",
+      "name": "Calendar",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A month on planner paper. The grid is ruled by hand, the day you chose is circled in marker, today is underlined in felt, a range is one highlighter swipe per week, and a day you may not pick is hatched out in pencil. react-day-picker v10 underneath: single, multiple and range selection, locales, right-to-left, week numbers, dropdown captions, several months.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=calendar"
+    },
+    {
+      "id": "looseleaf-callout",
+      "project": "looseleaf",
+      "name": "Callout",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A note in the margin: a few handwritten words and a hand arrow pointing at the thing they are about. It is an ordinary box, so put it where it belongs with a class: float it into the margin, absolutely position it, or drop it in a grid cell.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=callout"
+    },
+    {
+      "id": "looseleaf-card",
+      "project": "looseleaf",
+      "name": "Card",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A card is a sheet of paper: header, title, description, action, content and footer with shadcn's spacing, on any stock and edge. Dividers are drawn pencil rules, and a card can be taped, pinned or clipped to the desk.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=card"
+    },
+    {
+      "id": "looseleaf-carousel",
+      "project": "looseleaf",
+      "name": "Carousel",
+      "category": "data-display",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "data-display"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Embla's smooth, swipeable scroller with paper furniture: hand-drawn arrows outside the slides (dashed when there is nowhere to go) and, if you want it, a tally under them: one stroke per slide, groups of five with the fifth struck across the other four, the current slide in blue felt. Horizontal or vertical, any number of slides per view, autoplay only if you plug it in.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=carousel"
+    },
+    {
+      "id": "looseleaf-chart",
+      "project": "looseleaf",
+      "name": "Chart",
+      "category": "charts",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "charts"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Charts drawn by hand: bars colored in with a marker, felt lines, pencil-shaded areas, pies, radars, dials, sparklines, tally marks and calendar heat maps. Real text on a real DOM, a keyboard cursor, a tooltip on a slip of paper, a legend that switches series off, a table for screen readers, and a pencil pattern on every series so color is never the only channel.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=chart"
+    },
+    {
+      "id": "looseleaf-checkbox",
+      "project": "looseleaf",
+      "name": "Checkbox",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A hand-drawn box you tick. Checking fills it with solid marker and writes a heavy felt tick over it, stroke by stroke; a dash means partly checked. Radix behavior, keyboard and form support are untouched.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=checkbox"
+    },
+    {
+      "id": "looseleaf-circled",
+      "project": "looseleaf",
+      "name": "Circled",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A hand loop around a word or phrase: a circle that overshoots where it started, a box, or a pair of square brackets. It can be written on as it scrolls into view.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=circled"
+    },
+    {
+      "id": "looseleaf-clipboard",
+      "project": "looseleaf",
+      "name": "Clipboard",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A board with a spring clip holding a sheet of paper. The board is one drawn sheet (hardboard with the grain of its fiber, or colored plastic; a bevel lit from the upper left) that turns and casts its own shadow; the chrome clip is drawn over the paper it holds. The sheet is real DOM: put a form, a checklist or notes on it.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=clipboard"
+    },
+    {
+      "id": "looseleaf-code-block",
+      "project": "looseleaf",
+      "name": "Code block",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A typed slip taped to the page: the file name in a typewriter face, the code on a two-color ribbon (red keywords and numbers, black for the rest), line numbers in the margin and a diff mode where removed lines are struck through in red pencil and added ones ticked in green. Ships its own small lexer for tsx, ts, jsx, js, css, json and bash.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=code-block"
+    },
+    {
+      "id": "looseleaf-collapsible",
+      "project": "looseleaf",
+      "name": "Collapsible",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "One panel that folds away behind a trigger. Minimal by design: the panel slides, and if you ask for it, writes a margin brace beside its text. The chevron indicator turns over the same way the accordion's does.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=collapsible"
+    },
+    {
+      "id": "looseleaf-combobox",
+      "project": "looseleaf",
+      "name": "Combobox",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A field you can search. Press it and a command list opens on a slip; type to narrow it, arrow keys and Enter to choose. It can be the single-select of the shadcn docs, an editable field, or a multi-select whose choices are hand-drawn hang-tags you can take back; it can offer to create what you typed and wait for results from a server.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=combobox"
+    },
+    {
+      "id": "looseleaf-command",
+      "project": "looseleaf",
+      "name": "Command",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A command palette on a slip of paper. Type and the list is sorted and cut down (cmdk's fuzzy match); the row you are on wears the highlighter, keys show as pencil keycaps, an empty search gets Stubby with his magnifier. Put it in a dialog and it is set on a napkin.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=command"
+    },
+    {
+      "id": "looseleaf-confetti",
+      "project": "looseleaf",
+      "name": "Confetti",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Paper confetti for the small victories. Strips, punched dots, stars, triangles, streamers and torn scraps, each a tiny drawing from the ink engine, thrown from a click, a state change or a function call. Nothing moves with reduced motion.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=confetti"
+    },
+    {
+      "id": "looseleaf-context-menu",
+      "project": "looseleaf",
+      "name": "Context Menu",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The right-click menu, written on the same slip of paper as the dropdown and set down where the pointer was. Highlighter rows, drawn keycaps, pencil boxes and felt ticks, a red pencil hatch for what deletes. It opens on a right click, a long press on touch, or the menu key, and pops in where the pointer was.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=context-menu"
+    },
+    {
+      "id": "looseleaf-corkboard",
+      "project": "looseleaf",
+      "name": "Corkboard",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A wooden-framed corkboard with notes you can pick up. Drag them with a pointer, or focus one and use the arrow keys to move it and R to turn it. Positions are plain JSON you can store and restore.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=corkboard"
+    },
+    {
+      "id": "looseleaf-date-picker",
+      "project": "looseleaf",
+      "name": "Date Picker",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A date field with a calendar on a slip. Type a date (Sep 17, 2026, 9/17/26, 2026-09-17, tomorrow) or open the calendar and circle one; presets sit in a column beside it; the range version takes two months and closes when you have chosen both ends. Popover + Calendar + Button + Input, composed.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=date-picker"
+    },
+    {
+      "id": "looseleaf-desk",
+      "project": "looseleaf",
+      "name": "Desk",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The surface everything else lies on: sage bookcloth under a lamp (linen weave, mottling, a warm vignette), with an optional layer of objects behind your content: a coffee ring, a pencil, paper clips, a ruler, push-pins. Paper is only paper against something darker than itself.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=desk"
+    },
+    {
+      "id": "looseleaf-dialog",
+      "project": "looseleaf",
+      "name": "Dialog",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A modal window that is a sheet of paper dropped on the desk: it lands with a small tilt that settles, the page behind goes dim under a lamp, and the close button is a doodled x. Tape it, pin it, tear its edge; on a phone it becomes a sheet at the bottom of the screen.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=dialog"
+    },
+    {
+      "id": "looseleaf-direction",
+      "project": "looseleaf",
+      "name": "Direction",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Tells every Radix part, every drawing and every logical property which way the page reads. One provider at the root of a right-to-left page (or on an island inside a left-to-right one) turns arrow keys, sub-menus, slider edges, tab shoulders and hand-drawn strokes round together.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=direction"
+    },
+    {
+      "id": "looseleaf-doodle",
+      "project": "looseleaf",
+      "name": "Doodle",
+      "category": "stickers-doodles",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "stickers-doodles"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Margin doodles: a star, a sun, a flower, a mushroom. Line-led, with one flat fill in register. Use them in the decoration layer, on empty states and in corners of cards.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=doodle"
+    },
+    {
+      "id": "looseleaf-drawer",
+      "project": "looseleaf",
+      "name": "Drawer",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A slip of paper you pull up from the bottom of the screen (or in from any edge), built on vaul. From the bottom it is torn off a pad along its top edge with a strip of tape as the grab tab; drag it, flick it away, or give it snap points.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=drawer"
+    },
+    {
+      "id": "looseleaf-dropdown-menu",
+      "project": "looseleaf",
+      "name": "Dropdown Menu",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A menu written on a slip of paper that drops from a button. The row under the pointer or the keyboard wears the highlighter, a ticked row is a pencil box with a felt-tip tick over it, shortcuts are drawn keycaps, and a destructive row hatches in red pencil instead. Sub-menus, typeahead and focus handling are Radix's.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=dropdown-menu"
+    },
+    {
+      "id": "looseleaf-dropzone",
+      "project": "looseleaf",
+      "name": "Dropzone",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A patch of paper, stitched round its edge, that files can be dropped on or picked into. It checks type, size and count and tells you why a file was refused; it hands you File objects and shows them in a ruled list with thumbnails and progress lines. It uploads nothing: that part is yours.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=dropzone"
+    },
+    {
+      "id": "looseleaf-empty",
+      "project": "looseleaf",
+      "name": "Empty",
+      "category": "feedback",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "feedback"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "What a page says when there is nothing on it yet: media, a title in the script font, a line of explanation and an action. The media can be an icon on a slip of paper, Stubby the pencil stub in one of his poses, or a doodle; a `border` draws the sketched, dashed placeholder frame.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=empty"
+    },
+    {
+      "id": "looseleaf-envelope",
+      "project": "looseleaf",
+      "name": "Envelope",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "An envelope on the desk with a stamp, a postmark and address lines. It opens: the flap, which belongs to the back panel, stands up behind, and a letter slides out from between the panels, the front panel hiding its foot. Built on Collapsible, so it has a real trigger, `aria-expanded`, and content that is not in the page until it is out.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=envelope"
+    },
+    {
+      "id": "looseleaf-field",
+      "project": "looseleaf",
+      "name": "Field",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The words around a control: a label, help text and an error, stacked or in a row, grouped in sets with a legend. It is layout, so the only drawings are the wavy red pencil underline of an error and the hand-drawn card around a choice (a label that wraps a radio or checkbox with its own title and help).",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=field"
+    },
+    {
+      "id": "looseleaf-flip-card",
+      "project": "looseleaf",
+      "name": "Flip card",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "An index card with two sides. It turns over in 3D when you click it or press Space, lifting off the desk on the way; the side you cannot see is inert and hidden from assistive technology. For flashcards, reveals, and anything with a back.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=flip-card"
+    },
+    {
+      "id": "looseleaf-folder",
+      "project": "looseleaf",
+      "name": "Folder",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A manila file folder that is also a set of tabs: a row of paper tabs standing on a sheet of the same paper. The active tab is the folder's own color and runs down into the body, so tab and folder are one piece; the others stand a little lower and darker. It is Radix Tabs underneath.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=folder"
+    },
+    {
+      "id": "looseleaf-form",
+      "project": "looseleaf",
+      "name": "Form",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "react-hook-form wired to the drawn controls, exactly like shadcn's Form. FormControl gives the control its id, aria-describedby and aria-invalid, so an Input, Select, Checkbox or Switch turns red pencil when the field has an error, its label follows, and FormMessage writes the message under it with a wavy red underline.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=form"
+    },
+    {
+      "id": "looseleaf-handwritten",
+      "project": "looseleaf",
+      "name": "Handwritten",
+      "category": "typography",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "typography"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Text that looks written, not typeset: every word sits a hair off the baseline and a touch lighter, by a seeded amount. The words stay real inline text; code, links and forms inside are left exactly as typed.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=handwritten"
+    },
+    {
+      "id": "looseleaf-highlight",
+      "project": "looseleaf",
+      "name": "Highlight",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A highlighter swipe behind real words. The phrase stays text you can select and copy; the swipe follows it line by line when it wraps, in yellow or any stationery color, and can draw itself on as it scrolls into view.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=highlight"
+    },
+    {
+      "id": "looseleaf-hover-card",
+      "project": "looseleaf",
+      "name": "Hover Card",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A small polaroid that appears when you rest the pointer on a link or move keyboard focus to it: photo stock with a thick lower margin for handwriting, a degree or two of tilt, and tape if you like. A preview for sighted pointer users, never the only home of anything.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=hover-card"
+    },
+    {
+      "id": "looseleaf-icon",
+      "project": "looseleaf",
+      "name": "Icon",
+      "category": "icons",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "icons"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Every glyph in Looseleaf is a hand-drawn felt-tip icon, redrawn at each size so a 16 px chevron is a chevron and not a shrunken 24 px one. It takes lucide names, so a shadcn snippet keeps working.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=icon"
+    },
+    {
+      "id": "looseleaf-index-card",
+      "project": "looseleaf",
+      "name": "Index card",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A 3 x 5 card of cream stock with a red header rule and blue lines every 30 px. Header, body and footer parts lay out on the printed rules; the card can have its rod hole punched at the foot, a colored flag stuck over its edge, and a pile of cards behind it.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=index-card"
+    },
+    {
+      "id": "looseleaf-input-group",
+      "project": "looseleaf",
+      "name": "Input Group",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "One hand-drawn field around an icon, some text, a button and the control, so a search box or a URL field is a single box instead of three. The box takes the control's focus, invalid and disabled states, and grows with a textarea. The same parts as shadcn's Input Group.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=input-group"
+    },
+    {
+      "id": "looseleaf-input-otp",
+      "project": "looseleaf",
+      "name": "Input OTP",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A one-time code as a row of separate hand-drawn boxes. The box that takes the next character wears the blue ring and a blinking pencil stroke; typed characters are written in script; a wrong code turns the boxes red. Underneath is one real input (the input-otp package), so paste, SMS autofill, password managers and the mobile keyboard just work.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=input-otp"
+    },
+    {
+      "id": "looseleaf-input",
+      "project": "looseleaf",
+      "name": "Input",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A one-line text field: a pencil box on paper around a real <input>, with blue felt for what you type. It draws its own hover, focus ring, invalid (red pencil and a !), disabled (dashes) and read-only (printed) states.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=input"
+    },
+    {
+      "id": "looseleaf-item",
+      "project": "looseleaf",
+      "name": "Item",
+      "category": "data-display",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "data-display"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A row for lists of things: an icon or photo, a title with a line of description, some actions. Rows sit on ruled paper, a link row lights up under a highlighter swipe, and none of it carries ink of its own, so a list of hundreds costs nothing.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=item"
+    },
+    {
+      "id": "looseleaf-kbd",
+      "project": "looseleaf",
+      "name": "Kbd",
+      "category": "typography",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "typography"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A keyboard key, drawn in pencil as a little keycap with a shaded thickness that presses flat under your finger. Used inline, in groups, in tooltips and in menus.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=kbd"
+    },
+    {
+      "id": "looseleaf-label-tag",
+      "project": "looseleaf",
+      "name": "Label tag",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A hang tag: cut card with clipped corners (or an arched top, or a luggage tag's clipped end), a hole with a reinforcing patch and a brass eyelet, and a loop of twine. The whole silhouette is one drawn sheet, so the string and the eyelet turn and cast their shadow with the card. As a link or a button it swings on its eyelet.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=label-tag"
+    },
+    {
+      "id": "looseleaf-label",
+      "project": "looseleaf",
+      "name": "Label",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The words that go with a field, in the bold hand font, with an optional red pencil star for required fields. It fades with a disabled control and hands its click to it.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=label"
+    },
+    {
+      "id": "looseleaf-lettering",
+      "project": "looseleaf",
+      "name": "Lettering",
+      "category": "typography",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "typography"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Display titles in the script font with a riso print look: ink with a second color printed a hair off register. Pure CSS text-shadow, so the words are real text at any size. No gradients, no filters.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=lettering"
+    },
+    {
+      "id": "looseleaf-marker",
+      "project": "looseleaf",
+      "name": "Marker",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The pencil line between two days of a conversation, the red one where you stopped reading, and the quiet note that someone joined. A separator, a border or a plain line of small print.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=marker"
+    },
+    {
+      "id": "looseleaf-marquee",
+      "project": "looseleaf",
+      "name": "Marquee",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A ticker written on a strip of washi tape. The text runs along it, fades at the ends, stops while you point at it or focus inside it, and has a pause button. With reduced motion it is a still strip with the text centered.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=marquee"
+    },
+    {
+      "id": "looseleaf-mascot",
+      "project": "looseleaf",
+      "name": "Mascot",
+      "category": "stickers-doodles",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "stickers-doodles"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Stubby, the pencil stub who does the drawing. He waves in welcomes, thinks in empty search results, sleeps when nothing is happening. An original character drawn as a die-cut sticker: a chubby pencil stub with a face and nothing else (no arms, no legs, no clothes). His mood is his face, a small lean of the body and one doodle floating beside him.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=mascot"
+    },
+    {
+      "id": "looseleaf-menubar",
+      "project": "looseleaf",
+      "name": "Menubar",
+      "category": "navigation",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A desktop-style menu bar: a strip of paper with a pencil ruler along its foot and the menu titles written on it. Hovered, focused or open, a title wears the highlighter; each menu opens the same slip as the dropdown. Roving focus, hover-to-switch and typeahead are Radix's.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=menubar"
+    },
+    {
+      "id": "looseleaf-message-scroller",
+      "project": "looseleaf",
+      "name": "Message scroller",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The scrolling transcript of a chat: it opens on the newest message, sticks to the bottom while a reply streams and lets go the moment you scroll up, pins your new message to the top so the reply grows beneath it, holds your place when older messages are added above, and wakes a \"jump to latest\" button when there is more below. Same parts and hooks as shadcn's message scroller, with the behavior written in, so no extra package.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=message-scroller"
+    },
+    {
+      "id": "looseleaf-message",
+      "project": "looseleaf",
+      "name": "Message",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The row of a chat message: an avatar, a column with a header, the bubbles and a footer, aligned to the start or the end. Also MessageText, which sets a reply word by word so streaming text soaks in like wet ink.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=message"
+    },
+    {
+      "id": "looseleaf-napkin",
+      "project": "looseleaf",
+      "name": "Napkin",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A paper napkin to write on: tissue with a pinked edge and a pressed border, folded so it has creases (a valley with a shade on one side and a pale line on the other), optionally ringed by a coffee cup. Notes on it are set in the script font, as if in marker.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=napkin"
+    },
+    {
+      "id": "looseleaf-native-select",
+      "project": "looseleaf",
+      "name": "Native Select",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The browser's own <select> in a hand-drawn frame with a pencil chevron. You keep the platform's popup, mobile picker, typeahead and autofill, and a list of hundreds of options costs nothing. Reach for Select when you want the paper slip.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=native-select"
+    },
+    {
+      "id": "looseleaf-navigation-menu",
+      "project": "looseleaf",
+      "name": "Navigation Menu",
+      "category": "navigation",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A site's top navigation as a strip of index dividers: pencil-sketched tabs standing on a pencil line, the open one lifted and washed with highlighter, the current page filled. Its panel drops from under the strip as a slip of paper that follows the size of what is inside, and a felt-tip underline slides along to the open tab. Hover intent, arrow keys and the motion between panels are Radix's.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=navigation-menu"
+    },
+    {
+      "id": "looseleaf-notebook",
+      "project": "looseleaf",
+      "name": "Notebook",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "An open notebook on the desk: ruled paper with a red margin, bound with a wire spiral, binder rings or a stab-stitched spine, its holes punched, more pages peeking out underneath. Text sits on the lines, and with a dog-ear it turns pages. Its closed sibling, `NotebookCover`, is a cloth-bound cover with a stitched spine and an elastic band.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=notebook"
+    },
+    {
+      "id": "looseleaf-page",
+      "project": "looseleaf",
+      "name": "Page",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The app's main paper column: a sheet on the desk with a header, content and a footer. It can be three-hole punched (the desk shows through the holes), torn from a pad, ringed with a coffee stain, and its title is underlined by the same hand that wrote it.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=page"
+    },
+    {
+      "id": "looseleaf-pagination",
+      "project": "looseleaf",
+      "name": "Pagination",
+      "category": "navigation",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Page links as drawn buttons: each number is a Button around your own link, the page you are on is a block of highlighter, the arrows and the ellipsis are hand-drawn. It is just links, so it works with any router, or with plain hrefs and no JavaScript at all.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=pagination"
+    },
+    {
+      "id": "looseleaf-paper",
+      "project": "looseleaf",
+      "name": "Paper",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A sheet of paper on the desk: a stock (paper, slip, index card, graph, kraft, sticky notes ...), an edge (cut, torn, deckle, pinked ...), printed rules, a shadow and a small seeded tilt. The sheet turns; your content never does.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=paper"
+    },
+    {
+      "id": "looseleaf-peel-corner",
+      "project": "looseleaf",
+      "name": "Peel corner",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A page whose corner curls back to show the sheet underneath. Hover the corner to lift it, drag it to peel along a diagonal crease, click or press Enter to open it. For a discount code, a hint, a secret, a P.S.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=peel-corner"
+    },
+    {
+      "id": "looseleaf-polaroid",
+      "project": "looseleaf",
+      "name": "Polaroid",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "An instant photograph: a white frame with the thick foot, a recessed square window and a caption in script. Put a real image in the window, or let it draw a little scene in marker and felt tip. Tape it, pin it, clip it, pile it up.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=polaroid"
+    },
+    {
+      "id": "looseleaf-popover",
+      "project": "looseleaf",
+      "name": "Popover",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A slip of paper set down next to its trigger. It can be held with a push-pin or a strip of tape, given a hand-drawn arrow to point at what it is about, and cut from any stock. Focus moves into it, Escape puts it away.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=popover"
+    },
+    {
+      "id": "looseleaf-progress",
+      "project": "looseleaf",
+      "name": "Progress",
+      "category": "feedback",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "feedback"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A bar somebody hatched in pencil and is coloring in with a marker. The marker is one full-length pass revealed by a CSS clip up to the value, so changing the value is a transition, not a redraw. Without a value it becomes a scribble sliding across. Radix Progress underneath.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=progress"
+    },
+    {
+      "id": "looseleaf-prompt-input",
+      "project": "looseleaf",
+      "name": "Prompt input",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The composer of a chat: a napkin strip with a writing line, an auto-growing textarea, room for attachments and a paper-plane send button that flies off when the message goes. Enter sends, Shift+Enter breaks the line, IME composition is left alone, and while a reply streams the button becomes a stop button. Slots for slash commands and @mentions, with no data of their own.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=prompt-input"
+    },
+    {
+      "id": "looseleaf-quote",
+      "project": "looseleaf",
+      "name": "Quote",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A pull quote with big hand-drawn quotation marks and an attribution. A real figure, blockquote and figcaption, with marker or felt marks drawn in the gutters: an opening pair at the top, a closing pair at the bottom.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=quote"
+    },
+    {
+      "id": "looseleaf-radio-group",
+      "project": "looseleaf",
+      "name": "Radio Group",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Pick exactly one. Each choice is a hand-circled ring; picking it colors the dot in with a terracotta blot and writes a felt spiral into it. Radix Radio Group underneath: roving focus, arrow keys, form value, orientation and direction.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=radio-group"
+    },
+    {
+      "id": "looseleaf-rating",
+      "project": "looseleaf",
+      "name": "Rating",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Stars, hearts or suns somebody drew, where you pick how many are filled. Hover previews, half steps are optional, and it is a real radio group (arrow keys, form value), or a plain read-only display with a text alternative. New in Looseleaf: shadcn has no rating.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=rating"
+    },
+    {
+      "id": "looseleaf-receipt",
+      "project": "looseleaf",
+      "name": "Receipt",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Thermal till paper: pinked (or perforated, or torn) at both ends, printed in the typewriter font, its lines a description list, its total circled in red felt tip by whoever checked it, ending in a barcode made from the number under it.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=receipt"
+    },
+    {
+      "id": "looseleaf-resizable",
+      "project": "looseleaf",
+      "name": "Resizable",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Panels you can drag apart. The seam between two panels is stitched by hand, gets a paper tab with a grip if you ask, darkens under the pointer and is pulled tight into one blue line while you drag. Built on react-resizable-panels 4: keyboard resizing, collapsible panels and persisted layouts included.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=resizable"
+    },
+    {
+      "id": "looseleaf-reveal",
+      "project": "looseleaf",
+      "name": "Reveal",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Holds its children back until they scroll into view, then draws them on: a wipe along the line, wet ink drying, a sheet dropped on the desk, a stamp, a toss. Direct children can arrive one after another. Without script, and with reduced motion, everything is simply there.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=reveal"
+    },
+    {
+      "id": "looseleaf-ribbon",
+      "project": "looseleaf",
+      "name": "Ribbon",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A ribbon label: a band of colored paper with words on it, folded ends and all. For a section heading, a New flag on a card, a price label or a call to action.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=ribbon"
+    },
+    {
+      "id": "looseleaf-scribble",
+      "project": "looseleaf",
+      "name": "Scribble",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Words scribbled out with tight back-and-forth strokes, like a note someone changed their mind about. A look, not a redaction: the text underneath stays in the DOM.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=scribble"
+    },
+    {
+      "id": "looseleaf-scroll-area",
+      "project": "looseleaf",
+      "name": "Scroll Area",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A scroll container whose bar is a pencil \"scroll mark\": a graphite pull sliding down a faint gutter, gone over once more when a hand is on it. It fades in on hover or scroll, works in both directions, and is Radix underneath.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=scroll-area"
+    },
+    {
+      "id": "looseleaf-seal",
+      "project": "looseleaf",
+      "name": "Seal",
+      "category": "stickers-doodles",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "stickers-doodles"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Rosettes, scalloped seals, medals, ringed seals with rim lettering and wax seals, drawn like the stickers without the white edge. Use one as a verified mark beside a name, an award on a card, or the stamp of approval on a certificate.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=seal"
+    },
+    {
+      "id": "looseleaf-select",
+      "project": "looseleaf",
+      "name": "Select",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A drop-down field. The trigger is a pencil box with a tick before its chevron; the list is a slip of paper set down over or under it, where the row you are on gets the highlighter and the chosen row is bold with a blue tick. Radix Select underneath: typeahead, keyboard, form value, item-aligned or popper placement.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=select"
+    },
+    {
+      "id": "looseleaf-separator",
+      "project": "looseleaf",
+      "name": "Separator",
+      "category": "layout",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "layout"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A rule that visually or semantically separates content, drawn by hand: pencil, ledger dashes, a squiggle, dots, a strip of tape, a running stitch or a torn edge of paper. Horizontal or vertical, with an optional centered label.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=separator"
+    },
+    {
+      "id": "looseleaf-sheet",
+      "project": "looseleaf",
+      "name": "Sheet",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A notebook page that slides in from the edge of the screen. It is bound along the edge that faces the middle: spiral wire through punched holes, three binder holes, a perforated tear line, or torn out of a pad. Good for settings, filters, carts and mobile navigation.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sheet"
+    },
+    {
+      "id": "looseleaf-sidebar",
+      "project": "looseleaf",
+      "name": "Sidebar",
+      "category": "navigation",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "An order pad hung from the top of the screen: cream paper with a torn top edge and a binder clip. Rows carry their own line of the pad's ruling, hover is the highlighter, and the current page is marked with a highlighter swipe and a bracket in the margin. It collapses to icons or slides away, becomes a sheet on phones, and stays cheap for a long menu: only the one active row draws anything.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sidebar"
+    },
+    {
+      "id": "looseleaf-signature-pad",
+      "project": "looseleaf",
+      "name": "Signature pad",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Sign on the screen. One brush pen with real pressure, a pencil baseline with its x, a clear button, and a typed-name fallback that is set in hand lettering. It carries the image in a hidden field, so it works in a plain form and can be required.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=signature-pad"
+    },
+    {
+      "id": "looseleaf-signature",
+      "project": "looseleaf",
+      "name": "Signature",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A name signed in the script font with the pen's flourish under it: a swoosh with a loop that flicks up past the last letter. The name is ordinary text; the flourish is a drawing that can write itself on.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=signature"
+    },
+    {
+      "id": "looseleaf-skeleton",
+      "project": "looseleaf",
+      "name": "Skeleton",
+      "category": "feedback",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "feedback"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A placeholder someone sketched in pencil: a pale hatch inside a rough ruled outline that boils gently between three redrawn frames. It costs no ink per instance, so a page of hundreds is as cheap as one.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=skeleton"
+    },
+    {
+      "id": "looseleaf-sketchpad",
+      "project": "looseleaf",
+      "name": "Sketchpad",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A real drawing surface. Pointer, touch, pen pressure or the keyboard put strokes on paper, and every stroke is rendered by the interface's own pen (variable-width ribbons, pooled ends, felt / graphite / marker grain), so what people draw looks like the rest of the page. Undo, redo, export as svg, replay.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sketchpad"
+    },
+    {
+      "id": "looseleaf-slider",
+      "project": "looseleaf",
+      "name": "Slider",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Pick a number, or two, by dragging a paper knob along a hand-ruled groove. The range is one marker pass drawn full length and revealed by a CSS clip, so nothing is redrawn while you drag. Ticks, a highlighter or blue-felt range, vertical, and range sliders. Radix Slider underneath.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=slider"
+    },
+    {
+      "id": "looseleaf-sonner",
+      "project": "looseleaf",
+      "name": "Sonner",
+      "category": "feedback",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "feedback"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Toasts as slips of paper tossed onto the desk. A guest check for success, a pink sticky for errors, yellow for warnings, blue for news; stacked, swipeable, with drawn icons, action buttons, promise toasts and tape or a pin to hold them down. Built on the sonner package: you keep its `toast()` API.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sonner"
+    },
+    {
+      "id": "looseleaf-spinner",
+      "project": "looseleaf",
+      "name": "Spinner",
+      "category": "feedback",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "feedback"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A pencil that will not stop scribbling: a hand-wound spiral whose line is drawn and undrawn round and round, in the color of the text around it. Still, and whole, when motion is reduced. Stubby can write instead, in three frames like a flip book.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=spinner"
+    },
+    {
+      "id": "looseleaf-squiggle",
+      "project": "looseleaf",
+      "name": "Squiggle",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A hand-drawn divider: a wave, a zig-zag, a row of loops, scallops, dashes or dots, drawn to fit whatever width or height you give it. Same semantics as a separator.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=squiggle"
+    },
+    {
+      "id": "looseleaf-stamp-button",
+      "project": "looseleaf",
+      "name": "Stamp button",
+      "category": "actions",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "actions"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A button that is a rubber stamp: a wooden knob on an inked die, in the color of the impression it will leave. Press it and APPROVED, PAID or VOID lands on the page with a thump. The stamps on a page are JSON, so they can be state.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=stamp-button"
+    },
+    {
+      "id": "looseleaf-stamp",
+      "project": "looseleaf",
+      "name": "Stamp",
+      "category": "stickers-doodles",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "stickers-doodles"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A rubber stamp: solid ink pressed through a worn pad, double-rule border, typewriter capitals, a slight tilt and sometimes the ghost of a first impression. For APPROVED, PAID, DRAFT and friends.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=stamp"
+    },
+    {
+      "id": "looseleaf-stepper",
+      "project": "looseleaf",
+      "name": "Stepper",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A number you can nudge: minus, the value, plus. One hand-drawn box with a tick before each button, the number in script, buttons that repeat while you hold them, arrow keys and PageUp / PageDown for the keyboard, and a rattle of the box when there is nowhere left to go. The value is a real text input, so it types, pastes and submits with a form.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=stepper"
+    },
+    {
+      "id": "looseleaf-sticker-board",
+      "project": "looseleaf",
+      "name": "Sticker board",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A page you can stick stickers on: drag them anywhere, turn them, size them, stack them, with the pointer or the keyboard. The value is plain JSON ({ id, name, x, y, rot, scale, z }) and it exports to one standalone SVG.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sticker-board"
+    },
+    {
+      "id": "looseleaf-sticker-picker",
+      "project": "looseleaf",
+      "name": "Sticker picker",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A popover of stickers to choose from: a search field, category chips and a grid you walk with the arrow keys. Reach for it in a comment box, a reaction bar or a profile editor. The highlighted sticker peels its corner.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sticker-picker"
+    },
+    {
+      "id": "looseleaf-sticker-sheet",
+      "project": "looseleaf",
+      "name": "Sticker sheet",
+      "category": "stickers-doodles",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "stickers-doodles"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A sheet of die-cut stickers on backing paper, each in its own kiss-cut outline. Press one and it peels away, drag one and it comes off under the mouse; the outline stays behind and can take it back. For reward charts, sticker packs and anything you collect.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sticker-sheet"
+    },
+    {
+      "id": "looseleaf-sticker",
+      "project": "looseleaf",
+      "name": "Sticker",
+      "category": "stickers-doodles",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "stickers-doodles"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Die-cut vinyl stickers: the art with a white border, a cut line, a soft shadow and, if you like, a peeled corner. Status badges (done, sale) are generated; the rest are drawn by hand.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sticker"
+    },
+    {
+      "id": "looseleaf-sticky-note",
+      "project": "looseleaf",
+      "name": "Sticky note",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A square of colored paper with a gum band, turned a little more than a page. Five pads, any size, written in marker. It can curl a corner, hang from a pin or a strip of tape, and grow a tick box that is ticked with a felt pen.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=sticky-note"
+    },
+    {
+      "id": "looseleaf-strike",
+      "project": "looseleaf",
+      "name": "Strike",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A red pencil through real words: one line, two lines, or a cross-out. The text stays readable and real underneath, so a price that was 49 can still be copied and read by a screen reader.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=strike"
+    },
+    {
+      "id": "looseleaf-switch",
+      "project": "looseleaf",
+      "name": "Switch",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "An on/off switch drawn as one clean felt pill: the terracotta marker fills the track when it is on, and a paper coin for a thumb slides across. Radix Switch underneath.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=switch"
+    },
+    {
+      "id": "looseleaf-table",
+      "project": "looseleaf",
+      "name": "Table",
+      "category": "data-display",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "data-display"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Rows and columns on a ruled page. Every rule is a pencil pull drawn once by the pen and printed by CSS (so a hundred rows cost no drawings), the header has an accountant's double rule, and a hovered or selected row is a highlighter swipe.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=table"
+    },
+    {
+      "id": "looseleaf-tabs",
+      "project": "looseleaf",
+      "name": "Tabs",
+      "category": "navigation",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "navigation"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Index-divider tabs: the active one is lifted and filled with highlighter, and the pencil baseline breaks under it. Also a hairline `line` style with a blue felt underline, and vertical binder tabs. Radix behavior and roving focus are untouched.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=tabs"
+    },
+    {
+      "id": "looseleaf-tally",
+      "project": "looseleaf",
+      "name": "Tally",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A count as tally marks, 1 to 99: bundles of four struck through by a fifth. The number is the accessible name, the box is exactly as big as the marks, and it is drawn on the server.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=tally"
+    },
+    {
+      "id": "looseleaf-tape",
+      "project": "looseleaf",
+      "name": "Tape",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A strip of masking, washi, kraft or cellophane tape, drawn: translucent, with slit lines along its edges, crinkles and torn or pinked ends. Stick it across a corner, use it as a label, or let Paper place it for you.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=tape"
+    },
+    {
+      "id": "looseleaf-tear-off",
+      "project": "looseleaf",
+      "name": "Tear-off",
+      "category": "interactive",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "interactive"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A coupon, ticket or raffle strip with a stub you tear off along a perforated line. Pull the stub and it swings off its far corner, tap it or press Enter and it comes away; the ticket keeps a torn edge. Calls onTear once.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=tear-off"
+    },
+    {
+      "id": "looseleaf-textarea",
+      "project": "looseleaf",
+      "name": "Textarea",
+      "category": "forms",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "forms"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A multi-line text field on paper: a pencil box around a real <textarea> that grows with its text, with optional hand-ruled lines on the baselines, a drawn resize handle and a character counter.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=textarea"
+    },
+    {
+      "id": "looseleaf-ticket",
+      "project": "looseleaf",
+      "name": "Ticket",
+      "category": "paper",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "paper"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A ticket with concave corners, a bite out of both edges where the stub tears off, and a row of holes along the tear. The holes are cut out of the paper, so the desk (and the shadow) show through. A body, a stub, spaced capitals in the typewriter font and a serial number in red.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=ticket"
+    },
+    {
+      "id": "looseleaf-toggle-group",
+      "project": "looseleaf",
+      "name": "Toggle Group",
+      "category": "actions",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "actions"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A row of toggles that belong together: pick one (alignment) or several (bold, italic, underline). Joined outline items share one hand-drawn box with a pencil seam between them; the highlighter body marks what is on.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=toggle-group"
+    },
+    {
+      "id": "looseleaf-toggle",
+      "project": "looseleaf",
+      "name": "Toggle",
+      "category": "actions",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "actions"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A two-state button that stays down: a whisper of pencil box at rest, and a highlighter body that snaps into register when it is on. Same Radix behavior and variants as shadcn.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=toggle"
+    },
+    {
+      "id": "looseleaf-tooltip",
+      "project": "looseleaf",
+      "name": "Tooltip",
+      "category": "overlays",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "overlays"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A sticky note stuck next to a control, with a felt-tip arrow pointing at it. It names an icon button or adds a hint, opens on hover and keyboard focus with a shared delay, and never hides anything a person needs to be able to read.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=tooltip"
+    },
+    {
+      "id": "looseleaf-typewriter",
+      "project": "looseleaf",
+      "name": "Typewriter",
+      "category": "typography",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "typography"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "Text that types itself in the typewriter face, with an inked caret. Keys land at uneven speeds and hold at commas and periods; several phrases can go one under the other or be typed, held and backspaced in turn.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=typewriter"
+    },
+    {
+      "id": "looseleaf-typing-indicator",
+      "project": "looseleaf",
+      "name": "Typing indicator",
+      "category": "chat",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "chat"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "\"Somebody is writing\": a small pencil that draws three dots one after another, or scrawls a line of cursive. A polite live region with a screen-reader label, at home inside a bubble.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=typing-indicator"
+    },
+    {
+      "id": "looseleaf-typography",
+      "project": "looseleaf",
+      "name": "Typography",
+      "category": "typography",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "typography"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "The type scale and a Prose wrapper for the notebook: script headings with a hand-drawn rule, body text in the hand at 17 px on a 1.7 line, blue felt links, marker bullets, mono code chips. Prose styles markup you did not write (markdown, CMS html, MDX).",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=typography"
+    },
+    {
+      "id": "looseleaf-underline",
+      "project": "looseleaf",
+      "name": "Underline",
+      "category": "marks",
+      "style": [
+        "hand-drawn",
+        "sketch",
+        "looseleaf",
+        "marks"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "description": "A pen line under real words: single, double, wavy or scribbled, in felt, pencil or marker. It follows the phrase line by line when it wraps, and can draw itself on as it scrolls into view.",
+      "language": "tsx",
+      "previewUrl": "/looseleaf-preview.html?s=underline"
     }
   ]
 }

@@ -4,6 +4,7 @@ export type PreviewKind =
   | 'js-demo'
   | 'media-video'
   | 'media-image'
+  | 'embed'
   | 'screenshot'
   | 'unsupported'
 

@@ -49,6 +49,14 @@ const QUICK_CATEGORY_KEYS = [
   'loaders',
   'effects',
   'pixel-fx',
+  // Looseleaf（手绘 UI 组件库）带来的分类页签：纸张质感、标注、贴纸涂鸦、手写字体等
+  'paper',
+  'marks',
+  'stickers-doodles',
+  'typography',
+  'chat',
+  'overlays',
+  'actions',
 ]
 
 type PageView = 'official' | 'components' | 'showcases'
@@ -65,6 +73,16 @@ const categoryMeta: Record<string, { label: string; icon: typeof Sparkles }> = {
   modal: { label: 'Modal', icon: Maximize2 },
   skeleton: { label: 'Skeleton', icon: Loader },
   'pixel-fx': { label: 'Pixel FX', icon: Sparkles },
+  paper: { label: 'Paper & Sketch', icon: FileText },
+  marks: { label: 'Marks & Notes', icon: MessageCircle },
+  'stickers-doodles': { label: 'Stickers & Doodles', icon: Sparkles },
+  typography: { label: 'Hand-drawn Type', icon: FileText },
+  chat: { label: 'Chat', icon: MessageCircle },
+  overlays: { label: 'Overlays', icon: Maximize2 },
+  actions: { label: 'Actions', icon: Wand2 },
+  'data-display': { label: 'Data Display', icon: Layout },
+  navigation: { label: 'Navigation', icon: Layout },
+  feedback: { label: 'Feedback', icon: MessageCircle },
 }
 
 function formatCategory(category: string) {
@@ -167,9 +185,9 @@ export default function App() {
   useDocumentMeta(
     activePage === 'components'
       ? {
-          title: 'Component Gallery — 5,319 Open-Source UI Components & Animations',
+          title: 'Component Gallery — 5,451 Open-Source UI Components & Animations',
           description:
-            'Search and filter 5,319 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+            'Search and filter 5,451 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
           canonical: `${SITE_ORIGIN}/components/`,
         }
       : activePage === 'showcases'
@@ -182,7 +200,7 @@ export default function App() {
         : {
             title: 'Frontend Design Gallery — Open-Source UI Components, Animations & Demos',
             description:
-              'A curated gallery of 5,319 open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, ThreeUI and PixiJS — with live previews and copy-ready code.',
+              'A curated gallery of 5,451 open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, Pixel2Motion, ThreeUI, PixiJS, PixelFX, Ascii Sharks and Looseleaf — with live previews and copy-ready code.',
             canonical: `${SITE_ORIGIN}/`,
           }
   )
@@ -238,7 +256,7 @@ export default function App() {
         seen.add(normalized)
         return true
       })
-      .slice(0, 9)
+      .slice(0, 16)
   }, [allCategories])
 
   const handleCloseDetail = useCallback(() => {
