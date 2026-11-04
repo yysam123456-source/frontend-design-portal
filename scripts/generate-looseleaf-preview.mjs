@@ -162,10 +162,16 @@ function buildExamples() {
 
 function copyStyles() {
   const styleSrc = path.join(REPO, 'src', 'styles', 'looseleaf.css')
-  const fontsSrc = path.join(REPO, 'src', 'styles', 'fonts.css')
+  const fontsCssSrc = path.join(REPO, 'src', 'styles', 'fonts.css')
+  const fontsSrc = path.join(REPO, 'src', 'styles', 'fonts')
   fs.copyFileSync(styleSrc, path.join(OUT, 'looseleaf.css'))
-  fs.copyFileSync(fontsSrc, path.join(OUT, 'fonts.css'))
-  log('样式已拷贝（looseleaf.css / fonts.css）')
+  fs.copyFileSync(fontsCssSrc, path.join(OUT, 'fonts.css'))
+  // fonts.css references ./fonts/*.woff2; copy the binaries with the CSS or
+  // Vite cannot resolve them and the request falls back to the SPA shell.
+  if (fs.existsSync(fontsSrc)) {
+    copyDir(fontsSrc, path.join(OUT, 'fonts'), (f) => /\.woff2$/.test(f))
+  }
+  log('样式已拷贝（looseleaf.css / fonts.css / fonts/）')
 }
 
 function writeRegistry(picked) {

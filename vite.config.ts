@@ -33,6 +33,7 @@ export default defineConfig({
         // 门户主站 + Looseleaf 独立预览入口（iframe 隔离，样式与依赖各自成 chunk）
         main: path.resolve(__dirname, 'index.html'),
         looseleaf: path.resolve(__dirname, 'looseleaf-preview.html'),
+        'looseleaf-showcase': path.resolve(__dirname, 'looseleaf-showcase.html'),
       },
     },
   },

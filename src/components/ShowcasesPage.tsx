@@ -40,6 +40,21 @@ function IframeShowcase({ src, title }: { src: string; title: string }) {
   )
 }
 
+/* 浅色 iframe 容器：Looseleaf 纸面主题，避免黑色底在加载瞬间闪一下 */
+function LightIframeShowcase({ src, title, background }: { src: string; title: string; background: string }) {
+  return (
+    <div className="relative w-full">
+      <iframe
+        src={src}
+        title={title}
+        className="fixed inset-0 w-full h-full border-0"
+        style={{ zIndex: 1, background }}
+      />
+      <div style={{ height: '100vh' }} />
+    </div>
+  )
+}
+
 /* ═══════════════════════════════════════════════════════════════
    SHOWCASES PAGE — 6 Immersive Fullscreen Effects
    ═══════════════════════════════════════════════════════════════ */
@@ -1396,6 +1411,7 @@ const SHOWCASES = [
   { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎' },
   { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈' },
   { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈' },
+  { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1491,6 +1507,9 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'crystal' && <IframeShowcase src="/showcases/crystal/" title="WebGPU 水晶绘制" />}
         {activeId === 'rain' && <IframeShowcase src="/showcases/rain/" title="雨景工作室" />}
         {activeId === 'ascii' && <AsciiSharksShowcase />}
+        {activeId === 'looseleaf' && (
+          <LightIframeShowcase src="/looseleaf-showcase.html" title="Looseleaf Paper Desk" background="#a8c8bb" />
+        )}
       </div>
     </div>
   )
