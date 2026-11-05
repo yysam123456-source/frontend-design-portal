@@ -46,8 +46,10 @@
     "input-otp": "^1.5.0",
     "less": "^4.6.7",
     "lucide-react": "^1.22.0",
+    "midi-file": "^1.2.4",
     "motion": "^12.42.2",
     "pixi.js": "^8.19.0",
+    "polygon-clipping": "^0.15.7",
     "radix-ui": "^1.8.1",
     "react": "^19.2.7",
     "react-day-picker": "^10.0.2",
@@ -63,6 +65,7 @@
     "tsparticles": "^4.3.0",
     "tw-animate-css": "^1.4.0",
     "vaul": "^1.1.2",
+    "vexflow": "^4.2.5",
     "zod": "^4.6.7"
   }
 }

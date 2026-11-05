@@ -1413,6 +1413,7 @@ const SHOWCASES = [
   { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈' },
   { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝' },
   { id: 'phoenix', label: 'Chinese Phoenix Crown', desc: 'Seven crowns with physics text curtains', icon: '👑' },
+  { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1513,6 +1514,9 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         )}
         {activeId === 'phoenix' && (
           <IframeShowcase src="/phoenix-crown.html" title="Chinese Phoenix Crown" background="#0f1420" />
+        )}
+        {activeId === 'grand-atelier' && (
+          <IframeShowcase src="/grand-atelier.html" title="Grand Atelier" background="#151713" />
         )}
       </div>
     </div>
