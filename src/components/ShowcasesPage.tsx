@@ -6,6 +6,7 @@ import PixiJSShowcase from './PixiJSShowcase'
 import AbyssalDescent from './showcases/AbyssalDescent'
 import AsciiSharksShowcase from './showcases/AsciiSharksShowcase'
 import AsciiRestShowcase from './showcases/AsciiRestShowcase'
+import TextFireworksShowcase from './showcases/TextFireworksShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
    KAGE — MengTo 单文件滚动 3D 夜游（公众号爆火项目，整页 iframe）
@@ -321,265 +322,6 @@ function NebulaCore() {
     <div className="relative w-full" style={{ marginTop: '-3.5rem' }}>
       <canvas ref={canvasRef} className="fixed inset-0 w-full h-full" style={{ background: '#03030a', cursor: 'crosshair', zIndex: 1 }} />
       <div style={{ height: '600vh' }} />
-    </div>
-  )
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   SHOWCASE 2 — ORBITAL MODULES
-   Anime.js-style CSS 3D satellite animation
-   ═══════════════════════════════════════════════════════════════ */
-function OrbitalModules() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const scrollRef = useRef(0)
-  const mouseRef = useRef({ x: 0.5, y: 0.5 })
-  const rafRef = useRef(0)
-
-  const modules = [
-    { name: 'Animation', color: '#FF6B6B', icon: '◈' },
-    { name: 'Timeline', color: '#4ECDC4', icon: '⟐' },
-    { name: 'WAAPI', color: '#45B7D1', icon: '◇' },
-    { name: 'Scroll', color: '#96CEB4', icon: '↕' },
-    { name: 'SVG', color: '#FFEAA7', icon: '△' },
-    { name: 'Spring', color: '#DDA0DD', icon: '∿' },
-    { name: 'Draggable', color: '#98D8C8', icon: '✥' },
-    { name: 'Stagger', color: '#F7DC6F', icon: '≡' },
-    { name: 'Easing', color: '#BB8FCE', icon: '∼' },
-    { name: 'Scope', color: '#85C1E9', icon: '⊙' },
-    { name: 'Events', color: '#F8C471', icon: '⚡' },
-    { name: 'Timer', color: '#82E0AA', icon: '◷' },
-  ]
-
-  useEffect(() => {
-    const container = containerRef.current
-    if (!container) return
-
-    const onScroll = () => {
-      const docH = document.documentElement.scrollHeight - window.innerHeight
-      scrollRef.current = docH > 0 ? Math.max(0, Math.min(1, window.scrollY / docH)) : 0
-    }
-    const onMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('mousemove', onMouseMove)
-
-    const modEls = container.querySelectorAll<HTMLElement>('[data-mod]')
-    const labelEls = container.querySelectorAll<HTMLElement>('[data-label]')
-    const lineEls = container.querySelectorAll<HTMLElement>('[data-orbit-line]')
-    const coreEl = container.querySelector<HTMLElement>('[data-core]')
-    const titleEl = container.querySelector<HTMLElement>('[data-title]')
-    const subtitleEl = container.querySelector<HTMLElement>('[data-subtitle]')
-
-    const animate = () => {
-      const s = scrollRef.current
-      const m = mouseRef.current
-      const time = performance.now() * 0.001
-
-      // Stages
-      const flyIn = smoothstep(0, 0.15, s)       // 0->1: modules fly in from edges
-      const formOrbit = smoothstep(0.12, 0.35, s)  // 0->1: modules arrange into orbits
-      const rotate = smoothstep(0.3, 0.6, s)       // 0->1: orbits rotate, speed up
-      const tilt3D = smoothstep(0.45, 0.7, s)      // 0->1: 3D tilt
-      const shrink = smoothstep(0.65, 0.85, s)     // 0->1: shrink to center
-      const caseOpen = smoothstep(0.8, 1.0, s)     // 0->1: final display
-
-      // Core
-      if (coreEl) {
-        const coreScale = 0.3 + flyIn * 0.7 + caseOpen * 0.5
-        const coreGlow = flyIn * 0.6 + caseOpen * 0.4
-        coreEl.style.transform = `translate(-50%, -50%) scale(${coreScale})`
-        coreEl.style.opacity = `${Math.min(1, flyIn * 2)}`
-        coreEl.style.boxShadow = `0 0 ${60 * coreGlow}px rgba(200,150,255,${coreGlow * 0.4}), 0 0 ${120 * coreGlow}px rgba(150,100,255,${coreGlow * 0.15})`
-      }
-
-      // Title
-      if (titleEl) {
-        titleEl.style.opacity = `${(1 - flyIn) * 0.9 + caseOpen * 0.8}`
-        titleEl.style.transform = `translateY(${(1 - flyIn) * -20 + caseOpen * 40}px)`
-      }
-      if (subtitleEl) {
-        subtitleEl.style.opacity = `${(1 - flyIn * 1.5) * 0.7 + caseOpen * 0.6}`
-        subtitleEl.style.transform = `translateY(${(1 - flyIn * 1.5) * 10}px)`
-      }
-
-      // Modules
-      modEls.forEach((mod, i) => {
-        const orbit = parseInt(mod.dataset.orbit || '0')
-        const baseAngle = parseFloat(mod.dataset.angle || '0')
-
-        // Mouse-driven rotation offset
-        const mouseRotation = (m.x - 0.5) * 0.3 + (m.y - 0.5) * 0.15
-        const timeRotation = time * (0.15 + orbit * 0.08) * (orbit % 2 === 0 ? 1 : -1)
-
-        // Stage-based positioning
-        let x = 0, y = 0, scale = 1, opacity = 1, rotX = 0, rotY = 0, rotZ = 0
-
-        if (flyIn < 1) {
-          // Fly in from random directions
-          const flyAngle = (i / modules.length) * Math.PI * 2 + i * 1.7
-          const flyDist = (1 - flyIn) * 800
-          x = Math.cos(flyAngle) * flyDist
-          y = Math.sin(flyAngle) * flyDist
-          scale = 0.2 + flyIn * 0.8
-          opacity = flyIn
-        } else {
-          const angle = baseAngle + timeRotation * rotate + mouseRotation
-          const orbitR = 120 + orbit * 80
-
-          // Shrink orbits
-          const currentR = orbitR * (1 - shrink * 0.7)
-          const currentAngle = angle + shrink * Math.PI * 0.5 * orbit
-
-          x = Math.cos(currentAngle) * currentR
-          y = Math.sin(currentAngle) * currentR * (1 - tilt3D * 0.35) // Flatten Y for 3D effect
-
-          scale = 1 - shrink * 0.3 + caseOpen * 0.2
-          opacity = 1 - shrink * 0.1
-
-          // 3D tilt
-          rotX = tilt3D * (m.y - 0.5) * 40
-          rotY = tilt3D * (m.x - 0.5) * 40
-          rotZ = tilt3D * Math.sin(time + i) * 5
-        }
-
-        mod.style.transform = `translate(${x}px, ${y}px) scale(${scale}) rotateX(${rotX}deg) rotateY(${rotY}deg) rotateZ(${rotZ}deg)`
-        mod.style.opacity = `${Math.max(0, opacity)}`
-      })
-
-      // Orbit lines
-      lineEls.forEach((line) => {
-        const orbit = parseInt(line.dataset.orbit || '0')
-        const r = 120 + orbit * 80
-        const currentR = r * (1 - shrink * 0.7)
-        const lineOpacity = formOrbit * 0.15 * (1 - shrink * 0.5)
-        line.style.width = `${currentR * 2}px`
-        line.style.height = `${currentR * 2 * (1 - tilt3D * 0.35)}px`
-        line.style.opacity = `${lineOpacity}`
-        line.style.transform = `translate(-50%, -50%) rotateX(${tilt3D * (m.y - 0.5) * 40}deg) rotateY(${tilt3D * (m.x - 0.5) * 40}deg)`
-      })
-
-      // Labels
-      labelEls.forEach((label) => {
-        const delay = parseFloat(label.dataset.delay || '0')
-        const labelProgress = smoothstep(0.2 + delay, 0.5 + delay, s)
-        label.style.opacity = `${labelProgress * (1 - shrink * 0.5) * (1 - (1 - flyIn) * 2)}`
-        label.style.transform = `translateY(${(1 - labelProgress) * 30}px)`
-      })
-
-      rafRef.current = requestAnimationFrame(animate)
-    }
-    rafRef.current = requestAnimationFrame(animate)
-
-    return () => { cancelAnimationFrame(rafRef.current); window.removeEventListener('scroll', onScroll); window.removeEventListener('mousemove', onMouseMove) }
-  }, [])
-
-  return (
-    <div className="relative w-full" style={{ marginTop: '-3.5rem' }}>
-      <div
-        ref={containerRef}
-        className="fixed inset-0 w-full h-full overflow-hidden"
-        style={{
-          background: 'radial-gradient(ellipse at 50% 50%, #0f0f1a 0%, #060610 50%, #020208 100%)',
-          perspective: '1200px',
-        }}
-      >
-        {/* Title */}
-        <div data-title className="absolute top-[15%] left-1/2 -translate-x-1/2 text-center z-10 pointer-events-none" style={{ transform: 'translateX(-50%)' }}>
-          <h2 className="text-5xl font-bold text-white/90 tracking-wider" style={{ fontFamily: 'system-ui, sans-serif' }}>ORBITAL MODULES</h2>
-        </div>
-        <div data-subtitle className="absolute top-[22%] left-1/2 -translate-x-1/2 text-center z-10 pointer-events-none" style={{ transform: 'translateX(-50%)' }}>
-          <p className="text-lg text-white/40" style={{ fontFamily: 'system-ui, sans-serif' }}>Modular API Architecture — Scroll to animate</p>
-        </div>
-
-        {/* Core */}
-        <div
-          data-core
-          className="absolute top-1/2 left-1/2 w-16 h-16 rounded-full"
-          style={{
-            transform: 'translate(-50%, -50%) scale(0.3)',
-            background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(180,140,255,0.4) 35%, transparent 70%)',
-            boxShadow: '0 0 60px rgba(200,150,255,0.3)',
-            opacity: 0,
-          }}
-        />
-
-        {/* Orbit lines */}
-        {[0, 1, 2].map(orbit => (
-          <div
-            key={`line-${orbit}`}
-            data-orbit-line
-            data-orbit={orbit}
-            className="absolute top-1/2 left-1/2 rounded-full border border-white/5"
-            style={{ transform: 'translate(-50%, -50%)', opacity: 0 }}
-          />
-        ))}
-
-        {/* Module container */}
-        <div className="absolute inset-0 flex items-center justify-center" style={{ transformStyle: 'preserve-3d' }}>
-          {modules.map((mod, i) => {
-            const orbit = Math.floor(i / 4)
-            const angleInOrbit = (i % 4) * (Math.PI * 2 / 4)
-            return (
-              <div
-                key={mod.name}
-                data-mod
-                data-orbit={orbit}
-                data-angle={angleInOrbit}
-                className="absolute top-1/2 left-1/2 flex items-center justify-center"
-                style={{
-                  width: 56, height: 56,
-                  marginLeft: -28, marginTop: -28,
-                  borderRadius: 14,
-                  background: `${mod.color}15`,
-                  border: `1.5px solid ${mod.color}40`,
-                  color: mod.color,
-                  fontSize: 20,
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  transition: 'box-shadow 0.3s',
-                  boxShadow: `0 0 15px ${mod.color}15`,
-                  backdropFilter: 'blur(8px)',
-                  userSelect: 'none' as const,
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = `0 0 25px ${mod.color}35, inset 0 0 15px ${mod.color}15`
-                  ;(e.currentTarget as HTMLElement).style.background = `${mod.color}25`
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = `0 0 15px ${mod.color}15`
-                  ;(e.currentTarget as HTMLElement).style.background = `${mod.color}15`
-                }}
-              >
-                {mod.name[0]}
-              </div>
-            )
-          })}
-        </div>
-
-        {/* Labels */}
-        <div className="absolute bottom-[12%] left-1/2 -translate-x-1/2 flex gap-8 z-10 pointer-events-none" style={{ transform: 'translateX(-50%)' }}>
-          {['Animation', 'Timeline', 'WAAPI', 'Scroll'].map((name, i) => (
-            <div key={name} data-label data-delay={i * 0.05} className="text-center opacity-0">
-              <div className="text-xs font-medium text-white/60 tracking-wider" style={{ fontFamily: 'system-ui, sans-serif' }}>{name.toUpperCase()}</div>
-              <div className="text-[10px] text-white/25 mt-1">{['Core engine', 'Sequence control', 'Native performance', 'Viewport trigger'][i]}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Size display */}
-        <div data-label data-delay="0.2" className="absolute bottom-[6%] left-1/2 -translate-x-1/2 text-center opacity-0 pointer-events-none" style={{ transform: 'translateX(-50%)' }}>
-          <div className="text-xs text-white/20 tracking-widest">24.50 KB TOTAL</div>
-          <div className="flex gap-3 mt-2 justify-center">
-            {modules.map(m => (
-              <div key={m.name} className="w-6 h-1.5 rounded-full" style={{ background: `${m.color}50` }} />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll spacer */}
-      <div style={{ height: '500vh' }} />
     </div>
   )
 }
@@ -1395,7 +1137,7 @@ function ThreePlanets() {
    ═══════════════════════════════════════════════════════════════ */
 const SHOWCASES = [
   { id: 'nebula', label: 'Nebula Core', desc: 'Particle cosmos', icon: '✦' },
-  { id: 'orbital', label: 'Orbital Modules', desc: 'CSS 3D satellite', icon: '◎' },
+  { id: 'fireworks', label: 'Text Fireworks', desc: 'Type → explode → return', icon: '✦' },
   { id: 'mecha', label: 'Mecha Breakdown', desc: 'Mechanical disassembly', icon: '⚙' },
   { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐' },
   { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕' },
@@ -1504,7 +1246,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
       {/* Active showcase */}
       <div className={`transition-opacity duration-200 ${transitioning ? 'opacity-0' : 'opacity-100'}`}>
         {activeId === 'nebula' && <NebulaCore />}
-        {activeId === 'orbital' && <OrbitalModules />}
+        {activeId === 'fireworks' && <TextFireworksShowcase />}
         {activeId === 'mecha' && <MechaDisassembly />}
         {activeId === 'planets' && <ThreePlanets />}
         {activeId === 'orbits' && <OrbitalViz />}

@@ -288,7 +288,22 @@ body {
   log('预览入口已生成：looseleaf-preview.html + src/looseleaf/main.tsx')
 }
 
+function committedLooseleafOutputsAvailable() {
+  const committed = [
+    path.join(ROOT, 'src', 'looseleaf', 'main.tsx'),
+    path.join(ROOT, 'src', 'looseleaf', 'registry.ts'),
+    path.join(ROOT, 'looseleaf-preview.html'),
+  ]
+  return committed.every((p) => fs.existsSync(p))
+}
+
 function main() {
+  // repos/ 是 gitignored 的本地第三方仓库；CI 干净检出时不存在。
+  // 已提交的生成产物可直接复用，避免整套构建在第二步中断。
+  if (!fs.existsSync(REPO) && committedLooseleafOutputsAvailable()) {
+    log('repos/ 缺失，沿用已提交的 Looseleaf 产物')
+    return
+  }
   assertRepo()
   copyVendor()
   const { picked } = buildExamples()
