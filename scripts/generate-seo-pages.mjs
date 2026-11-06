@@ -117,6 +117,7 @@ function titleCase(slug) {
 }
 
 function prettyCategory(slug) {
+  if (slug === 'ascii') return 'ASCII'
   const s = String(slug ?? 'ui').replace(/-/g, ' ')
   return s.charAt(0).toUpperCase() + s.slice(1)
 }

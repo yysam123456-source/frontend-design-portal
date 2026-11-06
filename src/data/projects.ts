@@ -114,6 +114,18 @@ export const projects: ProjectMeta[] = [
     category: 'effect',
   },
   {
+    id: 'ascii-rest',
+    name: 'ASCII.Art',
+    github: 'https://github.com/bas3line/ascii',
+    demoBaseUrl: 'https://ascii.rest',
+    description:
+      'A MIT-licensed library of 240 frame-by-frame ASCII animations across 15 categories — landscapes, logos, Linux distros, physics simulations, creatures and type effects. Each piece is a single <ascii-art> tag, loaded on demand with no build step and no CDN required.',
+    accentColor: '#7DD3FC',
+    tags: ['ascii-art', 'web-components', 'generative-art', 'animation', 'canvas', 'zero-dependency'],
+    techStack: ['JavaScript', 'Web Components', 'Canvas API'],
+    category: 'animation',
+  },
+  {
     id: 'ascii-sharks',
     name: 'Ascii Sharks',
     github: 'https://github.com/stackedlol/ascii-sharks',

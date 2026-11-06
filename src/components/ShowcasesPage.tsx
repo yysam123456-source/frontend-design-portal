@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { Fragment, useEffect, useRef, useState, useCallback } from 'react'
 import * as THREE from 'three'
 import OrbitalViz from './OrbitalViz'
 import KeyboardConfigShowcase from './KeyboardConfigShowcase'
 import PixiJSShowcase from './PixiJSShowcase'
 import AbyssalDescent from './showcases/AbyssalDescent'
 import AsciiSharksShowcase from './showcases/AsciiSharksShowcase'
+import AsciiRestShowcase from './showcases/AsciiRestShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
    KAGE — MengTo 单文件滚动 3D 夜游（公众号爆火项目，整页 iframe）
@@ -1410,10 +1411,11 @@ const SHOWCASES = [
   { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱' },
   { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎' },
   { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈' },
-  { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈' },
   { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝' },
   { id: 'phoenix', label: 'Chinese Phoenix Crown', desc: 'Seven crowns with physics text curtains', icon: '👑' },
   { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹' },
+  { id: 'ascii-rest', label: 'ASCII.Art', desc: '240 animated pieces · 15 categories · one tag', icon: '🅰', group: 'ASCII' },
+  { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈', group: 'ASCII' },
 ] as const
 
 type ShowcaseId = typeof SHOWCASES[number]['id']
@@ -1471,20 +1473,30 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
               scrollbarColor: 'rgba(65,230,255,0.35) transparent',
             }}
           >
-            {SHOWCASES.map(sc => (
-              <button
-                key={sc.id}
-                onClick={() => { switchTo(sc.id); setSelectorOpen(false) }}
-                className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 whitespace-nowrap ${
-                  activeId === sc.id
-                    ? 'text-white bg-white/15'
-                    : 'text-white/40 hover:text-white/70 hover:bg-white/8'
-                }`}
-              >
-                <span className="text-base">{sc.icon}</span>
-                <span>{sc.label}</span>
-              </button>
-            ))}
+            {SHOWCASES.map((sc, index) => {
+              const group = (sc as any).group as string | undefined
+              const previousGroup = index > 0 ? ((SHOWCASES[index - 1] as any).group as string | undefined) : undefined
+              return (
+                <Fragment key={sc.id}>
+                  {group && group !== previousGroup && (
+                    <div className="mt-1 px-3 pt-1 pb-0.5 text-[9px] font-semibold tracking-[0.34em] text-cyan-200/50">
+                      {group}
+                    </div>
+                  )}
+                  <button
+                    onClick={() => { switchTo(sc.id); setSelectorOpen(false) }}
+                    className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 whitespace-nowrap ${
+                      activeId === sc.id
+                        ? 'text-white bg-white/15'
+                        : 'text-white/40 hover:text-white/70 hover:bg-white/8'
+                    }`}
+                  >
+                    <span className="text-base">{sc.icon}</span>
+                    <span>{sc.label}</span>
+                  </button>
+                </Fragment>
+              )
+            })}
           </div>
         )}
       </div>
@@ -1508,6 +1520,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'vegetation' && <IframeShowcase src="/showcases/vegetation/" title="WebGPU 藤蔓生成" />}
         {activeId === 'crystal' && <IframeShowcase src="/showcases/crystal/" title="WebGPU 水晶绘制" />}
         {activeId === 'rain' && <IframeShowcase src="/showcases/rain/" title="雨景工作室" />}
+        {activeId === 'ascii-rest' && <AsciiRestShowcase />}
         {activeId === 'ascii' && <AsciiSharksShowcase />}
         {activeId === 'looseleaf' && (
           <LightIframeShowcase src="/looseleaf-showcase.html" title="Looseleaf Paper Desk" background="#a8c8bb" />

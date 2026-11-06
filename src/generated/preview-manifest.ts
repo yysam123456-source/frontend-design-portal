@@ -35358,6 +35358,1446 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
     "kind": "embed",
     "status": "ready",
     "entry": "/looseleaf-preview.html?s=underline"
+  },
+  "ascii-rest-alpine-dawn": {
+    "id": "ascii-rest-alpine-dawn",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-amer-fort": {
+    "id": "ascii-rest-amer-fort",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-aurora-fjord": {
+    "id": "ascii-rest-aurora-fjord",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-black-prism": {
+    "id": "ascii-rest-black-prism",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cloud-sea": {
+    "id": "ascii-rest-cloud-sea",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-command-city": {
+    "id": "ascii-rest-command-city",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-deep-reef": {
+    "id": "ascii-rest-deep-reef",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-desert-night": {
+    "id": "ascii-rest-desert-night",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-earthrise": {
+    "id": "ascii-rest-earthrise",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-edge-orbit": {
+    "id": "ascii-rest-edge-orbit",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-gangaur-ghat": {
+    "id": "ascii-rest-gangaur-ghat",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-green-storm": {
+    "id": "ascii-rest-green-storm",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-jal-mahal": {
+    "id": "ascii-rest-jal-mahal",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-jungle-falls": {
+    "id": "ascii-rest-jungle-falls",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-kite-festival": {
+    "id": "ascii-rest-kite-festival",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-kyoto-dusk": {
+    "id": "ascii-rest-kyoto-dusk",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lake-pichola": {
+    "id": "ascii-rest-lake-pichola",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lantern-lake": {
+    "id": "ascii-rest-lantern-lake",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lava-wall": {
+    "id": "ascii-rest-lava-wall",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-marine-drive": {
+    "id": "ascii-rest-marine-drive",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-misty-forest": {
+    "id": "ascii-rest-misty-forest",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-night-coast": {
+    "id": "ascii-rest-night-coast",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-night-highway": {
+    "id": "ascii-rest-night-highway",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-ocean-sunset": {
+    "id": "ascii-rest-ocean-sunset",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-planet-scale": {
+    "id": "ascii-rest-planet-scale",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-prism-city": {
+    "id": "ascii-rest-prism-city",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-salt-flat": {
+    "id": "ascii-rest-salt-flat",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-saturn-rise": {
+    "id": "ascii-rest-saturn-rise",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-snow-train": {
+    "id": "ascii-rest-snow-train",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-storm-plains": {
+    "id": "ascii-rest-storm-plains",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-taj-dawn": {
+    "id": "ascii-rest-taj-dawn",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-tokyo-rain": {
+    "id": "ascii-rest-tokyo-rain",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-varanasi-ghats": {
+    "id": "ascii-rest-varanasi-ghats",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-volcano-night": {
+    "id": "ascii-rest-volcano-night",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-boot-log": {
+    "id": "ascii-rest-boot-log",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-box-frames": {
+    "id": "ascii-rest-box-frames",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-calendar": {
+    "id": "ascii-rest-calendar",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-chat": {
+    "id": "ascii-rest-chat",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-digital-clock": {
+    "id": "ascii-rest-digital-clock",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-dividers": {
+    "id": "ascii-rest-dividers",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-file-tree": {
+    "id": "ascii-rest-file-tree",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-form-controls": {
+    "id": "ascii-rest-form-controls",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-git-graph": {
+    "id": "ascii-rest-git-graph",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-not-found": {
+    "id": "ascii-rest-not-found",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-pipeline": {
+    "id": "ascii-rest-pipeline",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-progress-bar": {
+    "id": "ascii-rest-progress-bar",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-skeleton": {
+    "id": "ascii-rest-skeleton",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-spinners": {
+    "id": "ascii-rest-spinners",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-terminal": {
+    "id": "ascii-rest-terminal",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-bar-chart": {
+    "id": "ascii-rest-bar-chart",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-candlesticks": {
+    "id": "ascii-rest-candlesticks",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cpu-meters": {
+    "id": "ascii-rest-cpu-meters",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-equalizer": {
+    "id": "ascii-rest-equalizer",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-gauge": {
+    "id": "ascii-rest-gauge",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-heartbeat": {
+    "id": "ascii-rest-heartbeat",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-heatmap": {
+    "id": "ascii-rest-heatmap",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-radar": {
+    "id": "ascii-rest-radar",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-sparkline": {
+    "id": "ascii-rest-sparkline",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-uptime-bar": {
+    "id": "ascii-rest-uptime-bar",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-big-text": {
+    "id": "ascii-rest-big-text",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-dissolve": {
+    "id": "ascii-rest-dissolve",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-glitch": {
+    "id": "ascii-rest-glitch",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-marquee": {
+    "id": "ascii-rest-marquee",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-morse": {
+    "id": "ascii-rest-morse",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-scramble": {
+    "id": "ascii-rest-scramble",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-split-flap": {
+    "id": "ascii-rest-split-flap",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-typewriter": {
+    "id": "ascii-rest-typewriter",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-wave-text": {
+    "id": "ascii-rest-wave-text",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-c": {
+    "id": "ascii-rest-c",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cpp": {
+    "id": "ascii-rest-cpp",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-csharp": {
+    "id": "ascii-rest-csharp",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-css": {
+    "id": "ascii-rest-css",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-html": {
+    "id": "ascii-rest-html",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-java": {
+    "id": "ascii-rest-java",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-javascript": {
+    "id": "ascii-rest-javascript",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-typescript": {
+    "id": "ascii-rest-typescript",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-python": {
+    "id": "ascii-rest-python",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-go": {
+    "id": "ascii-rest-go",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-rust": {
+    "id": "ascii-rest-rust",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-clojure": {
+    "id": "ascii-rest-clojure",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-dart": {
+    "id": "ascii-rest-dart",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-elixir": {
+    "id": "ascii-rest-elixir",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-elm": {
+    "id": "ascii-rest-elm",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-erlang": {
+    "id": "ascii-rest-erlang",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-haskell": {
+    "id": "ascii-rest-haskell",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-julia": {
+    "id": "ascii-rest-julia",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-kotlin": {
+    "id": "ascii-rest-kotlin",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lua": {
+    "id": "ascii-rest-lua",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-ocaml": {
+    "id": "ascii-rest-ocaml",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-perl": {
+    "id": "ascii-rest-perl",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-php": {
+    "id": "ascii-rest-php",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-r": {
+    "id": "ascii-rest-r",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-ruby": {
+    "id": "ascii-rest-ruby",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-scala": {
+    "id": "ascii-rest-scala",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-svelte": {
+    "id": "ascii-rest-svelte",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-swift": {
+    "id": "ascii-rest-swift",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-zig": {
+    "id": "ascii-rest-zig",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-a0": {
+    "id": "ascii-rest-a0",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-agentmail": {
+    "id": "ascii-rest-agentmail",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-apple": {
+    "id": "ascii-rest-apple",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-autumn": {
+    "id": "ascii-rest-autumn",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cloudflare": {
+    "id": "ascii-rest-cloudflare",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-coderabbit": {
+    "id": "ascii-rest-coderabbit",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-collabute": {
+    "id": "ascii-rest-collabute",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-command-code": {
+    "id": "ascii-rest-command-code",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-databuddy": {
+    "id": "ascii-rest-databuddy",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-greptile": {
+    "id": "ascii-rest-greptile",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-helium": {
+    "id": "ascii-rest-helium",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-helixdb": {
+    "id": "ascii-rest-helixdb",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-helmcode": {
+    "id": "ascii-rest-helmcode",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-keiki": {
+    "id": "ascii-rest-keiki",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-mintlify": {
+    "id": "ascii-rest-mintlify",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-orchid": {
+    "id": "ascii-rest-orchid",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-planetscale": {
+    "id": "ascii-rest-planetscale",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-playstation": {
+    "id": "ascii-rest-playstation",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-polar": {
+    "id": "ascii-rest-polar",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-supabase": {
+    "id": "ascii-rest-supabase",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-supermemory": {
+    "id": "ascii-rest-supermemory",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-vercel": {
+    "id": "ascii-rest-vercel",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-almalinux": {
+    "id": "ascii-rest-almalinux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-alpine-linux": {
+    "id": "ascii-rest-alpine-linux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-arch-linux": {
+    "id": "ascii-rest-arch-linux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-centos": {
+    "id": "ascii-rest-centos",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-debian": {
+    "id": "ascii-rest-debian",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-deepin": {
+    "id": "ascii-rest-deepin",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-elementary-os": {
+    "id": "ascii-rest-elementary-os",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-endeavouros": {
+    "id": "ascii-rest-endeavouros",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fedora": {
+    "id": "ascii-rest-fedora",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-gentoo": {
+    "id": "ascii-rest-gentoo",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-kali-linux": {
+    "id": "ascii-rest-kali-linux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-linux-mint": {
+    "id": "ascii-rest-linux-mint",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-manjaro": {
+    "id": "ascii-rest-manjaro",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-nixos": {
+    "id": "ascii-rest-nixos",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-omarchy": {
+    "id": "ascii-rest-omarchy",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-opensuse": {
+    "id": "ascii-rest-opensuse",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-pop-os": {
+    "id": "ascii-rest-pop-os",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-red-hat": {
+    "id": "ascii-rest-red-hat",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-rocky-linux": {
+    "id": "ascii-rest-rocky-linux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-tux": {
+    "id": "ascii-rest-tux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-ubuntu": {
+    "id": "ascii-rest-ubuntu",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-void-linux": {
+    "id": "ascii-rest-void-linux",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-zorin-os": {
+    "id": "ascii-rest-zorin-os",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cube": {
+    "id": "ascii-rest-cube",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-dna-helix": {
+    "id": "ascii-rest-dna-helix",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-donut": {
+    "id": "ascii-rest-donut",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-glxgears": {
+    "id": "ascii-rest-glxgears",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-gyroscope": {
+    "id": "ascii-rest-gyroscope",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-heart": {
+    "id": "ascii-rest-heart",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-icosahedron": {
+    "id": "ascii-rest-icosahedron",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-mobius-strip": {
+    "id": "ascii-rest-mobius-strip",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-spring": {
+    "id": "ascii-rest-spring",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-tesseract": {
+    "id": "ascii-rest-tesseract",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-torus-knot": {
+    "id": "ascii-rest-torus-knot",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-twisted-ring": {
+    "id": "ascii-rest-twisted-ring",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-black-hole": {
+    "id": "ascii-rest-black-hole",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-earth": {
+    "id": "ascii-rest-earth",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-eclipse": {
+    "id": "ascii-rest-eclipse",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-galaxy": {
+    "id": "ascii-rest-galaxy",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-moon-phases": {
+    "id": "ascii-rest-moon-phases",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-planet": {
+    "id": "ascii-rest-planet",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-rocket": {
+    "id": "ascii-rest-rocket",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-saptarishi": {
+    "id": "ascii-rest-saptarishi",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-solar-system": {
+    "id": "ascii-rest-solar-system",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-starfield": {
+    "id": "ascii-rest-starfield",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-three-body": {
+    "id": "ascii-rest-three-body",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-bouncing-balls": {
+    "id": "ascii-rest-bouncing-balls",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-chladni": {
+    "id": "ascii-rest-chladni",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-double-pendulum": {
+    "id": "ascii-rest-double-pendulum",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-falling-sand": {
+    "id": "ascii-rest-falling-sand",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-flag": {
+    "id": "ascii-rest-flag",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fountain": {
+    "id": "ascii-rest-fountain",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-harmonograph": {
+    "id": "ascii-rest-harmonograph",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lorenz": {
+    "id": "ascii-rest-lorenz",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-newtons-cradle": {
+    "id": "ascii-rest-newtons-cradle",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-pendulum-wave": {
+    "id": "ascii-rest-pendulum-wave",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-plucked-string": {
+    "id": "ascii-rest-plucked-string",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-pond-ripples": {
+    "id": "ascii-rest-pond-ripples",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-smoke": {
+    "id": "ascii-rest-smoke",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-wave-interference": {
+    "id": "ascii-rest-wave-interference",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-aurora": {
+    "id": "ascii-rest-aurora",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-bonsai": {
+    "id": "ascii-rest-bonsai",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-campfire": {
+    "id": "ascii-rest-campfire",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cherry-blossom": {
+    "id": "ascii-rest-cherry-blossom",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-contour-map": {
+    "id": "ascii-rest-contour-map",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fern": {
+    "id": "ascii-rest-fern",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fireflies": {
+    "id": "ascii-rest-fireflies",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fractal-tree": {
+    "id": "ascii-rest-fractal-tree",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-landscape": {
+    "id": "ascii-rest-landscape",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lightning": {
+    "id": "ascii-rest-lightning",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-rain": {
+    "id": "ascii-rest-rain",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-ruled-mountains": {
+    "id": "ascii-rest-ruled-mountains",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-sea-swell": {
+    "id": "ascii-rest-sea-swell",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-snowfall": {
+    "id": "ascii-rest-snowfall",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-sunrise": {
+    "id": "ascii-rest-sunrise",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-wind": {
+    "id": "ascii-rest-wind",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-aquarium": {
+    "id": "ascii-rest-aquarium",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-butterfly": {
+    "id": "ascii-rest-butterfly",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-cat": {
+    "id": "ascii-rest-cat",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fox": {
+    "id": "ascii-rest-fox",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-jellyfish": {
+    "id": "ascii-rest-jellyfish",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-owl": {
+    "id": "ascii-rest-owl",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-snake": {
+    "id": "ascii-rest-snake",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-spider": {
+    "id": "ascii-rest-spider",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-starlings": {
+    "id": "ascii-rest-starlings",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-whale": {
+    "id": "ascii-rest-whale",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-analog-clock": {
+    "id": "ascii-rest-analog-clock",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-candle": {
+    "id": "ascii-rest-candle",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-coffee": {
+    "id": "ascii-rest-coffee",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-ferris-wheel": {
+    "id": "ascii-rest-ferris-wheel",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-hawa-mahal": {
+    "id": "ascii-rest-hawa-mahal",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-hourglass": {
+    "id": "ascii-rest-hourglass",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-kite": {
+    "id": "ascii-rest-kite",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lava-lamp": {
+    "id": "ascii-rest-lava-lamp",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-lighthouse": {
+    "id": "ascii-rest-lighthouse",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-skyline": {
+    "id": "ascii-rest-skyline",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-sundial": {
+    "id": "ascii-rest-sundial",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-train": {
+    "id": "ascii-rest-train",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-vinyl": {
+    "id": "ascii-rest-vinyl",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-windmill": {
+    "id": "ascii-rest-windmill",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-epicycles": {
+    "id": "ascii-rest-epicycles",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-flow-field": {
+    "id": "ascii-rest-flow-field",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-glider-gun": {
+    "id": "ascii-rest-glider-gun",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-hilbert-curve": {
+    "id": "ascii-rest-hilbert-curve",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-julia-set": {
+    "id": "ascii-rest-julia-set",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-langtons-ant": {
+    "id": "ascii-rest-langtons-ant",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-mandelbrot": {
+    "id": "ascii-rest-mandelbrot",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-maze": {
+    "id": "ascii-rest-maze",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-plasma": {
+    "id": "ascii-rest-plasma",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-reaction-diffusion": {
+    "id": "ascii-rest-reaction-diffusion",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-rule-30": {
+    "id": "ascii-rest-rule-30",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-sierpinski": {
+    "id": "ascii-rest-sierpinski",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-voronoi": {
+    "id": "ascii-rest-voronoi",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-doom-fire": {
+    "id": "ascii-rest-doom-fire",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-fireworks": {
+    "id": "ascii-rest-fireworks",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-matrix-rain": {
+    "id": "ascii-rest-matrix-rain",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-rotozoomer": {
+    "id": "ascii-rest-rotozoomer",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-sparks": {
+    "id": "ascii-rest-sparks",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-synthwave": {
+    "id": "ascii-rest-synthwave",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-tunnel": {
+    "id": "ascii-rest-tunnel",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-rest-tv-static": {
+    "id": "ascii-rest-tv-static",
+    "project": "ascii-rest",
+    "kind": "html-live",
+    "status": "ready"
   }
 }
 
@@ -35365,7 +36805,7 @@ export const previewStats = {
   "ready:media-video": 268,
   "ready:media-image": 148,
   "ready:react-generated": 572,
-  "ready:html-live": 4312,
+  "ready:html-live": 4552,
   "unsupported:unsupported": 28,
   "ready:embed": 123
 } as const

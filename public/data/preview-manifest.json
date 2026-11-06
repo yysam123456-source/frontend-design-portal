@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-04T02:25:26.587Z",
+  "generatedAt": "2026-11-06T02:00:27.519Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
     "ready:react-generated": 572,
-    "ready:html-live": 4312,
+    "ready:html-live": 4552,
     "unsupported:unsupported": 28,
     "ready:embed": 123
   },
@@ -35366,6 +35366,1446 @@
       "kind": "embed",
       "status": "ready",
       "entry": "/looseleaf-preview.html?s=underline"
+    },
+    {
+      "id": "ascii-rest-alpine-dawn",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-amer-fort",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-aurora-fjord",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-black-prism",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cloud-sea",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-command-city",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-deep-reef",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-desert-night",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-earthrise",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-edge-orbit",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-gangaur-ghat",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-green-storm",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-jal-mahal",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-jungle-falls",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-kite-festival",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-kyoto-dusk",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lake-pichola",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lantern-lake",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lava-wall",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-marine-drive",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-misty-forest",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-night-coast",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-night-highway",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-ocean-sunset",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-planet-scale",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-prism-city",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-salt-flat",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-saturn-rise",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-snow-train",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-storm-plains",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-taj-dawn",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-tokyo-rain",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-varanasi-ghats",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-volcano-night",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-boot-log",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-box-frames",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-calendar",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-chat",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-digital-clock",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-dividers",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-file-tree",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-form-controls",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-git-graph",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-not-found",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-pipeline",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-progress-bar",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-skeleton",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-spinners",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-terminal",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-bar-chart",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-candlesticks",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cpu-meters",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-equalizer",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-gauge",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-heartbeat",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-heatmap",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-radar",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-sparkline",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-uptime-bar",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-big-text",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-dissolve",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-glitch",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-marquee",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-morse",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-scramble",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-split-flap",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-typewriter",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-wave-text",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-c",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cpp",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-csharp",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-css",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-html",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-java",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-javascript",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-typescript",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-python",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-go",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-rust",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-clojure",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-dart",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-elixir",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-elm",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-erlang",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-haskell",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-julia",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-kotlin",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lua",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-ocaml",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-perl",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-php",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-r",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-ruby",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-scala",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-svelte",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-swift",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-zig",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-a0",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-agentmail",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-apple",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-autumn",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cloudflare",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-coderabbit",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-collabute",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-command-code",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-databuddy",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-greptile",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-helium",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-helixdb",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-helmcode",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-keiki",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-mintlify",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-orchid",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-planetscale",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-playstation",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-polar",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-supabase",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-supermemory",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-vercel",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-almalinux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-alpine-linux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-arch-linux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-centos",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-debian",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-deepin",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-elementary-os",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-endeavouros",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fedora",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-gentoo",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-kali-linux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-linux-mint",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-manjaro",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-nixos",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-omarchy",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-opensuse",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-pop-os",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-red-hat",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-rocky-linux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-tux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-ubuntu",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-void-linux",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-zorin-os",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cube",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-dna-helix",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-donut",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-glxgears",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-gyroscope",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-heart",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-icosahedron",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-mobius-strip",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-spring",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-tesseract",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-torus-knot",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-twisted-ring",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-black-hole",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-earth",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-eclipse",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-galaxy",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-moon-phases",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-planet",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-rocket",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-saptarishi",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-solar-system",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-starfield",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-three-body",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-bouncing-balls",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-chladni",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-double-pendulum",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-falling-sand",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-flag",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fountain",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-harmonograph",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lorenz",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-newtons-cradle",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-pendulum-wave",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-plucked-string",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-pond-ripples",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-smoke",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-wave-interference",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-aurora",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-bonsai",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-campfire",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cherry-blossom",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-contour-map",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fern",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fireflies",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fractal-tree",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-landscape",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lightning",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-rain",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-ruled-mountains",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-sea-swell",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-snowfall",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-sunrise",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-wind",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-aquarium",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-butterfly",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-cat",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fox",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-jellyfish",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-owl",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-snake",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-spider",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-starlings",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-whale",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-analog-clock",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-candle",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-coffee",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-ferris-wheel",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-hawa-mahal",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-hourglass",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-kite",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lava-lamp",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-lighthouse",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-skyline",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-sundial",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-train",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-vinyl",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-windmill",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-epicycles",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-flow-field",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-glider-gun",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-hilbert-curve",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-julia-set",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-langtons-ant",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-mandelbrot",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-maze",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-plasma",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-reaction-diffusion",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-rule-30",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-sierpinski",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-voronoi",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-doom-fire",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-fireworks",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-matrix-rain",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-rotozoomer",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-sparks",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-synthwave",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-tunnel",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-rest-tv-static",
+      "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
     }
   ]
 }

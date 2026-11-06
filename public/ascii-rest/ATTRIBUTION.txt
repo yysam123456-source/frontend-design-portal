@@ -1,0 +1,55 @@
+ascii.rest — attribution
+========================
+
+Project: ascii.rest (package name `ascii.rest`, version 0.4.0)
+Author: bas3line
+Source:  https://github.com/bas3line/ascii
+Site:    https://ascii.rest
+License: MIT (see LICENSE-MIT.txt in this folder)
+
+The runtime in this folder is a self-hosted copy of the files published at
+https://ascii.rest, so the portal does not depend on ascii.rest's CDN:
+
+  ascii-art.js   the <ascii-art> custom element used by the portal. Trimmed
+                 from upstream ascii.js: only <ascii-art> is defined (the
+                 <ascii-banner> element is omitted), and the @font-face
+                 source points at the local file below.
+  ascii.js       upstream element source (font URL rewritten to local).
+  library.js     piece-name -> module map and loader.
+  mount.js       renderer (canvas for palette pieces, <pre> for text pieces).
+  banner.js      upstream <ascii-banner> renderer (kept for reference).
+  pieces/*.js    240 piece modules, each with `export const meta` and a
+                 default frame function.
+  fonts/ascii-rest-mono.woff2
+                 JetBrains Mono subset (3 KB) used for the box-drawing
+                 glyphs in text pieces. JetBrains Mono is licensed under the
+                 SIL Open Font License 1.1.
+
+Upstream credits carried by the project README:
+  - Logo, distribution and company marks are drawn from Devicon (MIT)
+    and Simple Icons (CC0 1.0).
+  - The piece format follows the classic ASCII animation tradition
+    (donut.c and its descendants); individual pieces note their reference
+    in the `note` field.
+
+MIT License
+
+Copyright (c) ascii.rest contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

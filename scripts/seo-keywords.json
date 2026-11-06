@@ -106,6 +106,24 @@
         "canvas game effects"
       ]
     },
+    "ascii-rest": {
+      "kw": "ascii art animation",
+      "titleKw": "240 animated ASCII art pieces, one tag each",
+      "related": [
+        "animated ascii art",
+        "ascii art generator",
+        "ascii animation library",
+        "ascii art html",
+        "javascript ascii art",
+        "ascii art copy paste",
+        "ascii art website",
+        "ascii donut animation",
+        "ascii art canvas",
+        "free ascii art",
+        "open source ascii art",
+        "ascii art web component"
+      ]
+    },
     "ascii-sharks": {
       "kw": "ascii shark animation",
       "titleKw": "ASCII shark animation and ocean boids",
@@ -129,6 +147,19 @@
     }
   },
   "categories": {
+    "ascii": {
+      "titleKw": "animated ASCII art collection",
+      "kw": "ascii art animation",
+      "related": [
+        "animated ascii art",
+        "ascii art generator",
+        "ascii art library",
+        "ascii animation html",
+        "ascii art canvas",
+        "ascii art sharks",
+        "free ascii art"
+      ]
+    },
     "animation": {
       "titleKw": "css animation examples",
       "kw": "css animation",

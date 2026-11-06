@@ -144,8 +144,8 @@ function inferScene(component: ComponentSummary): string[] {
     scenes.add('feedback')
   }
 
-  // Official demos always get showcase scene
-  if (category === 'official-demo' || category === 'official-showcase') {
+  // Official demos always get showcase scene; the ASCII Ocean demos now sit in the shared ASCII category.
+  if (category === 'official-demo' || category === 'official-showcase' || component.project === 'ascii-sharks') {
     scenes.add('showcase')
   }
 

@@ -3,12 +3,12 @@
     "id": "ascii-sharks-ocean",
     "project": "ascii-sharks",
     "name": "Ascii Sharks Ocean",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -25,12 +25,12 @@
     "id": "ascii-sharks-greathammer",
     "project": "ascii-sharks",
     "name": "Ascii Great Hammerhead",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -47,12 +47,12 @@
     "id": "ascii-sharks-hammerhead",
     "project": "ascii-sharks",
     "name": "Ascii Hammerhead",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -69,12 +69,12 @@
     "id": "ascii-sharks-tiger",
     "project": "ascii-sharks",
     "name": "Ascii Tiger",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -91,12 +91,12 @@
     "id": "ascii-sharks-thresher",
     "project": "ascii-sharks",
     "name": "Ascii Thresher",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -113,12 +113,12 @@
     "id": "ascii-sharks-mako",
     "project": "ascii-sharks",
     "name": "Ascii Mako",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -135,12 +135,12 @@
     "id": "ascii-sharks-zebra",
     "project": "ascii-sharks",
     "name": "Ascii Zebra",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -157,12 +157,12 @@
     "id": "ascii-sharks-nurse",
     "project": "ascii-sharks",
     "name": "Ascii Nurse",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",
@@ -179,12 +179,12 @@
     "id": "ascii-sharks-classic",
     "project": "ascii-sharks",
     "name": "Ascii Classic",
-    "category": "official-demo",
+    "category": "ascii",
     "style": [
       "ascii-art",
       "canvas",
       "generative-art",
-      "official-demo"
+      "ascii"
     ],
     "techStack": [
       "TypeScript",

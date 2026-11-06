@@ -21,6 +21,7 @@ import {
   MessageCircle,
   Maximize2,
   Loader,
+  Type,
 } from 'lucide-react'
 import Navigation from './components/Navigation'
 import ComponentCard from './components/ComponentCard'
@@ -49,6 +50,7 @@ const QUICK_CATEGORY_KEYS = [
   'loaders',
   'effects',
   'pixel-fx',
+  'ascii',
   // Looseleaf（手绘 UI 组件库）带来的分类页签：纸张质感、标注、贴纸涂鸦、手写字体等
   'paper',
   'marks',
@@ -73,6 +75,7 @@ const categoryMeta: Record<string, { label: string; icon: typeof Sparkles }> = {
   modal: { label: 'Modal', icon: Maximize2 },
   skeleton: { label: 'Skeleton', icon: Loader },
   'pixel-fx': { label: 'Pixel FX', icon: Sparkles },
+  ascii: { label: 'ASCII', icon: Type },
   paper: { label: 'Paper & Sketch', icon: FileText },
   marks: { label: 'Marks & Notes', icon: MessageCircle },
   'stickers-doodles': { label: 'Stickers & Doodles', icon: Sparkles },
@@ -102,6 +105,8 @@ function getDemoKindLabel(component: ComponentSummary) {
 
 function isOfficialWebsiteDemo(component: ComponentSummary) {
   if (OFFICIAL_DEMO_CATEGORIES.includes(component.category)) return true
+  // The ASCII Ocean demos now live under the shared ASCII category, but are still official website demos.
+  if (component.project === 'ascii-sharks') return true
 
   const record = getPreviewRecord(component.id)
   return (
@@ -185,9 +190,9 @@ export default function App() {
   useDocumentMeta(
     activePage === 'components'
       ? {
-          title: 'Component Gallery — 5,451 Open-Source UI Components & Animations',
+          title: 'Component Gallery — 5,691 Open-Source UI Components & Animations',
           description:
-            'Search and filter 5,451 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+            'Search and filter 5,691 open-source frontend components — buttons, cards, loaders, text animations, ASCII art and backgrounds. Every entry has a live preview and copy-ready code.',
           canonical: `${SITE_ORIGIN}/components/`,
         }
       : activePage === 'showcases'
@@ -200,7 +205,7 @@ export default function App() {
         : {
             title: 'Frontend Design Gallery — Open-Source UI Components, Animations & Demos',
             description:
-              'A curated gallery of 5,451 open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, Pixel2Motion, ThreeUI, PixiJS, PixelFX, Ascii Sharks and Looseleaf — with live previews and copy-ready code.',
+              'A curated gallery of 5,691 open-source frontend design components from React Bits, Anime.js, Uiverse, Animata, Eldora UI, Zelda Hyrule UI, Pixel2Motion, ThreeUI, PixiJS, PixelFX, ASCII.Art, ASCII Sharks and Looseleaf — with live previews and copy-ready code.',
             canonical: `${SITE_ORIGIN}/`,
           }
   )
