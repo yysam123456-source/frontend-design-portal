@@ -36798,6 +36798,4410 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
     "project": "ascii-rest",
     "kind": "html-live",
     "status": "ready"
+  },
+  "ascii-magic-arctic-icebergs": {
+    "id": "ascii-magic-arctic-icebergs",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-aurora-cabin-snowfall": {
+    "id": "ascii-magic-aurora-cabin-snowfall",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-autumn-forest": {
+    "id": "ascii-magic-autumn-forest",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-autumn-pagoda-maples": {
+    "id": "ascii-magic-autumn-pagoda-maples",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-autumn-road-cyclist": {
+    "id": "ascii-magic-autumn-road-cyclist",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-balloon-valley-sunrise": {
+    "id": "ascii-magic-balloon-valley-sunrise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bamboo-grove-path": {
+    "id": "ascii-magic-bamboo-grove-path",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bamboo-raft-karsts": {
+    "id": "ascii-magic-bamboo-raft-karsts",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-baobab-avenue-dusk": {
+    "id": "ascii-magic-baobab-avenue-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-basalt-column-coast": {
+    "id": "ascii-magic-basalt-column-coast",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-black-sand-falls": {
+    "id": "ascii-magic-black-sand-falls",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-camel-caravan-dusk": {
+    "id": "ascii-magic-camel-caravan-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-campfire-under-stars": {
+    "id": "ascii-magic-campfire-under-stars",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-canal-golden-hour": {
+    "id": "ascii-magic-canal-golden-hour",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cherry-blossom-river": {
+    "id": "ascii-magic-cherry-blossom-river",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cliff-lighthouse-night": {
+    "id": "ascii-magic-cliff-lighthouse-night",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cliff-village-sea": {
+    "id": "ascii-magic-cliff-village-sea",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cyberpunk-alley": {
+    "id": "ascii-magic-cyberpunk-alley",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desert-buttes-road": {
+    "id": "ascii-magic-desert-buttes-road",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desert-camp-milky-way": {
+    "id": "ascii-magic-desert-camp-milky-way",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desert-dunes": {
+    "id": "ascii-magic-desert-dunes",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desert-oasis-palms": {
+    "id": "ascii-magic-desert-oasis-palms",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-elephants-at-waterhole": {
+    "id": "ascii-magic-elephants-at-waterhole",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fjord-ferry-passage": {
+    "id": "ascii-magic-fjord-ferry-passage",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-floating-islands": {
+    "id": "ascii-magic-floating-islands",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fuji-dawn-lake": {
+    "id": "ascii-magic-fuji-dawn-lake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ganges-dawn": {
+    "id": "ascii-magic-ganges-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-giraffes-below-peak": {
+    "id": "ascii-magic-giraffes-below-peak",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-glacier-calving-front": {
+    "id": "ascii-magic-glacier-calving-front",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-glacier-lagoon-ice": {
+    "id": "ascii-magic-glacier-lagoon-ice",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-golden-gate-fog": {
+    "id": "ascii-magic-golden-gate-fog",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-grand-canyon-rim": {
+    "id": "ascii-magic-grand-canyon-rim",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-granite-towers-lake": {
+    "id": "ascii-magic-granite-towers-lake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-granite-valley-falls": {
+    "id": "ascii-magic-granite-valley-falls",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-great-wall-sunset": {
+    "id": "ascii-magic-great-wall-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-harbour-neon-skyline": {
+    "id": "ascii-magic-harbour-neon-skyline",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hawa-mahal-morning": {
+    "id": "ascii-magic-hawa-mahal-morning",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-himalaya-peaks": {
+    "id": "ascii-magic-himalaya-peaks",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kerala-backwaters": {
+    "id": "ascii-magic-kerala-backwaters",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lagoon-overwater-huts": {
+    "id": "ascii-magic-lagoon-overwater-huts",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lava-meets-ocean": {
+    "id": "ascii-magic-lava-meets-ocean",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lavender-fields": {
+    "id": "ascii-magic-lavender-fields",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lighthouse-storm": {
+    "id": "ascii-magic-lighthouse-storm",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-limestone-bay-junks": {
+    "id": "ascii-magic-limestone-bay-junks",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lunar-base": {
+    "id": "ascii-magic-lunar-base",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mars-colony": {
+    "id": "ascii-magic-mars-colony",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-moonlit-mausoleum": {
+    "id": "ascii-magic-moonlit-mausoleum",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-moonlit-sea": {
+    "id": "ascii-magic-moonlit-sea",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mountain-sunrise": {
+    "id": "ascii-magic-mountain-sunrise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-neon-city-rain": {
+    "id": "ascii-magic-neon-city-rain",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-northern-lights": {
+    "id": "ascii-magic-northern-lights",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-nyc-skyline-night": {
+    "id": "ascii-magic-nyc-skyline-night",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ocean-sunset": {
+    "id": "ascii-magic-ocean-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-orbit-window-earth": {
+    "id": "ascii-magic-orbit-window-earth",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-paddy-buffalo-sunrise": {
+    "id": "ascii-magic-paddy-buffalo-sunrise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-paris-rooftops": {
+    "id": "ascii-magic-paris-rooftops",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rainforest-falls-mist": {
+    "id": "ascii-magic-rainforest-falls-mist",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rainforest-river-canoe": {
+    "id": "ascii-magic-rainforest-river-canoe",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rainy-window": {
+    "id": "ascii-magic-rainy-window",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-red-rock-outback-dusk": {
+    "id": "ascii-magic-red-rock-outback-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-redwood-forest-light": {
+    "id": "ascii-magic-redwood-forest-light",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-retro-synth-sunset": {
+    "id": "ascii-magic-retro-synth-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rice-terraces": {
+    "id": "ascii-magic-rice-terraces",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-river-lantern-festival": {
+    "id": "ascii-magic-river-lantern-festival",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-salt-flat-mirror": {
+    "id": "ascii-magic-salt-flat-mirror",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-savanna-sunset": {
+    "id": "ascii-magic-savanna-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sea-cliff-puffins": {
+    "id": "ascii-magic-sea-cliff-puffins",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sea-torii-sunset": {
+    "id": "ascii-magic-sea-torii-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-slot-canyon-light": {
+    "id": "ascii-magic-slot-canyon-light",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-snowy-cabin": {
+    "id": "ascii-magic-snowy-cabin",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-starry-ridge": {
+    "id": "ascii-magic-starry-ridge",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stilt-village-sunset": {
+    "id": "ascii-magic-stilt-village-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stone-pillar-forest": {
+    "id": "ascii-magic-stone-pillar-forest",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-summit-cloud-sea": {
+    "id": "ascii-magic-summit-cloud-sea",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-switchback-dusk-drive": {
+    "id": "ascii-magic-switchback-dusk-drive",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-taj-mahal-sunset": {
+    "id": "ascii-magic-taj-mahal-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-temple-sunset": {
+    "id": "ascii-magic-temple-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-terraced-lakes-falls": {
+    "id": "ascii-magic-terraced-lakes-falls",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-thundering-falls-rainbow": {
+    "id": "ascii-magic-thundering-falls-rainbow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tokyo-crossing": {
+    "id": "ascii-magic-tokyo-crossing",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-train-at-dusk": {
+    "id": "ascii-magic-train-at-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tropical-island": {
+    "id": "ascii-magic-tropical-island",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tulip-fields-windmill": {
+    "id": "ascii-magic-tulip-fields-windmill",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-turquoise-lake-canoe": {
+    "id": "ascii-magic-turquoise-lake-canoe",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-underwater-reef": {
+    "id": "ascii-magic-underwater-reef",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-viaduct-steam-train": {
+    "id": "ascii-magic-viaduct-steam-train",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-volcano-eruption": {
+    "id": "ascii-magic-volcano-eruption",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-waterfall-canyon": {
+    "id": "ascii-magic-waterfall-canyon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-white-travertine-pools": {
+    "id": "ascii-magic-white-travertine-pools",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-api-request-inspector": {
+    "id": "ascii-magic-api-request-inspector",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-benchmark-table": {
+    "id": "ascii-magic-benchmark-table",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bios-setup": {
+    "id": "ascii-magic-bios-setup",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bisect-hunt": {
+    "id": "ascii-magic-bisect-hunt",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-boot-sequence": {
+    "id": "ascii-magic-boot-sequence",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-calculator-app": {
+    "id": "ascii-magic-calculator-app",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-calendar-month": {
+    "id": "ascii-magic-calendar-month",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chat-thread": {
+    "id": "ascii-magic-chat-thread",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-checkout-payment-flow": {
+    "id": "ascii-magic-checkout-payment-flow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cluster-rollout": {
+    "id": "ascii-magic-cluster-rollout",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-code-editor": {
+    "id": "ascii-magic-code-editor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-color-picker-sliders": {
+    "id": "ascii-magic-color-picker-sliders",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-command-palette": {
+    "id": "ascii-magic-command-palette",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-compiler-output": {
+    "id": "ascii-magic-compiler-output",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-coverage-report": {
+    "id": "ascii-magic-coverage-report",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-data-table": {
+    "id": "ascii-magic-data-table",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-date-range-picker": {
+    "id": "ascii-magic-date-range-picker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-delivery-route-tracker": {
+    "id": "ascii-magic-delivery-route-tracker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dialup-handshake": {
+    "id": "ascii-magic-dialup-handshake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-disk-partitioner": {
+    "id": "ascii-magic-disk-partitioner",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dns-resolver-chain": {
+    "id": "ascii-magic-dns-resolver-chain",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-download-queue": {
+    "id": "ascii-magic-download-queue",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-file-tree": {
+    "id": "ascii-magic-file-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-flame-graph": {
+    "id": "ascii-magic-flame-graph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-form-validation-errors": {
+    "id": "ascii-magic-form-validation-errors",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-git-log-graph": {
+    "id": "ascii-magic-git-log-graph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-heap-map": {
+    "id": "ascii-magic-heap-map",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ide-debugger-stepping": {
+    "id": "ascii-magic-ide-debugger-stepping",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-image-layer-pull": {
+    "id": "ascii-magic-image-layer-pull",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-inbox-list": {
+    "id": "ascii-magic-inbox-list",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-infra-plan-diff": {
+    "id": "ascii-magic-infra-plan-diff",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-install-log": {
+    "id": "ascii-magic-install-log",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kanban-board": {
+    "id": "ascii-magic-kanban-board",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-keyboard-keypress": {
+    "id": "ascii-magic-keyboard-keypress",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-login-form": {
+    "id": "ascii-magic-login-form",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-maintenance-mode": {
+    "id": "ascii-magic-maintenance-mode",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-merge-conflict-resolver": {
+    "id": "ascii-magic-merge-conflict-resolver",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-modal-dialog": {
+    "id": "ascii-magic-modal-dialog",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-modal-editor": {
+    "id": "ascii-magic-modal-editor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-network-waterfall": {
+    "id": "ascii-magic-network-waterfall",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-onboarding-stepper": {
+    "id": "ascii-magic-onboarding-stepper",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-otp-code-entry": {
+    "id": "ascii-magic-otp-code-entry",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-package-publish": {
+    "id": "ascii-magic-package-publish",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-packet-sniffer": {
+    "id": "ascii-magic-packet-sniffer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-page-404": {
+    "id": "ascii-magic-page-404",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-page-500": {
+    "id": "ascii-magic-page-500",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-password-strength-meter": {
+    "id": "ascii-magic-password-strength-meter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pod-autoscaler": {
+    "id": "ascii-magic-pod-autoscaler",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-post-memory-test": {
+    "id": "ascii-magic-post-memory-test",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pr-merged": {
+    "id": "ascii-magic-pr-merged",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pricing-toggle-table": {
+    "id": "ascii-magic-pricing-toggle-table",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-process-sorter": {
+    "id": "ascii-magic-process-sorter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-process-task-manager": {
+    "id": "ascii-magic-process-task-manager",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-process-tree": {
+    "id": "ascii-magic-process-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-progress-loader": {
+    "id": "ascii-magic-progress-loader",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-readme-badges": {
+    "id": "ascii-magic-readme-badges",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rebase-todo": {
+    "id": "ascii-magic-rebase-todo",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-relay-chat-channel": {
+    "id": "ascii-magic-relay-chat-channel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-release-published": {
+    "id": "ascii-magic-release-published",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-repo-star-button": {
+    "id": "ascii-magic-repo-star-button",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-search-autocomplete": {
+    "id": "ascii-magic-search-autocomplete",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-settings-toggles": {
+    "id": "ascii-magic-settings-toggles",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-skeleton-loader": {
+    "id": "ascii-magic-skeleton-loader",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-smart-home-panel": {
+    "id": "ascii-magic-smart-home-panel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spectrum-music-player": {
+    "id": "ascii-magic-spectrum-music-player",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spinner-set": {
+    "id": "ascii-magic-spinner-set",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-split-pane-session": {
+    "id": "ascii-magic-split-pane-session",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spreadsheet-recalc": {
+    "id": "ascii-magic-spreadsheet-recalc",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sql-query-runner": {
+    "id": "ascii-magic-sql-query-runner",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ssh-login": {
+    "id": "ascii-magic-ssh-login",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-star-rating-review": {
+    "id": "ascii-magic-star-rating-review",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tab-bar": {
+    "id": "ascii-magic-tab-bar",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-terminal-session": {
+    "id": "ascii-magic-terminal-session",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-test-runner-dots": {
+    "id": "ascii-magic-test-runner-dots",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-toast-stack": {
+    "id": "ascii-magic-toast-stack",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-twin-pane-commander": {
+    "id": "ascii-magic-twin-pane-commander",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-upload-dropzone": {
+    "id": "ascii-magic-upload-dropzone",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-weather-city-widget": {
+    "id": "ascii-magic-weather-city-widget",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-window-tiling-manager": {
+    "id": "ascii-magic-window-tiling-manager",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bar-chart-race": {
+    "id": "ascii-magic-bar-chart-race",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-box-plot-live": {
+    "id": "ascii-magic-box-plot-live",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bubble-chart-moving": {
+    "id": "ascii-magic-bubble-chart-moving",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-calendar-year-heatmap": {
+    "id": "ascii-magic-calendar-year-heatmap",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-candlestick-chart": {
+    "id": "ascii-magic-candlestick-chart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cpu-cores": {
+    "id": "ascii-magic-cpu-cores",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-donut-chart": {
+    "id": "ascii-magic-donut-chart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-funnel-conversion": {
+    "id": "ascii-magic-funnel-conversion",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-gauge-cluster": {
+    "id": "ascii-magic-gauge-cluster",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-goal-progress-rings": {
+    "id": "ascii-magic-goal-progress-rings",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-heatmap-grid": {
+    "id": "ascii-magic-heatmap-grid",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-histogram": {
+    "id": "ascii-magic-histogram",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-leaderboard": {
+    "id": "ascii-magic-leaderboard",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-line-chart-live": {
+    "id": "ascii-magic-line-chart-live",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-network-traffic": {
+    "id": "ascii-magic-network-traffic",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-parliament-seats": {
+    "id": "ascii-magic-parliament-seats",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pie-chart": {
+    "id": "ascii-magic-pie-chart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-polar-clock": {
+    "id": "ascii-magic-polar-clock",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-radar-chart-morph": {
+    "id": "ascii-magic-radar-chart-morph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sankey-flow": {
+    "id": "ascii-magic-sankey-flow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-scatter-plot": {
+    "id": "ascii-magic-scatter-plot",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sparkline-row": {
+    "id": "ascii-magic-sparkline-row",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-speed-gauge": {
+    "id": "ascii-magic-speed-gauge",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stacked-area-stream": {
+    "id": "ascii-magic-stacked-area-stream",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-star-history-climb": {
+    "id": "ascii-magic-star-history-climb",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stock-ticker": {
+    "id": "ascii-magic-stock-ticker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-treemap-shuffle": {
+    "id": "ascii-magic-treemap-shuffle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-uptime-monitor": {
+    "id": "ascii-magic-uptime-monitor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-world-map-pings": {
+    "id": "ascii-magic-world-map-pings",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-architecture-map": {
+    "id": "ascii-magic-architecture-map",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-binary-search-steps": {
+    "id": "ascii-magic-binary-search-steps",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-binary-tree": {
+    "id": "ascii-magic-binary-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-blue-green-deploy": {
+    "id": "ascii-magic-blue-green-deploy",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-canary-rollout": {
+    "id": "ascii-magic-canary-rollout",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cdn-cache": {
+    "id": "ascii-magic-cdn-cache",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ci-pipeline": {
+    "id": "ascii-magic-ci-pipeline",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-circuit-breaker": {
+    "id": "ascii-magic-circuit-breaker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-consistent-hash-ring": {
+    "id": "ascii-magic-consistent-hash-ring",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-data-flow": {
+    "id": "ascii-magic-data-flow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-db-replication": {
+    "id": "ascii-magic-db-replication",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dijkstra-path": {
+    "id": "ascii-magic-dijkstra-path",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dns-resolution": {
+    "id": "ascii-magic-dns-resolution",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-er-diagram": {
+    "id": "ascii-magic-er-diagram",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-flowchart": {
+    "id": "ascii-magic-flowchart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-gantt-chart": {
+    "id": "ascii-magic-gantt-chart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-git-branching": {
+    "id": "ascii-magic-git-branching",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-gradient-descent": {
+    "id": "ascii-magic-gradient-descent",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-load-balancer": {
+    "id": "ascii-magic-load-balancer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lru-cache": {
+    "id": "ascii-magic-lru-cache",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mapreduce-wordcount": {
+    "id": "ascii-magic-mapreduce-wordcount",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-message-queue": {
+    "id": "ascii-magic-message-queue",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mind-map": {
+    "id": "ascii-magic-mind-map",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-network-topology": {
+    "id": "ascii-magic-network-topology",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-neural-forward-pass": {
+    "id": "ascii-magic-neural-forward-pass",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-oauth-flow": {
+    "id": "ascii-magic-oauth-flow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-org-chart": {
+    "id": "ascii-magic-org-chart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pubsub-fanout": {
+    "id": "ascii-magic-pubsub-fanout",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sequence-diagram": {
+    "id": "ascii-magic-sequence-diagram",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sort-race": {
+    "id": "ascii-magic-sort-race",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-state-machine": {
+    "id": "ascii-magic-state-machine",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tcp-handshake": {
+    "id": "ascii-magic-tcp-handshake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-timeline": {
+    "id": "ascii-magic-timeline",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-token-bucket": {
+    "id": "ascii-magic-token-bucket",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-trace-spans": {
+    "id": "ascii-magic-trace-spans",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-venn-diagram": {
+    "id": "ascii-magic-venn-diagram",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-blinking-cursor": {
+    "id": "ascii-magic-blinking-cursor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bouncing-letters": {
+    "id": "ascii-magic-bouncing-letters",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-breaking-news-ticker": {
+    "id": "ascii-magic-breaking-news-ticker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-burning-title": {
+    "id": "ascii-magic-burning-title",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chalkboard-lettering": {
+    "id": "ascii-magic-chalkboard-lettering",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cinema-title-card": {
+    "id": "ascii-magic-cinema-title-card",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-constellation-word": {
+    "id": "ascii-magic-constellation-word",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-countdown-timer": {
+    "id": "ascii-magic-countdown-timer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-decode-reveal": {
+    "id": "ascii-magic-decode-reveal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-departures-hall-board": {
+    "id": "ascii-magic-departures-hall-board",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-digital-clock": {
+    "id": "ascii-magic-digital-clock",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-end-credits-roll": {
+    "id": "ascii-magic-end-credits-roll",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-extruded-word-spin": {
+    "id": "ascii-magic-extruded-word-spin",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-flip-dot-display": {
+    "id": "ascii-magic-flip-dot-display",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fortune-cookie-terminal": {
+    "id": "ascii-magic-fortune-cookie-terminal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-glitch-title-settle": {
+    "id": "ascii-magic-glitch-title-settle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-group-chat-transcript": {
+    "id": "ascii-magic-group-chat-transcript",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ice-crack-letters": {
+    "id": "ascii-magic-ice-crack-letters",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-karaoke-lyrics": {
+    "id": "ascii-magic-karaoke-lyrics",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kinetic-word-slam": {
+    "id": "ascii-magic-kinetic-word-slam",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-laser-carved-title": {
+    "id": "ascii-magic-laser-carved-title",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-led-matrix-scroller": {
+    "id": "ascii-magic-led-matrix-scroller",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-liquid-fill-letters": {
+    "id": "ascii-magic-liquid-fill-letters",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-marquee-sign": {
+    "id": "ascii-magic-marquee-sign",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-morse-signal": {
+    "id": "ascii-magic-morse-signal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-neon-sign-flicker": {
+    "id": "ascii-magic-neon-sign-flicker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-nixie-tube-counter": {
+    "id": "ascii-magic-nixie-tube-counter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-odometer-counter": {
+    "id": "ascii-magic-odometer-counter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-particle-rain-word": {
+    "id": "ascii-magic-particle-rain-word",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pen-stroke-word": {
+    "id": "ascii-magic-pen-stroke-word",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-perspective-crawl": {
+    "id": "ascii-magic-perspective-crawl",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-quote-of-the-day": {
+    "id": "ascii-magic-quote-of-the-day",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rain-formed-word": {
+    "id": "ascii-magic-rain-formed-word",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rainbow-text": {
+    "id": "ascii-magic-rainbow-text",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ransom-note-letters": {
+    "id": "ascii-magic-ransom-note-letters",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-robot-sign-crew": {
+    "id": "ascii-magic-robot-sign-crew",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-slot-reel-letters": {
+    "id": "ascii-magic-slot-reel-letters",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-split-flap-board": {
+    "id": "ascii-magic-split-flap-board",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stencil-spray-reveal": {
+    "id": "ascii-magic-stencil-spray-reveal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-subtitle-captions": {
+    "id": "ascii-magic-subtitle-captions",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-syntax-highlight-pass": {
+    "id": "ascii-magic-syntax-highlight-pass",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-teleprompter-script": {
+    "id": "ascii-magic-teleprompter-script",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-text-scramble": {
+    "id": "ascii-magic-text-scramble",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-typewriter": {
+    "id": "ascii-magic-typewriter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-unfolding-poem": {
+    "id": "ascii-magic-unfolding-poem",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-vertical-haiku": {
+    "id": "ascii-magic-vertical-haiku",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wave-text": {
+    "id": "ascii-magic-wave-text",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-word-exchange": {
+    "id": "ascii-magic-word-exchange",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-word-ladder-morph": {
+    "id": "ascii-magic-word-ladder-morph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cylinder": {
+    "id": "ascii-magic-cylinder",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-double-helix": {
+    "id": "ascii-magic-double-helix",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-gyroscope-rings": {
+    "id": "ascii-magic-gyroscope-rings",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-heart-3d": {
+    "id": "ascii-magic-heart-3d",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-icosahedron": {
+    "id": "ascii-magic-icosahedron",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-klein-bottle": {
+    "id": "ascii-magic-klein-bottle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lit-sphere": {
+    "id": "ascii-magic-lit-sphere",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mobius-strip": {
+    "id": "ascii-magic-mobius-strip",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-octahedron": {
+    "id": "ascii-magic-octahedron",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-puzzle-cube-turns": {
+    "id": "ascii-magic-puzzle-cube-turns",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pyramid": {
+    "id": "ascii-magic-pyramid",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rotating-cube": {
+    "id": "ascii-magic-rotating-cube",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rotating-dodecahedron": {
+    "id": "ascii-magic-rotating-dodecahedron",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rotating-star": {
+    "id": "ascii-magic-rotating-star",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sphere-cube-morph": {
+    "id": "ascii-magic-sphere-cube-morph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spinning-coin": {
+    "id": "ascii-magic-spinning-coin",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spinning-torus": {
+    "id": "ascii-magic-spinning-torus",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spring-coil": {
+    "id": "ascii-magic-spring-coil",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-terrain-flyover": {
+    "id": "ascii-magic-terrain-flyover",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tesseract": {
+    "id": "ascii-magic-tesseract",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-torus-knot": {
+    "id": "ascii-magic-torus-knot",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-trefoil-tube": {
+    "id": "ascii-magic-trefoil-tube",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-voxel-heart": {
+    "id": "ascii-magic-voxel-heart",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wireframe-city": {
+    "id": "ascii-magic-wireframe-city",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wireframe-globe": {
+    "id": "ascii-magic-wireframe-globe",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-asteroid-belt": {
+    "id": "ascii-magic-asteroid-belt",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-black-hole": {
+    "id": "ascii-magic-black-hole",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-comet": {
+    "id": "ascii-magic-comet",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-earth-rotating": {
+    "id": "ascii-magic-earth-rotating",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-eclipse": {
+    "id": "ascii-magic-eclipse",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-meteor-shower": {
+    "id": "ascii-magic-meteor-shower",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-moon-phases": {
+    "id": "ascii-magic-moon-phases",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-nebula-drift": {
+    "id": "ascii-magic-nebula-drift",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-orbiting-planets": {
+    "id": "ascii-magic-orbiting-planets",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ring-shadow-closeup": {
+    "id": "ascii-magic-ring-shadow-closeup",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ringed-planet": {
+    "id": "ascii-magic-ringed-planet",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rocket-launch": {
+    "id": "ascii-magic-rocket-launch",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rover-dunes": {
+    "id": "ascii-magic-rover-dunes",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-satellite-orbit": {
+    "id": "ascii-magic-satellite-orbit",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-solar-flare": {
+    "id": "ascii-magic-solar-flare",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spiral-galaxy": {
+    "id": "ascii-magic-spiral-galaxy",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-starfield-warp": {
+    "id": "ascii-magic-starfield-warp",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tethered-astronaut": {
+    "id": "ascii-magic-tethered-astronaut",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-binary-stars": {
+    "id": "ascii-magic-binary-stars",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bouncing-balls": {
+    "id": "ascii-magic-bouncing-balls",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chladni-figures": {
+    "id": "ascii-magic-chladni-figures",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cloth-flag": {
+    "id": "ascii-magic-cloth-flag",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-double-pendulum": {
+    "id": "ascii-magic-double-pendulum",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-falling-sand": {
+    "id": "ascii-magic-falling-sand",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fluid-smoke": {
+    "id": "ascii-magic-fluid-smoke",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-jelly-bounce": {
+    "id": "ascii-magic-jelly-bounce",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lissajous": {
+    "id": "ascii-magic-lissajous",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-magnet-field-lines": {
+    "id": "ascii-magic-magnet-field-lines",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-newtons-cradle": {
+    "id": "ascii-magic-newtons-cradle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-orbital-gravity": {
+    "id": "ascii-magic-orbital-gravity",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pendulum-wave": {
+    "id": "ascii-magic-pendulum-wave",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-projectile-arc": {
+    "id": "ascii-magic-projectile-arc",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ripple-pond": {
+    "id": "ascii-magic-ripple-pond",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rope-bridge": {
+    "id": "ascii-magic-rope-bridge",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spring-mass": {
+    "id": "ascii-magic-spring-mass",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wave-interference": {
+    "id": "ascii-magic-wave-interference",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bonsai-tree": {
+    "id": "ascii-magic-bonsai-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-campfire": {
+    "id": "ascii-magic-campfire",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cloud-drift": {
+    "id": "ascii-magic-cloud-drift",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-falling-leaves": {
+    "id": "ascii-magic-falling-leaves",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fern-fractal": {
+    "id": "ascii-magic-fern-fractal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fireflies": {
+    "id": "ascii-magic-fireflies",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-growing-tree": {
+    "id": "ascii-magic-growing-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lightning-storm": {
+    "id": "ascii-magic-lightning-storm",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ocean-waves": {
+    "id": "ascii-magic-ocean-waves",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rain-shower": {
+    "id": "ascii-magic-rain-shower",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rainbow-arc": {
+    "id": "ascii-magic-rainbow-arc",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-snowfall": {
+    "id": "ascii-magic-snowfall",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sunrise-horizon": {
+    "id": "ascii-magic-sunrise-horizon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tornado": {
+    "id": "ascii-magic-tornado",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-waterfall": {
+    "id": "ascii-magic-waterfall",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wind-grass": {
+    "id": "ascii-magic-wind-grass",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bat-cave-dusk": {
+    "id": "ascii-magic-bat-cave-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bee-flight": {
+    "id": "ascii-magic-bee-flight",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-butterfly": {
+    "id": "ascii-magic-butterfly",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chameleon-fly": {
+    "id": "ascii-magic-chameleon-fly",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-flock-of-birds": {
+    "id": "ascii-magic-flock-of-birds",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-goldfish-tank": {
+    "id": "ascii-magic-goldfish-tank",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hummingbird-hibiscus": {
+    "id": "ascii-magic-hummingbird-hibiscus",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-jellyfish": {
+    "id": "ascii-magic-jellyfish",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-koi-pond-ripples": {
+    "id": "ascii-magic-koi-pond-ripples",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-leaping-dolphins": {
+    "id": "ascii-magic-leaping-dolphins",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-octopus": {
+    "id": "ascii-magic-octopus",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-owl-blink": {
+    "id": "ascii-magic-owl-blink",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-penguin-waddle-slide": {
+    "id": "ascii-magic-penguin-waddle-slide",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sand-crab-scuttle": {
+    "id": "ascii-magic-sand-crab-scuttle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sleeping-cat": {
+    "id": "ascii-magic-sleeping-cat",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-snake-slither": {
+    "id": "ascii-magic-snake-slither",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-snow-fox-trot": {
+    "id": "ascii-magic-snow-fox-trot",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spider-web": {
+    "id": "ascii-magic-spider-web",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-swimming-whale": {
+    "id": "ascii-magic-swimming-whale",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-walking-dog": {
+    "id": "ascii-magic-walking-dog",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-analog-clock": {
+    "id": "ascii-magic-analog-clock",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-candle-flame": {
+    "id": "ascii-magic-candle-flame",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-clockwork-gears": {
+    "id": "ascii-magic-clockwork-gears",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-coffee-steam": {
+    "id": "ascii-magic-coffee-steam",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cuckoo-clock": {
+    "id": "ascii-magic-cuckoo-clock",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desk-fan": {
+    "id": "ascii-magic-desk-fan",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-espresso-pour": {
+    "id": "ascii-magic-espresso-pour",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ferris-wheel": {
+    "id": "ascii-magic-ferris-wheel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-film-projector": {
+    "id": "ascii-magic-film-projector",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hourglass": {
+    "id": "ascii-magic-hourglass",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lava-lamp": {
+    "id": "ascii-magic-lava-lamp",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lighthouse-beam": {
+    "id": "ascii-magic-lighthouse-beam",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-metronome": {
+    "id": "ascii-magic-metronome",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-neon-jukebox": {
+    "id": "ascii-magic-neon-jukebox",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pendulum-wall-clock": {
+    "id": "ascii-magic-pendulum-wall-clock",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-porch-wind-chimes": {
+    "id": "ascii-magic-porch-wind-chimes",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-record-player": {
+    "id": "ascii-magic-record-player",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rotary-phone": {
+    "id": "ascii-magic-rotary-phone",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sewing-machine": {
+    "id": "ascii-magic-sewing-machine",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-traffic-light": {
+    "id": "ascii-magic-traffic-light",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-typebar-strike": {
+    "id": "ascii-magic-typebar-strike",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-washing-machine": {
+    "id": "ascii-magic-washing-machine",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-windmill": {
+    "id": "ascii-magic-windmill",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-apollonian-gasket": {
+    "id": "ascii-magic-apollonian-gasket",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-boids-flock": {
+    "id": "ascii-magic-boids-flock",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-brians-brain": {
+    "id": "ascii-magic-brians-brain",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-clifford-attractor": {
+    "id": "ascii-magic-clifford-attractor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-colonising-tree": {
+    "id": "ascii-magic-colonising-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-crystal-grains": {
+    "id": "ascii-magic-crystal-grains",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dla-growth": {
+    "id": "ascii-magic-dla-growth",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dragon-curve": {
+    "id": "ascii-magic-dragon-curve",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-flow-field": {
+    "id": "ascii-magic-flow-field",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-game-of-life": {
+    "id": "ascii-magic-game-of-life",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hilbert-curve": {
+    "id": "ascii-magic-hilbert-curve",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-julia-set": {
+    "id": "ascii-magic-julia-set",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-l-system-plant": {
+    "id": "ascii-magic-l-system-plant",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-langtons-ant": {
+    "id": "ascii-magic-langtons-ant",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lorenz-attractor": {
+    "id": "ascii-magic-lorenz-attractor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mandelbrot-zoom": {
+    "id": "ascii-magic-mandelbrot-zoom",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-maze-builder": {
+    "id": "ascii-magic-maze-builder",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-penrose-growth": {
+    "id": "ascii-magic-penrose-growth",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-reaction-diffusion": {
+    "id": "ascii-magic-reaction-diffusion",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rule-30": {
+    "id": "ascii-magic-rule-30",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sierpinski": {
+    "id": "ascii-magic-sierpinski",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-spirograph": {
+    "id": "ascii-magic-spirograph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-truchet-tiles": {
+    "id": "ascii-magic-truchet-tiles",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-voronoi-cells": {
+    "id": "ascii-magic-voronoi-cells",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wave-function-collapse": {
+    "id": "ascii-magic-wave-function-collapse",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-aurora-curtains": {
+    "id": "ascii-magic-aurora-curtains",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-crt-roll": {
+    "id": "ascii-magic-crt-roll",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-endless-corridor": {
+    "id": "ascii-magic-endless-corridor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fireworks": {
+    "id": "ascii-magic-fireworks",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-holo-grid-sphere": {
+    "id": "ascii-magic-holo-grid-sphere",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hyperspace-jump": {
+    "id": "ascii-magic-hyperspace-jump",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ink-in-water": {
+    "id": "ascii-magic-ink-in-water",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kaleidoscope": {
+    "id": "ascii-magic-kaleidoscope",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lava-cracks": {
+    "id": "ascii-magic-lava-cracks",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-liquid-chrome": {
+    "id": "ascii-magic-liquid-chrome",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-matrix-rain": {
+    "id": "ascii-magic-matrix-rain",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-metaballs": {
+    "id": "ascii-magic-metaballs",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pixel-fire": {
+    "id": "ascii-magic-pixel-fire",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-plasma": {
+    "id": "ascii-magic-plasma",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rainbow-warp-road": {
+    "id": "ascii-magic-rainbow-warp-road",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rotozoomer": {
+    "id": "ascii-magic-rotozoomer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-smoke-rings": {
+    "id": "ascii-magic-smoke-rings",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sparks": {
+    "id": "ascii-magic-sparks",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-starburst": {
+    "id": "ascii-magic-starburst",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-synthwave-grid": {
+    "id": "ascii-magic-synthwave-grid",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tunnel": {
+    "id": "ascii-magic-tunnel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tv-static": {
+    "id": "ascii-magic-tv-static",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-vaporwave-sun": {
+    "id": "ascii-magic-vaporwave-sun",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-water-caustics": {
+    "id": "ascii-magic-water-caustics",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-alien-wave": {
+    "id": "ascii-magic-alien-wave",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-block-drop": {
+    "id": "ascii-magic-block-drop",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-brick-breaker": {
+    "id": "ascii-magic-brick-breaker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chess-replay": {
+    "id": "ascii-magic-chess-replay",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-circuit-lap-racer": {
+    "id": "ascii-magic-circuit-lap-racer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-coin-run-platformer": {
+    "id": "ascii-magic-coin-run-platformer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-crate-pusher": {
+    "id": "ascii-magic-crate-pusher",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dino-runner": {
+    "id": "ascii-magic-dino-runner",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-frog-hop-crossing": {
+    "id": "ascii-magic-frog-hop-crossing",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-gem-cascade": {
+    "id": "ascii-magic-gem-cascade",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-maze-chase": {
+    "id": "ascii-magic-maze-chase",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-minesweeper": {
+    "id": "ascii-magic-minesweeper",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-number-tile-merge": {
+    "id": "ascii-magic-number-tile-merge",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-paddle-tennis": {
+    "id": "ascii-magic-paddle-tennis",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pipe-flyer": {
+    "id": "ascii-magic-pipe-flyer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rock-blaster": {
+    "id": "ascii-magic-rock-blaster",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-snake-autoplay": {
+    "id": "ascii-magic-snake-autoplay",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tower-defence-wave": {
+    "id": "ascii-magic-tower-defence-wave",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-circuit-trace": {
+    "id": "ascii-magic-circuit-trace",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dotted-rule": {
+    "id": "ascii-magic-dotted-rule",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-double-line-frame": {
+    "id": "ascii-magic-double-line-frame",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-heartbeat-rule": {
+    "id": "ascii-magic-heartbeat-rule",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-marching-ants-frame": {
+    "id": "ascii-magic-marching-ants-frame",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-neon-border": {
+    "id": "ascii-magic-neon-border",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pulse-line": {
+    "id": "ascii-magic-pulse-line",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rope-divider": {
+    "id": "ascii-magic-rope-divider",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-scroll-banner-frame": {
+    "id": "ascii-magic-scroll-banner-frame",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stars-divider": {
+    "id": "ascii-magic-stars-divider",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wave-divider": {
+    "id": "ascii-magic-wave-divider",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-zigzag-rule": {
+    "id": "ascii-magic-zigzag-rule",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-autumn-harvest": {
+    "id": "ascii-magic-autumn-harvest",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-birthday-cake": {
+    "id": "ascii-magic-birthday-cake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-christmas-tree": {
+    "id": "ascii-magic-christmas-tree",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-contributors-wall": {
+    "id": "ascii-magic-contributors-wall",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-diwali-diyas": {
+    "id": "ascii-magic-diwali-diyas",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-easter-eggs": {
+    "id": "ascii-magic-easter-eggs",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-eid-moon": {
+    "id": "ascii-magic-eid-moon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-halloween-pumpkin": {
+    "id": "ascii-magic-halloween-pumpkin",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-holi-colors": {
+    "id": "ascii-magic-holi-colors",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kite-festival": {
+    "id": "ascii-magic-kite-festival",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lunar-new-year": {
+    "id": "ascii-magic-lunar-new-year",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-new-year-countdown": {
+    "id": "ascii-magic-new-year-countdown",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ramadan-lanterns": {
+    "id": "ascii-magic-ramadan-lanterns",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-snow-globe": {
+    "id": "ascii-magic-snow-globe",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-star-milestone": {
+    "id": "ascii-magic-star-milestone",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-valentine-hearts": {
+    "id": "ascii-magic-valentine-hearts",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-abu-simbel-colossi": {
+    "id": "ascii-magic-abu-simbel-colossi",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-acropolis-hill-dusk": {
+    "id": "ascii-magic-acropolis-hill-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-alhambra-hill-dusk": {
+    "id": "ascii-magic-alhambra-hill-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-alpine-lake-village": {
+    "id": "ascii-magic-alpine-lake-village",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-amsterdam-canal-bikes": {
+    "id": "ascii-magic-amsterdam-canal-bikes",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-angkor-lotus-sunrise": {
+    "id": "ascii-magic-angkor-lotus-sunrise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bagan-temple-plain": {
+    "id": "ascii-magic-bagan-temple-plain",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-blue-mountain-town": {
+    "id": "ascii-magic-blue-mountain-town",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-borobudur-sunrise-mist": {
+    "id": "ascii-magic-borobudur-sunrise-mist",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bosphorus-mosque-skyline": {
+    "id": "ascii-magic-bosphorus-mosque-skyline",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-castle-bridge-dawn": {
+    "id": "ascii-magic-castle-bridge-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-charles-bridge-dawn": {
+    "id": "ascii-magic-charles-bridge-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chichen-itza-equinox": {
+    "id": "ascii-magic-chichen-itza-equinox",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-colosseum-golden-hour": {
+    "id": "ascii-magic-colosseum-golden-hour",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desert-needle-skyline": {
+    "id": "ascii-magic-desert-needle-skyline",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-east-river-bridge-sunrise": {
+    "id": "ascii-magic-east-river-bridge-sunrise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fairy-chimney-balloons": {
+    "id": "ascii-magic-fairy-chimney-balloons",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-giza-pyramids-sunset": {
+    "id": "ascii-magic-giza-pyramids-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-golden-pavilion-pond": {
+    "id": "ascii-magic-golden-pavilion-pond",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-harbour-sails-opera": {
+    "id": "ascii-magic-harbour-sails-opera",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-havana-pastel-street": {
+    "id": "ascii-magic-havana-pastel-street",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hill-street-cable-car": {
+    "id": "ascii-magic-hill-street-cable-car",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-imperial-palace-snow": {
+    "id": "ascii-magic-imperial-palace-snow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-island-abbey-tide": {
+    "id": "ascii-magic-island-abbey-tide",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-island-church-lake": {
+    "id": "ascii-magic-island-church-lake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-jungle-temple-mist": {
+    "id": "ascii-magic-jungle-temple-mist",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kyoto-pagoda-dusk": {
+    "id": "ascii-magic-kyoto-pagoda-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-leaning-tower-square": {
+    "id": "ascii-magic-leaning-tower-square",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-liberty-harbor-dawn": {
+    "id": "ascii-magic-liberty-harbor-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-machu-picchu-cloud": {
+    "id": "ascii-magic-machu-picchu-cloud",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-marine-drive-necklace": {
+    "id": "ascii-magic-marine-drive-necklace",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-marrakech-rooftop-dusk": {
+    "id": "ascii-magic-marrakech-rooftop-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-moai-coast-sunset": {
+    "id": "ascii-magic-moai-coast-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-nile-felucca-sunset": {
+    "id": "ascii-magic-nile-felucca-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-onion-domes-snowfall": {
+    "id": "ascii-magic-onion-domes-snowfall",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-palace-gate-lanterns": {
+    "id": "ascii-magic-palace-gate-lanterns",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-paris-rooftops-dusk": {
+    "id": "ascii-magic-paris-rooftops-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-petra-rose-treasury": {
+    "id": "ascii-magic-petra-rose-treasury",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-potala-palace-dawn": {
+    "id": "ascii-magic-potala-palace-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-redeemer-statue-clouds": {
+    "id": "ascii-magic-redeemer-statue-clouds",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-riverfront-tower-night": {
+    "id": "ascii-magic-riverfront-tower-night",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-santorini-blue-domes": {
+    "id": "ascii-magic-santorini-blue-domes",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stonehenge-solstice": {
+    "id": "ascii-magic-stonehenge-solstice",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sugarloaf-cable-car": {
+    "id": "ascii-magic-sugarloaf-cable-car",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-supertree-grove-night": {
+    "id": "ascii-magic-supertree-grove-night",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-table-mountain-harbour": {
+    "id": "ascii-magic-table-mountain-harbour",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-thames-clock-tower": {
+    "id": "ascii-magic-thames-clock-tower",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-torii-gate-tunnel": {
+    "id": "ascii-magic-torii-gate-tunnel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tower-bridge-lift": {
+    "id": "ascii-magic-tower-bridge-lift",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-twin-spires-night": {
+    "id": "ascii-magic-twin-spires-night",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-venice-gondola-canal": {
+    "id": "ascii-magic-venice-gondola-canal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-victoria-harbour-junk": {
+    "id": "ascii-magic-victoria-harbour-junk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-walled-city-adriatic": {
+    "id": "ascii-magic-walled-city-adriatic",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-white-mosque-reflections": {
+    "id": "ascii-magic-white-mosque-reflections",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bouncing-slime": {
+    "id": "ascii-magic-bouncing-slime",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cool-sun-shades": {
+    "id": "ascii-magic-cool-sun-shades",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dancing-cactus": {
+    "id": "ascii-magic-dancing-cactus",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-debug-duck-bob": {
+    "id": "ascii-magic-debug-duck-bob",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-debugging-bug": {
+    "id": "ascii-magic-debugging-bug",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-friendly-ghost-float": {
+    "id": "ascii-magic-friendly-ghost-float",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-idea-lightbulb": {
+    "id": "ascii-magic-idea-lightbulb",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-juggling-octopus": {
+    "id": "ascii-magic-juggling-octopus",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-laptop-typing-cat": {
+    "id": "ascii-magic-laptop-typing-cat",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-paper-plane-loop": {
+    "id": "ascii-magic-paper-plane-loop",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-peekaboo-box": {
+    "id": "ascii-magic-peekaboo-box",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pixel-knight-salute": {
+    "id": "ascii-magic-pixel-knight-salute",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-planet-astronaut-wave": {
+    "id": "ascii-magic-planet-astronaut-wave",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rain-cloud-rainbow": {
+    "id": "ascii-magic-rain-cloud-rainbow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-robot-wave-blink": {
+    "id": "ascii-magic-robot-wave-blink",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-scarf-penguin": {
+    "id": "ascii-magic-scarf-penguin",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sleepy-moon": {
+    "id": "ascii-magic-sleepy-moon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sprouting-plant-smile": {
+    "id": "ascii-magic-sprouting-plant-smile",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-stomping-dino": {
+    "id": "ascii-magic-stomping-dino",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-toaster-pop": {
+    "id": "ascii-magic-toaster-pop",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wagging-pup": {
+    "id": "ascii-magic-wagging-pup",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-yawning-coffee-cup": {
+    "id": "ascii-magic-yawning-coffee-cup",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-access-denied": {
+    "id": "ascii-magic-empty-access-denied",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-all-caught-up": {
+    "id": "ascii-magic-empty-all-caught-up",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-broken-link-cloud": {
+    "id": "ascii-magic-empty-broken-link-cloud",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-clipboard-copied": {
+    "id": "ascii-magic-empty-clipboard-copied",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-cloud-saved": {
+    "id": "ascii-magic-empty-cloud-saved",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-cobweb-folder": {
+    "id": "ascii-magic-empty-cobweb-folder",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-construction-crane": {
+    "id": "ascii-magic-empty-construction-crane",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-inbox-plane": {
+    "id": "ascii-magic-empty-inbox-plane",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-no-results": {
+    "id": "ascii-magic-empty-no-results",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-offline-plug": {
+    "id": "ascii-magic-empty-offline-plug",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-onboarding-flag": {
+    "id": "ascii-magic-empty-onboarding-flag",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-payment-failed": {
+    "id": "ascii-magic-empty-payment-failed",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-payment-success": {
+    "id": "ascii-magic-empty-payment-success",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-rate-limited": {
+    "id": "ascii-magic-empty-rate-limited",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-reconnecting": {
+    "id": "ascii-magic-empty-reconnecting",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-rocket-countdown": {
+    "id": "ascii-magic-empty-rocket-countdown",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-session-expired": {
+    "id": "ascii-magic-empty-session-expired",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-smoking-server": {
+    "id": "ascii-magic-empty-smoking-server",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-task-confetti": {
+    "id": "ascii-magic-empty-task-confetti",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-trash-lid": {
+    "id": "ascii-magic-empty-trash-lid",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-upload-tray": {
+    "id": "ascii-magic-empty-upload-tray",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-empty-welcome-door": {
+    "id": "ascii-magic-empty-welcome-door",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-amber-ledger-spreadsheet": {
+    "id": "ascii-magic-amber-ledger-spreadsheet",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-basic-loop-prompt": {
+    "id": "ascii-magic-basic-loop-prompt",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cassette-tape-loader": {
+    "id": "ascii-magic-cassette-tape-loader",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chiptune-tracker": {
+    "id": "ascii-magic-chiptune-tracker",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-computer-lab-terminals": {
+    "id": "ascii-magic-computer-lab-terminals",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-copper-bar-scroller": {
+    "id": "ascii-magic-copper-bar-scroller",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-core-memory-plane": {
+    "id": "ascii-magic-core-memory-plane",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dot-matrix-banner": {
+    "id": "ascii-magic-dot-matrix-banner",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-floppy-drive-read": {
+    "id": "ascii-magic-floppy-drive-read",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-front-panel-switches": {
+    "id": "ascii-magic-front-panel-switches",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-green-word-processor": {
+    "id": "ascii-magic-green-word-processor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lcd-handheld-game": {
+    "id": "ascii-magic-lcd-handheld-game",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mainframe-lamp-console": {
+    "id": "ascii-magic-mainframe-lamp-console",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-midi-step-sequencer": {
+    "id": "ascii-magic-midi-step-sequencer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-phosphor-scope-xy": {
+    "id": "ascii-magic-phosphor-scope-xy",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pixel-paint-program": {
+    "id": "ascii-magic-pixel-paint-program",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-punch-card-keypunch": {
+    "id": "ascii-magic-punch-card-keypunch",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-reel-to-reel-drives": {
+    "id": "ascii-magic-reel-to-reel-drives",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-teletype-paper-roll": {
+    "id": "ascii-magic-teletype-paper-roll",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-text-adventure-parser": {
+    "id": "ascii-magic-text-adventure-parser",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-vector-space-duel": {
+    "id": "ascii-magic-vector-space-duel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-wireframe-maze-crawl": {
+    "id": "ascii-magic-wireframe-maze-crawl",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bohr-atom-photon": {
+    "id": "ascii-magic-bohr-atom-photon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bond-energy-reaction": {
+    "id": "ascii-magic-bond-energy-reaction",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dna-replication-fork": {
+    "id": "ascii-magic-dna-replication-fork",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-doppler-effect": {
+    "id": "ascii-magic-doppler-effect",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-energy-pyramid": {
+    "id": "ascii-magic-energy-pyramid",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-heart-blood-flow": {
+    "id": "ascii-magic-heart-blood-flow",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lunar-eclipse-geometry": {
+    "id": "ascii-magic-lunar-eclipse-geometry",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lungs-breathing": {
+    "id": "ascii-magic-lungs-breathing",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mitosis-stages": {
+    "id": "ascii-magic-mitosis-stages",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-moon-tides": {
+    "id": "ascii-magic-moon-tides",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-nitrogen-cycle": {
+    "id": "ascii-magic-nitrogen-cycle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-photosynthesis-leaf": {
+    "id": "ascii-magic-photosynthesis-leaf",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-prism-dispersion": {
+    "id": "ascii-magic-prism-dispersion",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ribosome-translation": {
+    "id": "ascii-magic-ribosome-translation",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rock-cycle-loop": {
+    "id": "ascii-magic-rock-cycle-loop",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-seasons-axial-tilt": {
+    "id": "ascii-magic-seasons-axial-tilt",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-seed-germination": {
+    "id": "ascii-magic-seed-germination",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-simple-circuit-current": {
+    "id": "ascii-magic-simple-circuit-current",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-states-of-matter": {
+    "id": "ascii-magic-states-of-matter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-subduction-volcano": {
+    "id": "ascii-magic-subduction-volcano",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-transverse-longitudinal": {
+    "id": "ascii-magic-transverse-longitudinal",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-water-cycle-diagram": {
+    "id": "ascii-magic-water-cycle-diagram",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-boombox-speaker-pump": {
+    "id": "ascii-magic-boombox-speaker-pump",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cassette-tape-reels": {
+    "id": "ascii-magic-cassette-tape-reels",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-concert-stage-crowd": {
+    "id": "ascii-magic-concert-stage-crowd",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-conductor-baton-beats": {
+    "id": "ascii-magic-conductor-baton-beats",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dj-decks-crossfader": {
+    "id": "ascii-magic-dj-decks-crossfader",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-drum-machine-sequencer": {
+    "id": "ascii-magic-drum-machine-sequencer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-festival-speaker-stack": {
+    "id": "ascii-magic-festival-speaker-stack",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-graphic-eq-peak-hold": {
+    "id": "ascii-magic-graphic-eq-peak-hold",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-guitar-fretting-hand": {
+    "id": "ascii-magic-guitar-fretting-hand",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-headphones-sound-waves": {
+    "id": "ascii-magic-headphones-sound-waves",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-marching-snare-drum": {
+    "id": "ascii-magic-marching-snare-drum",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-modular-synth-patch": {
+    "id": "ascii-magic-modular-synth-patch",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-oscilloscope-morph": {
+    "id": "ascii-magic-oscilloscope-morph",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-piano-keys-melody": {
+    "id": "ascii-magic-piano-keys-melody",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-piano-roll-scroll": {
+    "id": "ascii-magic-piano-roll-scroll",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-radial-sound-bars": {
+    "id": "ascii-magic-radial-sound-bars",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-radio-dial-tuning": {
+    "id": "ascii-magic-radio-dial-tuning",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sheet-music-playhead": {
+    "id": "ascii-magic-sheet-music-playhead",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-singing-mouth-choir": {
+    "id": "ascii-magic-singing-mouth-choir",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-studio-mixing-desk": {
+    "id": "ascii-magic-studio-mixing-desk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tap-tempo-counter": {
+    "id": "ascii-magic-tap-tempo-counter",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-vinyl-crate-digging": {
+    "id": "ascii-magic-vinyl-crate-digging",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-boiling-pasta-pot": {
+    "id": "ascii-magic-boiling-pasta-pot",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-bubble-tea-pearls": {
+    "id": "ascii-magic-bubble-tea-pearls",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-burger-assembly": {
+    "id": "ascii-magic-burger-assembly",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cake-icing-turntable": {
+    "id": "ascii-magic-cake-icing-turntable",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chocolate-fountain": {
+    "id": "ascii-magic-chocolate-fountain",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cocktail-shake-pour": {
+    "id": "ascii-magic-cocktail-shake-pour",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-cotton-candy-spin": {
+    "id": "ascii-magic-cotton-candy-spin",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-doughnut-glazing-line": {
+    "id": "ascii-magic-doughnut-glazing-line",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-fruit-bowl-apple-roll": {
+    "id": "ascii-magic-fruit-bowl-apple-roll",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lemonade-stand-pour": {
+    "id": "ascii-magic-lemonade-stand-pour",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-melting-ice-cream-cone": {
+    "id": "ascii-magic-melting-ice-cream-cone",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-oven-bread-rise": {
+    "id": "ascii-magic-oven-bread-rise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pancake-stack-syrup": {
+    "id": "ascii-magic-pancake-stack-syrup",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pizza-cheese-pull": {
+    "id": "ascii-magic-pizza-cheese-pull",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-popcorn-pot-pop": {
+    "id": "ascii-magic-popcorn-pot-pop",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pour-over-drip": {
+    "id": "ascii-magic-pour-over-drip",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ramen-noodle-lift": {
+    "id": "ascii-magic-ramen-noodle-lift",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sizzling-skewer-grill": {
+    "id": "ascii-magic-sizzling-skewer-grill",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-soup-ladle-bowls": {
+    "id": "ascii-magic-soup-ladle-bowls",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sushi-conveyor": {
+    "id": "ascii-magic-sushi-conveyor",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tea-pour-height": {
+    "id": "ascii-magic-tea-pour-height",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-waffle-iron-open": {
+    "id": "ascii-magic-waffle-iron-open",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-amber-fort-elephants": {
+    "id": "ascii-magic-amber-fort-elephants",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-andaman-teal-beach": {
+    "id": "ascii-magic-andaman-teal-beach",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-chai-stall-dawn": {
+    "id": "ascii-magic-chai-stall-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-charminar-night-bazaar": {
+    "id": "ascii-magic-charminar-night-bazaar",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-desert-fort-camels": {
+    "id": "ascii-magic-desert-fort-camels",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dhol-baraat-drummer": {
+    "id": "ascii-magic-dhol-baraat-drummer",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-dosa-tawa-spread": {
+    "id": "ascii-magic-dosa-tawa-spread",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ellora-rock-temple": {
+    "id": "ascii-magic-ellora-rock-temple",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ganesh-utsav-procession": {
+    "id": "ascii-magic-ganesh-utsav-procession",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ghat-evening-aarti": {
+    "id": "ascii-magic-ghat-evening-aarti",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-goa-shack-sunset": {
+    "id": "ascii-magic-goa-shack-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-golden-shrine-pool": {
+    "id": "ascii-magic-golden-shrine-pool",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-gully-cricket-match": {
+    "id": "ascii-magic-gully-cricket-match",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hampi-boulder-ruins": {
+    "id": "ascii-magic-hampi-boulder-ruins",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-harbour-gateway-mumbai": {
+    "id": "ascii-magic-harbour-gateway-mumbai",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-hill-train-kanchenjunga": {
+    "id": "ascii-magic-hill-train-kanchenjunga",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-himalayan-flower-valley": {
+    "id": "ascii-magic-himalayan-flower-valley",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-houseboat-backwater-dusk": {
+    "id": "ascii-magic-houseboat-backwater-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-howrah-bridge-dawn": {
+    "id": "ascii-magic-howrah-bridge-dawn",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-india-gate-evening": {
+    "id": "ascii-magic-india-gate-evening",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-kolkata-tram-morning": {
+    "id": "ascii-magic-kolkata-tram-morning",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-ladakh-crag-monastery": {
+    "id": "ascii-magic-ladakh-crag-monastery",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lake-palace-udaipur": {
+    "id": "ascii-magic-lake-palace-udaipur",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lands-end-sunrise": {
+    "id": "ascii-magic-lands-end-sunrise",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lattu-spinning-top": {
+    "id": "ascii-magic-lattu-spinning-top",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-living-root-bridge": {
+    "id": "ascii-magic-living-root-bridge",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-lotus-temple-dusk": {
+    "id": "ascii-magic-lotus-temple-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mangrove-tiger-creek": {
+    "id": "ascii-magic-mangrove-tiger-creek",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-market-auto-rickshaws": {
+    "id": "ascii-magic-market-auto-rickshaws",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mehndi-hand-design": {
+    "id": "ascii-magic-mehndi-hand-design",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mumbai-monsoon-street": {
+    "id": "ascii-magic-mumbai-monsoon-street",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-munnar-tea-mist": {
+    "id": "ascii-magic-munnar-tea-mist",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-mysore-palace-lights": {
+    "id": "ascii-magic-mysore-palace-lights",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pressure-cooker-whistle": {
+    "id": "ascii-magic-pressure-cooker-whistle",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-pushkar-camel-fair": {
+    "id": "ascii-magic-pushkar-camel-fair",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-qutub-minar-dusk": {
+    "id": "ascii-magic-qutub-minar-dusk",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rangoli-powder-bloom": {
+    "id": "ascii-magic-rangoli-powder-bloom",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rhino-grassland-mist": {
+    "id": "ascii-magic-rhino-grassland-mist",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rishikesh-suspension-bridge": {
+    "id": "ascii-magic-rishikesh-suspension-bridge",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-river-bridge-taxis": {
+    "id": "ascii-magic-river-bridge-taxis",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-rooftop-kite-sunset": {
+    "id": "ascii-magic-rooftop-kite-sunset",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sea-link-night": {
+    "id": "ascii-magic-sea-link-night",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-shikara-dal-lake": {
+    "id": "ascii-magic-shikara-dal-lake",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-shore-temple-waves": {
+    "id": "ascii-magic-shore-temple-waves",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sitar-string-pluck": {
+    "id": "ascii-magic-sitar-string-pluck",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-summer-cooler-afternoon": {
+    "id": "ascii-magic-summer-cooler-afternoon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-sun-temple-wheel": {
+    "id": "ascii-magic-sun-temple-wheel",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-tabla-hands-rhythm": {
+    "id": "ascii-magic-tabla-hands-rhythm",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-temple-gopuram-madurai": {
+    "id": "ascii-magic-temple-gopuram-madurai",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-varanasi-morning-boats": {
+    "id": "ascii-magic-varanasi-morning-boats",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
+  },
+  "ascii-magic-white-salt-desert-moon": {
+    "id": "ascii-magic-white-salt-desert-moon",
+    "project": "ascii-magic",
+    "kind": "html-live",
+    "status": "ready"
   }
 }
 
@@ -36805,7 +41209,7 @@ export const previewStats = {
   "ready:media-video": 268,
   "ready:media-image": 148,
   "ready:react-generated": 572,
-  "ready:html-live": 4552,
+  "ready:html-live": 5286,
   "unsupported:unsupported": 28,
   "ready:embed": 123
 } as const

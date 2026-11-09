@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-06T02:00:27.519Z",
+  "generatedAt": "2026-11-09T08:51:20.973Z",
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
     "ready:react-generated": 572,
-    "ready:html-live": 4552,
+    "ready:html-live": 5286,
     "unsupported:unsupported": 28,
     "ready:embed": 123
   },
@@ -36804,6 +36804,4410 @@
     {
       "id": "ascii-rest-tv-static",
       "project": "ascii-rest",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-arctic-icebergs",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-aurora-cabin-snowfall",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-autumn-forest",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-autumn-pagoda-maples",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-autumn-road-cyclist",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-balloon-valley-sunrise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bamboo-grove-path",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bamboo-raft-karsts",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-baobab-avenue-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-basalt-column-coast",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-black-sand-falls",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-camel-caravan-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-campfire-under-stars",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-canal-golden-hour",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cherry-blossom-river",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cliff-lighthouse-night",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cliff-village-sea",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cyberpunk-alley",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desert-buttes-road",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desert-camp-milky-way",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desert-dunes",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desert-oasis-palms",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-elephants-at-waterhole",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fjord-ferry-passage",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-floating-islands",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fuji-dawn-lake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ganges-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-giraffes-below-peak",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-glacier-calving-front",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-glacier-lagoon-ice",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-golden-gate-fog",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-grand-canyon-rim",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-granite-towers-lake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-granite-valley-falls",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-great-wall-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-harbour-neon-skyline",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hawa-mahal-morning",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-himalaya-peaks",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kerala-backwaters",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lagoon-overwater-huts",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lava-meets-ocean",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lavender-fields",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lighthouse-storm",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-limestone-bay-junks",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lunar-base",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mars-colony",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-moonlit-mausoleum",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-moonlit-sea",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mountain-sunrise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-neon-city-rain",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-northern-lights",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-nyc-skyline-night",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ocean-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-orbit-window-earth",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-paddy-buffalo-sunrise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-paris-rooftops",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rainforest-falls-mist",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rainforest-river-canoe",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rainy-window",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-red-rock-outback-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-redwood-forest-light",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-retro-synth-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rice-terraces",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-river-lantern-festival",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-salt-flat-mirror",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-savanna-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sea-cliff-puffins",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sea-torii-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-slot-canyon-light",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-snowy-cabin",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-starry-ridge",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stilt-village-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stone-pillar-forest",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-summit-cloud-sea",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-switchback-dusk-drive",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-taj-mahal-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-temple-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-terraced-lakes-falls",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-thundering-falls-rainbow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tokyo-crossing",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-train-at-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tropical-island",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tulip-fields-windmill",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-turquoise-lake-canoe",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-underwater-reef",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-viaduct-steam-train",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-volcano-eruption",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-waterfall-canyon",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-white-travertine-pools",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-api-request-inspector",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-benchmark-table",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bios-setup",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bisect-hunt",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-boot-sequence",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-calculator-app",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-calendar-month",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chat-thread",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-checkout-payment-flow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cluster-rollout",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-code-editor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-color-picker-sliders",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-command-palette",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-compiler-output",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-coverage-report",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-data-table",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-date-range-picker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-delivery-route-tracker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dialup-handshake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-disk-partitioner",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dns-resolver-chain",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-download-queue",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-file-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-flame-graph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-form-validation-errors",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-git-log-graph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-heap-map",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ide-debugger-stepping",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-image-layer-pull",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-inbox-list",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-infra-plan-diff",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-install-log",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kanban-board",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-keyboard-keypress",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-login-form",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-maintenance-mode",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-merge-conflict-resolver",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-modal-dialog",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-modal-editor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-network-waterfall",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-onboarding-stepper",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-otp-code-entry",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-package-publish",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-packet-sniffer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-page-404",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-page-500",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-password-strength-meter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pod-autoscaler",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-post-memory-test",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pr-merged",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pricing-toggle-table",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-process-sorter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-process-task-manager",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-process-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-progress-loader",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-readme-badges",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rebase-todo",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-relay-chat-channel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-release-published",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-repo-star-button",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-search-autocomplete",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-settings-toggles",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-skeleton-loader",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-smart-home-panel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spectrum-music-player",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spinner-set",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-split-pane-session",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spreadsheet-recalc",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sql-query-runner",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ssh-login",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-star-rating-review",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tab-bar",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-terminal-session",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-test-runner-dots",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-toast-stack",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-twin-pane-commander",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-upload-dropzone",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-weather-city-widget",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-window-tiling-manager",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bar-chart-race",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-box-plot-live",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bubble-chart-moving",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-calendar-year-heatmap",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-candlestick-chart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cpu-cores",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-donut-chart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-funnel-conversion",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-gauge-cluster",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-goal-progress-rings",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-heatmap-grid",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-histogram",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-leaderboard",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-line-chart-live",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-network-traffic",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-parliament-seats",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pie-chart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-polar-clock",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-radar-chart-morph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sankey-flow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-scatter-plot",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sparkline-row",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-speed-gauge",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stacked-area-stream",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-star-history-climb",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stock-ticker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-treemap-shuffle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-uptime-monitor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-world-map-pings",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-architecture-map",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-binary-search-steps",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-binary-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-blue-green-deploy",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-canary-rollout",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cdn-cache",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ci-pipeline",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-circuit-breaker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-consistent-hash-ring",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-data-flow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-db-replication",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dijkstra-path",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dns-resolution",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-er-diagram",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-flowchart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-gantt-chart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-git-branching",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-gradient-descent",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-load-balancer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lru-cache",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mapreduce-wordcount",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-message-queue",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mind-map",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-network-topology",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-neural-forward-pass",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-oauth-flow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-org-chart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pubsub-fanout",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sequence-diagram",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sort-race",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-state-machine",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tcp-handshake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-timeline",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-token-bucket",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-trace-spans",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-venn-diagram",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-blinking-cursor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bouncing-letters",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-breaking-news-ticker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-burning-title",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chalkboard-lettering",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cinema-title-card",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-constellation-word",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-countdown-timer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-decode-reveal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-departures-hall-board",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-digital-clock",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-end-credits-roll",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-extruded-word-spin",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-flip-dot-display",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fortune-cookie-terminal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-glitch-title-settle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-group-chat-transcript",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ice-crack-letters",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-karaoke-lyrics",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kinetic-word-slam",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-laser-carved-title",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-led-matrix-scroller",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-liquid-fill-letters",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-marquee-sign",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-morse-signal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-neon-sign-flicker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-nixie-tube-counter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-odometer-counter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-particle-rain-word",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pen-stroke-word",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-perspective-crawl",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-quote-of-the-day",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rain-formed-word",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rainbow-text",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ransom-note-letters",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-robot-sign-crew",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-slot-reel-letters",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-split-flap-board",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stencil-spray-reveal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-subtitle-captions",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-syntax-highlight-pass",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-teleprompter-script",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-text-scramble",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-typewriter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-unfolding-poem",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-vertical-haiku",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wave-text",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-word-exchange",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-word-ladder-morph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cylinder",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-double-helix",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-gyroscope-rings",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-heart-3d",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-icosahedron",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-klein-bottle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lit-sphere",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mobius-strip",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-octahedron",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-puzzle-cube-turns",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pyramid",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rotating-cube",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rotating-dodecahedron",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rotating-star",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sphere-cube-morph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spinning-coin",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spinning-torus",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spring-coil",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-terrain-flyover",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tesseract",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-torus-knot",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-trefoil-tube",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-voxel-heart",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wireframe-city",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wireframe-globe",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-asteroid-belt",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-black-hole",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-comet",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-earth-rotating",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-eclipse",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-meteor-shower",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-moon-phases",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-nebula-drift",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-orbiting-planets",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ring-shadow-closeup",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ringed-planet",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rocket-launch",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rover-dunes",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-satellite-orbit",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-solar-flare",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spiral-galaxy",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-starfield-warp",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tethered-astronaut",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-binary-stars",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bouncing-balls",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chladni-figures",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cloth-flag",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-double-pendulum",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-falling-sand",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fluid-smoke",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-jelly-bounce",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lissajous",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-magnet-field-lines",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-newtons-cradle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-orbital-gravity",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pendulum-wave",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-projectile-arc",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ripple-pond",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rope-bridge",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spring-mass",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wave-interference",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bonsai-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-campfire",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cloud-drift",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-falling-leaves",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fern-fractal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fireflies",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-growing-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lightning-storm",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ocean-waves",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rain-shower",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rainbow-arc",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-snowfall",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sunrise-horizon",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tornado",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-waterfall",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wind-grass",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bat-cave-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bee-flight",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-butterfly",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chameleon-fly",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-flock-of-birds",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-goldfish-tank",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hummingbird-hibiscus",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-jellyfish",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-koi-pond-ripples",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-leaping-dolphins",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-octopus",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-owl-blink",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-penguin-waddle-slide",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sand-crab-scuttle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sleeping-cat",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-snake-slither",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-snow-fox-trot",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spider-web",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-swimming-whale",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-walking-dog",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-analog-clock",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-candle-flame",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-clockwork-gears",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-coffee-steam",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cuckoo-clock",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desk-fan",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-espresso-pour",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ferris-wheel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-film-projector",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hourglass",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lava-lamp",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lighthouse-beam",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-metronome",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-neon-jukebox",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pendulum-wall-clock",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-porch-wind-chimes",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-record-player",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rotary-phone",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sewing-machine",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-traffic-light",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-typebar-strike",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-washing-machine",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-windmill",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-apollonian-gasket",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-boids-flock",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-brians-brain",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-clifford-attractor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-colonising-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-crystal-grains",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dla-growth",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dragon-curve",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-flow-field",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-game-of-life",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hilbert-curve",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-julia-set",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-l-system-plant",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-langtons-ant",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lorenz-attractor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mandelbrot-zoom",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-maze-builder",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-penrose-growth",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-reaction-diffusion",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rule-30",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sierpinski",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-spirograph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-truchet-tiles",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-voronoi-cells",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wave-function-collapse",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-aurora-curtains",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-crt-roll",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-endless-corridor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fireworks",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-holo-grid-sphere",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hyperspace-jump",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ink-in-water",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kaleidoscope",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lava-cracks",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-liquid-chrome",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-matrix-rain",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-metaballs",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pixel-fire",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-plasma",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rainbow-warp-road",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rotozoomer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-smoke-rings",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sparks",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-starburst",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-synthwave-grid",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tunnel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tv-static",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-vaporwave-sun",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-water-caustics",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-alien-wave",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-block-drop",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-brick-breaker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chess-replay",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-circuit-lap-racer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-coin-run-platformer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-crate-pusher",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dino-runner",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-frog-hop-crossing",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-gem-cascade",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-maze-chase",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-minesweeper",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-number-tile-merge",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-paddle-tennis",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pipe-flyer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rock-blaster",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-snake-autoplay",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tower-defence-wave",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-circuit-trace",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dotted-rule",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-double-line-frame",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-heartbeat-rule",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-marching-ants-frame",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-neon-border",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pulse-line",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rope-divider",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-scroll-banner-frame",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stars-divider",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wave-divider",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-zigzag-rule",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-autumn-harvest",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-birthday-cake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-christmas-tree",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-contributors-wall",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-diwali-diyas",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-easter-eggs",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-eid-moon",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-halloween-pumpkin",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-holi-colors",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kite-festival",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lunar-new-year",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-new-year-countdown",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ramadan-lanterns",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-snow-globe",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-star-milestone",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-valentine-hearts",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-abu-simbel-colossi",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-acropolis-hill-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-alhambra-hill-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-alpine-lake-village",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-amsterdam-canal-bikes",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-angkor-lotus-sunrise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bagan-temple-plain",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-blue-mountain-town",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-borobudur-sunrise-mist",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bosphorus-mosque-skyline",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-castle-bridge-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-charles-bridge-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chichen-itza-equinox",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-colosseum-golden-hour",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desert-needle-skyline",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-east-river-bridge-sunrise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fairy-chimney-balloons",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-giza-pyramids-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-golden-pavilion-pond",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-harbour-sails-opera",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-havana-pastel-street",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hill-street-cable-car",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-imperial-palace-snow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-island-abbey-tide",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-island-church-lake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-jungle-temple-mist",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kyoto-pagoda-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-leaning-tower-square",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-liberty-harbor-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-machu-picchu-cloud",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-marine-drive-necklace",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-marrakech-rooftop-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-moai-coast-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-nile-felucca-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-onion-domes-snowfall",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-palace-gate-lanterns",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-paris-rooftops-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-petra-rose-treasury",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-potala-palace-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-redeemer-statue-clouds",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-riverfront-tower-night",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-santorini-blue-domes",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stonehenge-solstice",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sugarloaf-cable-car",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-supertree-grove-night",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-table-mountain-harbour",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-thames-clock-tower",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-torii-gate-tunnel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tower-bridge-lift",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-twin-spires-night",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-venice-gondola-canal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-victoria-harbour-junk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-walled-city-adriatic",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-white-mosque-reflections",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bouncing-slime",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cool-sun-shades",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dancing-cactus",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-debug-duck-bob",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-debugging-bug",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-friendly-ghost-float",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-idea-lightbulb",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-juggling-octopus",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-laptop-typing-cat",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-paper-plane-loop",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-peekaboo-box",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pixel-knight-salute",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-planet-astronaut-wave",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rain-cloud-rainbow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-robot-wave-blink",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-scarf-penguin",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sleepy-moon",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sprouting-plant-smile",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-stomping-dino",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-toaster-pop",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wagging-pup",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-yawning-coffee-cup",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-access-denied",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-all-caught-up",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-broken-link-cloud",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-clipboard-copied",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-cloud-saved",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-cobweb-folder",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-construction-crane",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-inbox-plane",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-no-results",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-offline-plug",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-onboarding-flag",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-payment-failed",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-payment-success",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-rate-limited",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-reconnecting",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-rocket-countdown",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-session-expired",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-smoking-server",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-task-confetti",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-trash-lid",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-upload-tray",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-empty-welcome-door",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-amber-ledger-spreadsheet",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-basic-loop-prompt",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cassette-tape-loader",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chiptune-tracker",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-computer-lab-terminals",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-copper-bar-scroller",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-core-memory-plane",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dot-matrix-banner",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-floppy-drive-read",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-front-panel-switches",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-green-word-processor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lcd-handheld-game",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mainframe-lamp-console",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-midi-step-sequencer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-phosphor-scope-xy",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pixel-paint-program",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-punch-card-keypunch",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-reel-to-reel-drives",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-teletype-paper-roll",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-text-adventure-parser",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-vector-space-duel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-wireframe-maze-crawl",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bohr-atom-photon",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bond-energy-reaction",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dna-replication-fork",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-doppler-effect",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-energy-pyramid",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-heart-blood-flow",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lunar-eclipse-geometry",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lungs-breathing",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mitosis-stages",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-moon-tides",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-nitrogen-cycle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-photosynthesis-leaf",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-prism-dispersion",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ribosome-translation",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rock-cycle-loop",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-seasons-axial-tilt",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-seed-germination",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-simple-circuit-current",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-states-of-matter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-subduction-volcano",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-transverse-longitudinal",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-water-cycle-diagram",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-boombox-speaker-pump",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cassette-tape-reels",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-concert-stage-crowd",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-conductor-baton-beats",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dj-decks-crossfader",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-drum-machine-sequencer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-festival-speaker-stack",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-graphic-eq-peak-hold",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-guitar-fretting-hand",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-headphones-sound-waves",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-marching-snare-drum",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-modular-synth-patch",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-oscilloscope-morph",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-piano-keys-melody",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-piano-roll-scroll",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-radial-sound-bars",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-radio-dial-tuning",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sheet-music-playhead",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-singing-mouth-choir",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-studio-mixing-desk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tap-tempo-counter",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-vinyl-crate-digging",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-boiling-pasta-pot",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-bubble-tea-pearls",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-burger-assembly",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cake-icing-turntable",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chocolate-fountain",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cocktail-shake-pour",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-cotton-candy-spin",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-doughnut-glazing-line",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-fruit-bowl-apple-roll",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lemonade-stand-pour",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-melting-ice-cream-cone",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-oven-bread-rise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pancake-stack-syrup",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pizza-cheese-pull",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-popcorn-pot-pop",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pour-over-drip",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ramen-noodle-lift",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sizzling-skewer-grill",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-soup-ladle-bowls",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sushi-conveyor",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tea-pour-height",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-waffle-iron-open",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-amber-fort-elephants",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-andaman-teal-beach",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-chai-stall-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-charminar-night-bazaar",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-desert-fort-camels",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dhol-baraat-drummer",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-dosa-tawa-spread",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ellora-rock-temple",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ganesh-utsav-procession",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ghat-evening-aarti",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-goa-shack-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-golden-shrine-pool",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-gully-cricket-match",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hampi-boulder-ruins",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-harbour-gateway-mumbai",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-hill-train-kanchenjunga",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-himalayan-flower-valley",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-houseboat-backwater-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-howrah-bridge-dawn",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-india-gate-evening",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-kolkata-tram-morning",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-ladakh-crag-monastery",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lake-palace-udaipur",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lands-end-sunrise",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lattu-spinning-top",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-living-root-bridge",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-lotus-temple-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mangrove-tiger-creek",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-market-auto-rickshaws",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mehndi-hand-design",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mumbai-monsoon-street",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-munnar-tea-mist",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-mysore-palace-lights",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pressure-cooker-whistle",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-pushkar-camel-fair",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-qutub-minar-dusk",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rangoli-powder-bloom",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rhino-grassland-mist",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rishikesh-suspension-bridge",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-river-bridge-taxis",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-rooftop-kite-sunset",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sea-link-night",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-shikara-dal-lake",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-shore-temple-waves",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sitar-string-pluck",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-summer-cooler-afternoon",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-sun-temple-wheel",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-tabla-hands-rhythm",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-temple-gopuram-madurai",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-varanasi-morning-boats",
+      "project": "ascii-magic",
+      "kind": "html-live",
+      "status": "ready"
+    },
+    {
+      "id": "ascii-magic-white-salt-desert-moon",
+      "project": "ascii-magic",
       "kind": "html-live",
       "status": "ready"
     }

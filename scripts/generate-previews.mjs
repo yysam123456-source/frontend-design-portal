@@ -1395,7 +1395,66 @@ function main() {
   const reposDir = path.join(rootDir, 'repos')
   if (!fs.existsSync(reposDir)) {
     console.log('[generate-previews] repos/ is absent (gitignored; expected in CI).')
-    console.log('[generate-previews] Keeping the committed preview artefacts unchanged.')
+    console.log('[generate-previews] Keeping the committed React/vendor preview artefacts unchanged.')
+
+    // The committed manifest is authoritative for repos-dependent previews, but
+    // self-contained HTML components (ascii.rest, ascii-magic, …) do not need a
+    // clone. Merge those into the manifest so a newly added project still gets
+    // its cards and SEO pages in a clean CI checkout.
+    const indexPath = path.join(dataDir, 'index.json')
+    const publicManifestPath = path.join(dataDir, 'preview-manifest.json')
+    const index = readJson(indexPath)
+    const previous = fs.existsSync(publicManifestPath) ? readJson(publicManifestPath) : { records: [] }
+    const previousById = new Map((previous.records || []).map((record) => [record.id, record]))
+    let added = 0
+    const records = index.components
+      .map((component) => {
+        const existing = previousById.get(component.id)
+        if (existing) return existing
+        if (component.project === 'looseleaf' && component.previewUrl) {
+          added += 1
+          return {
+            id: component.id,
+            project: component.project,
+            kind: 'embed',
+            status: 'ready',
+            entry: component.previewUrl,
+          }
+        }
+        if (component.language === 'html') {
+          added += 1
+          return {
+            id: component.id,
+            project: component.project,
+            kind: 'html-live',
+            status: 'ready',
+          }
+        }
+        return null
+      })
+      .filter(Boolean)
+
+    const byId = Object.fromEntries(records.map((record) => [record.id, record]))
+    const stats = records.reduce((acc, record) => {
+      const key = `${record.status}:${record.kind}`
+      acc[key] = (acc[key] || 0) + 1
+      return acc
+    }, {})
+    const manifestTs = `import type { PreviewManifestRecord } from './preview-types'
+
+export const previewManifest: Record<string, PreviewManifestRecord> = ${toTsString(byId)}
+
+export const previewStats = ${toTsString(stats)} as const
+
+export function getPreviewRecord(id: string | null | undefined): PreviewManifestRecord | undefined {
+  if (!id) return undefined
+  return previewManifest[id]
+}
+`
+    fs.writeFileSync(publicManifestPath, JSON.stringify({ generatedAt: new Date().toISOString(), stats, records }, null, 2))
+    ensureDir(generatedDir)
+    fs.writeFileSync(path.join(generatedDir, 'preview-manifest.ts'), manifestTs)
+    console.log(`[generate-previews] Added ${added} static preview record(s); manifest now holds ${records.length}.`)
     return
   }
 

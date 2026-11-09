@@ -959,13 +959,14 @@ function stripHomeBlock(html, where) {
 }
 
 const SPA_SHELL_SOURCE = path.join(DIST, 'index.html')
+const TOTAL_COMPONENTS = index.total.toLocaleString('en-US')
 
 const SPA_VIEWS = [
   {
     dir: 'components',
-    title: 'Component Gallery — 5,319 Open-Source UI Components & Animations',
+    title: `Component Gallery — ${TOTAL_COMPONENTS} Open-Source UI Components & Animations`,
     description:
-      'Search and filter 5,319 open-source frontend components — buttons, cards, loaders, text animations and backgrounds. Every entry has a live preview and copy-ready code.',
+      `Search and filter ${TOTAL_COMPONENTS} open-source frontend components — buttons, cards, loaders, text animations, ASCII art and backgrounds. Every entry has a live preview and copy-ready code.`,
   },
   {
     dir: 'showcases',

@@ -7,6 +7,7 @@ import PixiJSShowcase from './PixiJSShowcase'
 import AbyssalDescent from './showcases/AbyssalDescent'
 import AsciiSharksShowcase from './showcases/AsciiSharksShowcase'
 import AsciiRestShowcase from './showcases/AsciiRestShowcase'
+import AsciiMagicShowcase from './showcases/AsciiMagicShowcase'
 import TextFireworksShowcase from './showcases/TextFireworksShowcase'
 
 /* ═══════════════════════════════════════════════════════════════
@@ -603,6 +604,7 @@ const SHOWCASES = [
   { id: 'phoenix', label: 'Chinese Phoenix Crown', desc: 'Seven crowns with physics text curtains', icon: '👑' },
   { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹' },
   { id: 'ascii-rest', label: 'ASCII.Art', desc: '240 animated pieces · 15 categories · one tag', icon: '🅰', group: 'ASCII' },
+  { id: 'ascii-magic', label: 'ASCII Magic', desc: '734 hand-built pieces · 24 categories · 11 looks', icon: '✦', group: 'ASCII' },
   { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈', group: 'ASCII' },
 ] as const
 
@@ -709,6 +711,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'crystal' && <IframeShowcase src="/showcases/crystal/" title="WebGPU 水晶绘制" />}
         {activeId === 'rain' && <IframeShowcase src="/showcases/rain/" title="雨景工作室" />}
         {activeId === 'ascii-rest' && <AsciiRestShowcase />}
+        {activeId === 'ascii-magic' && <AsciiMagicShowcase />}
         {activeId === 'ascii' && <AsciiSharksShowcase />}
         {activeId === 'looseleaf' && (
           <LightIframeShowcase src="/looseleaf-showcase.html" title="Looseleaf Paper Desk" background="#a8c8bb" />

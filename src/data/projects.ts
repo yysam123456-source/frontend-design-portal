@@ -126,6 +126,18 @@ export const projects: ProjectMeta[] = [
     category: 'animation',
   },
   {
+    id: 'ascii-magic',
+    name: 'ASCII Magic',
+    github: 'https://github.com/kailashsr38/ascii-magic-art',
+    demoBaseUrl: 'https://www.ascii-magic.com/ascii',
+    description:
+      'A MIT-licensed library of 734 hand-built animated ASCII pieces across 24 categories — landscapes, working interfaces, live charts, explainers, 3D solids, demoscene effects, games and more. Each piece is one ES module and one <ascii-magic-art> tag, with 11 character looks and no build step.',
+    accentColor: '#C4B5FD',
+    tags: ['ascii-art', 'web-components', 'animated', 'generative-art', 'halftone', 'zero-dependency'],
+    techStack: ['JavaScript', 'Web Components', 'Canvas API'],
+    category: 'animation',
+  },
+  {
     id: 'ascii-sharks',
     name: 'Ascii Sharks',
     github: 'https://github.com/stackedlol/ascii-sharks',

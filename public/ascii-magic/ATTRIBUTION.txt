@@ -1,0 +1,30 @@
+ascii-magic-art — self-hosted copy for the Frontend Design Portal
+====================================================================
+
+Source: https://github.com/kailashsr38/ascii-magic-art
+Upstream commit: b324cb0c60b38cadbf02659b1d3d9d6af2d0a4e1 (2026-10-27)
+Author: ASCII Magic (ascii-magic.com)
+License: MIT (see LICENSE)
+
+This directory contains the upstream `pieces/`, `lib/`, `runtime/` and
+`categories.json`. The portal serves it from `/ascii-magic/` and exposes each
+piece through the `<ascii-magic-art>` custom element.
+
+Local changes:
+- `runtime/ascii.js`: the custom element is registered as `ascii-magic-art`
+  instead of `ascii-art`, because the portal already loads ASCII.Art's
+  `ascii-art` element and two `customElements.define("ascii-art")` calls would
+  collide.
+- `runtime/ascii.js`: when the `size` attribute is absent, the runtime reads the
+  host element's computed CSS font-size, so catalogue embeds can scale with
+  `calc(...)`.
+
+Unsplash exception (unchanged from upstream NOTICE):
+- `pieces/ocean-sunset.js` — photo by César Couto
+  (https://unsplash.com/photos/ZGx6vRlEySY)
+- `pieces/starry-ridge.js` — photo by Vincentiu Solomon
+  (https://unsplash.com/photos/ln5drpv_ImI)
+
+These two pieces' image data stays under the Unsplash License
+(https://unsplash.com/license), not MIT. They may be used and modified, but not
+sold unaltered or used to build a competing photo service.
