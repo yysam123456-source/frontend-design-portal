@@ -39,6 +39,109 @@ const smoothstep = (a: number, b: number, t: number) => {
 const MECHA_IMG = '/assets/showcases/original-mecha-fullbody.jpg'
 const FRAME_IMG = '/assets/showcases/mecha-internal-frame.jpg'
 
+/* ═══ Web Audio 合成音效（无音频文件，事件驱动不占 rAF） ═══ */
+type Sfx = 'boot' | 'impact' | 'combat' | 'reboot' | 'click'
+
+function playSfx(ctx: AudioContext, out: GainNode, type: Sfx) {
+  const t = ctx.currentTime
+
+  if (type === 'boot') {
+    /* 低频上电嗡鸣：saw 38→92Hz + 低通，2.6s 与启动序列同步 */
+    const osc = ctx.createOscillator()
+    osc.type = 'sawtooth'
+    osc.frequency.setValueAtTime(38, t)
+    osc.frequency.exponentialRampToValueAtTime(92, t + 2.4)
+    const filt = ctx.createBiquadFilter()
+    filt.type = 'lowpass'
+    filt.frequency.value = 300
+    const g = ctx.createGain()
+    g.gain.setValueAtTime(0, t)
+    g.gain.linearRampToValueAtTime(0.3, t + 0.25)
+    g.gain.setValueAtTime(0.3, t + 2.0)
+    g.gain.linearRampToValueAtTime(0, t + 2.6)
+    osc.connect(filt).connect(g).connect(out)
+    osc.start(t); osc.stop(t + 2.65)
+    /* 终端 beep 序列 */
+    ;[0.3, 0.9, 1.5].forEach((dt) => {
+      const o = ctx.createOscillator()
+      o.type = 'square'
+      o.frequency.value = 880 + dt * 300
+      const gg = ctx.createGain()
+      gg.gain.setValueAtTime(0.05, t + dt)
+      gg.gain.exponentialRampToValueAtTime(0.001, t + dt + 0.09)
+      o.connect(gg).connect(out)
+      o.start(t + dt); o.stop(t + dt + 0.1)
+    })
+  }
+
+  if (type === 'impact') {
+    /* 金属撞击：带通噪声 burst 2400→300Hz */
+    const dur = 0.5
+    const buf = ctx.createBuffer(1, Math.floor(ctx.sampleRate * dur), ctx.sampleRate)
+    const data = buf.getChannelData(0)
+    for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / data.length, 2.2)
+    const src = ctx.createBufferSource()
+    src.buffer = buf
+    const filt = ctx.createBiquadFilter()
+    filt.type = 'bandpass'
+    filt.frequency.setValueAtTime(2400, t)
+    filt.frequency.exponentialRampToValueAtTime(300, t + 0.4)
+    const g = ctx.createGain()
+    g.gain.setValueAtTime(0.45, t)
+    g.gain.exponentialRampToValueAtTime(0.001, t + dur)
+    src.connect(filt).connect(g).connect(out)
+    src.start(t)
+    /* 低频轰 120→36Hz */
+    const o = ctx.createOscillator()
+    o.type = 'sine'
+    o.frequency.setValueAtTime(120, t)
+    o.frequency.exponentialRampToValueAtTime(36, t + 0.45)
+    const og = ctx.createGain()
+    og.gain.setValueAtTime(0.5, t)
+    og.gain.exponentialRampToValueAtTime(0.001, t + 0.5)
+    o.connect(og).connect(out)
+    o.start(t); o.stop(t + 0.55)
+  }
+
+  if (type === 'combat') {
+    /* 警报双音 */
+    ;[0, 0.16].forEach((dt, i) => {
+      const o = ctx.createOscillator()
+      o.type = 'square'
+      o.frequency.value = i === 0 ? 520 : 390
+      const g = ctx.createGain()
+      g.gain.setValueAtTime(0.12, t + dt)
+      g.gain.exponentialRampToValueAtTime(0.001, t + dt + 0.14)
+      o.connect(g).connect(out)
+      o.start(t + dt); o.stop(t + dt + 0.15)
+    })
+  }
+
+  if (type === 'reboot') {
+    /* 上电扫频 120→720Hz */
+    const o = ctx.createOscillator()
+    o.type = 'sine'
+    o.frequency.setValueAtTime(120, t)
+    o.frequency.exponentialRampToValueAtTime(720, t + 0.5)
+    const g = ctx.createGain()
+    g.gain.setValueAtTime(0.18, t)
+    g.gain.exponentialRampToValueAtTime(0.001, t + 0.6)
+    o.connect(g).connect(out)
+    o.start(t); o.stop(t + 0.65)
+  }
+
+  if (type === 'click') {
+    const o = ctx.createOscillator()
+    o.type = 'triangle'
+    o.frequency.value = 1400
+    const g = ctx.createGain()
+    g.gain.setValueAtTime(0.09, t)
+    g.gain.exponentialRampToValueAtTime(0.001, t + 0.06)
+    o.connect(g).connect(out)
+    o.start(t); o.stop(t + 0.07)
+  }
+}
+
 const parts: MechaPart[] = [
   { id: 'head', label: '光学头部', code: 'HD-01', desc: '复合传感器阵列、青色全息面罩、红白头盔装甲与主火神炮基座。', spec: 'SENSOR ×12 / HOLO VISOR', x: 50, y: 14, w: 24, h: 18, dx: 0, dy: -38, rot: 0, color: '#d8e3ee', accent: '#41e6ff', clip: 'polygon(14% 0, 86% 0, 100% 42%, 82% 100%, 18% 100%, 0 42%)', z: 10, phase: 0.06, conduit: 'v' },
   { id: 'chest', label: '胸部主装甲', code: 'CR-12', desc: '主胸甲、肩部连接轴、反应炉外环装甲结构，曲面分层冲压成型。', spec: 'ARMOR 420mm EQ', x: 50, y: 33, w: 44, h: 22, dx: 0, dy: -24, rot: 0, color: '#cdd7e2', accent: '#41e6ff', clip: 'polygon(8% 0, 92% 0, 100% 38%, 80% 100%, 20% 100%, 0 38%)', z: 8, phase: 0.12, conduit: 'h' },
@@ -105,8 +208,12 @@ export default function MechaDisassembly() {
   const mouseRaf = useRef(false)
   const prevAssemble = useRef(0)
   const [impact, setImpact] = useState(0) // 组装完成瞬间的冲击时间戳
+  const [sound, setSound] = useState(false)
+  const soundRef = useRef(false) // 事件回调内读取，避免闭包过期
+  const audioRef = useRef<{ ctx: AudioContext; master: GainNode } | null>(null)
+  const [rebootKey, setRebootKey] = useState(0) // REBOOT 重播启动序列
 
-  /* 启动序列：骨架线束 → 装甲显现 → 反应炉点火 */
+  /* 启动序列：骨架线束 → 装甲显现 → 反应炉点火（rebootKey 变化时重播） */
   useEffect(() => {
     const t0 = performance.now()
     let raf = 0
@@ -117,7 +224,7 @@ export default function MechaDisassembly() {
     }
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
-  }, [])
+  }, [rebootKey])
 
   useEffect(() => {
     const onScroll = () => {
@@ -188,6 +295,7 @@ export default function MechaDisassembly() {
   }, [assemble])
   useEffect(() => {
     if (!impact) return
+    if (soundRef.current && audioRef.current) playSfx(audioRef.current.ctx, audioRef.current.master, 'impact')
     const t = setTimeout(() => setImpact(0), 1000)
     return () => clearTimeout(t)
   }, [impact])
@@ -205,6 +313,42 @@ export default function MechaDisassembly() {
 
   /* 点击部件或列表 → 聚焦；点击空白退出 */
   const toggleFocus = (id: string) => setFocus((f) => (f === id ? null : id))
+
+  /* ═══ 音效调度 + REBOOT 重播 ═══ */
+  const sfx = (type: Sfx) => {
+    if (!soundRef.current) return
+    const a = audioRef.current
+    if (!a) return
+    playSfx(a.ctx, a.master, type)
+  }
+  const toggleSound = () => {
+    if (!sound) {
+      /* 首次开启：在用户手势内创建 AudioContext（满足自动播放策略） */
+      if (!audioRef.current) {
+        const ctx = new AudioContext()
+        const master = ctx.createGain()
+        master.gain.value = 0.5
+        master.connect(ctx.destination)
+        audioRef.current = { ctx, master }
+      }
+      void audioRef.current.ctx.resume()
+      soundRef.current = true
+      playSfx(audioRef.current.ctx, audioRef.current.master, 'click')
+      setSound(true)
+    } else {
+      soundRef.current = false
+      setSound(false)
+    }
+  }
+  const reboot = () => {
+    sfx('reboot')
+    sfx('boot')
+    setFocus(null)
+    setImpact(0)
+    setIntro(0)
+    setRebootKey((k) => k + 1) // 重触发启动序列 effect
+    window.scrollTo(0, 0)
+  }
 
   const bootLines = [
     'MECHA OS v2.1 // GUNDAM-CLASS FRAME',
@@ -299,7 +443,7 @@ export default function MechaDisassembly() {
             {bootLines.map((l, i) => (
               <div key={i} className="mb-1.5" style={{ opacity: smoothstep(i * 0.18, i * 0.18 + 0.14, intro) }}>{l}</div>
             ))}
-            <div className="mt-3 h-px bg-cyan-300/20"><div className="h-full bg-cyan-300/80" style={{ animation: 'mecha-bootbar 2.6s ease-out forwards' }} /></div>
+            <div className="mt-3 h-px bg-cyan-300/20"><div key={`bootbar-${rebootKey}`} className="h-full bg-cyan-300/80" style={{ animation: 'mecha-bootbar 2.6s ease-out forwards' }} /></div>
           </div>
         </div>
 
@@ -362,6 +506,7 @@ export default function MechaDisassembly() {
 
             {/* ═══ 内部骨架 SVG（线束汇聚 = 线框启动） ═══ */}
             <svg
+              key={`frame-svg-${rebootKey}`}
               className="absolute inset-0 w-full h-full overflow-visible"
               viewBox="0 0 100 140"
               style={{ opacity: Math.max(smoothstep(0.04, 0.3, intro) * (1 - smoothstep(0.42, 0.7, intro)), reveal * (1 - combat * 0.35)) }}
@@ -711,13 +856,20 @@ export default function MechaDisassembly() {
             <button key={v} className={`mecha-btn rounded px-2.5 py-1 text-[9px] uppercase ${view === v ? 'on' : ''}`} onClick={() => setView(v)}>{v}</button>
           ))}
           <span className="w-2" />
-          <button className={`mecha-btn rounded px-2.5 py-1 text-[9px] ${pose === 'combat' ? 'warn on' : ''}`} onClick={() => setPose(pose === 'combat' ? 'display' : 'combat')}>{pose === 'combat' ? '◉ COMBAT' : 'DISPLAY'}</button>
+          <button className={`mecha-btn rounded px-2.5 py-1 text-[9px] ${pose === 'combat' ? 'warn on' : ''}`} onClick={() => { sfx(pose === 'combat' ? 'click' : 'combat'); setPose(pose === 'combat' ? 'display' : 'combat') }}>{pose === 'combat' ? '◉ COMBAT' : 'DISPLAY'}</button>
           <span className="w-2" />
           {(['eyes', 'core', 'thrust'] as const).map((g) => (
             <button key={g} className={`mecha-btn rounded px-2.5 py-1 text-[9px] uppercase ${glows[g] ? 'on' : ''}`} onClick={() => setGlows({ ...glows, [g]: !glows[g] })}>{g}</button>
           ))}
           <span className="w-2" />
           <button className={`mecha-btn rounded px-2.5 py-1 text-[9px] uppercase ${clay ? 'on' : ''}`} onClick={() => setClay(!clay)}>CLAY</button>
+          <button className={`mecha-btn rounded px-2.5 py-1 text-[9px] uppercase ${sound ? 'on' : ''}`} onClick={toggleSound}>{sound ? '◉ SOUND' : 'SOUND'}</button>
+          {booted && assemble > 0.98 && (
+            <>
+              <span className="w-2" />
+              <button className="mecha-btn warn on rounded px-3 py-1 text-[9px] tracking-[0.18em] animate-pulse" onClick={reboot}>⟳ REBOOT</button>
+            </>
+          )}
         </div>
 
         {/* 雷达小部件 */}
