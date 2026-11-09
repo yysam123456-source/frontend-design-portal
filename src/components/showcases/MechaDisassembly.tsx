@@ -103,6 +103,8 @@ export default function MechaDisassembly() {
   const [clay, setClay] = useState(false)
   const [glows, setGlows] = useState({ eyes: true, core: true, thrust: true })
   const mouseRaf = useRef(false)
+  const prevAssemble = useRef(0)
+  const [impact, setImpact] = useState(0) // 组装完成瞬间的冲击时间戳
 
   /* 启动序列：骨架线束 → 装甲显现 → 反应炉点火 */
   useEffect(() => {
@@ -179,6 +181,17 @@ export default function MechaDisassembly() {
   const hot = parts.find((p) => p.id === hotPart)
   const focusPart = parts.find((p) => p.id === focus)
 
+  /* 组装完成瞬间（assemble 跨越 0.5）：白闪 + 冲击波，1s 后清理 */
+  useEffect(() => {
+    if (prevAssemble.current < 0.5 && assemble >= 0.5) setImpact(performance.now())
+    prevAssemble.current = assemble
+  }, [assemble])
+  useEffect(() => {
+    if (!impact) return
+    const t = setTimeout(() => setImpact(0), 1000)
+    return () => clearTimeout(t)
+  }, [impact])
+
   /* 相机（聚焦 + 视角预设），CSS transition 平滑运镜 */
   const W = 'min(78vw, 68vh)'
   const camScale = focusPart ? 2.05 : 1 + combat * 0.05
@@ -216,6 +229,12 @@ export default function MechaDisassembly() {
         @keyframes mecha-alert { 0%,100% { opacity: .12; } 50% { opacity: .3; } }
         @keyframes mecha-blink { 0%,92%,100% { opacity: 1; } 96% { opacity: .2; } }
         @keyframes mecha-bootbar { from { width: 0; } to { width: 100%; } }
+        @keyframes mecha-hangar { 0%,100% { transform: translateX(-5%) rotate(-2.2deg); } 50% { transform: translateX(5%) rotate(2.2deg); } }
+        @keyframes mecha-swing { 0%,12% { transform: rotate(-24deg); } 46% { transform: rotate(52deg); } 62% { transform: rotate(38deg); } 100% { transform: rotate(-24deg); } }
+        @keyframes mecha-muzzle { 0%, 86%, 100% { opacity: 0; } 89% { opacity: 1; } 91% { opacity: .25; } 93% { opacity: 1; } 95.5% { opacity: 0; } }
+        @keyframes mecha-groundglow { 0%,12% { transform: translateX(-6%); opacity: .45; } 46% { transform: translateX(9%); opacity: .8; } 62% { transform: translateX(5%); opacity: .65; } 100% { transform: translateX(-6%); opacity: .45; } }
+        @keyframes mecha-impactflash { 0% { opacity: .9; } 100% { opacity: 0; } }
+        @keyframes mecha-shockwave { 0% { transform: translate(-50%,-50%) scale(.15); opacity: .95; } 100% { transform: translate(-50%,-50%) scale(2.6); opacity: 0; } }
         .mecha-btn { font-family: ui-monospace, monospace; letter-spacing: .14em; border: 1px solid rgba(65,230,255,.28); background: rgba(3,12,20,.55); backdrop-filter: blur(8px); color: rgba(190,235,255,.75); transition: all .18s ease; cursor: pointer; }
         .mecha-btn:hover { border-color: rgba(65,230,255,.7); color: #cff7ff; box-shadow: 0 0 14px rgba(65,230,255,.25); }
         .mecha-btn.on { background: rgba(65,230,255,.16); border-color: rgba(65,230,255,.85); color: #eafcff; box-shadow: 0 0 16px rgba(65,230,255,.35), inset 0 0 10px rgba(65,230,255,.15); }
@@ -261,6 +280,12 @@ export default function MechaDisassembly() {
             mixBlendMode: 'screen',
           }} />
         )}
+
+        {/* 鼠标跟随柔光（镜头光，精确跟随指针） */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: `radial-gradient(46vmin circle at ${mouse.x * 100}% ${mouse.y * 100}%, rgba(185,242,255,.12), transparent 60%)`,
+          mixBlendMode: 'screen',
+        }} />
 
         {/* 标题 */}
         <div className="absolute top-[2%] left-1/2 -translate-x-1/2 text-center pointer-events-none" style={{ opacity: (1 - globalSplit * 0.45) * smoothstep(0.5, 0.9, intro) }}>
@@ -570,6 +595,49 @@ export default function MechaDisassembly() {
                 <div className="absolute rounded-full pointer-events-none" style={{ left: '58%', top: '52%', width: '11%', height: '10%', background: 'radial-gradient(circle, rgba(65,230,255,.4), transparent 70%)', filter: 'blur(6px)', mixBlendMode: 'screen' }} />
               </>
             )}
+
+            {/* ═══ 光束军刀（战斗姿态）：挥砍 + 辉光 + 刀柄 ═══ */}
+            {combatPose && booted && (
+              <div className="absolute pointer-events-none" style={{
+                left: '86%', top: '55%', width: '2.4%', height: '46%', zIndex: 32,
+                transformOrigin: '50% 6%',
+                animation: 'mecha-swing 2.6s cubic-bezier(.45,0,.2,1) infinite',
+              }}>
+                <div className="absolute" style={{ inset: '-40% -150%', background: 'radial-gradient(58% 42% at 50% 28%, rgba(65,230,255,.4), transparent 70%)', filter: 'blur(6px)' }} />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,.98), #aef4ff 18%, rgba(65,230,255,.62) 52%, rgba(65,230,255,0) 94%)', borderRadius: '46% 46% 40% 40%', filter: 'drop-shadow(0 0 9px rgba(65,230,255,.95))' }} />
+                <div className="absolute left-1/2 -translate-x-1/2" style={{ bottom: '-3%', width: '34%', height: '10%', background: 'linear-gradient(180deg, #cfd8e2, #57606b)', borderRadius: 2 }} />
+              </div>
+            )}
+
+            {/* 头部火神炮 muzzle flash（战斗姿态） */}
+            {combatPose && booted && [43, 57].map((mx) => (
+              <div key={`muzzle-${mx}`} className="absolute pointer-events-none rounded-full" style={{
+                left: `${mx}%`, top: '9%', width: '2.8%', aspectRatio: '1.5',
+                background: 'radial-gradient(circle, #fff9e0 0%, #ffd76a 32%, rgba(255,176,64,.5) 58%, transparent 76%)',
+                filter: 'blur(.8px)',
+                animation: 'mecha-muzzle 1.9s linear infinite',
+                zIndex: 33,
+              }} />
+            ))}
+
+            {/* 军刀地面反射光斑（与挥砍同步） */}
+            {combatPose && booted && (
+              <div className="absolute pointer-events-none" style={{
+                left: '50%', top: '84%', width: '44%', height: '7%',
+                background: 'radial-gradient(50% 50% at 50% 50%, rgba(65,230,255,.3), transparent 72%)',
+                filter: 'blur(4px)', mixBlendMode: 'screen',
+                animation: 'mecha-groundglow 2.6s cubic-bezier(.45,0,.2,1) infinite',
+              }} />
+            )}
+
+            {/* 顶部摇摆吊灯（screen 打亮装甲，随相机运镜） */}
+            <div className="absolute pointer-events-none" style={{
+              inset: '-12% -34%',
+              transformOrigin: '50% 0%',
+              background: 'radial-gradient(52% 46% at 50% -4%, rgba(190,240,255,.17), rgba(65,180,255,.05) 46%, transparent 70%)',
+              mixBlendMode: 'screen',
+              animation: 'mecha-hangar 11s ease-in-out infinite',
+            }} />
           </div>
           </div>
         </div>
@@ -675,6 +743,21 @@ export default function MechaDisassembly() {
         <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.35em] text-white/28 pointer-events-none whitespace-nowrap">
           SCROLL: SCAN → DISASSEMBLE → INNER FRAME → COMBAT READY · CLICK PART TO FOCUS
         </div>
+
+        {/* ═══ CRT 后期处理：暗角 + 扫描线 + 战斗色差 ═══ */}
+        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 5 }}>
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 50% 48%, transparent 55%, rgba(2,4,12,.5) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0 1px, transparent 1px 3px)', opacity: .5 }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(255,64,64,.08), transparent 13%, transparent 87%, rgba(64,170,255,.08))', opacity: combatPose ? 1 : 0, transition: 'opacity .5s ease', mixBlendMode: 'screen' }} />
+        </div>
+
+        {/* ═══ 组装冲击：白闪 + 地面冲击波（边沿触发，1s 自清理） ═══ */}
+        {impact > 0 && (
+          <>
+            <div key={`flash-${impact}`} className="absolute inset-0 pointer-events-none" style={{ background: '#dff6ff', mixBlendMode: 'screen', zIndex: 6, animation: 'mecha-impactflash .5s ease-out forwards' }} />
+            <div key={`wave-${impact}`} className="absolute left-1/2 pointer-events-none" style={{ top: '78%', width: '26vmin', height: '26vmin', borderRadius: '50%', border: '2px solid rgba(125,243,255,.85)', boxShadow: '0 0 26px rgba(65,230,255,.55)', zIndex: 6, animation: 'mecha-shockwave .9s cubic-bezier(.17,.84,.44,1) forwards' }} />
+          </>
+        )}
       </div>
       <div style={{ height: '600vh' }} />
     </div>
