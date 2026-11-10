@@ -321,26 +321,28 @@ function ThreePlanets() {
    SHOWCASE PAGE — Selector + 4 effects
    ═══════════════════════════════════════════════════════════════ */
 const SHOWCASES = [
-  { id: 'nebula', label: 'Nebula Core', desc: 'Four-arm galaxy', icon: '✦' },
-  { id: 'fireworks', label: 'Text Fireworks', desc: 'Type → explode → return', icon: '✦' },
-  { id: 'mecha', label: 'Mecha Breakdown', desc: 'Mechanical disassembly', icon: '⚙' },
-  { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐' },
-  { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕' },
-  { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨' },
+  /* Three.js 项目统一归入 THREE.JS 分组（含 three.js WebGPU 渲染器项目） */
+  { id: 'nebula', label: 'Nebula Core', desc: 'Four-arm galaxy', icon: '✦', group: 'THREE.JS' },
+  { id: 'ssf-fog', label: 'SSF Screen-Space Fog', desc: 'Forest road · height fog · sun scattering', icon: '🌫', group: 'THREE.JS' },
+  { id: 'fireworks', label: 'Text Fireworks', desc: 'Type → explode → return', icon: '✦', group: 'THREE.JS' },
+  { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐', group: 'THREE.JS' },
+  { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕', group: 'THREE.JS' },
+  { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨', group: 'THREE.JS' },
+  { id: 'kage', label: 'Kage', desc: 'MengTo single-file scroll 3D night Kyoto', icon: '⛩', group: 'THREE.JS' },
+  { id: 'building', label: 'HK Building Gen', desc: 'Procedural Hong Kong buildings (achrefelouafi)', icon: '🏙', group: 'THREE.JS' },
+  { id: 'snow', label: 'Snowy Footprints', desc: 'Snow terrain + falling snow', icon: '❄️', group: 'THREE.JS' },
+  { id: 'water', label: 'Cinematic Water', desc: 'Beach water body + dive-under', icon: '🌊', group: 'THREE.JS' },
+  { id: 'ocean', label: 'FFT Ocean', desc: 'JONSWAP spectrum + FFT ocean', icon: '🌊', group: 'THREE.JS' },
+  { id: 'grass', label: 'Soil Studio', desc: 'Moss grass wind + ground sculpt', icon: '🌿', group: 'THREE.JS' },
+  { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱', group: 'THREE.JS' },
+  { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎', group: 'THREE.JS' },
+  { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈', group: 'THREE.JS' },
+  { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹', group: 'THREE.JS' },
+  { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝', group: 'THREE.JS' },
   { id: 'pixijs', label: 'PixiJS Playground', desc: '2D WebGL rendering engine', icon: '🎨' },
-  { id: 'kage', label: 'Kage', desc: 'MengTo single-file scroll 3D night Kyoto', icon: '⛩' },
+  { id: 'mecha', label: 'Mecha Breakdown', desc: 'Mechanical disassembly', icon: '⚙' },
   { id: 'abyss', label: 'Abyssal Descent', desc: 'Scroll-driven 3D deep-sea descent', icon: '🌊' },
-  { id: 'building', label: 'HK Building Gen', desc: 'Procedural Hong Kong buildings (achrefelouafi)', icon: '🏙' },
-  { id: 'snow', label: 'Snowy Footprints', desc: 'Snow terrain + falling snow', icon: '❄️' },
-  { id: 'water', label: 'Cinematic Water', desc: 'Beach water body + dive-under', icon: '🌊' },
-  { id: 'ocean', label: 'FFT Ocean', desc: 'JONSWAP spectrum + FFT ocean', icon: '🌊' },
-  { id: 'grass', label: 'Soil Studio', desc: 'Moss grass wind + ground sculpt', icon: '🌿' },
-  { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱' },
-  { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎' },
-  { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈' },
-  { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝' },
   { id: 'phoenix', label: 'Chinese Phoenix Crown', desc: 'Seven crowns with physics text curtains', icon: '👑' },
-  { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹' },
   { id: 'ascii-rest', label: 'ASCII.Art', desc: '240 animated pieces · 15 categories · one tag', icon: '🅰', group: 'ASCII' },
   { id: 'ascii-magic', label: 'ASCII Magic', desc: '734 hand-built pieces · 24 categories · 11 looks', icon: '✦', group: 'ASCII' },
   { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈', group: 'ASCII' },
@@ -432,6 +434,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
       {/* Active showcase */}
       <div className={`transition-opacity duration-200 ${transitioning ? 'opacity-0' : 'opacity-100'}`}>
         {activeId === 'nebula' && <NebulaGalaxyShowcase />}
+        {activeId === 'ssf-fog' && <IframeShowcase src="/showcases/ssf-fog/" title="屏幕空间雾 — Screen Space Fog" />}
         {activeId === 'fireworks' && <TextFireworksShowcase />}
         {activeId === 'mecha' && <MechaDisassembly />}
         {activeId === 'planets' && <ThreePlanets />}
