@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星落镇 Starfall — 会呼吸的小镇沙盘</title>
+<style>
+  :root{
+    --panel: rgba(10, 14, 24, .74);
+    --line: rgba(255,255,255,.14);
+    --ink: #eef2f8;
+    --dim: #9aa6b8;
+    --accent: #ffd27a;
+  }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{ margin:0; height:100%; overflow:hidden; background:#0b1026;
+    font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; color:var(--ink); }
+  canvas{ display:block; }
+
+  /* ── 左上角：镇牌 + 时钟 ── */
+  .hud-top{ position:fixed; top:22px; left:24px; z-index:10; display:flex; align-items:center;
+    gap:16px; padding:14px 20px; background:var(--panel); border:1px solid var(--line);
+    border-radius:16px; backdrop-filter:blur(10px); }
+  .town .zh{ font-size:26px; font-weight:800; letter-spacing:6px; }
+  .town .en{ font-size:10px; letter-spacing:5px; color:var(--dim); margin-top:3px; }
+  .clockbox{ border-left:1px solid var(--line); padding-left:16px; }
+  #clock{ font:600 26px/1 ui-monospace,Consolas,monospace; color:var(--accent); min-width:78px; }
+  #seasonLabel{ font-size:12px; color:var(--dim); margin-top:4px; }
+
+  /* ── 底部控制条 ── */
+  .hud-bar{ position:fixed; left:50%; bottom:22px; transform:translateX(-50%); z-index:10;
+    display:flex; align-items:center; gap:8px; padding:10px 14px;
+    background:var(--panel); border:1px solid var(--line); border-radius:16px;
+    backdrop-filter:blur(10px); white-space:nowrap; }
+  .btn{ appearance:none; border:1px solid var(--line); background:rgba(255,255,255,.05);
+    color:var(--ink); font:600 13px/1 inherit; padding:9px 13px; border-radius:10px;
+    cursor:pointer; transition:all .18s; font-family:inherit; }
+  .btn:hover{ background:rgba(255,255,255,.12); }
+  .btn.on{ background:var(--accent); color:#241a06; border-color:var(--accent); }
+  .btn .ico{ font-size:14px; }
+  .sep{ width:1px; height:20px; background:var(--line); margin:0 4px; }
+  .btn.fw{ border-color:rgba(255,120,120,.5); }
+
+  /* ── 建筑点击标签 ── */
+  .blabel{ position:fixed; z-index:20; pointer-events:none; opacity:0; transform:translate(-50%,-130%);
+    padding:7px 12px; background:rgba(12,16,28,.88); border:1px solid var(--accent);
+    border-radius:10px; font-size:13px; font-weight:600; color:var(--accent);
+    transition:opacity .25s; white-space:nowrap; }
+  .blabel.show{ opacity:1; }
+
+  .hint{ position:fixed; right:24px; bottom:26px; z-index:9; font-size:11px; color:var(--dim);
+    letter-spacing:1px; }
+
+  @media (max-width:720px){
+    .hud-top{ top:12px; left:12px; padding:10px 14px; gap:10px; }
+    .town .zh{ font-size:20px; letter-spacing:4px; }
+    #clock{ font-size:20px; }
+    .hud-bar{ bottom:12px; gap:5px; padding:8px 10px; max-width:calc(100vw - 20px); overflow-x:auto; }
+    .btn{ padding:8px 10px; font-size:12px; }
+    .hint{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="label" class="blabel"></div>
+
+<header class="hud-top">
+  <div class="town">
+    <div class="zh">星落镇</div>
+    <div class="en">S T A R F A L L</div>
+  </div>
+  <div class="clockbox">
+    <div id="clock">10:00</div>
+    <div id="seasonLabel">夏 · Summer</div>
+  </div>
+</header>
+
+<nav class="hud-bar">
+  <button id="btnTime" class="btn on" title="播放 / 暂停时间"><span class="ico">⏸</span> 时间</button>
+  <button id="btnSpeed" class="btn" title="时间流速">60×</button>
+  <span class="sep"></span>
+  <button class="btn sbtn" data-season="spring">春</button>
+  <button class="btn sbtn" data-season="summer">夏</button>
+  <button class="btn sbtn" data-season="autumn">秋</button>
+  <button class="btn sbtn" data-season="winter">冬</button>
+  <span class="sep"></span>
+  <button id="btnTour" class="btn on" title="自动巡游开关"><span class="ico">🛰</span> 巡游</button>
+  <button id="btnFw" class="btn fw" title="放一朵花火"><span class="ico">🎆</span> 花火</button>
+</nav>
+
+<div class="hint">拖拽旋转 · 滚轮缩放 · 点击建筑看名字</div>
+
+<!-- Three.js r185 + addons via ES module import map -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.185.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.185.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+
+/* ════════════════════════════════════════════════
+   星落镇 Starfall — 会呼吸的小镇沙盘
+   方法论（源自「榆溪村」一文）：
+   · 一套坐标服务三件事：建筑摆放 / 村民巡游路径 / 点击标注
+   · 单时钟（minute ∈ [0,1440)）带动太阳、天空、灯光、村民
+   · 季节用权重插值（seasonBlend），一切颜色向目标季渐变
+   ════════════════════════════════════════════════ */
+
+const DAY = 1440
+const state = {
+  minute: 600,                      // 单时钟：10:00 开场
+  playing: true,
+  speed: 60,                        // 1 真实秒 = speed 游戏分钟
+  season: 'summer',                 // 目标季节
+  blend: { spring: 0, summer: 1, autumn: 0, winter: 0 }, // 当前渲染权重
+  touring: true,                    // 自动巡游
+}
+const SEASON_KEYS = ['spring', 'summer', 'autumn', 'winter']
+
+/* ── 四季调色板 ── */
+const SEASONS = {
+  spring: { zh: '春', en: 'Spring', ground: '#79b45e', leaf: '#8fd06a', leafAlt: '#f0b9cc', snow: 0 },
+  summer: { zh: '夏', en: 'Summer', ground: '#57a04a', leaf: '#3c7c33', leafAlt: '#4f9944', snow: 0 },
+  autumn: { zh: '秋', en: 'Autumn', ground: '#b08d4f', leaf: '#d9822b', leafAlt: '#c05236', snow: 0 },
+  winter: { zh: '冬', en: 'Winter', ground: '#e9eef3', leaf: '#9aa2ab', leafAlt: '#dee3e9', snow: 1 },
+}
+
+/* ── 天空色关键帧 [分钟, 颜色]：夜→晨→午→暮→夜 ── */
+const SKY_STOPS = [
+  [0, '#0b1026'], [300, '#0b1026'], [375, '#b46a92'], [430, '#f0a878'],
+  [520, '#a8c8e8'], [780, '#9fd2f2'], [1050, '#f2b06a'], [1120, '#8a5a9a'],
+  [1200, '#141838'], [1440, '#0b1026'],
+]
+const _sc0 = new THREE.Color(), _sc1 = new THREE.Color()
+function skyColorAt(m) {
+  for (let i = 0; i < SKY_STOPS.length - 1; i++) {
+    const [m0, h0] = SKY_STOPS[i], [m1, h1] = SKY_STOPS[i + 1]
+    if (m >= m0 && m <= m1) {
+      return _sc0.set(h0).lerp(_sc1.set(h1), (m - m0) / (m1 - m0))
+    }
+  }
+  return _sc0.set(SKY_STOPS[0][1])
+}
+
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x))
+const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t) }
+
+/* ── 季节混色：所有颜色都从权重混合而来，过渡自然 ── */
+const _mix = new THREE.Color(), _tmp = new THREE.Color()
+function seasonMix(key) {
+  _mix.setRGB(0, 0, 0)
+  for (const s of SEASON_KEYS) {
+    const w = state.blend[s]
+    if (w <= 0.001) continue
+    _tmp.set(SEASONS[s][key])
+    _mix.r += _tmp.r * w; _mix.g += _tmp.g * w; _mix.b += _tmp.b * w
+  }
+  return _mix
+}
+function snowWeight() { return state.blend.winter }
+
+/* ── 太阳高度：6:00 升起，12:00 最高，18:00 落山 ── */
+function sunHeightAt(m) { return Math.sin((m - 360) / DAY * Math.PI * 2) }
+
+/* ── DOM ── */
+const $ = id => document.getElementById(id)
+const elClock = $('clock'), elSeason = $('seasonLabel'), elLabel = $('label')
+function fmtClock(m) {
+  const h = Math.floor(m / 60) % 24, mm = Math.floor(m % 60)
+  return `${String(h).padStart(2, '0')}:${String(mm).padStart(2, '0')}`
+}
+
+/* ════════════════════════════════════════════════
+   2. 场景 / 正交沙盘相机 / 光照
+   ════════════════════════════════════════════════ */
+const scene = new THREE.Scene()
+scene.fog = new THREE.Fog(0x9fd2f2, 70, 160)
+
+let VIEW = 30
+const aspect0 = window.innerWidth / window.innerHeight
+const camera = new THREE.OrthographicCamera(
+  -VIEW * aspect0, VIEW * aspect0, VIEW, -VIEW, 0.1, 400)
+camera.position.set(36, 28, 36)
+camera.lookAt(0, 0, 0)
+
+const renderer = new THREE.WebGLRenderer({ antialias: true })
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
+renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.shadowMap.enabled = true
+renderer.shadowMap.type = THREE.PCFSoftShadowMap
+document.body.appendChild(renderer.domElement)
+
+const controls = new OrbitControls(camera, renderer.domElement)
+controls.enableDamping = true
+controls.dampingFactor = 0.08
+controls.maxPolarAngle = Math.PI * 0.46
+controls.minZoom = 0.4
+controls.maxZoom = 3.5
+controls.enabled = false // 巡游模式下先禁用手动控制
+
+/* ── 灯光：太阳（投影）+ 月光 + 半球环境光 ── */
+const hemi = new THREE.HemisphereLight(0xbfd8f0, 0x5a5040, 0.55)
+scene.add(hemi)
+
+const sun = new THREE.DirectionalLight(0xfff0d0, 1.5)
+sun.castShadow = true
+sun.shadow.mapSize.set(2048, 2048)
+sun.shadow.camera.left = -40; sun.shadow.camera.right = 40
+sun.shadow.camera.top = 40; sun.shadow.camera.bottom = -40
+sun.shadow.camera.near = 1; sun.shadow.camera.far = 200
+sun.shadow.bias = -0.0005
+scene.add(sun)
+
+const moon = new THREE.DirectionalLight(0x8899cc, 0.0)
+moon.position.set(-30, 45, -25)
+scene.add(moon)
+
+/* ── 太阳/月亮圆盘（跟着时钟走） ── */
+const sunDisc = new THREE.Mesh(
+  new THREE.SphereGeometry(2.2, 16, 12),
+  new THREE.MeshBasicMaterial({ color: 0xffdf8a, fog: false }))
+const moonDisc = new THREE.Mesh(
+  new THREE.SphereGeometry(1.7, 16, 12),
+  new THREE.MeshBasicMaterial({ color: 0xdfe6f2, fog: false }))
+scene.add(sunDisc, moonDisc)
+
+/* ── 夜空星星（夜晚淡入） ── */
+const starGeo = new THREE.BufferGeometry()
+{
+  const N = 420, arr = new Float32Array(N * 3)
+  for (let i = 0; i < N; i++) {
+    const th = Math.random() * Math.PI * 2, ph = Math.random() * Math.PI * 0.48
+    const r = 130
+    arr[i * 3] = Math.cos(th) * Math.sin(ph + 0.05) * r
+    arr[i * 3 + 1] = Math.cos(ph) * r * 0.9 + 15
+    arr[i * 3 + 2] = Math.sin(th) * Math.sin(ph + 0.05) * r
+  }
+  starGeo.setAttribute('position', new THREE.BufferAttribute(arr, 3))
+}
+const starMat = new THREE.PointsMaterial({
+  color: 0xcfe0ff, size: 0.9, transparent: true, opacity: 0, fog: false, sizeAttenuation: true })
+scene.add(new THREE.Points(starGeo, starMat))
+
+/* ════════════════════════════════════════════════
+   3. 地形：岛 + 弯河 + 两岸 + 石桥
+   （空间叙事先行：先定河与桥的构图，建筑围绕它们摆放）
+   ════════════════════════════════════════════════ */
+const groundTopMat = new THREE.MeshStandardMaterial({ color: 0x57a04a, roughness: 0.9 })
+const groundSideMat = new THREE.MeshStandardMaterial({ color: 0x6e5540, roughness: 0.95 })
+const island = new THREE.Mesh(new THREE.CylinderGeometry(30, 34, 2.6, 56), [
+  groundSideMat, groundTopMat, groundSideMat])
+island.position.y = -1.3
+island.receiveShadow = true
+scene.add(island)
+
+/* 底座外的「海」：大圆盘水色 */
+const seaMat = new THREE.MeshStandardMaterial({ color: 0x2e5f8a, roughness: 0.35, metalness: 0.1 })
+const sea = new THREE.Mesh(new THREE.CircleGeometry(160, 48), seaMat)
+sea.rotation.x = -Math.PI / 2
+sea.position.y = -2.6
+scene.add(sea)
+
+/* ── 弯河曲线：从西向东蛇形穿过全岛 ── */
+const riverCurve = new THREE.CatmullRomCurve3([
+  new THREE.Vector3(-34, 0, 8), new THREE.Vector3(-20, 0, 4), new THREE.Vector3(-8, 0, 6),
+  new THREE.Vector3(2, 0, 1), new THREE.Vector3(10, 0, -4), new THREE.Vector3(20, 0, -7),
+  new THREE.Vector3(34, 0, -5),
+])
+
+/* 沿曲线生成条带网格（河岸 / 水面共用） */
+function ribbonMesh(curve, width, y, material) {
+  const N = 90, pos = new Float32Array((N + 1) * 2 * 3), idx = []
+  const up = new THREE.Vector3(0, 1, 0)
+  for (let i = 0; i <= N; i++) {
+    const t = i / N
+    const p = curve.getPointAt(t)
+    const tan = curve.getTangentAt(t)
+    const nor = new THREE.Vector3().crossVectors(tan, up).normalize()
+    const a = p.clone().addScaledVector(nor, width / 2)
+    const b = p.clone().addScaledVector(nor, -width / 2)
+    pos[i * 6] = a.x; pos[i * 6 + 1] = y; pos[i * 6 + 2] = a.z
+    pos[i * 6 + 3] = b.x; pos[i * 6 + 4] = y; pos[i * 6 + 5] = b.z
+    if (i < N) {
+      const o = i * 2
+      idx.push(o, o + 2, o + 1, o + 1, o + 2, o + 3)
+    }
+  }
+  const g = new THREE.BufferGeometry()
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3))
+  g.setIndex(idx)
+  g.computeVertexNormals()
+  return new THREE.Mesh(g, material)
+}
+
+const bankMat = new THREE.MeshStandardMaterial({ color: 0xc9b284, roughness: 0.95 })
+const riverBank = ribbonMesh(riverCurve, 3.4, 0.06, bankMat)
+scene.add(riverBank)
+
+const waterMat = new THREE.MeshStandardMaterial({
+  color: 0x4f9fd8, roughness: 0.15, metalness: 0.15, transparent: true, opacity: 0.92 })
+const riverWater = ribbonMesh(riverCurve, 2.3, 0.14, waterMat)
+scene.add(riverWater)
+
+/* ── 石桥 ×2：河流在 x≈-8（z≈6）与 x≈10（z≈-4）两处 ── */
+const stoneMat = new THREE.MeshStandardMaterial({ color: 0x9aa0a6, roughness: 0.85 })
+function makeBridge(x, z) {
+  const g = new THREE.Group()
+  // 三段折起的桥面，做出拱形
+  const segs = [
+    { z: -2.6, rot: 0.18 }, { z: 0, rot: 0 }, { z: 2.6, rot: -0.18 },
+  ]
+  segs.forEach((s, i) => {
+    const deck = new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.22, 2.8), stoneMat)
+    deck.position.set(0, 0.42 + (i === 1 ? 0.28 : 0), s.z)
+    deck.rotation.x = s.rot
+    deck.castShadow = deck.receiveShadow = true
+    g.add(deck)
+  })
+  // 栏杆
+  for (const side of [-1, 1]) {
+    for (const pz of [-2.6, 0, 2.6]) {
+      const post = new THREE.Mesh(new THREE.BoxGeometry(0.14, 0.55, 0.14), stoneMat)
+      post.position.set(side * 0.86, 0.85 + (Math.abs(pz) < 0.1 ? 0.28 : 0), pz)
+      post.castShadow = true
+      g.add(post)
+    }
+    const rail = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.1, 5.6), stoneMat)
+    rail.position.set(side * 0.86, 1.12, 0)
+    g.add(rail)
+  }
+  g.position.set(x, 0, z)
+  return g
+}
+scene.add(makeBridge(-8, 6))
+scene.add(makeBridge(10, -4))
+
+/* ════════════════════════════════════════════════
+   4. 建筑：坡顶小屋工厂 + 全村布局
+   （一套坐标：HOUSES 同时决定摆房、村民归属、点击标注）
+   ════════════════════════════════════════════════ */
+const windowMat = new THREE.MeshStandardMaterial({
+  color: 0x2a2320, emissive: 0xffb84d, emissiveIntensity: 0, roughness: 0.4 })
+const doorMat = new THREE.MeshStandardMaterial({ color: 0x5a3d28, roughness: 0.8 })
+const trunkMat = new THREE.MeshStandardMaterial({ color: 0x6e4f34, roughness: 0.95 })
+
+/* 三棱柱坡顶（低多边形，双面渲染省去绕序烦恼） */
+function roofGeometry(w, d, h) {
+  const hw = w / 2, hd = d / 2
+  const v = new Float32Array([
+    -hw, 0, -hd, hw, 0, -hd, hw, 0, hd, -hw, 0, hd, 0, h, -hd, 0, h, hd,
+  ])
+  const idx = [
+    0, 1, 4, 0, 4, 5, 0, 5, 3,   // 左坡
+    1, 2, 5, 1, 5, 4,            // 右坡
+    0, 1, 4,                      // 前山墙
+    2, 3, 5,                      // 后山墙
+  ]
+  const g = new THREE.BufferGeometry()
+  g.setAttribute('position', new THREE.BufferAttribute(v, 3))
+  g.setIndex(idx)
+  g.computeVertexNormals()
+  return g
+}
+
+const chimneys = []   // 炊烟发射点
+const roofMats = []   // 需要随季节压雪色的屋顶材质
+const clickables = [] // 可点击的建筑主体（带名字）
+
+function makeHouse(cfg) {
+  const { name, x, z, rot = 0, w = 2.4, d = 2.0, h = 1.6, body = '#e8dcc8', roof = '#b3563e', chimney = true } = cfg
+  const g = new THREE.Group()
+
+  const bodyMesh = new THREE.Mesh(
+    new THREE.BoxGeometry(w, h, d),
+    new THREE.MeshStandardMaterial({ color: body, roughness: 0.85 }))
+  bodyMesh.position.y = h / 2
+  bodyMesh.castShadow = bodyMesh.receiveShadow = true
+  bodyMesh.userData.label = name
+  g.add(bodyMesh)
+  clickables.push(bodyMesh)
+
+  const roofMat = new THREE.MeshStandardMaterial({
+    color: roof, roughness: 0.8, side: THREE.DoubleSide })
+  roofMats.push(roofMat)
+  const roofMesh = new THREE.Mesh(roofGeometry(w * 1.18, d * 1.18, h * 0.62), roofMat)
+  roofMesh.position.y = h
+  roofMesh.castShadow = true
+  g.add(roofMesh)
+
+  // 门（朝向 +z 面）
+  const door = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.85, 0.08), doorMat)
+  door.position.set(0, 0.43, d / 2 + 0.03)
+  g.add(door)
+
+  // 窗 ×2（前墙两侧）+ 山墙 ×1
+  for (const wx of [-w / 2 + 0.42, w / 2 - 0.42]) {
+    const win = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.42, 0.07), windowMat)
+    win.position.set(wx, h * 0.62, d / 2 + 0.03)
+    g.add(win)
+  }
+  const win2 = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.42, 0.42), windowMat)
+  win2.position.set(w / 2 + 0.03, h * 0.62, 0)
+  g.add(win2)
+
+  if (chimney) {
+    const chim = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.8, 0.34),
+      new THREE.MeshStandardMaterial({ color: 0x8a8f96, roughness: 0.9 }))
+    chim.position.set(w * 0.26, h + h * 0.45, -d * 0.18)
+    chim.castShadow = true
+    g.add(chim)
+    // 炊烟发射点（转世界坐标在摆放后计算）
+    chimneys.push({ group: g, local: new THREE.Vector3(w * 0.26, h + h * 0.45 + 0.45, -d * 0.18) })
+  }
+
+  g.position.set(x, 0, z)
+  g.rotation.y = rot
+  scene.add(g)
+  return g
+}
+
+/* ── 全村布局：北岸主街 + 南岸市集 ── */
+const HOUSES = [
+  { name: '落星客栈', x: -15, z: 10, rot: 0.2, w: 3.4, d: 2.6, h: 2.0, body: '#f0e4cd', roof: '#a84b38' },
+  { name: '磨坊小屋', x: -9, z: 12, rot: -0.15, w: 2.2, d: 2.0, h: 1.5, body: '#e2d4b8', roof: '#8a6a4a' },
+  { name: '钟楼小屋', x: -3, z: 10, rot: 0.05, w: 2.0, d: 2.0, h: 1.7, body: '#ece0ca', roof: '#4a6b8a' },
+  { name: '织星坊', x: 3, z: 12.5, rot: -0.1, w: 2.6, d: 2.2, h: 1.6, body: '#f2dcd0', roof: '#b3563e' },
+  { name: '望河茶馆', x: 9, z: 11, rot: 0.3, w: 2.8, d: 2.2, h: 1.6, body: '#e8dcc8', roof: '#7a8a5a', chimney: true },
+  { name: '北岭农舍', x: 16, z: 13, rot: -0.25, w: 2.4, d: 2.0, h: 1.5, body: '#ddd0b0', roof: '#9a5a40' },
+  { name: '南岸民居', x: -14, z: -10, rot: -0.2, w: 2.4, d: 2.0, h: 1.5, body: '#e8dcc8', roof: '#b3563e' },
+  { name: '渔夫之家', x: -7, z: -12, rot: 0.1, w: 2.2, d: 1.9, h: 1.4, body: '#d8ccb2', roof: '#5a7a8a' },
+  { name: '花匠小屋', x: 0, z: -9.5, rot: -0.05, w: 2.2, d: 2.0, h: 1.5, body: '#f0e0d0', roof: '#c07850' },
+  { name: '铁匠铺', x: 6, z: -12, rot: 0.15, w: 2.6, d: 2.2, h: 1.6, body: '#c8b8a0', roof: '#6a4a3a' },
+  { name: '星尘杂货', x: 13, z: -10, rot: -0.3, w: 2.4, d: 2.0, h: 1.5, body: '#ece0ca', roof: '#4a6b8a' },
+  { name: '牧人农舍', x: 20, z: -13, rot: 0.2, w: 2.6, d: 2.2, h: 1.6, body: '#e2d4b8', roof: '#9a5a40' },
+]
+HOUSES.forEach(makeHouse)
+
+/* ════════════════════════════════════════════════
+   5. 植被与道具：树 / 石块 / 路灯 / 夜市摊位
+   ════════════════════════════════════════════════ */
+const leafMats = []    // 主树冠材质（季节主色）
+const leafAltMats = [] // 副树冠材质（季节点缀色）
+
+function makeTree(x, z, s = 1, pine = false, alt = false) {
+  const g = new THREE.Group()
+  const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.14, 0.7, 6), trunkMat)
+  trunk.position.y = 0.35
+  trunk.castShadow = true
+  g.add(trunk)
+
+  const leafMat = new THREE.MeshStandardMaterial({ color: 0x3c7c33, roughness: 0.85, flatShading: true })
+  ;(alt ? leafAltMats : leafMats).push(leafMat)
+
+  if (pine) {
+    // 松树：两层圆锥
+    const c1 = new THREE.Mesh(new THREE.ConeGeometry(0.62 * s, 1.0 * s, 7), leafMat)
+    c1.position.y = 1.0 * s; c1.castShadow = true
+    const c2 = new THREE.Mesh(new THREE.ConeGeometry(0.45 * s, 0.8 * s, 7), leafMat)
+    c2.position.y = 1.55 * s; c2.castShadow = true
+    g.add(c1, c2)
+  } else {
+    // 阔叶树：两颗二十面体团
+    const b1 = new THREE.Mesh(new THREE.IcosahedronGeometry(0.62 * s, 0), leafMat)
+    b1.position.y = 1.0 * s; b1.castShadow = true
+    const b2 = new THREE.Mesh(new THREE.IcosahedronGeometry(0.42 * s, 0), leafMat)
+    b2.position.set(0.3 * s, 1.4 * s, 0.15 * s); b2.castShadow = true
+    g.add(b1, b2)
+  }
+  g.position.set(x, 0, z)
+  g.rotation.y = Math.random() * Math.PI * 2
+  scene.add(g)
+}
+
+/* 树位：河岸边与房子间隙（避开建筑与河） */
+[[-19, 6, 1.1, 1], [-12, 8, 0.9], [-5, 14, 1.2], [1, 8.5, 1.0, 1], [6.5, 14.5, 1.1],
+ [12, 8, 0.9, 1], [19, 10, 1.2], [-18, -6, 1.0], [-11, -7, 1.1, 1], [-3, -14, 1.2],
+ [3, -6.5, 0.9, 1], [9, -8, 1.0], [16, -7, 1.1, 1], [22, -8, 1.0], [-22, -2, 1.2, 1],
+ [24, 4, 1.0], [-24, 12, 1.1], [8, 16, 0.9]].forEach(t => makeTree(t[0], t[1], t[2], !!t[3], t[4] === 1));
+/* 再补一圈粉色点缀树（春樱感，alt 材质） */
+[[-16.5, 12.5, 0.9], [5.5, 9, 0.85], [-10, -9, 0.9], [17, -12, 0.85]].forEach(t => makeTree(t[0], t[1], t[2], false, true));
+
+/* 石块 */
+const rockMat = new THREE.MeshStandardMaterial({ color: 0x8d9298, roughness: 0.95, flatShading: true });
+[[-6, 3.5, 0.5], [4.5, -1.5, 0.4], [13, -5.5, 0.55], [-14, 2, 0.45], [22, -4, 0.5]].forEach(([x, z, s]) => {
+  const rock = new THREE.Mesh(new THREE.DodecahedronGeometry(s, 0), rockMat)
+  rock.position.set(x, s * 0.4, z)
+  rock.rotation.set(Math.random(), Math.random(), Math.random())
+  rock.castShadow = rock.receiveShadow = true
+  scene.add(rock)
+})
+
+/* ── 路灯 ×4（夜晚点亮） ── */
+const lampHeadMat = new THREE.MeshStandardMaterial({
+  color: 0x3a3a3a, emissive: 0xffd9a0, emissiveIntensity: 0 })
+const lampLights = [];
+[[-10, 7.8], [2, 4.2], [7, -7], [-4, -7.5]].forEach(([x, z]) => {
+  const g = new THREE.Group()
+  const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.07, 1.7, 6),
+    new THREE.MeshStandardMaterial({ color: 0x33383e, roughness: 0.6, metalness: 0.4 }))
+  pole.position.y = 0.85; pole.castShadow = true
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.14, 10, 8), lampHeadMat)
+  head.position.y = 1.75
+  const light = new THREE.PointLight(0xffc880, 0, 9, 1.8)
+  light.position.y = 1.75
+  g.add(pole, head, light)
+  g.position.set(x, 0, z)
+  scene.add(g)
+  lampLights.push(light)
+})
+
+/* ── 夜市摊位 ×3（南岸广场，夜幕降临亮灯串） ── */
+const stringLightMat = new THREE.MeshStandardMaterial({
+  color: 0x552222, emissive: 0xff9a5a, emissiveIntensity: 0 })
+const stallLights = []
+const STALL_COLORS = ['#c0523a', '#4a7a8a', '#8a6aa0']
+function makeStall(x, z, color) {
+  const g = new THREE.Group()
+  const counter = new THREE.Mesh(new THREE.BoxGeometry(1.7, 0.5, 0.9),
+    new THREE.MeshStandardMaterial({ color: 0x8a6a4a, roughness: 0.85 }))
+  counter.position.y = 0.25; counter.castShadow = counter.receiveShadow = true
+  // 摊篷
+  const canopy = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.1, 1.2),
+    new THREE.MeshStandardMaterial({ color, roughness: 0.8 }))
+  canopy.position.y = 1.5; canopy.rotation.x = 0.08; canopy.castShadow = true
+  // 支柱 ×2
+  for (const px of [-0.8, 0.8]) {
+    const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.5, 6), trunkMat)
+    pole.position.set(px, 0.75, -0.45)
+    g.add(pole)
+  }
+  // 灯串：5 颗小灯沿前檐
+  for (let i = 0; i < 5; i++) {
+    const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.05, 6, 5), stringLightMat)
+    const bx = -0.75 + i * 0.375
+    bulb.position.set(bx, 1.4 - Math.sin(i / 4 * Math.PI) * 0.12, 0.52)
+    g.add(bulb)
+  }
+  const light = new THREE.PointLight(0xff9a5a, 0, 6, 1.8)
+  light.position.set(0, 1.3, 0.3)
+  g.add(counter, canopy, light)
+  g.position.set(x, 0, z)
+  g.rotation.y = (Math.random() - 0.5) * 0.3
+  scene.add(g)
+  stallLights.push(light)
+}
+makeStall(2, -9.5, STALL_COLORS[0])
+makeStall(5, -9.8, STALL_COLORS[1])
+makeStall(8, -9.4, STALL_COLORS[2])
+
+/* ════════════════════════════════════════════════
+   6. 村民：白天沿路径巡游，入夜归家消失
+   ════════════════════════════════════════════════ */
+const VILLAGER_COLORS = [0xd06a5a, 0x5a8ad0, 0xd0a85a, 0x7ab06a, 0xb08ad0, 0xd08aa0]
+const VILLAGER_PATHS = [
+  { path: [[-14, -7.5], [16, -7]], home: [-14, -8.5] },        // 南岸主街
+  { path: [[-16, 8], [14, 9.5]], home: [-16, 9] },             // 北岸主街
+  { path: [[-8, 11], [-8, 2], [-8, -8]], home: [-8, 10] },     // 过西桥
+  { path: [[10, -11], [10, 3], [10, 10]], home: [10, -11] },   // 过东桥
+  { path: [[-2, -8], [6, -8], [6, -13], [-2, -13]], home: [0, -8] }, // 市集广场
+]
+const villagers = []
+VILLAGER_PATHS.forEach((vp, i) => {
+  const g = new THREE.Group()
+  const mat = new THREE.MeshStandardMaterial({
+    color: VILLAGER_COLORS[i % VILLAGER_COLORS.length], roughness: 0.7 })
+  const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.16, 0.34, 4, 8), mat)
+  body.position.y = 0.36; body.castShadow = true
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.13, 8, 8),
+    new THREE.MeshStandardMaterial({ color: 0xf0c8a0, roughness: 0.7 }))
+  head.position.y = 0.78
+  g.add(body, head)
+  g.position.set(vp.path[0][0], 0, vp.path[0][1])
+  scene.add(g)
+  villagers.push({
+    g, mat, path: vp.path.map(p => new THREE.Vector3(p[0], 0, p[1])),
+    home: new THREE.Vector3(vp.home[0], 0, vp.home[1]),
+    seg: 0, t: Math.random(), speed: 0.55 + Math.random() * 0.25,
+    state: 'wander',
+  })
+})
+
+function updateVillagers(dt, isNight) {
+  for (const v of villagers) {
+    if (isNight) {
+      if (v.state === 'wander') v.state = 'goingHome'
+    } else if (v.state === 'home') {
+      // 天亮：从家门口重新出发
+      v.state = 'wander'; v.g.visible = true
+      v.g.position.copy(v.home)
+      v.seg = 0; v.t = 0
+    }
+    if (v.state === 'goingHome') {
+      const d = v.home.clone().sub(v.g.position)
+      const dist = d.length()
+      if (dist < 0.15) { v.state = 'home'; v.g.visible = false; continue }
+      d.normalize()
+      v.g.position.addScaledVector(d, Math.min(v.speed * 1.4 * dt, dist))
+      v.g.rotation.y = Math.atan2(d.x, d.z)
+    } else if (v.state === 'wander') {
+      const a = v.path[v.seg], b = v.path[(v.seg + 1) % v.path.length]
+      const segLen = a.distanceTo(b)
+      v.t += (v.speed * dt) / segLen
+      if (v.t >= 1) { v.t = 0; v.seg = (v.seg + 1) % v.path.length }
+      const p = a.clone().lerp(b, v.t)
+      v.g.rotation.y = Math.atan2(b.x - a.x, b.z - a.z)
+      // 走路轻微起伏
+      v.g.position.set(p.x, Math.abs(Math.sin(v.t * Math.PI * 4)) * 0.04, p.z)
+    }
+  }
+}
+
+/* ════════════════════════════════════════════════
+   7. 炊烟：共享粒子缓冲（上升 + 扩散 + 淡出）
+   ════════════════════════════════════════════════ */
+const SMOKE_N = 220
+const smokeGeo = new THREE.BufferGeometry()
+const smokePos = new Float32Array(SMOKE_N * 3)
+const smokeAlpha = new Float32Array(SMOKE_N)
+const smokeSize = new Float32Array(SMOKE_N)
+smokeGeo.setAttribute('position', new THREE.BufferAttribute(smokePos, 3))
+smokeGeo.setAttribute('aAlpha', new THREE.BufferAttribute(smokeAlpha, 1))
+smokeGeo.setAttribute('aSize', new THREE.BufferAttribute(smokeSize, 1))
+const smokeMat = new THREE.ShaderMaterial({
+  transparent: true, depthWrite: false,
+  vertexShader: `
+    attribute float aAlpha; attribute float aSize; varying float vA;
+    void main(){ vA = aAlpha;
+      vec4 mv = modelViewMatrix * vec4(position, 1.0);
+      gl_PointSize = aSize * (160.0 / -mv.z);
+      gl_Position = projectionMatrix * mv; }`,
+  fragmentShader: `
+    varying float vA;
+    void main(){ float d = length(gl_PointCoord - 0.5);
+      float a = smoothstep(0.5, 0.12, d) * vA;
+      gl_FragColor = vec4(0.93, 0.93, 0.95, a); }`,
+})
+const smokePoints = new THREE.Points(smokeGeo, smokeMat)
+smokePoints.frustumCulled = false
+scene.add(smokePoints)
+
+const smokeP = [] // {i, x,y,z, vx,vy,vz, life, max}
+let smokeCursor = 0
+const _v3 = new THREE.Vector3()
+function updateSmoke(dt, windX = 0.35) {
+  // 发射
+  for (const c of chimneys) {
+    if (Math.random() < dt * 1.5 && smokeP.length < SMOKE_N) {
+      _v3.copy(c.local).applyMatrix4(c.group.matrixWorld)
+      const i = smokeCursor; smokeCursor = (smokeCursor + 1) % SMOKE_N
+      smokeP.push({
+        i, x: _v3.x, y: _v3.y, z: _v3.z,
+        vx: 0.08 + Math.random() * 0.1, vy: 0.5 + Math.random() * 0.2, vz: (Math.random() - 0.5) * 0.08,
+        life: 0, max: 3.2 + Math.random() * 1.4,
+      })
+    }
+  }
+  // 更新
+  for (let k = smokeP.length - 1; k >= 0; k--) {
+    const p = smokeP[k]
+    p.life += dt
+    if (p.life >= p.max) { smokeP.splice(k, 1); continue }
+    p.x += (p.vx + windX) * dt; p.y += p.vy * dt; p.z += p.vz * dt
+    const t = p.life / p.max
+    smokePos[p.i * 3] = p.x; smokePos[p.i * 3 + 1] = p.y; smokePos[p.i * 3 + 2] = p.z
+    smokeAlpha[p.i] = 0.4 * (1 - t) * smooth(0, 0.15, t)
+    smokeSize[p.i] = 1.4 + t * 3.2
+  }
+  smokeGeo.attributes.position.needsUpdate = true
+  smokeGeo.attributes.aAlpha.needsUpdate = true
+  smokeGeo.attributes.aSize.needsUpdate = true
+}
+
+/* ════════════════════════════════════════════════
+   8. 花火：升空 → 爆裂三形态（菊 / 束 / 垂柳）
+   共用一个 Points 粒子缓冲
+   ════════════════════════════════════════════════ */
+const FW_N = 1400
+const fwGeo = new THREE.BufferGeometry()
+const fwPos = new Float32Array(FW_N * 3)
+const fwCol = new Float32Array(FW_N * 3)
+const fwAlpha = new Float32Array(FW_N)
+const fwSize = new Float32Array(FW_N)
+fwGeo.setAttribute('position', new THREE.BufferAttribute(fwPos, 3))
+fwGeo.setAttribute('color', new THREE.BufferAttribute(fwCol, 3))
+fwGeo.setAttribute('aAlpha', new THREE.BufferAttribute(fwAlpha, 1))
+fwGeo.setAttribute('aSize', new THREE.BufferAttribute(fwSize, 1))
+const fwMat = new THREE.ShaderMaterial({
+  transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true,
+  vertexShader: `
+    attribute float aAlpha; attribute float aSize; varying float vA; varying vec3 vC;
+    void main(){ vA = aAlpha; vC = color;
+      vec4 mv = modelViewMatrix * vec4(position, 1.0);
+      gl_PointSize = aSize * (380.0 / -mv.z);
+      gl_Position = projectionMatrix * mv; }`,
+  fragmentShader: `
+    varying float vA; varying vec3 vC;
+    void main(){ float d = length(gl_PointCoord - 0.5);
+      float a = smoothstep(0.5, 0.05, d) * vA;
+      gl_FragColor = vec4(vC, a); }`,
+})
+const fwPoints = new THREE.Points(fwGeo, fwMat)
+fwPoints.frustumCulled = false
+scene.add(fwPoints)
+
+const fwParticles = [] // {i, x,y,z, vx,vy,vz, life, max, g, cr,cg,cb}
+let fwCursor = 0
+const rockets = []     // 上升中的火箭 {mesh, vx,vy,vz, type}
+
+const FW_PALETTES = [
+  [0xff6a5a, 0xffc86a, 0xfff0a0],   // 暖金红
+  [0x6ab0ff, 0x9a7aff, 0xd0f0ff],   // 冷蓝紫
+  [0xff8ad0, 0xfff0a0, 0xb08aff],   // 粉紫
+  [0x7affa0, 0xf0ffb0, 0xffe06a],   // 青绿金
+]
+const FW_TYPES = ['chrysanthemum', 'bouquet', 'willow']
+
+function fwSpawn(x, y, z, vx, vy, vz, life, g, colorHex) {
+  const i = fwCursor; fwCursor = (fwCursor + 1) % FW_N
+  const c = _tmp.set(colorHex)
+  fwParticles.push({ i, x, y, z, vx, vy, vz, life: 0, max: life, g,
+    cr: c.r, cg: c.g, cb: c.b })
+}
+
+function fwExplode(type, p) {
+  const pal = FW_PALETTES[Math.floor(Math.random() * FW_PALETTES.length)]
+  const pick = () => pal[Math.floor(Math.random() * pal.length)]
+  if (type === 'chrysanthemum') {
+    // 菊：完整球面均匀爆裂
+    for (let i = 0; i < 170; i++) {
+      const th = Math.random() * Math.PI * 2, ph = Math.acos(2 * Math.random() - 1)
+      const sp = 4.6 + Math.random() * 2.4
+      fwSpawn(p.x, p.y, p.z,
+        Math.sin(ph) * Math.cos(th) * sp, Math.cos(ph) * sp, Math.sin(ph) * Math.sin(th) * sp,
+        1.5 + Math.random() * 0.7, -3.2, pick())
+    }
+  } else if (type === 'bouquet') {
+    // 束：5 个小型爆裂围成一圈
+    for (let b = 0; b < 5; b++) {
+      const ba = b / 5 * Math.PI * 2
+      const bx = p.x + Math.cos(ba) * 1.4, bz = p.z + Math.sin(ba) * 1.4
+      for (let i = 0; i < 38; i++) {
+        const th = Math.random() * Math.PI * 2, ph = Math.acos(2 * Math.random() - 1)
+        const sp = 2.2 + Math.random() * 1.4
+        fwSpawn(bx, p.y, bz,
+          Math.sin(ph) * Math.cos(th) * sp, Math.cos(ph) * sp, Math.sin(ph) * Math.sin(th) * sp,
+          1.1 + Math.random() * 0.5, -2.6, pick())
+      }
+    }
+  } else {
+    // 垂柳：上半球喷洒 + 弱重力 + 长寿命缓缓垂落
+    for (let i = 0; i < 130; i++) {
+      const th = Math.random() * Math.PI * 2, ph = Math.acos(Math.random()) // 偏上半球
+      const sp = 3.6 + Math.random() * 2.2
+      fwSpawn(p.x, p.y, p.z,
+        Math.sin(ph) * Math.cos(th) * sp, Math.abs(Math.cos(ph)) * sp, Math.sin(ph) * Math.sin(th) * sp,
+        2.9 + Math.random() * 0.9, -1.1, pal[2]) // 垂柳统一金色调
+    }
+  }
+}
+
+function launchFirework(type) {
+  if (!type) type = FW_TYPES[Math.floor(Math.random() * FW_TYPES.length)]
+  // 火箭：从村子边缘升空
+  const angle = Math.random() * Math.PI * 2
+  const sx = Math.cos(angle) * 14, sz = Math.sin(angle) * 12
+  const rocket = new THREE.Mesh(new THREE.SphereGeometry(0.2, 6, 5),
+    new THREE.MeshBasicMaterial({ color: 0xffe8b0, fog: false }))
+  rocket.position.set(sx, 0.5, sz)
+  scene.add(rocket)
+  rockets.push({
+    mesh: rocket, type,
+    vx: (Math.random() - 0.5) * 1.2, vy: 13 + Math.random() * 3, vz: (Math.random() - 0.5) * 1.2,
+  })
+}
+
+let fwAutoTimer = 0
+function updateFireworks(dt, isNight) {
+  // 夜晚自动放花火
+  if (isNight) {
+    fwAutoTimer -= dt
+    if (fwAutoTimer <= 0) { fwAutoTimer = 11 + Math.random() * 8; launchFirework() }
+  }
+  // 火箭升空
+  for (let i = rockets.length - 1; i >= 0; i--) {
+    const r = rockets[i]
+    r.vy -= 4.5 * dt
+    r.mesh.position.x += r.vx * dt; r.mesh.position.y += r.vy * dt; r.mesh.position.z += r.vz * dt
+    // 拖尾小火花
+    fwSpawn(r.mesh.position.x, r.mesh.position.y, r.mesh.position.z,
+      (Math.random() - 0.5) * 0.5, -0.4, (Math.random() - 0.5) * 0.5, 0.4, -0.5, 0xffd090)
+    if (r.vy < 2.2) {
+      fwExplode(r.type, r.mesh.position)
+      scene.remove(r.mesh)
+      r.mesh.geometry.dispose(); r.mesh.material.dispose()
+      rockets.splice(i, 1)
+    }
+  }
+  // 粒子更新
+  for (let k = fwParticles.length - 1; k >= 0; k--) {
+    const p = fwParticles[k]
+    p.life += dt
+    if (p.life >= p.max) { fwAlpha[p.i] = 0; fwParticles.splice(k, 1); continue }
+    p.vy += p.g * dt
+    p.x += p.vx * dt; p.y += p.vy * dt; p.z += p.vz * dt
+    const t = p.life / p.max
+    const a = t < 0.12 ? t / 0.12 : Math.pow(1 - (t - 0.12) / 0.88, 1.6)
+    fwPos[p.i * 3] = p.x; fwPos[p.i * 3 + 1] = p.y; fwPos[p.i * 3 + 2] = p.z
+    fwCol[p.i * 3] = p.cr; fwCol[p.i * 3 + 1] = p.cg; fwCol[p.i * 3 + 2] = p.cb
+    fwAlpha[p.i] = a
+    fwSize[p.i] = 2.4 * a + 0.9
+  }
+  fwGeo.attributes.position.needsUpdate = true
+  fwGeo.attributes.color.needsUpdate = true
+  fwGeo.attributes.aAlpha.needsUpdate = true
+  fwGeo.attributes.aSize.needsUpdate = true
+}
+
+/* ════════════════════════════════════════════════
+   9. 点击建筑 → 标注名字（坐标第三用途）
+   ════════════════════════════════════════════════ */
+const raycaster = new THREE.Raycaster()
+const pointer = new THREE.Vector2()
+let labelTimer = 0
+renderer.domElement.addEventListener('click', (e) => {
+  pointer.x = (e.clientX / window.innerWidth) * 2 - 1
+  pointer.y = -(e.clientY / window.innerHeight) * 2 + 1
+  raycaster.setFromCamera(pointer, camera)
+  const hit = raycaster.intersectObjects(clickables, false)[0]
+  if (hit) {
+    elLabel.textContent = hit.object.userData.label
+    elLabel.style.left = e.clientX + 'px'
+    elLabel.style.top = e.clientY + 'px'
+    elLabel.classList.add('show')
+    labelTimer = 2.4
+  }
+})
+
+/* ════════════════════════════════════════════════
+   10. 主循环：单时钟带动全场
+   ════════════════════════════════════════════════ */
+let tourAngle = Math.PI / 4
+let blendingDirty = true
+
+function applySeasonColors() {
+  // 地面 / 树叶 / 点缀色全部从权重混合而来
+  groundTopMat.color.copy(seasonMix('ground'))
+  for (const m of leafMats) m.color.copy(seasonMix('leaf'))
+  for (const m of leafAltMats) m.color.copy(seasonMix('leafAlt'))
+  // 冬季屋顶压雪：向雪白渐变
+  const sw = snowWeight()
+  if (sw > 0.001) {
+    for (const m of roofMats) {
+      if (!m.userData.base) m.userData.base = m.color.clone()
+      m.color.copy(m.userData.base).lerp(_tmp.set(0xe8edf4), sw * 0.85)
+    }
+  } else {
+    for (const m of roofMats) if (m.userData.base) m.color.copy(m.userData.base)
+  }
+}
+
+const clock3 = new THREE.Clock()
+const _sky = new THREE.Color()
+
+function animate() {
+  requestAnimationFrame(animate)
+  const dt = Math.min(clock3.getDelta(), 0.05)
+
+  /* ── 时钟推进 ── */
+  if (state.playing) state.minute = (state.minute + state.speed * dt) % DAY
+
+  /* ── 季节权重向目标插值 ── */
+  for (const s of SEASON_KEYS) {
+    const target = s === state.season ? 1 : 0
+    const cur = state.blend[s]
+    const next = cur + clamp(target - cur, -dt / 1.6, dt / 1.6)
+    if (Math.abs(next - cur) > 0.0001) { state.blend[s] = next; blendingDirty = true }
+  }
+  if (blendingDirty) { applySeasonColors(); blendingDirty = false }
+
+  /* ── 太阳：方位 / 高度 / 光强 ── */
+  const sh = sunHeightAt(state.minute)
+  const az = (state.minute - 360) / DAY * Math.PI * 2
+  sun.position.set(Math.cos(az) * 55, Math.sin(az) * 55, 22)
+  sun.intensity = smooth(-0.06, 0.28, sh) * 1.7
+  sunDisc.position.set(Math.cos(az) * 95, Math.sin(az) * 95, 38)
+  sunDisc.visible = sh > -0.12
+  moonDisc.position.set(-Math.cos(az) * 95, -Math.sin(az) * 95, -38)
+  moonDisc.visible = sh < 0.12
+
+  const nightF = smooth(0.16, -0.08, sh)   // 0=白天 1=深夜
+  const isNight = nightF > 0.55
+  moon.intensity = nightF * 0.4
+  hemi.intensity = 0.18 + (1 - nightF) * 0.42
+  starMat.opacity = nightF * 0.9
+
+  /* ── 天空 / 雾色 ── */
+  _sky.copy(skyColorAt(state.minute))
+  scene.background = _sky
+  scene.fog.color.copy(_sky)
+
+  /* ── 窗灯 / 路灯 / 夜市 ── */
+  windowMat.emissiveIntensity = nightF * 1.5
+  lampHeadMat.emissiveIntensity = nightF * 2.2
+  stringLightMat.emissiveIntensity = nightF * 2.4
+  for (const l of lampLights) l.intensity = nightF * 1.5
+  for (const l of stallLights) l.intensity = nightF * 1.1
+
+  /* ── 生命系统 ── */
+  updateVillagers(dt, isNight)
+  updateSmoke(dt)
+  updateFireworks(dt, isNight)
+
+  /* ── 标注淡出 ── */
+  if (labelTimer > 0) { labelTimer -= dt; if (labelTimer <= 0) elLabel.classList.remove('show') }
+
+  /* ── 相机：巡游 or 手动 ── */
+  if (state.touring) {
+    tourAngle += dt * 0.1
+    camera.position.set(Math.cos(tourAngle) * 38, 26, Math.sin(tourAngle) * 38)
+    camera.lookAt(0, 1, 0)
+  } else {
+    controls.update()
+  }
+
+  /* ── UI 时钟 ── */
+  elClock.textContent = fmtClock(state.minute)
+  const S = SEASONS[state.season]
+  elSeason.textContent = `${S.zh} · ${S.en}`
+
+  renderer.render(scene, camera)
+}
+animate()
+
+/* ════════════════════════════════════════════════
+   11. UI 交互
+   ════════════════════════════════════════════════ */
+const btnTime = $('btnTime'), btnSpeed = $('btnSpeed'), btnTour = $('btnTour'), btnFw = $('btnFw')
+const SPEEDS = [1, 60, 600]
+
+btnTime.addEventListener('click', () => {
+  state.playing = !state.playing
+  btnTime.classList.toggle('on', state.playing)
+  btnTime.querySelector('.ico').textContent = state.playing ? '⏸' : '▶'
+})
+btnSpeed.addEventListener('click', () => {
+  const i = (SPEEDS.indexOf(state.speed) + 1) % SPEEDS.length
+  state.speed = SPEEDS[i]
+  btnSpeed.textContent = state.speed + '×'
+})
+document.querySelectorAll('.sbtn').forEach(b => {
+  b.addEventListener('click', () => {
+    state.season = b.dataset.season
+    document.querySelectorAll('.sbtn').forEach(x => x.classList.toggle('on', x === b))
+  })
+})
+document.querySelector('.sbtn[data-season="summer"]').classList.add('on')
+
+function setTour(on) {
+  state.touring = on
+  controls.enabled = !on
+  btnTour.classList.toggle('on', on)
+}
+btnTour.addEventListener('click', () => setTour(!state.touring))
+// 用户拖拽时自动暂停巡游
+renderer.domElement.addEventListener('pointerdown', () => { if (state.touring) setTour(false) })
+
+btnFw.addEventListener('click', () => launchFirework())
+
+/* ── 窗口自适应（正交相机修正宽高比） ── */
+window.addEventListener('resize', () => {
+  const a = window.innerWidth / window.innerHeight
+  camera.left = -VIEW * a; camera.right = VIEW * a
+  camera.top = VIEW; camera.bottom = -VIEW
+  camera.updateProjectionMatrix()
+  renderer.setSize(window.innerWidth, window.innerHeight)
+})
+</script>
+</body>
+</html>

@@ -339,6 +339,7 @@ const SHOWCASES = [
   { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱', group: 'THREE.JS' },
   { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎', group: 'THREE.JS' },
   { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈', group: 'THREE.JS' },
+  { id: 'starfall', label: 'Starfall Town', desc: 'Living diorama: day-night, seasons, fireworks', icon: '🏘', group: 'THREE.JS' },
   { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹', group: 'THREE.JS' },
   { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝', group: 'THREE.JS' },
   { id: 'pixijs', label: 'PixiJS Playground', desc: '2D WebGL rendering engine', icon: '🎨' },
@@ -454,6 +455,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
         {activeId === 'vegetation' && <IframeShowcase src="/showcases/vegetation/" title="WebGPU 藤蔓生成" />}
         {activeId === 'crystal' && <IframeShowcase src="/showcases/crystal/" title="WebGPU 水晶绘制" />}
         {activeId === 'rain' && <IframeShowcase src="/showcases/rain/" title="雨景工作室" />}
+        {activeId === 'starfall' && <IframeShowcase src="/showcases/starfall.html" title="星落镇 Starfall" background="#0b1026" />}
         {activeId === 'ascii-rest' && <AsciiRestShowcase />}
         {activeId === 'ascii-magic' && <AsciiMagicShowcase />}
         {activeId === 'ascii' && <AsciiSharksShowcase />}
