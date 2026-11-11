@@ -1,4 +1,12 @@
-import { Fragment, useEffect, useRef, useState, useCallback } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from 'react'
+import { ArrowLeft, LayoutGrid, Search as SearchIcon, X as XIcon } from 'lucide-react'
 import MechaDisassembly from './showcases/MechaDisassembly'
 import * as THREE from 'three'
 import OrbitalViz from './OrbitalViz'
@@ -11,26 +19,18 @@ import AsciiMagicShowcase from './showcases/AsciiMagicShowcase'
 import TextFireworksShowcase from './showcases/TextFireworksShowcase'
 import NebulaGalaxyShowcase from './showcases/NebulaGalaxyShowcase'
 
-/* ═══════════════════════════════════════════════════════════════
-   KAGE — MengTo 单文件滚动 3D 夜游（公众号爆火项目，整页 iframe）
-   ═══════════════════════════════════════════════════════════════ */
-function KageShowcase() {
-  return (
-    <div className="relative w-full">
-      <iframe
-        src="/kage.html"
-        title="Kage — Night Kyoto"
-        className="fixed inset-0 w-full h-full border-0"
-        style={{ zIndex: 1, background: '#05070a' }}
-        allow="autoplay; fullscreen; webgpu"
-      />
-      <div style={{ height: '100vh' }} />
-    </div>
-  )
-}
-
-/* 通用 iframe 容器：achrefelouafi 8 个 Three.js 项目（构建产物已部署到 public/showcases/） */
-function IframeShowcase({ src, title, background = '#000' }: { src: string; title: string; background?: string }) {
+/* 通用 iframe 容器：所有整页 demo 统一走这一处，切换时通过 onReady 收起 loading */
+function IframeShowcase({
+  src,
+  title,
+  background = '#000',
+  onReady,
+}: {
+  src: string
+  title: string
+  background?: string
+  onReady?: () => void
+}) {
   return (
     <div className="relative w-full">
       <iframe
@@ -39,21 +39,7 @@ function IframeShowcase({ src, title, background = '#000' }: { src: string; titl
         className="fixed inset-0 w-full h-full border-0"
         style={{ zIndex: 1, background }}
         allow="autoplay; fullscreen; webgpu"
-      />
-      <div style={{ height: '100vh' }} />
-    </div>
-  )
-}
-
-/* 浅色 iframe 容器：Looseleaf 纸面主题，避免黑色底在加载瞬间闪一下 */
-function LightIframeShowcase({ src, title, background }: { src: string; title: string; background: string }) {
-  return (
-    <div className="relative w-full">
-      <iframe
-        src={src}
-        title={title}
-        className="fixed inset-0 w-full h-full border-0"
-        style={{ zIndex: 1, background }}
+        onLoad={onReady}
       />
       <div style={{ height: '100vh' }} />
     </div>
@@ -318,155 +304,974 @@ function ThreePlanets() {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   SHOWCASE PAGE — Selector + 4 effects
+   SHOWCASE CATALOG — 25 条项目，按一级分组 + 标签维护
    ═══════════════════════════════════════════════════════════════ */
-const SHOWCASES = [
-  /* Three.js 项目统一归入 THREE.JS 分组（含 three.js WebGPU 渲染器项目） */
-  { id: 'nebula', label: 'Nebula Core', desc: 'Four-arm galaxy', icon: '✦', group: 'THREE.JS' },
-  { id: 'ssf-fog', label: 'SSF Screen-Space Fog', desc: 'Forest road · height fog · sun scattering', icon: '🌫', group: 'THREE.JS' },
-  /* Sylva: 仅嵌入作者托管的线上体验；上游 README 明确不授予代码/设计/作品再分发许可 */
-  { id: 'sylva', label: 'Sylva', desc: 'Procedural moss landscape · MengTo', icon: '🌿', group: 'THREE.JS' },
-  { id: 'fireworks', label: 'Text Fireworks', desc: 'Type → explode → return', icon: '✦', group: 'THREE.JS' },
-  { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐', group: 'THREE.JS' },
-  { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕', group: 'THREE.JS' },
-  { id: 'keyboard', label: 'Keyboard Config', desc: '3D keyboard configurator', icon: '⌨', group: 'THREE.JS' },
-  { id: 'kage', label: 'Kage', desc: 'MengTo single-file scroll 3D night Kyoto', icon: '⛩', group: 'THREE.JS' },
-  { id: 'building', label: 'HK Building Gen', desc: 'Procedural Hong Kong buildings (achrefelouafi)', icon: '🏙', group: 'THREE.JS' },
-  { id: 'snow', label: 'Snowy Footprints', desc: 'Snow terrain + falling snow', icon: '❄️', group: 'THREE.JS' },
-  { id: 'water', label: 'Cinematic Water', desc: 'Beach water body + dive-under', icon: '🌊', group: 'THREE.JS' },
-  { id: 'ocean', label: 'FFT Ocean', desc: 'JONSWAP spectrum + FFT ocean', icon: '🌊', group: 'THREE.JS' },
-  { id: 'grass', label: 'Soil Studio', desc: 'Moss grass wind + ground sculpt', icon: '🌿', group: 'THREE.JS' },
-  { id: 'vegetation', label: 'WebGPU Ivy', desc: 'Ivy grows along drawn paths', icon: '🌱', group: 'THREE.JS' },
-  { id: 'crystal', label: 'WebGPU Crystal', desc: 'Amethyst cluster growth brush', icon: '💎', group: 'THREE.JS' },
-  { id: 'rain', label: 'Rain Studio', desc: 'Rain streaks + lightning + puddles', icon: '⛈', group: 'THREE.JS' },
-  { id: 'starfall', label: 'Starfall Town', desc: 'Living diorama: day-night, seasons, fireworks', icon: '🏘', group: 'THREE.JS' },
-  { id: 'grand-atelier', label: 'Grand Atelier', desc: 'Playable 3D grand piano with visible mechanics', icon: '🎹', group: 'THREE.JS' },
-  { id: 'looseleaf', label: 'Looseleaf Paper Desk', desc: 'Hand-drawn UI on a physical paper desk', icon: '📝', group: 'THREE.JS' },
-  { id: 'pixijs', label: 'PixiJS Playground', desc: '2D WebGL rendering engine', icon: '🎨' },
-  { id: 'mecha', label: 'Mecha Breakdown', desc: 'Mechanical disassembly', icon: '⚙' },
-  { id: 'abyss', label: 'Abyssal Descent', desc: 'Scroll-driven 3D deep-sea descent', icon: '🌊' },
-  { id: 'phoenix', label: 'Chinese Phoenix Crown', desc: 'Seven crowns with physics text curtains', icon: '👑' },
-  { id: 'ascii-rest', label: 'ASCII.Art', desc: '240 animated pieces · 15 categories · one tag', icon: '🅰', group: 'ASCII' },
-  { id: 'ascii-magic', label: 'ASCII Magic', desc: '734 hand-built pieces · 24 categories · 11 looks', icon: '✦', group: 'ASCII' },
-  { id: 'ascii', label: 'ASCII Ocean', desc: '8 ASCII shark species + boids fish (stackedlol)', icon: '🦈', group: 'ASCII' },
+const SHOWCASE_TAGS = [
+  'Nature',
+  'Fluid',
+  'Architecture',
+  'Particles',
+  'Typography',
+  'Interaction',
+  'Scroll',
+  'Space',
+  'Mechanical',
+  'Culture',
+  'Atmosphere',
 ] as const
 
-type ShowcaseId = typeof SHOWCASES[number]['id']
+type ShowcaseTag = (typeof SHOWCASE_TAGS)[number]
+type ShowcaseGroup = 'THREE.JS' | 'ASCII'
+type BrowserGroup = ShowcaseGroup | 'OTHER' | 'ALL'
+
+type ShowcaseEntry = {
+  readonly id: string
+  readonly label: string
+  readonly desc: string
+  readonly icon: string
+  readonly group?: ShowcaseGroup
+  readonly tags: readonly ShowcaseTag[]
+  readonly keywords: readonly string[]
+  readonly frame?: boolean
+}
+
+const SHOWCASES = [
+  /* Three.js 项目统一归入 THREE.JS 分组（含 three.js WebGPU 渲染器项目） */
+  {
+    id: 'nebula',
+    label: 'Nebula Core',
+    desc: 'Four-arm galaxy',
+    icon: '✦',
+    group: 'THREE.JS',
+    tags: ['Space', 'Particles', 'Interaction'],
+    keywords: ['星系', '星云', '螺旋', '银河', 'galaxy'],
+  },
+  {
+    id: 'ssf-fog',
+    label: 'SSF Screen-Space Fog',
+    desc: 'Forest road · height fog · sun scattering',
+    icon: '🌫',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Atmosphere'],
+    keywords: ['雾', '森林', '高度雾', '散射', 'fog', 'forest'],
+    frame: true,
+  },
+  /* Sylva: 仅嵌入作者托管的线上体验；上游 README 明确不授予代码/设计/作品再分发许可 */
+  {
+    id: 'sylva',
+    label: 'Sylva',
+    desc: 'Procedural moss landscape · MengTo',
+    icon: '🌿',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Interaction'],
+    keywords: ['苔藓', '根须', '自然', '指针', 'moss'],
+    frame: true,
+  },
+  {
+    id: 'fireworks',
+    label: 'Text Fireworks',
+    desc: 'Type → explode → return',
+    icon: '✦',
+    group: 'THREE.JS',
+    tags: ['Particles', 'Typography'],
+    keywords: ['烟花', '文字', '粒子', 'type'],
+  },
+  {
+    id: 'planets',
+    label: 'Three Planets',
+    desc: '3D planet carousel',
+    icon: '◐',
+    group: 'THREE.JS',
+    tags: ['Space', 'Interaction'],
+    keywords: ['行星', '星球', '太阳系', 'planet'],
+  },
+  {
+    id: 'orbits',
+    label: 'Orbital Orbits',
+    desc: 'Satellite orbit viz',
+    icon: '⊕',
+    group: 'THREE.JS',
+    tags: ['Space', 'Interaction'],
+    keywords: ['轨道', '卫星', 'orbit'],
+  },
+  {
+    id: 'keyboard',
+    label: 'Keyboard Config',
+    desc: '3D keyboard configurator',
+    icon: '⌨',
+    group: 'THREE.JS',
+    tags: ['Mechanical', 'Interaction'],
+    keywords: ['键盘', '配置', '机械', 'keyboard'],
+  },
+  {
+    id: 'kage',
+    label: 'Kage',
+    desc: 'MengTo single-file scroll 3D night Kyoto',
+    icon: '⛩',
+    group: 'THREE.JS',
+    tags: ['Architecture', 'Scroll', 'Culture'],
+    keywords: ['京都', '夜游', '建筑', '滚动', 'kyoto', 'japan'],
+    frame: true,
+  },
+  {
+    id: 'building',
+    label: 'HK Building Gen',
+    desc: 'Procedural Hong Kong buildings (achrefelouafi)',
+    icon: '🏙',
+    group: 'THREE.JS',
+    tags: ['Architecture', 'Culture'],
+    keywords: ['香港', '建筑', '程序化', '城市', 'building', 'hong kong'],
+    frame: true,
+  },
+  {
+    id: 'snow',
+    label: 'Snowy Footprints',
+    desc: 'Snow terrain + falling snow',
+    icon: '❄️',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Particles', 'Atmosphere'],
+    keywords: ['雪', '脚印', '地形', 'snow'],
+    frame: true,
+  },
+  {
+    id: 'water',
+    label: 'Cinematic Water',
+    desc: 'Beach water body + dive-under',
+    icon: '🌊',
+    group: 'THREE.JS',
+    tags: ['Fluid', 'Nature'],
+    keywords: ['海', '水', '潜水', '海滩', 'water'],
+    frame: true,
+  },
+  {
+    id: 'ocean',
+    label: 'FFT Ocean',
+    desc: 'JONSWAP spectrum + FFT ocean',
+    icon: '🌊',
+    group: 'THREE.JS',
+    tags: ['Fluid', 'Nature'],
+    keywords: ['海洋', '海浪', 'FFT', 'ocean'],
+    frame: true,
+  },
+  {
+    id: 'grass',
+    label: 'Soil Studio',
+    desc: 'Moss grass wind + ground sculpt',
+    icon: '🌿',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Interaction'],
+    keywords: ['草地', '苔藓', '土壤', '风', 'grass'],
+    frame: true,
+  },
+  {
+    id: 'vegetation',
+    label: 'WebGPU Ivy',
+    desc: 'Ivy grows along drawn paths',
+    icon: '🌱',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Interaction'],
+    keywords: ['藤蔓', '植物', '绘制', 'WebGPU', 'ivy'],
+    frame: true,
+  },
+  {
+    id: 'crystal',
+    label: 'WebGPU Crystal',
+    desc: 'Amethyst cluster growth brush',
+    icon: '💎',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Interaction'],
+    keywords: ['水晶', '紫水晶', '绘制', 'WebGPU', 'crystal'],
+    frame: true,
+  },
+  {
+    id: 'rain',
+    label: 'Rain Studio',
+    desc: 'Rain streaks + lightning + puddles',
+    icon: '⛈',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Atmosphere', 'Particles'],
+    keywords: ['雨', '闪电', '水洼', 'rain'],
+    frame: true,
+  },
+  {
+    id: 'starfall',
+    label: 'Starfall Town',
+    desc: 'Living diorama: day-night, seasons, fireworks',
+    icon: '🏘',
+    group: 'THREE.JS',
+    tags: ['Architecture', 'Nature', 'Particles', 'Atmosphere'],
+    keywords: ['星落镇', '村庄', '昼夜', '季节', '烟花', '小镇', 'starfall'],
+    frame: true,
+  },
+  {
+    id: 'grand-atelier',
+    label: 'Grand Atelier',
+    desc: 'Playable 3D grand piano with visible mechanics',
+    icon: '🎹',
+    group: 'THREE.JS',
+    tags: ['Interaction', 'Mechanical', 'Culture'],
+    keywords: ['钢琴', '音乐', '机械', 'piano'],
+    frame: true,
+  },
+  {
+    id: 'looseleaf',
+    label: 'Looseleaf Paper Desk',
+    desc: 'Hand-drawn UI on a physical paper desk',
+    icon: '📝',
+    group: 'THREE.JS',
+    tags: ['Interaction', 'Typography', 'Culture'],
+    keywords: ['纸', '手绘', '桌面', 'paper'],
+    frame: true,
+  },
+  {
+    id: 'pixijs',
+    label: 'PixiJS Playground',
+    desc: '2D WebGL rendering engine',
+    icon: '🎨',
+    tags: ['Interaction', 'Particles'],
+    keywords: ['2D', '渲染', 'PixiJS', 'playground'],
+  },
+  {
+    id: 'mecha',
+    label: 'Mecha Breakdown',
+    desc: 'Mechanical disassembly',
+    icon: '⚙',
+    tags: ['Mechanical', 'Interaction'],
+    keywords: ['机甲', '拆解', '机械', 'mecha'],
+  },
+  {
+    id: 'abyss',
+    label: 'Abyssal Descent',
+    desc: 'Scroll-driven 3D deep-sea descent',
+    icon: '🌊',
+    tags: ['Nature', 'Scroll', 'Atmosphere'],
+    keywords: ['深海', '下潜', '滚动', 'abyss'],
+    frame: true,
+  },
+  {
+    id: 'phoenix',
+    label: 'Chinese Phoenix Crown',
+    desc: 'Seven crowns with physics text curtains',
+    icon: '👑',
+    tags: ['Culture', 'Typography', 'Interaction'],
+    keywords: ['凤冠', '中国', '文字', '帘', 'phoenix'],
+    frame: true,
+  },
+  {
+    id: 'ascii-rest',
+    label: 'ASCII.Art',
+    desc: '240 animated pieces · 15 categories · one tag',
+    icon: '🅰',
+    group: 'ASCII',
+    tags: ['Typography', 'Culture'],
+    keywords: ['ASCII', '字符', '动画', 'art'],
+  },
+  {
+    id: 'ascii-magic',
+    label: 'ASCII Magic',
+    desc: '734 hand-built pieces · 24 categories · 11 looks',
+    icon: '✦',
+    group: 'ASCII',
+    tags: ['Typography', 'Culture'],
+    keywords: ['ASCII', '字符', '魔法', 'magic', '734'],
+  },
+  {
+    id: 'ascii',
+    label: 'ASCII Ocean',
+    desc: '8 ASCII shark species + boids fish (stackedlol)',
+    icon: '🦈',
+    group: 'ASCII',
+    tags: ['Typography', 'Nature'],
+    keywords: ['ASCII', '鲨鱼', '鱼群', '海洋', 'shark'],
+  },
+] as const
+
+type ShowcaseId = (typeof SHOWCASES)[number]['id']
+
+const normalizeSearch = (value: string) =>
+  value.toLowerCase().replace(/[\s\-_/.·]+/g, '')
+
+const groupKey = (entry: ShowcaseEntry): BrowserGroup => entry.group ?? 'OTHER'
+
+const groupLabel = (group: BrowserGroup) =>
+  group === 'ALL' ? 'All' : group === 'OTHER' ? 'Other' : group
+
+const GRID_CLASS = 'grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3'
+
+function ShowcaseCard({
+  entry,
+  active,
+  onSelect,
+}: {
+  entry: ShowcaseEntry
+  active: boolean
+  onSelect: (id: string) => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onSelect(entry.id)}
+      data-showcase-id={entry.id}
+      aria-current={active ? 'true' : undefined}
+      className={`group flex min-h-[96px] flex-col rounded-xl border p-3.5 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50 ${
+        active
+          ? 'border-cyan-300/55 bg-cyan-300/[0.08]'
+          : 'border-white/10 bg-white/[0.025] hover:border-white/25 hover:bg-white/[0.055]'
+      }`}
+    >
+      <div className="flex items-start gap-3">
+        <span className="text-[22px] leading-none">{entry.icon}</span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2">
+            <span className="truncate text-[13px] font-semibold text-white/[0.86]">
+              {entry.label}
+            </span>
+            {active && (
+              <span className="shrink-0 rounded bg-cyan-300/15 px-1.5 py-0.5 text-[9px] font-semibold tracking-[0.16em] text-cyan-200">
+                NOW
+              </span>
+            )}
+          </div>
+          <p className="mt-1 line-clamp-2 text-[11px] leading-4 text-white/[0.42]">
+            {entry.desc}
+          </p>
+        </div>
+      </div>
+      <div className="mt-auto flex flex-wrap items-center gap-1 pt-2.5">
+        <span className="rounded border border-white/10 px-1.5 py-0.5 text-[9px] tracking-[0.08em] text-white/[0.38]">
+          {groupKey(entry)}
+        </span>
+        {entry.tags.slice(0, 3).map(tag => (
+          <span key={tag} className="rounded bg-white/[0.04] px-1.5 py-0.5 text-[9px] text-white/[0.32]">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </button>
+  )
+}
+
+function ShowcaseBrowser({
+  open,
+  entries,
+  activeId,
+  onClose,
+  onSelect,
+}: {
+  open: boolean
+  entries: readonly ShowcaseEntry[]
+  activeId: string
+  onClose: () => void
+  onSelect: (id: string) => void
+}) {
+  const [query, setQuery] = useState('')
+  const [group, setGroup] = useState<BrowserGroup>('ALL')
+  const [selectedTags, setSelectedTags] = useState<ShowcaseTag[]>([])
+  const [sort, setSort] = useState<'curated' | 'az'>('curated')
+  const searchRef = useRef<HTMLInputElement>(null)
+  const overlayRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const focusTimer = window.setTimeout(() => searchRef.current?.focus(), 60)
+    return () => {
+      window.clearTimeout(focusTimer)
+      document.body.style.overflow = previousOverflow
+      previousFocus?.focus()
+    }
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      event.preventDefault()
+      onClose()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [open, onClose])
+
+  const counts = useMemo<Record<BrowserGroup, number>>(
+    () => ({
+      ALL: entries.length,
+      'THREE.JS': entries.filter(entry => entry.group === 'THREE.JS').length,
+      ASCII: entries.filter(entry => entry.group === 'ASCII').length,
+      OTHER: entries.filter(entry => !entry.group).length,
+    }),
+    [entries]
+  )
+
+  const tagCounts = useMemo(() => {
+    const map = new Map<ShowcaseTag, number>()
+    SHOWCASE_TAGS.forEach(tag => {
+      map.set(tag, entries.filter(entry => entry.tags.includes(tag)).length)
+    })
+    return map
+  }, [entries])
+
+  const filtered = useMemo(() => {
+    const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
+    return entries.filter(entry => {
+      if (group !== 'ALL' && groupKey(entry) !== group) return false
+      if (selectedTags.length > 0 && !selectedTags.some(tag => entry.tags.includes(tag))) {
+        return false
+      }
+      if (terms.length === 0) return true
+      const haystack = normalizeSearch(
+        [
+          entry.label,
+          entry.desc,
+          entry.group ?? 'OTHER',
+          entry.group === 'THREE.JS' ? 'threejs treejs three 3d' : '',
+          entry.tags.join(' '),
+          entry.keywords.join(' '),
+        ].join(' ')
+      )
+      return terms.every(term => haystack.includes(normalizeSearch(term)))
+    })
+  }, [entries, group, selectedTags, query])
+
+  const sorted = useMemo(
+    () =>
+      sort === 'az'
+        ? [...filtered].sort((a, b) => a.label.localeCompare(b.label))
+        : filtered,
+    [filtered, sort]
+  )
+
+  const showSections =
+    group === 'ALL' && !query.trim() && selectedTags.length === 0 && sort === 'curated'
+
+  const sections = useMemo(() => {
+    if (!showSections) return []
+    const order: BrowserGroup[] = ['THREE.JS', 'OTHER', 'ASCII']
+    return order
+      .map(key => ({ key, items: sorted.filter(entry => groupKey(entry) === key) }))
+      .filter(section => section.items.length > 0)
+  }, [showSections, sorted])
+
+  const hasFilters = Boolean(query.trim()) || group !== 'ALL' || selectedTags.length > 0
+
+  const clearFilters = () => {
+    setQuery('')
+    setGroup('ALL')
+    setSelectedTags([])
+    setSort('curated')
+  }
+
+  const toggleTag = (tag: ShowcaseTag) => {
+    setSelectedTags(current =>
+      current.includes(tag) ? current.filter(item => item !== tag) : [...current, tag]
+    )
+  }
+
+  const handleDialogKeyDown = useCallback((event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key !== 'Tab') return
+    const focusables = overlayRef.current?.querySelectorAll<HTMLElement>(
+      'button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex="-1"])'
+    )
+    if (!focusables?.length) return
+    const list = Array.from(focusables).filter(item => item.getClientRects().length > 0)
+    if (list.length === 0) return
+    const first = list[0]
+    const last = list[list.length - 1]
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault()
+      last.focus()
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault()
+      first.focus()
+    }
+  }, [])
+
+  if (!open) return null
+
+  return (
+    <div
+      id="showcase-browser"
+      ref={overlayRef}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="showcase-browser-title"
+      onKeyDown={handleDialogKeyDown}
+      className="fixed inset-0 z-[300] flex flex-col bg-[#05070b] text-white"
+    >
+      <header
+        className="shrink-0 border-b border-white/10 bg-[#05070b] pb-4"
+        style={{ paddingTop: 'max(16px, env(safe-area-inset-top))' }}
+      >
+        <div className="mx-auto w-full max-w-[1168px] px-4 sm:px-6">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h2
+                id="showcase-browser-title"
+                className="text-[11px] font-semibold tracking-[0.26em] text-white/90"
+              >
+                SHOWCASES
+              </h2>
+              <p className="mt-1 text-[10px] tracking-[0.04em] text-white/[0.35]">
+                {entries.length} live demos · one catalog · search and filter
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close showcase browser"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white/45 transition-colors hover:border-white/25 hover:bg-white/[0.08] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
+            >
+              <XIcon size={16} />
+            </button>
+          </div>
+
+          <div className="relative mt-3">
+            <SearchIcon
+              size={15}
+              className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-white/30"
+            />
+            <input
+              ref={searchRef}
+              type="text"
+              value={query}
+              onChange={event => setQuery(event.target.value)}
+              aria-label="Search showcases"
+              autoComplete="off"
+              spellCheck={false}
+              placeholder="Search name, tag, author, 中文关键词…"
+              className="h-11 w-full rounded-lg border border-white/10 bg-white/[0.04] pl-9 pr-10 text-base text-white outline-none transition-colors placeholder:text-white/[0.28] focus:border-cyan-300/45 focus:bg-white/[0.06] sm:text-sm"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => setQuery('')}
+                aria-label="Clear search"
+                className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded text-white/35 transition-colors hover:text-white"
+              >
+                <XIcon size={14} />
+              </button>
+            )}
+          </div>
+
+          <div
+            className="mt-3 flex gap-2 overflow-x-auto pb-1"
+            style={{ scrollbarWidth: 'none' }}
+          >
+            {(['ALL', 'THREE.JS', 'ASCII', 'OTHER'] as const).map(key => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setGroup(key)}
+                data-group-filter={key}
+                aria-pressed={group === key}
+                className={`shrink-0 rounded-full border px-3 py-1.5 text-[11px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50 ${
+                  group === key
+                    ? 'border-cyan-300/60 bg-cyan-300/15 text-cyan-100'
+                    : 'border-white/10 bg-white/[0.03] text-white/[0.55] hover:border-white/25 hover:text-white/80'
+                }`}
+              >
+                {groupLabel(key)}
+                <span className="ml-1.5 text-[10px] text-white/[0.35]">{counts[key]}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-2 flex flex-wrap gap-1.5 pb-1">
+            {SHOWCASE_TAGS.map(tag => (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => toggleTag(tag)}
+                data-tag-filter={tag}
+                aria-pressed={selectedTags.includes(tag)}
+                className={`shrink-0 rounded-full border px-2.5 py-1 text-[10px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50 ${
+                  selectedTags.includes(tag)
+                    ? 'border-cyan-300/50 bg-cyan-300/10 text-cyan-100'
+                    : 'border-white/[0.08] bg-transparent text-white/[0.42] hover:border-white/20 hover:text-white/70'
+                }`}
+              >
+                {tag}
+                <span className="ml-1 text-white/[0.25]">{tagCounts.get(tag) ?? 0}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      <div className="min-h-0 flex-1 overflow-y-auto">
+        <div
+          className="mx-auto w-full max-w-[1168px] px-4 py-4 sm:px-6"
+          style={{ paddingBottom: 'max(16px, env(safe-area-inset-bottom))' }}
+        >
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-[11px] text-white/[0.38]">
+              <span className="text-white/[0.78]">{sorted.length}</span> of {entries.length}
+            </p>
+            <div className="flex items-center gap-2">
+              {hasFilters && (
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  className="text-[10px] text-white/40 underline decoration-white/20 underline-offset-2 transition-colors hover:text-white/75"
+                >
+                  Clear filters
+                </button>
+              )}
+              <div className="flex items-center gap-1 rounded-lg border border-white/10 bg-white/[0.03] p-1">
+                <button
+                  type="button"
+                  onClick={() => setSort('curated')}
+                  aria-pressed={sort === 'curated'}
+                  className={`rounded px-2 py-1 text-[10px] transition-colors ${
+                    sort === 'curated' ? 'bg-white/10 text-white/80' : 'text-white/35 hover:text-white/65'
+                  }`}
+                >
+                  Curated
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSort('az')}
+                  aria-pressed={sort === 'az'}
+                  className={`rounded px-2 py-1 text-[10px] transition-colors ${
+                    sort === 'az' ? 'bg-white/10 text-white/80' : 'text-white/35 hover:text-white/65'
+                  }`}
+                >
+                  A-Z
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {sorted.length === 0 ? (
+            <div className="flex min-h-[240px] flex-col items-center justify-center px-6 text-center">
+              <p className="text-[10px] font-semibold tracking-[0.24em] text-white/25">
+                NO MATCH
+              </p>
+              <p className="mt-2 text-sm text-white/50">
+                换个关键词试试，例如「雾」「苔藓」「建筑」，或清除筛选。
+              </p>
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="mt-4 rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-[11px] text-cyan-100 transition-colors hover:bg-cyan-300/15"
+              >
+                Clear filters
+              </button>
+            </div>
+          ) : showSections ? (
+            sections.map(section => (
+              <section key={section.key} className="mb-5 last:mb-0">
+                <div className="mb-2 flex items-center gap-2">
+                  <span className="text-[10px] font-semibold tracking-[0.22em] text-cyan-200/50">
+                    {section.key}
+                  </span>
+                  <span className="text-[10px] text-white/25">{section.items.length}</span>
+                  <div className="h-px flex-1 bg-white/10" />
+                </div>
+                <div className={GRID_CLASS}>
+                  {section.items.map(entry => (
+                    <ShowcaseCard
+                      key={entry.id}
+                      entry={entry}
+                      active={entry.id === activeId}
+                      onSelect={onSelect}
+                    />
+                  ))}
+                </div>
+              </section>
+            ))
+          ) : (
+            <div className={GRID_CLASS}>
+              {sorted.map(entry => (
+                <ShowcaseCard
+                  key={entry.id}
+                  entry={entry}
+                  active={entry.id === activeId}
+                  onSelect={onSelect}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate }) {
   const [activeId, setActiveId] = useState<ShowcaseId>('nebula')
   const [transitioning, setTransitioning] = useState(false)
-  const [selectorOpen, setSelectorOpen] = useState(false)
+  const [browserOpen, setBrowserOpen] = useState(false)
+  const [loading, setLoading] = useState<{
+    id: ShowcaseId
+    label: string
+    icon: string
+  } | null>(null)
+  const showcaseButtonRef = useRef<HTMLButtonElement>(null)
+  const hasOpenedBrowserRef = useRef(false)
+  const transitionTimerRef = useRef<number | null>(null)
 
-  const switchTo = useCallback((id: ShowcaseId) => {
-    if (id === activeId || transitioning) return
-    setTransitioning(true)
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
-    setTimeout(() => {
-      setActiveId(id)
-      setTransitioning(false)
-    }, 200)
-  }, [activeId, transitioning])
+  const markFrameReady = useCallback((id: ShowcaseId) => {
+    setLoading(current => (current?.id === id ? null : current))
+  }, [])
 
-  const activeShowcase = SHOWCASES.find(s => s.id === activeId)
+  const switchTo = useCallback(
+    (id: ShowcaseId) => {
+      if (id === activeId || transitioning) return
+      const next = SHOWCASES.find(showcase => showcase.id === id)
+      setLoading(null)
+      setTransitioning(true)
+      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+      transitionTimerRef.current = window.setTimeout(() => {
+        setActiveId(id)
+        setTransitioning(false)
+        const frame = (next as ShowcaseEntry | undefined)?.frame
+        if (frame && next) {
+          setLoading({ id, label: next.label, icon: next.icon })
+        }
+      }, 200)
+    },
+    [activeId, transitioning]
+  )
+
+  useEffect(
+    () => () => {
+      if (transitionTimerRef.current !== null) {
+        window.clearTimeout(transitionTimerRef.current)
+      }
+    },
+    []
+  )
+
+  useEffect(() => {
+    if (!loading) return
+    const timer = window.setTimeout(() => setLoading(null), 12000)
+    return () => window.clearTimeout(timer)
+  }, [loading])
+
+  useEffect(() => {
+    if (browserOpen) {
+      hasOpenedBrowserRef.current = true
+    } else if (hasOpenedBrowserRef.current) {
+      showcaseButtonRef.current?.focus()
+    }
+  }, [browserOpen])
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== '/' || browserOpen) return
+      const target = event.target as HTMLElement | null
+      if (target?.closest('input, textarea, select, [contenteditable="true"]')) return
+      event.preventDefault()
+      setBrowserOpen(true)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [browserOpen])
+
+  const handleSelect = useCallback(
+    (id: string) => {
+      setBrowserOpen(false)
+      switchTo(id as ShowcaseId)
+    },
+    [switchTo]
+  )
 
   return (
     <div className="relative w-full">
-      {/* Back button — 左上角 */}
-      <button
-        onClick={() => { window.scrollTo({ top: 0 }); if (onNavigate) onNavigate('official') }}
-        className="fixed top-4 left-4 z-[200] px-3 py-1.5 rounded-lg bg-black/30 backdrop-blur-md border border-white/10 text-white/50 text-xs font-medium hover:bg-white/10 hover:text-white transition-all"
+      {/* 左上角：Back + Showcase 浏览器入口 */}
+      <div
+        className="fixed left-4 top-4 z-[200] flex items-center gap-2"
+        style={{
+          top: 'max(16px, env(safe-area-inset-top))',
+          left: 'max(16px, env(safe-area-inset-left))',
+        }}
       >
-        ← Back
-      </button>
-
-      {/* Showcase selector — 左下角可收起 */}
-      <div className="fixed bottom-4 left-4 z-[200]">
-        {/* Toggle button */}
         <button
-          onClick={() => setSelectorOpen(v => !v)}
-          className="flex items-center gap-2 px-3 py-2 rounded-lg bg-black/50 backdrop-blur-xl border border-cyan-300/25 text-white/80 text-xs font-medium hover:bg-white/12 hover:text-white hover:border-cyan-300/50 transition-all"
-          style={{
-            boxShadow: '0 0 16px rgba(65,230,255,0.2), 0 0 32px rgba(65,230,255,0.08), inset 0 0 12px rgba(65,230,255,0.06)',
+          type="button"
+          onClick={() => {
+            window.scrollTo({ top: 0 })
+            if (onNavigate) onNavigate('official')
           }}
+          aria-label="Back to official site"
+          className="flex h-9 items-center gap-1.5 rounded-lg border border-white/10 bg-black/35 px-2.5 text-xs font-medium text-white/50 backdrop-blur-md transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
         >
-          <span className="text-base">{activeShowcase?.icon}</span>
-          <span className="max-w-[120px] truncate">{activeShowcase?.label}</span>
-          <span className={`ml-1 transition-transform duration-200 ${selectorOpen ? 'rotate-180' : ''}`}>▼</span>
+          <ArrowLeft size={14} />
+          <span className="hidden sm:inline">Back</span>
         </button>
-
-        {/* Dropdown */}
-        {selectorOpen && (
-          <div
-            className="absolute bottom-full left-0 mb-2 flex flex-col gap-1 p-1.5 rounded-xl bg-black/70 backdrop-blur-xl border border-cyan-300/20 overflow-y-auto"
-            style={{
-              boxShadow: '0 0 24px rgba(65,230,255,0.15), 0 -4px 16px rgba(65,230,255,0.08)',
-              maxHeight: 'min(60vh, 480px)',
-              scrollbarWidth: 'thin',
-              scrollbarColor: 'rgba(65,230,255,0.35) transparent',
-            }}
-          >
-            {SHOWCASES.map((sc, index) => {
-              const group = (sc as any).group as string | undefined
-              const previousGroup = index > 0 ? ((SHOWCASES[index - 1] as any).group as string | undefined) : undefined
-              return (
-                <Fragment key={sc.id}>
-                  {group && group !== previousGroup && (
-                    <div className="mt-1 px-3 pt-1 pb-0.5 text-[9px] font-semibold tracking-[0.34em] text-cyan-200/50">
-                      {group}
-                    </div>
-                  )}
-                  <button
-                    onClick={() => { switchTo(sc.id); setSelectorOpen(false) }}
-                    className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 whitespace-nowrap ${
-                      activeId === sc.id
-                        ? 'text-white bg-white/15'
-                        : 'text-white/40 hover:text-white/70 hover:bg-white/8'
-                    }`}
-                  >
-                    <span className="text-base">{sc.icon}</span>
-                    <span>{sc.label}</span>
-                  </button>
-                </Fragment>
-              )
-            })}
-          </div>
-        )}
+        <button
+          ref={showcaseButtonRef}
+          type="button"
+          onClick={() => setBrowserOpen(true)}
+          aria-label="Open showcase browser"
+          aria-expanded={browserOpen}
+          aria-controls="showcase-browser"
+          className="flex h-9 items-center gap-2 rounded-lg border border-cyan-300/25 bg-black/40 px-2.5 text-xs font-medium text-white/75 backdrop-blur-md transition-colors hover:border-cyan-300/50 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
+        >
+          <LayoutGrid size={14} className="text-cyan-200/80" />
+          <span className="hidden sm:inline">Showcases</span>
+          <span className="rounded bg-cyan-300/15 px-1.5 py-0.5 text-[10px] font-semibold text-cyan-200">
+            {SHOWCASES.length}
+          </span>
+        </button>
       </div>
 
+      <ShowcaseBrowser
+        open={browserOpen}
+        entries={SHOWCASES}
+        activeId={activeId}
+        onClose={() => setBrowserOpen(false)}
+        onSelect={handleSelect}
+      />
+
+      {loading && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed inset-0 z-[150] flex items-center justify-center bg-[#05070b]"
+        >
+          <div className="px-6 text-center">
+            <div className="text-2xl leading-none">{loading.icon}</div>
+            <div className="mt-4 text-[9px] font-semibold uppercase tracking-[0.28em] text-white/30">
+              Loading showcase
+            </div>
+            <div className="mt-2 text-sm font-medium text-white/70">{loading.label}</div>
+            <div className="mx-auto mt-5 h-px w-28 overflow-hidden bg-white/10">
+              <div className="h-px w-1/3 animate-pulse bg-cyan-300/60" />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Active showcase */}
-      <div className={`transition-opacity duration-200 ${transitioning ? 'opacity-0' : 'opacity-100'}`}>
+      <div
+        className={`transition-opacity duration-200 ${transitioning ? 'opacity-0' : 'opacity-100'}`}
+        style={{ visibility: browserOpen ? 'hidden' : 'visible' }}
+        aria-hidden={browserOpen || undefined}
+      >
         {activeId === 'nebula' && <NebulaGalaxyShowcase />}
-        {activeId === 'ssf-fog' && <IframeShowcase src="/showcases/ssf-fog/" title="屏幕空间雾 — Screen Space Fog" />}
-        {activeId === 'sylva' && <IframeShowcase src="https://mengto.github.io/sylva/" title="Sylva — 程序化苔藓景观" background="#34382f" />}
+        {activeId === 'ssf-fog' && (
+          <IframeShowcase
+            src="/showcases/ssf-fog/"
+            title="屏幕空间雾 — Screen Space Fog"
+            onReady={() => markFrameReady('ssf-fog')}
+          />
+        )}
+        {activeId === 'sylva' && (
+          <IframeShowcase
+            src="https://mengto.github.io/sylva/"
+            title="Sylva — 程序化苔藓景观"
+            background="#34382f"
+            onReady={() => markFrameReady('sylva')}
+          />
+        )}
         {activeId === 'fireworks' && <TextFireworksShowcase />}
         {activeId === 'mecha' && <MechaDisassembly />}
         {activeId === 'planets' && <ThreePlanets />}
         {activeId === 'orbits' && <OrbitalViz />}
         {activeId === 'keyboard' && <KeyboardConfigShowcase />}
         {activeId === 'pixijs' && <PixiJSShowcase />}
-        {activeId === 'kage' && <KageShowcase />}
+        {activeId === 'kage' && (
+          <IframeShowcase
+            src="/kage.html"
+            title="Kage — Night Kyoto"
+            background="#05070a"
+            onReady={() => markFrameReady('kage')}
+          />
+        )}
         {activeId === 'abyss' && <AbyssalDescent />}
-        {activeId === 'building' && <IframeShowcase src="/showcases/building/" title="香港程序化建筑生成" />}
-        {activeId === 'snow' && <IframeShowcase src="/showcases/snow/" title="雪野脚印系统" />}
-        {activeId === 'water' && <IframeShowcase src="/showcases/water/" title="电影级海面" />}
-        {activeId === 'ocean' && <IframeShowcase src="/showcases/ocean/" title="FFT 物理海洋" />}
-        {activeId === 'grass' && <IframeShowcase src="/showcases/grass/" title="草地土壤工作室" />}
-        {activeId === 'vegetation' && <IframeShowcase src="/showcases/vegetation/" title="WebGPU 藤蔓生成" />}
-        {activeId === 'crystal' && <IframeShowcase src="/showcases/crystal/" title="WebGPU 水晶绘制" />}
-        {activeId === 'rain' && <IframeShowcase src="/showcases/rain/" title="雨景工作室" />}
-        {activeId === 'starfall' && <IframeShowcase src="/showcases/starfall.html" title="星落镇 Starfall" background="#0b1026" />}
+        {activeId === 'building' && (
+          <IframeShowcase
+            src="/showcases/building/"
+            title="香港程序化建筑生成"
+            onReady={() => markFrameReady('building')}
+          />
+        )}
+        {activeId === 'snow' && (
+          <IframeShowcase
+            src="/showcases/snow/"
+            title="雪野脚印系统"
+            onReady={() => markFrameReady('snow')}
+          />
+        )}
+        {activeId === 'water' && (
+          <IframeShowcase
+            src="/showcases/water/"
+            title="电影级海面"
+            onReady={() => markFrameReady('water')}
+          />
+        )}
+        {activeId === 'ocean' && (
+          <IframeShowcase
+            src="/showcases/ocean/"
+            title="FFT 物理海洋"
+            onReady={() => markFrameReady('ocean')}
+          />
+        )}
+        {activeId === 'grass' && (
+          <IframeShowcase
+            src="/showcases/grass/"
+            title="草地土壤工作室"
+            onReady={() => markFrameReady('grass')}
+          />
+        )}
+        {activeId === 'vegetation' && (
+          <IframeShowcase
+            src="/showcases/vegetation/"
+            title="WebGPU 藤蔓生成"
+            onReady={() => markFrameReady('vegetation')}
+          />
+        )}
+        {activeId === 'crystal' && (
+          <IframeShowcase
+            src="/showcases/crystal/"
+            title="WebGPU 水晶绘制"
+            onReady={() => markFrameReady('crystal')}
+          />
+        )}
+        {activeId === 'rain' && (
+          <IframeShowcase
+            src="/showcases/rain/"
+            title="雨景工作室"
+            onReady={() => markFrameReady('rain')}
+          />
+        )}
+        {activeId === 'starfall' && (
+          <IframeShowcase
+            src="/showcases/starfall.html"
+            title="星落镇 Starfall"
+            background="#0b1026"
+            onReady={() => markFrameReady('starfall')}
+          />
+        )}
         {activeId === 'ascii-rest' && <AsciiRestShowcase />}
         {activeId === 'ascii-magic' && <AsciiMagicShowcase />}
         {activeId === 'ascii' && <AsciiSharksShowcase />}
         {activeId === 'looseleaf' && (
-          <LightIframeShowcase src="/looseleaf-showcase.html" title="Looseleaf Paper Desk" background="#a8c8bb" />
+          <IframeShowcase
+            src="/looseleaf-showcase.html"
+            title="Looseleaf Paper Desk"
+            background="#a8c8bb"
+            onReady={() => markFrameReady('looseleaf')}
+          />
         )}
         {activeId === 'phoenix' && (
-          <IframeShowcase src="/phoenix-crown.html" title="Chinese Phoenix Crown" background="#0f1420" />
+          <IframeShowcase
+            src="/phoenix-crown.html"
+            title="Chinese Phoenix Crown"
+            background="#0f1420"
+            onReady={() => markFrameReady('phoenix')}
+          />
         )}
         {activeId === 'grand-atelier' && (
-          <IframeShowcase src="/grand-atelier.html" title="Grand Atelier" background="#151713" />
+          <IframeShowcase
+            src="/grand-atelier.html"
+            title="Grand Atelier"
+            background="#151713"
+            onReady={() => markFrameReady('grand-atelier')}
+          />
         )}
       </div>
     </div>
