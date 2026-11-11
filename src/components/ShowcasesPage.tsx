@@ -324,6 +324,8 @@ const SHOWCASES = [
   /* Three.js 项目统一归入 THREE.JS 分组（含 three.js WebGPU 渲染器项目） */
   { id: 'nebula', label: 'Nebula Core', desc: 'Four-arm galaxy', icon: '✦', group: 'THREE.JS' },
   { id: 'ssf-fog', label: 'SSF Screen-Space Fog', desc: 'Forest road · height fog · sun scattering', icon: '🌫', group: 'THREE.JS' },
+  /* Sylva: 仅嵌入作者托管的线上体验；上游 README 明确不授予代码/设计/作品再分发许可 */
+  { id: 'sylva', label: 'Sylva', desc: 'Procedural moss landscape · MengTo', icon: '🌿', group: 'THREE.JS' },
   { id: 'fireworks', label: 'Text Fireworks', desc: 'Type → explode → return', icon: '✦', group: 'THREE.JS' },
   { id: 'planets', label: 'Three Planets', desc: '3D planet carousel', icon: '◐', group: 'THREE.JS' },
   { id: 'orbits', label: 'Orbital Orbits', desc: 'Satellite orbit viz', icon: '⊕', group: 'THREE.JS' },
@@ -435,6 +437,7 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
       <div className={`transition-opacity duration-200 ${transitioning ? 'opacity-0' : 'opacity-100'}`}>
         {activeId === 'nebula' && <NebulaGalaxyShowcase />}
         {activeId === 'ssf-fog' && <IframeShowcase src="/showcases/ssf-fog/" title="屏幕空间雾 — Screen Space Fog" />}
+        {activeId === 'sylva' && <IframeShowcase src="https://mengto.github.io/sylva/" title="Sylva — 程序化苔藓景观" background="#34382f" />}
         {activeId === 'fireworks' && <TextFireworksShowcase />}
         {activeId === 'mecha' && <MechaDisassembly />}
         {activeId === 'planets' && <ThreePlanets />}
