@@ -496,11 +496,11 @@ const SHOWCASES = [
   {
     id: 'starfall',
     label: 'Starfall Town',
-    desc: 'Living diorama: day-night, seasons, fireworks',
+    desc: 'Living diorama: day-night, seasons, drifting villagers',
     icon: '🏘',
     group: 'THREE.JS',
     tags: ['Architecture', 'Nature', 'Particles', 'Atmosphere'],
-    keywords: ['星落镇', '村庄', '昼夜', '季节', '烟花', '小镇', 'starfall'],
+    keywords: ['星落镇', '村庄', '昼夜', '季节', '萤火虫', '小镇', 'starfall'],
     frame: true,
   },
   {
