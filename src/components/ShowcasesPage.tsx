@@ -10,6 +10,7 @@ import { ArrowLeft, LayoutGrid, Search as SearchIcon, X as XIcon } from 'lucide-
 import MechaDisassembly from './showcases/MechaDisassembly'
 import * as THREE from 'three'
 import OrbitalViz from './OrbitalViz'
+import { FABLE_SHOWCASES } from './fableCatalog'
 import KeyboardConfigShowcase from './KeyboardConfigShowcase'
 import PixiJSShowcase from './PixiJSShowcase'
 import AbyssalDescent from './showcases/AbyssalDescent'
@@ -304,7 +305,7 @@ function ThreePlanets() {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   SHOWCASE CATALOG — 25 条项目，按一级分组 + 标签维护
+   SHOWCASE CATALOG — 现有项目 + Fable 76，按一级分组 + 标签维护
    ═══════════════════════════════════════════════════════════════ */
 const SHOWCASE_TAGS = [
   'Nature',
@@ -318,10 +319,14 @@ const SHOWCASE_TAGS = [
   'Mechanical',
   'Culture',
   'Atmosphere',
+  'Generative',
+  'Physics',
+  'Interface',
+  'Scene',
 ] as const
 
 type ShowcaseTag = (typeof SHOWCASE_TAGS)[number]
-type ShowcaseGroup = 'THREE.JS' | 'ASCII'
+type ShowcaseGroup = 'THREE.JS' | 'ASCII' | 'FABLE'
 type BrowserGroup = ShowcaseGroup | 'OTHER' | 'ALL'
 
 type ShowcaseEntry = {
@@ -333,6 +338,8 @@ type ShowcaseEntry = {
   readonly tags: readonly ShowcaseTag[]
   readonly keywords: readonly string[]
   readonly frame?: boolean
+  readonly src?: string
+  readonly credit?: string
 }
 
 const SHOWCASES = [
@@ -584,6 +591,8 @@ const SHOWCASES = [
     tags: ['Typography', 'Nature'],
     keywords: ['ASCII', '鲨鱼', '鱼群', '海洋', 'shark'],
   },
+  /* Fable 76：远程 iframe，作者 MiaAI-Lab；上游无 LICENSE，不复制源文件 */
+  ...FABLE_SHOWCASES,
 ] as const
 
 type ShowcaseId = (typeof SHOWCASES)[number]['id']
@@ -646,6 +655,11 @@ function ShowcaseCard({
             {tag}
           </span>
         ))}
+        {entry.credit && (
+          <span className="ml-auto text-[9px] tracking-[0.04em] text-white/[0.22]">
+            {entry.credit}
+          </span>
+        )}
       </div>
     </button>
   )
@@ -700,6 +714,7 @@ function ShowcaseBrowser({
       ALL: entries.length,
       'THREE.JS': entries.filter(entry => entry.group === 'THREE.JS').length,
       ASCII: entries.filter(entry => entry.group === 'ASCII').length,
+      FABLE: entries.filter(entry => entry.group === 'FABLE').length,
       OTHER: entries.filter(entry => !entry.group).length,
     }),
     [entries]
@@ -727,6 +742,7 @@ function ShowcaseBrowser({
           entry.desc,
           entry.group ?? 'OTHER',
           entry.group === 'THREE.JS' ? 'threejs treejs three 3d' : '',
+          entry.credit ?? '',
           entry.tags.join(' '),
           entry.keywords.join(' '),
         ].join(' ')
@@ -748,7 +764,7 @@ function ShowcaseBrowser({
 
   const sections = useMemo(() => {
     if (!showSections) return []
-    const order: BrowserGroup[] = ['THREE.JS', 'OTHER', 'ASCII']
+    const order: BrowserGroup[] = ['THREE.JS', 'ASCII', 'FABLE', 'OTHER']
     return order
       .map(key => ({ key, items: sorted.filter(entry => groupKey(entry) === key) }))
       .filter(section => section.items.length > 0)
@@ -859,7 +875,7 @@ function ShowcaseBrowser({
             className="mt-3 flex gap-2 overflow-x-auto pb-1"
             style={{ scrollbarWidth: 'none' }}
           >
-            {(['ALL', 'THREE.JS', 'ASCII', 'OTHER'] as const).map(key => (
+            {(['ALL', 'THREE.JS', 'ASCII', 'FABLE', 'OTHER'] as const).map(key => (
               <button
                 key={key}
                 type="button"
@@ -1079,6 +1095,10 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
     [switchTo]
   )
 
+  const activeEntry = SHOWCASES.find(showcase => showcase.id === activeId) as
+    | ShowcaseEntry
+    | undefined
+
   return (
     <div className="relative w-full">
       {/* 左上角：Back + Showcase 浏览器入口 */}
@@ -1271,6 +1291,15 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
             title="Grand Atelier"
             background="#151713"
             onReady={() => markFrameReady('grand-atelier')}
+          />
+        )}
+        {/* Fable 76：所有作品共用远程 iframe 分支；不复制上游代码 */}
+        {activeEntry?.src && (
+          <IframeShowcase
+            src={activeEntry.src}
+            title={`${activeEntry.label} — ${activeEntry.credit ?? 'Fable 76'}`}
+            background="#0b1026"
+            onReady={() => markFrameReady(activeEntry.id as ShowcaseId)}
           />
         )}
       </div>
