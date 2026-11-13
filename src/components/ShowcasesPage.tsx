@@ -374,6 +374,19 @@ const SHOWCASES = [
     keywords: ['苔藓', '根须', '自然', '指针', 'moss'],
     frame: true,
   },
+  /* Sylva Bloom：以已授权 Sylva 源码为底，新增表面扎根花路、蕨叶萌发、
+     孢子/花粉与叙事 HUD；本地静态 iframe，保留原版 Sylva 条目。 */
+  {
+    id: 'sylva-bloom',
+    label: 'Sylva — Bloom Trail',
+    desc: 'Ecological succession · pointer-woken bloom',
+    icon: '🌸',
+    group: 'THREE.JS',
+    tags: ['Nature', 'Interaction', 'Generative'],
+    keywords: ['苔藓', '花路', '生态演替', '指针', 'rewilding', 'bloom'],
+    frame: true,
+    credit: 'MengTo',
+  },
   {
     id: 'fireworks',
     label: 'Text Fireworks',
@@ -1185,6 +1198,14 @@ export default function ShowcasesPage({ onNavigate }: { onNavigate?: OnNavigate 
             title="Sylva — 程序化苔藓景观"
             background="#34382f"
             onReady={() => markFrameReady('sylva')}
+          />
+        )}
+        {activeId === 'sylva-bloom' && (
+          <IframeShowcase
+            src="/showcases/sylva-bloom/"
+            title="Sylva — Bloom Trail"
+            background="#4a4d44"
+            onReady={() => markFrameReady('sylva-bloom')}
           />
         )}
         {activeId === 'fireworks' && <TextFireworksShowcase />}
