@@ -43203,21 +43203,101 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
       "label": "Shaders Official Component Cover"
     }
   },
+  "sh-demo-chroma-flow": {
+    "id": "sh-demo-chroma-flow",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ChromaFlow.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-liquid-metal": {
+    "id": "sh-demo-liquid-metal",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LiquidMetal.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-holographic": {
+    "id": "sh-demo-holographic",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Holographic.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-kaleidoscope": {
+    "id": "sh-demo-kaleidoscope",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Kaleidoscope.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-nebula": {
+    "id": "sh-demo-nebula",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Nebula.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-neon": {
+    "id": "sh-demo-neon",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Neon.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-reaction-diffusion": {
+    "id": "sh-demo-reaction-diffusion",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ReactionDiffusion.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
+  "sh-demo-voronoi": {
+    "id": "sh-demo-voronoi",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Voronoi.jpg",
+      "label": "Shaders Official Demo Cover"
+    }
+  },
   "sh-showcase": {
     "id": "sh-showcase",
     "project": "shaders",
     "kind": "media-image",
     "status": "ready",
     "media": {
-      "poster": "/shaders/covers/Aurora.jpg",
-      "label": "Shaders WebGPU Showcase Cover"
+      "poster": "/shaders/showcase-cover.jpg",
+      "label": "Shaders Official Demo Cover"
     }
   }
 }
 
 export const previewStats = {
   "ready:media-video": 268,
-  "ready:media-image": 349,
+  "ready:media-image": 357,
   "ready:react-generated": 572,
   "ready:html-live": 5286,
   "unsupported:unsupported": 28,

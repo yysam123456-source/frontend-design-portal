@@ -1,5 +1,267 @@
 [
   {
+    "id": "sh-showcase",
+    "project": "shaders",
+    "name": "Shaders — 200 WebGPU Effects",
+    "category": "official-showcase",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-showcase",
+      "effects",
+      "showcase"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte",
+      "JavaScript"
+    ],
+    "description": "A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, holographic foil, kaleidoscope, nebula, neon, reaction-diffusion and Voronoi. Aurora, CursorRipples and FilmGrain can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Aurora, CursorRipples, FilmGrain } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-[420px] w-full\">\n      <Aurora colorA=\"#070b2a\" colorB=\"#16e0ff\" colorC=\"#9b5cff\" intensity={82} speed={6} waviness={72} />\n      <CursorRipples />\n      <FilmGrain />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components"
+  },
+  {
+    "id": "sh-demo-chroma-flow",
+    "project": "shaders",
+    "name": "ChromaFlow — Liquid Color",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "interactive",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A velvety chromatic field that bends around the cursor. One layer, pure color motion.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ChromaFlow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ChromaFlow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/chromaflow"
+  },
+  {
+    "id": "sh-demo-liquid-metal",
+    "project": "shaders",
+    "name": "LiquidMetal — Chrome Bloom",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "shape-effects",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Molten chrome folds over the shape with a reflective, high-contrast specular sweep.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LiquidMetal } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LiquidMetal />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/liquidmetal"
+  },
+  {
+    "id": "sh-demo-holographic",
+    "project": "shaders",
+    "name": "Holographic — Iridescent Foil",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "shape-effects",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rainbow foil, glitter flake and a shifting sheen — the full holographic sticker look.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Holographic } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Holographic />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/holographic"
+  },
+  {
+    "id": "sh-demo-kaleidoscope",
+    "project": "shaders",
+    "name": "Kaleidoscope — Fractal Bloom",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "distortions",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Radial mirrored segments turn a single image into an intricate flower of glass and stone.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Kaleidoscope } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Kaleidoscope />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/kaleidoscope"
+  },
+  {
+    "id": "sh-demo-nebula",
+    "project": "shaders",
+    "name": "Nebula — Deep Space",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "shape-effects",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Billowing emission clouds sealed inside polished glass, with a slow stellar drift.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Nebula } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Nebula />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/nebula"
+  },
+  {
+    "id": "sh-demo-neon",
+    "project": "shaders",
+    "name": "Neon — Light Ring",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "shape-effects",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A photorealistic neon tube with a controlled glow falloff and a cold electric halo.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Neon } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Neon />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/neon"
+  },
+  {
+    "id": "sh-demo-reaction-diffusion",
+    "project": "shaders",
+    "name": "ReactionDiffusion — Living Cells",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "interactive",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Gray-Scott chemistry grows into coral, veins and living tissue across the layer.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ReactionDiffusion } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ReactionDiffusion />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/reactiondiffusion"
+  },
+  {
+    "id": "sh-demo-voronoi",
+    "project": "shaders",
+    "name": "Voronoi — Cellular Glass",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "textures",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Distance-to-seed cellular geometry, colored like stained glass under pressure.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Voronoi } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Voronoi />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/voronoi"
+  },
+  {
     "id": "sh-angular-blur",
     "project": "shaders",
     "name": "AngularBlur",
@@ -5398,32 +5660,5 @@
       ]
     },
     "demoUrl": "https://shaders.com/docs/components/zoomblur"
-  },
-  {
-    "id": "sh-showcase",
-    "project": "shaders",
-    "name": "Shaders — WebGPU Effect Playground",
-    "category": "official-showcase",
-    "style": [
-      "webgpu",
-      "shader",
-      "official-demo",
-      "playground",
-      "aurora"
-    ],
-    "techStack": [
-      "WebGPU",
-      "WGSL",
-      "JavaScript"
-    ],
-    "description": "A live layered WebGPU playground for the Shaders library: Aurora, CursorRipples and FilmGrain stacked on one canvas. 200 MIT-licensed effect components, exported from the browser editor as React, Vue, Svelte or JavaScript.",
-    "codeSnippet": {
-      "language": "html",
-      "source": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Shaders — WebGPU Effect Playground</title>\n  <style>\n    * { box-sizing: border-box; }\n    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #050816; }\n    body {\n      color: #f8fafc;\n      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n    }\n    .stage { position: relative; width: 100%; height: 100%; min-height: 420px; overflow: hidden; background: #050816; }\n    canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }\n    .wash {\n      position: absolute; inset: 0; pointer-events: none;\n      background:\n        radial-gradient(ellipse at 50% 115%, rgba(110, 231, 255, 0.22), transparent 52%),\n        linear-gradient(180deg, rgba(3, 6, 20, 0.34), rgba(3, 6, 20, 0.72));\n    }\n    .copy {\n      position: absolute; left: clamp(22px, 7vw, 84px); bottom: clamp(22px, 8vh, 72px);\n      max-width: min(560px, 72vw); pointer-events: none;\n      text-shadow: 0 2px 26px rgba(0, 0, 0, 0.55);\n    }\n    .eyebrow {\n      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px;\n      color: rgba(221, 240, 255, 0.74); font-size: 10px; font-weight: 700;\n      letter-spacing: 0.22em; text-transform: uppercase;\n    }\n    .eyebrow::before { content: \"\"; width: 24px; height: 1px; background: #67e8f9; box-shadow: 0 0 14px #22d3ee; }\n    h1 {\n      margin: 0; font-size: clamp(32px, 5.4vw, 72px); line-height: 0.92;\n      letter-spacing: -0.055em; font-weight: 650;\n    }\n    .sub {\n      margin: 14px 0 0; max-width: 390px; color: rgba(226, 239, 255, 0.72);\n      font-size: clamp(12px, 1.4vw, 15px); line-height: 1.6;\n    }\n    .hint {\n      display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;\n      padding: 7px 11px; border: 1px solid rgba(148, 224, 255, 0.25);\n      border-radius: 999px; background: rgba(4, 13, 31, 0.5);\n      color: rgba(224, 242, 254, 0.8); font-size: 10px; letter-spacing: 0.08em;\n    }\n    .dot { width: 6px; height: 6px; border-radius: 50%; background: #67e8f9; box-shadow: 0 0 12px #22d3ee; }\n    .fallback {\n      position: absolute; inset: 0; display: grid; place-items: center;\n      background: #050816; overflow: hidden; transition: opacity 220ms ease;\n    }\n    .fallback img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: saturate(1.15); }\n    .fallback .box {\n      position: relative; z-index: 2; max-width: 360px; margin: 22px;\n      padding: 20px; border: 1px solid rgba(255, 255, 255, 0.18);\n      border-radius: 18px; background: rgba(4, 10, 22, 0.72);\n      backdrop-filter: blur(12px); text-align: center;\n    }\n    .fallback h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.03em; }\n    .fallback p { margin: 0; color: rgba(226, 239, 255, 0.68); font-size: 11px; line-height: 1.6; }\n    .fallback.is-off { opacity: 0; pointer-events: none; }\n  </style>\n</head>\n<body>\n  <main class=\"stage\" id=\"stage\">\n    <canvas id=\"shader-canvas\" aria-label=\"Shaders WebGPU aurora preview\"></canvas>\n    <div class=\"wash\"></div>\n    <div class=\"copy\">\n      <div class=\"eyebrow\">Shaders / WebGPU</div>\n      <h1>Light,<br/>stacked.</h1>\n      <p class=\"sub\">200+ MIT-licensed WebGPU effect components. Aurora and cursor ripples are layered on one canvas — move through the light.</p>\n      <div class=\"hint\"><span class=\"dot\"></span>MOVE CURSOR TO DISTURB THE FIELD</div>\n    </div>\n    <div class=\"fallback\" id=\"fallback\">\n      <img src=\"/shaders/covers/Aurora.jpg\" alt=\"Aurora shader preview\" />\n      <div class=\"box\">\n        <h2>WebGPU is required</h2>\n        <p>This preview is running in a browser without a WebGPU device. The same effect is available in the Shaders editor and npm package.</p>\n      </div>\n    </div>\n  </main>\n  <script type=\"module\">\n    const canvas = document.getElementById('shader-canvas')\n    const fallback = document.getElementById('fallback')\n    let shader = null\n    const showFallback = () => {\n      fallback.classList.remove('is-off')\n      canvas.style.opacity = '0'\n    }\n    // The fallback poster is visible from the first frame. Only a successfully\n    // mounted WebGPU instance hides it, so a CDN or adapter failure never leaves\n    // the card as a blank rectangle.\n    if (!('gpu' in navigator)) {\n      showFallback()\n    } else {\n      try {\n        const { createShader, isWebGPUSupported } = await import('https://esm.sh/shaders@4.0.7/js?bundle')\n        if (!isWebGPUSupported()) {\n          showFallback()\n        } else {\n          shader = await createShader(canvas, {\n            components: [\n              {\n                type: 'Aurora',\n                id: 'aurora',\n                props: {\n                  colorA: '#070b2a',\n                  colorB: '#16e0ff',\n                  colorC: '#9b5cff',\n                  intensity: 82,\n                  speed: 6,\n                  waviness: 72,\n                  height: 155,\n                  seed: 17\n                }\n              },\n              {\n                type: 'CursorRipples',\n                id: 'ripples',\n                props: {}\n              },\n              {\n                type: 'FilmGrain',\n                id: 'grain',\n                props: {}\n              }\n            ]\n          })\n          canvas.style.opacity = '1'\n          fallback.classList.add('is-off')\n        }\n      } catch (error) {\n        showFallback()\n        // Decorative preview only: keep the console quiet unless debugging.\n        console.warn('[shaders-playground]', error?.message || error)\n      }\n    }\n    window.addEventListener('pagehide', () => shader?.destroy?.())\n  </script>\n</body>\n</html>\n",
-      "dependencies": [
-        "shaders"
-      ]
-    },
-    "demoUrl": "https://shaders.com/"
   }
 ]

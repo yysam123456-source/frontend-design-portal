@@ -111,6 +111,7 @@ function formatCategory(category: string) {
 function getDemoKindLabel(component: ComponentSummary) {
   const record = getPreviewRecord(component.id)
   if (component.category === 'official-showcase') return 'Showcase'
+  if (component.project === 'shaders' && component.category === 'official-demo') return 'Curated Demo'
   if (record?.kind === 'media-video') return 'Video Demo'
   if (record?.kind === 'media-image') return 'Image Demo'
   if (record?.kind === 'html-live') return 'Live Demo'

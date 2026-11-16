@@ -29,9 +29,9 @@
     "looseleaf": 123,
     "ascii-rest": 240,
     "ascii-magic": 734,
-    "shaders": 201
+    "shaders": 209
   },
-  "total": 6626,
+  "total": 6634,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -120028,30 +120028,273 @@
       ]
     },
     {
-      "id": "sh-showcase",
+      "id": "sh-demo-chroma-flow",
       "project": "shaders",
-      "name": "Shaders — WebGPU Effect Playground",
-      "category": "official-showcase",
+      "name": "ChromaFlow — Liquid Color",
+      "category": "official-demo",
       "style": [
         "webgpu",
         "shader",
         "official-demo",
-        "playground",
-        "aurora"
+        "interactive",
+        "curated"
       ],
       "techStack": [
         "WebGPU",
         "WGSL",
-        "JavaScript"
+        "React",
+        "Vue",
+        "Svelte"
       ],
-      "description": "A live layered WebGPU playground for the Shaders library: Aurora, CursorRipples and FilmGrain stacked on one canvas. 200 MIT-licensed effect components, exported from the browser editor as React, Vue, Svelte or JavaScript.",
-      "language": "html",
-      "previewUrl": "/shaders/covers/Aurora.jpg",
+      "description": "A velvety chromatic field that bends around the cursor. One layer, pure color motion.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ChromaFlow.jpg",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "playground",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-liquid-metal",
+      "project": "shaders",
+      "name": "LiquidMetal — Chrome Bloom",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Molten chrome folds over the shape with a reflective, high-contrast specular sweep.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LiquidMetal.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-holographic",
+      "project": "shaders",
+      "name": "Holographic — Iridescent Foil",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rainbow foil, glitter flake and a shifting sheen — the full holographic sticker look.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Holographic.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-kaleidoscope",
+      "project": "shaders",
+      "name": "Kaleidoscope — Fractal Bloom",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "distortions",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Radial mirrored segments turn a single image into an intricate flower of glass and stone.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Kaleidoscope.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-nebula",
+      "project": "shaders",
+      "name": "Nebula — Deep Space",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Billowing emission clouds sealed inside polished glass, with a slow stellar drift.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Nebula.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-neon",
+      "project": "shaders",
+      "name": "Neon — Light Ring",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A photorealistic neon tube with a controlled glow falloff and a cold electric halo.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Neon.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-reaction-diffusion",
+      "project": "shaders",
+      "name": "ReactionDiffusion — Living Cells",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "interactive",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Gray-Scott chemistry grows into coral, veins and living tissue across the layer.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ReactionDiffusion.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-demo-voronoi",
+      "project": "shaders",
+      "name": "Voronoi — Cellular Glass",
+      "category": "official-demo",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "textures",
+        "curated"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Distance-to-seed cellular geometry, colored like stained glass under pressure.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Voronoi.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-showcase",
+      "project": "shaders",
+      "name": "Shaders — 200 WebGPU Effects",
+      "category": "official-showcase",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-showcase",
+        "effects",
+        "showcase"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte",
+        "JavaScript"
+      ],
+      "description": "A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, holographic foil, kaleidoscope, nebula, neon, reaction-diffusion and Voronoi. Aurora, CursorRipples and FilmGrain can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.",
+      "language": "tsx",
+      "previewUrl": "/shaders/showcase-cover.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-showcase",
+        "effects",
         "mit"
       ]
     }
