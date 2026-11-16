@@ -175,7 +175,7 @@ export function useComponentFilter(): UseComponentFilterResult {
   })
 
   useEffect(() => {
-    fetch('/data/index.json')
+    fetch('/data/index.json', { cache: 'no-cache' })
       .then((res) => res.json())
       .then((data) => {
         setRawComponents(enrichComponents(data.components || []))
