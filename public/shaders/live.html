@@ -51,6 +51,7 @@
     let instance = null
     try {
       const runtime = await import('/shaders/runtime/shaders.js')
+      runtime.setShadersDebug(true)
       if (!runtime.isWebGPUSupported()) {
         window.__shadersDebug = { reason: 'no-webgpu' }
         status.style.display = 'none'
@@ -76,6 +77,10 @@
         }
         instance = await runtime.createShader(canvas, {
           components: layers,
+          onReady: () => {
+            window.__shadersDebug = { reason: 'ready' }
+            status.textContent = 'LIVE · WEBGPU'
+          },
           onError: (err) => {
             window.__shadersDebug = { reason: 'runtime-onError', message: String(err?.message || err || '') }
             canvas.style.display = 'none'
