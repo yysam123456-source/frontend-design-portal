@@ -43408,21 +43408,10 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
     "project": "shaders",
     "kind": "html-live",
     "status": "ready",
-    "entry": "/shaders/live.html?layers=ChromaFlow%2CHolographic%2CNebula&poster=%2Fshaders%2Fshowcase-cover.jpg&label=Shaders+Stack",
+    "entry": "/shaders/live.html?component=Nebula&poster=%2Fshaders%2Fshowcase-cover.jpg&label=Nebula+%E2%80%94+Cosmic+Bloom",
     "media": {
       "poster": "/shaders/showcase-cover.jpg",
       "label": "Shaders Live WebGPU Showcase"
-    }
-  },
-  "sh-demo-chroma-flow": {
-    "id": "sh-demo-chroma-flow",
-    "project": "shaders",
-    "kind": "html-live",
-    "status": "ready",
-    "entry": "/shaders/live.html?component=ChromaFlow&poster=%2Fshaders%2Fcovers%2FChromaFlow.jpg&label=ChromaFlow+%E2%80%94+Liquid+Color",
-    "media": {
-      "poster": "/shaders/covers/ChromaFlow.jpg",
-      "label": "Shaders Live WebGPU Demo"
     }
   },
   "sh-demo-liquid-metal": {
@@ -43491,14 +43480,25 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
       "label": "Shaders Live WebGPU Demo"
     }
   },
-  "sh-demo-kaleidoscope": {
-    "id": "sh-demo-kaleidoscope",
+  "sh-demo-aurora": {
+    "id": "sh-demo-aurora",
     "project": "shaders",
     "kind": "html-live",
     "status": "ready",
-    "entry": "/shaders/live.html?component=Kaleidoscope&poster=%2Fshaders%2Fcovers%2FKaleidoscope.jpg&child=1&label=Kaleidoscope+%E2%80%94+Fractal+Bloom",
+    "entry": "/shaders/live.html?component=Aurora&poster=%2Fshaders%2Fcovers%2FAurora.jpg&label=Aurora+%E2%80%94+Polar+Veil",
     "media": {
-      "poster": "/shaders/covers/Kaleidoscope.jpg",
+      "poster": "/shaders/covers/Aurora.jpg",
+      "label": "Shaders Live WebGPU Demo"
+    }
+  },
+  "sh-demo-nebula": {
+    "id": "sh-demo-nebula",
+    "project": "shaders",
+    "kind": "html-live",
+    "status": "ready",
+    "entry": "/shaders/live.html?component=Nebula&poster=%2Fshaders%2Fcovers%2FNebula.jpg&label=Nebula+%E2%80%94+Cosmic+Bloom",
+    "media": {
+      "poster": "/shaders/covers/Nebula.jpg",
       "label": "Shaders Live WebGPU Demo"
     }
   }

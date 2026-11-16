@@ -36,14 +36,14 @@ const curatedCover = (id) => {
   return demo ? `${demo.folder}.jpg` : 'Aurora.jpg'
 }
 const CURATED_DEMOS = [
-  {folder: 'ChromaFlow', title: 'ChromaFlow — Liquid Color', description: 'A velvety chromatic field that bends around the cursor. One layer, pure color motion.'},
   {folder: 'LiquidMetal', title: 'LiquidMetal — Chrome Bloom', description: 'Molten chrome folds over the shape with a reflective, high-contrast specular sweep.'},
   {folder: 'Holographic', title: 'Holographic — Iridescent Foil', description: 'Rainbow foil, glitter flake and a shifting sheen — the full holographic sticker look.'},
   {folder: 'Plasma', title: 'Plasma — Violet Storm', description: 'Layered violet plasma folds with a slow electric shimmer and deep contrast.'},
   {folder: 'ParticleField', title: 'ParticleField — Neon Dust', description: 'A dense field of luminous particles drifting through a dark volumetric haze.'},
   {folder: 'IsometricCubes', title: 'IsometricCubes — Chromatic Grid', description: 'A chromatic isometric lattice of glass cubes with a candy-colored parallax.'},
   {folder: 'ReactionDiffusion', title: 'ReactionDiffusion — Living Cells', description: 'Gray-Scott chemistry grows into coral, veins and living tissue across the layer.'},
-  {folder: 'Kaleidoscope', title: 'Kaleidoscope — Fractal Bloom', description: 'Radial mirrored segments turn a single image into an intricate flower of glass and stone.'},
+  {folder: 'Aurora', title: 'Aurora — Polar Veil', description: 'A slow aurora curtain folds green, cyan and violet light across a dark polar sky.'},
+  {folder: 'Nebula', title: 'Nebula — Cosmic Bloom', description: 'A soft planetary nebula blooms in rose, indigo and pearl with a slow orbital drift.'},
 ]
 const CATEGORY_MAP = {
   Textures: 'textures',
@@ -123,7 +123,7 @@ function officialEntry() {
     style: ['webgpu', 'shader', 'official-showcase', 'effects', 'showcase'],
     techStack: ['WebGPU', 'WGSL', 'React', 'Vue', 'Svelte', 'JavaScript'],
     description:
-      'A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, iridescent foil, violet plasma, neon dust, isometric glass, living cells and fractal bloom. ChromaFlow, Holographic and Nebula can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.',
+      'A curated tour through 200 MIT-licensed WebGPU effect components: chrome, iridescent foil, violet plasma, neon dust, isometric glass, living cells, aurora and cosmic nebula. Each preview is a live WebGPU canvas, not a static thumbnail; the browser editor exports the tree to React, Vue, Svelte or JavaScript.',
     codeSnippet: {
       language: 'tsx',
       source: `import { Shader, Aurora, CursorRipples, FilmGrain } from 'shaders/react'
@@ -141,9 +141,9 @@ export function Demo() {
     },
     demoUrl: 'https://shaders.com/docs/components',
     livePreviewUrl: livePreviewUrl({
-      layers: ['ChromaFlow', 'Holographic', 'Nebula'],
+      component: 'Nebula',
       poster: SHOWCASE_COVER,
-      label: 'Shaders Stack',
+      label: 'Nebula — Cosmic Bloom',
     }),
   }
 }

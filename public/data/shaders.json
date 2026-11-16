@@ -5619,7 +5619,7 @@
       "Svelte",
       "JavaScript"
     ],
-    "description": "A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, iridescent foil, violet plasma, neon dust, isometric glass, living cells and fractal bloom. ChromaFlow, Holographic and Nebula can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.",
+    "description": "A curated tour through 200 MIT-licensed WebGPU effect components: chrome, iridescent foil, violet plasma, neon dust, isometric glass, living cells, aurora and cosmic nebula. Each preview is a live WebGPU canvas, not a static thumbnail; the browser editor exports the tree to React, Vue, Svelte or JavaScript.",
     "codeSnippet": {
       "language": "tsx",
       "source": "import { Shader, Aurora, CursorRipples, FilmGrain } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-[420px] w-full\">\n      <Aurora colorA=\"#070b2a\" colorB=\"#16e0ff\" colorC=\"#9b5cff\" intensity={82} speed={6} waviness={72} />\n      <CursorRipples />\n      <FilmGrain />\n    </Shader>\n  )\n}",
@@ -5628,37 +5628,7 @@
       ]
     },
     "demoUrl": "https://shaders.com/docs/components",
-    "livePreviewUrl": "/shaders/live.html?layers=ChromaFlow%2CHolographic%2CNebula&poster=%2Fshaders%2Fshowcase-cover.jpg&label=Shaders+Stack"
-  },
-  {
-    "id": "sh-demo-chroma-flow",
-    "project": "shaders",
-    "name": "ChromaFlow — Liquid Color",
-    "category": "official-demo",
-    "style": [
-      "webgpu",
-      "shader",
-      "official-demo",
-      "interactive",
-      "curated"
-    ],
-    "techStack": [
-      "WebGPU",
-      "WGSL",
-      "React",
-      "Vue",
-      "Svelte"
-    ],
-    "description": "A velvety chromatic field that bends around the cursor. One layer, pure color motion.",
-    "codeSnippet": {
-      "language": "tsx",
-      "source": "import { Shader, ChromaFlow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ChromaFlow />\n    </Shader>\n  )\n}",
-      "dependencies": [
-        "shaders"
-      ]
-    },
-    "demoUrl": "https://shaders.com/docs/components/chromaflow",
-    "livePreviewUrl": "/shaders/live.html?component=ChromaFlow&poster=%2Fshaders%2Fcovers%2FChromaFlow.jpg&label=ChromaFlow+%E2%80%94+Liquid+Color"
+    "livePreviewUrl": "/shaders/live.html?component=Nebula&poster=%2Fshaders%2Fshowcase-cover.jpg&label=Nebula+%E2%80%94+Cosmic+Bloom"
   },
   {
     "id": "sh-demo-liquid-metal",
@@ -5841,15 +5811,15 @@
     "livePreviewUrl": "/shaders/live.html?component=ReactionDiffusion&poster=%2Fshaders%2Fcovers%2FReactionDiffusion.jpg&label=ReactionDiffusion+%E2%80%94+Living+Cells"
   },
   {
-    "id": "sh-demo-kaleidoscope",
+    "id": "sh-demo-aurora",
     "project": "shaders",
-    "name": "Kaleidoscope — Fractal Bloom",
+    "name": "Aurora — Polar Veil",
     "category": "official-demo",
     "style": [
       "webgpu",
       "shader",
       "official-demo",
-      "distortions",
+      "textures",
       "curated"
     ],
     "techStack": [
@@ -5859,15 +5829,45 @@
       "Vue",
       "Svelte"
     ],
-    "description": "Radial mirrored segments turn a single image into an intricate flower of glass and stone.",
+    "description": "A slow aurora curtain folds green, cyan and violet light across a dark polar sky.",
     "codeSnippet": {
       "language": "tsx",
-      "source": "import { Shader, Kaleidoscope } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Kaleidoscope />\n    </Shader>\n  )\n}",
+      "source": "import { Shader, Aurora } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Aurora />\n    </Shader>\n  )\n}",
       "dependencies": [
         "shaders"
       ]
     },
-    "demoUrl": "https://shaders.com/docs/components/kaleidoscope",
-    "livePreviewUrl": "/shaders/live.html?component=Kaleidoscope&poster=%2Fshaders%2Fcovers%2FKaleidoscope.jpg&child=1&label=Kaleidoscope+%E2%80%94+Fractal+Bloom"
+    "demoUrl": "https://shaders.com/docs/components/aurora",
+    "livePreviewUrl": "/shaders/live.html?component=Aurora&poster=%2Fshaders%2Fcovers%2FAurora.jpg&label=Aurora+%E2%80%94+Polar+Veil"
+  },
+  {
+    "id": "sh-demo-nebula",
+    "project": "shaders",
+    "name": "Nebula — Cosmic Bloom",
+    "category": "official-demo",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "shape-effects",
+      "curated"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A soft planetary nebula blooms in rose, indigo and pearl with a slow orbital drift.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Nebula } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Nebula />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/nebula",
+    "livePreviewUrl": "/shaders/live.html?component=Nebula&poster=%2Fshaders%2Fcovers%2FNebula.jpg&label=Nebula+%E2%80%94+Cosmic+Bloom"
   }
 ]
