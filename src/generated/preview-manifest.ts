@@ -41202,12 +41202,2022 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
     "project": "ascii-magic",
     "kind": "html-live",
     "status": "ready"
+  },
+  "sh-angular-blur": {
+    "id": "sh-angular-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/AngularBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-arc": {
+    "id": "sh-arc",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Arc.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-ascii": {
+    "id": "sh-ascii",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Ascii.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-aurora": {
+    "id": "sh-aurora",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Aurora.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-bar-shift": {
+    "id": "sh-bar-shift",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BarShift.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-barn-doors": {
+    "id": "sh-barn-doors",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BarnDoors.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-beam": {
+    "id": "sh-beam",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Beam.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-bend": {
+    "id": "sh-bend",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Bend.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-blob": {
+    "id": "sh-blob",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Blob.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-block-dissolve": {
+    "id": "sh-block-dissolve",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BlockDissolve.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-block-noise": {
+    "id": "sh-block-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BlockNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-blue-noise": {
+    "id": "sh-blue-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BlueNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-blur": {
+    "id": "sh-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Blur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-boids-update": {
+    "id": "sh-boids-update",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Boids.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-bokeh-blur": {
+    "id": "sh-bokeh-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BokehBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-brick-pattern": {
+    "id": "sh-brick-pattern",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BrickPattern.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-brightness-contrast": {
+    "id": "sh-brightness-contrast",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BrightnessContrast.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-brushed-metal": {
+    "id": "sh-brushed-metal",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/BrushedMetal.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-bulge": {
+    "id": "sh-bulge",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Bulge.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-crtscreen": {
+    "id": "sh-crtscreen",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CRTScreen.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-carbon-fiber": {
+    "id": "sh-carbon-fiber",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CarbonFiber.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-chalkboard": {
+    "id": "sh-chalkboard",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Chalkboard.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-channel-blur": {
+    "id": "sh-channel-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ChannelBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-checker-wipe": {
+    "id": "sh-checker-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CheckerWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-checkerboard": {
+    "id": "sh-checkerboard",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Checkerboard.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-chevron": {
+    "id": "sh-chevron",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Chevron.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-chroma-flow": {
+    "id": "sh-chroma-flow",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ChromaFlow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-chromatic-aberration": {
+    "id": "sh-chromatic-aberration",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ChromaticAberration.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-chrome": {
+    "id": "sh-chrome",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Chrome.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-circle": {
+    "id": "sh-circle",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Circle.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-color-wheel": {
+    "id": "sh-color-wheel",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ColorWheel.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-compression-artifacts": {
+    "id": "sh-compression-artifacts",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CompressionArtifacts.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-concentric-spin": {
+    "id": "sh-concentric-spin",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ConcentricSpin.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-conic-gradient": {
+    "id": "sh-conic-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ConicGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-contour-lines": {
+    "id": "sh-contour-lines",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ContourLines.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-corner-pin": {
+    "id": "sh-corner-pin",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CornerPin.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-crescent": {
+    "id": "sh-crescent",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Crescent.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-cross": {
+    "id": "sh-cross",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Cross.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-crystal": {
+    "id": "sh-crystal",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Crystal.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-curl-noise": {
+    "id": "sh-curl-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CurlNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-cursor-ripples": {
+    "id": "sh-cursor-ripples",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CursorRipples.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-cursor-trail-scan": {
+    "id": "sh-cursor-trail-scan",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/CursorTrail.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-data-mosh": {
+    "id": "sh-data-mosh",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DataMosh.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-diamond-gradient": {
+    "id": "sh-diamond-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DiamondGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-diamond-wipe": {
+    "id": "sh-diamond-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DiamondWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-diffuse-blur": {
+    "id": "sh-diffuse-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DiffuseBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-displacement-map": {
+    "id": "sh-displacement-map",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DisplacementMap.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-dither": {
+    "id": "sh-dither",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Dither.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-dot-grid": {
+    "id": "sh-dot-grid",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DotGrid.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-drop-shadow": {
+    "id": "sh-drop-shadow",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/DropShadow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-duotone": {
+    "id": "sh-duotone",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Duotone.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-ellipse": {
+    "id": "sh-ellipse",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Ellipse.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-emboss": {
+    "id": "sh-emboss",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Emboss.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-engraving": {
+    "id": "sh-engraving",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Engraving.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-erosion-noise": {
+    "id": "sh-erosion-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ErosionNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-exposure": {
+    "id": "sh-exposure",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Exposure.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-falling-lines": {
+    "id": "sh-falling-lines",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FallingLines.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-film-grain": {
+    "id": "sh-film-grain",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FilmGrain.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-film-stock": {
+    "id": "sh-film-stock",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FilmStock.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-flip": {
+    "id": "sh-flip",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Flip.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-floating-particles-update": {
+    "id": "sh-floating-particles-update",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FloatingParticles.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-flow-field": {
+    "id": "sh-flow-field",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FlowField.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-flower": {
+    "id": "sh-flower",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Flower.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-flowing-gradient": {
+    "id": "sh-flowing-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FlowingGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-fluted-glass": {
+    "id": "sh-fluted-glass",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FlutedGlass.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-fog": {
+    "id": "sh-fog",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Fog.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-form3-d": {
+    "id": "sh-form3-d",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Form3D.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-fractal-noise": {
+    "id": "sh-fractal-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/FractalNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-frost": {
+    "id": "sh-frost",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Frost.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-gabor-noise": {
+    "id": "sh-gabor-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/GaborNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-glass": {
+    "id": "sh-glass",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Glass.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-glass-tiles": {
+    "id": "sh-glass-tiles",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/GlassTiles.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-glitch": {
+    "id": "sh-glitch",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Glitch.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-glow": {
+    "id": "sh-glow",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Glow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-godrays": {
+    "id": "sh-godrays",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Godrays.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-goo": {
+    "id": "sh-goo",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Goo.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-gradient-map": {
+    "id": "sh-gradient-map",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/GradientMap.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-grayscale": {
+    "id": "sh-grayscale",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Grayscale.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-grid": {
+    "id": "sh-grid",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Grid.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-grid-distortion": {
+    "id": "sh-grid-distortion",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/GridDistortion.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-group": {
+    "id": "sh-group",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Group.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-htmlin-canvas": {
+    "id": "sh-htmlin-canvas",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/HTMLInCanvas.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-halftone": {
+    "id": "sh-halftone",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Halftone.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-heart": {
+    "id": "sh-heart",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Heart.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-heatmap": {
+    "id": "sh-heatmap",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Heatmap.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-hex-grid": {
+    "id": "sh-hex-grid",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/HexGrid.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-hologram": {
+    "id": "sh-hologram",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Hologram.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-holographic": {
+    "id": "sh-holographic",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Holographic.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-hue-shift": {
+    "id": "sh-hue-shift",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/HueShift.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-image-texture": {
+    "id": "sh-image-texture",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ImageTexture.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-ink-flow": {
+    "id": "sh-ink-flow",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/InkFlow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-invert": {
+    "id": "sh-invert",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Invert.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-iris-wipe": {
+    "id": "sh-iris-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/IrisWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-irradiance": {
+    "id": "sh-irradiance",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Irradiance.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-isometric-cubes": {
+    "id": "sh-isometric-cubes",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/IsometricCubes.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-kaleidoscope": {
+    "id": "sh-kaleidoscope",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Kaleidoscope.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-key-frames": {
+    "id": "sh-key-frames",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/KeyFrames.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-lens-distortion": {
+    "id": "sh-lens-distortion",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LensDistortion.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-lens-flare": {
+    "id": "sh-lens-flare",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LensFlare.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-light-edge": {
+    "id": "sh-light-edge",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LightEdge.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-light-leak": {
+    "id": "sh-light-leak",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LightLeak.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-line": {
+    "id": "sh-line",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Line.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-linear-blur": {
+    "id": "sh-linear-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LinearBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-linear-gradient": {
+    "id": "sh-linear-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LinearGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-linear-wipe": {
+    "id": "sh-linear-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LinearWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-liquid-metal": {
+    "id": "sh-liquid-metal",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/LiquidMetal.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-liquify": {
+    "id": "sh-liquify",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Liquify.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-filings-update": {
+    "id": "sh-filings-update",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/MagneticFilings.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-marble": {
+    "id": "sh-marble",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Marble.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-mesh-gradient": {
+    "id": "sh-mesh-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/MeshGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-mirror": {
+    "id": "sh-mirror",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Mirror.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-multi-point-gradient": {
+    "id": "sh-multi-point-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/MultiPointGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-nebula": {
+    "id": "sh-nebula",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Nebula.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-neon": {
+    "id": "sh-neon",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Neon.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-noise-dissolve": {
+    "id": "sh-noise-dissolve",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/NoiseDissolve.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-object-tracker": {
+    "id": "sh-object-tracker",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ObjectTracker.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-obsidian": {
+    "id": "sh-obsidian",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Obsidian.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-page-peel": {
+    "id": "sh-page-peel",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/PagePeel.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-paper": {
+    "id": "sh-paper",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Paper.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-parallelogram": {
+    "id": "sh-parallelogram",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Parallelogram.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-particle-field-sim": {
+    "id": "sh-particle-field-sim",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ParticleField.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-particle-flow-integrate": {
+    "id": "sh-particle-flow-integrate",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ParticleFlow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-particles-update": {
+    "id": "sh-particles-update",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Particles.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-perlin-noise": {
+    "id": "sh-perlin-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/PerlinNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-perspective": {
+    "id": "sh-perspective",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Perspective.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-pixel-sort": {
+    "id": "sh-pixel-sort",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/PixelSort.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-pixel-throw": {
+    "id": "sh-pixel-throw",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/PixelThrow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-pixelate": {
+    "id": "sh-pixelate",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Pixelate.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-plasma": {
+    "id": "sh-plasma",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Plasma.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-plastic": {
+    "id": "sh-plastic",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Plastic.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-polar-coordinates": {
+    "id": "sh-polar-coordinates",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/PolarCoordinates.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-polygon": {
+    "id": "sh-polygon",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Polygon.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-posterize": {
+    "id": "sh-posterize",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Posterize.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-prism": {
+    "id": "sh-prism",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Prism.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-progressive-blur": {
+    "id": "sh-progressive-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ProgressiveBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-radial-gradient": {
+    "id": "sh-radial-gradient",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/RadialGradient.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-radial-wipe": {
+    "id": "sh-radial-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/RadialWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-random-bars": {
+    "id": "sh-random-bars",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/RandomBars.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-reaction-diffusion": {
+    "id": "sh-reaction-diffusion",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ReactionDiffusion.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-rectangular-coordinates": {
+    "id": "sh-rectangular-coordinates",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/RectangularCoordinates.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-reflective-plane": {
+    "id": "sh-reflective-plane",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ReflectivePlane.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-repeater": {
+    "id": "sh-repeater",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Repeater.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-ring": {
+    "id": "sh-ring",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Ring.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-ripple-wipe": {
+    "id": "sh-ripple-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/RippleWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-ripples": {
+    "id": "sh-ripples",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Ripples.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-rounded-rect": {
+    "id": "sh-rounded-rect",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/RoundedRect.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-satin": {
+    "id": "sh-satin",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Satin.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-saturation": {
+    "id": "sh-saturation",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Saturation.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-scratches": {
+    "id": "sh-scratches",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Scratches.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-sharpness": {
+    "id": "sh-sharpness",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Sharpness.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-shatter": {
+    "id": "sh-shatter",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Shatter.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-simplex-noise": {
+    "id": "sh-simplex-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SimplexNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-sine-wave": {
+    "id": "sh-sine-wave",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SineWave.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-slice-wipe": {
+    "id": "sh-slice-wipe",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SliceWipe.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-smoke": {
+    "id": "sh-smoke",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Smoke.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-smoke-fill": {
+    "id": "sh-smoke-fill",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SmokeFill.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-smoke-flow": {
+    "id": "sh-smoke-flow",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SmokeFlow.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-solarize": {
+    "id": "sh-solarize",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Solarize.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-solid-color": {
+    "id": "sh-solid-color",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SolidColor.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-sparkle": {
+    "id": "sh-sparkle",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Sparkle.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-spherize": {
+    "id": "sh-spherize",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Spherize.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-spiral": {
+    "id": "sh-spiral",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Spiral.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-star": {
+    "id": "sh-star",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Star.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-stone": {
+    "id": "sh-stone",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Stone.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-strands": {
+    "id": "sh-strands",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Strands.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-stretch": {
+    "id": "sh-stretch",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Stretch.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-stripes": {
+    "id": "sh-stripes",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Stripes.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-studio-background": {
+    "id": "sh-studio-background",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/StudioBackground.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-sun-burst": {
+    "id": "sh-sun-burst",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/SunBurst.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-surface3-d": {
+    "id": "sh-surface3-d",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Surface3D.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-swirl": {
+    "id": "sh-swirl",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Swirl.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-teardrop": {
+    "id": "sh-teardrop",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Teardrop.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-text": {
+    "id": "sh-text",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Text.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-thin-film": {
+    "id": "sh-thin-film",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ThinFilm.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-tilt-shift": {
+    "id": "sh-tilt-shift",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/TiltShift.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-time-trail": {
+    "id": "sh-time-trail",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/TimeTrail.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-tint": {
+    "id": "sh-tint",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Tint.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-trapezoid": {
+    "id": "sh-trapezoid",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Trapezoid.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-triangular-grid": {
+    "id": "sh-triangular-grid",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/TriangularGrid.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-tritone": {
+    "id": "sh-tritone",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Tritone.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-truchet": {
+    "id": "sh-truchet",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Truchet.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-twirl": {
+    "id": "sh-twirl",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Twirl.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-vhs": {
+    "id": "sh-vhs",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/VHS.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-venetian-blinds": {
+    "id": "sh-venetian-blinds",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/VenetianBlinds.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-vesica": {
+    "id": "sh-vesica",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Vesica.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-vibrance": {
+    "id": "sh-vibrance",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Vibrance.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-video-texture": {
+    "id": "sh-video-texture",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/VideoTexture.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-vignette": {
+    "id": "sh-vignette",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Vignette.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-voronoi": {
+    "id": "sh-voronoi",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Voronoi.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-voxels": {
+    "id": "sh-voxels",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Voxels.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-water": {
+    "id": "sh-water",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Water.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-watercolor": {
+    "id": "sh-watercolor",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Watercolor.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-wave-distortion": {
+    "id": "sh-wave-distortion",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/WaveDistortion.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-waveform": {
+    "id": "sh-waveform",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Waveform.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-wavelet-noise": {
+    "id": "sh-wavelet-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/WaveletNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-weave": {
+    "id": "sh-weave",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Weave.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-webcam-texture": {
+    "id": "sh-webcam-texture",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/WebcamTexture.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-wool": {
+    "id": "sh-wool",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Wool.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-worley-noise": {
+    "id": "sh-worley-noise",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/WorleyNoise.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-zoom-blur": {
+    "id": "sh-zoom-blur",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/ZoomBlur.jpg",
+      "label": "Shaders Official Component Cover"
+    }
+  },
+  "sh-showcase": {
+    "id": "sh-showcase",
+    "project": "shaders",
+    "kind": "media-image",
+    "status": "ready",
+    "media": {
+      "poster": "/shaders/covers/Aurora.jpg",
+      "label": "Shaders WebGPU Showcase Cover"
+    }
   }
 }
 
 export const previewStats = {
   "ready:media-video": 268,
-  "ready:media-image": 148,
+  "ready:media-image": 349,
   "ready:react-generated": 572,
   "ready:html-live": 5286,
   "unsupported:unsupported": 28,

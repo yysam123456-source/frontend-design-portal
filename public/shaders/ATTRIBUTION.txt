@@ -1,0 +1,8 @@
+Shaders — 200 WebGPU effect components
+Copyright (c) 2026 Shader Effects Inc.
+Source: https://github.com/shader-effects-inc/shaders
+License: MIT (see LICENSE.txt)
+
+The engine, components and framework bindings used in this demo are MIT licensed.
+The component cover images are taken from packages/core/src/shaders/*/cover.jpg in the same repository.
+The design editor, presets, website sections and hosted platform at shaders.com are separate services with their own terms and are not bundled here.

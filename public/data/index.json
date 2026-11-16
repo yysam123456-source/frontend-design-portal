@@ -12,7 +12,8 @@
     "ascii-sharks",
     "looseleaf",
     "ascii-rest",
-    "ascii-magic"
+    "ascii-magic",
+    "shaders"
   ],
   "stats": {
     "react-bits": 269,
@@ -27,9 +28,10 @@
     "ascii-sharks": 9,
     "looseleaf": 123,
     "ascii-rest": 240,
-    "ascii-magic": 734
+    "ascii-magic": 734,
+    "shaders": 201
   },
-  "total": 6425,
+  "total": 6626,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -114624,6 +114626,5434 @@
       ],
       "description": "The endless white salt desert glows under a full moon, its crust cracked into hexagons, as a camel cart crosses the horizon and musicians play beside a small fire. An animated India piece from ASCII Magic — one <ascii-magic-art> tag, no build step, MIT licensed.",
       "language": "html"
+    },
+    {
+      "id": "sh-angular-blur",
+      "project": "shaders",
+      "name": "AngularBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Radial motion blur rotating around a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/AngularBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-arc",
+      "project": "shaders",
+      "name": "Arc",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Pie sector (arc wedge) with adjustable radius and aperture angle.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Arc.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-ascii",
+      "project": "shaders",
+      "name": "Ascii",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Convert imagery to ASCII character art.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Ascii.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-aurora",
+      "project": "shaders",
+      "name": "Aurora",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Mesmerizing aurora borealis with layered curtains, vertical rays, and flowing light.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Aurora.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-bar-shift",
+      "project": "shaders",
+      "name": "BarShift",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Slices content into parallel bars, each offset independently for a fractured or glitch-like effect.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BarShift.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-barn-doors",
+      "project": "shaders",
+      "name": "BarnDoors",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Split the content along a center line and wipe outward in both directions.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BarnDoors.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-beam",
+      "project": "shaders",
+      "name": "Beam",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A beam of light from one point to another.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Beam.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-bend",
+      "project": "shaders",
+      "name": "Bend",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Bends the ends of the frame toward you like a curved display — content at the edges swells closer under real perspective, or curls away when the strength goes negative.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Bend.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-blob",
+      "project": "shaders",
+      "name": "Blob",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Organic animated blob with 3D lighting and gradients.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Blob.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-block-dissolve",
+      "project": "shaders",
+      "name": "BlockDissolve",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Dissolve the content away as a grid of blocks vanishing in random order.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BlockDissolve.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-block-noise",
+      "project": "shaders",
+      "name": "BlockNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Blocky value noise with soft cells that morph over time.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BlockNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-blue-noise",
+      "project": "shaders",
+      "name": "BlueNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "High-frequency blue noise — even, grainy speckle ideal for dithering.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BlueNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-blur",
+      "project": "shaders",
+      "name": "Blur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A simple Gaussian blur effect.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Blur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-boids-update",
+      "project": "shaders",
+      "name": "boidsUpdate",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A living murmuration of hundreds of flocking agents drawn as crisp arrows, streaks, dots or glowing comets — separation, alignment and cohesion drive fluid, splitting-and-merging ribbons, agents flash toward an excited color when scattered, and the cursor acts as an attractor or a predator.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Boids.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-bokeh-blur",
+      "project": "shaders",
+      "name": "BokehBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photographic lens blur where bright highlights bloom into aperture-shaped discs.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BokehBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-brick-pattern",
+      "project": "shaders",
+      "name": "BrickPattern",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Classic brick wall pattern with alternating rows and mortar gaps.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BrickPattern.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-brightness-contrast",
+      "project": "shaders",
+      "name": "BrightnessContrast",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Adjust brightness and contrast of the image.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BrightnessContrast.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-brushed-metal",
+      "project": "shaders",
+      "name": "BrushedMetal",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photorealistic brushed metal — a satin anodised surface combed with fine directional grain that smears the reflected studio and key light into the long anisotropic streaks of real brushed aluminium, steel, gold or copper.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/BrushedMetal.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-bulge",
+      "project": "shaders",
+      "name": "Bulge",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Magnify or pinch content around a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Bulge.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-crtscreen",
+      "project": "shaders",
+      "name": "CRTScreen",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Retro CRT monitor simulation with scanlines.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CRTScreen.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-carbon-fiber",
+      "project": "shaders",
+      "name": "CarbonFiber",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photorealistic woven carbon fibre — interlaced tows whose anisotropic sheen flips ninety degrees cell to cell, raised into a quilted weave and finished with a glossy clearcoat that mirrors the studio. Plain or twill, in any shape.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CarbonFiber.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-chalkboard",
+      "project": "shaders",
+      "name": "Chalkboard",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Renders content as a chalk drawing on a blackboard, with edge strokes and cross-hatch shading.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Chalkboard.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-channel-blur",
+      "project": "shaders",
+      "name": "ChannelBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Independent blur for red, green, and blue channels.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ChannelBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-checker-wipe",
+      "project": "shaders",
+      "name": "CheckerWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wipe the content away as a checkerboard of fading squares.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CheckerWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-checkerboard",
+      "project": "shaders",
+      "name": "Checkerboard",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Classic checkerboard pattern with two alternating colors.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Checkerboard.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-chevron",
+      "project": "shaders",
+      "name": "Chevron",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Animated chevron / zigzag stripe pattern.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Chevron.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-chroma-flow",
+      "project": "shaders",
+      "name": "ChromaFlow",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Interactive liquid flow effect that follows your cursor.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ChromaFlow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-chromatic-aberration",
+      "project": "shaders",
+      "name": "ChromaticAberration",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Separate RGB channels for a prismatic distortion effect.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ChromaticAberration.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-chrome",
+      "project": "shaders",
+      "name": "Chrome",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Studio-lit mirror chrome — a precision-machined shape with a controllable polished bevel, softly convex faces and a photographic studio reflected in them: one huge frontal softbox, black flags, and thin warm/cool strip lights that fringe amber and ice-blue exactly where the reflections break.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Chrome.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-circle",
+      "project": "shaders",
+      "name": "Circle",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Generate a circle with adjustable size and softness.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Circle.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-color-wheel",
+      "project": "shaders",
+      "name": "ColorWheel",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A directional gradient that smoothly cycles through rainbow colors or a custom set of three colors.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ColorWheel.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-compression-artifacts",
+      "project": "shaders",
+      "name": "CompressionArtifacts",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Simulates lossy JPEG compression — 8×8 DCT block quantization, blockiness, ringing and color bleed.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CompressionArtifacts.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-concentric-spin",
+      "project": "shaders",
+      "name": "ConcentricSpin",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Concentric rings that each rotate the underlying image by different amounts.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ConcentricSpin.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-conic-gradient",
+      "project": "shaders",
+      "name": "ConicGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Colors sweep in a full circle around a center point, like a color wheel.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ConicGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-contour-lines",
+      "project": "shaders",
+      "name": "ContourLines",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Draw topographical contour lines based on luminance or alpha.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ContourLines.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-corner-pin",
+      "project": "shaders",
+      "name": "CornerPin",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Pin each corner of the content to an arbitrary position for a free perspective warp.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CornerPin.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-crescent",
+      "project": "shaders",
+      "name": "Crescent",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Crescent moon shape — an outer circle with an inner circle subtracted.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Crescent.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-cross",
+      "project": "shaders",
+      "name": "Cross",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Plus / cross shape with adjustable arm length, width, and rounding.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Cross.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-crystal",
+      "project": "shaders",
+      "name": "Crystal",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Diamond-like crystal lens with faceted refraction.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Crystal.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-curl-noise",
+      "project": "shaders",
+      "name": "CurlNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Swirling divergence-free flow field that drifts over time.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CurlNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-cursor-ripples",
+      "project": "shaders",
+      "name": "CursorRipples",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Fluid-like ripple distortion.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CursorRipples.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-cursor-trail-scan",
+      "project": "shaders",
+      "name": "cursorTrailScan",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Animated trail effect that tracks cursor movement.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/CursorTrail.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-data-mosh",
+      "project": "shaders",
+      "name": "DataMosh",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Corrupted-codec motion smearing — macroblocks lock in place and drag their pixels across the frame in liquid trails, each recovering on its own clock, like a video stream that lost its keyframes.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DataMosh.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-diamond-gradient",
+      "project": "shaders",
+      "name": "DiamondGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Diamond-shaped gradient radiating from a center point using Manhattan distance.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DiamondGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-diamond-wipe",
+      "project": "shaders",
+      "name": "DiamondWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wipe the content away through a lattice of growing diamonds.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DiamondWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-diffuse-blur",
+      "project": "shaders",
+      "name": "DiffuseBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Grain-like pixel displacement at random.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DiffuseBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-displacement-map",
+      "project": "shaders",
+      "name": "DisplacementMap",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Distorts child content using another layer.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DisplacementMap.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-dither",
+      "project": "shaders",
+      "name": "Dither",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Dithering effect with multiple pattern options.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Dither.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-dot-grid",
+      "project": "shaders",
+      "name": "DotGrid",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Grid of dots with optional twinkling animation.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DotGrid.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-drop-shadow",
+      "project": "shaders",
+      "name": "DropShadow",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Adds a soft shadow behind the child content based on its alpha silhouette.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/DropShadow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-duotone",
+      "project": "shaders",
+      "name": "Duotone",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Map colors to two tones based on luminance.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Duotone.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-ellipse",
+      "project": "shaders",
+      "name": "Ellipse",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Ellipse with independently adjustable horizontal and vertical radii.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Ellipse.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-emboss",
+      "project": "shaders",
+      "name": "Emboss",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Embossed / debossed relief shading on top of child content, driven by a custom shape.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Emboss.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-engraving",
+      "project": "shaders",
+      "name": "Engraving",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Copper-plate line engraving — the image is redrawn as flowing line work whose weight swells with darkness, lines displaced by the form like a banknote portrait: a single plate, cross-hatched shadow plates, or one continuous spiral cut.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Engraving.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-erosion-noise",
+      "project": "shaders",
+      "name": "ErosionNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Branching, hydraulic-erosion ridges carved into noise.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ErosionNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-exposure",
+      "project": "shaders",
+      "name": "Exposure",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Multiplicative exposure (gain) on the child. Unlike additive brightness, it scales values around black — blacks stay black while highlights can be pushed past 1.0 to feed HDR bloom and tone-mapping roll-off. Pointwise, so no extra render pass is needed.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Exposure.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-falling-lines",
+      "project": "shaders",
+      "name": "FallingLines",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Directional falling lines with a leading-to-trailing color fade.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FallingLines.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-film-grain",
+      "project": "shaders",
+      "name": "FilmGrain",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Analog film grain texture overlay, weighted toward darker areas.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FilmGrain.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-film-stock",
+      "project": "shaders",
+      "name": "FilmStock",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Real analog film color from measured film-emulation LUTs — ten classic stock looks with emulsion halation and projector gate weave.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FilmStock.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-flip",
+      "project": "shaders",
+      "name": "Flip",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Mirror content horizontally, vertically, or both.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Flip.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-floating-particles-update",
+      "project": "shaders",
+      "name": "floatingParticlesUpdate",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Drifting, twinkling motes — thousands of real simulated particles floating in a shared heading with per-particle wander and variance, and a cursor that stirs the field with a gust that settles back into the drift.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FloatingParticles.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-flow-field",
+      "project": "shaders",
+      "name": "FlowField",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Fluid-like distortion with constant smooth motion.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FlowField.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-flower",
+      "project": "shaders",
+      "name": "Flower",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Petal shape with N lobes and adjustable inner-to-outer radius ratio.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Flower.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-flowing-gradient",
+      "project": "shaders",
+      "name": "FlowingGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Liquid silk gradient with organic flowing color bands.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FlowingGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-fluted-glass",
+      "project": "shaders",
+      "name": "FlutedGlass",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Full-screen fluted glass effect — refracts content through repeating cylindrical bars.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FlutedGlass.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-fog",
+      "project": "shaders",
+      "name": "Fog",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Fog that fills the screen and interacts with the mouse.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Fog.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-form3-d",
+      "project": "shaders",
+      "name": "Form3D",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wraps child content onto a 3D raymarched shape with lighting.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Form3D.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-fractal-noise",
+      "project": "shaders",
+      "name": "FractalNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Multi-octave fractal Brownian motion noise texture with true noise evolution.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/FractalNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-frost",
+      "project": "shaders",
+      "name": "Frost",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photoreal frozen ice — thickness-driven subsurface scattering that reads as a solid block, with fine frost crystals creeping in from the edges.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Frost.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-gabor-noise",
+      "project": "shaders",
+      "name": "GaborNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Oriented sine-grain noise with a fingerprint-like flow.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/GaborNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-glass",
+      "project": "shaders",
+      "name": "Glass",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Optically realistic glass lens driven in a custom shape.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Glass.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-glass-tiles",
+      "project": "shaders",
+      "name": "GlassTiles",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Refraction-like distortion in a tile grid pattern.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/GlassTiles.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-glitch",
+      "project": "shaders",
+      "name": "Glitch",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Digital glitch that melts pixels and distorts colors.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Glitch.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-glow",
+      "project": "shaders",
+      "name": "Glow",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Soft glow effect with adjustable intensity.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Glow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-godrays",
+      "project": "shaders",
+      "name": "Godrays",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Volumetric light rays emanating from a point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Godrays.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-goo",
+      "project": "shaders",
+      "name": "Goo",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photoreal wet liquid — animated 3D metaball blobs that merge and bulge to loosely form the shape, with sliding wet highlights, a clearcoat rim and a translucent body.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Goo.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-gradient-map",
+      "project": "shaders",
+      "name": "GradientMap",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Maps source luminance through an animated color gradient (Photoshop-style gradient map).",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/GradientMap.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-grayscale",
+      "project": "shaders",
+      "name": "Grayscale",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Convert colors to black and white.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Grayscale.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-grid",
+      "project": "shaders",
+      "name": "Grid",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Simple grid lines pattern with adjustable thickness and rotation.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Grid.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-grid-distortion",
+      "project": "shaders",
+      "name": "GridDistortion",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Interactive grid distortion controlled by mouse position.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/GridDistortion.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-group",
+      "project": "shaders",
+      "name": "Group",
+      "category": "utilities",
+      "style": [
+        "webgpu",
+        "shader",
+        "utilities"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Container for organizing and composing child effects — supports flex-like flow layout (column/row stacking via the flow prop).",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Group.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "utilities",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-htmlin-canvas",
+      "project": "shaders",
+      "name": "HTMLInCanvas",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Render live HTML/DOM content as a WebGPU texture layer via the html-in-canvas API. Requires Chrome Canary with chrome://flags/#canvas-draw-element enabled.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/HTMLInCanvas.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-halftone",
+      "project": "shaders",
+      "name": "Halftone",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Halftone dot pattern effect for printing aesthetics.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Halftone.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-heart",
+      "project": "shaders",
+      "name": "Heart",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Heart shape with adjustable size.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Heart.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-heatmap",
+      "project": "shaders",
+      "name": "Heatmap",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Thermal-camera heat flowing through any 2D, SVG, or 3D shape. Powered by Paper Shaders.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Heatmap.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-hex-grid",
+      "project": "shaders",
+      "name": "HexGrid",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Honeycomb hexagonal grid pattern.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/HexGrid.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-hologram",
+      "project": "shaders",
+      "name": "Hologram",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Volumetric sci-fi hologram — a translucent emissive projection of the shape with fresnel-lit edges, depth scan-lines that wrap 3D forms, CRT scanlines, flicker and beam wobble.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Hologram.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-holographic",
+      "project": "shaders",
+      "name": "Holographic",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Iridescent holographic foil sticker with animated rainbow sheen and glitter flakes.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Holographic.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-hue-shift",
+      "project": "shaders",
+      "name": "HueShift",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rotate hue around the color wheel.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/HueShift.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-image-texture",
+      "project": "shaders",
+      "name": "ImageTexture",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Display an image with customizable object-fit modes.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ImageTexture.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-ink-flow",
+      "project": "shaders",
+      "name": "InkFlow",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Drag to paint swirling ribbons of ink through a real fluid field — eddies keep evolving after you let go.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/InkFlow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-invert",
+      "project": "shaders",
+      "name": "Invert",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Invert RGB colors while preserving alpha.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Invert.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-iris-wipe",
+      "project": "shaders",
+      "name": "IrisWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Reveal through an expanding circle growing from a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/IrisWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-irradiance",
+      "project": "shaders",
+      "name": "Irradiance",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photorealistic light spilling around the edge of any 2D, SVG, or 3D shape — any number of movable colored point lights strike the silhouette and the lit edges irradiate their surroundings, gathered in a compute pass with real cast shadows, mixing where they meet and burning to white at the rim.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Irradiance.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-isometric-cubes",
+      "project": "shaders",
+      "name": "IsometricCubes",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Isometric tumbling-blocks tiling — a 3D cube illusion (rhombille pattern).",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/IsometricCubes.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-kaleidoscope",
+      "project": "shaders",
+      "name": "Kaleidoscope",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Create a kaleidoscope effect with radial mirrored segments.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Kaleidoscope.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-key-frames",
+      "project": "shaders",
+      "name": "KeyFrames",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Motion-tracking overlay — trackers hunt and follow features in the content, dropping keyframe diamonds behind them along their motion paths, like a compositor mid-track.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/KeyFrames.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-lens-distortion",
+      "project": "shaders",
+      "name": "LensDistortion",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Split content into shifting chromatic layers with barrel or pincushion lens warp. Powered by Paper Shaders.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LensDistortion.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-lens-flare",
+      "project": "shaders",
+      "name": "LensFlare",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Realistic camera lens flare with artifacts.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LensFlare.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-light-edge",
+      "project": "shaders",
+      "name": "LightEdge",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Glowing, pulsing light racing around the edge of any 2D, SVG, or 3D shape. Powered by Paper Shaders.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LightEdge.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-light-leak",
+      "project": "shaders",
+      "name": "LightLeak",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photorealistic film light leak — warm overexposed light bleeding in from a draggable anchor point, with streak bands, chromatic fringing, and slow breathing that evolves over time.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LightLeak.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-line",
+      "project": "shaders",
+      "name": "Line",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Draw a straight line between two points with color, thickness, and solid, dashed, or dotted styles.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Line.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-linear-blur",
+      "project": "shaders",
+      "name": "LinearBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Directional motion blur in a specific angle.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LinearBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-linear-gradient",
+      "project": "shaders",
+      "name": "LinearGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Create smooth linear color gradients.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LinearGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-linear-wipe",
+      "project": "shaders",
+      "name": "LinearWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wipe the content away along a straight edge with a soft feathered transition.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LinearWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-liquid-metal",
+      "project": "shaders",
+      "name": "LiquidMetal",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Flowing liquid chrome — a molten reflective surface that wraps the shape, sweeping a procedural studio reflection across animated folds with crisp speculars and prismatic edges.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/LiquidMetal.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-liquify",
+      "project": "shaders",
+      "name": "Liquify",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Liquid-like interactive deformation effect.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Liquify.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-filings-update",
+      "project": "shaders",
+      "name": "filingsUpdate",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Thousands of tiny iron filings scattered on paper that swing to align with a magnetic field around the cursor, tracing out the field lines — a dipole whose axis follows the cursor.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/MagneticFilings.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-marble",
+      "project": "shaders",
+      "name": "Marble",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Classic marble swirl and vein texture using noise-warped sine waves.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Marble.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-mesh-gradient",
+      "project": "shaders",
+      "name": "MeshGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Flowing mesh gradient of soft drifting color swaths whose seams wrap through the palette.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/MeshGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-mirror",
+      "project": "shaders",
+      "name": "Mirror",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Mirror content across a line defined by center point and angle.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Mirror.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-multi-point-gradient",
+      "project": "shaders",
+      "name": "MultiPointGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Five individually placed color points blended together by proximity — drag each point to shape the gradient.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/MultiPointGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-nebula",
+      "project": "shaders",
+      "name": "Nebula",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A volumetric gas nebula sealed inside polished glass; billowing emission clouds with hollow dark cavities and hot glowing cores, star fields drifting at real depth behind the gas, all refracted through the curved walls of the shape and dressed with studio reflections.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Nebula.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-neon",
+      "project": "shaders",
+      "name": "Neon",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Photorealistic neon tube / 3D pipe effect driven by a custom shape.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Neon.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-noise-dissolve",
+      "project": "shaders",
+      "name": "NoiseDissolve",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Dissolve the content away through an organic noise pattern.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/NoiseDissolve.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-object-tracker",
+      "project": "shaders",
+      "name": "ObjectTracker",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Computer-vision style object detection overlay — draws bounding boxes and labels around detected regions of the content below, with grid, quadtree and mosaic layouts.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ObjectTracker.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-obsidian",
+      "project": "shaders",
+      "name": "Obsidian",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Dark tinted glass whose faces stay near-black while every surface turning away from the viewer ignites with a flowing iridescent gradient — vivid color living only on the oblique walls and bevels.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Obsidian.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-page-peel",
+      "project": "shaders",
+      "name": "PagePeel",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Curl the content up from a corner like a peeling page.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/PagePeel.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-paper",
+      "project": "shaders",
+      "name": "Paper",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Applies realistic paper grain and surface roughness to child content.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Paper.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-parallelogram",
+      "project": "shaders",
+      "name": "Parallelogram",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Parallelogram with adjustable width, height and skew.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Parallelogram.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-particle-field-sim",
+      "project": "shaders",
+      "name": "particleFieldSim",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Explodes the child content into a breathing 3D field of particles — bright areas float toward you and dark areas recede, the whole relief can be orbited with the camera rotations, and the cursor physically throws particles that spring back home.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ParticleField.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-particle-flow-integrate",
+      "project": "shaders",
+      "name": "particleFlowIntegrate",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Thousands of drifting dust particles carried by a real incompressible fluid field the cursor stirs — drag to plow a wake and the particles ride the eddies and vortices it leaves behind, while a gentle ambient breeze keeps the whole scene breathing on its own.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ParticleFlow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-particles-update",
+      "project": "shaders",
+      "name": "particlesUpdate",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A swarm of simulated particles that settles into the shape, filling it evenly — flat, SVG or true 3D volumes — scattering from the cursor (or chasing it), tumbling when the shape moves, and always drifting back home.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Particles.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-perlin-noise",
+      "project": "shaders",
+      "name": "PerlinNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Smooth gradient noise that morphs over time.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/PerlinNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-perspective",
+      "project": "shaders",
+      "name": "Perspective",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rotate the plane in 3D space with pan and tilt.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Perspective.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-pixel-sort",
+      "project": "shaders",
+      "name": "PixelSort",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Pixels sort by brightness around the cursor and keep their sorted position, optionally decaying back over time.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/PixelSort.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-pixel-throw",
+      "project": "shaders",
+      "name": "PixelThrow",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Throws pixels along the cursor.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/PixelThrow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-pixelate",
+      "project": "shaders",
+      "name": "Pixelate",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Pixelation effect with adjustable cell size.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Pixelate.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-plasma",
+      "project": "shaders",
+      "name": "Plasma",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Animated effect of glowing plasma.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Plasma.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-plastic",
+      "project": "shaders",
+      "name": "Plastic",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Glossy molded plastic with photorealistic studio reflections, driven in a custom shape.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Plastic.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-polar-coordinates",
+      "project": "shaders",
+      "name": "PolarCoordinates",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Convert rectangular coordinates to polar space.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/PolarCoordinates.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-polygon",
+      "project": "shaders",
+      "name": "Polygon",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Regular polygon with adjustable sides and corner rounding.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Polygon.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-posterize",
+      "project": "shaders",
+      "name": "Posterize",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Reduce color depth to create a poster effect.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Posterize.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-prism",
+      "project": "shaders",
+      "name": "Prism",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A beam of light that fans out and splits into a slowly-rotating rainbow past a controllable point. Transparent background — composite over a dark layer.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Prism.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-progressive-blur",
+      "project": "shaders",
+      "name": "ProgressiveBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Blur that increases progressively in one direction.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ProgressiveBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-radial-gradient",
+      "project": "shaders",
+      "name": "RadialGradient",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Radial gradient radiating from a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/RadialGradient.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-radial-wipe",
+      "project": "shaders",
+      "name": "RadialWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Sweep the content away in a clock-hand arc around a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/RadialWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-random-bars",
+      "project": "shaders",
+      "name": "RandomBars",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wipe the content away as parallel bars vanishing in random order.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/RandomBars.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-reaction-diffusion",
+      "project": "shaders",
+      "name": "ReactionDiffusion",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "A living Gray-Scott reaction-diffusion pattern that fills the layer and blooms wherever you drag the cursor.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ReactionDiffusion.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-rectangular-coordinates",
+      "project": "shaders",
+      "name": "RectangularCoordinates",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Convert polar coordinates back to rectangular space.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/RectangularCoordinates.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-reflective-plane",
+      "project": "shaders",
+      "name": "ReflectivePlane",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Reflective floor that mirrors the content above it.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ReflectivePlane.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-repeater",
+      "project": "shaders",
+      "name": "Repeater",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Repeat the child content in grid, radial or linear layouts with per-instance variation.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Repeater.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-ring",
+      "project": "shaders",
+      "name": "Ring",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Annular ring (donut) with adjustable radius and band thickness.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Ring.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-ripple-wipe",
+      "project": "shaders",
+      "name": "RippleWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wipe the content away in concentric rings pulsing out from a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/RippleWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-ripples",
+      "project": "shaders",
+      "name": "Ripples",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Concentric animated ripples emanating from a point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Ripples.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-rounded-rect",
+      "project": "shaders",
+      "name": "RoundedRect",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rounded rectangle with adjustable width, height, and corner rounding.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/RoundedRect.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-satin",
+      "project": "shaders",
+      "name": "Satin",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Flowing satin — a draped cloth of soft rippling folds lit like real fabric: a highlight streaked along the weave, a velvet sheen on the fold flanks and creases falling into shadow, swaying gently in a breeze.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Satin.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-saturation",
+      "project": "shaders",
+      "name": "Saturation",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Adjust color saturation intensity.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Saturation.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-scratches",
+      "project": "shaders",
+      "name": "Scratches",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Fine hairline scratches, like a worn film or scratched surface.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Scratches.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-sharpness",
+      "project": "shaders",
+      "name": "Sharpness",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Adjust image sharpness using a convolution kernel.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Sharpness.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-shatter",
+      "project": "shaders",
+      "name": "Shatter",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Broken glass effect with tectonic plate displacement.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Shatter.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-simplex-noise",
+      "project": "shaders",
+      "name": "SimplexNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Organic noise with animated movement.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SimplexNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-sine-wave",
+      "project": "shaders",
+      "name": "SineWave",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Animated wave with thickness and softness.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SineWave.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-slice-wipe",
+      "project": "shaders",
+      "name": "SliceWipe",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Slice the content into strips that slide away in alternating directions.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SliceWipe.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-smoke",
+      "project": "shaders",
+      "name": "Smoke",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Realistic fluid smoke simulation with vorticity dynamics.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Smoke.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-smoke-fill",
+      "project": "shaders",
+      "name": "SmokeFill",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Fill a shape with swirling fluid smoke that interacts with the shape boundary.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SmokeFill.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-smoke-flow",
+      "project": "shaders",
+      "name": "SmokeFlow",
+      "category": "interactive",
+      "style": [
+        "webgpu",
+        "shader",
+        "interactive"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Cursor-driven smoke that lingers, swirls, and dissipates with fluid dynamics.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SmokeFlow.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "interactive",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-solarize",
+      "project": "shaders",
+      "name": "Solarize",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Inverts tones above a luminance threshold — a classic darkroom and photo effect.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Solarize.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-solid-color",
+      "project": "shaders",
+      "name": "SolidColor",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Fill the canvas with a single solid color.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SolidColor.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-sparkle",
+      "project": "shaders",
+      "name": "Sparkle",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Twinkling star glints over the bright parts of the layer inside.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Sparkle.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-spherize",
+      "project": "shaders",
+      "name": "Spherize",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Map content onto a 3D sphere surface with depth distortion.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Spherize.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-spiral",
+      "project": "shaders",
+      "name": "Spiral",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rotating spiral pattern with animated movement.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Spiral.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-star",
+      "project": "shaders",
+      "name": "Star",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Classic star polygon with straight sides and sharp pointed tips.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Star.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-stone",
+      "project": "shaders",
+      "name": "Stone",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Applies a marbled stone relief and surface distortion to child content.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Stone.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-strands",
+      "project": "shaders",
+      "name": "Strands",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Flowing ribbons of light with a multi-color gradient.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Strands.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-stretch",
+      "project": "shaders",
+      "name": "Stretch",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Stretch content towards a direction from a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Stretch.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-stripes",
+      "project": "shaders",
+      "name": "Stripes",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Alternating colored stripes with animation.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Stripes.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-studio-background",
+      "project": "shaders",
+      "name": "StudioBackground",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Multi-light studio background with ambient motion.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/StudioBackground.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-sun-burst",
+      "project": "shaders",
+      "name": "SunBurst",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Radial sunburst rays emanating from a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/SunBurst.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-surface3-d",
+      "project": "shaders",
+      "name": "Surface3D",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Drapes child content over a 3D wave surface with perspective and lighting.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Surface3D.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-swirl",
+      "project": "shaders",
+      "name": "Swirl",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Flowing swirl pattern with multi-layered noise.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Swirl.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-teardrop",
+      "project": "shaders",
+      "name": "Teardrop",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Teardrop — a rounded bulb tapering to a sharp point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Teardrop.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-text",
+      "project": "shaders",
+      "name": "Text",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Text with any Google font — multi-line with wrapping, alignment and line height — rendered crisp via a glyph texture.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Text.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-thin-film",
+      "project": "shaders",
+      "name": "ThinFilm",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Iridescent thin-film edge.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ThinFilm.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-tilt-shift",
+      "project": "shaders",
+      "name": "TiltShift",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Selective focus blur mimicking tilt-shift photography.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/TiltShift.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-time-trail",
+      "project": "shaders",
+      "name": "TimeTrail",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "An Echo-style temporal trail — whatever moves sheds a smooth, decaying long-exposure ghost trail (frame-difference Motion mode works on opaque images and video; Alpha mode trails a shape.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/TimeTrail.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-tint",
+      "project": "shaders",
+      "name": "Tint",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Apply a color tint to the image.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Tint.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-trapezoid",
+      "project": "shaders",
+      "name": "Trapezoid",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Trapezoid with adjustable top and bottom widths and height.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Trapezoid.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-triangular-grid",
+      "project": "shaders",
+      "name": "TriangularGrid",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Tiling grid of equilateral triangles with optional animated row offsets.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/TriangularGrid.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-tritone",
+      "project": "shaders",
+      "name": "Tritone",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Map colors to three tones: shadows, midtones, highlights.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Tritone.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-truchet",
+      "project": "shaders",
+      "name": "Truchet",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Quarter-circle arc tiles that connect to form organic, maze-like flowing curves.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Truchet.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-twirl",
+      "project": "shaders",
+      "name": "Twirl",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rotate and twist content around a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Twirl.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-vhs",
+      "project": "shaders",
+      "name": "VHS",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Analog VHS tape with intermittent tape damage, chroma bleed, and per-scanline noise.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/VHS.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-venetian-blinds",
+      "project": "shaders",
+      "name": "VenetianBlinds",
+      "category": "transitions",
+      "style": [
+        "webgpu",
+        "shader",
+        "transitions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wipe the content away behind a set of parallel closing strips.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/VenetianBlinds.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "transitions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-vesica",
+      "project": "shaders",
+      "name": "Vesica",
+      "category": "shapes",
+      "style": [
+        "webgpu",
+        "shader",
+        "shapes"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Vesica piscis (lens shape) formed by the intersection of two overlapping circles.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Vesica.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shapes",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-vibrance",
+      "project": "shaders",
+      "name": "Vibrance",
+      "category": "adjustments",
+      "style": [
+        "webgpu",
+        "shader",
+        "adjustments"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Selective saturation adjustment protecting skin tones.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Vibrance.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "adjustments",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-video-texture",
+      "project": "shaders",
+      "name": "VideoTexture",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Display a video with customizable playback and object-fit modes.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/VideoTexture.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-vignette",
+      "project": "shaders",
+      "name": "Vignette",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Darkens or tints the edges of the frame, drawing attention toward the center.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Vignette.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-voronoi",
+      "project": "shaders",
+      "name": "Voronoi",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Cellular pattern where each pixel is colored by its distance to the nearest of many scattered points.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Voronoi.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-voxels",
+      "project": "shaders",
+      "name": "Voxels",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rebuild any shape out of voxels — a flat shape becomes chunky pixel art, a 3D shape a lit voxel model with smooth ambient occlusion, cast shadows, a key light you can orbit or drive, and per-cube color.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Voxels.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-water",
+      "project": "shaders",
+      "name": "Water",
+      "category": "shape-effects",
+      "style": [
+        "webgpu",
+        "shader",
+        "shape-effects"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Translucent water — a refractive, light-absorbing body that deepens to its color with thickness, wrapped in a wind-driven wave surface that reflects a procedural sky, with Fresnel-bright grazing edges and foam breaking on the crests and shoreline.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Water.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "shape-effects",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-watercolor",
+      "project": "shaders",
+      "name": "Watercolor",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Painterly watercolor look — Kuwahara flattening, pigment edge darkening, paper grain and bleeding.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Watercolor.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-wave-distortion",
+      "project": "shaders",
+      "name": "WaveDistortion",
+      "category": "distortions",
+      "style": [
+        "webgpu",
+        "shader",
+        "distortions"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Wave-based distortion with multiple waveform types.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/WaveDistortion.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "distortions",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-waveform",
+      "project": "shaders",
+      "name": "Waveform",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Audio-visualizer waveform — equalizer bars, a filled wave, an oscilloscope line, or a dot matrix — driven by a simulated signal whose amplitude you can map to your own audio level.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Waveform.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-wavelet-noise",
+      "project": "shaders",
+      "name": "WaveletNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Rotating banded wavelets that ripple as they animate.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/WaveletNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-weave",
+      "project": "shaders",
+      "name": "Weave",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Interlaced textile weave pattern with two thread colors going over and under each other.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Weave.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-webcam-texture",
+      "project": "shaders",
+      "name": "WebcamTexture",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Display a live webcam feed with customizable object-fit modes.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/WebcamTexture.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-wool",
+      "project": "shaders",
+      "name": "Wool",
+      "category": "stylize",
+      "style": [
+        "webgpu",
+        "shader",
+        "stylize"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Applies an interwoven fibrous fabric texture and distortion to child content.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/Wool.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "stylize",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-worley-noise",
+      "project": "shaders",
+      "name": "WorleyNoise",
+      "category": "textures",
+      "style": [
+        "webgpu",
+        "shader",
+        "textures"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Cellular noise field — distance-based, with selectable feature combinations and fractal octaves.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/WorleyNoise.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "textures",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-zoom-blur",
+      "project": "shaders",
+      "name": "ZoomBlur",
+      "category": "blurs",
+      "style": [
+        "webgpu",
+        "shader",
+        "blurs"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "description": "Radial zoom blur expanding from a center point.",
+      "language": "tsx",
+      "previewUrl": "/shaders/covers/ZoomBlur.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-showcase",
+      "project": "shaders",
+      "name": "Shaders — WebGPU Effect Playground",
+      "category": "official-showcase",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "playground",
+        "aurora"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "JavaScript"
+      ],
+      "description": "A live layered WebGPU playground for the Shaders library: Aurora, CursorRipples and FilmGrain stacked on one canvas. 200 MIT-licensed effect components, exported from the browser editor as React, Vue, Svelte or JavaScript.",
+      "language": "html",
+      "previewUrl": "/shaders/covers/Aurora.jpg",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-demo",
+        "playground",
+        "mit"
+      ]
     }
   ]
 }

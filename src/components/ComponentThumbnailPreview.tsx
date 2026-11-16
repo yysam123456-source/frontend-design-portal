@@ -249,6 +249,22 @@ export default function ComponentThumbnailPreview({
     )
   }
 
+  if (previewRecord?.kind === 'media-image' && previewRecord.status === 'ready') {
+    return (
+      <div ref={containerRef} className="absolute inset-0 flex items-center justify-center bg-[#050816]">
+        <img
+          src={previewRecord.media?.poster}
+          alt={`${component.name} official demo`}
+          className={component.id === 'sh-showcase' ? 'h-full w-full object-cover' : 'h-full w-full object-contain'}
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute left-2 top-2 rounded-full bg-black/50 px-2 py-0.5 text-[10px] font-medium text-white">
+          Official Demo
+        </div>
+      </div>
+    )
+  }
+
   if (previewRecord?.kind === 'react-generated' && previewRecord.status === 'ready') {
     return (
       <div ref={containerRef} className="absolute inset-0">
@@ -271,22 +287,6 @@ export default function ComponentThumbnailPreview({
           {previewRecord.media?.webm && <source src={previewRecord.media.webm} type="video/webm" />}
           {previewRecord.media?.mp4 && <source src={previewRecord.media.mp4} type="video/mp4" />}
         </video>
-        <div className="pointer-events-none absolute left-2 top-2 rounded-full bg-black/50 px-2 py-0.5 text-[10px] font-medium text-white">
-          Official Demo
-        </div>
-      </div>
-    )
-  }
-
-  if (previewRecord?.kind === 'media-image' && previewRecord.status === 'ready') {
-    return (
-      <div ref={containerRef} className="absolute inset-0 flex items-center justify-center bg-[#050816]">
-        <img
-          src={previewRecord.media?.poster}
-          alt={`${component.name} official demo`}
-          className="h-full w-full object-contain"
-          loading="lazy"
-        />
         <div className="pointer-events-none absolute left-2 top-2 rounded-full bg-black/50 px-2 py-0.5 text-[10px] font-medium text-white">
           Official Demo
         </div>

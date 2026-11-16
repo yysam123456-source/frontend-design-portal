@@ -1,0 +1,5429 @@
+[
+  {
+    "id": "sh-angular-blur",
+    "project": "shaders",
+    "name": "AngularBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Radial motion blur rotating around a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, AngularBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <AngularBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/angularblur"
+  },
+  {
+    "id": "sh-arc",
+    "project": "shaders",
+    "name": "Arc",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Pie sector (arc wedge) with adjustable radius and aperture angle.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Arc } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Arc />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/arc"
+  },
+  {
+    "id": "sh-ascii",
+    "project": "shaders",
+    "name": "Ascii",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Convert imagery to ASCII character art.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Ascii } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Ascii />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/ascii"
+  },
+  {
+    "id": "sh-aurora",
+    "project": "shaders",
+    "name": "Aurora",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Mesmerizing aurora borealis with layered curtains, vertical rays, and flowing light.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Aurora } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Aurora />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/aurora"
+  },
+  {
+    "id": "sh-bar-shift",
+    "project": "shaders",
+    "name": "BarShift",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Slices content into parallel bars, each offset independently for a fractured or glitch-like effect.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BarShift } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BarShift />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/barshift"
+  },
+  {
+    "id": "sh-barn-doors",
+    "project": "shaders",
+    "name": "BarnDoors",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Split the content along a center line and wipe outward in both directions.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BarnDoors } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BarnDoors />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/barndoors"
+  },
+  {
+    "id": "sh-beam",
+    "project": "shaders",
+    "name": "Beam",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A beam of light from one point to another.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Beam } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Beam />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/beam"
+  },
+  {
+    "id": "sh-bend",
+    "project": "shaders",
+    "name": "Bend",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Bends the ends of the frame toward you like a curved display — content at the edges swells closer under real perspective, or curls away when the strength goes negative.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Bend } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Bend />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/bend"
+  },
+  {
+    "id": "sh-blob",
+    "project": "shaders",
+    "name": "Blob",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Organic animated blob with 3D lighting and gradients.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Blob } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Blob />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/blob"
+  },
+  {
+    "id": "sh-block-dissolve",
+    "project": "shaders",
+    "name": "BlockDissolve",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Dissolve the content away as a grid of blocks vanishing in random order.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BlockDissolve } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BlockDissolve />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/blockdissolve"
+  },
+  {
+    "id": "sh-block-noise",
+    "project": "shaders",
+    "name": "BlockNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Blocky value noise with soft cells that morph over time.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BlockNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BlockNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/blocknoise"
+  },
+  {
+    "id": "sh-blue-noise",
+    "project": "shaders",
+    "name": "BlueNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "High-frequency blue noise — even, grainy speckle ideal for dithering.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BlueNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BlueNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/bluenoise"
+  },
+  {
+    "id": "sh-blur",
+    "project": "shaders",
+    "name": "Blur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A simple Gaussian blur effect.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Blur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Blur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/blur"
+  },
+  {
+    "id": "sh-boids-update",
+    "project": "shaders",
+    "name": "boidsUpdate",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A living murmuration of hundreds of flocking agents drawn as crisp arrows, streaks, dots or glowing comets — separation, alignment and cohesion drive fluid, splitting-and-merging ribbons, agents flash toward an excited color when scattered, and the cursor acts as an attractor or a predator.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, boidsUpdate } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <boidsUpdate />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/boidsupdate"
+  },
+  {
+    "id": "sh-bokeh-blur",
+    "project": "shaders",
+    "name": "BokehBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photographic lens blur where bright highlights bloom into aperture-shaped discs.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BokehBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BokehBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/bokehblur"
+  },
+  {
+    "id": "sh-brick-pattern",
+    "project": "shaders",
+    "name": "BrickPattern",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Classic brick wall pattern with alternating rows and mortar gaps.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BrickPattern } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BrickPattern />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/brickpattern"
+  },
+  {
+    "id": "sh-brightness-contrast",
+    "project": "shaders",
+    "name": "BrightnessContrast",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Adjust brightness and contrast of the image.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BrightnessContrast } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BrightnessContrast />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/brightnesscontrast"
+  },
+  {
+    "id": "sh-brushed-metal",
+    "project": "shaders",
+    "name": "BrushedMetal",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photorealistic brushed metal — a satin anodised surface combed with fine directional grain that smears the reflected studio and key light into the long anisotropic streaks of real brushed aluminium, steel, gold or copper.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, BrushedMetal } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <BrushedMetal />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/brushedmetal"
+  },
+  {
+    "id": "sh-bulge",
+    "project": "shaders",
+    "name": "Bulge",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Magnify or pinch content around a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Bulge } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Bulge />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/bulge"
+  },
+  {
+    "id": "sh-crtscreen",
+    "project": "shaders",
+    "name": "CRTScreen",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Retro CRT monitor simulation with scanlines.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CRTScreen } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CRTScreen />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/crtscreen"
+  },
+  {
+    "id": "sh-carbon-fiber",
+    "project": "shaders",
+    "name": "CarbonFiber",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photorealistic woven carbon fibre — interlaced tows whose anisotropic sheen flips ninety degrees cell to cell, raised into a quilted weave and finished with a glossy clearcoat that mirrors the studio. Plain or twill, in any shape.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CarbonFiber } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CarbonFiber />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/carbonfiber"
+  },
+  {
+    "id": "sh-chalkboard",
+    "project": "shaders",
+    "name": "Chalkboard",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Renders content as a chalk drawing on a blackboard, with edge strokes and cross-hatch shading.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Chalkboard } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Chalkboard />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/chalkboard"
+  },
+  {
+    "id": "sh-channel-blur",
+    "project": "shaders",
+    "name": "ChannelBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Independent blur for red, green, and blue channels.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ChannelBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ChannelBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/channelblur"
+  },
+  {
+    "id": "sh-checker-wipe",
+    "project": "shaders",
+    "name": "CheckerWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wipe the content away as a checkerboard of fading squares.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CheckerWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CheckerWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/checkerwipe"
+  },
+  {
+    "id": "sh-checkerboard",
+    "project": "shaders",
+    "name": "Checkerboard",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Classic checkerboard pattern with two alternating colors.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Checkerboard } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Checkerboard />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/checkerboard"
+  },
+  {
+    "id": "sh-chevron",
+    "project": "shaders",
+    "name": "Chevron",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Animated chevron / zigzag stripe pattern.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Chevron } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Chevron />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/chevron"
+  },
+  {
+    "id": "sh-chroma-flow",
+    "project": "shaders",
+    "name": "ChromaFlow",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Interactive liquid flow effect that follows your cursor.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ChromaFlow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ChromaFlow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/chromaflow"
+  },
+  {
+    "id": "sh-chromatic-aberration",
+    "project": "shaders",
+    "name": "ChromaticAberration",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Separate RGB channels for a prismatic distortion effect.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ChromaticAberration } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ChromaticAberration />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/chromaticaberration"
+  },
+  {
+    "id": "sh-chrome",
+    "project": "shaders",
+    "name": "Chrome",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Studio-lit mirror chrome — a precision-machined shape with a controllable polished bevel, softly convex faces and a photographic studio reflected in them: one huge frontal softbox, black flags, and thin warm/cool strip lights that fringe amber and ice-blue exactly where the reflections break.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Chrome } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Chrome />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/chrome"
+  },
+  {
+    "id": "sh-circle",
+    "project": "shaders",
+    "name": "Circle",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Generate a circle with adjustable size and softness.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Circle } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Circle />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/circle"
+  },
+  {
+    "id": "sh-color-wheel",
+    "project": "shaders",
+    "name": "ColorWheel",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A directional gradient that smoothly cycles through rainbow colors or a custom set of three colors.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ColorWheel } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ColorWheel />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/colorwheel"
+  },
+  {
+    "id": "sh-compression-artifacts",
+    "project": "shaders",
+    "name": "CompressionArtifacts",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Simulates lossy JPEG compression — 8×8 DCT block quantization, blockiness, ringing and color bleed.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CompressionArtifacts } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CompressionArtifacts />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/compressionartifacts"
+  },
+  {
+    "id": "sh-concentric-spin",
+    "project": "shaders",
+    "name": "ConcentricSpin",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Concentric rings that each rotate the underlying image by different amounts.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ConcentricSpin } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ConcentricSpin />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/concentricspin"
+  },
+  {
+    "id": "sh-conic-gradient",
+    "project": "shaders",
+    "name": "ConicGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Colors sweep in a full circle around a center point, like a color wheel.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ConicGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ConicGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/conicgradient"
+  },
+  {
+    "id": "sh-contour-lines",
+    "project": "shaders",
+    "name": "ContourLines",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Draw topographical contour lines based on luminance or alpha.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ContourLines } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ContourLines />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/contourlines"
+  },
+  {
+    "id": "sh-corner-pin",
+    "project": "shaders",
+    "name": "CornerPin",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Pin each corner of the content to an arbitrary position for a free perspective warp.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CornerPin } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CornerPin />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/cornerpin"
+  },
+  {
+    "id": "sh-crescent",
+    "project": "shaders",
+    "name": "Crescent",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Crescent moon shape — an outer circle with an inner circle subtracted.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Crescent } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Crescent />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/crescent"
+  },
+  {
+    "id": "sh-cross",
+    "project": "shaders",
+    "name": "Cross",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Plus / cross shape with adjustable arm length, width, and rounding.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Cross } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Cross />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/cross"
+  },
+  {
+    "id": "sh-crystal",
+    "project": "shaders",
+    "name": "Crystal",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Diamond-like crystal lens with faceted refraction.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Crystal } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Crystal />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/crystal"
+  },
+  {
+    "id": "sh-curl-noise",
+    "project": "shaders",
+    "name": "CurlNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Swirling divergence-free flow field that drifts over time.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CurlNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CurlNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/curlnoise"
+  },
+  {
+    "id": "sh-cursor-ripples",
+    "project": "shaders",
+    "name": "CursorRipples",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Fluid-like ripple distortion.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, CursorRipples } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <CursorRipples />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/cursorripples"
+  },
+  {
+    "id": "sh-cursor-trail-scan",
+    "project": "shaders",
+    "name": "cursorTrailScan",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Animated trail effect that tracks cursor movement.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, cursorTrailScan } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <cursorTrailScan />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/cursortrailscan"
+  },
+  {
+    "id": "sh-data-mosh",
+    "project": "shaders",
+    "name": "DataMosh",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Corrupted-codec motion smearing — macroblocks lock in place and drag their pixels across the frame in liquid trails, each recovering on its own clock, like a video stream that lost its keyframes.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DataMosh } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DataMosh />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/datamosh"
+  },
+  {
+    "id": "sh-diamond-gradient",
+    "project": "shaders",
+    "name": "DiamondGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Diamond-shaped gradient radiating from a center point using Manhattan distance.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DiamondGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DiamondGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/diamondgradient"
+  },
+  {
+    "id": "sh-diamond-wipe",
+    "project": "shaders",
+    "name": "DiamondWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wipe the content away through a lattice of growing diamonds.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DiamondWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DiamondWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/diamondwipe"
+  },
+  {
+    "id": "sh-diffuse-blur",
+    "project": "shaders",
+    "name": "DiffuseBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Grain-like pixel displacement at random.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DiffuseBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DiffuseBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/diffuseblur"
+  },
+  {
+    "id": "sh-displacement-map",
+    "project": "shaders",
+    "name": "DisplacementMap",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Distorts child content using another layer.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DisplacementMap } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DisplacementMap />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/displacementmap"
+  },
+  {
+    "id": "sh-dither",
+    "project": "shaders",
+    "name": "Dither",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Dithering effect with multiple pattern options.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Dither } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Dither />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/dither"
+  },
+  {
+    "id": "sh-dot-grid",
+    "project": "shaders",
+    "name": "DotGrid",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Grid of dots with optional twinkling animation.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DotGrid } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DotGrid />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/dotgrid"
+  },
+  {
+    "id": "sh-drop-shadow",
+    "project": "shaders",
+    "name": "DropShadow",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Adds a soft shadow behind the child content based on its alpha silhouette.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, DropShadow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <DropShadow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/dropshadow"
+  },
+  {
+    "id": "sh-duotone",
+    "project": "shaders",
+    "name": "Duotone",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Map colors to two tones based on luminance.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Duotone } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Duotone />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/duotone"
+  },
+  {
+    "id": "sh-ellipse",
+    "project": "shaders",
+    "name": "Ellipse",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Ellipse with independently adjustable horizontal and vertical radii.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Ellipse } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Ellipse />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/ellipse"
+  },
+  {
+    "id": "sh-emboss",
+    "project": "shaders",
+    "name": "Emboss",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Embossed / debossed relief shading on top of child content, driven by a custom shape.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Emboss } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Emboss />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/emboss"
+  },
+  {
+    "id": "sh-engraving",
+    "project": "shaders",
+    "name": "Engraving",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Copper-plate line engraving — the image is redrawn as flowing line work whose weight swells with darkness, lines displaced by the form like a banknote portrait: a single plate, cross-hatched shadow plates, or one continuous spiral cut.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Engraving } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Engraving />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/engraving"
+  },
+  {
+    "id": "sh-erosion-noise",
+    "project": "shaders",
+    "name": "ErosionNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Branching, hydraulic-erosion ridges carved into noise.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ErosionNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ErosionNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/erosionnoise"
+  },
+  {
+    "id": "sh-exposure",
+    "project": "shaders",
+    "name": "Exposure",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Multiplicative exposure (gain) on the child. Unlike additive brightness, it scales values around black — blacks stay black while highlights can be pushed past 1.0 to feed HDR bloom and tone-mapping roll-off. Pointwise, so no extra render pass is needed.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Exposure } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Exposure />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/exposure"
+  },
+  {
+    "id": "sh-falling-lines",
+    "project": "shaders",
+    "name": "FallingLines",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Directional falling lines with a leading-to-trailing color fade.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FallingLines } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FallingLines />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/fallinglines"
+  },
+  {
+    "id": "sh-film-grain",
+    "project": "shaders",
+    "name": "FilmGrain",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Analog film grain texture overlay, weighted toward darker areas.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FilmGrain } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FilmGrain />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/filmgrain"
+  },
+  {
+    "id": "sh-film-stock",
+    "project": "shaders",
+    "name": "FilmStock",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Real analog film color from measured film-emulation LUTs — ten classic stock looks with emulsion halation and projector gate weave.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FilmStock } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FilmStock />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/filmstock"
+  },
+  {
+    "id": "sh-flip",
+    "project": "shaders",
+    "name": "Flip",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Mirror content horizontally, vertically, or both.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Flip } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Flip />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/flip"
+  },
+  {
+    "id": "sh-floating-particles-update",
+    "project": "shaders",
+    "name": "floatingParticlesUpdate",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Drifting, twinkling motes — thousands of real simulated particles floating in a shared heading with per-particle wander and variance, and a cursor that stirs the field with a gust that settles back into the drift.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, floatingParticlesUpdate } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <floatingParticlesUpdate />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/floatingparticlesupdate"
+  },
+  {
+    "id": "sh-flow-field",
+    "project": "shaders",
+    "name": "FlowField",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Fluid-like distortion with constant smooth motion.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FlowField } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FlowField />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/flowfield"
+  },
+  {
+    "id": "sh-flower",
+    "project": "shaders",
+    "name": "Flower",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Petal shape with N lobes and adjustable inner-to-outer radius ratio.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Flower } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Flower />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/flower"
+  },
+  {
+    "id": "sh-flowing-gradient",
+    "project": "shaders",
+    "name": "FlowingGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Liquid silk gradient with organic flowing color bands.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FlowingGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FlowingGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/flowinggradient"
+  },
+  {
+    "id": "sh-fluted-glass",
+    "project": "shaders",
+    "name": "FlutedGlass",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Full-screen fluted glass effect — refracts content through repeating cylindrical bars.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FlutedGlass } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FlutedGlass />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/flutedglass"
+  },
+  {
+    "id": "sh-fog",
+    "project": "shaders",
+    "name": "Fog",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Fog that fills the screen and interacts with the mouse.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Fog } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Fog />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/fog"
+  },
+  {
+    "id": "sh-form3-d",
+    "project": "shaders",
+    "name": "Form3D",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wraps child content onto a 3D raymarched shape with lighting.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Form3D } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Form3D />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/form3d"
+  },
+  {
+    "id": "sh-fractal-noise",
+    "project": "shaders",
+    "name": "FractalNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Multi-octave fractal Brownian motion noise texture with true noise evolution.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, FractalNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <FractalNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/fractalnoise"
+  },
+  {
+    "id": "sh-frost",
+    "project": "shaders",
+    "name": "Frost",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photoreal frozen ice — thickness-driven subsurface scattering that reads as a solid block, with fine frost crystals creeping in from the edges.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Frost } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Frost />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/frost"
+  },
+  {
+    "id": "sh-gabor-noise",
+    "project": "shaders",
+    "name": "GaborNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Oriented sine-grain noise with a fingerprint-like flow.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, GaborNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <GaborNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/gabornoise"
+  },
+  {
+    "id": "sh-glass",
+    "project": "shaders",
+    "name": "Glass",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Optically realistic glass lens driven in a custom shape.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Glass } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Glass />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/glass"
+  },
+  {
+    "id": "sh-glass-tiles",
+    "project": "shaders",
+    "name": "GlassTiles",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Refraction-like distortion in a tile grid pattern.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, GlassTiles } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <GlassTiles />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/glasstiles"
+  },
+  {
+    "id": "sh-glitch",
+    "project": "shaders",
+    "name": "Glitch",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Digital glitch that melts pixels and distorts colors.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Glitch } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Glitch />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/glitch"
+  },
+  {
+    "id": "sh-glow",
+    "project": "shaders",
+    "name": "Glow",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Soft glow effect with adjustable intensity.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Glow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Glow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/glow"
+  },
+  {
+    "id": "sh-godrays",
+    "project": "shaders",
+    "name": "Godrays",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Volumetric light rays emanating from a point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Godrays } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Godrays />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/godrays"
+  },
+  {
+    "id": "sh-goo",
+    "project": "shaders",
+    "name": "Goo",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photoreal wet liquid — animated 3D metaball blobs that merge and bulge to loosely form the shape, with sliding wet highlights, a clearcoat rim and a translucent body.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Goo } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Goo />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/goo"
+  },
+  {
+    "id": "sh-gradient-map",
+    "project": "shaders",
+    "name": "GradientMap",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Maps source luminance through an animated color gradient (Photoshop-style gradient map).",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, GradientMap } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <GradientMap />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/gradientmap"
+  },
+  {
+    "id": "sh-grayscale",
+    "project": "shaders",
+    "name": "Grayscale",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Convert colors to black and white.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Grayscale } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Grayscale />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/grayscale"
+  },
+  {
+    "id": "sh-grid",
+    "project": "shaders",
+    "name": "Grid",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Simple grid lines pattern with adjustable thickness and rotation.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Grid } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Grid />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/grid"
+  },
+  {
+    "id": "sh-grid-distortion",
+    "project": "shaders",
+    "name": "GridDistortion",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Interactive grid distortion controlled by mouse position.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, GridDistortion } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <GridDistortion />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/griddistortion"
+  },
+  {
+    "id": "sh-group",
+    "project": "shaders",
+    "name": "Group",
+    "category": "utilities",
+    "style": [
+      "webgpu",
+      "shader",
+      "utilities"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Container for organizing and composing child effects — supports flex-like flow layout (column/row stacking via the flow prop).",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Group } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Group />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/group"
+  },
+  {
+    "id": "sh-htmlin-canvas",
+    "project": "shaders",
+    "name": "HTMLInCanvas",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Render live HTML/DOM content as a WebGPU texture layer via the html-in-canvas API. Requires Chrome Canary with chrome://flags/#canvas-draw-element enabled.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, HTMLInCanvas } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <HTMLInCanvas />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/htmlincanvas"
+  },
+  {
+    "id": "sh-halftone",
+    "project": "shaders",
+    "name": "Halftone",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Halftone dot pattern effect for printing aesthetics.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Halftone } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Halftone />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/halftone"
+  },
+  {
+    "id": "sh-heart",
+    "project": "shaders",
+    "name": "Heart",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Heart shape with adjustable size.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Heart } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Heart />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/heart"
+  },
+  {
+    "id": "sh-heatmap",
+    "project": "shaders",
+    "name": "Heatmap",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Thermal-camera heat flowing through any 2D, SVG, or 3D shape. Powered by Paper Shaders.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Heatmap } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Heatmap />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/heatmap"
+  },
+  {
+    "id": "sh-hex-grid",
+    "project": "shaders",
+    "name": "HexGrid",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Honeycomb hexagonal grid pattern.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, HexGrid } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <HexGrid />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/hexgrid"
+  },
+  {
+    "id": "sh-hologram",
+    "project": "shaders",
+    "name": "Hologram",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Volumetric sci-fi hologram — a translucent emissive projection of the shape with fresnel-lit edges, depth scan-lines that wrap 3D forms, CRT scanlines, flicker and beam wobble.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Hologram } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Hologram />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/hologram"
+  },
+  {
+    "id": "sh-holographic",
+    "project": "shaders",
+    "name": "Holographic",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Iridescent holographic foil sticker with animated rainbow sheen and glitter flakes.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Holographic } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Holographic />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/holographic"
+  },
+  {
+    "id": "sh-hue-shift",
+    "project": "shaders",
+    "name": "HueShift",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rotate hue around the color wheel.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, HueShift } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <HueShift />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/hueshift"
+  },
+  {
+    "id": "sh-image-texture",
+    "project": "shaders",
+    "name": "ImageTexture",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Display an image with customizable object-fit modes.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ImageTexture } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ImageTexture />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/imagetexture"
+  },
+  {
+    "id": "sh-ink-flow",
+    "project": "shaders",
+    "name": "InkFlow",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Drag to paint swirling ribbons of ink through a real fluid field — eddies keep evolving after you let go.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, InkFlow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <InkFlow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/inkflow"
+  },
+  {
+    "id": "sh-invert",
+    "project": "shaders",
+    "name": "Invert",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Invert RGB colors while preserving alpha.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Invert } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Invert />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/invert"
+  },
+  {
+    "id": "sh-iris-wipe",
+    "project": "shaders",
+    "name": "IrisWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Reveal through an expanding circle growing from a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, IrisWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <IrisWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/iriswipe"
+  },
+  {
+    "id": "sh-irradiance",
+    "project": "shaders",
+    "name": "Irradiance",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photorealistic light spilling around the edge of any 2D, SVG, or 3D shape — any number of movable colored point lights strike the silhouette and the lit edges irradiate their surroundings, gathered in a compute pass with real cast shadows, mixing where they meet and burning to white at the rim.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Irradiance } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Irradiance />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/irradiance"
+  },
+  {
+    "id": "sh-isometric-cubes",
+    "project": "shaders",
+    "name": "IsometricCubes",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Isometric tumbling-blocks tiling — a 3D cube illusion (rhombille pattern).",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, IsometricCubes } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <IsometricCubes />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/isometriccubes"
+  },
+  {
+    "id": "sh-kaleidoscope",
+    "project": "shaders",
+    "name": "Kaleidoscope",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Create a kaleidoscope effect with radial mirrored segments.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Kaleidoscope } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Kaleidoscope />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/kaleidoscope"
+  },
+  {
+    "id": "sh-key-frames",
+    "project": "shaders",
+    "name": "KeyFrames",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Motion-tracking overlay — trackers hunt and follow features in the content, dropping keyframe diamonds behind them along their motion paths, like a compositor mid-track.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, KeyFrames } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <KeyFrames />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/keyframes"
+  },
+  {
+    "id": "sh-lens-distortion",
+    "project": "shaders",
+    "name": "LensDistortion",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Split content into shifting chromatic layers with barrel or pincushion lens warp. Powered by Paper Shaders.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LensDistortion } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LensDistortion />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/lensdistortion"
+  },
+  {
+    "id": "sh-lens-flare",
+    "project": "shaders",
+    "name": "LensFlare",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Realistic camera lens flare with artifacts.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LensFlare } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LensFlare />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/lensflare"
+  },
+  {
+    "id": "sh-light-edge",
+    "project": "shaders",
+    "name": "LightEdge",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Glowing, pulsing light racing around the edge of any 2D, SVG, or 3D shape. Powered by Paper Shaders.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LightEdge } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LightEdge />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/lightedge"
+  },
+  {
+    "id": "sh-light-leak",
+    "project": "shaders",
+    "name": "LightLeak",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photorealistic film light leak — warm overexposed light bleeding in from a draggable anchor point, with streak bands, chromatic fringing, and slow breathing that evolves over time.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LightLeak } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LightLeak />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/lightleak"
+  },
+  {
+    "id": "sh-line",
+    "project": "shaders",
+    "name": "Line",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Draw a straight line between two points with color, thickness, and solid, dashed, or dotted styles.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Line } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Line />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/line"
+  },
+  {
+    "id": "sh-linear-blur",
+    "project": "shaders",
+    "name": "LinearBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Directional motion blur in a specific angle.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LinearBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LinearBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/linearblur"
+  },
+  {
+    "id": "sh-linear-gradient",
+    "project": "shaders",
+    "name": "LinearGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Create smooth linear color gradients.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LinearGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LinearGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/lineargradient"
+  },
+  {
+    "id": "sh-linear-wipe",
+    "project": "shaders",
+    "name": "LinearWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wipe the content away along a straight edge with a soft feathered transition.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LinearWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LinearWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/linearwipe"
+  },
+  {
+    "id": "sh-liquid-metal",
+    "project": "shaders",
+    "name": "LiquidMetal",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Flowing liquid chrome — a molten reflective surface that wraps the shape, sweeping a procedural studio reflection across animated folds with crisp speculars and prismatic edges.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, LiquidMetal } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <LiquidMetal />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/liquidmetal"
+  },
+  {
+    "id": "sh-liquify",
+    "project": "shaders",
+    "name": "Liquify",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Liquid-like interactive deformation effect.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Liquify } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Liquify />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/liquify"
+  },
+  {
+    "id": "sh-filings-update",
+    "project": "shaders",
+    "name": "filingsUpdate",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Thousands of tiny iron filings scattered on paper that swing to align with a magnetic field around the cursor, tracing out the field lines — a dipole whose axis follows the cursor.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, filingsUpdate } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <filingsUpdate />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/filingsupdate"
+  },
+  {
+    "id": "sh-marble",
+    "project": "shaders",
+    "name": "Marble",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Classic marble swirl and vein texture using noise-warped sine waves.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Marble } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Marble />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/marble"
+  },
+  {
+    "id": "sh-mesh-gradient",
+    "project": "shaders",
+    "name": "MeshGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Flowing mesh gradient of soft drifting color swaths whose seams wrap through the palette.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, MeshGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <MeshGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/meshgradient"
+  },
+  {
+    "id": "sh-mirror",
+    "project": "shaders",
+    "name": "Mirror",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Mirror content across a line defined by center point and angle.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Mirror } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Mirror />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/mirror"
+  },
+  {
+    "id": "sh-multi-point-gradient",
+    "project": "shaders",
+    "name": "MultiPointGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Five individually placed color points blended together by proximity — drag each point to shape the gradient.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, MultiPointGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <MultiPointGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/multipointgradient"
+  },
+  {
+    "id": "sh-nebula",
+    "project": "shaders",
+    "name": "Nebula",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A volumetric gas nebula sealed inside polished glass; billowing emission clouds with hollow dark cavities and hot glowing cores, star fields drifting at real depth behind the gas, all refracted through the curved walls of the shape and dressed with studio reflections.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Nebula } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Nebula />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/nebula"
+  },
+  {
+    "id": "sh-neon",
+    "project": "shaders",
+    "name": "Neon",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Photorealistic neon tube / 3D pipe effect driven by a custom shape.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Neon } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Neon />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/neon"
+  },
+  {
+    "id": "sh-noise-dissolve",
+    "project": "shaders",
+    "name": "NoiseDissolve",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Dissolve the content away through an organic noise pattern.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, NoiseDissolve } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <NoiseDissolve />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/noisedissolve"
+  },
+  {
+    "id": "sh-object-tracker",
+    "project": "shaders",
+    "name": "ObjectTracker",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Computer-vision style object detection overlay — draws bounding boxes and labels around detected regions of the content below, with grid, quadtree and mosaic layouts.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ObjectTracker } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ObjectTracker />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/objecttracker"
+  },
+  {
+    "id": "sh-obsidian",
+    "project": "shaders",
+    "name": "Obsidian",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Dark tinted glass whose faces stay near-black while every surface turning away from the viewer ignites with a flowing iridescent gradient — vivid color living only on the oblique walls and bevels.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Obsidian } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Obsidian />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/obsidian"
+  },
+  {
+    "id": "sh-page-peel",
+    "project": "shaders",
+    "name": "PagePeel",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Curl the content up from a corner like a peeling page.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, PagePeel } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <PagePeel />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/pagepeel"
+  },
+  {
+    "id": "sh-paper",
+    "project": "shaders",
+    "name": "Paper",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Applies realistic paper grain and surface roughness to child content.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Paper } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Paper />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/paper"
+  },
+  {
+    "id": "sh-parallelogram",
+    "project": "shaders",
+    "name": "Parallelogram",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Parallelogram with adjustable width, height and skew.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Parallelogram } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Parallelogram />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/parallelogram"
+  },
+  {
+    "id": "sh-particle-field-sim",
+    "project": "shaders",
+    "name": "particleFieldSim",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Explodes the child content into a breathing 3D field of particles — bright areas float toward you and dark areas recede, the whole relief can be orbited with the camera rotations, and the cursor physically throws particles that spring back home.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, particleFieldSim } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <particleFieldSim />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/particlefieldsim"
+  },
+  {
+    "id": "sh-particle-flow-integrate",
+    "project": "shaders",
+    "name": "particleFlowIntegrate",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Thousands of drifting dust particles carried by a real incompressible fluid field the cursor stirs — drag to plow a wake and the particles ride the eddies and vortices it leaves behind, while a gentle ambient breeze keeps the whole scene breathing on its own.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, particleFlowIntegrate } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <particleFlowIntegrate />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/particleflowintegrate"
+  },
+  {
+    "id": "sh-particles-update",
+    "project": "shaders",
+    "name": "particlesUpdate",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A swarm of simulated particles that settles into the shape, filling it evenly — flat, SVG or true 3D volumes — scattering from the cursor (or chasing it), tumbling when the shape moves, and always drifting back home.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, particlesUpdate } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <particlesUpdate />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/particlesupdate"
+  },
+  {
+    "id": "sh-perlin-noise",
+    "project": "shaders",
+    "name": "PerlinNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Smooth gradient noise that morphs over time.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, PerlinNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <PerlinNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/perlinnoise"
+  },
+  {
+    "id": "sh-perspective",
+    "project": "shaders",
+    "name": "Perspective",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rotate the plane in 3D space with pan and tilt.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Perspective } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Perspective />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/perspective"
+  },
+  {
+    "id": "sh-pixel-sort",
+    "project": "shaders",
+    "name": "PixelSort",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Pixels sort by brightness around the cursor and keep their sorted position, optionally decaying back over time.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, PixelSort } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <PixelSort />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/pixelsort"
+  },
+  {
+    "id": "sh-pixel-throw",
+    "project": "shaders",
+    "name": "PixelThrow",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Throws pixels along the cursor.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, PixelThrow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <PixelThrow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/pixelthrow"
+  },
+  {
+    "id": "sh-pixelate",
+    "project": "shaders",
+    "name": "Pixelate",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Pixelation effect with adjustable cell size.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Pixelate } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Pixelate />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/pixelate"
+  },
+  {
+    "id": "sh-plasma",
+    "project": "shaders",
+    "name": "Plasma",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Animated effect of glowing plasma.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Plasma } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Plasma />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/plasma"
+  },
+  {
+    "id": "sh-plastic",
+    "project": "shaders",
+    "name": "Plastic",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Glossy molded plastic with photorealistic studio reflections, driven in a custom shape.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Plastic } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Plastic />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/plastic"
+  },
+  {
+    "id": "sh-polar-coordinates",
+    "project": "shaders",
+    "name": "PolarCoordinates",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Convert rectangular coordinates to polar space.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, PolarCoordinates } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <PolarCoordinates />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/polarcoordinates"
+  },
+  {
+    "id": "sh-polygon",
+    "project": "shaders",
+    "name": "Polygon",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Regular polygon with adjustable sides and corner rounding.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Polygon } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Polygon />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/polygon"
+  },
+  {
+    "id": "sh-posterize",
+    "project": "shaders",
+    "name": "Posterize",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Reduce color depth to create a poster effect.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Posterize } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Posterize />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/posterize"
+  },
+  {
+    "id": "sh-prism",
+    "project": "shaders",
+    "name": "Prism",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A beam of light that fans out and splits into a slowly-rotating rainbow past a controllable point. Transparent background — composite over a dark layer.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Prism } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Prism />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/prism"
+  },
+  {
+    "id": "sh-progressive-blur",
+    "project": "shaders",
+    "name": "ProgressiveBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Blur that increases progressively in one direction.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ProgressiveBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ProgressiveBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/progressiveblur"
+  },
+  {
+    "id": "sh-radial-gradient",
+    "project": "shaders",
+    "name": "RadialGradient",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Radial gradient radiating from a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, RadialGradient } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <RadialGradient />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/radialgradient"
+  },
+  {
+    "id": "sh-radial-wipe",
+    "project": "shaders",
+    "name": "RadialWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Sweep the content away in a clock-hand arc around a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, RadialWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <RadialWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/radialwipe"
+  },
+  {
+    "id": "sh-random-bars",
+    "project": "shaders",
+    "name": "RandomBars",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wipe the content away as parallel bars vanishing in random order.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, RandomBars } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <RandomBars />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/randombars"
+  },
+  {
+    "id": "sh-reaction-diffusion",
+    "project": "shaders",
+    "name": "ReactionDiffusion",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "A living Gray-Scott reaction-diffusion pattern that fills the layer and blooms wherever you drag the cursor.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ReactionDiffusion } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ReactionDiffusion />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/reactiondiffusion"
+  },
+  {
+    "id": "sh-rectangular-coordinates",
+    "project": "shaders",
+    "name": "RectangularCoordinates",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Convert polar coordinates back to rectangular space.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, RectangularCoordinates } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <RectangularCoordinates />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/rectangularcoordinates"
+  },
+  {
+    "id": "sh-reflective-plane",
+    "project": "shaders",
+    "name": "ReflectivePlane",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Reflective floor that mirrors the content above it.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ReflectivePlane } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ReflectivePlane />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/reflectiveplane"
+  },
+  {
+    "id": "sh-repeater",
+    "project": "shaders",
+    "name": "Repeater",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Repeat the child content in grid, radial or linear layouts with per-instance variation.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Repeater } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Repeater />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/repeater"
+  },
+  {
+    "id": "sh-ring",
+    "project": "shaders",
+    "name": "Ring",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Annular ring (donut) with adjustable radius and band thickness.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Ring } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Ring />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/ring"
+  },
+  {
+    "id": "sh-ripple-wipe",
+    "project": "shaders",
+    "name": "RippleWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wipe the content away in concentric rings pulsing out from a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, RippleWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <RippleWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/ripplewipe"
+  },
+  {
+    "id": "sh-ripples",
+    "project": "shaders",
+    "name": "Ripples",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Concentric animated ripples emanating from a point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Ripples } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Ripples />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/ripples"
+  },
+  {
+    "id": "sh-rounded-rect",
+    "project": "shaders",
+    "name": "RoundedRect",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rounded rectangle with adjustable width, height, and corner rounding.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, RoundedRect } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <RoundedRect />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/roundedrect"
+  },
+  {
+    "id": "sh-satin",
+    "project": "shaders",
+    "name": "Satin",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Flowing satin — a draped cloth of soft rippling folds lit like real fabric: a highlight streaked along the weave, a velvet sheen on the fold flanks and creases falling into shadow, swaying gently in a breeze.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Satin } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Satin />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/satin"
+  },
+  {
+    "id": "sh-saturation",
+    "project": "shaders",
+    "name": "Saturation",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Adjust color saturation intensity.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Saturation } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Saturation />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/saturation"
+  },
+  {
+    "id": "sh-scratches",
+    "project": "shaders",
+    "name": "Scratches",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Fine hairline scratches, like a worn film or scratched surface.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Scratches } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Scratches />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/scratches"
+  },
+  {
+    "id": "sh-sharpness",
+    "project": "shaders",
+    "name": "Sharpness",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Adjust image sharpness using a convolution kernel.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Sharpness } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Sharpness />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/sharpness"
+  },
+  {
+    "id": "sh-shatter",
+    "project": "shaders",
+    "name": "Shatter",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Broken glass effect with tectonic plate displacement.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Shatter } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Shatter />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/shatter"
+  },
+  {
+    "id": "sh-simplex-noise",
+    "project": "shaders",
+    "name": "SimplexNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Organic noise with animated movement.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SimplexNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SimplexNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/simplexnoise"
+  },
+  {
+    "id": "sh-sine-wave",
+    "project": "shaders",
+    "name": "SineWave",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Animated wave with thickness and softness.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SineWave } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SineWave />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/sinewave"
+  },
+  {
+    "id": "sh-slice-wipe",
+    "project": "shaders",
+    "name": "SliceWipe",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Slice the content into strips that slide away in alternating directions.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SliceWipe } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SliceWipe />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/slicewipe"
+  },
+  {
+    "id": "sh-smoke",
+    "project": "shaders",
+    "name": "Smoke",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Realistic fluid smoke simulation with vorticity dynamics.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Smoke } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Smoke />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/smoke"
+  },
+  {
+    "id": "sh-smoke-fill",
+    "project": "shaders",
+    "name": "SmokeFill",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Fill a shape with swirling fluid smoke that interacts with the shape boundary.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SmokeFill } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SmokeFill />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/smokefill"
+  },
+  {
+    "id": "sh-smoke-flow",
+    "project": "shaders",
+    "name": "SmokeFlow",
+    "category": "interactive",
+    "style": [
+      "webgpu",
+      "shader",
+      "interactive"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Cursor-driven smoke that lingers, swirls, and dissipates with fluid dynamics.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SmokeFlow } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SmokeFlow />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/smokeflow"
+  },
+  {
+    "id": "sh-solarize",
+    "project": "shaders",
+    "name": "Solarize",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Inverts tones above a luminance threshold — a classic darkroom and photo effect.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Solarize } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Solarize />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/solarize"
+  },
+  {
+    "id": "sh-solid-color",
+    "project": "shaders",
+    "name": "SolidColor",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Fill the canvas with a single solid color.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SolidColor } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SolidColor />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/solidcolor"
+  },
+  {
+    "id": "sh-sparkle",
+    "project": "shaders",
+    "name": "Sparkle",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Twinkling star glints over the bright parts of the layer inside.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Sparkle } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Sparkle />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/sparkle"
+  },
+  {
+    "id": "sh-spherize",
+    "project": "shaders",
+    "name": "Spherize",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Map content onto a 3D sphere surface with depth distortion.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Spherize } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Spherize />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/spherize"
+  },
+  {
+    "id": "sh-spiral",
+    "project": "shaders",
+    "name": "Spiral",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rotating spiral pattern with animated movement.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Spiral } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Spiral />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/spiral"
+  },
+  {
+    "id": "sh-star",
+    "project": "shaders",
+    "name": "Star",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Classic star polygon with straight sides and sharp pointed tips.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Star } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Star />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/star"
+  },
+  {
+    "id": "sh-stone",
+    "project": "shaders",
+    "name": "Stone",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Applies a marbled stone relief and surface distortion to child content.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Stone } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Stone />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/stone"
+  },
+  {
+    "id": "sh-strands",
+    "project": "shaders",
+    "name": "Strands",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Flowing ribbons of light with a multi-color gradient.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Strands } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Strands />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/strands"
+  },
+  {
+    "id": "sh-stretch",
+    "project": "shaders",
+    "name": "Stretch",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Stretch content towards a direction from a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Stretch } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Stretch />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/stretch"
+  },
+  {
+    "id": "sh-stripes",
+    "project": "shaders",
+    "name": "Stripes",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Alternating colored stripes with animation.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Stripes } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Stripes />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/stripes"
+  },
+  {
+    "id": "sh-studio-background",
+    "project": "shaders",
+    "name": "StudioBackground",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Multi-light studio background with ambient motion.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, StudioBackground } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <StudioBackground />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/studiobackground"
+  },
+  {
+    "id": "sh-sun-burst",
+    "project": "shaders",
+    "name": "SunBurst",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Radial sunburst rays emanating from a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, SunBurst } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <SunBurst />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/sunburst"
+  },
+  {
+    "id": "sh-surface3-d",
+    "project": "shaders",
+    "name": "Surface3D",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Drapes child content over a 3D wave surface with perspective and lighting.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Surface3D } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Surface3D />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/surface3d"
+  },
+  {
+    "id": "sh-swirl",
+    "project": "shaders",
+    "name": "Swirl",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Flowing swirl pattern with multi-layered noise.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Swirl } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Swirl />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/swirl"
+  },
+  {
+    "id": "sh-teardrop",
+    "project": "shaders",
+    "name": "Teardrop",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Teardrop — a rounded bulb tapering to a sharp point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Teardrop } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Teardrop />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/teardrop"
+  },
+  {
+    "id": "sh-text",
+    "project": "shaders",
+    "name": "Text",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Text with any Google font — multi-line with wrapping, alignment and line height — rendered crisp via a glyph texture.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Text } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Text />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/text"
+  },
+  {
+    "id": "sh-thin-film",
+    "project": "shaders",
+    "name": "ThinFilm",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Iridescent thin-film edge.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ThinFilm } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ThinFilm />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/thinfilm"
+  },
+  {
+    "id": "sh-tilt-shift",
+    "project": "shaders",
+    "name": "TiltShift",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Selective focus blur mimicking tilt-shift photography.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, TiltShift } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <TiltShift />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/tiltshift"
+  },
+  {
+    "id": "sh-time-trail",
+    "project": "shaders",
+    "name": "TimeTrail",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "An Echo-style temporal trail — whatever moves sheds a smooth, decaying long-exposure ghost trail (frame-difference Motion mode works on opaque images and video; Alpha mode trails a shape.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, TimeTrail } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <TimeTrail />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/timetrail"
+  },
+  {
+    "id": "sh-tint",
+    "project": "shaders",
+    "name": "Tint",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Apply a color tint to the image.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Tint } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Tint />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/tint"
+  },
+  {
+    "id": "sh-trapezoid",
+    "project": "shaders",
+    "name": "Trapezoid",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Trapezoid with adjustable top and bottom widths and height.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Trapezoid } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Trapezoid />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/trapezoid"
+  },
+  {
+    "id": "sh-triangular-grid",
+    "project": "shaders",
+    "name": "TriangularGrid",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Tiling grid of equilateral triangles with optional animated row offsets.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, TriangularGrid } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <TriangularGrid />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/triangulargrid"
+  },
+  {
+    "id": "sh-tritone",
+    "project": "shaders",
+    "name": "Tritone",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Map colors to three tones: shadows, midtones, highlights.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Tritone } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Tritone />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/tritone"
+  },
+  {
+    "id": "sh-truchet",
+    "project": "shaders",
+    "name": "Truchet",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Quarter-circle arc tiles that connect to form organic, maze-like flowing curves.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Truchet } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Truchet />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/truchet"
+  },
+  {
+    "id": "sh-twirl",
+    "project": "shaders",
+    "name": "Twirl",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rotate and twist content around a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Twirl } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Twirl />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/twirl"
+  },
+  {
+    "id": "sh-vhs",
+    "project": "shaders",
+    "name": "VHS",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Analog VHS tape with intermittent tape damage, chroma bleed, and per-scanline noise.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, VHS } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <VHS />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/vhs"
+  },
+  {
+    "id": "sh-venetian-blinds",
+    "project": "shaders",
+    "name": "VenetianBlinds",
+    "category": "transitions",
+    "style": [
+      "webgpu",
+      "shader",
+      "transitions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wipe the content away behind a set of parallel closing strips.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, VenetianBlinds } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <VenetianBlinds />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/venetianblinds"
+  },
+  {
+    "id": "sh-vesica",
+    "project": "shaders",
+    "name": "Vesica",
+    "category": "shapes",
+    "style": [
+      "webgpu",
+      "shader",
+      "shapes"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Vesica piscis (lens shape) formed by the intersection of two overlapping circles.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Vesica } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Vesica />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/vesica"
+  },
+  {
+    "id": "sh-vibrance",
+    "project": "shaders",
+    "name": "Vibrance",
+    "category": "adjustments",
+    "style": [
+      "webgpu",
+      "shader",
+      "adjustments"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Selective saturation adjustment protecting skin tones.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Vibrance } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Vibrance />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/vibrance"
+  },
+  {
+    "id": "sh-video-texture",
+    "project": "shaders",
+    "name": "VideoTexture",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Display a video with customizable playback and object-fit modes.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, VideoTexture } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <VideoTexture />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/videotexture"
+  },
+  {
+    "id": "sh-vignette",
+    "project": "shaders",
+    "name": "Vignette",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Darkens or tints the edges of the frame, drawing attention toward the center.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Vignette } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Vignette />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/vignette"
+  },
+  {
+    "id": "sh-voronoi",
+    "project": "shaders",
+    "name": "Voronoi",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Cellular pattern where each pixel is colored by its distance to the nearest of many scattered points.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Voronoi } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Voronoi />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/voronoi"
+  },
+  {
+    "id": "sh-voxels",
+    "project": "shaders",
+    "name": "Voxels",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rebuild any shape out of voxels — a flat shape becomes chunky pixel art, a 3D shape a lit voxel model with smooth ambient occlusion, cast shadows, a key light you can orbit or drive, and per-cube color.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Voxels } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Voxels />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/voxels"
+  },
+  {
+    "id": "sh-water",
+    "project": "shaders",
+    "name": "Water",
+    "category": "shape-effects",
+    "style": [
+      "webgpu",
+      "shader",
+      "shape-effects"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Translucent water — a refractive, light-absorbing body that deepens to its color with thickness, wrapped in a wind-driven wave surface that reflects a procedural sky, with Fresnel-bright grazing edges and foam breaking on the crests and shoreline.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Water } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Water />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/water"
+  },
+  {
+    "id": "sh-watercolor",
+    "project": "shaders",
+    "name": "Watercolor",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Painterly watercolor look — Kuwahara flattening, pigment edge darkening, paper grain and bleeding.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Watercolor } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Watercolor />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/watercolor"
+  },
+  {
+    "id": "sh-wave-distortion",
+    "project": "shaders",
+    "name": "WaveDistortion",
+    "category": "distortions",
+    "style": [
+      "webgpu",
+      "shader",
+      "distortions"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Wave-based distortion with multiple waveform types.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, WaveDistortion } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <WaveDistortion />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/wavedistortion"
+  },
+  {
+    "id": "sh-waveform",
+    "project": "shaders",
+    "name": "Waveform",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Audio-visualizer waveform — equalizer bars, a filled wave, an oscilloscope line, or a dot matrix — driven by a simulated signal whose amplitude you can map to your own audio level.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Waveform } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Waveform />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/waveform"
+  },
+  {
+    "id": "sh-wavelet-noise",
+    "project": "shaders",
+    "name": "WaveletNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Rotating banded wavelets that ripple as they animate.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, WaveletNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <WaveletNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/waveletnoise"
+  },
+  {
+    "id": "sh-weave",
+    "project": "shaders",
+    "name": "Weave",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Interlaced textile weave pattern with two thread colors going over and under each other.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Weave } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Weave />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/weave"
+  },
+  {
+    "id": "sh-webcam-texture",
+    "project": "shaders",
+    "name": "WebcamTexture",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Display a live webcam feed with customizable object-fit modes.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, WebcamTexture } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <WebcamTexture />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/webcamtexture"
+  },
+  {
+    "id": "sh-wool",
+    "project": "shaders",
+    "name": "Wool",
+    "category": "stylize",
+    "style": [
+      "webgpu",
+      "shader",
+      "stylize"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Applies an interwoven fibrous fabric texture and distortion to child content.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, Wool } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <Wool />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/wool"
+  },
+  {
+    "id": "sh-worley-noise",
+    "project": "shaders",
+    "name": "WorleyNoise",
+    "category": "textures",
+    "style": [
+      "webgpu",
+      "shader",
+      "textures"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Cellular noise field — distance-based, with selectable feature combinations and fractal octaves.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, WorleyNoise } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <WorleyNoise />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/worleynoise"
+  },
+  {
+    "id": "sh-zoom-blur",
+    "project": "shaders",
+    "name": "ZoomBlur",
+    "category": "blurs",
+    "style": [
+      "webgpu",
+      "shader",
+      "blurs"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "description": "Radial zoom blur expanding from a center point.",
+    "codeSnippet": {
+      "language": "tsx",
+      "source": "import { Shader, ZoomBlur } from 'shaders/react'\n\nexport function Demo() {\n  return (\n    <Shader className=\"h-64 w-full\">\n      <ZoomBlur />\n    </Shader>\n  )\n}",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/docs/components/zoomblur"
+  },
+  {
+    "id": "sh-showcase",
+    "project": "shaders",
+    "name": "Shaders — WebGPU Effect Playground",
+    "category": "official-showcase",
+    "style": [
+      "webgpu",
+      "shader",
+      "official-demo",
+      "playground",
+      "aurora"
+    ],
+    "techStack": [
+      "WebGPU",
+      "WGSL",
+      "JavaScript"
+    ],
+    "description": "A live layered WebGPU playground for the Shaders library: Aurora, CursorRipples and FilmGrain stacked on one canvas. 200 MIT-licensed effect components, exported from the browser editor as React, Vue, Svelte or JavaScript.",
+    "codeSnippet": {
+      "language": "html",
+      "source": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Shaders — WebGPU Effect Playground</title>\n  <style>\n    * { box-sizing: border-box; }\n    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #050816; }\n    body {\n      color: #f8fafc;\n      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n    }\n    .stage { position: relative; width: 100%; height: 100%; min-height: 420px; overflow: hidden; background: #050816; }\n    canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }\n    .wash {\n      position: absolute; inset: 0; pointer-events: none;\n      background:\n        radial-gradient(ellipse at 50% 115%, rgba(110, 231, 255, 0.22), transparent 52%),\n        linear-gradient(180deg, rgba(3, 6, 20, 0.34), rgba(3, 6, 20, 0.72));\n    }\n    .copy {\n      position: absolute; left: clamp(22px, 7vw, 84px); bottom: clamp(22px, 8vh, 72px);\n      max-width: min(560px, 72vw); pointer-events: none;\n      text-shadow: 0 2px 26px rgba(0, 0, 0, 0.55);\n    }\n    .eyebrow {\n      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px;\n      color: rgba(221, 240, 255, 0.74); font-size: 10px; font-weight: 700;\n      letter-spacing: 0.22em; text-transform: uppercase;\n    }\n    .eyebrow::before { content: \"\"; width: 24px; height: 1px; background: #67e8f9; box-shadow: 0 0 14px #22d3ee; }\n    h1 {\n      margin: 0; font-size: clamp(32px, 5.4vw, 72px); line-height: 0.92;\n      letter-spacing: -0.055em; font-weight: 650;\n    }\n    .sub {\n      margin: 14px 0 0; max-width: 390px; color: rgba(226, 239, 255, 0.72);\n      font-size: clamp(12px, 1.4vw, 15px); line-height: 1.6;\n    }\n    .hint {\n      display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;\n      padding: 7px 11px; border: 1px solid rgba(148, 224, 255, 0.25);\n      border-radius: 999px; background: rgba(4, 13, 31, 0.5);\n      color: rgba(224, 242, 254, 0.8); font-size: 10px; letter-spacing: 0.08em;\n    }\n    .dot { width: 6px; height: 6px; border-radius: 50%; background: #67e8f9; box-shadow: 0 0 12px #22d3ee; }\n    .fallback {\n      position: absolute; inset: 0; display: grid; place-items: center;\n      background: #050816; overflow: hidden; transition: opacity 220ms ease;\n    }\n    .fallback img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7; filter: saturate(1.15); }\n    .fallback .box {\n      position: relative; z-index: 2; max-width: 360px; margin: 22px;\n      padding: 20px; border: 1px solid rgba(255, 255, 255, 0.18);\n      border-radius: 18px; background: rgba(4, 10, 22, 0.72);\n      backdrop-filter: blur(12px); text-align: center;\n    }\n    .fallback h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.03em; }\n    .fallback p { margin: 0; color: rgba(226, 239, 255, 0.68); font-size: 11px; line-height: 1.6; }\n    .fallback.is-off { opacity: 0; pointer-events: none; }\n  </style>\n</head>\n<body>\n  <main class=\"stage\" id=\"stage\">\n    <canvas id=\"shader-canvas\" aria-label=\"Shaders WebGPU aurora preview\"></canvas>\n    <div class=\"wash\"></div>\n    <div class=\"copy\">\n      <div class=\"eyebrow\">Shaders / WebGPU</div>\n      <h1>Light,<br/>stacked.</h1>\n      <p class=\"sub\">200+ MIT-licensed WebGPU effect components. Aurora and cursor ripples are layered on one canvas — move through the light.</p>\n      <div class=\"hint\"><span class=\"dot\"></span>MOVE CURSOR TO DISTURB THE FIELD</div>\n    </div>\n    <div class=\"fallback\" id=\"fallback\">\n      <img src=\"/shaders/covers/Aurora.jpg\" alt=\"Aurora shader preview\" />\n      <div class=\"box\">\n        <h2>WebGPU is required</h2>\n        <p>This preview is running in a browser without a WebGPU device. The same effect is available in the Shaders editor and npm package.</p>\n      </div>\n    </div>\n  </main>\n  <script type=\"module\">\n    const canvas = document.getElementById('shader-canvas')\n    const fallback = document.getElementById('fallback')\n    let shader = null\n    const showFallback = () => {\n      fallback.classList.remove('is-off')\n      canvas.style.opacity = '0'\n    }\n    // The fallback poster is visible from the first frame. Only a successfully\n    // mounted WebGPU instance hides it, so a CDN or adapter failure never leaves\n    // the card as a blank rectangle.\n    if (!('gpu' in navigator)) {\n      showFallback()\n    } else {\n      try {\n        const { createShader, isWebGPUSupported } = await import('https://esm.sh/shaders@4.0.7/js?bundle')\n        if (!isWebGPUSupported()) {\n          showFallback()\n        } else {\n          shader = await createShader(canvas, {\n            components: [\n              {\n                type: 'Aurora',\n                id: 'aurora',\n                props: {\n                  colorA: '#070b2a',\n                  colorB: '#16e0ff',\n                  colorC: '#9b5cff',\n                  intensity: 82,\n                  speed: 6,\n                  waviness: 72,\n                  height: 155,\n                  seed: 17\n                }\n              },\n              {\n                type: 'CursorRipples',\n                id: 'ripples',\n                props: {}\n              },\n              {\n                type: 'FilmGrain',\n                id: 'grain',\n                props: {}\n              }\n            ]\n          })\n          canvas.style.opacity = '1'\n          fallback.classList.add('is-off')\n        }\n      } catch (error) {\n        showFallback()\n        // Decorative preview only: keep the console quiet unless debugging.\n        console.warn('[shaders-playground]', error?.message || error)\n      }\n    }\n    window.addEventListener('pagehide', () => shader?.destroy?.())\n  </script>\n</body>\n</html>\n",
+      "dependencies": [
+        "shaders"
+      ]
+    },
+    "demoUrl": "https://shaders.com/"
+  }
+]

@@ -91,6 +91,18 @@ export const projects: ProjectMeta[] = [
     category: 'rendering',
   },
   {
+    id: 'shaders',
+    name: 'Shaders',
+    github: 'https://github.com/shader-effects-inc/shaders',
+    demoBaseUrl: 'https://shaders.com/docs/components',
+    description:
+      'A MIT-licensed library of 200 WebGPU effect components for React, Vue, Svelte, Solid and JavaScript. Stack layers, blend and mask them like Figma, then export a component tree from the free editor. Requires WebGPU and client-side rendering.',
+    accentColor: '#8B5CF6',
+    tags: ['webgpu', 'shader', 'effects', 'react', 'vue', 'svelte', 'mit'],
+    techStack: ['WebGPU', 'WGSL', 'React', 'Vue', 'Svelte'],
+    category: 'rendering',
+  },
+  {
     id: 'pixijs',
     name: 'PixiJS',
     github: 'https://github.com/pixijs/pixijs',
