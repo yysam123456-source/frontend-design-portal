@@ -49,29 +49,6 @@
     posterEl.src = poster
     posterEl.onerror = () => { posterEl.style.display = 'none' }
     let instance = null
-    async function canvasHasVisibleFrame() {
-      try {
-        const bitmap = await createImageBitmap(canvas)
-        const probe = document.createElement('canvas')
-        probe.width = 4
-        probe.height = 4
-        const ctx = probe.getContext('2d', { willReadFrequently: true })
-        ctx.drawImage(bitmap, 0, 0, 4, 4)
-        const data = ctx.getImageData(0, 0, 4, 4).data
-        let visible = 0
-        let variation = 0
-        for (let i = 0; i < data.length; i += 4) {
-          if (data[i + 3] > 12) visible += 1
-          const max = Math.max(data[i], data[i + 1], data[i + 2])
-          const min = Math.min(data[i], data[i + 1], data[i + 2])
-          if (max - min > 4) variation += 1
-        }
-        bitmap.close?.()
-        return visible > 0 && variation > 0
-      } catch {
-        return false
-      }
-    }
     try {
       const runtime = await import('/shaders/runtime/shaders.js')
       if (!runtime.isWebGPUSupported()) {
@@ -102,13 +79,7 @@
             status.style.display = 'none'
           },
         })
-        await new Promise((resolve) => setTimeout(resolve, 900))
-        if (!(await canvasHasVisibleFrame())) {
-          canvas.style.display = 'none'
-          status.style.display = 'none'
-        } else {
-          status.textContent = 'LIVE · WEBGPU'
-        }
+        status.textContent = 'LIVE · WEBGPU'
       }
     } catch (error) {
       status.style.display = 'none'
