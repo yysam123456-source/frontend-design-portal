@@ -94,6 +94,7 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   const isMediaVideo = previewRecord?.kind === 'media-video' && previewRecord.status === 'ready'
   const isMediaImage = previewRecord?.kind === 'media-image' && previewRecord.status === 'ready'
   const isHtmlLive = previewRecord?.kind === 'html-live' && previewRecord.status === 'ready'
+  const liveEntry = isHtmlLive ? previewRecord?.entry : undefined
   // Looseleaf 的官方 demo 跑在独立入口（iframe 隔离样式与依赖）
   const embedUrl = component?.project === 'looseleaf' ? component.demoUrl : undefined
   const isEmbed = !!embedUrl
@@ -115,10 +116,11 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
   // resolve against the parent page origin, not the blob origin.
   const iframeSrcDoc = useMemo(() => {
     if (!component || (!isHtml && !isJsDemo && !isHtmlLive) || isHtmlVideo) return null
+    if (liveEntry) return null
     return isHtml || isHtmlLive
       ? buildHtmlPreview(component.codeSnippet.source)
       : buildJsPreview(component.codeSnippet.source)
-  }, [component, isHtml, isJsDemo, isHtmlLive, isHtmlVideo])
+  }, [component, isHtml, isJsDemo, isHtmlLive, isHtmlVideo, liveEntry])
 
   useEffect(() => {
     if (!isHtml && !isHtmlLive && !isJsDemo) return
@@ -146,7 +148,9 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
     ? 'Video Demo'
     : isMediaImage
       ? 'Image Demo'
-    : hasGenerated || isHtml || isHtmlLive || isJsDemo
+    : isHtmlLive && liveEntry
+      ? 'Live WebGPU'
+    : hasGenerated || isHtml || isJsDemo
       ? 'Live Preview'
       : 'Pending'
   const codeLines = component.codeSnippet.source.split('\n').slice(0, 12)
@@ -249,7 +253,8 @@ export default function ComponentPreview({ component }: ComponentPreviewProps) {
                 </div>
               )}
               <iframe
-                srcDoc={iframeSrcDoc || undefined}
+                src={liveEntry || undefined}
+                srcDoc={liveEntry ? undefined : (iframeSrcDoc || undefined)}
                 title={component.name}
                 sandbox="allow-scripts allow-same-origin"
                 className={`w-full h-full border-0 transition-opacity duration-300 ${

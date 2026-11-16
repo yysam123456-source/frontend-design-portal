@@ -114647,6 +114647,7 @@
       "description": "Radial motion blur rotating around a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/AngularBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=AngularBlur&poster=%2Fshaders%2Fcovers%2FAngularBlur.jpg&child=1&label=AngularBlur",
       "tags": [
         "webgpu",
         "shader",
@@ -114674,6 +114675,7 @@
       "description": "Pie sector (arc wedge) with adjustable radius and aperture angle.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Arc.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Arc&poster=%2Fshaders%2Fcovers%2FArc.jpg&label=Arc",
       "tags": [
         "webgpu",
         "shader",
@@ -114701,6 +114703,7 @@
       "description": "Convert imagery to ASCII character art.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Ascii.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Ascii&poster=%2Fshaders%2Fcovers%2FAscii.jpg&child=1&label=Ascii",
       "tags": [
         "webgpu",
         "shader",
@@ -114728,6 +114731,7 @@
       "description": "Mesmerizing aurora borealis with layered curtains, vertical rays, and flowing light.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Aurora.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Aurora&poster=%2Fshaders%2Fcovers%2FAurora.jpg&label=Aurora",
       "tags": [
         "webgpu",
         "shader",
@@ -114755,6 +114759,7 @@
       "description": "Slices content into parallel bars, each offset independently for a fractured or glitch-like effect.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BarShift.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BarShift&poster=%2Fshaders%2Fcovers%2FBarShift.jpg&child=1&label=BarShift",
       "tags": [
         "webgpu",
         "shader",
@@ -114782,6 +114787,7 @@
       "description": "Split the content along a center line and wipe outward in both directions.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BarnDoors.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BarnDoors&poster=%2Fshaders%2Fcovers%2FBarnDoors.jpg&child=1&label=BarnDoors",
       "tags": [
         "webgpu",
         "shader",
@@ -114809,6 +114815,7 @@
       "description": "A beam of light from one point to another.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Beam.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Beam&poster=%2Fshaders%2Fcovers%2FBeam.jpg&label=Beam",
       "tags": [
         "webgpu",
         "shader",
@@ -114836,6 +114843,7 @@
       "description": "Bends the ends of the frame toward you like a curved display — content at the edges swells closer under real perspective, or curls away when the strength goes negative.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Bend.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Bend&poster=%2Fshaders%2Fcovers%2FBend.jpg&child=1&label=Bend",
       "tags": [
         "webgpu",
         "shader",
@@ -114863,6 +114871,7 @@
       "description": "Organic animated blob with 3D lighting and gradients.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Blob.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Blob&poster=%2Fshaders%2Fcovers%2FBlob.jpg&label=Blob",
       "tags": [
         "webgpu",
         "shader",
@@ -114890,6 +114899,7 @@
       "description": "Dissolve the content away as a grid of blocks vanishing in random order.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BlockDissolve.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BlockDissolve&poster=%2Fshaders%2Fcovers%2FBlockDissolve.jpg&child=1&label=BlockDissolve",
       "tags": [
         "webgpu",
         "shader",
@@ -114917,6 +114927,7 @@
       "description": "Blocky value noise with soft cells that morph over time.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BlockNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BlockNoise&poster=%2Fshaders%2Fcovers%2FBlockNoise.jpg&label=BlockNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -114944,6 +114955,7 @@
       "description": "High-frequency blue noise — even, grainy speckle ideal for dithering.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BlueNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BlueNoise&poster=%2Fshaders%2Fcovers%2FBlueNoise.jpg&label=BlueNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -114971,6 +114983,7 @@
       "description": "A simple Gaussian blur effect.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Blur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Blur&poster=%2Fshaders%2Fcovers%2FBlur.jpg&child=1&label=Blur",
       "tags": [
         "webgpu",
         "shader",
@@ -114979,9 +114992,9 @@
       ]
     },
     {
-      "id": "sh-boids-update",
+      "id": "sh-boids",
       "project": "shaders",
-      "name": "boidsUpdate",
+      "name": "Boids",
       "category": "interactive",
       "style": [
         "webgpu",
@@ -114998,6 +115011,7 @@
       "description": "A living murmuration of hundreds of flocking agents drawn as crisp arrows, streaks, dots or glowing comets — separation, alignment and cohesion drive fluid, splitting-and-merging ribbons, agents flash toward an excited color when scattered, and the cursor acts as an attractor or a predator.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Boids.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Boids&poster=%2Fshaders%2Fcovers%2FBoids.jpg&label=Boids",
       "tags": [
         "webgpu",
         "shader",
@@ -115025,6 +115039,7 @@
       "description": "Photographic lens blur where bright highlights bloom into aperture-shaped discs.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BokehBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BokehBlur&poster=%2Fshaders%2Fcovers%2FBokehBlur.jpg&child=1&label=BokehBlur",
       "tags": [
         "webgpu",
         "shader",
@@ -115052,6 +115067,7 @@
       "description": "Classic brick wall pattern with alternating rows and mortar gaps.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BrickPattern.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BrickPattern&poster=%2Fshaders%2Fcovers%2FBrickPattern.jpg&label=BrickPattern",
       "tags": [
         "webgpu",
         "shader",
@@ -115079,6 +115095,7 @@
       "description": "Adjust brightness and contrast of the image.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BrightnessContrast.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BrightnessContrast&poster=%2Fshaders%2Fcovers%2FBrightnessContrast.jpg&child=1&label=BrightnessContrast",
       "tags": [
         "webgpu",
         "shader",
@@ -115106,6 +115123,7 @@
       "description": "Photorealistic brushed metal — a satin anodised surface combed with fine directional grain that smears the reflected studio and key light into the long anisotropic streaks of real brushed aluminium, steel, gold or copper.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/BrushedMetal.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=BrushedMetal&poster=%2Fshaders%2Fcovers%2FBrushedMetal.jpg&label=BrushedMetal",
       "tags": [
         "webgpu",
         "shader",
@@ -115133,6 +115151,7 @@
       "description": "Magnify or pinch content around a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Bulge.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Bulge&poster=%2Fshaders%2Fcovers%2FBulge.jpg&child=1&label=Bulge",
       "tags": [
         "webgpu",
         "shader",
@@ -115160,6 +115179,7 @@
       "description": "Retro CRT monitor simulation with scanlines.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CRTScreen.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CRTScreen&poster=%2Fshaders%2Fcovers%2FCRTScreen.jpg&child=1&label=CRTScreen",
       "tags": [
         "webgpu",
         "shader",
@@ -115187,6 +115207,7 @@
       "description": "Photorealistic woven carbon fibre — interlaced tows whose anisotropic sheen flips ninety degrees cell to cell, raised into a quilted weave and finished with a glossy clearcoat that mirrors the studio. Plain or twill, in any shape.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CarbonFiber.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CarbonFiber&poster=%2Fshaders%2Fcovers%2FCarbonFiber.jpg&label=CarbonFiber",
       "tags": [
         "webgpu",
         "shader",
@@ -115214,6 +115235,7 @@
       "description": "Renders content as a chalk drawing on a blackboard, with edge strokes and cross-hatch shading.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Chalkboard.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Chalkboard&poster=%2Fshaders%2Fcovers%2FChalkboard.jpg&child=1&label=Chalkboard",
       "tags": [
         "webgpu",
         "shader",
@@ -115241,6 +115263,7 @@
       "description": "Independent blur for red, green, and blue channels.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ChannelBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ChannelBlur&poster=%2Fshaders%2Fcovers%2FChannelBlur.jpg&child=1&label=ChannelBlur",
       "tags": [
         "webgpu",
         "shader",
@@ -115268,6 +115291,7 @@
       "description": "Wipe the content away as a checkerboard of fading squares.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CheckerWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CheckerWipe&poster=%2Fshaders%2Fcovers%2FCheckerWipe.jpg&child=1&label=CheckerWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -115295,6 +115319,7 @@
       "description": "Classic checkerboard pattern with two alternating colors.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Checkerboard.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Checkerboard&poster=%2Fshaders%2Fcovers%2FCheckerboard.jpg&label=Checkerboard",
       "tags": [
         "webgpu",
         "shader",
@@ -115322,6 +115347,7 @@
       "description": "Animated chevron / zigzag stripe pattern.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Chevron.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Chevron&poster=%2Fshaders%2Fcovers%2FChevron.jpg&label=Chevron",
       "tags": [
         "webgpu",
         "shader",
@@ -115349,6 +115375,7 @@
       "description": "Interactive liquid flow effect that follows your cursor.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ChromaFlow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ChromaFlow&poster=%2Fshaders%2Fcovers%2FChromaFlow.jpg&label=ChromaFlow",
       "tags": [
         "webgpu",
         "shader",
@@ -115376,6 +115403,7 @@
       "description": "Separate RGB channels for a prismatic distortion effect.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ChromaticAberration.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ChromaticAberration&poster=%2Fshaders%2Fcovers%2FChromaticAberration.jpg&child=1&label=ChromaticAberration",
       "tags": [
         "webgpu",
         "shader",
@@ -115403,6 +115431,7 @@
       "description": "Studio-lit mirror chrome — a precision-machined shape with a controllable polished bevel, softly convex faces and a photographic studio reflected in them: one huge frontal softbox, black flags, and thin warm/cool strip lights that fringe amber and ice-blue exactly where the reflections break.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Chrome.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Chrome&poster=%2Fshaders%2Fcovers%2FChrome.jpg&label=Chrome",
       "tags": [
         "webgpu",
         "shader",
@@ -115430,6 +115459,7 @@
       "description": "Generate a circle with adjustable size and softness.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Circle.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Circle&poster=%2Fshaders%2Fcovers%2FCircle.jpg&label=Circle",
       "tags": [
         "webgpu",
         "shader",
@@ -115457,6 +115487,7 @@
       "description": "A directional gradient that smoothly cycles through rainbow colors or a custom set of three colors.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ColorWheel.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ColorWheel&poster=%2Fshaders%2Fcovers%2FColorWheel.jpg&label=ColorWheel",
       "tags": [
         "webgpu",
         "shader",
@@ -115484,6 +115515,7 @@
       "description": "Simulates lossy JPEG compression — 8×8 DCT block quantization, blockiness, ringing and color bleed.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CompressionArtifacts.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CompressionArtifacts&poster=%2Fshaders%2Fcovers%2FCompressionArtifacts.jpg&child=1&label=CompressionArtifacts",
       "tags": [
         "webgpu",
         "shader",
@@ -115511,6 +115543,7 @@
       "description": "Concentric rings that each rotate the underlying image by different amounts.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ConcentricSpin.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ConcentricSpin&poster=%2Fshaders%2Fcovers%2FConcentricSpin.jpg&child=1&label=ConcentricSpin",
       "tags": [
         "webgpu",
         "shader",
@@ -115538,6 +115571,7 @@
       "description": "Colors sweep in a full circle around a center point, like a color wheel.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ConicGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ConicGradient&poster=%2Fshaders%2Fcovers%2FConicGradient.jpg&label=ConicGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -115565,6 +115599,7 @@
       "description": "Draw topographical contour lines based on luminance or alpha.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ContourLines.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ContourLines&poster=%2Fshaders%2Fcovers%2FContourLines.jpg&child=1&label=ContourLines",
       "tags": [
         "webgpu",
         "shader",
@@ -115592,6 +115627,7 @@
       "description": "Pin each corner of the content to an arbitrary position for a free perspective warp.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CornerPin.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CornerPin&poster=%2Fshaders%2Fcovers%2FCornerPin.jpg&child=1&label=CornerPin",
       "tags": [
         "webgpu",
         "shader",
@@ -115619,6 +115655,7 @@
       "description": "Crescent moon shape — an outer circle with an inner circle subtracted.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Crescent.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Crescent&poster=%2Fshaders%2Fcovers%2FCrescent.jpg&label=Crescent",
       "tags": [
         "webgpu",
         "shader",
@@ -115646,6 +115683,7 @@
       "description": "Plus / cross shape with adjustable arm length, width, and rounding.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Cross.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Cross&poster=%2Fshaders%2Fcovers%2FCross.jpg&label=Cross",
       "tags": [
         "webgpu",
         "shader",
@@ -115673,6 +115711,7 @@
       "description": "Diamond-like crystal lens with faceted refraction.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Crystal.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Crystal&poster=%2Fshaders%2Fcovers%2FCrystal.jpg&child=1&label=Crystal",
       "tags": [
         "webgpu",
         "shader",
@@ -115700,6 +115739,7 @@
       "description": "Swirling divergence-free flow field that drifts over time.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CurlNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CurlNoise&poster=%2Fshaders%2Fcovers%2FCurlNoise.jpg&label=CurlNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -115727,6 +115767,7 @@
       "description": "Fluid-like ripple distortion.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CursorRipples.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CursorRipples&poster=%2Fshaders%2Fcovers%2FCursorRipples.jpg&child=1&label=CursorRipples",
       "tags": [
         "webgpu",
         "shader",
@@ -115735,9 +115776,9 @@
       ]
     },
     {
-      "id": "sh-cursor-trail-scan",
+      "id": "sh-cursor-trail",
       "project": "shaders",
-      "name": "cursorTrailScan",
+      "name": "CursorTrail",
       "category": "interactive",
       "style": [
         "webgpu",
@@ -115754,6 +115795,7 @@
       "description": "Animated trail effect that tracks cursor movement.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/CursorTrail.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=CursorTrail&poster=%2Fshaders%2Fcovers%2FCursorTrail.jpg&label=CursorTrail",
       "tags": [
         "webgpu",
         "shader",
@@ -115781,6 +115823,7 @@
       "description": "Corrupted-codec motion smearing — macroblocks lock in place and drag their pixels across the frame in liquid trails, each recovering on its own clock, like a video stream that lost its keyframes.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DataMosh.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DataMosh&poster=%2Fshaders%2Fcovers%2FDataMosh.jpg&child=1&label=DataMosh",
       "tags": [
         "webgpu",
         "shader",
@@ -115808,6 +115851,7 @@
       "description": "Diamond-shaped gradient radiating from a center point using Manhattan distance.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DiamondGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DiamondGradient&poster=%2Fshaders%2Fcovers%2FDiamondGradient.jpg&label=DiamondGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -115835,6 +115879,7 @@
       "description": "Wipe the content away through a lattice of growing diamonds.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DiamondWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DiamondWipe&poster=%2Fshaders%2Fcovers%2FDiamondWipe.jpg&child=1&label=DiamondWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -115862,6 +115907,7 @@
       "description": "Grain-like pixel displacement at random.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DiffuseBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DiffuseBlur&poster=%2Fshaders%2Fcovers%2FDiffuseBlur.jpg&child=1&label=DiffuseBlur",
       "tags": [
         "webgpu",
         "shader",
@@ -115889,6 +115935,7 @@
       "description": "Distorts child content using another layer.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DisplacementMap.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DisplacementMap&poster=%2Fshaders%2Fcovers%2FDisplacementMap.jpg&child=1&label=DisplacementMap",
       "tags": [
         "webgpu",
         "shader",
@@ -115916,6 +115963,7 @@
       "description": "Dithering effect with multiple pattern options.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Dither.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Dither&poster=%2Fshaders%2Fcovers%2FDither.jpg&child=1&label=Dither",
       "tags": [
         "webgpu",
         "shader",
@@ -115943,6 +115991,7 @@
       "description": "Grid of dots with optional twinkling animation.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DotGrid.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DotGrid&poster=%2Fshaders%2Fcovers%2FDotGrid.jpg&label=DotGrid",
       "tags": [
         "webgpu",
         "shader",
@@ -115970,6 +116019,7 @@
       "description": "Adds a soft shadow behind the child content based on its alpha silhouette.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/DropShadow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=DropShadow&poster=%2Fshaders%2Fcovers%2FDropShadow.jpg&child=1&label=DropShadow",
       "tags": [
         "webgpu",
         "shader",
@@ -115997,6 +116047,7 @@
       "description": "Map colors to two tones based on luminance.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Duotone.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Duotone&poster=%2Fshaders%2Fcovers%2FDuotone.jpg&child=1&label=Duotone",
       "tags": [
         "webgpu",
         "shader",
@@ -116024,6 +116075,7 @@
       "description": "Ellipse with independently adjustable horizontal and vertical radii.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Ellipse.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Ellipse&poster=%2Fshaders%2Fcovers%2FEllipse.jpg&label=Ellipse",
       "tags": [
         "webgpu",
         "shader",
@@ -116051,6 +116103,7 @@
       "description": "Embossed / debossed relief shading on top of child content, driven by a custom shape.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Emboss.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Emboss&poster=%2Fshaders%2Fcovers%2FEmboss.jpg&child=1&label=Emboss",
       "tags": [
         "webgpu",
         "shader",
@@ -116078,6 +116131,7 @@
       "description": "Copper-plate line engraving — the image is redrawn as flowing line work whose weight swells with darkness, lines displaced by the form like a banknote portrait: a single plate, cross-hatched shadow plates, or one continuous spiral cut.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Engraving.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Engraving&poster=%2Fshaders%2Fcovers%2FEngraving.jpg&child=1&label=Engraving",
       "tags": [
         "webgpu",
         "shader",
@@ -116105,6 +116159,7 @@
       "description": "Branching, hydraulic-erosion ridges carved into noise.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ErosionNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ErosionNoise&poster=%2Fshaders%2Fcovers%2FErosionNoise.jpg&label=ErosionNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -116132,6 +116187,7 @@
       "description": "Multiplicative exposure (gain) on the child. Unlike additive brightness, it scales values around black — blacks stay black while highlights can be pushed past 1.0 to feed HDR bloom and tone-mapping roll-off. Pointwise, so no extra render pass is needed.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Exposure.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Exposure&poster=%2Fshaders%2Fcovers%2FExposure.jpg&child=1&label=Exposure",
       "tags": [
         "webgpu",
         "shader",
@@ -116159,6 +116215,7 @@
       "description": "Directional falling lines with a leading-to-trailing color fade.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FallingLines.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FallingLines&poster=%2Fshaders%2Fcovers%2FFallingLines.jpg&label=FallingLines",
       "tags": [
         "webgpu",
         "shader",
@@ -116186,6 +116243,7 @@
       "description": "Analog film grain texture overlay, weighted toward darker areas.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FilmGrain.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FilmGrain&poster=%2Fshaders%2Fcovers%2FFilmGrain.jpg&child=1&label=FilmGrain",
       "tags": [
         "webgpu",
         "shader",
@@ -116213,6 +116271,7 @@
       "description": "Real analog film color from measured film-emulation LUTs — ten classic stock looks with emulsion halation and projector gate weave.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FilmStock.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FilmStock&poster=%2Fshaders%2Fcovers%2FFilmStock.jpg&child=1&label=FilmStock",
       "tags": [
         "webgpu",
         "shader",
@@ -116240,6 +116299,7 @@
       "description": "Mirror content horizontally, vertically, or both.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Flip.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Flip&poster=%2Fshaders%2Fcovers%2FFlip.jpg&child=1&label=Flip",
       "tags": [
         "webgpu",
         "shader",
@@ -116248,9 +116308,9 @@
       ]
     },
     {
-      "id": "sh-floating-particles-update",
+      "id": "sh-floating-particles",
       "project": "shaders",
-      "name": "floatingParticlesUpdate",
+      "name": "FloatingParticles",
       "category": "textures",
       "style": [
         "webgpu",
@@ -116267,6 +116327,7 @@
       "description": "Drifting, twinkling motes — thousands of real simulated particles floating in a shared heading with per-particle wander and variance, and a cursor that stirs the field with a gust that settles back into the drift.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FloatingParticles.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FloatingParticles&poster=%2Fshaders%2Fcovers%2FFloatingParticles.jpg&label=FloatingParticles",
       "tags": [
         "webgpu",
         "shader",
@@ -116294,6 +116355,7 @@
       "description": "Fluid-like distortion with constant smooth motion.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FlowField.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FlowField&poster=%2Fshaders%2Fcovers%2FFlowField.jpg&child=1&label=FlowField",
       "tags": [
         "webgpu",
         "shader",
@@ -116321,6 +116383,7 @@
       "description": "Petal shape with N lobes and adjustable inner-to-outer radius ratio.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Flower.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Flower&poster=%2Fshaders%2Fcovers%2FFlower.jpg&label=Flower",
       "tags": [
         "webgpu",
         "shader",
@@ -116348,6 +116411,7 @@
       "description": "Liquid silk gradient with organic flowing color bands.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FlowingGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FlowingGradient&poster=%2Fshaders%2Fcovers%2FFlowingGradient.jpg&label=FlowingGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -116375,6 +116439,7 @@
       "description": "Full-screen fluted glass effect — refracts content through repeating cylindrical bars.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FlutedGlass.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FlutedGlass&poster=%2Fshaders%2Fcovers%2FFlutedGlass.jpg&child=1&label=FlutedGlass",
       "tags": [
         "webgpu",
         "shader",
@@ -116402,6 +116467,7 @@
       "description": "Fog that fills the screen and interacts with the mouse.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Fog.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Fog&poster=%2Fshaders%2Fcovers%2FFog.jpg&label=Fog",
       "tags": [
         "webgpu",
         "shader",
@@ -116429,6 +116495,7 @@
       "description": "Wraps child content onto a 3D raymarched shape with lighting.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Form3D.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Form3D&poster=%2Fshaders%2Fcovers%2FForm3D.jpg&child=1&label=Form3D",
       "tags": [
         "webgpu",
         "shader",
@@ -116456,6 +116523,7 @@
       "description": "Multi-octave fractal Brownian motion noise texture with true noise evolution.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/FractalNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=FractalNoise&poster=%2Fshaders%2Fcovers%2FFractalNoise.jpg&label=FractalNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -116483,6 +116551,7 @@
       "description": "Photoreal frozen ice — thickness-driven subsurface scattering that reads as a solid block, with fine frost crystals creeping in from the edges.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Frost.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Frost&poster=%2Fshaders%2Fcovers%2FFrost.jpg&label=Frost",
       "tags": [
         "webgpu",
         "shader",
@@ -116510,6 +116579,7 @@
       "description": "Oriented sine-grain noise with a fingerprint-like flow.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/GaborNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=GaborNoise&poster=%2Fshaders%2Fcovers%2FGaborNoise.jpg&label=GaborNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -116537,6 +116607,7 @@
       "description": "Optically realistic glass lens driven in a custom shape.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Glass.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Glass&poster=%2Fshaders%2Fcovers%2FGlass.jpg&child=1&label=Glass",
       "tags": [
         "webgpu",
         "shader",
@@ -116564,6 +116635,7 @@
       "description": "Refraction-like distortion in a tile grid pattern.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/GlassTiles.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=GlassTiles&poster=%2Fshaders%2Fcovers%2FGlassTiles.jpg&child=1&label=GlassTiles",
       "tags": [
         "webgpu",
         "shader",
@@ -116591,6 +116663,7 @@
       "description": "Digital glitch that melts pixels and distorts colors.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Glitch.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Glitch&poster=%2Fshaders%2Fcovers%2FGlitch.jpg&child=1&label=Glitch",
       "tags": [
         "webgpu",
         "shader",
@@ -116618,6 +116691,7 @@
       "description": "Soft glow effect with adjustable intensity.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Glow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Glow&poster=%2Fshaders%2Fcovers%2FGlow.jpg&child=1&label=Glow",
       "tags": [
         "webgpu",
         "shader",
@@ -116645,6 +116719,7 @@
       "description": "Volumetric light rays emanating from a point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Godrays.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Godrays&poster=%2Fshaders%2Fcovers%2FGodrays.jpg&label=Godrays",
       "tags": [
         "webgpu",
         "shader",
@@ -116672,6 +116747,7 @@
       "description": "Photoreal wet liquid — animated 3D metaball blobs that merge and bulge to loosely form the shape, with sliding wet highlights, a clearcoat rim and a translucent body.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Goo.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Goo&poster=%2Fshaders%2Fcovers%2FGoo.jpg&label=Goo",
       "tags": [
         "webgpu",
         "shader",
@@ -116699,6 +116775,7 @@
       "description": "Maps source luminance through an animated color gradient (Photoshop-style gradient map).",
       "language": "tsx",
       "previewUrl": "/shaders/covers/GradientMap.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=GradientMap&poster=%2Fshaders%2Fcovers%2FGradientMap.jpg&child=1&label=GradientMap",
       "tags": [
         "webgpu",
         "shader",
@@ -116726,6 +116803,7 @@
       "description": "Convert colors to black and white.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Grayscale.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Grayscale&poster=%2Fshaders%2Fcovers%2FGrayscale.jpg&child=1&label=Grayscale",
       "tags": [
         "webgpu",
         "shader",
@@ -116753,6 +116831,7 @@
       "description": "Simple grid lines pattern with adjustable thickness and rotation.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Grid.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Grid&poster=%2Fshaders%2Fcovers%2FGrid.jpg&label=Grid",
       "tags": [
         "webgpu",
         "shader",
@@ -116780,6 +116859,7 @@
       "description": "Interactive grid distortion controlled by mouse position.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/GridDistortion.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=GridDistortion&poster=%2Fshaders%2Fcovers%2FGridDistortion.jpg&child=1&label=GridDistortion",
       "tags": [
         "webgpu",
         "shader",
@@ -116807,6 +116887,7 @@
       "description": "Container for organizing and composing child effects — supports flex-like flow layout (column/row stacking via the flow prop).",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Group.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Group&poster=%2Fshaders%2Fcovers%2FGroup.jpg&child=1&label=Group",
       "tags": [
         "webgpu",
         "shader",
@@ -116834,6 +116915,7 @@
       "description": "Render live HTML/DOM content as a WebGPU texture layer via the html-in-canvas API. Requires Chrome Canary with chrome://flags/#canvas-draw-element enabled.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/HTMLInCanvas.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=HTMLInCanvas&poster=%2Fshaders%2Fcovers%2FHTMLInCanvas.jpg&label=HTMLInCanvas",
       "tags": [
         "webgpu",
         "shader",
@@ -116861,6 +116943,7 @@
       "description": "Halftone dot pattern effect for printing aesthetics.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Halftone.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Halftone&poster=%2Fshaders%2Fcovers%2FHalftone.jpg&child=1&label=Halftone",
       "tags": [
         "webgpu",
         "shader",
@@ -116888,6 +116971,7 @@
       "description": "Heart shape with adjustable size.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Heart.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Heart&poster=%2Fshaders%2Fcovers%2FHeart.jpg&label=Heart",
       "tags": [
         "webgpu",
         "shader",
@@ -116915,6 +116999,7 @@
       "description": "Thermal-camera heat flowing through any 2D, SVG, or 3D shape. Powered by Paper Shaders.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Heatmap.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Heatmap&poster=%2Fshaders%2Fcovers%2FHeatmap.jpg&label=Heatmap",
       "tags": [
         "webgpu",
         "shader",
@@ -116942,6 +117027,7 @@
       "description": "Honeycomb hexagonal grid pattern.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/HexGrid.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=HexGrid&poster=%2Fshaders%2Fcovers%2FHexGrid.jpg&label=HexGrid",
       "tags": [
         "webgpu",
         "shader",
@@ -116969,6 +117055,7 @@
       "description": "Volumetric sci-fi hologram — a translucent emissive projection of the shape with fresnel-lit edges, depth scan-lines that wrap 3D forms, CRT scanlines, flicker and beam wobble.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Hologram.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Hologram&poster=%2Fshaders%2Fcovers%2FHologram.jpg&label=Hologram",
       "tags": [
         "webgpu",
         "shader",
@@ -116996,6 +117083,7 @@
       "description": "Iridescent holographic foil sticker with animated rainbow sheen and glitter flakes.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Holographic.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Holographic&poster=%2Fshaders%2Fcovers%2FHolographic.jpg&label=Holographic",
       "tags": [
         "webgpu",
         "shader",
@@ -117023,6 +117111,7 @@
       "description": "Rotate hue around the color wheel.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/HueShift.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=HueShift&poster=%2Fshaders%2Fcovers%2FHueShift.jpg&child=1&label=HueShift",
       "tags": [
         "webgpu",
         "shader",
@@ -117050,6 +117139,7 @@
       "description": "Display an image with customizable object-fit modes.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ImageTexture.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ImageTexture&poster=%2Fshaders%2Fcovers%2FImageTexture.jpg&label=ImageTexture",
       "tags": [
         "webgpu",
         "shader",
@@ -117077,6 +117167,7 @@
       "description": "Drag to paint swirling ribbons of ink through a real fluid field — eddies keep evolving after you let go.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/InkFlow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=InkFlow&poster=%2Fshaders%2Fcovers%2FInkFlow.jpg&label=InkFlow",
       "tags": [
         "webgpu",
         "shader",
@@ -117104,6 +117195,7 @@
       "description": "Invert RGB colors while preserving alpha.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Invert.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Invert&poster=%2Fshaders%2Fcovers%2FInvert.jpg&child=1&label=Invert",
       "tags": [
         "webgpu",
         "shader",
@@ -117131,6 +117223,7 @@
       "description": "Reveal through an expanding circle growing from a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/IrisWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=IrisWipe&poster=%2Fshaders%2Fcovers%2FIrisWipe.jpg&child=1&label=IrisWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -117158,6 +117251,7 @@
       "description": "Photorealistic light spilling around the edge of any 2D, SVG, or 3D shape — any number of movable colored point lights strike the silhouette and the lit edges irradiate their surroundings, gathered in a compute pass with real cast shadows, mixing where they meet and burning to white at the rim.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Irradiance.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Irradiance&poster=%2Fshaders%2Fcovers%2FIrradiance.jpg&label=Irradiance",
       "tags": [
         "webgpu",
         "shader",
@@ -117185,6 +117279,7 @@
       "description": "Isometric tumbling-blocks tiling — a 3D cube illusion (rhombille pattern).",
       "language": "tsx",
       "previewUrl": "/shaders/covers/IsometricCubes.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=IsometricCubes&poster=%2Fshaders%2Fcovers%2FIsometricCubes.jpg&label=IsometricCubes",
       "tags": [
         "webgpu",
         "shader",
@@ -117212,6 +117307,7 @@
       "description": "Create a kaleidoscope effect with radial mirrored segments.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Kaleidoscope.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Kaleidoscope&poster=%2Fshaders%2Fcovers%2FKaleidoscope.jpg&child=1&label=Kaleidoscope",
       "tags": [
         "webgpu",
         "shader",
@@ -117239,6 +117335,7 @@
       "description": "Motion-tracking overlay — trackers hunt and follow features in the content, dropping keyframe diamonds behind them along their motion paths, like a compositor mid-track.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/KeyFrames.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=KeyFrames&poster=%2Fshaders%2Fcovers%2FKeyFrames.jpg&child=1&label=KeyFrames",
       "tags": [
         "webgpu",
         "shader",
@@ -117266,6 +117363,7 @@
       "description": "Split content into shifting chromatic layers with barrel or pincushion lens warp. Powered by Paper Shaders.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LensDistortion.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LensDistortion&poster=%2Fshaders%2Fcovers%2FLensDistortion.jpg&child=1&label=LensDistortion",
       "tags": [
         "webgpu",
         "shader",
@@ -117293,6 +117391,7 @@
       "description": "Realistic camera lens flare with artifacts.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LensFlare.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LensFlare&poster=%2Fshaders%2Fcovers%2FLensFlare.jpg&label=LensFlare",
       "tags": [
         "webgpu",
         "shader",
@@ -117320,6 +117419,7 @@
       "description": "Glowing, pulsing light racing around the edge of any 2D, SVG, or 3D shape. Powered by Paper Shaders.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LightEdge.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LightEdge&poster=%2Fshaders%2Fcovers%2FLightEdge.jpg&label=LightEdge",
       "tags": [
         "webgpu",
         "shader",
@@ -117347,6 +117447,7 @@
       "description": "Photorealistic film light leak — warm overexposed light bleeding in from a draggable anchor point, with streak bands, chromatic fringing, and slow breathing that evolves over time.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LightLeak.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LightLeak&poster=%2Fshaders%2Fcovers%2FLightLeak.jpg&child=1&label=LightLeak",
       "tags": [
         "webgpu",
         "shader",
@@ -117374,6 +117475,7 @@
       "description": "Draw a straight line between two points with color, thickness, and solid, dashed, or dotted styles.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Line.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Line&poster=%2Fshaders%2Fcovers%2FLine.jpg&label=Line",
       "tags": [
         "webgpu",
         "shader",
@@ -117401,6 +117503,7 @@
       "description": "Directional motion blur in a specific angle.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LinearBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LinearBlur&poster=%2Fshaders%2Fcovers%2FLinearBlur.jpg&child=1&label=LinearBlur",
       "tags": [
         "webgpu",
         "shader",
@@ -117428,6 +117531,7 @@
       "description": "Create smooth linear color gradients.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LinearGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LinearGradient&poster=%2Fshaders%2Fcovers%2FLinearGradient.jpg&label=LinearGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -117455,6 +117559,7 @@
       "description": "Wipe the content away along a straight edge with a soft feathered transition.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LinearWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LinearWipe&poster=%2Fshaders%2Fcovers%2FLinearWipe.jpg&child=1&label=LinearWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -117482,6 +117587,7 @@
       "description": "Flowing liquid chrome — a molten reflective surface that wraps the shape, sweeping a procedural studio reflection across animated folds with crisp speculars and prismatic edges.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LiquidMetal.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LiquidMetal&poster=%2Fshaders%2Fcovers%2FLiquidMetal.jpg&label=LiquidMetal",
       "tags": [
         "webgpu",
         "shader",
@@ -117509,6 +117615,7 @@
       "description": "Liquid-like interactive deformation effect.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Liquify.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Liquify&poster=%2Fshaders%2Fcovers%2FLiquify.jpg&child=1&label=Liquify",
       "tags": [
         "webgpu",
         "shader",
@@ -117517,9 +117624,9 @@
       ]
     },
     {
-      "id": "sh-filings-update",
+      "id": "sh-magnetic-filings",
       "project": "shaders",
-      "name": "filingsUpdate",
+      "name": "MagneticFilings",
       "category": "interactive",
       "style": [
         "webgpu",
@@ -117536,6 +117643,7 @@
       "description": "Thousands of tiny iron filings scattered on paper that swing to align with a magnetic field around the cursor, tracing out the field lines — a dipole whose axis follows the cursor.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/MagneticFilings.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=MagneticFilings&poster=%2Fshaders%2Fcovers%2FMagneticFilings.jpg&label=MagneticFilings",
       "tags": [
         "webgpu",
         "shader",
@@ -117563,6 +117671,7 @@
       "description": "Classic marble swirl and vein texture using noise-warped sine waves.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Marble.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Marble&poster=%2Fshaders%2Fcovers%2FMarble.jpg&label=Marble",
       "tags": [
         "webgpu",
         "shader",
@@ -117590,6 +117699,7 @@
       "description": "Flowing mesh gradient of soft drifting color swaths whose seams wrap through the palette.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/MeshGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=MeshGradient&poster=%2Fshaders%2Fcovers%2FMeshGradient.jpg&label=MeshGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -117617,6 +117727,7 @@
       "description": "Mirror content across a line defined by center point and angle.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Mirror.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Mirror&poster=%2Fshaders%2Fcovers%2FMirror.jpg&child=1&label=Mirror",
       "tags": [
         "webgpu",
         "shader",
@@ -117644,6 +117755,7 @@
       "description": "Five individually placed color points blended together by proximity — drag each point to shape the gradient.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/MultiPointGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=MultiPointGradient&poster=%2Fshaders%2Fcovers%2FMultiPointGradient.jpg&label=MultiPointGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -117671,6 +117783,7 @@
       "description": "A volumetric gas nebula sealed inside polished glass; billowing emission clouds with hollow dark cavities and hot glowing cores, star fields drifting at real depth behind the gas, all refracted through the curved walls of the shape and dressed with studio reflections.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Nebula.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Nebula&poster=%2Fshaders%2Fcovers%2FNebula.jpg&label=Nebula",
       "tags": [
         "webgpu",
         "shader",
@@ -117698,6 +117811,7 @@
       "description": "Photorealistic neon tube / 3D pipe effect driven by a custom shape.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Neon.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Neon&poster=%2Fshaders%2Fcovers%2FNeon.jpg&label=Neon",
       "tags": [
         "webgpu",
         "shader",
@@ -117725,6 +117839,7 @@
       "description": "Dissolve the content away through an organic noise pattern.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/NoiseDissolve.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=NoiseDissolve&poster=%2Fshaders%2Fcovers%2FNoiseDissolve.jpg&child=1&label=NoiseDissolve",
       "tags": [
         "webgpu",
         "shader",
@@ -117752,6 +117867,7 @@
       "description": "Computer-vision style object detection overlay — draws bounding boxes and labels around detected regions of the content below, with grid, quadtree and mosaic layouts.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ObjectTracker.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ObjectTracker&poster=%2Fshaders%2Fcovers%2FObjectTracker.jpg&child=1&label=ObjectTracker",
       "tags": [
         "webgpu",
         "shader",
@@ -117779,6 +117895,7 @@
       "description": "Dark tinted glass whose faces stay near-black while every surface turning away from the viewer ignites with a flowing iridescent gradient — vivid color living only on the oblique walls and bevels.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Obsidian.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Obsidian&poster=%2Fshaders%2Fcovers%2FObsidian.jpg&label=Obsidian",
       "tags": [
         "webgpu",
         "shader",
@@ -117806,6 +117923,7 @@
       "description": "Curl the content up from a corner like a peeling page.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/PagePeel.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=PagePeel&poster=%2Fshaders%2Fcovers%2FPagePeel.jpg&child=1&label=PagePeel",
       "tags": [
         "webgpu",
         "shader",
@@ -117833,6 +117951,7 @@
       "description": "Applies realistic paper grain and surface roughness to child content.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Paper.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Paper&poster=%2Fshaders%2Fcovers%2FPaper.jpg&child=1&label=Paper",
       "tags": [
         "webgpu",
         "shader",
@@ -117860,6 +117979,7 @@
       "description": "Parallelogram with adjustable width, height and skew.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Parallelogram.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Parallelogram&poster=%2Fshaders%2Fcovers%2FParallelogram.jpg&label=Parallelogram",
       "tags": [
         "webgpu",
         "shader",
@@ -117868,9 +117988,9 @@
       ]
     },
     {
-      "id": "sh-particle-field-sim",
+      "id": "sh-particle-field",
       "project": "shaders",
-      "name": "particleFieldSim",
+      "name": "ParticleField",
       "category": "stylize",
       "style": [
         "webgpu",
@@ -117887,6 +118007,7 @@
       "description": "Explodes the child content into a breathing 3D field of particles — bright areas float toward you and dark areas recede, the whole relief can be orbited with the camera rotations, and the cursor physically throws particles that spring back home.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ParticleField.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ParticleField&poster=%2Fshaders%2Fcovers%2FParticleField.jpg&child=1&label=ParticleField",
       "tags": [
         "webgpu",
         "shader",
@@ -117895,9 +118016,9 @@
       ]
     },
     {
-      "id": "sh-particle-flow-integrate",
+      "id": "sh-particle-flow",
       "project": "shaders",
-      "name": "particleFlowIntegrate",
+      "name": "ParticleFlow",
       "category": "interactive",
       "style": [
         "webgpu",
@@ -117914,6 +118035,7 @@
       "description": "Thousands of drifting dust particles carried by a real incompressible fluid field the cursor stirs — drag to plow a wake and the particles ride the eddies and vortices it leaves behind, while a gentle ambient breeze keeps the whole scene breathing on its own.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ParticleFlow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ParticleFlow&poster=%2Fshaders%2Fcovers%2FParticleFlow.jpg&label=ParticleFlow",
       "tags": [
         "webgpu",
         "shader",
@@ -117922,9 +118044,9 @@
       ]
     },
     {
-      "id": "sh-particles-update",
+      "id": "sh-particles",
       "project": "shaders",
-      "name": "particlesUpdate",
+      "name": "Particles",
       "category": "shape-effects",
       "style": [
         "webgpu",
@@ -117941,6 +118063,7 @@
       "description": "A swarm of simulated particles that settles into the shape, filling it evenly — flat, SVG or true 3D volumes — scattering from the cursor (or chasing it), tumbling when the shape moves, and always drifting back home.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Particles.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Particles&poster=%2Fshaders%2Fcovers%2FParticles.jpg&label=Particles",
       "tags": [
         "webgpu",
         "shader",
@@ -117968,6 +118091,7 @@
       "description": "Smooth gradient noise that morphs over time.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/PerlinNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=PerlinNoise&poster=%2Fshaders%2Fcovers%2FPerlinNoise.jpg&label=PerlinNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -117995,6 +118119,7 @@
       "description": "Rotate the plane in 3D space with pan and tilt.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Perspective.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Perspective&poster=%2Fshaders%2Fcovers%2FPerspective.jpg&child=1&label=Perspective",
       "tags": [
         "webgpu",
         "shader",
@@ -118022,6 +118147,7 @@
       "description": "Pixels sort by brightness around the cursor and keep their sorted position, optionally decaying back over time.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/PixelSort.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=PixelSort&poster=%2Fshaders%2Fcovers%2FPixelSort.jpg&child=1&label=PixelSort",
       "tags": [
         "webgpu",
         "shader",
@@ -118049,6 +118175,7 @@
       "description": "Throws pixels along the cursor.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/PixelThrow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=PixelThrow&poster=%2Fshaders%2Fcovers%2FPixelThrow.jpg&child=1&label=PixelThrow",
       "tags": [
         "webgpu",
         "shader",
@@ -118076,6 +118203,7 @@
       "description": "Pixelation effect with adjustable cell size.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Pixelate.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Pixelate&poster=%2Fshaders%2Fcovers%2FPixelate.jpg&child=1&label=Pixelate",
       "tags": [
         "webgpu",
         "shader",
@@ -118103,6 +118231,7 @@
       "description": "Animated effect of glowing plasma.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Plasma.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Plasma&poster=%2Fshaders%2Fcovers%2FPlasma.jpg&label=Plasma",
       "tags": [
         "webgpu",
         "shader",
@@ -118130,6 +118259,7 @@
       "description": "Glossy molded plastic with photorealistic studio reflections, driven in a custom shape.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Plastic.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Plastic&poster=%2Fshaders%2Fcovers%2FPlastic.jpg&label=Plastic",
       "tags": [
         "webgpu",
         "shader",
@@ -118157,6 +118287,7 @@
       "description": "Convert rectangular coordinates to polar space.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/PolarCoordinates.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=PolarCoordinates&poster=%2Fshaders%2Fcovers%2FPolarCoordinates.jpg&child=1&label=PolarCoordinates",
       "tags": [
         "webgpu",
         "shader",
@@ -118184,6 +118315,7 @@
       "description": "Regular polygon with adjustable sides and corner rounding.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Polygon.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Polygon&poster=%2Fshaders%2Fcovers%2FPolygon.jpg&label=Polygon",
       "tags": [
         "webgpu",
         "shader",
@@ -118211,6 +118343,7 @@
       "description": "Reduce color depth to create a poster effect.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Posterize.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Posterize&poster=%2Fshaders%2Fcovers%2FPosterize.jpg&child=1&label=Posterize",
       "tags": [
         "webgpu",
         "shader",
@@ -118238,6 +118371,7 @@
       "description": "A beam of light that fans out and splits into a slowly-rotating rainbow past a controllable point. Transparent background — composite over a dark layer.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Prism.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Prism&poster=%2Fshaders%2Fcovers%2FPrism.jpg&label=Prism",
       "tags": [
         "webgpu",
         "shader",
@@ -118265,6 +118399,7 @@
       "description": "Blur that increases progressively in one direction.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ProgressiveBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ProgressiveBlur&poster=%2Fshaders%2Fcovers%2FProgressiveBlur.jpg&child=1&label=ProgressiveBlur",
       "tags": [
         "webgpu",
         "shader",
@@ -118292,6 +118427,7 @@
       "description": "Radial gradient radiating from a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/RadialGradient.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=RadialGradient&poster=%2Fshaders%2Fcovers%2FRadialGradient.jpg&label=RadialGradient",
       "tags": [
         "webgpu",
         "shader",
@@ -118319,6 +118455,7 @@
       "description": "Sweep the content away in a clock-hand arc around a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/RadialWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=RadialWipe&poster=%2Fshaders%2Fcovers%2FRadialWipe.jpg&child=1&label=RadialWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -118346,6 +118483,7 @@
       "description": "Wipe the content away as parallel bars vanishing in random order.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/RandomBars.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=RandomBars&poster=%2Fshaders%2Fcovers%2FRandomBars.jpg&child=1&label=RandomBars",
       "tags": [
         "webgpu",
         "shader",
@@ -118373,6 +118511,7 @@
       "description": "A living Gray-Scott reaction-diffusion pattern that fills the layer and blooms wherever you drag the cursor.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ReactionDiffusion.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ReactionDiffusion&poster=%2Fshaders%2Fcovers%2FReactionDiffusion.jpg&label=ReactionDiffusion",
       "tags": [
         "webgpu",
         "shader",
@@ -118400,6 +118539,7 @@
       "description": "Convert polar coordinates back to rectangular space.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/RectangularCoordinates.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=RectangularCoordinates&poster=%2Fshaders%2Fcovers%2FRectangularCoordinates.jpg&child=1&label=RectangularCoordinates",
       "tags": [
         "webgpu",
         "shader",
@@ -118427,6 +118567,7 @@
       "description": "Reflective floor that mirrors the content above it.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ReflectivePlane.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ReflectivePlane&poster=%2Fshaders%2Fcovers%2FReflectivePlane.jpg&child=1&label=ReflectivePlane",
       "tags": [
         "webgpu",
         "shader",
@@ -118454,6 +118595,7 @@
       "description": "Repeat the child content in grid, radial or linear layouts with per-instance variation.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Repeater.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Repeater&poster=%2Fshaders%2Fcovers%2FRepeater.jpg&child=1&label=Repeater",
       "tags": [
         "webgpu",
         "shader",
@@ -118481,6 +118623,7 @@
       "description": "Annular ring (donut) with adjustable radius and band thickness.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Ring.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Ring&poster=%2Fshaders%2Fcovers%2FRing.jpg&label=Ring",
       "tags": [
         "webgpu",
         "shader",
@@ -118508,6 +118651,7 @@
       "description": "Wipe the content away in concentric rings pulsing out from a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/RippleWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=RippleWipe&poster=%2Fshaders%2Fcovers%2FRippleWipe.jpg&child=1&label=RippleWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -118535,6 +118679,7 @@
       "description": "Concentric animated ripples emanating from a point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Ripples.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Ripples&poster=%2Fshaders%2Fcovers%2FRipples.jpg&label=Ripples",
       "tags": [
         "webgpu",
         "shader",
@@ -118562,6 +118707,7 @@
       "description": "Rounded rectangle with adjustable width, height, and corner rounding.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/RoundedRect.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=RoundedRect&poster=%2Fshaders%2Fcovers%2FRoundedRect.jpg&label=RoundedRect",
       "tags": [
         "webgpu",
         "shader",
@@ -118589,6 +118735,7 @@
       "description": "Flowing satin — a draped cloth of soft rippling folds lit like real fabric: a highlight streaked along the weave, a velvet sheen on the fold flanks and creases falling into shadow, swaying gently in a breeze.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Satin.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Satin&poster=%2Fshaders%2Fcovers%2FSatin.jpg&label=Satin",
       "tags": [
         "webgpu",
         "shader",
@@ -118616,6 +118763,7 @@
       "description": "Adjust color saturation intensity.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Saturation.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Saturation&poster=%2Fshaders%2Fcovers%2FSaturation.jpg&child=1&label=Saturation",
       "tags": [
         "webgpu",
         "shader",
@@ -118643,6 +118791,7 @@
       "description": "Fine hairline scratches, like a worn film or scratched surface.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Scratches.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Scratches&poster=%2Fshaders%2Fcovers%2FScratches.jpg&label=Scratches",
       "tags": [
         "webgpu",
         "shader",
@@ -118670,6 +118819,7 @@
       "description": "Adjust image sharpness using a convolution kernel.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Sharpness.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Sharpness&poster=%2Fshaders%2Fcovers%2FSharpness.jpg&child=1&label=Sharpness",
       "tags": [
         "webgpu",
         "shader",
@@ -118697,6 +118847,7 @@
       "description": "Broken glass effect with tectonic plate displacement.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Shatter.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Shatter&poster=%2Fshaders%2Fcovers%2FShatter.jpg&child=1&label=Shatter",
       "tags": [
         "webgpu",
         "shader",
@@ -118724,6 +118875,7 @@
       "description": "Organic noise with animated movement.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SimplexNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SimplexNoise&poster=%2Fshaders%2Fcovers%2FSimplexNoise.jpg&label=SimplexNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -118751,6 +118903,7 @@
       "description": "Animated wave with thickness and softness.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SineWave.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SineWave&poster=%2Fshaders%2Fcovers%2FSineWave.jpg&label=SineWave",
       "tags": [
         "webgpu",
         "shader",
@@ -118778,6 +118931,7 @@
       "description": "Slice the content into strips that slide away in alternating directions.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SliceWipe.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SliceWipe&poster=%2Fshaders%2Fcovers%2FSliceWipe.jpg&child=1&label=SliceWipe",
       "tags": [
         "webgpu",
         "shader",
@@ -118805,6 +118959,7 @@
       "description": "Realistic fluid smoke simulation with vorticity dynamics.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Smoke.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Smoke&poster=%2Fshaders%2Fcovers%2FSmoke.jpg&label=Smoke",
       "tags": [
         "webgpu",
         "shader",
@@ -118832,6 +118987,7 @@
       "description": "Fill a shape with swirling fluid smoke that interacts with the shape boundary.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SmokeFill.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SmokeFill&poster=%2Fshaders%2Fcovers%2FSmokeFill.jpg&label=SmokeFill",
       "tags": [
         "webgpu",
         "shader",
@@ -118859,6 +119015,7 @@
       "description": "Cursor-driven smoke that lingers, swirls, and dissipates with fluid dynamics.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SmokeFlow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SmokeFlow&poster=%2Fshaders%2Fcovers%2FSmokeFlow.jpg&label=SmokeFlow",
       "tags": [
         "webgpu",
         "shader",
@@ -118886,6 +119043,7 @@
       "description": "Inverts tones above a luminance threshold — a classic darkroom and photo effect.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Solarize.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Solarize&poster=%2Fshaders%2Fcovers%2FSolarize.jpg&child=1&label=Solarize",
       "tags": [
         "webgpu",
         "shader",
@@ -118913,6 +119071,7 @@
       "description": "Fill the canvas with a single solid color.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SolidColor.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SolidColor&poster=%2Fshaders%2Fcovers%2FSolidColor.jpg&label=SolidColor",
       "tags": [
         "webgpu",
         "shader",
@@ -118940,6 +119099,7 @@
       "description": "Twinkling star glints over the bright parts of the layer inside.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Sparkle.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Sparkle&poster=%2Fshaders%2Fcovers%2FSparkle.jpg&child=1&label=Sparkle",
       "tags": [
         "webgpu",
         "shader",
@@ -118967,6 +119127,7 @@
       "description": "Map content onto a 3D sphere surface with depth distortion.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Spherize.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Spherize&poster=%2Fshaders%2Fcovers%2FSpherize.jpg&child=1&label=Spherize",
       "tags": [
         "webgpu",
         "shader",
@@ -118994,6 +119155,7 @@
       "description": "Rotating spiral pattern with animated movement.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Spiral.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Spiral&poster=%2Fshaders%2Fcovers%2FSpiral.jpg&label=Spiral",
       "tags": [
         "webgpu",
         "shader",
@@ -119021,6 +119183,7 @@
       "description": "Classic star polygon with straight sides and sharp pointed tips.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Star.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Star&poster=%2Fshaders%2Fcovers%2FStar.jpg&label=Star",
       "tags": [
         "webgpu",
         "shader",
@@ -119048,6 +119211,7 @@
       "description": "Applies a marbled stone relief and surface distortion to child content.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Stone.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Stone&poster=%2Fshaders%2Fcovers%2FStone.jpg&child=1&label=Stone",
       "tags": [
         "webgpu",
         "shader",
@@ -119075,6 +119239,7 @@
       "description": "Flowing ribbons of light with a multi-color gradient.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Strands.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Strands&poster=%2Fshaders%2Fcovers%2FStrands.jpg&label=Strands",
       "tags": [
         "webgpu",
         "shader",
@@ -119102,6 +119267,7 @@
       "description": "Stretch content towards a direction from a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Stretch.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Stretch&poster=%2Fshaders%2Fcovers%2FStretch.jpg&child=1&label=Stretch",
       "tags": [
         "webgpu",
         "shader",
@@ -119129,6 +119295,7 @@
       "description": "Alternating colored stripes with animation.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Stripes.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Stripes&poster=%2Fshaders%2Fcovers%2FStripes.jpg&label=Stripes",
       "tags": [
         "webgpu",
         "shader",
@@ -119156,6 +119323,7 @@
       "description": "Multi-light studio background with ambient motion.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/StudioBackground.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=StudioBackground&poster=%2Fshaders%2Fcovers%2FStudioBackground.jpg&label=StudioBackground",
       "tags": [
         "webgpu",
         "shader",
@@ -119183,6 +119351,7 @@
       "description": "Radial sunburst rays emanating from a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/SunBurst.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=SunBurst&poster=%2Fshaders%2Fcovers%2FSunBurst.jpg&label=SunBurst",
       "tags": [
         "webgpu",
         "shader",
@@ -119210,6 +119379,7 @@
       "description": "Drapes child content over a 3D wave surface with perspective and lighting.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Surface3D.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Surface3D&poster=%2Fshaders%2Fcovers%2FSurface3D.jpg&child=1&label=Surface3D",
       "tags": [
         "webgpu",
         "shader",
@@ -119237,6 +119407,7 @@
       "description": "Flowing swirl pattern with multi-layered noise.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Swirl.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Swirl&poster=%2Fshaders%2Fcovers%2FSwirl.jpg&label=Swirl",
       "tags": [
         "webgpu",
         "shader",
@@ -119264,6 +119435,7 @@
       "description": "Teardrop — a rounded bulb tapering to a sharp point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Teardrop.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Teardrop&poster=%2Fshaders%2Fcovers%2FTeardrop.jpg&label=Teardrop",
       "tags": [
         "webgpu",
         "shader",
@@ -119291,6 +119463,7 @@
       "description": "Text with any Google font — multi-line with wrapping, alignment and line height — rendered crisp via a glyph texture.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Text.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Text&poster=%2Fshaders%2Fcovers%2FText.jpg&label=Text",
       "tags": [
         "webgpu",
         "shader",
@@ -119318,6 +119491,7 @@
       "description": "Iridescent thin-film edge.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ThinFilm.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ThinFilm&poster=%2Fshaders%2Fcovers%2FThinFilm.jpg&label=ThinFilm",
       "tags": [
         "webgpu",
         "shader",
@@ -119345,6 +119519,7 @@
       "description": "Selective focus blur mimicking tilt-shift photography.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/TiltShift.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=TiltShift&poster=%2Fshaders%2Fcovers%2FTiltShift.jpg&child=1&label=TiltShift",
       "tags": [
         "webgpu",
         "shader",
@@ -119372,6 +119547,7 @@
       "description": "An Echo-style temporal trail — whatever moves sheds a smooth, decaying long-exposure ghost trail (frame-difference Motion mode works on opaque images and video; Alpha mode trails a shape.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/TimeTrail.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=TimeTrail&poster=%2Fshaders%2Fcovers%2FTimeTrail.jpg&child=1&label=TimeTrail",
       "tags": [
         "webgpu",
         "shader",
@@ -119399,6 +119575,7 @@
       "description": "Apply a color tint to the image.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Tint.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Tint&poster=%2Fshaders%2Fcovers%2FTint.jpg&child=1&label=Tint",
       "tags": [
         "webgpu",
         "shader",
@@ -119426,6 +119603,7 @@
       "description": "Trapezoid with adjustable top and bottom widths and height.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Trapezoid.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Trapezoid&poster=%2Fshaders%2Fcovers%2FTrapezoid.jpg&label=Trapezoid",
       "tags": [
         "webgpu",
         "shader",
@@ -119453,6 +119631,7 @@
       "description": "Tiling grid of equilateral triangles with optional animated row offsets.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/TriangularGrid.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=TriangularGrid&poster=%2Fshaders%2Fcovers%2FTriangularGrid.jpg&label=TriangularGrid",
       "tags": [
         "webgpu",
         "shader",
@@ -119480,6 +119659,7 @@
       "description": "Map colors to three tones: shadows, midtones, highlights.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Tritone.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Tritone&poster=%2Fshaders%2Fcovers%2FTritone.jpg&child=1&label=Tritone",
       "tags": [
         "webgpu",
         "shader",
@@ -119507,6 +119687,7 @@
       "description": "Quarter-circle arc tiles that connect to form organic, maze-like flowing curves.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Truchet.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Truchet&poster=%2Fshaders%2Fcovers%2FTruchet.jpg&label=Truchet",
       "tags": [
         "webgpu",
         "shader",
@@ -119534,6 +119715,7 @@
       "description": "Rotate and twist content around a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Twirl.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Twirl&poster=%2Fshaders%2Fcovers%2FTwirl.jpg&child=1&label=Twirl",
       "tags": [
         "webgpu",
         "shader",
@@ -119561,6 +119743,7 @@
       "description": "Analog VHS tape with intermittent tape damage, chroma bleed, and per-scanline noise.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/VHS.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=VHS&poster=%2Fshaders%2Fcovers%2FVHS.jpg&child=1&label=VHS",
       "tags": [
         "webgpu",
         "shader",
@@ -119588,6 +119771,7 @@
       "description": "Wipe the content away behind a set of parallel closing strips.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/VenetianBlinds.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=VenetianBlinds&poster=%2Fshaders%2Fcovers%2FVenetianBlinds.jpg&child=1&label=VenetianBlinds",
       "tags": [
         "webgpu",
         "shader",
@@ -119615,6 +119799,7 @@
       "description": "Vesica piscis (lens shape) formed by the intersection of two overlapping circles.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Vesica.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Vesica&poster=%2Fshaders%2Fcovers%2FVesica.jpg&label=Vesica",
       "tags": [
         "webgpu",
         "shader",
@@ -119642,6 +119827,7 @@
       "description": "Selective saturation adjustment protecting skin tones.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Vibrance.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Vibrance&poster=%2Fshaders%2Fcovers%2FVibrance.jpg&child=1&label=Vibrance",
       "tags": [
         "webgpu",
         "shader",
@@ -119669,6 +119855,7 @@
       "description": "Display a video with customizable playback and object-fit modes.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/VideoTexture.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=VideoTexture&poster=%2Fshaders%2Fcovers%2FVideoTexture.jpg&label=VideoTexture",
       "tags": [
         "webgpu",
         "shader",
@@ -119696,6 +119883,7 @@
       "description": "Darkens or tints the edges of the frame, drawing attention toward the center.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Vignette.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Vignette&poster=%2Fshaders%2Fcovers%2FVignette.jpg&child=1&label=Vignette",
       "tags": [
         "webgpu",
         "shader",
@@ -119723,6 +119911,7 @@
       "description": "Cellular pattern where each pixel is colored by its distance to the nearest of many scattered points.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Voronoi.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Voronoi&poster=%2Fshaders%2Fcovers%2FVoronoi.jpg&label=Voronoi",
       "tags": [
         "webgpu",
         "shader",
@@ -119750,6 +119939,7 @@
       "description": "Rebuild any shape out of voxels — a flat shape becomes chunky pixel art, a 3D shape a lit voxel model with smooth ambient occlusion, cast shadows, a key light you can orbit or drive, and per-cube color.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Voxels.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Voxels&poster=%2Fshaders%2Fcovers%2FVoxels.jpg&label=Voxels",
       "tags": [
         "webgpu",
         "shader",
@@ -119777,6 +119967,7 @@
       "description": "Translucent water — a refractive, light-absorbing body that deepens to its color with thickness, wrapped in a wind-driven wave surface that reflects a procedural sky, with Fresnel-bright grazing edges and foam breaking on the crests and shoreline.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Water.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Water&poster=%2Fshaders%2Fcovers%2FWater.jpg&label=Water",
       "tags": [
         "webgpu",
         "shader",
@@ -119804,6 +119995,7 @@
       "description": "Painterly watercolor look — Kuwahara flattening, pigment edge darkening, paper grain and bleeding.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Watercolor.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Watercolor&poster=%2Fshaders%2Fcovers%2FWatercolor.jpg&child=1&label=Watercolor",
       "tags": [
         "webgpu",
         "shader",
@@ -119831,6 +120023,7 @@
       "description": "Wave-based distortion with multiple waveform types.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/WaveDistortion.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=WaveDistortion&poster=%2Fshaders%2Fcovers%2FWaveDistortion.jpg&child=1&label=WaveDistortion",
       "tags": [
         "webgpu",
         "shader",
@@ -119858,6 +120051,7 @@
       "description": "Audio-visualizer waveform — equalizer bars, a filled wave, an oscilloscope line, or a dot matrix — driven by a simulated signal whose amplitude you can map to your own audio level.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Waveform.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Waveform&poster=%2Fshaders%2Fcovers%2FWaveform.jpg&label=Waveform",
       "tags": [
         "webgpu",
         "shader",
@@ -119885,6 +120079,7 @@
       "description": "Rotating banded wavelets that ripple as they animate.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/WaveletNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=WaveletNoise&poster=%2Fshaders%2Fcovers%2FWaveletNoise.jpg&label=WaveletNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -119912,6 +120107,7 @@
       "description": "Interlaced textile weave pattern with two thread colors going over and under each other.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Weave.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Weave&poster=%2Fshaders%2Fcovers%2FWeave.jpg&label=Weave",
       "tags": [
         "webgpu",
         "shader",
@@ -119939,6 +120135,7 @@
       "description": "Display a live webcam feed with customizable object-fit modes.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/WebcamTexture.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=WebcamTexture&poster=%2Fshaders%2Fcovers%2FWebcamTexture.jpg&label=WebcamTexture",
       "tags": [
         "webgpu",
         "shader",
@@ -119966,6 +120163,7 @@
       "description": "Applies an interwoven fibrous fabric texture and distortion to child content.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Wool.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Wool&poster=%2Fshaders%2Fcovers%2FWool.jpg&child=1&label=Wool",
       "tags": [
         "webgpu",
         "shader",
@@ -119993,6 +120191,7 @@
       "description": "Cellular noise field — distance-based, with selectable feature combinations and fractal octaves.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/WorleyNoise.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=WorleyNoise&poster=%2Fshaders%2Fcovers%2FWorleyNoise.jpg&label=WorleyNoise",
       "tags": [
         "webgpu",
         "shader",
@@ -120020,10 +120219,43 @@
       "description": "Radial zoom blur expanding from a center point.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ZoomBlur.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ZoomBlur&poster=%2Fshaders%2Fcovers%2FZoomBlur.jpg&child=1&label=ZoomBlur",
       "tags": [
         "webgpu",
         "shader",
         "blurs",
+        "mit"
+      ]
+    },
+    {
+      "id": "sh-showcase",
+      "project": "shaders",
+      "name": "Shaders — 200 WebGPU Effects",
+      "category": "official-showcase",
+      "style": [
+        "webgpu",
+        "shader",
+        "official-showcase",
+        "effects",
+        "showcase"
+      ],
+      "techStack": [
+        "WebGPU",
+        "WGSL",
+        "React",
+        "Vue",
+        "Svelte",
+        "JavaScript"
+      ],
+      "description": "A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, iridescent foil, violet plasma, neon dust, isometric glass, living cells and fractal bloom. ChromaFlow, Holographic and Nebula can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.",
+      "language": "tsx",
+      "previewUrl": "/shaders/showcase-cover.jpg",
+      "livePreviewUrl": "/shaders/live.html?layers=ChromaFlow%2CHolographic%2CNebula&poster=%2Fshaders%2Fshowcase-cover.jpg&label=Shaders+Stack",
+      "tags": [
+        "webgpu",
+        "shader",
+        "official-showcase",
+        "effects",
         "mit"
       ]
     },
@@ -120049,11 +120281,11 @@
       "description": "A velvety chromatic field that bends around the cursor. One layer, pure color motion.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ChromaFlow.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ChromaFlow&poster=%2Fshaders%2Fcovers%2FChromaFlow.jpg&label=ChromaFlow+%E2%80%94+Liquid+Color",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "interactive",
         "mit"
       ]
     },
@@ -120079,11 +120311,11 @@
       "description": "Molten chrome folds over the shape with a reflective, high-contrast specular sweep.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/LiquidMetal.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=LiquidMetal&poster=%2Fshaders%2Fcovers%2FLiquidMetal.jpg&label=LiquidMetal+%E2%80%94+Chrome+Bloom",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "shape-effects",
         "mit"
       ]
     },
@@ -120109,24 +120341,24 @@
       "description": "Rainbow foil, glitter flake and a shifting sheen — the full holographic sticker look.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/Holographic.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Holographic&poster=%2Fshaders%2Fcovers%2FHolographic.jpg&label=Holographic+%E2%80%94+Iridescent+Foil",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "shape-effects",
         "mit"
       ]
     },
     {
-      "id": "sh-demo-kaleidoscope",
+      "id": "sh-demo-plasma",
       "project": "shaders",
-      "name": "Kaleidoscope — Fractal Bloom",
+      "name": "Plasma — Violet Storm",
       "category": "official-demo",
       "style": [
         "webgpu",
         "shader",
         "official-demo",
-        "distortions",
+        "textures",
         "curated"
       ],
       "techStack": [
@@ -120136,27 +120368,27 @@
         "Vue",
         "Svelte"
       ],
-      "description": "Radial mirrored segments turn a single image into an intricate flower of glass and stone.",
+      "description": "Layered violet plasma folds with a slow electric shimmer and deep contrast.",
       "language": "tsx",
-      "previewUrl": "/shaders/covers/Kaleidoscope.jpg",
+      "previewUrl": "/shaders/covers/Plasma.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Plasma&poster=%2Fshaders%2Fcovers%2FPlasma.jpg&label=Plasma+%E2%80%94+Violet+Storm",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "distortions",
         "mit"
       ]
     },
     {
-      "id": "sh-demo-nebula",
+      "id": "sh-demo-particle-field",
       "project": "shaders",
-      "name": "Nebula — Deep Space",
+      "name": "ParticleField — Neon Dust",
       "category": "official-demo",
       "style": [
         "webgpu",
         "shader",
         "official-demo",
-        "shape-effects",
+        "stylize",
         "curated"
       ],
       "techStack": [
@@ -120166,27 +120398,27 @@
         "Vue",
         "Svelte"
       ],
-      "description": "Billowing emission clouds sealed inside polished glass, with a slow stellar drift.",
+      "description": "A dense field of luminous particles drifting through a dark volumetric haze.",
       "language": "tsx",
-      "previewUrl": "/shaders/covers/Nebula.jpg",
+      "previewUrl": "/shaders/covers/ParticleField.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ParticleField&poster=%2Fshaders%2Fcovers%2FParticleField.jpg&child=1&label=ParticleField+%E2%80%94+Neon+Dust",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "shape-effects",
         "mit"
       ]
     },
     {
-      "id": "sh-demo-neon",
+      "id": "sh-demo-isometric-cubes",
       "project": "shaders",
-      "name": "Neon — Light Ring",
+      "name": "IsometricCubes — Chromatic Grid",
       "category": "official-demo",
       "style": [
         "webgpu",
         "shader",
         "official-demo",
-        "shape-effects",
+        "textures",
         "curated"
       ],
       "techStack": [
@@ -120196,14 +120428,14 @@
         "Vue",
         "Svelte"
       ],
-      "description": "A photorealistic neon tube with a controlled glow falloff and a cold electric halo.",
+      "description": "A chromatic isometric lattice of glass cubes with a candy-colored parallax.",
       "language": "tsx",
-      "previewUrl": "/shaders/covers/Neon.jpg",
+      "previewUrl": "/shaders/covers/IsometricCubes.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=IsometricCubes&poster=%2Fshaders%2Fcovers%2FIsometricCubes.jpg&label=IsometricCubes+%E2%80%94+Chromatic+Grid",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "shape-effects",
         "mit"
       ]
     },
@@ -120229,24 +120461,24 @@
       "description": "Gray-Scott chemistry grows into coral, veins and living tissue across the layer.",
       "language": "tsx",
       "previewUrl": "/shaders/covers/ReactionDiffusion.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=ReactionDiffusion&poster=%2Fshaders%2Fcovers%2FReactionDiffusion.jpg&label=ReactionDiffusion+%E2%80%94+Living+Cells",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "interactive",
         "mit"
       ]
     },
     {
-      "id": "sh-demo-voronoi",
+      "id": "sh-demo-kaleidoscope",
       "project": "shaders",
-      "name": "Voronoi — Cellular Glass",
+      "name": "Kaleidoscope — Fractal Bloom",
       "category": "official-demo",
       "style": [
         "webgpu",
         "shader",
         "official-demo",
-        "textures",
+        "distortions",
         "curated"
       ],
       "techStack": [
@@ -120256,45 +120488,14 @@
         "Vue",
         "Svelte"
       ],
-      "description": "Distance-to-seed cellular geometry, colored like stained glass under pressure.",
+      "description": "Radial mirrored segments turn a single image into an intricate flower of glass and stone.",
       "language": "tsx",
-      "previewUrl": "/shaders/covers/Voronoi.jpg",
+      "previewUrl": "/shaders/covers/Kaleidoscope.jpg",
+      "livePreviewUrl": "/shaders/live.html?component=Kaleidoscope&poster=%2Fshaders%2Fcovers%2FKaleidoscope.jpg&child=1&label=Kaleidoscope+%E2%80%94+Fractal+Bloom",
       "tags": [
         "webgpu",
         "shader",
         "official-demo",
-        "textures",
-        "mit"
-      ]
-    },
-    {
-      "id": "sh-showcase",
-      "project": "shaders",
-      "name": "Shaders — 200 WebGPU Effects",
-      "category": "official-showcase",
-      "style": [
-        "webgpu",
-        "shader",
-        "official-showcase",
-        "effects",
-        "showcase"
-      ],
-      "techStack": [
-        "WebGPU",
-        "WGSL",
-        "React",
-        "Vue",
-        "Svelte",
-        "JavaScript"
-      ],
-      "description": "A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, holographic foil, kaleidoscope, nebula, neon, reaction-diffusion and Voronoi. Aurora, CursorRipples and FilmGrain can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.",
-      "language": "tsx",
-      "previewUrl": "/shaders/showcase-cover.jpg",
-      "tags": [
-        "webgpu",
-        "shader",
-        "official-showcase",
-        "effects",
         "mit"
       ]
     }

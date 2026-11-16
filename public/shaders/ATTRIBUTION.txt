@@ -5,4 +5,5 @@ License: MIT (see LICENSE.txt)
 
 The engine, components and framework bindings used in this demo are MIT licensed.
 The component cover images are taken from packages/core/src/shaders/*/cover.jpg in the same repository.
+The browser runtime in public/shaders/runtime/shaders.js is the published npm bundle from shaders@4.0.7 (MIT), vendored to keep live previews independent of a third-party CDN.
 The design editor, presets, website sections and hosted platform at shaders.com are separate services with their own terms and are not bundled here.

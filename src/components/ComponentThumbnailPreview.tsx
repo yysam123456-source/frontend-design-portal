@@ -249,6 +249,35 @@ export default function ComponentThumbnailPreview({
     )
   }
 
+  // Shaders components run in a dedicated live WebGPU iframe. The iframe keeps
+  // its own canvas/device isolated from the portal shell and only mounts while
+  // the card is in view.
+  if (previewRecord?.kind === 'html-live' && previewRecord.status === 'ready' && previewRecord.entry) {
+    return (
+      <div ref={containerRef} className="absolute inset-0 bg-[#050816]">
+        {!isVisible ? (
+          <img
+            src={previewRecord.media?.poster}
+            alt={`${component.name} preview`}
+            className="absolute inset-0 h-full w-full object-cover opacity-80"
+            loading="lazy"
+          />
+        ) : (
+          <iframe
+            src={previewRecord.entry}
+            title={`${component.name} live preview`}
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+            className="pointer-events-none absolute inset-0 h-full w-full border-0"
+          />
+        )}
+        <div className="pointer-events-none absolute left-2 top-2 rounded-full border border-cyan-300/25 bg-black/55 px-2 py-0.5 text-[10px] font-medium tracking-wide text-cyan-100">
+          WebGPU
+        </div>
+      </div>
+    )
+  }
+
   if (previewRecord?.kind === 'media-image' && previewRecord.status === 'ready') {
     return (
       <div ref={containerRef} className="absolute inset-0 flex items-center justify-center bg-[#050816]">

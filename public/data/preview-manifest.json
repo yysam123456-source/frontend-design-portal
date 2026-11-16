@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-16T06:20:42.116Z",
+  "generatedAt": "2026-11-16T08:31:02.595Z",
   "stats": {
     "ready:media-video": 268,
-    "ready:media-image": 357,
+    "ready:media-image": 148,
     "ready:react-generated": 572,
-    "ready:html-live": 5286,
+    "ready:html-live": 5495,
     "unsupported:unsupported": 28,
     "ready:embed": 123
   },
@@ -41214,2091 +41214,2300 @@
     {
       "id": "sh-angular-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=AngularBlur&poster=%2Fshaders%2Fcovers%2FAngularBlur.jpg&child=1&label=AngularBlur",
       "media": {
         "poster": "/shaders/covers/AngularBlur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-arc",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Arc&poster=%2Fshaders%2Fcovers%2FArc.jpg&label=Arc",
       "media": {
         "poster": "/shaders/covers/Arc.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-ascii",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Ascii&poster=%2Fshaders%2Fcovers%2FAscii.jpg&child=1&label=Ascii",
       "media": {
         "poster": "/shaders/covers/Ascii.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-aurora",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Aurora&poster=%2Fshaders%2Fcovers%2FAurora.jpg&label=Aurora",
       "media": {
         "poster": "/shaders/covers/Aurora.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-bar-shift",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BarShift&poster=%2Fshaders%2Fcovers%2FBarShift.jpg&child=1&label=BarShift",
       "media": {
         "poster": "/shaders/covers/BarShift.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-barn-doors",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BarnDoors&poster=%2Fshaders%2Fcovers%2FBarnDoors.jpg&child=1&label=BarnDoors",
       "media": {
         "poster": "/shaders/covers/BarnDoors.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-beam",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Beam&poster=%2Fshaders%2Fcovers%2FBeam.jpg&label=Beam",
       "media": {
         "poster": "/shaders/covers/Beam.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-bend",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Bend&poster=%2Fshaders%2Fcovers%2FBend.jpg&child=1&label=Bend",
       "media": {
         "poster": "/shaders/covers/Bend.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-blob",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Blob&poster=%2Fshaders%2Fcovers%2FBlob.jpg&label=Blob",
       "media": {
         "poster": "/shaders/covers/Blob.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-block-dissolve",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BlockDissolve&poster=%2Fshaders%2Fcovers%2FBlockDissolve.jpg&child=1&label=BlockDissolve",
       "media": {
         "poster": "/shaders/covers/BlockDissolve.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-block-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BlockNoise&poster=%2Fshaders%2Fcovers%2FBlockNoise.jpg&label=BlockNoise",
       "media": {
         "poster": "/shaders/covers/BlockNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-blue-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BlueNoise&poster=%2Fshaders%2Fcovers%2FBlueNoise.jpg&label=BlueNoise",
       "media": {
         "poster": "/shaders/covers/BlueNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Blur&poster=%2Fshaders%2Fcovers%2FBlur.jpg&child=1&label=Blur",
       "media": {
         "poster": "/shaders/covers/Blur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-boids-update",
+      "id": "sh-boids",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Boids&poster=%2Fshaders%2Fcovers%2FBoids.jpg&label=Boids",
       "media": {
         "poster": "/shaders/covers/Boids.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-bokeh-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BokehBlur&poster=%2Fshaders%2Fcovers%2FBokehBlur.jpg&child=1&label=BokehBlur",
       "media": {
         "poster": "/shaders/covers/BokehBlur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-brick-pattern",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BrickPattern&poster=%2Fshaders%2Fcovers%2FBrickPattern.jpg&label=BrickPattern",
       "media": {
         "poster": "/shaders/covers/BrickPattern.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-brightness-contrast",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BrightnessContrast&poster=%2Fshaders%2Fcovers%2FBrightnessContrast.jpg&child=1&label=BrightnessContrast",
       "media": {
         "poster": "/shaders/covers/BrightnessContrast.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-brushed-metal",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=BrushedMetal&poster=%2Fshaders%2Fcovers%2FBrushedMetal.jpg&label=BrushedMetal",
       "media": {
         "poster": "/shaders/covers/BrushedMetal.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-bulge",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Bulge&poster=%2Fshaders%2Fcovers%2FBulge.jpg&child=1&label=Bulge",
       "media": {
         "poster": "/shaders/covers/Bulge.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-crtscreen",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CRTScreen&poster=%2Fshaders%2Fcovers%2FCRTScreen.jpg&child=1&label=CRTScreen",
       "media": {
         "poster": "/shaders/covers/CRTScreen.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-carbon-fiber",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CarbonFiber&poster=%2Fshaders%2Fcovers%2FCarbonFiber.jpg&label=CarbonFiber",
       "media": {
         "poster": "/shaders/covers/CarbonFiber.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-chalkboard",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Chalkboard&poster=%2Fshaders%2Fcovers%2FChalkboard.jpg&child=1&label=Chalkboard",
       "media": {
         "poster": "/shaders/covers/Chalkboard.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-channel-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ChannelBlur&poster=%2Fshaders%2Fcovers%2FChannelBlur.jpg&child=1&label=ChannelBlur",
       "media": {
         "poster": "/shaders/covers/ChannelBlur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-checker-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CheckerWipe&poster=%2Fshaders%2Fcovers%2FCheckerWipe.jpg&child=1&label=CheckerWipe",
       "media": {
         "poster": "/shaders/covers/CheckerWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-checkerboard",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Checkerboard&poster=%2Fshaders%2Fcovers%2FCheckerboard.jpg&label=Checkerboard",
       "media": {
         "poster": "/shaders/covers/Checkerboard.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-chevron",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Chevron&poster=%2Fshaders%2Fcovers%2FChevron.jpg&label=Chevron",
       "media": {
         "poster": "/shaders/covers/Chevron.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-chroma-flow",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ChromaFlow&poster=%2Fshaders%2Fcovers%2FChromaFlow.jpg&label=ChromaFlow",
       "media": {
         "poster": "/shaders/covers/ChromaFlow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-chromatic-aberration",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ChromaticAberration&poster=%2Fshaders%2Fcovers%2FChromaticAberration.jpg&child=1&label=ChromaticAberration",
       "media": {
         "poster": "/shaders/covers/ChromaticAberration.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-chrome",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Chrome&poster=%2Fshaders%2Fcovers%2FChrome.jpg&label=Chrome",
       "media": {
         "poster": "/shaders/covers/Chrome.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-circle",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Circle&poster=%2Fshaders%2Fcovers%2FCircle.jpg&label=Circle",
       "media": {
         "poster": "/shaders/covers/Circle.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-color-wheel",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ColorWheel&poster=%2Fshaders%2Fcovers%2FColorWheel.jpg&label=ColorWheel",
       "media": {
         "poster": "/shaders/covers/ColorWheel.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-compression-artifacts",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CompressionArtifacts&poster=%2Fshaders%2Fcovers%2FCompressionArtifacts.jpg&child=1&label=CompressionArtifacts",
       "media": {
         "poster": "/shaders/covers/CompressionArtifacts.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-concentric-spin",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ConcentricSpin&poster=%2Fshaders%2Fcovers%2FConcentricSpin.jpg&child=1&label=ConcentricSpin",
       "media": {
         "poster": "/shaders/covers/ConcentricSpin.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-conic-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ConicGradient&poster=%2Fshaders%2Fcovers%2FConicGradient.jpg&label=ConicGradient",
       "media": {
         "poster": "/shaders/covers/ConicGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-contour-lines",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ContourLines&poster=%2Fshaders%2Fcovers%2FContourLines.jpg&child=1&label=ContourLines",
       "media": {
         "poster": "/shaders/covers/ContourLines.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-corner-pin",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CornerPin&poster=%2Fshaders%2Fcovers%2FCornerPin.jpg&child=1&label=CornerPin",
       "media": {
         "poster": "/shaders/covers/CornerPin.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-crescent",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Crescent&poster=%2Fshaders%2Fcovers%2FCrescent.jpg&label=Crescent",
       "media": {
         "poster": "/shaders/covers/Crescent.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-cross",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Cross&poster=%2Fshaders%2Fcovers%2FCross.jpg&label=Cross",
       "media": {
         "poster": "/shaders/covers/Cross.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-crystal",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Crystal&poster=%2Fshaders%2Fcovers%2FCrystal.jpg&child=1&label=Crystal",
       "media": {
         "poster": "/shaders/covers/Crystal.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-curl-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CurlNoise&poster=%2Fshaders%2Fcovers%2FCurlNoise.jpg&label=CurlNoise",
       "media": {
         "poster": "/shaders/covers/CurlNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-cursor-ripples",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CursorRipples&poster=%2Fshaders%2Fcovers%2FCursorRipples.jpg&child=1&label=CursorRipples",
       "media": {
         "poster": "/shaders/covers/CursorRipples.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-cursor-trail-scan",
+      "id": "sh-cursor-trail",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=CursorTrail&poster=%2Fshaders%2Fcovers%2FCursorTrail.jpg&label=CursorTrail",
       "media": {
         "poster": "/shaders/covers/CursorTrail.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-data-mosh",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DataMosh&poster=%2Fshaders%2Fcovers%2FDataMosh.jpg&child=1&label=DataMosh",
       "media": {
         "poster": "/shaders/covers/DataMosh.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-diamond-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DiamondGradient&poster=%2Fshaders%2Fcovers%2FDiamondGradient.jpg&label=DiamondGradient",
       "media": {
         "poster": "/shaders/covers/DiamondGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-diamond-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DiamondWipe&poster=%2Fshaders%2Fcovers%2FDiamondWipe.jpg&child=1&label=DiamondWipe",
       "media": {
         "poster": "/shaders/covers/DiamondWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-diffuse-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DiffuseBlur&poster=%2Fshaders%2Fcovers%2FDiffuseBlur.jpg&child=1&label=DiffuseBlur",
       "media": {
         "poster": "/shaders/covers/DiffuseBlur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-displacement-map",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DisplacementMap&poster=%2Fshaders%2Fcovers%2FDisplacementMap.jpg&child=1&label=DisplacementMap",
       "media": {
         "poster": "/shaders/covers/DisplacementMap.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-dither",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Dither&poster=%2Fshaders%2Fcovers%2FDither.jpg&child=1&label=Dither",
       "media": {
         "poster": "/shaders/covers/Dither.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-dot-grid",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DotGrid&poster=%2Fshaders%2Fcovers%2FDotGrid.jpg&label=DotGrid",
       "media": {
         "poster": "/shaders/covers/DotGrid.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-drop-shadow",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=DropShadow&poster=%2Fshaders%2Fcovers%2FDropShadow.jpg&child=1&label=DropShadow",
       "media": {
         "poster": "/shaders/covers/DropShadow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-duotone",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Duotone&poster=%2Fshaders%2Fcovers%2FDuotone.jpg&child=1&label=Duotone",
       "media": {
         "poster": "/shaders/covers/Duotone.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-ellipse",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Ellipse&poster=%2Fshaders%2Fcovers%2FEllipse.jpg&label=Ellipse",
       "media": {
         "poster": "/shaders/covers/Ellipse.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-emboss",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Emboss&poster=%2Fshaders%2Fcovers%2FEmboss.jpg&child=1&label=Emboss",
       "media": {
         "poster": "/shaders/covers/Emboss.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-engraving",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Engraving&poster=%2Fshaders%2Fcovers%2FEngraving.jpg&child=1&label=Engraving",
       "media": {
         "poster": "/shaders/covers/Engraving.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-erosion-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ErosionNoise&poster=%2Fshaders%2Fcovers%2FErosionNoise.jpg&label=ErosionNoise",
       "media": {
         "poster": "/shaders/covers/ErosionNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-exposure",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Exposure&poster=%2Fshaders%2Fcovers%2FExposure.jpg&child=1&label=Exposure",
       "media": {
         "poster": "/shaders/covers/Exposure.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-falling-lines",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FallingLines&poster=%2Fshaders%2Fcovers%2FFallingLines.jpg&label=FallingLines",
       "media": {
         "poster": "/shaders/covers/FallingLines.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-film-grain",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FilmGrain&poster=%2Fshaders%2Fcovers%2FFilmGrain.jpg&child=1&label=FilmGrain",
       "media": {
         "poster": "/shaders/covers/FilmGrain.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-film-stock",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FilmStock&poster=%2Fshaders%2Fcovers%2FFilmStock.jpg&child=1&label=FilmStock",
       "media": {
         "poster": "/shaders/covers/FilmStock.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-flip",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Flip&poster=%2Fshaders%2Fcovers%2FFlip.jpg&child=1&label=Flip",
       "media": {
         "poster": "/shaders/covers/Flip.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-floating-particles-update",
+      "id": "sh-floating-particles",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FloatingParticles&poster=%2Fshaders%2Fcovers%2FFloatingParticles.jpg&label=FloatingParticles",
       "media": {
         "poster": "/shaders/covers/FloatingParticles.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-flow-field",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FlowField&poster=%2Fshaders%2Fcovers%2FFlowField.jpg&child=1&label=FlowField",
       "media": {
         "poster": "/shaders/covers/FlowField.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-flower",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Flower&poster=%2Fshaders%2Fcovers%2FFlower.jpg&label=Flower",
       "media": {
         "poster": "/shaders/covers/Flower.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-flowing-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FlowingGradient&poster=%2Fshaders%2Fcovers%2FFlowingGradient.jpg&label=FlowingGradient",
       "media": {
         "poster": "/shaders/covers/FlowingGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-fluted-glass",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FlutedGlass&poster=%2Fshaders%2Fcovers%2FFlutedGlass.jpg&child=1&label=FlutedGlass",
       "media": {
         "poster": "/shaders/covers/FlutedGlass.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-fog",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Fog&poster=%2Fshaders%2Fcovers%2FFog.jpg&label=Fog",
       "media": {
         "poster": "/shaders/covers/Fog.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-form3-d",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Form3D&poster=%2Fshaders%2Fcovers%2FForm3D.jpg&child=1&label=Form3D",
       "media": {
         "poster": "/shaders/covers/Form3D.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-fractal-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=FractalNoise&poster=%2Fshaders%2Fcovers%2FFractalNoise.jpg&label=FractalNoise",
       "media": {
         "poster": "/shaders/covers/FractalNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-frost",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Frost&poster=%2Fshaders%2Fcovers%2FFrost.jpg&label=Frost",
       "media": {
         "poster": "/shaders/covers/Frost.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-gabor-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=GaborNoise&poster=%2Fshaders%2Fcovers%2FGaborNoise.jpg&label=GaborNoise",
       "media": {
         "poster": "/shaders/covers/GaborNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-glass",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Glass&poster=%2Fshaders%2Fcovers%2FGlass.jpg&child=1&label=Glass",
       "media": {
         "poster": "/shaders/covers/Glass.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-glass-tiles",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=GlassTiles&poster=%2Fshaders%2Fcovers%2FGlassTiles.jpg&child=1&label=GlassTiles",
       "media": {
         "poster": "/shaders/covers/GlassTiles.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-glitch",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Glitch&poster=%2Fshaders%2Fcovers%2FGlitch.jpg&child=1&label=Glitch",
       "media": {
         "poster": "/shaders/covers/Glitch.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-glow",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Glow&poster=%2Fshaders%2Fcovers%2FGlow.jpg&child=1&label=Glow",
       "media": {
         "poster": "/shaders/covers/Glow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-godrays",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Godrays&poster=%2Fshaders%2Fcovers%2FGodrays.jpg&label=Godrays",
       "media": {
         "poster": "/shaders/covers/Godrays.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-goo",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Goo&poster=%2Fshaders%2Fcovers%2FGoo.jpg&label=Goo",
       "media": {
         "poster": "/shaders/covers/Goo.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-gradient-map",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=GradientMap&poster=%2Fshaders%2Fcovers%2FGradientMap.jpg&child=1&label=GradientMap",
       "media": {
         "poster": "/shaders/covers/GradientMap.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-grayscale",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Grayscale&poster=%2Fshaders%2Fcovers%2FGrayscale.jpg&child=1&label=Grayscale",
       "media": {
         "poster": "/shaders/covers/Grayscale.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-grid",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Grid&poster=%2Fshaders%2Fcovers%2FGrid.jpg&label=Grid",
       "media": {
         "poster": "/shaders/covers/Grid.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-grid-distortion",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=GridDistortion&poster=%2Fshaders%2Fcovers%2FGridDistortion.jpg&child=1&label=GridDistortion",
       "media": {
         "poster": "/shaders/covers/GridDistortion.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-group",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Group&poster=%2Fshaders%2Fcovers%2FGroup.jpg&child=1&label=Group",
       "media": {
         "poster": "/shaders/covers/Group.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-htmlin-canvas",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=HTMLInCanvas&poster=%2Fshaders%2Fcovers%2FHTMLInCanvas.jpg&label=HTMLInCanvas",
       "media": {
         "poster": "/shaders/covers/HTMLInCanvas.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-halftone",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Halftone&poster=%2Fshaders%2Fcovers%2FHalftone.jpg&child=1&label=Halftone",
       "media": {
         "poster": "/shaders/covers/Halftone.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-heart",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Heart&poster=%2Fshaders%2Fcovers%2FHeart.jpg&label=Heart",
       "media": {
         "poster": "/shaders/covers/Heart.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-heatmap",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Heatmap&poster=%2Fshaders%2Fcovers%2FHeatmap.jpg&label=Heatmap",
       "media": {
         "poster": "/shaders/covers/Heatmap.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-hex-grid",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=HexGrid&poster=%2Fshaders%2Fcovers%2FHexGrid.jpg&label=HexGrid",
       "media": {
         "poster": "/shaders/covers/HexGrid.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-hologram",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Hologram&poster=%2Fshaders%2Fcovers%2FHologram.jpg&label=Hologram",
       "media": {
         "poster": "/shaders/covers/Hologram.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-holographic",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Holographic&poster=%2Fshaders%2Fcovers%2FHolographic.jpg&label=Holographic",
       "media": {
         "poster": "/shaders/covers/Holographic.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-hue-shift",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=HueShift&poster=%2Fshaders%2Fcovers%2FHueShift.jpg&child=1&label=HueShift",
       "media": {
         "poster": "/shaders/covers/HueShift.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-image-texture",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ImageTexture&poster=%2Fshaders%2Fcovers%2FImageTexture.jpg&label=ImageTexture",
       "media": {
         "poster": "/shaders/covers/ImageTexture.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-ink-flow",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=InkFlow&poster=%2Fshaders%2Fcovers%2FInkFlow.jpg&label=InkFlow",
       "media": {
         "poster": "/shaders/covers/InkFlow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-invert",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Invert&poster=%2Fshaders%2Fcovers%2FInvert.jpg&child=1&label=Invert",
       "media": {
         "poster": "/shaders/covers/Invert.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-iris-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=IrisWipe&poster=%2Fshaders%2Fcovers%2FIrisWipe.jpg&child=1&label=IrisWipe",
       "media": {
         "poster": "/shaders/covers/IrisWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-irradiance",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Irradiance&poster=%2Fshaders%2Fcovers%2FIrradiance.jpg&label=Irradiance",
       "media": {
         "poster": "/shaders/covers/Irradiance.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-isometric-cubes",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=IsometricCubes&poster=%2Fshaders%2Fcovers%2FIsometricCubes.jpg&label=IsometricCubes",
       "media": {
         "poster": "/shaders/covers/IsometricCubes.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-kaleidoscope",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Kaleidoscope&poster=%2Fshaders%2Fcovers%2FKaleidoscope.jpg&child=1&label=Kaleidoscope",
       "media": {
         "poster": "/shaders/covers/Kaleidoscope.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-key-frames",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=KeyFrames&poster=%2Fshaders%2Fcovers%2FKeyFrames.jpg&child=1&label=KeyFrames",
       "media": {
         "poster": "/shaders/covers/KeyFrames.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-lens-distortion",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LensDistortion&poster=%2Fshaders%2Fcovers%2FLensDistortion.jpg&child=1&label=LensDistortion",
       "media": {
         "poster": "/shaders/covers/LensDistortion.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-lens-flare",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LensFlare&poster=%2Fshaders%2Fcovers%2FLensFlare.jpg&label=LensFlare",
       "media": {
         "poster": "/shaders/covers/LensFlare.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-light-edge",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LightEdge&poster=%2Fshaders%2Fcovers%2FLightEdge.jpg&label=LightEdge",
       "media": {
         "poster": "/shaders/covers/LightEdge.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-light-leak",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LightLeak&poster=%2Fshaders%2Fcovers%2FLightLeak.jpg&child=1&label=LightLeak",
       "media": {
         "poster": "/shaders/covers/LightLeak.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-line",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Line&poster=%2Fshaders%2Fcovers%2FLine.jpg&label=Line",
       "media": {
         "poster": "/shaders/covers/Line.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-linear-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LinearBlur&poster=%2Fshaders%2Fcovers%2FLinearBlur.jpg&child=1&label=LinearBlur",
       "media": {
         "poster": "/shaders/covers/LinearBlur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-linear-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LinearGradient&poster=%2Fshaders%2Fcovers%2FLinearGradient.jpg&label=LinearGradient",
       "media": {
         "poster": "/shaders/covers/LinearGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-linear-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LinearWipe&poster=%2Fshaders%2Fcovers%2FLinearWipe.jpg&child=1&label=LinearWipe",
       "media": {
         "poster": "/shaders/covers/LinearWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-liquid-metal",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=LiquidMetal&poster=%2Fshaders%2Fcovers%2FLiquidMetal.jpg&label=LiquidMetal",
       "media": {
         "poster": "/shaders/covers/LiquidMetal.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-liquify",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Liquify&poster=%2Fshaders%2Fcovers%2FLiquify.jpg&child=1&label=Liquify",
       "media": {
         "poster": "/shaders/covers/Liquify.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-filings-update",
+      "id": "sh-magnetic-filings",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=MagneticFilings&poster=%2Fshaders%2Fcovers%2FMagneticFilings.jpg&label=MagneticFilings",
       "media": {
         "poster": "/shaders/covers/MagneticFilings.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-marble",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Marble&poster=%2Fshaders%2Fcovers%2FMarble.jpg&label=Marble",
       "media": {
         "poster": "/shaders/covers/Marble.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-mesh-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=MeshGradient&poster=%2Fshaders%2Fcovers%2FMeshGradient.jpg&label=MeshGradient",
       "media": {
         "poster": "/shaders/covers/MeshGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-mirror",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Mirror&poster=%2Fshaders%2Fcovers%2FMirror.jpg&child=1&label=Mirror",
       "media": {
         "poster": "/shaders/covers/Mirror.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-multi-point-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=MultiPointGradient&poster=%2Fshaders%2Fcovers%2FMultiPointGradient.jpg&label=MultiPointGradient",
       "media": {
         "poster": "/shaders/covers/MultiPointGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-nebula",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Nebula&poster=%2Fshaders%2Fcovers%2FNebula.jpg&label=Nebula",
       "media": {
         "poster": "/shaders/covers/Nebula.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-neon",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Neon&poster=%2Fshaders%2Fcovers%2FNeon.jpg&label=Neon",
       "media": {
         "poster": "/shaders/covers/Neon.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-noise-dissolve",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=NoiseDissolve&poster=%2Fshaders%2Fcovers%2FNoiseDissolve.jpg&child=1&label=NoiseDissolve",
       "media": {
         "poster": "/shaders/covers/NoiseDissolve.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-object-tracker",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ObjectTracker&poster=%2Fshaders%2Fcovers%2FObjectTracker.jpg&child=1&label=ObjectTracker",
       "media": {
         "poster": "/shaders/covers/ObjectTracker.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-obsidian",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Obsidian&poster=%2Fshaders%2Fcovers%2FObsidian.jpg&label=Obsidian",
       "media": {
         "poster": "/shaders/covers/Obsidian.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-page-peel",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=PagePeel&poster=%2Fshaders%2Fcovers%2FPagePeel.jpg&child=1&label=PagePeel",
       "media": {
         "poster": "/shaders/covers/PagePeel.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-paper",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Paper&poster=%2Fshaders%2Fcovers%2FPaper.jpg&child=1&label=Paper",
       "media": {
         "poster": "/shaders/covers/Paper.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-parallelogram",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Parallelogram&poster=%2Fshaders%2Fcovers%2FParallelogram.jpg&label=Parallelogram",
       "media": {
         "poster": "/shaders/covers/Parallelogram.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-particle-field-sim",
+      "id": "sh-particle-field",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ParticleField&poster=%2Fshaders%2Fcovers%2FParticleField.jpg&child=1&label=ParticleField",
       "media": {
         "poster": "/shaders/covers/ParticleField.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-particle-flow-integrate",
+      "id": "sh-particle-flow",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ParticleFlow&poster=%2Fshaders%2Fcovers%2FParticleFlow.jpg&label=ParticleFlow",
       "media": {
         "poster": "/shaders/covers/ParticleFlow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
-      "id": "sh-particles-update",
+      "id": "sh-particles",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Particles&poster=%2Fshaders%2Fcovers%2FParticles.jpg&label=Particles",
       "media": {
         "poster": "/shaders/covers/Particles.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-perlin-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=PerlinNoise&poster=%2Fshaders%2Fcovers%2FPerlinNoise.jpg&label=PerlinNoise",
       "media": {
         "poster": "/shaders/covers/PerlinNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-perspective",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Perspective&poster=%2Fshaders%2Fcovers%2FPerspective.jpg&child=1&label=Perspective",
       "media": {
         "poster": "/shaders/covers/Perspective.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-pixel-sort",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=PixelSort&poster=%2Fshaders%2Fcovers%2FPixelSort.jpg&child=1&label=PixelSort",
       "media": {
         "poster": "/shaders/covers/PixelSort.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-pixel-throw",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=PixelThrow&poster=%2Fshaders%2Fcovers%2FPixelThrow.jpg&child=1&label=PixelThrow",
       "media": {
         "poster": "/shaders/covers/PixelThrow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-pixelate",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Pixelate&poster=%2Fshaders%2Fcovers%2FPixelate.jpg&child=1&label=Pixelate",
       "media": {
         "poster": "/shaders/covers/Pixelate.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-plasma",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Plasma&poster=%2Fshaders%2Fcovers%2FPlasma.jpg&label=Plasma",
       "media": {
         "poster": "/shaders/covers/Plasma.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-plastic",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Plastic&poster=%2Fshaders%2Fcovers%2FPlastic.jpg&label=Plastic",
       "media": {
         "poster": "/shaders/covers/Plastic.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-polar-coordinates",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=PolarCoordinates&poster=%2Fshaders%2Fcovers%2FPolarCoordinates.jpg&child=1&label=PolarCoordinates",
       "media": {
         "poster": "/shaders/covers/PolarCoordinates.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-polygon",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Polygon&poster=%2Fshaders%2Fcovers%2FPolygon.jpg&label=Polygon",
       "media": {
         "poster": "/shaders/covers/Polygon.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-posterize",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Posterize&poster=%2Fshaders%2Fcovers%2FPosterize.jpg&child=1&label=Posterize",
       "media": {
         "poster": "/shaders/covers/Posterize.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-prism",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Prism&poster=%2Fshaders%2Fcovers%2FPrism.jpg&label=Prism",
       "media": {
         "poster": "/shaders/covers/Prism.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-progressive-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ProgressiveBlur&poster=%2Fshaders%2Fcovers%2FProgressiveBlur.jpg&child=1&label=ProgressiveBlur",
       "media": {
         "poster": "/shaders/covers/ProgressiveBlur.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-radial-gradient",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=RadialGradient&poster=%2Fshaders%2Fcovers%2FRadialGradient.jpg&label=RadialGradient",
       "media": {
         "poster": "/shaders/covers/RadialGradient.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-radial-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=RadialWipe&poster=%2Fshaders%2Fcovers%2FRadialWipe.jpg&child=1&label=RadialWipe",
       "media": {
         "poster": "/shaders/covers/RadialWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-random-bars",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=RandomBars&poster=%2Fshaders%2Fcovers%2FRandomBars.jpg&child=1&label=RandomBars",
       "media": {
         "poster": "/shaders/covers/RandomBars.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-reaction-diffusion",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ReactionDiffusion&poster=%2Fshaders%2Fcovers%2FReactionDiffusion.jpg&label=ReactionDiffusion",
       "media": {
         "poster": "/shaders/covers/ReactionDiffusion.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-rectangular-coordinates",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=RectangularCoordinates&poster=%2Fshaders%2Fcovers%2FRectangularCoordinates.jpg&child=1&label=RectangularCoordinates",
       "media": {
         "poster": "/shaders/covers/RectangularCoordinates.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-reflective-plane",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ReflectivePlane&poster=%2Fshaders%2Fcovers%2FReflectivePlane.jpg&child=1&label=ReflectivePlane",
       "media": {
         "poster": "/shaders/covers/ReflectivePlane.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-repeater",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Repeater&poster=%2Fshaders%2Fcovers%2FRepeater.jpg&child=1&label=Repeater",
       "media": {
         "poster": "/shaders/covers/Repeater.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-ring",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Ring&poster=%2Fshaders%2Fcovers%2FRing.jpg&label=Ring",
       "media": {
         "poster": "/shaders/covers/Ring.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-ripple-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=RippleWipe&poster=%2Fshaders%2Fcovers%2FRippleWipe.jpg&child=1&label=RippleWipe",
       "media": {
         "poster": "/shaders/covers/RippleWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-ripples",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Ripples&poster=%2Fshaders%2Fcovers%2FRipples.jpg&label=Ripples",
       "media": {
         "poster": "/shaders/covers/Ripples.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-rounded-rect",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=RoundedRect&poster=%2Fshaders%2Fcovers%2FRoundedRect.jpg&label=RoundedRect",
       "media": {
         "poster": "/shaders/covers/RoundedRect.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-satin",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Satin&poster=%2Fshaders%2Fcovers%2FSatin.jpg&label=Satin",
       "media": {
         "poster": "/shaders/covers/Satin.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-saturation",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Saturation&poster=%2Fshaders%2Fcovers%2FSaturation.jpg&child=1&label=Saturation",
       "media": {
         "poster": "/shaders/covers/Saturation.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-scratches",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Scratches&poster=%2Fshaders%2Fcovers%2FScratches.jpg&label=Scratches",
       "media": {
         "poster": "/shaders/covers/Scratches.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-sharpness",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Sharpness&poster=%2Fshaders%2Fcovers%2FSharpness.jpg&child=1&label=Sharpness",
       "media": {
         "poster": "/shaders/covers/Sharpness.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-shatter",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Shatter&poster=%2Fshaders%2Fcovers%2FShatter.jpg&child=1&label=Shatter",
       "media": {
         "poster": "/shaders/covers/Shatter.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-simplex-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SimplexNoise&poster=%2Fshaders%2Fcovers%2FSimplexNoise.jpg&label=SimplexNoise",
       "media": {
         "poster": "/shaders/covers/SimplexNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-sine-wave",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SineWave&poster=%2Fshaders%2Fcovers%2FSineWave.jpg&label=SineWave",
       "media": {
         "poster": "/shaders/covers/SineWave.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-slice-wipe",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SliceWipe&poster=%2Fshaders%2Fcovers%2FSliceWipe.jpg&child=1&label=SliceWipe",
       "media": {
         "poster": "/shaders/covers/SliceWipe.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-smoke",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Smoke&poster=%2Fshaders%2Fcovers%2FSmoke.jpg&label=Smoke",
       "media": {
         "poster": "/shaders/covers/Smoke.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-smoke-fill",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SmokeFill&poster=%2Fshaders%2Fcovers%2FSmokeFill.jpg&label=SmokeFill",
       "media": {
         "poster": "/shaders/covers/SmokeFill.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-smoke-flow",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SmokeFlow&poster=%2Fshaders%2Fcovers%2FSmokeFlow.jpg&label=SmokeFlow",
       "media": {
         "poster": "/shaders/covers/SmokeFlow.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-solarize",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Solarize&poster=%2Fshaders%2Fcovers%2FSolarize.jpg&child=1&label=Solarize",
       "media": {
         "poster": "/shaders/covers/Solarize.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-solid-color",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SolidColor&poster=%2Fshaders%2Fcovers%2FSolidColor.jpg&label=SolidColor",
       "media": {
         "poster": "/shaders/covers/SolidColor.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-sparkle",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Sparkle&poster=%2Fshaders%2Fcovers%2FSparkle.jpg&child=1&label=Sparkle",
       "media": {
         "poster": "/shaders/covers/Sparkle.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-spherize",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Spherize&poster=%2Fshaders%2Fcovers%2FSpherize.jpg&child=1&label=Spherize",
       "media": {
         "poster": "/shaders/covers/Spherize.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-spiral",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Spiral&poster=%2Fshaders%2Fcovers%2FSpiral.jpg&label=Spiral",
       "media": {
         "poster": "/shaders/covers/Spiral.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-star",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Star&poster=%2Fshaders%2Fcovers%2FStar.jpg&label=Star",
       "media": {
         "poster": "/shaders/covers/Star.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-stone",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Stone&poster=%2Fshaders%2Fcovers%2FStone.jpg&child=1&label=Stone",
       "media": {
         "poster": "/shaders/covers/Stone.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-strands",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Strands&poster=%2Fshaders%2Fcovers%2FStrands.jpg&label=Strands",
       "media": {
         "poster": "/shaders/covers/Strands.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-stretch",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Stretch&poster=%2Fshaders%2Fcovers%2FStretch.jpg&child=1&label=Stretch",
       "media": {
         "poster": "/shaders/covers/Stretch.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-stripes",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Stripes&poster=%2Fshaders%2Fcovers%2FStripes.jpg&label=Stripes",
       "media": {
         "poster": "/shaders/covers/Stripes.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-studio-background",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=StudioBackground&poster=%2Fshaders%2Fcovers%2FStudioBackground.jpg&label=StudioBackground",
       "media": {
         "poster": "/shaders/covers/StudioBackground.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-sun-burst",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=SunBurst&poster=%2Fshaders%2Fcovers%2FSunBurst.jpg&label=SunBurst",
       "media": {
         "poster": "/shaders/covers/SunBurst.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-surface3-d",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Surface3D&poster=%2Fshaders%2Fcovers%2FSurface3D.jpg&child=1&label=Surface3D",
       "media": {
         "poster": "/shaders/covers/Surface3D.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-swirl",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Swirl&poster=%2Fshaders%2Fcovers%2FSwirl.jpg&label=Swirl",
       "media": {
         "poster": "/shaders/covers/Swirl.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-teardrop",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Teardrop&poster=%2Fshaders%2Fcovers%2FTeardrop.jpg&label=Teardrop",
       "media": {
         "poster": "/shaders/covers/Teardrop.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-text",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Text&poster=%2Fshaders%2Fcovers%2FText.jpg&label=Text",
       "media": {
         "poster": "/shaders/covers/Text.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-thin-film",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ThinFilm&poster=%2Fshaders%2Fcovers%2FThinFilm.jpg&label=ThinFilm",
       "media": {
         "poster": "/shaders/covers/ThinFilm.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-tilt-shift",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=TiltShift&poster=%2Fshaders%2Fcovers%2FTiltShift.jpg&child=1&label=TiltShift",
       "media": {
         "poster": "/shaders/covers/TiltShift.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-time-trail",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=TimeTrail&poster=%2Fshaders%2Fcovers%2FTimeTrail.jpg&child=1&label=TimeTrail",
       "media": {
         "poster": "/shaders/covers/TimeTrail.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-tint",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Tint&poster=%2Fshaders%2Fcovers%2FTint.jpg&child=1&label=Tint",
       "media": {
         "poster": "/shaders/covers/Tint.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-trapezoid",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Trapezoid&poster=%2Fshaders%2Fcovers%2FTrapezoid.jpg&label=Trapezoid",
       "media": {
         "poster": "/shaders/covers/Trapezoid.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-triangular-grid",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=TriangularGrid&poster=%2Fshaders%2Fcovers%2FTriangularGrid.jpg&label=TriangularGrid",
       "media": {
         "poster": "/shaders/covers/TriangularGrid.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-tritone",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Tritone&poster=%2Fshaders%2Fcovers%2FTritone.jpg&child=1&label=Tritone",
       "media": {
         "poster": "/shaders/covers/Tritone.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-truchet",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Truchet&poster=%2Fshaders%2Fcovers%2FTruchet.jpg&label=Truchet",
       "media": {
         "poster": "/shaders/covers/Truchet.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-twirl",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Twirl&poster=%2Fshaders%2Fcovers%2FTwirl.jpg&child=1&label=Twirl",
       "media": {
         "poster": "/shaders/covers/Twirl.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-vhs",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=VHS&poster=%2Fshaders%2Fcovers%2FVHS.jpg&child=1&label=VHS",
       "media": {
         "poster": "/shaders/covers/VHS.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-venetian-blinds",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=VenetianBlinds&poster=%2Fshaders%2Fcovers%2FVenetianBlinds.jpg&child=1&label=VenetianBlinds",
       "media": {
         "poster": "/shaders/covers/VenetianBlinds.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-vesica",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Vesica&poster=%2Fshaders%2Fcovers%2FVesica.jpg&label=Vesica",
       "media": {
         "poster": "/shaders/covers/Vesica.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-vibrance",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Vibrance&poster=%2Fshaders%2Fcovers%2FVibrance.jpg&child=1&label=Vibrance",
       "media": {
         "poster": "/shaders/covers/Vibrance.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-video-texture",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=VideoTexture&poster=%2Fshaders%2Fcovers%2FVideoTexture.jpg&label=VideoTexture",
       "media": {
         "poster": "/shaders/covers/VideoTexture.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-vignette",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Vignette&poster=%2Fshaders%2Fcovers%2FVignette.jpg&child=1&label=Vignette",
       "media": {
         "poster": "/shaders/covers/Vignette.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-voronoi",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Voronoi&poster=%2Fshaders%2Fcovers%2FVoronoi.jpg&label=Voronoi",
       "media": {
         "poster": "/shaders/covers/Voronoi.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-voxels",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Voxels&poster=%2Fshaders%2Fcovers%2FVoxels.jpg&label=Voxels",
       "media": {
         "poster": "/shaders/covers/Voxels.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-water",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Water&poster=%2Fshaders%2Fcovers%2FWater.jpg&label=Water",
       "media": {
         "poster": "/shaders/covers/Water.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-watercolor",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Watercolor&poster=%2Fshaders%2Fcovers%2FWatercolor.jpg&child=1&label=Watercolor",
       "media": {
         "poster": "/shaders/covers/Watercolor.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-wave-distortion",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=WaveDistortion&poster=%2Fshaders%2Fcovers%2FWaveDistortion.jpg&child=1&label=WaveDistortion",
       "media": {
         "poster": "/shaders/covers/WaveDistortion.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-waveform",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Waveform&poster=%2Fshaders%2Fcovers%2FWaveform.jpg&label=Waveform",
       "media": {
         "poster": "/shaders/covers/Waveform.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-wavelet-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=WaveletNoise&poster=%2Fshaders%2Fcovers%2FWaveletNoise.jpg&label=WaveletNoise",
       "media": {
         "poster": "/shaders/covers/WaveletNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-weave",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Weave&poster=%2Fshaders%2Fcovers%2FWeave.jpg&label=Weave",
       "media": {
         "poster": "/shaders/covers/Weave.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-webcam-texture",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=WebcamTexture&poster=%2Fshaders%2Fcovers%2FWebcamTexture.jpg&label=WebcamTexture",
       "media": {
         "poster": "/shaders/covers/WebcamTexture.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-wool",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=Wool&poster=%2Fshaders%2Fcovers%2FWool.jpg&child=1&label=Wool",
       "media": {
         "poster": "/shaders/covers/Wool.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-worley-noise",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=WorleyNoise&poster=%2Fshaders%2Fcovers%2FWorleyNoise.jpg&label=WorleyNoise",
       "media": {
         "poster": "/shaders/covers/WorleyNoise.jpg",
-        "label": "Shaders Official Component Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-zoom-blur",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?component=ZoomBlur&poster=%2Fshaders%2Fcovers%2FZoomBlur.jpg&child=1&label=ZoomBlur",
       "media": {
         "poster": "/shaders/covers/ZoomBlur.jpg",
-        "label": "Shaders Official Component Cover"
-      }
-    },
-    {
-      "id": "sh-demo-chroma-flow",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/ChromaFlow.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-liquid-metal",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/LiquidMetal.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-holographic",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/Holographic.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-kaleidoscope",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/Kaleidoscope.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-nebula",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/Nebula.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-neon",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/Neon.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-reaction-diffusion",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/ReactionDiffusion.jpg",
-        "label": "Shaders Official Demo Cover"
-      }
-    },
-    {
-      "id": "sh-demo-voronoi",
-      "project": "shaders",
-      "kind": "media-image",
-      "status": "ready",
-      "media": {
-        "poster": "/shaders/covers/Voronoi.jpg",
-        "label": "Shaders Official Demo Cover"
+        "label": "Shaders Live WebGPU Component"
       }
     },
     {
       "id": "sh-showcase",
       "project": "shaders",
-      "kind": "media-image",
+      "kind": "html-live",
       "status": "ready",
+      "entry": "/shaders/live.html?layers=ChromaFlow%2CHolographic%2CNebula&poster=%2Fshaders%2Fshowcase-cover.jpg&label=Shaders+Stack",
       "media": {
         "poster": "/shaders/showcase-cover.jpg",
-        "label": "Shaders Official Demo Cover"
+        "label": "Shaders Live WebGPU Showcase"
+      }
+    },
+    {
+      "id": "sh-demo-chroma-flow",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=ChromaFlow&poster=%2Fshaders%2Fcovers%2FChromaFlow.jpg&label=ChromaFlow+%E2%80%94+Liquid+Color",
+      "media": {
+        "poster": "/shaders/covers/ChromaFlow.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-liquid-metal",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=LiquidMetal&poster=%2Fshaders%2Fcovers%2FLiquidMetal.jpg&label=LiquidMetal+%E2%80%94+Chrome+Bloom",
+      "media": {
+        "poster": "/shaders/covers/LiquidMetal.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-holographic",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=Holographic&poster=%2Fshaders%2Fcovers%2FHolographic.jpg&label=Holographic+%E2%80%94+Iridescent+Foil",
+      "media": {
+        "poster": "/shaders/covers/Holographic.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-plasma",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=Plasma&poster=%2Fshaders%2Fcovers%2FPlasma.jpg&label=Plasma+%E2%80%94+Violet+Storm",
+      "media": {
+        "poster": "/shaders/covers/Plasma.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-particle-field",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=ParticleField&poster=%2Fshaders%2Fcovers%2FParticleField.jpg&child=1&label=ParticleField+%E2%80%94+Neon+Dust",
+      "media": {
+        "poster": "/shaders/covers/ParticleField.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-isometric-cubes",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=IsometricCubes&poster=%2Fshaders%2Fcovers%2FIsometricCubes.jpg&label=IsometricCubes+%E2%80%94+Chromatic+Grid",
+      "media": {
+        "poster": "/shaders/covers/IsometricCubes.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-reaction-diffusion",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=ReactionDiffusion&poster=%2Fshaders%2Fcovers%2FReactionDiffusion.jpg&label=ReactionDiffusion+%E2%80%94+Living+Cells",
+      "media": {
+        "poster": "/shaders/covers/ReactionDiffusion.jpg",
+        "label": "Shaders Live WebGPU Demo"
+      }
+    },
+    {
+      "id": "sh-demo-kaleidoscope",
+      "project": "shaders",
+      "kind": "html-live",
+      "status": "ready",
+      "entry": "/shaders/live.html?component=Kaleidoscope&poster=%2Fshaders%2Fcovers%2FKaleidoscope.jpg&child=1&label=Kaleidoscope+%E2%80%94+Fractal+Bloom",
+      "media": {
+        "poster": "/shaders/covers/Kaleidoscope.jpg",
+        "label": "Shaders Live WebGPU Demo"
       }
     }
   ]

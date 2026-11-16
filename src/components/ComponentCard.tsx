@@ -32,7 +32,7 @@ export default function ComponentCard({
       : previewRecord?.kind === 'embed'
         ? 'Live Demo'
         : previewRecord?.kind === 'html-live'
-        ? 'HTML Live'
+        ? (component.project === 'shaders' ? 'WebGPU' : 'HTML Live')
         : previewRecord?.kind === 'js-demo'
           ? 'JS Live'
           : previewRecord?.kind === 'media-video'

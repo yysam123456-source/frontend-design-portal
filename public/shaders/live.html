@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shaders — Live Preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #050816; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff; }
+    .stage { position: relative; width: 100%; height: 100%; min-height: 180px; overflow: hidden; background: #050816; }
+    .poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .92; animation: poster-drift 20s ease-in-out infinite alternate; will-change: transform; }
+    @keyframes poster-drift { from { transform: scale(1.02) translate3d(-1%, 0, 0); } to { transform: scale(1.08) translate3d(1%, -1%, 0); } }
+    @media (prefers-reduced-motion: reduce) { .poster { animation: none; } }
+    canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: transparent; }
+    .shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(2,6,18,.20), rgba(2,6,18,.55)); }
+    .meta { position: absolute; left: 14px; bottom: 12px; right: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; pointer-events: none; }
+    .name { display: inline-flex; align-items: center; gap: 7px; min-width: 0; padding: 6px 9px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(2,8,22,.58); backdrop-filter: blur(8px); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: #67e8f9; box-shadow: 0 0 12px #22d3ee; flex: none; }
+    .hint { padding: 5px 8px; border-radius: 999px; background: rgba(2,8,22,.48); color: rgba(226,239,255,.68); font-size: 9px; letter-spacing: .08em; white-space: nowrap; }
+    .status { position: absolute; top: 12px; right: 12px; padding: 5px 8px; border: 1px solid rgba(103,232,249,.35); border-radius: 999px; background: rgba(2,8,22,.52); color: #a5f3fc; font-size: 9px; letter-spacing: .12em; }
+    .status.is-fallback { color: #fda4af; border-color: rgba(253,164,175,.35); }
+  </style>
+</head>
+<body>
+  <main class="stage" id="stage">
+    <img class="poster" id="poster" alt="" />
+    <canvas id="canvas" aria-label="Live shader preview"></canvas>
+    <div class="shade"></div>
+    <div class="status" id="status">LIVE</div>
+    <div class="meta">
+      <span class="name"><span class="dot"></span><span id="label">SHADERS</span></span>
+      <span class="hint">MOVE POINTER</span>
+    </div>
+  </main>
+  <script type="module">
+    const params = new URLSearchParams(location.search)
+    const component = params.get('component') || 'Aurora'
+    const layerParam = params.get('layers') || ''
+    const layerTypes = layerParam.split(',').map((item) => item.trim()).filter(Boolean)
+    const title = params.get('label') || layerTypes.join(' + ') || component
+    const poster = params.get('poster') || `/shaders/covers/${component}.jpg`
+    const child = params.get('child') === '1'
+    const label = document.getElementById('label')
+    const status = document.getElementById('status')
+    const posterEl = document.getElementById('poster')
+    const canvas = document.getElementById('canvas')
+    label.textContent = title
+    posterEl.src = poster
+    posterEl.onerror = () => { posterEl.style.display = 'none' }
+    let instance = null
+    async function canvasHasVisibleFrame() {
+      try {
+        const bitmap = await createImageBitmap(canvas)
+        const probe = document.createElement('canvas')
+        probe.width = 4
+        probe.height = 4
+        const ctx = probe.getContext('2d', { willReadFrequently: true })
+        ctx.drawImage(bitmap, 0, 0, 4, 4)
+        const data = ctx.getImageData(0, 0, 4, 4).data
+        let visible = 0
+        let variation = 0
+        for (let i = 0; i < data.length; i += 4) {
+          if (data[i + 3] > 12) visible += 1
+          const max = Math.max(data[i], data[i + 1], data[i + 2])
+          const min = Math.min(data[i], data[i + 1], data[i + 2])
+          if (max - min > 4) variation += 1
+        }
+        bitmap.close?.()
+        return visible > 0 && variation > 0
+      } catch {
+        return false
+      }
+    }
+    try {
+      const runtime = await import('/shaders/runtime/shaders.js')
+      if (!runtime.isWebGPUSupported()) {
+        status.style.display = 'none'
+        canvas.style.display = 'none'
+      } else {
+        const adapter = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' })
+        const info = adapter?.info
+        const software = Boolean(adapter?.isFallbackAdapter) || /swiftshader|llvmpipe|software/i.test(`${info?.description || ''} ${info?.vendor || ''}`)
+        if (!adapter || software) {
+          status.style.display = 'none'
+          canvas.style.display = 'none'
+          throw new Error('software-gpu')
+        }
+        const layers = []
+        if (child) {
+          layers.push({ type: 'LinearGradient', props: { colorA: '#081120', colorB: '#273449' } })
+        }
+        if (layerTypes.length) {
+          for (const type of layerTypes) layers.push({ type })
+        } else {
+          layers.push({ type: component })
+        }
+        instance = await runtime.createShader(canvas, {
+          components: layers,
+          onError: () => {
+            canvas.style.display = 'none'
+            status.style.display = 'none'
+          },
+        })
+        await new Promise((resolve) => setTimeout(resolve, 900))
+        if (!(await canvasHasVisibleFrame())) {
+          canvas.style.display = 'none'
+          status.style.display = 'none'
+        } else {
+          status.textContent = 'LIVE · WEBGPU'
+        }
+      }
+    } catch (error) {
+      status.style.display = 'none'
+      canvas.style.display = 'none'
+      // Keep the preview decorative and quiet outside debug mode.
+      console.warn('[shaders-live]', error?.message || error)
+    }
+    addEventListener('pagehide', () => instance?.destroy?.())
+  </script>
+</body>
+</html>

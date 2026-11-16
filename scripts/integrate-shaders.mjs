@@ -27,6 +27,7 @@ const GENERATED_DIR = path.join(ROOT, 'src', 'generated')
 const ASSET_DIR = path.join(ROOT, 'public', 'shaders')
 const COVER_DIR = path.join(ASSET_DIR, 'covers')
 const PLAYGROUND = path.join(ASSET_DIR, 'playground.html')
+const CHILD_MAP = JSON.parse(fs.readFileSync(path.join(HERE, 'shaders-child-map.json'), 'utf8'))
 
 const PROJECT = 'shaders'
 const SHOWCASE_COVER = '/shaders/showcase-cover.jpg'
@@ -38,11 +39,11 @@ const CURATED_DEMOS = [
   {folder: 'ChromaFlow', title: 'ChromaFlow — Liquid Color', description: 'A velvety chromatic field that bends around the cursor. One layer, pure color motion.'},
   {folder: 'LiquidMetal', title: 'LiquidMetal — Chrome Bloom', description: 'Molten chrome folds over the shape with a reflective, high-contrast specular sweep.'},
   {folder: 'Holographic', title: 'Holographic — Iridescent Foil', description: 'Rainbow foil, glitter flake and a shifting sheen — the full holographic sticker look.'},
-  {folder: 'Kaleidoscope', title: 'Kaleidoscope — Fractal Bloom', description: 'Radial mirrored segments turn a single image into an intricate flower of glass and stone.'},
-  {folder: 'Nebula', title: 'Nebula — Deep Space', description: 'Billowing emission clouds sealed inside polished glass, with a slow stellar drift.'},
-  {folder: 'Neon', title: 'Neon — Light Ring', description: 'A photorealistic neon tube with a controlled glow falloff and a cold electric halo.'},
+  {folder: 'Plasma', title: 'Plasma — Violet Storm', description: 'Layered violet plasma folds with a slow electric shimmer and deep contrast.'},
+  {folder: 'ParticleField', title: 'ParticleField — Neon Dust', description: 'A dense field of luminous particles drifting through a dark volumetric haze.'},
+  {folder: 'IsometricCubes', title: 'IsometricCubes — Chromatic Grid', description: 'A chromatic isometric lattice of glass cubes with a candy-colored parallax.'},
   {folder: 'ReactionDiffusion', title: 'ReactionDiffusion — Living Cells', description: 'Gray-Scott chemistry grows into coral, veins and living tissue across the layer.'},
-  {folder: 'Voronoi', title: 'Voronoi — Cellular Glass', description: 'Distance-to-seed cellular geometry, colored like stained glass under pressure.'},
+  {folder: 'Kaleidoscope', title: 'Kaleidoscope — Fractal Bloom', description: 'Radial mirrored segments turn a single image into an intricate flower of glass and stone.'},
 ]
 const CATEGORY_MAP = {
   Textures: 'textures',
@@ -76,16 +77,29 @@ function kebab(value) {
 
 function parseComponent(name) {
   const source = fs.readFileSync(path.join(SHADER_SRC, name, 'index.ts'), 'utf8')
-  const displayName = (source.match(/name:\s*["']([^"']+)["']/) || [])[1] || name
-  const rawCategory = (source.match(/category:\s*["']([^"']+)["']/) || [])[1] || 'Uncategorized'
-  const description = (source.match(/description:\s*["']([^"']+)["']/) || [])[1] || `${displayName} WebGPU effect component.`
+  const definitionStart = source.indexOf('export const componentDefinition')
+  const definitionSource = definitionStart >= 0 ? source.slice(definitionStart) : source
+  const displayName = (definitionSource.match(/name:\s*["']([^"']+)["']/) || [])[1] || name
+  const rawCategory = (definitionSource.match(/category:\s*["']([^"']+)["']/) || [])[1] || 'Uncategorized'
+  const description = (definitionSource.match(/description:\s*["']([^"']+)["']/) || [])[1] || `${displayName} WebGPU effect component.`
   return {
     folder: name,
     name: displayName,
     category: CATEGORY_MAP[rawCategory] || 'textures',
     rawCategory,
     description: description.replace(/\s+/g, ' ').trim(),
+    requiresChild: CHILD_MAP[name] ?? /requiresChild:\s*true/.test(source),
   }
+}
+
+function livePreviewUrl({ component, layers, poster, child, label }) {
+  const params = new URLSearchParams()
+  if (component) params.set('component', component)
+  if (layers?.length) params.set('layers', layers.join(','))
+  if (poster) params.set('poster', poster)
+  if (child) params.set('child', '1')
+  if (label) params.set('label', label)
+  return `/shaders/live.html?${params.toString()}`
 }
 
 function componentCode(component) {
@@ -109,7 +123,7 @@ function officialEntry() {
     style: ['webgpu', 'shader', 'official-showcase', 'effects', 'showcase'],
     techStack: ['WebGPU', 'WGSL', 'React', 'Vue', 'Svelte', 'JavaScript'],
     description:
-      'A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, holographic foil, kaleidoscope, nebula, neon, reaction-diffusion and Voronoi. Aurora, CursorRipples and FilmGrain can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.',
+      'A curated tour through 200 MIT-licensed WebGPU effect components: liquid color, chrome, iridescent foil, violet plasma, neon dust, isometric glass, living cells and fractal bloom. ChromaFlow, Holographic and Nebula can be stacked on one canvas; the browser editor exports the tree to React, Vue, Svelte or JavaScript.',
     codeSnippet: {
       language: 'tsx',
       source: `import { Shader, Aurora, CursorRipples, FilmGrain } from 'shaders/react'
@@ -126,6 +140,11 @@ export function Demo() {
       dependencies: ['shaders'],
     },
     demoUrl: 'https://shaders.com/docs/components',
+    livePreviewUrl: livePreviewUrl({
+      layers: ['ChromaFlow', 'Holographic', 'Nebula'],
+      poster: SHOWCASE_COVER,
+      label: 'Shaders Stack',
+    }),
   }
 }
 
@@ -144,6 +163,12 @@ function curatedEntry(component, demo) {
       dependencies: ['shaders'],
     },
     demoUrl: `https://shaders.com/docs/components/${demo.folder.toLowerCase()}`,
+    livePreviewUrl: livePreviewUrl({
+      component: component.name,
+      poster: `/shaders/covers/${component.folder}.jpg`,
+      child: component.requiresChild,
+      label: demo.title,
+    }),
   }
 }
 
@@ -187,6 +212,12 @@ function main() {
         dependencies: ['shaders'],
       },
       demoUrl: `https://shaders.com/docs/components/${component.name.toLowerCase()}`,
+      livePreviewUrl: livePreviewUrl({
+        component: component.name,
+        poster: cover,
+        child: component.requiresChild,
+        label: component.name,
+      }),
     }
     entries.push(entry)
     summaries.push({
@@ -199,6 +230,7 @@ function main() {
       description: entry.description,
       language: 'tsx',
       previewUrl: cover,
+      livePreviewUrl: entry.livePreviewUrl,
       tags: ['webgpu', 'shader', component.category, 'mit'],
     })
   }
@@ -214,6 +246,7 @@ function main() {
     description: official.description,
     language: 'tsx',
     previewUrl: SHOWCASE_COVER,
+    livePreviewUrl: official.livePreviewUrl,
     tags: ['webgpu', 'shader', 'official-showcase', 'effects', 'mit'],
   })
   for (const entry of curated) {
@@ -227,6 +260,7 @@ function main() {
       description: entry.description,
       language: 'tsx',
       previewUrl: `/shaders/covers/${curatedCover(entry.id)}`,
+      livePreviewUrl: entry.livePreviewUrl,
       tags: ['webgpu', 'shader', 'official-demo', 'mit'],
     })
   }
@@ -250,11 +284,17 @@ function main() {
     manifest.records.push({
       id: `sh-${kebab(component.name)}`,
       project: PROJECT,
-      kind: 'media-image',
+      kind: 'html-live',
       status: 'ready',
+      entry: livePreviewUrl({
+        component: component.name,
+        poster: `/shaders/covers/${component.folder}.jpg`,
+        child: component.requiresChild,
+        label: component.name,
+      }),
       media: {
         poster: `/shaders/covers/${component.folder}.jpg`,
-        label: 'Shaders Official Component Cover',
+        label: 'Shaders Live WebGPU Component',
       },
     })
   }
@@ -262,11 +302,12 @@ function main() {
     manifest.records.push({
       id: entry.id,
       project: PROJECT,
-      kind: 'media-image',
+      kind: 'html-live',
       status: 'ready',
+      entry: entry.livePreviewUrl,
       media: {
         poster: entry.id === official.id ? SHOWCASE_COVER : `/shaders/covers/${curatedCover(entry.id)}`,
-        label: entry.id === official.id ? 'Shaders WebGPU Showcase Cover' : 'Shaders Curated Demo Cover',
+        label: entry.id === official.id ? 'Shaders Live WebGPU Showcase' : 'Shaders Live WebGPU Demo',
       },
     })
   }
@@ -290,7 +331,7 @@ export function getPreviewRecord(id: string | null | undefined): PreviewManifest
 }
 `
   fs.writeFileSync(path.join(GENERATED_DIR, 'preview-manifest.ts'), manifestTs, 'utf8')
-  console.log(`[shaders] preview manifest: ${manifest.records.length} records, ${components.length} image previews + 1 showcase cover`)
+  console.log(`[shaders] preview manifest: ${manifest.records.length} records, ${components.length + 1 + curated.length} live WebGPU previews`)
 }
 
 main()
