@@ -660,16 +660,16 @@
 .trail-hud{
   position:absolute;
   left:calc(46 * var(--u));
-  bottom:calc(196 * var(--u));
-  width:calc(310 * var(--u));
+  bottom:calc(188 * var(--u));
+  width:calc(356 * var(--u));
   z-index:6;
   pointer-events:none;
   color:#e8eddc;
-  padding:calc(11 * var(--u)) calc(12 * var(--u)) calc(10 * var(--u));
-  background:linear-gradient(90deg, rgba(17,25,12,.52) 0%, rgba(17,25,12,.20) 58%, rgba(17,25,12,0) 100%);
-  border-left:1px solid rgba(225,236,206,.18);
-  backdrop-filter:blur(5px);
-  -webkit-backdrop-filter:blur(5px);
+  padding:calc(11 * var(--u)) calc(12 * var(--u)) calc(9 * var(--u));
+  background:linear-gradient(90deg, rgba(17,25,12,.58) 0%, rgba(17,25,12,.24) 66%, rgba(17,25,12,0) 100%);
+  border-left:1px solid rgba(225,236,206,.20);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
   opacity:0;
   transform:translateY(calc(7 * var(--u)));
   transition:opacity 1.15s ease, transform 1.15s ease;
@@ -679,19 +679,43 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
 .th-head{ display:flex; align-items:baseline; justify-content:space-between; gap:calc(12 * var(--u)); border-bottom:1px solid rgba(225,236,206,.22); padding-bottom:calc(7 * var(--u)); }
 .th-kicker{ font-size:calc(9.5 * var(--u)); letter-spacing:calc(2.2 * var(--u)); text-transform:uppercase; color:rgba(232,237,220,.64); }
 .th-count{ font-size:calc(23 * var(--u)); line-height:1; letter-spacing:calc(1 * var(--u)); font-weight:300; color:#ffe1ae; font-variant-numeric:tabular-nums; }
-.th-stages{ display:flex; flex-wrap:wrap; gap:calc(10 * var(--u)); margin-top:calc(9 * var(--u)); font-size:calc(10.5 * var(--u)); letter-spacing:calc(.9 * var(--u)); text-transform:uppercase; color:rgba(232,237,220,.46); }
+.th-chapter{ margin-top:calc(9 * var(--u)); font-size:calc(13 * var(--u)); line-height:calc(17 * var(--u)); letter-spacing:calc(1.25 * var(--u)); text-transform:uppercase; color:rgba(255,237,205,.92); }
+.th-chapter em{ font-style:normal; font-size:calc(9.5 * var(--u)); letter-spacing:calc(1.6 * var(--u)); color:rgba(232,237,220,.48); margin-left:calc(7 * var(--u)); }
+.th-stages{ display:flex; flex-wrap:wrap; gap:calc(9 * var(--u)); margin-top:calc(8 * var(--u)); font-size:calc(9.5 * var(--u)); letter-spacing:calc(.9 * var(--u)); text-transform:uppercase; color:rgba(232,237,220,.42); }
 .th-stages span{ display:flex; align-items:center; gap:calc(5 * var(--u)); transition:color .6s ease; }
 .th-stages i{ width:calc(5 * var(--u)); height:calc(5 * var(--u)); border-radius:50%; background:rgba(197,214,176,.30); box-shadow:0 0 calc(8 * var(--u)) rgba(197,214,176,0); transition:background .6s ease, box-shadow .6s ease, transform .6s ease; }
 .th-stages .is-on{ color:rgba(255,225,174,.94); }
 .th-stages .is-on i{ background:#ffd49a; transform:scale(1.5); box-shadow:0 0 calc(11 * var(--u)) rgba(255,196,120,.75); }
-.th-hint.is-complete{ color:rgba(255,225,174,.82); }
-.th-hint{ margin-top:calc(8 * var(--u)); font-size:calc(10.5 * var(--u)); line-height:calc(15 * var(--u)); letter-spacing:calc(.4 * var(--u)); color:rgba(232,237,220,.52); width:calc(270 * var(--u)); }
+.th-hint{ margin-top:calc(7 * var(--u)); font-size:calc(10 * var(--u)); line-height:calc(14.5 * var(--u)); letter-spacing:calc(.35 * var(--u)); color:rgba(232,237,220,.56); width:calc(320 * var(--u)); }
+.th-hint.is-complete{ color:rgba(255,225,174,.86); }
+.th-taxa{ margin-top:calc(8 * var(--u)); padding-top:calc(7 * var(--u)); border-top:1px solid rgba(225,236,206,.14); display:grid; gap:calc(4 * var(--u)); font-size:calc(9.5 * var(--u)); letter-spacing:calc(.55 * var(--u)); }
+.th-taxon{ display:flex; align-items:center; flex-wrap:wrap; gap:calc(4 * var(--u)) calc(7 * var(--u)); }
+.th-label{ width:calc(36 * var(--u)); color:rgba(232,237,220,.34); text-transform:uppercase; letter-spacing:calc(1.25 * var(--u)); font-size:calc(8.5 * var(--u)); }
+.th-taxon span[data-species], .th-taxon span[data-fauna]{ color:rgba(232,237,220,.27); transition:color .7s ease, text-shadow .7s ease; }
+.th-taxon span[data-species]::before, .th-taxon span[data-fauna]::before{
+  content:''; display:inline-block; width:calc(4 * var(--u)); height:calc(4 * var(--u));
+  border-radius:50%; margin-right:calc(3 * var(--u)); vertical-align:middle;
+  background:rgba(232,237,220,.20); transition:background .7s ease, box-shadow .7s ease;
+}
+.th-taxon span[data-species="0"]::before{ background:rgba(255,252,235,.72); }
+.th-taxon span[data-species="1"]::before{ background:rgba(181,165,255,.82); }
+.th-taxon span[data-species="2"]::before{ background:rgba(255,204,78,.88); }
+.th-taxon span[data-species="3"]::before{ background:rgba(205,143,236,.88); }
+.th-taxon span[data-fauna="0"]::before{ background:rgba(241,197,68,.88); }
+.th-taxon span[data-fauna="1"]::before{ background:rgba(239,155,66,.88); }
+.th-taxon span[data-fauna="2"]::before{ background:rgba(217,71,50,.88); }
+.th-taxon span[data-fauna="3"]::before{ background:rgba(79,174,157,.88); }
+.th-taxon .is-on{ color:rgba(255,225,174,.94); text-shadow:0 0 calc(10 * var(--u)) rgba(255,196,120,.42); }
+.th-taxon .is-on::before{ box-shadow:0 0 calc(7 * var(--u)) currentColor; }
+.th-sight{ display:flex; align-items:baseline; gap:calc(5 * var(--u)); margin-top:calc(7 * var(--u)); font-size:calc(8.5 * var(--u)); letter-spacing:calc(1.2 * var(--u)); text-transform:uppercase; color:rgba(232,237,220,.38); }
+.th-sight b{ font-size:calc(16 * var(--u)); line-height:1; font-weight:300; color:#ffe1ae; letter-spacing:calc(.8 * var(--u)); }
 @media (max-width:760px){
-  .trail-hud{ left:calc(34 * var(--u)); bottom:calc(150 * var(--u)); width:calc(240 * var(--u)); }
+  .trail-hud{ left:calc(34 * var(--u)); bottom:calc(142 * var(--u)); width:calc(256 * var(--u)); }
   .th-hint{ display:none; }
+  .th-taxa{ display:none; }
   .th-count{ font-size:calc(20 * var(--u)); }
-  .th-stages{ gap:calc(9 * var(--u)); font-size:calc(9.5 * var(--u)); }
-  .th-hint{ display:none; }
+  .th-chapter{ font-size:calc(11.5 * var(--u)); }
+  .th-stages{ gap:calc(8 * var(--u)); font-size:calc(9 * var(--u)); }
 }
 </style>
 </head>
@@ -837,6 +861,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
         <span class="th-kicker">Rewilding trail · field 08</span>
         <span class="th-count" id="trail-count">000</span>
       </div>
+      <div class="th-chapter" id="trail-chapter">00 / Dormant <em>a living archive</em></div>
       <div class="th-stages" role="list" aria-label="Ecological succession">
         <span data-eco="spore"><i></i>Spores</span>
         <span data-eco="moss"><i></i>Moss</span>
@@ -844,7 +869,12 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
         <span data-eco="bloom"><i></i>Bloom</span>
         <span data-eco="seed"><i></i>Seed</span>
       </div>
-      <p class="th-hint">Move across the moss. Every pass leaves a succession.</p>
+      <p class="th-hint" id="trail-hint">Move across the moss. Every pass leaves a succession.</p>
+      <div class="th-taxa">
+        <div class="th-taxon"><span class="th-label">Flora</span><span data-species="0">Daisy</span><span data-species="1">Bellflower</span><span data-species="2">Buttercup</span><span data-species="3">Lupine</span></div>
+        <div class="th-taxon"><span class="th-label">Fauna</span><span data-fauna="0">Bee</span><span data-fauna="1">Butterfly</span><span data-fauna="2">Ladybug</span><span data-fauna="3">Dragonfly</span></div>
+      </div>
+      <div class="th-sight"><span>Species observed</span><b id="trail-sight">00</b><span>/08</span></div>
     </div>
 
   </div>
@@ -2306,31 +2336,87 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
   var flowerTex = null;
   function makeFlowerTexture() {
     if (flowerTex) return flowerTex;
-    /* A spray, not a bloom. One five-petal flower at this size renders as a
-       little asterisk; the reference's whites are clusters of florets, so
-       the texture carries the whole cluster and each instance is one spray. */
-    var c = document.createElement('canvas'); c.width = c.height = 64;
+    /* Four species in one 4x64 atlas. The atlas keeps the draw call at one
+       for the whole meadow, while the per-instance iSpecies picks the cell:
+       daisy, bellflower, buttercup, lupine. */
+    var c = document.createElement('canvas');
+    c.width = 256; c.height = 64;
     var g = c.getContext('2d');
-    var FLORETS = [
-      [32, 22, 7.4], [22, 33, 6.0], [42, 33, 6.2], [27, 44, 5.0],
-      [39, 45, 5.4], [32, 33, 4.4], [46, 22, 4.2], [18, 22, 4.0]
-    ];
-    for (var f = 0; f < FLORETS.length; f++) {
-      var cx = FLORETS[f][0], cy = FLORETS[f][1], r = FLORETS[f][2];
-      g.save(); g.translate(cx, cy); g.rotate(f * 1.31);
-      for (var p = 0; p < 5; p++) {
-        g.save(); g.rotate((p / 5) * TAU);
-        g.fillStyle = 'rgba(255,255,251,' + (0.72 + 0.28 * (r / 7.4)) + ')';
-        g.beginPath(); g.ellipse(0, -r * 0.55, r * 0.34, r * 0.55, 0, 0, TAU); g.fill();
-        g.restore();
+    g.clearRect(0, 0, 256, 64);
+    function petal(g2, cx, cy, r, fill, n) {
+      g2.fillStyle = fill;
+      for (var i = 0; i < n; i++) {
+        g2.save(); g2.translate(cx, cy); g2.rotate((i / n) * TAU);
+        g2.beginPath(); g2.ellipse(0, -r * 0.58, r * 0.30, r * 0.58, 0, 0, TAU); g2.fill();
+        g2.restore();
       }
-      g.fillStyle = '#f0e7bd';
-      g.beginPath(); g.arc(0, 0, r * 0.24, 0, TAU); g.fill();
+      g2.fillStyle = '#f5e8b2';
+      g2.beginPath(); g2.arc(cx, cy, r * 0.20, 0, TAU); g2.fill();
+    }
+
+    /* 0 — white daisy: a loose cluster of five-petal florets */
+    g.save(); g.translate(0, 0);
+    petal(g, 32, 22, 7.6, 'rgba(255,255,250,.98)', 5);
+    petal(g, 21, 32, 6.2, 'rgba(255,255,247,.95)', 5);
+    petal(g, 42, 33, 6.4, 'rgba(255,252,240,.95)', 5);
+    petal(g, 28, 44, 5.3, 'rgba(255,255,250,.92)', 5);
+    petal(g, 40, 45, 5.6, 'rgba(255,250,238,.90)', 5);
+    petal(g, 46, 20, 4.8, 'rgba(255,255,250,.88)', 5);
+    g.restore();
+
+    /* 1 — bellflower: three nodding periwinkle bells on thin stems */
+    g.save(); g.translate(64, 0);
+    g.strokeStyle = 'rgba(102,122,82,.9)'; g.lineWidth = 1.1;
+    g.beginPath(); g.moveTo(32, 54); g.quadraticCurveTo(30, 33, 24, 22); g.stroke();
+    g.beginPath(); g.moveTo(32, 54); g.quadraticCurveTo(32, 30, 38, 18); g.stroke();
+    g.beginPath(); g.moveTo(32, 55); g.quadraticCurveTo(42, 44, 47, 40); g.stroke();
+    var bells = [[24, 22, 1, '#aaa0ff'], [39, 18, 0.92, '#c0a8ff'], [47, 41, 0.78, '#9288ec']];
+    for (var b = 0; b < 3; b++) {
+      var bx = bells[b][0], by = bells[b][1], bs = bells[b][2], bc = bells[b][3];
+      g.save(); g.translate(bx, by); g.scale(bs, bs);
+      g.fillStyle = bc;
+      g.beginPath();
+      g.moveTo(-7, -3); g.quadraticCurveTo(-8, 8, -4, 11);
+      g.quadraticCurveTo(-1, 14, 0, 10); g.quadraticCurveTo(2, 14, 5, 11);
+      g.quadraticCurveTo(8, 8, 7, -3); g.quadraticCurveTo(0, -8, -7, -3); g.fill();
+      g.fillStyle = 'rgba(236,224,255,.88)';
+      g.beginPath(); g.ellipse(0, 5, 3.8, 2.0, 0, 0, TAU); g.fill();
       g.restore();
     }
+    g.fillStyle = 'rgba(106,132,78,.9)';
+    g.beginPath(); g.ellipse(35, 50, 8, 3.2, 0.3, 0, TAU); g.fill();
+    g.restore();
+
+    /* 2 — buttercup: five glossy golden petals around a warm centre */
+    g.save(); g.translate(128, 0);
+    petal(g, 31, 28, 11.2, 'rgba(255,203,58,.98)', 5);
+    petal(g, 20, 43, 8.0, 'rgba(255,218,88,.96)', 5);
+    petal(g, 43, 43, 8.4, 'rgba(255,195,40,.96)', 5);
+    g.fillStyle = 'rgba(255,242,174,.92)';
+    g.beginPath(); g.arc(31, 28, 3.2, 0, TAU); g.fill();
+    g.restore();
+
+    /* 3 — lupine: a vertical raceme of violet pea-flowers */
+    g.save(); g.translate(192, 0);
+    g.strokeStyle = 'rgba(87,112,69,.95)'; g.lineWidth = 1.3;
+    g.beginPath(); g.moveTo(32, 58); g.lineTo(31, 25); g.stroke();
+    var fl = [[30, 24, 5.1], [27, 31, 5.4], [34, 31, 4.6], [24, 38, 4.7],
+              [32, 39, 5.2], [38, 38, 4.4], [26, 46, 4.3], [34, 47, 4.7], [40, 46, 3.9]];
+    for (var l = 0; l < fl.length; l++) {
+      var fx = fl[l][0], fy = fl[l][1], fr = fl[l][2];
+      g.fillStyle = l % 2 ? 'rgba(170,126,222,.98)' : 'rgba(196,150,241,.96)';
+      g.beginPath(); g.ellipse(fx, fy, fr, fr * 0.78, 0.35, 0, TAU); g.fill();
+      g.fillStyle = 'rgba(246,228,255,.84)';
+      g.beginPath(); g.arc(fx + 1.4, fy - 1.2, fr * 0.30, 0, TAU); g.fill();
+    }
+    g.fillStyle = 'rgba(103,135,75,.9)';
+    g.beginPath(); g.ellipse(38, 51, 9, 3.1, -0.25, 0, TAU); g.fill();
+    g.restore();
+
     flowerTex = new THREE.CanvasTexture(c);
     if ('sRGBEncoding' in THREE) flowerTex.encoding = THREE.sRGBEncoding;
     flowerTex.minFilter = THREE.LinearMipmapLinearFilter;
+    flowerTex.magFilter = THREE.LinearFilter;
     flowerTex.generateMipmaps = true;
     return flowerTex;
   }
@@ -2343,9 +2429,11 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
         'attribute vec3 iPos;',
         'attribute vec2 iRnd;',
         'attribute float iBirth;',
+        'attribute float iSpecies;',
         'uniform float uBoxH;',
         'varying vec2 vUv; varying float vH; varying vec3 vL; varying vec3 vW;',
         'varying float vGrow; varying vec3 vTint;',
+        'varying float vSpecies;',
         'varying float vFlash;',
         'void main(){',
         '  vUv = uv;',
@@ -2353,7 +2441,10 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
         '  p += vec3(sin(uTime * 1.5 + iRnd.y * 6.28), 0.0, 0.0) * 0.020 * uWind;',
         '  vL = p;',
         '  vH = clamp(p.y / uBoxH + 0.5, 0.0, 1.0);',
-        '  vTint = mix(vec3(0.92, 0.96, 0.80), vec3(1.0, 0.68, 0.82), step(0.64, iRnd.y));',
+        /* the atlas already carries the species colour; keep the lighting
+           neutral so the four flowers stay readable as four flowers */
+        '  vTint = vec3(1.0);',
+        '  vSpecies = iSpecies;',
         /* Birth-time growth: a flower stays folded at its moss anchor until
            the pointer wakes it, then springs open with a short overshoot. */
         '  float age = max(0.0, uTime - iBirth);',
@@ -2378,10 +2469,12 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
         'uniform float uAlpha; uniform float uBoxH;',
         'varying vec2 vUv; varying float vH; varying vec3 vL; varying vec3 vW;',
         'varying float vGrow; varying vec3 vTint;',
+        'varying float vSpecies;',
         'varying float vFlash;',
         'void main(){',
         '  if (unscanned(vW, 520.0)) discard;',
-        '  vec4 t = texture2D(uMap, vUv);',
+        '  vec2 fUv = vec2((clamp(vUv.x, 0.012, 0.988) + vSpecies) * 0.25, vUv.y);',
+        '  vec4 t = texture2D(uMap, fUv);',
         '  if (t.a < 0.14 || vGrow < 0.01) discard;',
         '  vec3 col = t.rgb * t.rgb * (uKeyCol * 0.62 + uAmbCol * 0.9);',
         '  col *= vTint;',
@@ -2540,7 +2633,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
        fades to a smooth gradient — so a fern planted in the ridge's dissolve
        zone reads as one hanging in mid-air. Plant nothing out there. */
     var plantMaxX = opt.mask ? opt.mask[0] + 0.25 : 1e9;
-    var fP = [], fQ = [], fR = [], fB = [], wP = [], wR = [], wB = [];
+    var fP = [], fQ = [], fR = [], fB = [], wP = [], wR = [], wB = [], wS = [];
     var p = new THREE.Vector3(), n = new THREE.Vector3();
     var q = new THREE.Quaternion(), face = new THREE.Vector3();
     var guard, k;
@@ -2566,6 +2659,9 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
       var Lw = host[Math.floor(rng() * host.length)];
       /* clumps, not a sprinkle: pick a seed then jitter around it */
       var t0 = rng(), th0 = rng() * TAU;
+      /* one species per clump, so the meadow reads as plant communities
+         rather than as a bag of unrelated confetti */
+      var species = Math.floor(rng() * 4);
       for (var c2 = 0; c2 < 9 && k < opt.flowers; c2++) {
         var tt = clamp01(t0 + rand(-0.008, 0.008));
         var tth = th0 + rand(-0.24, 0.24);
@@ -2576,6 +2672,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
         /* A fifth of the field is already open, so the moss never reads as
            empty before the pointer arrives. The rest wait folded. */
         wB.push(rng() < 0.20 ? -10 : 9999);
+        wS.push(species);
         k++;
       }
     }
@@ -2603,6 +2700,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
       wg.setAttribute('iRnd', new THREE.InstancedBufferAttribute(new Float32Array(wR), 2));
       var birthAttr = new THREE.InstancedBufferAttribute(new Float32Array(wB), 1);
       wg.setAttribute('iBirth', birthAttr);
+      wg.setAttribute('iSpecies', new THREE.InstancedBufferAttribute(new Float32Array(wS), 1));
       wg.instanceCount = wP.length / 3;
       var fm = flowerMaterial({ uniforms: uni });
       fm.uniforms.uMap = { value: makeFlowerTexture() };
@@ -2611,7 +2709,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
       blooms.renderOrder = opt.order + 0.3;
       group.add(blooms);
       trailData = {
-        flowers: { positions: wP, birth: birthAttr.array, attr: birthAttr, count: wP.length / 3 },
+        flowers: { positions: wP, birth: birthAttr.array, attr: birthAttr, count: wP.length / 3, species: wS },
         ferns: fP.length ? { positions: fP, birth: fernBirth.array, attr: fernBirth, count: fP.length / 3 } : null
       };
     }
@@ -2649,6 +2747,180 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
     t.minFilter = THREE.LinearFilter;
     if ('sRGBEncoding' in THREE) t.encoding = THREE.sRGBEncoding;
     return t;
+  }
+
+  /* ── pollinator atlas ────────────────────────────────────────────────
+     Four small sprite species share the meadow: bee, butterfly, ladybug,
+     dragonfly. Each is drawn as a silhouette first so it survives at 20–40
+     pixels on screen; colour is the second read. */
+  var insectTexCache = {};
+  function makeInsectTexture(kind) {
+    if (insectTexCache[kind]) return insectTexCache[kind];
+    var c = document.createElement('canvas'); c.width = c.height = 64;
+    var g = c.getContext('2d');
+    g.translate(32, 32);
+    if (kind === 'bee') {
+      g.fillStyle = 'rgba(246,250,232,.34)';
+      g.save(); g.rotate(-0.55); g.beginPath(); g.ellipse(-17, -4, 15, 7, 0, 0, TAU); g.fill(); g.restore();
+      g.save(); g.rotate(0.55); g.beginPath(); g.ellipse(17, -4, 15, 7, 0, 0, TAU); g.fill(); g.restore();
+      g.fillStyle = '#f1c544';
+      g.beginPath(); g.ellipse(0, 4, 8.5, 14, 0, 0, TAU); g.fill();
+      g.strokeStyle = '#1a170c'; g.lineWidth = 3.0;
+      [-3, 3, 10].forEach(function (y) { g.beginPath(); g.moveTo(-7.6, y); g.lineTo(7.6, y); g.stroke(); });
+      g.fillStyle = '#1c180b';
+      g.beginPath(); g.arc(0, -11.5, 5.0, 0, TAU); g.fill();
+      g.strokeStyle = '#2c2610'; g.lineWidth = 1.5;
+      g.beginPath(); g.moveTo(-4, -14); g.quadraticCurveTo(-8, -22, -12, -20); g.stroke();
+      g.beginPath(); g.moveTo(4, -14); g.quadraticCurveTo(8, -22, 12, -20); g.stroke();
+      g.fillStyle = '#e7ddb1'; g.beginPath(); g.moveTo(-3, 18); g.lineTo(3, 18); g.lineTo(0, 23); g.fill();
+    } else if (kind === 'butterfly') {
+      var wing = function (sx, sy, rx, ry, rot, col) {
+        g.save(); g.translate(sx, sy); g.rotate(rot); g.fillStyle = col;
+        g.beginPath(); g.ellipse(0, 0, rx, ry, 0, 0, TAU); g.fill();
+        g.strokeStyle = 'rgba(36,24,12,.88)'; g.lineWidth = 2.2;
+        g.beginPath(); g.ellipse(0, 0, rx, ry, 0, 0, TAU); g.stroke(); g.restore();
+      };
+      wing(-14, -6, 14, 10, -0.55, '#ef9b42'); wing(14, -6, 14, 10, 0.55, '#ef9b42');
+      wing(-12, 9, 10, 8, -0.30, '#d9792f'); wing(12, 9, 10, 8, 0.30, '#d9792f');
+      g.fillStyle = 'rgba(255,240,196,.92)';
+      g.beginPath(); g.arc(-18, -8, 2.2, 0, TAU); g.fill();
+      g.beginPath(); g.arc(18, -8, 2.2, 0, TAU); g.fill();
+      g.fillStyle = '#21170d';
+      g.beginPath(); g.ellipse(0, 4, 3.2, 12, 0, 0, TAU); g.fill();
+      g.beginPath(); g.arc(0, -10, 3.4, 0, TAU); g.fill();
+      g.strokeStyle = '#2c2112'; g.lineWidth = 1.2;
+      g.beginPath(); g.moveTo(-2, -12); g.quadraticCurveTo(-8, -21, -11, -19); g.stroke();
+      g.beginPath(); g.moveTo(2, -12); g.quadraticCurveTo(8, -21, 11, -19); g.stroke();
+    } else if (kind === 'ladybug') {
+      g.fillStyle = '#251b16';
+      g.beginPath(); g.ellipse(0, -13, 7, 6, 0, 0, TAU); g.fill();
+      g.fillStyle = '#d94732';
+      g.beginPath(); g.ellipse(0, 3, 12, 16, 0, 0, TAU); g.fill();
+      g.strokeStyle = '#2b1712'; g.lineWidth = 2.4;
+      g.beginPath(); g.moveTo(0, -9); g.lineTo(0, 17); g.stroke();
+      g.fillStyle = '#241410';
+      [[-6, -4], [6, -4], [-7, 7], [7, 7], [-4, 13], [4, 13]].forEach(function (d) {
+        g.beginPath(); g.arc(d[0], d[1], 2.2, 0, TAU); g.fill();
+      });
+      g.strokeStyle = '#21130e'; g.lineWidth = 1.2;
+      g.beginPath(); g.moveTo(-5, -17); g.lineTo(-10, -24); g.stroke();
+      g.beginPath(); g.moveTo(5, -17); g.lineTo(10, -24); g.stroke();
+    } else {
+      g.fillStyle = 'rgba(213,245,236,.36)';
+      g.save(); g.rotate(-0.25); g.beginPath(); g.ellipse(-16, -5, 19, 5.2, 0, 0, TAU); g.fill(); g.restore();
+      g.save(); g.rotate(0.25); g.beginPath(); g.ellipse(16, -5, 19, 5.2, 0, 0, TAU); g.fill(); g.restore();
+      g.save(); g.rotate(-0.55); g.beginPath(); g.ellipse(-13, 7, 16, 4.2, 0, 0, TAU); g.fill(); g.restore();
+      g.save(); g.rotate(0.55); g.beginPath(); g.ellipse(13, 7, 16, 4.2, 0, 0, TAU); g.fill(); g.restore();
+      g.fillStyle = 'rgba(196,238,230,.55)'; g.lineWidth = 1;
+      g.strokeStyle = 'rgba(70,112,108,.55)';
+      [-1, 1].forEach(function (sx) {
+        for (var w = 0; w < 3; w++) { g.beginPath(); g.moveTo(0, -2 + w * 1.2); g.lineTo(30 * sx, -7 + w * 3); g.stroke(); }
+      });
+      g.fillStyle = '#4fae9d';
+      g.beginPath(); g.ellipse(0, 5, 3.0, 18, 0, 0, TAU); g.fill();
+      g.fillStyle = '#86d8c8';
+      g.beginPath(); g.arc(0, -15, 6.2, 0, TAU); g.fill();
+      g.fillStyle = '#17362f';
+      g.beginPath(); g.arc(-3, -17, 2.2, 0, TAU); g.fill();
+      g.beginPath(); g.arc(3, -17, 2.2, 0, TAU); g.fill();
+    }
+    var t = new THREE.CanvasTexture(c);
+    if ('sRGBEncoding' in THREE) t.encoding = THREE.sRGBEncoding;
+    t.minFilter = THREE.LinearFilter; t.magFilter = THREE.LinearFilter;
+    insectTexCache[kind] = t;
+    return t;
+  }
+
+  var insectSwarm = null;
+  /* Sprites, not meshes: at this size the readable signal is silhouette and
+     movement. Each pollinator owns a flower anchor and orbits it; the first
+     bloom is the cue for the whole guild to arrive. */
+  function buildInsectSwarm(host, trail, small) {
+    if (!trail || !trail.flowers || !trail.flowers.count) return null;
+    var group = new THREE.Group();
+    group.renderOrder = 6;
+    host.add(group);
+    var types = [
+      { key: 'bee',        name: 'Bee',       size: 0.086, aspect: 1.12, speed: 1.55, radius: 0.34, lift: 0.20 },
+      { key: 'butterfly',  name: 'Butterfly', size: 0.185, aspect: 1.22, speed: 0.82, radius: 0.58, lift: 0.32 },
+      { key: 'ladybug',    name: 'Ladybug',   size: 0.082, aspect: 1.00, speed: 0.44, radius: 0.20, lift: 0.12 },
+      { key: 'dragonfly',  name: 'Dragonfly', size: 0.135, aspect: 1.55, speed: 1.18, radius: 0.46, lift: 0.26 }
+    ];
+    var counts = small ? [2, 2, 1, 2] : [8, 6, 4, 4];
+    var pos = trail.flowers.positions;
+    var list = [];
+    for (var ti = 0; ti < types.length; ti++) {
+      var typ = types[ti];
+      for (var ni = 0; ni < counts[ti]; ni++) {
+        var idx = Math.floor(rng() * trail.flowers.count);
+        var base = new THREE.Vector3(pos[idx * 3], pos[idx * 3 + 1], pos[idx * 3 + 2]);
+        base.y += rand(0.28, 0.68);
+        base.x += rand(-0.24, 0.24);
+        /* bring the flight layer toward the lens so the guild is not hidden
+           behind the moss shoulder; the z offset is still small enough to
+           keep them inside the root's local air volume */
+        base.z += rand(0.24, 0.52);
+        var mat = new THREE.SpriteMaterial({
+          map: makeInsectTexture(typ.key),
+          transparent: true, depthWrite: false, depthTest: true,
+          opacity: 0, color: 0xffffff
+        });
+        var sp = new THREE.Sprite(mat);
+        sp.center.set(0.5, 0.5);
+        sp.scale.set(typ.size * typ.aspect, typ.size, 1);
+        sp.position.copy(base);
+        sp.visible = false;
+        group.add(sp);
+        list.push({
+          sprite: sp, type: ti, key: typ.key, name: typ.name,
+          base: base, pos: base.clone(),
+          phase: rng() * TAU, speed: typ.speed * rand(0.86, 1.18),
+          radius: typ.radius * rand(0.74, 1.30), lift: typ.lift * rand(0.72, 1.20),
+          threshold: 2 + list.length * 1.15, opacity: 0,
+          seen: false, spook: 0, size: typ.size, aspect: typ.aspect
+        });
+      }
+    }
+    return { group: group, list: list, types: types };
+  }
+
+  function updateInsectSwarm(dt, t) {
+    if (!insectSwarm) return;
+    var bloom = eco.bloom;
+    var m = uMouseNear.value;
+    for (var i = 0; i < insectSwarm.list.length; i++) {
+      var ins = insectSwarm.list[i];
+      var want = bloom > ins.threshold ? 1 : 0;
+      ins.opacity += (want - ins.opacity) * (1 - Math.pow(want ? 0.04 : 0.16, dt));
+      ins.sprite.material.opacity = ins.opacity;
+      ins.sprite.visible = ins.opacity > 0.015;
+      if (!want) continue;
+      if (!ins.seen) { ins.seen = true; markFauna(ins.type); }
+      var orb = t * ins.speed + ins.phase;
+      var tx = ins.base.x + Math.cos(orb) * ins.radius;
+      var ty = ins.base.y + Math.sin(orb * 1.35 + ins.phase) * ins.lift + Math.sin(t * 1.9 + ins.phase) * 0.04;
+      var tz = ins.base.z + Math.sin(orb * 0.92) * ins.radius * 0.62;
+      /* the same pointer that wakes the meadow also lifts the pollinators:
+         a hand moving through the air is a real disturbance */
+      var spook = 0;
+      if (m.x < 999) {
+        var dx = ins.pos.x - m.x, dy = ins.pos.y - m.y, dz = (ins.pos.z - m.z) * 0.35;
+        var dd = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        spook = clamp01(1 - dd / 0.58); spook *= spook;
+        if (spook > 0.01) { tx += dx * spook * 1.4; ty += Math.abs(dy) * spook * 0.8 + spook * 0.22; tz += dz * spook * 1.4; }
+      }
+      ins.spook += (spook - ins.spook) * (1 - Math.pow(0.10, dt));
+      ins.pos.x += (tx - ins.pos.x) * (1 - Math.pow(0.025, dt));
+      ins.pos.y += (ty - ins.pos.y) * (1 - Math.pow(0.025, dt));
+      ins.pos.z += (tz - ins.pos.z) * (1 - Math.pow(0.025, dt));
+      ins.sprite.position.copy(ins.pos);
+      var beat = Math.sin(t * (10.0 + ins.spook * 8.0) + ins.phase);
+      ins.sprite.scale.set(
+        ins.size * ins.aspect * (1.0 + 0.055 * beat),
+        ins.size * (1.0 + 0.085 * beat),
+        1
+      );
+    }
   }
 
   /* ================================================================== *
@@ -2697,12 +2969,13 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
 
     nearGroup = assembleRoot(nearLimbs, {
       aspect: ARCH.aspect, haze: 0.15, fog: 0.0, alpha: 1.0, order: 2,
-      blades: BLADES_NEAR, ferns: small ? 30 : 52, flowers: small ? 180 : 420,
-      fernSize: [0.22, 0.50], flowerSize: [0.068, 0.148], mainLimbs: mainCount, wire: true,
+      blades: BLADES_NEAR, ferns: small ? 30 : 52, flowers: small ? 200 : 460,
+      fernSize: [0.22, 0.50], flowerSize: [0.105, 0.230], mainLimbs: mainCount, wire: true,
       mouse: uMouseNear, mouseR: 1.20
     });
     scene.add(nearGroup);
     if (!small) bf = buildButterfly(nearGroup, nearLimbs, nearGroup.userData.uni);
+    insectSwarm = buildInsectSwarm(nearGroup, nearGroup.userData.trail, small);
 
     /* ---- far ridge: same builder, pushed back and washed into the air.
             It dissolves before it reaches the cards (local x 0.5 → 4.0) and
@@ -2713,8 +2986,8 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
       /* dimmer air than the near root's: at 0.46 of the pale tone the ridge
          lost its silhouette entirely and read as a smudge on the background */
       hazeCol: [0.150, 0.164, 0.120], hazeLift: 0.92,
-      blades: BLADES_FAR, ferns: small ? 8 : 16, flowers: small ? 48 : 104,
-      fernSize: [0.26, 0.56], flowerSize: [0.038, 0.072],
+      blades: BLADES_FAR, ferns: small ? 8 : 16, flowers: small ? 52 : 112,
+      fernSize: [0.26, 0.56], flowerSize: [0.055, 0.115],
       mask: [0.4, 3.4, 0.0, 0.42], wire: true,
       mouse: uMouseFar, mouseR: 1.4
     });
@@ -3546,8 +3819,62 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
      quick sweep catches a continuous line of blooms instead of a clump. */
   var trailHud = document.getElementById('trail-hud');
   var trailCountEl = document.getElementById('trail-count');
-  var trailHint = trailHud ? trailHud.querySelector('.th-hint') : null;
-  var eco = { spore: false, moss: false, fern: false, bloom: 0 };
+  var trailHint = document.getElementById('trail-hint');
+  var trailChapterEl = document.getElementById('trail-chapter');
+  var trailSightEl = document.getElementById('trail-sight');
+  var speciesEls = trailHud ? trailHud.querySelectorAll('[data-species]') : [];
+  var faunaEls = trailHud ? trailHud.querySelectorAll('[data-fauna]') : [];
+  var eco = {
+    spore: false, moss: false, fern: false, seed: false,
+    bloom: 0, chapter: -1, complete: false,
+    species: [false, false, false, false],
+    fauna: [false, false, false, false]
+  };
+  var STAGE_ORDER = ['spore', 'moss', 'fern', 'bloom', 'seed'];
+  var CHAPTERS = [
+    { title: '00 / Dormant',  sub: 'a living archive' },
+    { title: '01 / Spores',   sub: 'the air moves first' },
+    { title: '02 / Moss',     sub: 'water gathers' },
+    { title: '03 / Fern',     sub: 'shade makes a niche' },
+    { title: '04 / Bloom',    sub: 'the guild arrives' },
+    { title: '05 / Seed',     sub: 'the next generation' }
+  ];
+  var STAGE_HINTS = {
+    spore: 'Spores drift through the still air. Nothing has rooted yet.',
+    moss: 'Moss lifts along the wake and holds the first moisture.',
+    fern: 'Ferns uncurl into the shade, one frond at a time.',
+    bloom: 'Flowers open in species patches. Pollinators follow the colour.',
+    seed: 'Seed set. The grove keeps a copy of this season.'
+  };
+
+  function setChapter(index) {
+    if (!trailChapterEl || index <= eco.chapter) return;
+    eco.chapter = index;
+    var def = CHAPTERS[index];
+    if (!def) return;
+    trailChapterEl.innerHTML = def.title + ' <em>' + def.sub + '</em>';
+  }
+
+  function updateSightings() {
+    if (!trailSightEl) return;
+    var n = 0;
+    for (var i = 0; i < 4; i++) { if (eco.species[i]) n++; if (eco.fauna[i]) n++; }
+    trailSightEl.textContent = String(n).padStart(2, '0');
+  }
+
+  function markSpecies(i) {
+    if (i < 0 || i > 3 || eco.species[i]) return;
+    eco.species[i] = true;
+    if (speciesEls[i]) speciesEls[i].classList.add('is-on');
+    updateSightings();
+  }
+
+  function markFauna(i) {
+    if (i < 0 || i > 3 || eco.fauna[i]) return;
+    eco.fauna[i] = true;
+    if (faunaEls[i]) faunaEls[i].classList.add('is-on');
+    updateSightings();
+  }
 
   function markEco(stage, n) {
     if (!trailHud) return;
@@ -3556,7 +3883,14 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
     var node = trailHud.querySelector('[data-eco="' + stage + '"]');
     if (node) node.classList.add('is-on');
     if (trailCountEl) trailCountEl.textContent = String(eco.bloom).padStart(3, '0');
+
+    var idx = STAGE_ORDER.indexOf(stage);
+    if (idx >= 0) setChapter(idx + 1);
+    if (!eco.complete && idx >= 0 && STAGE_HINTS[stage]) trailHint.textContent = STAGE_HINTS[stage];
+
     if (trailHint && eco.spore && eco.moss && eco.fern && eco.bloom && eco.seed) {
+      eco.complete = true;
+      setChapter(5);
       trailHint.textContent = 'Succession complete. The grove remembers.';
       trailHint.classList.add('is-complete');
     }
@@ -3564,7 +3898,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
 
   /* Wake one anchor set (flowers or ferns) against the screen-space band.
      A fast sweep has to lay a continuous trail, not a clump at the last event. */
-  function wakeSet(set, band, now) {
+  function wakeSet(set, band, now, speciesOut) {
     if (!set || !set.count) return 0;
     var woke = 0;
     for (var i = 0; i < set.count; i++) {
@@ -3578,6 +3912,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
       if (d > band) continue;
       set.birth[i] = now + rand(0.02, 0.20);
       set.attr.needsUpdate = true;
+      if (speciesOut && set.species && set.species[i] !== undefined) speciesOut[set.species[i]] = 1;
       woke++;
       if (rng() < 0.30) spawnSpray(trailWorld, 1.15);
     }
@@ -3593,20 +3928,22 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
     nearGroup.updateMatrixWorld(true);
     var band = bandBoost || 0.195;
     var now = uTime.value;
-    var flowers = wakeSet(tr.flowers, band, now);
+    var speciesWoke = [0, 0, 0, 0];
+    var flowers = wakeSet(tr.flowers, band, now, speciesWoke);
     var ferns = wakeSet(tr.ferns, band * 1.12, now);
+    if (flowers || ferns) {
+      markEco('moss');
+      markEco('spore');
+      flushSpray();
+    }
+    if (ferns) markEco('fern');
     if (flowers) {
+      for (var si = 0; si < 4; si++) if (speciesWoke[si]) markSpecies(si);
       markEco('bloom', flowers);
       if (!eco.seedPending) {
         eco.seedPending = true;
         setTimeout(function () { eco.seedPending = false; markEco('seed'); }, 1100);
       }
-    }
-    if (ferns) markEco('fern');
-    if (flowers || ferns) {
-      markEco('moss');
-      markEco('spore');
-      flushSpray();
     }
     trailLast.x = ndc.x;
     trailLast.y = ndc.y;
@@ -3690,6 +4027,7 @@ body.intro-done .trail-hud{ opacity:1; transform:none; }
     }
 
     if (bf && !REDUCED) bf(dt, uTime.value);
+    if (!REDUCED) updateInsectSwarm(dt, uTime.value);
 
     for (var tw = 0; tw < trailWake.ages.length; tw++) {
       trailWake.ages[tw] = Math.max(0, trailWake.ages[tw] - dt / 2.4);

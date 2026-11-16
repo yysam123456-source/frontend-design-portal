@@ -379,11 +379,11 @@ const SHOWCASES = [
   {
     id: 'sylva-bloom',
     label: 'Sylva — Bloom Trail',
-    desc: 'Ecological succession · pointer-woken bloom',
+    desc: 'Four flora, four pollinators · a living field log',
     icon: '🌸',
     group: 'THREE.JS',
     tags: ['Nature', 'Interaction', 'Generative'],
-    keywords: ['苔藓', '花路', '生态演替', '指针', 'rewilding', 'bloom'],
+    keywords: ['苔藓', '花路', '生态演替', '传粉昆虫', '蜜蜂', '蝴蝶', '瓢虫', '蜻蜓', 'rewilding', 'bloom'],
     frame: true,
     credit: 'MengTo',
   },
