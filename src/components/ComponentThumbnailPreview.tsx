@@ -216,6 +216,14 @@ export default function ComponentThumbnailPreview({
     return () => observer.disconnect()
   }, [])
 
+  // Shaders 卡片在首页只显示封面：WebGPU 实例等到用户点击卡片、右侧抽屉打开时才创建。
+  // 一屏 9 个 iframe 同时初始化会串行占满主线程十几秒，首页一律不预先加载。
+  const isWebGpuPreview =
+    component.project === 'shaders' &&
+    previewRecord?.kind === 'html-live' &&
+    previewRecord.status === 'ready' &&
+    !!previewRecord.entry
+
   const srcDoc = useMemo(() => {
     if (loading) return ''
     if (previewRecord?.status === 'unsupported') return buildUnsupportedPreview(component, projectMeta)
@@ -249,9 +257,25 @@ export default function ComponentThumbnailPreview({
     )
   }
 
-  // Shaders components run in a dedicated live WebGPU iframe. The iframe keeps
-  // its own canvas/device isolated from the portal shell and only mounts while
-  // the card is in view.
+  // Shaders 卡片：首页只放封面，不创建任何 WebGPU iframe。
+  // 用户点击卡片打开右侧抽屉后，才在抽屉里加载真实运行界面。
+  if (isWebGpuPreview) {
+    return (
+      <div ref={containerRef} className="absolute inset-0 bg-[#050816]">
+        <img
+          src={previewRecord?.media?.poster}
+          alt={`${component.name} preview`}
+          className="absolute inset-0 h-full w-full object-cover opacity-80"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute left-2 top-2 rounded-full border border-cyan-300/25 bg-black/55 px-2 py-0.5 text-[10px] font-medium tracking-wide text-cyan-100">
+          WebGPU
+        </div>
+      </div>
+    )
+  }
+
+  // 其它项目的 html-live 是普通静态页面，卡片进入视口后再挂 iframe。
   if (previewRecord?.kind === 'html-live' && previewRecord.status === 'ready' && previewRecord.entry) {
     return (
       <div ref={containerRef} className="absolute inset-0 bg-[#050816]">
@@ -271,9 +295,6 @@ export default function ComponentThumbnailPreview({
             className="pointer-events-none absolute inset-0 h-full w-full border-0"
           />
         )}
-        <div className="pointer-events-none absolute left-2 top-2 rounded-full border border-cyan-300/25 bg-black/55 px-2 py-0.5 text-[10px] font-medium tracking-wide text-cyan-100">
-          WebGPU
-        </div>
       </div>
     )
   }
@@ -294,10 +315,19 @@ export default function ComponentThumbnailPreview({
     )
   }
 
+  // 真实 React 预览等卡片进入视口再挂载：一屏几十个预览同时跑入场动画会拖慢首屏
   if (previewRecord?.kind === 'react-generated' && previewRecord.status === 'ready') {
     return (
-      <div ref={containerRef} className="absolute inset-0">
-        <GeneratedComponentPreview component={component} compact />
+      <div ref={containerRef} className="absolute inset-0 bg-bg-secondary">
+        {isVisible ? (
+          <GeneratedComponentPreview component={component} compact />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center">
+            <span className="text-[10px] font-medium tracking-wide text-ink-subtle/40">
+              {component.name}
+            </span>
+          </div>
+        )}
       </div>
     )
   }

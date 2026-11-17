@@ -70,6 +70,9 @@ const REMOTE_ASSETS = [
   '/blocx/orbit-hero/surface.webp',
   '/blocx/orbit-hero/clouds.webp',
   '/blocx/orbit-hero/logo.webp',
+  '/blocx/storybook-hero/illustration.webp',
+  // iPartyLabs Hero 的 30 张照片是模板字符串拼接的路径，registry 与 public 里都不带
+  ...Array.from({ length: 30 }, (_, i) => `/blocx/partylabs-hero/${String(i + 1).padStart(2, '0')}.webp`),
 ]
 
 // next/font 注入的字体变量，移植后改用本地字体栈（不新增依赖、不引外部字体）
