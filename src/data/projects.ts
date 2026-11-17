@@ -162,6 +162,18 @@ export const projects: ProjectMeta[] = [
     category: 'animation',
   },
   {
+    id: 'pinui',
+    name: 'Pin UI',
+    github: 'https://github.com/shadcn-labs/Pin-UI',
+    demoBaseUrl: 'https://pinui.xyz',
+    description:
+      'A MIT-licensed library of 30 React components and 11 full-page Blocx, each rebuilt from a design pinned on Pinterest — plain React and CSS with Motion, distributed as shadcn registry files you own.',
+    accentColor: '#111111',
+    tags: ['react', 'css', 'motion', 'shadcn', 'components', 'page-blocks', 'pinterest'],
+    techStack: ['React', 'TypeScript', 'CSS', 'Motion'],
+    category: 'ui-library',
+  },
+  {
     id: 'looseleaf',
     name: 'Looseleaf',
     github: 'https://github.com/kevintngo/looseleaf',

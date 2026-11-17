@@ -1,0 +1,13 @@
+/* Pin UI Blocx — 上游用 next/font 注入字体变量，移植后在这里补上本地字体栈。 */
+:root {
+  --sbh-font: "Inter Tight", "Inter", "Segoe UI", system-ui, sans-serif;
+  --cf-font: "Inter Tight", "Inter", "Segoe UI", system-ui, sans-serif;
+  --sy-font: "Inter Tight", "Inter", "Segoe UI", system-ui, sans-serif;
+  --hsi-font: "Inter", "Segoe UI", system-ui, sans-serif;
+  --pksi-font: "Inter", "Segoe UI", system-ui, sans-serif;
+  --sp-inter: "Inter", "Segoe UI", system-ui, sans-serif;
+  --sp-bricolage: "Bricolage Grotesque", "Inter", "Segoe UI", system-ui, sans-serif;
+  --sp-urbanist: "Urbanist", "Inter", "Segoe UI", system-ui, sans-serif;
+  --oh-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-geist-sans: "Geist", "Inter", "Segoe UI", system-ui, sans-serif;
+}

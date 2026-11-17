@@ -788,10 +788,18 @@ export default function App() {
                 {visibleOfficialDemos.map((component) => {
                   const meta = projectMap.get(component.project)
                   return (
-                    <button
+                    <div
                       key={component.id}
+                      role="button"
+                      tabIndex={0}
                       onClick={() => setSelectedComponent(component.id)}
-                      className="group overflow-hidden rounded-2xl border border-border bg-bg-secondary text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-md"
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                          event.preventDefault()
+                          setSelectedComponent(component.id)
+                        }
+                      }}
+                      className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-bg-secondary text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-md"
                     >
                       <div className="relative aspect-video overflow-hidden border-b border-border bg-bg">
                         <ComponentThumbnailPreview component={component} projectMeta={meta} />
@@ -818,7 +826,7 @@ export default function App() {
                           {formatCategory(component.category)}
                         </p>
                       </div>
-                    </button>
+                    </div>
                   )
                 })}
               </div>

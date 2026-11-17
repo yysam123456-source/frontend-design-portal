@@ -1,0 +1,283 @@
+/* Layout: one viewport-locked footer. A rounded light panel (Figma: 52 from the top, 130 corners) holds the logo
+   + copyright on the left and four link columns; a giant CareMetric mark bleeds off the bottom edge.
+   Desktop uses Figma's coordinates inside a 1440-wide stage, as N × --u (fits both width and height).
+   Below 1200px it becomes a flowing layout: logo, link grid (4 → 2 columns), copyright, mark. */
+
+.cmf-page {
+  --paper: #ffffff;
+  --panel: #f1f2ef;
+  --ink: #0d2800;
+  --ink-60: rgba(13, 40, 0, 0.6);
+  --green: #0abc05;
+  --font: var(--font-geist-sans), "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* 1 Figma px; the footer frame is 1440 × 772 */
+  --u: min(calc(100vw / 1440), calc(100svh / 772));
+
+  color-scheme: light;
+  height: 100%;
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cmf-page *,
+.cmf-page *::before,
+.cmf-page *::after {
+  box-sizing: border-box;
+}
+.cmf-page {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+}
+.cmf-page {
+  min-height: 100%;
+}
+
+.cmf {
+  position: relative;
+  isolation: isolate;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  overflow: clip;
+  background: var(--paper);
+}
+
+/* ---------- panel ---------- */
+
+.cmf__panel {
+  position: absolute;
+  inset: calc(52 * var(--u)) 0 0;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: calc(130 * var(--u)) calc(130 * var(--u)) 0 0;
+  background: var(--panel);
+}
+/* The texture's deep blob (≈15% across, 60% down the image) is placed at the panel's bottom-left corner,
+   where Figma pools the darkest green; the soft top edge means no seam on tall screens. */
+.cmf__texture {
+  position: absolute;
+  left: -22%;
+  bottom: 0;
+  width: 152%;
+  height: auto;
+  max-width: none;
+  translate: 0 22%;
+  opacity: 0.59;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 22%);
+  user-select: none;
+  pointer-events: none;
+}
+.cmf__hue {
+  position: absolute;
+  inset: 0;
+  background: rgba(241, 242, 239, 0.8);
+  mix-blend-mode: hue;
+}
+
+/* ---------- stage: Figma's 1440-wide frame, centred ---------- */
+
+.cmf__stage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: calc(1440 * var(--u));
+  margin-left: calc(-720 * var(--u));
+}
+
+.cmf__brand {
+  position: absolute;
+  left: calc(98 * var(--u));
+  top: calc(137 * var(--u));
+  display: block;
+  width: calc(204 * var(--u));
+  border-radius: 6px;
+}
+.cmf__brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* columns: x 474, gap 80; rows at 0 / 39 / 72 / 105 / 138 (heading, then a 33px rhythm) */
+.cmf__cols {
+  position: absolute;
+  left: calc(474 * var(--u));
+  top: calc(137 * var(--u));
+  display: flex;
+  gap: calc(80 * var(--u));
+}
+.cmf__heading {
+  margin: 0;
+  color: var(--ink-60);
+  font: 500 calc(16 * var(--u)) / 1.2 var(--font);
+  letter-spacing: -0.02em;
+}
+.cmf__list {
+  list-style: none;
+  margin: calc(20 * var(--u)) 0 0; /* 39 − 19 (heading line box) */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(13.8 * var(--u)); /* 33 − 19.2 */
+}
+.cmf__link {
+  position: relative;
+  display: inline-block;
+  color: var(--ink);
+  font: 500 calc(16 * var(--u)) / 1.2 var(--font);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+/* quiet underline that draws from the left */
+.cmf__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cmf__link:hover {
+  color: #087805;
+}
+.cmf__link:hover::after {
+  transform: scaleX(1);
+}
+.cmf__link:focus-visible,
+.cmf__brand:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* copyright: 240 below the logo (137 + 50 + 240) */
+.cmf__copy {
+  position: absolute;
+  left: calc(98 * var(--u));
+  top: calc(427 * var(--u));
+  margin: 0;
+  color: var(--ink);
+  font: 500 calc(16 * var(--u)) / 1.2 var(--font);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* giant mark: 1440 × 354, top at 518 → 254 of it shows above the frame's bottom edge */
+.cmf__mark {
+  position: absolute;
+  left: 0;
+  bottom: calc(-100 * var(--u));
+  width: calc(1440 * var(--u));
+  height: calc(354 * var(--u));
+  overflow: visible;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+.cmf__mark-shape {
+  fill: var(--ink);
+  fill-opacity: 0.6;
+}
+
+/* ---------- below 1200px: flowing layout (Figma scaling would push link text under 13px) ---------- */
+
+@media (max-width: 1199px) {
+  .cmf__panel {
+    inset: clamp(16px, 3svh, 40px) 0 0;
+    border-radius: clamp(36px, 8vw, 80px) clamp(36px, 8vw, 80px) 0 0;
+  }
+  /* portrait panels are tall: a bigger texture so the green still pools bottom-left */
+  .cmf__texture {
+    left: -70%;
+    width: 280%;
+    translate: 0 14%;
+  }
+  .cmf__stage {
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: calc(clamp(16px, 3svh, 40px) + clamp(32px, 6svh, 64px)) clamp(24px, 6vw, 56px) 0;
+  }
+  .cmf__brand,
+  .cmf__cols,
+  .cmf__copy,
+  .cmf__mark {
+    position: relative;
+    left: auto;
+    top: auto;
+    bottom: auto;
+  }
+  .cmf__brand {
+    width: clamp(150px, 26vw, 204px);
+  }
+  /* columns sized to their content and spread across the width, so no link ever wraps */
+  .cmf__cols {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
+    gap: clamp(20px, 3.4svh, 40px) clamp(16px, 3vw, 32px);
+    margin-top: clamp(28px, 5svh, 56px);
+  }
+  .cmf__heading {
+    font-size: clamp(13px, 1.8vw, 16px);
+  }
+  .cmf__list {
+    margin-top: clamp(10px, 1.8svh, 18px);
+    gap: clamp(8px, 1.5svh, 14px);
+  }
+  .cmf__link {
+    font-size: clamp(14px, 1.9vw, 16px);
+  }
+  /* like desktop: the copyright sits apart from the links, just above the giant mark */
+  .cmf__copy {
+    margin-top: auto;
+    margin-bottom: calc(24vw + clamp(20px, 3svh, 36px));
+    padding-top: 24px;
+    font-size: clamp(13px, 1.8vw, 16px);
+  }
+  /* the mark sits on the bottom edge and bleeds off it, sized by width */
+  .cmf__mark {
+    position: absolute;
+    left: -3vw;
+    bottom: -8vw;
+    width: 128vw; /* bigger than the screen: the wordmark runs off the right edge, like the design */
+    height: auto;
+    aspect-ratio: 1440 / 354;
+  }
+}
+
+@media (max-width: 699px) {
+  .cmf__cols {
+    grid-template-columns: repeat(2, max-content);
+  }
+  .cmf__copy {
+    margin-bottom: calc(28vw + 16px);
+  }
+  .cmf__mark {
+    left: -4vw;
+    width: 150vw; /* bigger on phones; the wordmark runs off the right edge like the design */
+    bottom: -9vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmf__link,
+  .cmf__link::after {
+    transition: none;
+  }
+}

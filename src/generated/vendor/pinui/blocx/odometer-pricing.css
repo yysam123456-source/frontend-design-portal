@@ -1,0 +1,510 @@
+/* Layout: one viewport-locked stage — title + billing toggle, then three plans in a row (carousel below 1024px).
+   Every size is written as N × --u, where --u is 1px at the Figma frame and shrinks so the stage always fits the
+   viewport height. Widths stay fluid; only the vertical rhythm and type scale with --u. */
+
+.op-pricing-page {
+  --white: #ffffff;
+  --ink: #000000;
+  --ink-80: rgba(0, 0, 0, 0.8);
+  --ink-soft: #666666;
+  --blue: #008bff;
+  --blue-pill: #249cff;
+  --blue-line: #84c7ff;
+  --blue-line-2: #65b9ff;
+  --ice: #e5f3ff;
+  --ice-2: #ebf6ff;
+  --frost: #d9eeff;
+  --track: rgba(0, 0, 0, 0.05);
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  color-scheme: light;
+  height: 100%;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.op-pricing-page *,
+.op-pricing-page *::before,
+.op-pricing-page *::after {
+  box-sizing: border-box;
+}
+
+.op-pricing-page {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font);
+  font-feature-settings: "cv11", "ss01";
+}
+
+.op-pricing-page {
+  min-height: 100%;
+}
+
+/* ---------- stage ---------- */
+
+.op-pricing {
+  /* Figma rhythm: title 48 · 54 · toggle 44 · 120 · cards 480 → 746 tall, centred in the frame */
+  --gap-a: 54;
+  --gap-b: 120;
+  --stage: 746;
+  --title: 48;
+  --u: min(1px, calc((100svh - 64px) / var(--stage)));
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  overflow: clip;
+  padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px);
+}
+
+/* shorter laptops: tighten the gaps before anything shrinks */
+@media (max-height: 920px) {
+  .op-pricing {
+    --gap-a: 36;
+    --gap-b: 64;
+    --stage: 672;
+  }
+}
+
+.op-pricing__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--gap-a) * var(--u));
+  padding-inline: 24px;
+}
+
+.op-pricing__title {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.25em;
+  font-size: calc(var(--title) * var(--u));
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  text-align: center;
+}
+.op-pricing__word {
+  display: inline-block;
+}
+.op-pricing__word--accent {
+  color: var(--blue);
+}
+
+/* ---------- billing toggle ---------- */
+
+.op-billing {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(6 * var(--u));
+  padding: calc(4 * var(--u));
+  border-radius: calc(24 * var(--u));
+  background: var(--track);
+}
+.op-billing__opt {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(10 * var(--u)) calc(18 * var(--u));
+  min-height: calc(36 * var(--u));
+  border: 0;
+  border-radius: calc(20 * var(--u));
+  background: none;
+  color: #10161f;
+  font: 500 calc(14 * var(--u)) / 1.2 var(--font);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.op-billing__opt:not(.is-on):hover {
+  color: var(--blue);
+}
+.op-billing__opt.is-on {
+  color: var(--white);
+}
+.op-billing__pill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--blue-pill);
+  box-shadow:
+    inset -4px 4px 4px rgba(255, 255, 255, 0.25),
+    0 4px 2px rgba(0, 0, 0, 0.1);
+}
+.op-billing__label {
+  position: relative;
+}
+
+.op-billing__opt:focus-visible,
+.op-plan__cta:focus-visible,
+.op-pricing__dot:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* ---------- plans row ---------- */
+
+.op-pricing__track {
+  --card-w: calc(432 * var(--u));
+  --card-h: calc(480 * var(--u));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(20 * var(--u));
+  width: 100%;
+  max-width: calc(1336px + 48px);
+  margin-top: calc(var(--gap-b) * var(--u));
+  padding-inline: 24px;
+}
+
+.op-plan {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: var(--card-w);
+  height: var(--card-h);
+  border-radius: calc(40 * var(--u));
+  background: var(--ice);
+}
+
+/* restrained lift: a soft blue-tinted contact shadow instead of the long grey drop */
+.op-plan--popular {
+  box-shadow:
+    0 calc(14 * var(--u)) calc(28 * var(--u)) calc(-14 * var(--u)) rgba(0, 70, 160, 0.28),
+    0 calc(2 * var(--u)) calc(6 * var(--u)) rgba(0, 40, 90, 0.05);
+}
+
+/* cursor trail canvas: above the glow, below the content */
+.op-plan__trail {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.op-plan__glow {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: calc(50% + 0.5px);
+  width: 200.46%; /* 866 / 432 */
+  height: 186.04%; /* 893 / 480 */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.op-plan__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: calc(40 * var(--u)) calc(28 * var(--u)) 0;
+}
+
+.op-plan__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: calc(24 * var(--u));
+}
+
+.op-plan__name,
+.op-plan__currency,
+.op-roll__col {
+  --grad: linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 125%);
+  background-image: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* price gradient tiles every 1em, so each digit keeps its own gradient while its wheel rolls */
+.op-plan__currency,
+.op-roll__col {
+  --grad: linear-gradient(180deg, var(--ink) 10%, var(--ink-soft) 100%);
+  background-size: 100% 1em;
+  background-repeat: repeat-y;
+}
+
+.op-plan__name {
+  margin: 0;
+  font-size: calc(24 * var(--u));
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  padding-block: 0.06em; /* keeps descenders inside the clipped gradient */
+}
+
+.op-plan__badge {
+  flex-shrink: 0;
+  padding: calc(10 * var(--u)) calc(12 * var(--u));
+  border-radius: calc(8 * var(--u));
+  background: var(--ice-2);
+  color: var(--blue);
+  font-size: calc(12 * var(--u));
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.op-plan__price {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(4 * var(--u));
+  margin: calc(24 * var(--u)) 0 0;
+  height: calc(64 * var(--u));
+}
+.op-plan__amount {
+  display: inline-flex;
+  font-size: calc(64 * var(--u));
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.op-plan__currency {
+  display: inline-block;
+}
+.op-roll {
+  display: inline-flex;
+}
+/* one 1em window per digit; edges fade so rolling digits slide in and out softly */
+.op-roll__win {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  overflow: clip;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 11%, #000 89%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 11%, #000 89%, transparent 100%);
+}
+.op-roll__col {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+.op-roll__col > span {
+  display: block;
+  height: 1em;
+  line-height: 1;
+}
+.op-plan__per {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(10 * var(--u));
+  color: var(--ink-soft);
+  font-size: calc(12 * var(--u));
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+/* stacks above "/ month"; the row is bottom-aligned with a fixed height, so it never grows or wraps */
+.op-plan__note {
+  color: var(--blue);
+  font-weight: 500;
+}
+.op-plan--popular .op-plan__note {
+  color: var(--white);
+}
+
+.op-plan__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(54 * var(--u));
+  margin-top: calc(28 * var(--u));
+  border: 1.8px solid var(--blue-line);
+  border-radius: calc(12 * var(--u));
+  background: var(--blue);
+  color: var(--white);
+  font-size: calc(16 * var(--u));
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.op-plan__features {
+  list-style: none;
+  margin: calc(40 * var(--u)) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--u));
+}
+.op-plan__features li {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--u));
+  min-height: calc(24 * var(--u));
+  color: var(--ink-80);
+  font-size: calc(16 * var(--u));
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.op-plan__features li > span {
+  min-width: 0;
+}
+.op-plan__tick {
+  flex-shrink: 0;
+  width: calc(24 * var(--u));
+  height: calc(24 * var(--u));
+  fill: var(--blue);
+  fill-opacity: 0.8;
+}
+
+/* popular card: white-on-blue variant */
+.op-plan--popular .op-plan__name,
+.op-plan--popular .op-plan__currency,
+.op-plan--popular .op-roll__col {
+  --grad: linear-gradient(180deg, var(--white) 10%, var(--frost) 100%);
+}
+.op-plan--popular .op-plan__per {
+  color: var(--frost);
+}
+.op-plan--popular .op-plan__cta {
+  border-color: var(--blue-line-2);
+  background: var(--ice-2);
+  color: var(--blue);
+}
+.op-plan--popular .op-plan__features li {
+  color: var(--white);
+}
+.op-plan--popular .op-plan__features li > span {
+  background-image: linear-gradient(90deg, var(--white), var(--frost));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.op-plan--popular .op-plan__tick {
+  fill: var(--frost);
+  fill-opacity: 1;
+}
+
+.op-pricing__dots {
+  display: none;
+}
+
+/* very short screens (landscape phones): squeeze the gaps and margins, keep the row */
+@media (max-height: 520px) {
+  .op-pricing {
+    --gap-a: 16;
+    --gap-b: 24;
+    --title: 40;
+    --stage: 604;
+    --u: min(1px, calc((100svh - 40px) / var(--stage)));
+  }
+}
+
+/* ---------- portrait tablet + mobile: swipeable row, opens on the popular plan ---------- */
+
+@media (max-width: 1023px) and (max-aspect-ratio: 5/4) {
+  .op-pricing {
+    --title: 40;
+    --gap-a: 28;
+    --gap-b: 40;
+    /* title 40 · 28 · toggle 44 · 40 · card 480 · 20 + 12 · dots 8 */
+    --stage: 672;
+  }
+
+  .op-pricing__track {
+    --card-w: min(calc(432 * var(--u)), calc(100vw - 64px));
+    justify-content: flex-start;
+    max-width: none;
+    padding-inline: calc((100vw - var(--card-w)) / 2);
+    /* room inside the scroller for the popular card's shadow, cancelled out by negative margins */
+    padding-block: calc(28 * var(--u)) calc(48 * var(--u));
+    margin-block: calc((var(--gap-b) - 28) * var(--u)) calc(-28 * var(--u));
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .op-pricing__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .op-plan {
+    flex: 0 0 var(--card-w);
+    max-width: none;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    transform-origin: center;
+    transition:
+      scale 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.5s ease;
+  }
+  .op-plan:not(.is-active) {
+    scale: 0.94;
+  }
+  /* shorter shadow that fits inside the scroller's padding */
+  .op-plan--popular {
+    box-shadow:
+      0 calc(12 * var(--u)) calc(24 * var(--u)) calc(-12 * var(--u)) rgba(0, 70, 160, 0.26),
+      0 calc(2 * var(--u)) calc(6 * var(--u)) rgba(0, 40, 90, 0.05);
+  }
+
+  .op-pricing__dots {
+    display: flex;
+    gap: 8px;
+    margin-top: calc(12 * var(--u));
+  }
+  .op-pricing__dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    transition:
+      width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 0.3s ease;
+  }
+  /* 44px touch target without changing the visual dot */
+  .op-pricing__dot::after {
+    content: "";
+    position: absolute;
+    inset: -18px -6px;
+  }
+  .op-pricing__dot.is-on {
+    width: 24px;
+    background: var(--blue);
+  }
+}
+
+@media (max-width: 420px) {
+  .op-pricing {
+    --title: 36;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .op-plan,
+  .op-pricing__dot {
+    transition: none;
+  }
+}

@@ -1,0 +1,487 @@
+/* Layout: one viewport-locked stage — header on top, centered copy, Earth rising from the bottom edge. */
+/* ===========================================================================
+   Orbit Hero. One viewport-locked stage: header on top, centred copy, and the
+   Earth rising from the bottom edge. Everything is scoped to .oh-hero.
+=========================================================================== */
+
+.oh-hero {
+  --space: #121317;
+  --ink: #ffffff;
+  --ink-80: rgba(255, 255, 255, 0.8);
+  --ink-60: rgba(255, 255, 255, 0.6);
+  --ink-dim: #5d5d5d;
+  --orbit-blue: #1b68ed;
+  --orbit-line: #678fd2;
+  --shadow-blue: 0, 42, 254;
+
+  --font-sans: var(--font-geist-sans), "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--oh-serif), "Instrument Serif", "Times New Roman", serif;
+
+  --pad-x: clamp(20px, 5.56vw, 80px);
+  --pad-top: clamp(20px, 7.8svh, 80px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: dark;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.oh-hero *,
+.oh-hero *::before,
+.oh-hero *::after {
+  box-sizing: border-box;
+}
+
+.oh-hero ::selection {
+  background: rgba(27, 104, 237, 0.45);
+  color: var(--ink);
+}
+
+/* ---------- hero shell ---------- */
+
+.oh-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* fallback */
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
+  overflow: clip; /* not a scroll container: the oversized Earth can never be scrolled into */
+  background: var(--space);
+}
+
+/* ---------- header ---------- */
+
+.oh-hero__header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: calc(var(--pad-top) + env(safe-area-inset-top, 0px)) var(--pad-x) 0;
+  pointer-events: none;
+}
+.oh-hero__header > * {
+  pointer-events: auto;
+}
+
+.oh-logo {
+  display: block;
+  width: clamp(40px, 3.5vw, 50px);
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  pointer-events: none; /* purely decorative mark */
+  user-select: none;
+}
+.oh-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.oh-hero a:focus-visible,
+.oh-hero button:focus-visible {
+  outline: 2px solid var(--orbit-line);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* desktop nav — vertical, right-aligned, as in the design */
+.oh-nav-desktop {
+  display: none;
+}
+.oh-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.oh-nav-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25em;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.4;
+  color: var(--ink-80);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: color 0.3s var(--ease-out);
+}
+.oh-nav-link:hover,
+.oh-nav-link.is-active {
+  color: var(--ink);
+}
+.oh-nav-link .oh-br {
+  display: inline-block;
+  color: var(--ink);
+}
+
+/* compact menu button (tablet + mobile) */
+.oh-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 44px;
+  padding: 0 4px 0 14px;
+  margin-right: -4px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: 500 15px/1 var(--font-sans);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+.oh-menu-btn__icon {
+  position: relative;
+  width: 22px;
+  height: 10px;
+}
+.oh-menu-btn__icon span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.45s var(--ease-out), top 0.45s var(--ease-out);
+}
+.oh-menu-btn__icon span:first-child {
+  top: 0;
+}
+.oh-menu-btn__icon span:last-child {
+  top: calc(100% - 1.5px);
+}
+.oh-menu-btn.is-open .oh-menu-btn__icon span:first-child {
+  top: calc(50% - 0.75px);
+  transform: rotate(45deg);
+}
+.oh-menu-btn.is-open .oh-menu-btn__icon span:last-child {
+  top: calc(50% - 0.75px);
+  transform: rotate(-45deg);
+}
+
+.oh-menu-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 var(--pad-x) calc(clamp(32px, 8svh, 72px) + env(safe-area-inset-bottom, 0px));
+  background: rgba(18, 19, 23, 0.82);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+}
+.oh-menu-sheet ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 1svh, 12px);
+}
+.oh-menu-sheet li {
+  overflow: hidden;
+}
+.oh-menu-sheet a {
+  display: inline-block;
+  font-size: clamp(34px, 7vw, 56px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink-60);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-out);
+}
+.oh-menu-sheet a:hover,
+.oh-menu-sheet a.is-active {
+  color: var(--ink);
+}
+
+@media (min-width: 1024px) {
+  .oh-nav-desktop {
+    display: block;
+  }
+  .oh-menu-btn,
+  .oh-menu-sheet {
+    display: none;
+  }
+}
+
+/* ---------- copy ---------- */
+
+.oh-hero__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-inline: var(--pad-x);
+  /* clears the header on small screens, mirrors the design's 127px offset on desktop */
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--pad-top) + 44px + clamp(28px, 6svh, 64px));
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .oh-hero__content {
+    padding-top: calc(env(safe-area-inset-top, 0px) + clamp(72px, 12.4svh, 150px));
+    padding-inline: clamp(180px, 16vw, 320px); /* keeps copy clear of the vertical nav */
+  }
+}
+
+.oh-eyebrow {
+  margin: 0;
+  font-size: clamp(12px, 0.25vw + 9px, 14px);
+  line-height: 1.4;
+  color: var(--ink-60);
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+.oh-headline {
+  position: relative; /* offset parent for the gradient measurement */
+  margin: clamp(12px, 1.8svh, 18px) 0 0;
+  max-width: 100%;
+  font-weight: 500;
+  font-size: min(clamp(38px, 2.4vw + 30px, 84px), 8.6svh);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.oh-headline__word {
+  display: inline-block;
+  /* room for italic overhang + descenders so background-clip:text never crops glyphs */
+  padding: 0.08em 0.07em 0.12em;
+  margin: -0.08em -0.07em -0.12em;
+  background-image: linear-gradient(90deg, #ffffff 10.642%, var(--ink-dim) 116.72%);
+  background-size: var(--hw, 100%) 100%;
+  background-position: calc(var(--x, 0px) * -1) 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  will-change: transform, filter, opacity;
+}
+.oh-headline__word--serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.14em;
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.oh-headline__br {
+  display: none;
+}
+@media (min-width: 640px) {
+  .oh-headline__br {
+    display: inline;
+  }
+}
+
+/* ---------- Enter Orbit button ---------- */
+
+.oh-orbit-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  min-width: 138px;
+  margin-top: clamp(18px, 2.6svh, 28px);
+  padding: 0 40px;
+  border: 1px solid #101012;
+  border-radius: 10px;
+  background: linear-gradient(180.79deg, rgba(241, 241, 241, 0.3) 27.4%, rgba(153, 153, 153, 0) 151.75%), #1a1c24;
+  box-shadow:
+    0 19.4px 36.7px rgba(var(--shadow-blue), 0.2),
+    0 5.9px 11px rgba(var(--shadow-blue), 0.22),
+    0 2.4px 4.6px rgba(var(--shadow-blue), 0.17),
+    0 0.9px 1.7px rgba(var(--shadow-blue), 0.12),
+    0 5px 13px rgba(0, 0, 0, 0.52),
+    inset 0 2px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: box-shadow 0.5s var(--ease-out), color 0.3s;
+}
+.oh-orbit-btn:hover {
+  color: #fff;
+  box-shadow:
+    0 22px 48px rgba(var(--shadow-blue), 0.34),
+    0 8px 16px rgba(var(--shadow-blue), 0.3),
+    0 2.4px 4.6px rgba(var(--shadow-blue), 0.2),
+    0 0.9px 1.7px rgba(var(--shadow-blue), 0.12),
+    0 5px 13px rgba(0, 0, 0, 0.52),
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+}
+/* film grain, 10% like the design */
+.oh-orbit-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.oh-orbit-btn__glow {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 22px;
+  width: 150%;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--orbit-blue);
+  filter: blur(18px);
+  mix-blend-mode: plus-lighter;
+  transform: translateX(-50%);
+  transition: transform 0.6s var(--ease-out), opacity 0.6s var(--ease-out);
+  opacity: 0.95;
+}
+.oh-orbit-btn:hover .oh-orbit-btn__glow {
+  transform: translateX(-50%) translateY(-6px) scale(1.08);
+  opacity: 1;
+}
+.oh-orbit-btn__line {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  height: 1.4px;
+  border-radius: 50%;
+  background: var(--orbit-line);
+  filter: blur(0.4px);
+  transform: translateX(-50%);
+}
+.oh-orbit-btn__line--top {
+  top: 0;
+  width: 98%;
+}
+.oh-orbit-btn__line--mid {
+  bottom: 3px;
+  width: 60%;
+  opacity: 0.7;
+}
+.oh-orbit-btn__sheen {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.22) 48%, transparent 66%);
+  transform: translateX(-120%);
+  transition: transform 0.9s var(--ease-out);
+}
+.oh-orbit-btn:hover .oh-orbit-btn__sheen {
+  transform: translateX(120%);
+}
+.oh-orbit-btn__label {
+  position: relative;
+  z-index: 4;
+  text-transform: capitalize;
+}
+
+/* ---------- Earth ---------- */
+
+/* Image geometry (earth.webp, 4000×2249, rendered from NASA Blue Marble):
+   globe top at 38.8% of height (= 0.2182 × width), centre at 50.86% of width, diameter 79.6% of width. */
+.oh-earth-stage {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  min-height: 0;
+  container-type: size;
+  pointer-events: none;
+}
+
+.oh-earth {
+  --earth-gap: clamp(28px, 7svh, 80px);
+  --earth-min: 300vw;
+  /* wide enough on every aspect ratio that the image's bottom edge always sits below the fold */
+  --earth-w: max(var(--earth-min), calc((100cqh - var(--earth-gap)) / 0.33));
+  position: absolute;
+  left: 50%;
+  top: calc(var(--earth-gap) - 0.2182 * var(--earth-w));
+  width: var(--earth-w);
+  margin-left: calc(var(--earth-w) * -0.5086);
+  aspect-ratio: 1332 / 749;
+  transform-origin: 50.86% 70%;
+}
+@media (min-width: 640px) {
+  .oh-earth {
+    --earth-min: 210vw;
+  }
+}
+@media (min-width: 1024px) {
+  .oh-earth {
+    --earth-min: 145vw; /* matches the Figma crop at 1440 */
+  }
+}
+
+.oh-earth__halo {
+  position: absolute;
+  left: 11.06%;
+  top: 38.8%;
+  width: 79.6%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow:
+    0 0 60px 6px rgba(27, 104, 237, 0.22),
+    0 -20px 160px 40px rgba(27, 104, 237, 0.1);
+}
+
+.oh-earth__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+/* stays fully opaque under the fading-in canvas, then switches off once it is covered */
+.oh-earth__img.is-hidden {
+  opacity: 0;
+  transition: opacity 0s linear 0.7s;
+}
+
+/* live WebGL globe: covers the globe's bounding box (unit disk ±1.02, down to the frame's bottom edge) */
+.oh-earth__globe {
+  position: absolute;
+  left: 10.264%;
+  top: 37.383%;
+  width: 81.192%;
+  height: 62.617%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.oh-earth__globe.is-live {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oh-orbit-btn__sheen,
+  .oh-orbit-btn__glow,
+  .oh-menu-btn__icon span {
+    transition: none;
+  }
+}
