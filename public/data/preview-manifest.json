@@ -3,9 +3,9 @@
   "stats": {
     "ready:media-video": 268,
     "ready:media-image": 148,
-    "ready:react-generated": 572,
+    "ready:react-generated": 612,
     "ready:html-live": 5495,
-    "unsupported:unsupported": 28,
+    "unsupported:unsupported": 29,
     "ready:embed": 123
   },
   "records": [
@@ -43509,6 +43509,293 @@
         "poster": "/shaders/covers/Nebula.jpg",
         "label": "Shaders Live WebGPU Demo"
       }
+    },
+    {
+      "id": "pin-add-member",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-add-member"
+    },
+    {
+      "id": "pin-balance-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-balance-card"
+    },
+    {
+      "id": "pin-calendar-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-calendar-card"
+    },
+    {
+      "id": "pin-cart-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-cart-card"
+    },
+    {
+      "id": "pin-chat-room",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-chat-room"
+    },
+    {
+      "id": "pin-chips",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-chips"
+    },
+    {
+      "id": "pin-copy-paste-pad",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-copy-paste-pad"
+    },
+    {
+      "id": "pin-desk-computer",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-desk-computer"
+    },
+    {
+      "id": "pin-dynamic-drop-zone",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-dynamic-drop-zone"
+    },
+    {
+      "id": "pin-file-box",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-file-box"
+    },
+    {
+      "id": "pin-joystick",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-joystick"
+    },
+    {
+      "id": "pin-lamp-switch",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-lamp-switch"
+    },
+    {
+      "id": "pin-liquid-tabs",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-liquid-tabs"
+    },
+    {
+      "id": "pin-liquid-voice",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-liquid-voice"
+    },
+    {
+      "id": "pin-magnify",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-magnify"
+    },
+    {
+      "id": "pin-otp-input",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-otp-input"
+    },
+    {
+      "id": "pin-presence-cards",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-presence-cards"
+    },
+    {
+      "id": "pin-progress-image",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-progress-image"
+    },
+    {
+      "id": "pin-prompt-composer",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-prompt-composer"
+    },
+    {
+      "id": "pin-reader-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-reader-card"
+    },
+    {
+      "id": "pin-recorder",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-recorder"
+    },
+    {
+      "id": "pin-search-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-search-card"
+    },
+    {
+      "id": "pin-selection-list",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-selection-list"
+    },
+    {
+      "id": "pin-session-list",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-session-list"
+    },
+    {
+      "id": "pin-swap-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-swap-card"
+    },
+    {
+      "id": "pin-task-card",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-task-card"
+    },
+    {
+      "id": "pin-taxi",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-taxi"
+    },
+    {
+      "id": "pin-theme-switch",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-theme-switch"
+    },
+    {
+      "id": "pin-thermal-dial",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-thermal-dial"
+    },
+    {
+      "id": "pin-weather",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-weather"
+    },
+    {
+      "id": "pin-caremetric-footer",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-caremetric-footer"
+    },
+    {
+      "id": "pin-contact-form",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-contact-form"
+    },
+    {
+      "id": "pin-halo-sign-in",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-halo-sign-in"
+    },
+    {
+      "id": "pin-luna-hero",
+      "project": "pinui",
+      "kind": "unsupported",
+      "status": "unsupported",
+      "reason": "Upstream needs @base-ui/react and @phosphor-icons/react — open the official demo instead."
+    },
+    {
+      "id": "pin-odometer-pricing",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-odometer-pricing"
+    },
+    {
+      "id": "pin-orbit-hero",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-orbit-hero"
+    },
+    {
+      "id": "pin-partylabs-hero",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-partylabs-hero"
+    },
+    {
+      "id": "pin-pixelkit-sign-in",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-pixelkit-sign-in"
+    },
+    {
+      "id": "pin-smart-pricing",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-smart-pricing"
+    },
+    {
+      "id": "pin-storybook-hero",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-storybook-hero"
+    },
+    {
+      "id": "pin-synais-footer",
+      "project": "pinui",
+      "kind": "react-generated",
+      "status": "ready",
+      "entry": "./previews/pinui/pin-synais-footer"
     }
   ]
 }

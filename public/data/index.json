@@ -13,7 +13,8 @@
     "looseleaf",
     "ascii-rest",
     "ascii-magic",
-    "shaders"
+    "shaders",
+    "pinui"
   ],
   "stats": {
     "react-bits": 269,
@@ -29,9 +30,10 @@
     "looseleaf": 123,
     "ascii-rest": 240,
     "ascii-magic": 734,
-    "shaders": 209
+    "shaders": 209,
+    "pinui": 41
   },
-  "total": 6634,
+  "total": 6675,
   "components": [
     {
       "id": "rb-animatedcontentcode",
@@ -120498,6 +120500,1119 @@
         "official-demo",
         "mit"
       ]
+    },
+    {
+      "id": "pin-add-member",
+      "project": "pinui",
+      "name": "Add Member",
+      "category": "lists",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Pick people for a project, and watch their faces fly into the stack.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/add-member.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Add Member — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/add-member.json\"\n\nimport AddMember from \"./AddMember\";\n\nexport default function Page() {\n  return <AddMember />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-balance-card",
+      "project": "pinui",
+      "name": "Balance Card",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A counting balance, a liquid currency selector and a drawer that settles.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/balance-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Balance Card — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/balance-card.json\"\n\nimport BalanceCard from \"./BalanceCard\";\n\nexport default function Page() {\n  return <BalanceCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-calendar-card",
+      "project": "pinui",
+      "name": "Calendar",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A month card where the selected day glides from date to date.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/calendar-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Calendar — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/calendar-card.json\"\n\nimport CalendarCard from \"./CalendarCard\";\n\nexport default function Page() {\n  return <CalendarCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-cart-card",
+      "project": "pinui",
+      "name": "Add To Cart",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A product card that is only a photo until you open it.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/cart-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Add To Cart — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/cart-card.json\"\n\nimport CartCard from \"./CartCard\";\n\nexport default function Page() {\n  return <CartCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-chat-room",
+      "project": "pinui",
+      "name": "Chat Room",
+      "category": "lists",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A stack of faces that morphs into a voice chat card, and back.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/chat-room.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Chat Room — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/chat-room.json\"\n\nimport ChatRoom from \"./ChatRoom\";\n\nexport default function Page() {\n  return <ChatRoom />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-chips",
+      "project": "pinui",
+      "name": "Chips",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A selection list of 3D chips that press into the surface.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/chips.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Chips — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/chips.json\"\n\nimport Chips from \"./Chips\";\n\nexport default function Page() {\n  return <Chips />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-copy-paste-pad",
+      "project": "pinui",
+      "name": "Copy Paste Pad",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A 3-D aluminium macro pad whose ⌘C and ⌘V copy and paste the theme.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/copy-paste-pad.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Copy Paste Pad — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/copy-paste-pad.json\"\n\nimport CopyPastePad from \"./CopyPastePad\";\n\nexport default function Page() {\n  return <CopyPastePad />;\n}\n",
+        "dependencies": [
+          "three@^0.186.1"
+        ]
+      }
+    },
+    {
+      "id": "pin-desk-computer",
+      "project": "pinui",
+      "name": "Desk Computer",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A late-90s desk computer in true isometric that you can actually use.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/desk-computer.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Desk Computer — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/desk-computer.json\"\n\nimport DeskComputer from \"./DeskComputer\";\n\nexport default function Page() {\n  return <DeskComputer />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-dynamic-drop-zone",
+      "project": "pinui",
+      "name": "Dynamic Drop Zone",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A file drop zone that turns into a magnetic black hole.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/dynamic-drop-zone.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Dynamic Drop Zone — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/dynamic-drop-zone.json\"\n\nimport DynamicDropZone from \"./DynamicDropZone\";\n\nexport default function Page() {\n  return <DynamicDropZone />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-file-box",
+      "project": "pinui",
+      "name": "File Box",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A cardboard file box whose folders lift out by their tabs.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/file-box.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// File Box — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/file-box.json\"\n\nimport FileBox from \"./FileBox\";\n\nexport default function Page() {\n  return <FileBox />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-joystick",
+      "project": "pinui",
+      "name": "Joystick",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A pixel-art arcade stick you can grab, push to the gate and let snap back.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/joystick.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Joystick — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/joystick.json\"\n\nimport Joystick from \"./Joystick\";\n\nexport default function Page() {\n  return <Joystick />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-lamp-switch",
+      "project": "pinui",
+      "name": "Lamp Switch",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A hanging ceramic lamp that swings on a cord and toggles with a liquid switch.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/lamp-switch.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Lamp Switch — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/lamp-switch.json\"\n\nimport LampSwitch from \"./LampSwitch\";\n\nexport default function Page() {\n  return <LampSwitch />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-liquid-tabs",
+      "project": "pinui",
+      "name": "Liquid Tabs",
+      "category": "lists",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A notifications card whose active tab is liquid, flowing from tab to tab.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/liquid-tabs.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Liquid Tabs — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/liquid-tabs.json\"\n\nimport LiquidTabs from \"./LiquidTabs\";\n\nexport default function Page() {\n  return <LiquidTabs />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-liquid-voice",
+      "project": "pinui",
+      "name": "Liquid Voice",
+      "category": "audio",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A voice-input pill of real liquid glass that stretches into a recorder.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/liquid-voice.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Liquid Voice — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/liquid-voice.json\"\n\nimport LiquidVoice from \"./LiquidVoice\";\n\nexport default function Page() {\n  return <LiquidVoice />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-magnify",
+      "project": "pinui",
+      "name": "Magnify",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A type specimen you inspect with a real magnifying glass.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/magnify.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Magnify — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/magnify.json\"\n\nimport Magnify from \"./Magnify\";\n\nexport default function Page() {\n  return <Magnify />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-otp-input",
+      "project": "pinui",
+      "name": "Egg OTP",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A one-time-code field made of eggs that crack on a wrong code.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/otp-input.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Egg OTP — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/otp-input.json\"\n\nimport OtpInput from \"./OtpInput\";\n\nexport default function Page() {\n  return <OtpInput />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-presence-cards",
+      "project": "pinui",
+      "name": "Presence Cards",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Two cards on a shared canvas, worked on live by four people at once.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/presence-cards.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Presence Cards — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/presence-cards.json\"\n\nimport PresenceCards from \"./PresenceCards\";\n\nexport default function Page() {\n  return <PresenceCards />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-progress-image",
+      "project": "pinui",
+      "name": "Progress Image",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A rollout card whose photograph is the progress bar.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/progress-image.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Progress Image — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/progress-image.json\"\n\nimport ProgressImage from \"./ProgressImage\";\n\nexport default function Page() {\n  return <ProgressImage />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-prompt-composer",
+      "project": "pinui",
+      "name": "Prompt Composer",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "An assistant's field with its quick actions fanned out behind it.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/prompt-composer.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Prompt Composer — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/prompt-composer.json\"\n\nimport PromptComposer from \"./PromptComposer\";\n\nexport default function Page() {\n  return <PromptComposer />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-reader-card",
+      "project": "pinui",
+      "name": "Reader Card",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A story card that scrolls in place and morphs into a liquid-glass reader.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/reader-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Reader Card — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/reader-card.json\"\n\nimport ReaderCard from \"./ReaderCard\";\n\nexport default function Page() {\n  return <ReaderCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-recorder",
+      "project": "pinui",
+      "name": "Recorder",
+      "category": "audio",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A voice recorder with a waveform that scrolls under the playhead.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/recorder.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Recorder — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/recorder.json\"\n\nimport Recorder from \"./Recorder\";\n\nexport default function Page() {\n  return <Recorder />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-search-card",
+      "project": "pinui",
+      "name": "Search Card",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A centred search bar that rises and morphs open into a card of recent searches.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/search-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Search Card — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/search-card.json\"\n\nimport SearchCard from \"./SearchCard\";\n\nexport default function Page() {\n  return <SearchCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-selection-list",
+      "project": "pinui",
+      "name": "Selection List",
+      "category": "lists",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A single-choice list whose halves snap together like magnets.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/selection-list.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Selection List — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/selection-list.json\"\n\nimport SelectionList from \"./SelectionList\";\n\nexport default function Page() {\n  return <SelectionList />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-session-list",
+      "project": "pinui",
+      "name": "Count down",
+      "category": "lists",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A session broken into blocks, counting down in real time.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/session-list.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Count down — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/session-list.json\"\n\nimport SessionList from \"./SessionList\";\n\nexport default function Page() {\n  return <SessionList />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-swap-card",
+      "project": "pinui",
+      "name": "Swap Card",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A token swap card where every number rolls and the button is liquid.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/swap-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Swap Card — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/swap-card.json\"\n\nimport SwapCard from \"./SwapCard\";\n\nexport default function Page() {\n  return <SwapCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-task-card",
+      "project": "pinui",
+      "name": "Task Card",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A task with subtasks on a connector tree, progress, priority and status.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/task-card.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Task Card — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/task-card.json\"\n\nimport TaskCard from \"./TaskCard\";\n\nexport default function Page() {\n  return <TaskCard />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-taxi",
+      "project": "pinui",
+      "name": "Taxi",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Hail a cab in one tap, and ride the whole trip on one card.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/taxi.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Taxi — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/taxi.json\"\n\nimport Taxi from \"./Taxi\";\n\nexport default function Page() {\n  return <Taxi />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-theme-switch",
+      "project": "pinui",
+      "name": "Theme Switch",
+      "category": "inputs",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A theme toggle that rains, drips or sets off fireworks to change the theme.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/theme-switch.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Theme Switch — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/theme-switch.json\"\n\nimport ThemeSwitch from \"./ThemeSwitch\";\n\nexport default function Page() {\n  return <ThemeSwitch />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-thermal-dial",
+      "project": "pinui",
+      "name": "Thermal Dial",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A thermal dial that undulates with heat and rolls through the seasons.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/thermal-dial.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Thermal Dial — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/thermal-dial.json\"\n\nimport ThermalDial from \"./ThermalDial\";\n\nexport default function Page() {\n  return <ThermalDial />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-weather",
+      "project": "pinui",
+      "name": "Weather",
+      "category": "cards",
+      "style": [
+        "pinui",
+        "component",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "A weather square that opens out into a five-day forecast.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/weather.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Weather — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/weather.json\"\n\nimport Weather from \"./Weather\";\n\nexport default function Page() {\n  return <Weather />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-caremetric-footer",
+      "project": "pinui",
+      "name": "CareMetric Footer",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Footer block. Green link columns over a giant, bleeding mark.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/caremetric-footer.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// CareMetric Footer — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/caremetric-footer.json\"\n\nimport Footer2 from \"@/components/blocx/Footer2\";\n\nexport default function Page() {\n  return <Footer2 />;\n}\n",
+        "dependencies": [
+          "geist",
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-contact-form",
+      "project": "pinui",
+      "name": "Contact Form",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Contact block. Black tiles, a reaching hand and a real form.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/contact-form.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Contact Form — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/contact-form.json\"\n\nimport ContactForm from \"@/components/blocx/ContactForm\";\n\nexport default function Page() {\n  return <ContactForm />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-halo-sign-in",
+      "project": "pinui",
+      "name": "Halo Sign In",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Auth block. A soft card in a tray, its mark in turning dots.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/halo-sign-in.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Halo Sign In — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/halo-sign-in.json\"\n\nimport HaloSignIn from \"@/components/blocx/HaloSignIn\";\n\nexport default function Page() {\n  return <HaloSignIn />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-luna-hero",
+      "project": "pinui",
+      "name": "Luna Hero",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Hero Section block. Pixel storefront hero with a floating mega menu.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/luna-hero.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Luna Hero — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/luna-hero.json\"\n\nimport LunaHero from \"@/components/blocx/LunaHero\";\n\nexport default function Page() {\n  return <LunaHero />;\n}\n",
+        "dependencies": [
+          "@base-ui/react",
+          "@phosphor-icons/react",
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-odometer-pricing",
+      "project": "pinui",
+      "name": "Odometer Pricing",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Pricing block. Prices roll like an odometer on billing.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/odometer-pricing.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Odometer Pricing — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/odometer-pricing.json\"\n\nimport Pricing from \"@/components/blocx/Pricing\";\n\nexport default function Page() {\n  return <Pricing />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-orbit-hero",
+      "project": "pinui",
+      "name": "Orbit Hero",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Hero Section block. Space hero with a live, turning WebGL Earth.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/orbit-hero.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Orbit Hero — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/orbit-hero.json\"\n\nimport Hero from \"@/components/blocx/Hero\";\n\nexport default function Page() {\n  return <Hero />;\n}\n",
+        "dependencies": [
+          "geist",
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-partylabs-hero",
+      "project": "pinui",
+      "name": "iPartyLabs Hero",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Hero Section block. A headline floating in a field of party photos.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/partylabs-hero.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// iPartyLabs Hero — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/partylabs-hero.json\"\n\nimport PartylabsHero from \"@/components/blocx/PartylabsHero\";\n\nexport default function Page() {\n  return <PartylabsHero />;\n}\n",
+        "dependencies": [
+          "geist",
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-pixelkit-sign-in",
+      "project": "pinui",
+      "name": "Pixelkit Sign In",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Auth block. A lime tile, three providers and a magic link.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/pixelkit-sign-in.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Pixelkit Sign In — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/pixelkit-sign-in.json\"\n\nimport PixelkitSignIn from \"@/components/blocx/PixelkitSignIn\";\n\nexport default function Page() {\n  return <PixelkitSignIn />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-smart-pricing",
+      "project": "pinui",
+      "name": "Smart Pricing",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Pricing block. Lime plans with a yearly switch and rolling prices.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/smart-pricing.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Smart Pricing — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/smart-pricing.json\"\n\nimport SmartPricing from \"@/components/blocx/SmartPricing\";\n\nexport default function Page() {\n  return <SmartPricing />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-storybook-hero",
+      "project": "pinui",
+      "name": "Storybook Hero",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Hero Section block. A parchment hero with a glowing cottage in an arch.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/storybook-hero.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Storybook Hero — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/storybook-hero.json\"\n\nimport StorybookHero from \"@/components/blocx/StorybookHero\";\n\nexport default function Page() {\n  return <StorybookHero />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
+    },
+    {
+      "id": "pin-synais-footer",
+      "project": "pinui",
+      "name": "Synais Footer",
+      "category": "official-demo",
+      "style": [
+        "pinui",
+        "page-block",
+        "animated"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "CSS",
+        "Motion"
+      ],
+      "description": "Footer block. Dark link columns over a giant cream wordmark.",
+      "language": "tsx",
+      "demoUrl": "https://www.pinui.xyz/r/blocx/synais-footer.json",
+      "codeSnippet": {
+        "language": "tsx",
+        "source": "// Synais Footer — Pin UI\n// npx shadcn@latest add \"https://www.pinui.xyz/r/blocx/synais-footer.json\"\n\nimport SynaisFooter from \"@/components/blocx/SynaisFooter\";\n\nexport default function Page() {\n  return <SynaisFooter />;\n}\n",
+        "dependencies": [
+          "motion"
+        ]
+      }
     }
   ]
 }

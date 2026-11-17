@@ -43501,15 +43501,302 @@ export const previewManifest: Record<string, PreviewManifestRecord> = {
       "poster": "/shaders/covers/Nebula.jpg",
       "label": "Shaders Live WebGPU Demo"
     }
+  },
+  "pin-add-member": {
+    "id": "pin-add-member",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-add-member"
+  },
+  "pin-balance-card": {
+    "id": "pin-balance-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-balance-card"
+  },
+  "pin-calendar-card": {
+    "id": "pin-calendar-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-calendar-card"
+  },
+  "pin-cart-card": {
+    "id": "pin-cart-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-cart-card"
+  },
+  "pin-chat-room": {
+    "id": "pin-chat-room",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-chat-room"
+  },
+  "pin-chips": {
+    "id": "pin-chips",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-chips"
+  },
+  "pin-copy-paste-pad": {
+    "id": "pin-copy-paste-pad",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-copy-paste-pad"
+  },
+  "pin-desk-computer": {
+    "id": "pin-desk-computer",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-desk-computer"
+  },
+  "pin-dynamic-drop-zone": {
+    "id": "pin-dynamic-drop-zone",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-dynamic-drop-zone"
+  },
+  "pin-file-box": {
+    "id": "pin-file-box",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-file-box"
+  },
+  "pin-joystick": {
+    "id": "pin-joystick",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-joystick"
+  },
+  "pin-lamp-switch": {
+    "id": "pin-lamp-switch",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-lamp-switch"
+  },
+  "pin-liquid-tabs": {
+    "id": "pin-liquid-tabs",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-liquid-tabs"
+  },
+  "pin-liquid-voice": {
+    "id": "pin-liquid-voice",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-liquid-voice"
+  },
+  "pin-magnify": {
+    "id": "pin-magnify",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-magnify"
+  },
+  "pin-otp-input": {
+    "id": "pin-otp-input",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-otp-input"
+  },
+  "pin-presence-cards": {
+    "id": "pin-presence-cards",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-presence-cards"
+  },
+  "pin-progress-image": {
+    "id": "pin-progress-image",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-progress-image"
+  },
+  "pin-prompt-composer": {
+    "id": "pin-prompt-composer",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-prompt-composer"
+  },
+  "pin-reader-card": {
+    "id": "pin-reader-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-reader-card"
+  },
+  "pin-recorder": {
+    "id": "pin-recorder",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-recorder"
+  },
+  "pin-search-card": {
+    "id": "pin-search-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-search-card"
+  },
+  "pin-selection-list": {
+    "id": "pin-selection-list",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-selection-list"
+  },
+  "pin-session-list": {
+    "id": "pin-session-list",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-session-list"
+  },
+  "pin-swap-card": {
+    "id": "pin-swap-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-swap-card"
+  },
+  "pin-task-card": {
+    "id": "pin-task-card",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-task-card"
+  },
+  "pin-taxi": {
+    "id": "pin-taxi",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-taxi"
+  },
+  "pin-theme-switch": {
+    "id": "pin-theme-switch",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-theme-switch"
+  },
+  "pin-thermal-dial": {
+    "id": "pin-thermal-dial",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-thermal-dial"
+  },
+  "pin-weather": {
+    "id": "pin-weather",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-weather"
+  },
+  "pin-caremetric-footer": {
+    "id": "pin-caremetric-footer",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-caremetric-footer"
+  },
+  "pin-contact-form": {
+    "id": "pin-contact-form",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-contact-form"
+  },
+  "pin-halo-sign-in": {
+    "id": "pin-halo-sign-in",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-halo-sign-in"
+  },
+  "pin-luna-hero": {
+    "id": "pin-luna-hero",
+    "project": "pinui",
+    "kind": "unsupported",
+    "status": "unsupported",
+    "reason": "Upstream needs @base-ui/react and @phosphor-icons/react — open the official demo instead."
+  },
+  "pin-odometer-pricing": {
+    "id": "pin-odometer-pricing",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-odometer-pricing"
+  },
+  "pin-orbit-hero": {
+    "id": "pin-orbit-hero",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-orbit-hero"
+  },
+  "pin-partylabs-hero": {
+    "id": "pin-partylabs-hero",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-partylabs-hero"
+  },
+  "pin-pixelkit-sign-in": {
+    "id": "pin-pixelkit-sign-in",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-pixelkit-sign-in"
+  },
+  "pin-smart-pricing": {
+    "id": "pin-smart-pricing",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-smart-pricing"
+  },
+  "pin-storybook-hero": {
+    "id": "pin-storybook-hero",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-storybook-hero"
+  },
+  "pin-synais-footer": {
+    "id": "pin-synais-footer",
+    "project": "pinui",
+    "kind": "react-generated",
+    "status": "ready",
+    "entry": "./previews/pinui/pin-synais-footer"
   }
 }
 
 export const previewStats = {
   "ready:media-video": 268,
   "ready:media-image": 148,
-  "ready:react-generated": 572,
+  "ready:react-generated": 612,
   "ready:html-live": 5495,
-  "unsupported:unsupported": 28,
+  "unsupported:unsupported": 29,
   "ready:embed": 123
 } as const
 
